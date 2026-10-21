@@ -610,6 +610,33 @@
         "viewBox": "0 0 16 16"
       },
       "transfer": "Figma Plugin API exportAsync(SVG_STRING); original whole node, unmodified"
+    },
+    {
+      "id": "site-logo",
+      "nodeId": "1:8475",
+      "kind": "exported-svg",
+      "localPath": "public/assets/site/logo.svg",
+      "slots": [
+        {
+          "nodeId": "1:8475",
+          "sectionNodeId": "1:8464"
+        }
+      ],
+      "callsites": [
+        "src/components/SiteHeader.astro"
+      ],
+      "intrinsic": {
+        "width": "122",
+        "height": "38",
+        "viewBox": "0 0 122 38"
+      },
+      "placement": {
+        "logicalWidth": 116,
+        "logicalHeight": 36,
+        "left": -5.75390625,
+        "top": 0
+      },
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING); whole original logo instance, unmodified; painted overflow retained."
     }
   ],
   "verifiedAt": "2026-10-21"

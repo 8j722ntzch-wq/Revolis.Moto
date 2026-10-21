@@ -70,6 +70,13 @@
       "implementation": "src/components/BankCard.astro",
       "contextFile": "design/context/ui/26-5495.txt",
       "detailManifest": "design/bank-card.json"
+    },
+    {
+      "name": "SiteHeader",
+      "nodeId": "1:8464",
+      "implementation": "src/components/SiteHeader.astro",
+      "contextFile": "design/context/ui/1-8464.txt",
+      "detailManifest": "design/site-header.json"
     }
   ],
   "foundations": [
@@ -121,7 +128,8 @@
     "smallRadius": 4,
     "buttonRadius": 10,
     "fieldRadius": 10,
-    "iconButtonSize": 40
+    "iconButtonSize": 40,
+    "headerHeight": 64
   },
   "observedDiscrepancies": [
     {
@@ -204,7 +212,7 @@
       "Lead backend not connected."
     ],
     "astroCheck": {
-      "files": 22,
+      "files": 24,
       "errors": 0,
       "warnings": 0,
       "hints": 0
@@ -228,11 +236,6 @@
     }
   },
   "nextComponents": [
-    {
-      "name": "SiteHeader",
-      "nodeId": "1:8464",
-      "status": "not-implemented"
-    },
     {
       "name": "SiteFooter",
       "nodeId": "1:8514",
@@ -263,6 +266,7 @@
   },
   "compositeVerification": [
     "design/model-card.json",
-    "design/bank-card.json"
+    "design/bank-card.json",
+    "design/site-header.json"
   ]
 }

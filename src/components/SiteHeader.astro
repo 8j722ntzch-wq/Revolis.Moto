@@ -1,0 +1,33 @@
+---
+import Button from './ui/Button.astro';
+import { headerLinks, headerPhone, type HeaderLink } from '../data/navigation';
+interface Props {
+  links?: readonly HeaderLink[];
+  phone?: { label: string; href: `tel:${string}` };
+  homeHref?: string;
+  dialogId?: string;
+  demoAction?: boolean;
+}
+const { links = headerLinks, phone = headerPhone, homeHref = '/', dialogId, demoAction = false } = Astro.props;
+---
+<header class="site-header">
+  <div class="site-header__inner container">
+    <a class="site-header__logo" href={homeHref} aria-label="Revolis.Мото — на главную"><img src="/assets/site/logo.svg" alt="Revolis.Мото" /></a>
+    <Button class="site-header__phone" variant="text" href={phone.href}>{phone.label}</Button>
+    <div class="site-header__actions">
+      <nav class="site-header__nav" aria-label="Основная навигация">{links.map(link => <Button variant="text" href={link.href}>{link.label}</Button>)}</nav>
+      <Button class="site-header__lead" disabled={!dialogId && !demoAction} data-open-lead={demoAction ? undefined : dialogId} data-header-demo={demoAction ? 'true' : undefined} data-intent="consultation" data-source="header">Оставить заявку</Button>
+    </div>
+  </div>
+</header>
+<style>
+  .site-header { height: var(--header-height); background: var(--color-white); }
+  .site-header__inner { display: flex; align-items: center; height: 100%; }
+  .site-header__logo { position: relative; display: block; width: 116px; height: 36px; flex: 0 0 116px; }
+  .site-header__logo img { position: absolute; display: block; left: -5.75390625px; top: 0; }
+  .site-header :global(.site-header__phone) { margin-left: 92px; width: 137px; justify-content: flex-start; }
+  .site-header__actions { margin-left: auto; display: flex; align-items: center; gap: 23px; transform: translateX(1px); }
+  .site-header__nav { display: grid; grid-template-columns: 55px 38px 149px 61px 66px; gap: var(--space-16); align-items: center; }
+  .site-header__nav :global(.ui-button) { justify-content: flex-start; }
+  .site-header :global(.site-header__lead) { width: 145px; }
+</style>
