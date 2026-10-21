@@ -7,6 +7,8 @@ import StatusBadge from '../components/ui/StatusBadge.astro';
 import SectionHeading from '../components/ui/SectionHeading.astro';
 import FaqItem from '../components/FaqItem.astro';
 import LeadForm from '../components/LeadForm.astro';
+import BankCard from '../components/BankCard.astro';
+import { bankCardsReference } from '../data/finance';
 import ModelCard from '../components/ModelCard.astro';
 import { modelCardReference } from '../data/catalog';
 
@@ -38,8 +40,8 @@ const states = ['default', 'hover', 'pressed', 'disabled'] as const;
 <BaseLayout title="Revolis.Мото — стили и компоненты" description="Рабочая библиотека Desktop-компонентов на основе проекта Figma.">
   <header class="kit-header container">
     <a class="kit-brand" href="#top">revolis<span>.Мото</span></a>
-    <nav aria-label="Разделы библиотеки"><a href="#tokens">Стили</a><a href="#buttons">Кнопки</a><a href="#fields">Формы</a><a href="#faq">FAQ</a><a href="#model-cards">Карточки</a></nav>
-    <span class="kit-version">Desktop · UI foundation / 03</span>
+    <nav aria-label="Разделы библиотеки"><a href="#tokens">Стили</a><a href="#buttons">Кнопки</a><a href="#fields">Формы</a><a href="#faq">FAQ</a><a href="#model-cards">Техника</a><a href="#bank-cards">Банки</a></nav>
+    <span class="kit-version">Desktop · UI foundation / 04</span>
   </header>
   <main id="top" class="container">
     <section class="kit-intro" aria-labelledby="kit-title">
@@ -100,7 +102,15 @@ const states = ['default', 'hover', 'pressed', 'disabled'] as const;
       <p id="model-card-feedback" class="kit-feedback" role="status" aria-live="polite">Демонстрационные данные из Figma. Цена, объём двигателя и наличие в этих примерах не являются предложением о продаже.</p>
       <p class="kit-note">Карточка 392 × 642 px, изображение 320 × 213 px внутри области 360 × 320 px. Наведение поднимает карточку на 8 px. В шаблоне Hammer Touring 200 указано 300 см³ — наполнение сверим отдельно перед сборкой каталога.</p>
     </section>
-    <footer class="kit-footer"><p>Revolis.Мото / Desktop UI foundation</p><p>Следующий этап: карточки банков → остальные компоненты → секции главной.</p><a href="#top">Наверх ↑</a></footer>
+    <section id="bank-cards" class="kit-section" aria-labelledby="bank-card-title">
+      <div class="kit-section__intro"><p class="kit-eyebrow">10 / БАНКИ И ОПЛАТА</p><h2 id="bank-card-title">BankCard: три варианта</h2><p>Обычное состояние и наведение. Кнопки показывают выбранный банк; заявка не отправляется.</p></div>
+      <div class="bank-card-showcase">
+        {(['default', 'hover'] as const).map(state => <div class="bank-card-row"><p class="sample-label">{state === 'default' ? 'Обычное · интерактивные примеры' : 'Наведение · зафиксированные состояния'}</p><div>{bankCardsReference.map(card => <BankCard id={`bank-${card.variant}-${state}`} {...card} demoState={state === 'hover' ? 'hover' : undefined} demoAction />)}</div></div>)}
+      </div>
+      <p id="bank-card-feedback" class="kit-feedback" role="status" aria-live="polite">Срок и ставка перенесены из Figma для проверки оформления. Это демонстрационные условия, не действующее предложение банков.</p>
+      <p class="kit-note">Карточки 288 × 174 px, подъём при наведении — 8 px. Логотипы и стрелки экспортированы из исходных узлов Figma.</p>
+    </section>
+    <footer class="kit-footer"><p>Revolis.Мото / Desktop UI foundation</p><p>Следующий этап: Header → диалоги и Footer → секции главной.</p><a href="#top">Наверх ↑</a></footer>
   </main>
 </BaseLayout>
 <script>
@@ -109,6 +119,10 @@ const states = ['default', 'hover', 'pressed', 'disabled'] as const;
   }));
   document.querySelectorAll<HTMLElement>('[data-model-card-demo]').forEach(button => button.addEventListener('click', () => {
     document.getElementById('model-card-feedback')!.textContent = 'Кнопка карточки работает. Страницу модели подключим после её подготовки; сейчас это демонстрация данных Figma.';
+  }));
+  const bankLabels: Record<string, string> = { alfa: 'Альфа Банк', technobank: 'Технобанк', consultation: 'подбор условий оплаты' };
+  document.querySelectorAll<HTMLElement>('[data-bank-card-demo]').forEach(button => button.addEventListener('click', () => {
+    document.getElementById('bank-card-feedback')!.textContent = `Выбрано: ${bankLabels[button.dataset.bankCardDemo!]}. При подключении формы этот выбор передадим консультанту. Заявка не отправлена.`;
   }));
 </script>
 <style>
@@ -168,5 +182,8 @@ const states = ['default', 'hover', 'pressed', 'disabled'] as const;
   .model-card-showcase { display: grid; grid-template-columns: repeat(2, var(--model-card-width)); justify-content: center; gap: var(--space-24); padding-block: var(--space-24); background: var(--color-gray-1); border-radius: var(--radius-card); }
   .model-card-example { display: flex; flex-direction: column; gap: var(--space-24); }
   .model-card-example > .sample-label { padding-inline: var(--space-16); }
+  .bank-card-showcase { padding: 24px; border-radius: var(--radius-card); background: var(--color-gray-1); display: grid; gap: 32px; }
+  .bank-card-row > .sample-label { margin-bottom: 24px; text-align: center; }
+  .bank-card-row > div { display: grid; grid-template-columns: repeat(3, var(--bank-card-width)); justify-content: center; gap: var(--grid-gap); }
   .kit-footer { padding: 32px 0 48px; display: flex; justify-content: space-between; font-size: 12px; color: var(--color-gray-4); }
 </style>

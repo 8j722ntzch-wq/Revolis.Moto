@@ -13,7 +13,13 @@
       "name": "Button",
       "nodeId": "1:6973",
       "implementation": "src/components/ui/Button.astro",
-      "contextFile": "design/context/ui/1-6973.txt"
+      "contextFile": "design/context/ui/1-6973.txt",
+      "additionalContextFiles": [
+        "design/context/ui/26-5495.txt"
+      ],
+      "extensions": [
+        "Inverse outline S and icon M measured from BankCard instances; existing default-tone variants unchanged."
+      ]
     },
     {
       "name": "TextField / name",
@@ -57,6 +63,13 @@
       "implementation": "src/components/ModelCard.astro",
       "contextFile": "design/context/ui/19-4818.txt",
       "detailManifest": "design/model-card.json"
+    },
+    {
+      "name": "BankCard",
+      "nodeId": "26:5495",
+      "implementation": "src/components/BankCard.astro",
+      "contextFile": "design/context/ui/26-5495.txt",
+      "detailManifest": "design/bank-card.json"
     }
   ],
   "foundations": [
@@ -191,7 +204,7 @@
       "Lead backend not connected."
     ],
     "astroCheck": {
-      "files": 20,
+      "files": 22,
       "errors": 0,
       "warnings": 0,
       "hints": 0
@@ -215,11 +228,6 @@
     }
   },
   "nextComponents": [
-    {
-      "name": "BankCard",
-      "nodeId": "26:5495",
-      "status": "inventory-only"
-    },
     {
       "name": "SiteHeader",
       "nodeId": "1:8464",
@@ -253,5 +261,8 @@
     ],
     "phoneMask": "Matches +375 __-___-__-__ from phone states. Native input and pattern validate complete numbers; original LeadForm endpoint remains disconnected."
   },
-  "compositeVerification": "design/model-card.json"
+  "compositeVerification": [
+    "design/model-card.json",
+    "design/bank-card.json"
+  ]
 }

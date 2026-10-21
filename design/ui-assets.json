@@ -468,6 +468,148 @@
       "sourceImageHash": "eeaf0ab54d85183d13f9a820dd016805893f6859",
       "transfer": "Figma Plugin API exportAsync(PNG, SCALE 2) of the photo layer only; original crop retained, no UI screenshot",
       "note": "Reference artwork only; product identity not confirmed."
+    },
+    {
+      "id": "bank-alfa-logo",
+      "nodeId": "26:5414",
+      "kind": "exported-svg",
+      "localPath": "public/assets/bank-card/alfa.svg",
+      "slots": [
+        {
+          "nodeId": "26:5414",
+          "sectionNodeId": "26:5495"
+        },
+        {
+          "nodeId": "26:5498",
+          "sectionNodeId": "26:5495"
+        }
+      ],
+      "callsites": [
+        "src/components/BankCard.astro"
+      ],
+      "intrinsic": {
+        "width": "170",
+        "height": "34",
+        "viewBox": "0 0 170 34"
+      },
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING); original whole node, unmodified"
+    },
+    {
+      "id": "bank-techno-logo",
+      "nodeId": "104:7832",
+      "kind": "exported-svg",
+      "localPath": "public/assets/bank-card/techno.svg",
+      "slots": [
+        {
+          "nodeId": "104:7832",
+          "sectionNodeId": "26:5495"
+        },
+        {
+          "nodeId": "104:7869",
+          "sectionNodeId": "26:5495"
+        }
+      ],
+      "callsites": [
+        "src/components/BankCard.astro"
+      ],
+      "intrinsic": {
+        "width": "248",
+        "height": "34",
+        "viewBox": "0 0 248 34"
+      },
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING); original whole node, unmodified"
+    },
+    {
+      "id": "angle-inverse",
+      "nodeId": "I26:5429;1:6999",
+      "kind": "exported-svg",
+      "localPath": "public/assets/ui/angle-inverse.svg",
+      "slots": [
+        {
+          "nodeId": "I26:5429;1:6999",
+          "sectionNodeId": "26:5495"
+        },
+        {
+          "nodeId": "I26:5644;1:6999",
+          "sectionNodeId": "26:5495"
+        }
+      ],
+      "callsites": [
+        "src/components/ui/Button.astro (BankCard icon M, inverse)"
+      ],
+      "intrinsic": {
+        "width": "20",
+        "height": "20",
+        "viewBox": "0 0 20 20"
+      },
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING); original whole node, unmodified"
+    },
+    {
+      "id": "angle-inverse-hover",
+      "nodeId": "I26:5499;1:7001",
+      "kind": "exported-svg",
+      "localPath": "public/assets/ui/angle-inverse-hover.svg",
+      "slots": [
+        {
+          "nodeId": "I26:5499;1:7001",
+          "sectionNodeId": "26:5495"
+        },
+        {
+          "nodeId": "I26:5654;1:7001",
+          "sectionNodeId": "26:5495"
+        }
+      ],
+      "callsites": [
+        "src/components/ui/Button.astro (BankCard icon M, inverse)"
+      ],
+      "intrinsic": {
+        "width": "20",
+        "height": "20",
+        "viewBox": "0 0 20 20"
+      },
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING); original whole node, unmodified"
+    },
+    {
+      "id": "arrow-inverse",
+      "nodeId": "I26:5740;1:7011",
+      "kind": "exported-svg",
+      "localPath": "public/assets/ui/arrow-inverse.svg",
+      "slots": [
+        {
+          "nodeId": "I26:5740;1:7011",
+          "sectionNodeId": "26:5495"
+        }
+      ],
+      "callsites": [
+        "src/components/ui/Button.astro (BankCard outline S, inverse)"
+      ],
+      "intrinsic": {
+        "width": "16",
+        "height": "16",
+        "viewBox": "0 0 16 16"
+      },
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING); original whole node, unmodified"
+    },
+    {
+      "id": "arrow-inverse-hover",
+      "nodeId": "I31:5806;1:7035",
+      "kind": "exported-svg",
+      "localPath": "public/assets/ui/arrow-inverse-hover.svg",
+      "slots": [
+        {
+          "nodeId": "I31:5806;1:7035",
+          "sectionNodeId": "26:5495"
+        }
+      ],
+      "callsites": [
+        "src/components/ui/Button.astro (BankCard outline S, inverse)"
+      ],
+      "intrinsic": {
+        "width": "16",
+        "height": "16",
+        "viewBox": "0 0 16 16"
+      },
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING); original whole node, unmodified"
     }
   ],
   "verifiedAt": "2026-10-21"

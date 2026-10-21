@@ -65,6 +65,11 @@
   --button-height: 42px;
   --field-height: 52px;
   --checkbox-size: 24px;
+  --bank-card-width: 288px;
+  --bank-card-height: 174px;
+  --color-bank-alfa: #ef3124;
+  --color-bank-techno: #052eb7;
+  --color-white-monochrome: #fefefe;
   --model-card-width: 392px;
   --model-card-height: 642px;
   --model-card-media-height: 320px;

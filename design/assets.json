@@ -4,6 +4,6 @@
   "assets": [],
   "reusableUiManifest": "design/ui-assets.json",
   "notes": [
-    "The 20 imported original UI assets (19 SVGs and 1 photo PNG), source nodes and callsites are recorded in reusableUiManifest. The photo is a ModelCard showcase reference; homepage image inventory is pending."
+    "The 26 imported original UI assets (25 SVGs and 1 photo PNG), source nodes and callsites are recorded in reusableUiManifest. The photo is a ModelCard showcase reference; homepage image inventory is pending."
   ]
 }
