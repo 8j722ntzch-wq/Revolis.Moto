@@ -1,6 +1,6 @@
 /* Current Desktop 1470 frame, 1:13203. Mobile follows its own future design. */
 .homepage { --color-rental: #ef641f; min-width: 1288px; overflow-x: clip; background: var(--color-gray-1); }
-.homepage section { scroll-margin-top: 32px; }
+.homepage section { scroll-margin-top: calc(var(--header-height) + 32px); }
 /* Button icons manage their own visible state; never reveal all variants. */
 .homepage img:not(.ui-button__arrow img) { display: block; }
 .homepage h1 span, .homepage h2 span { color: var(--color-purple); }
@@ -110,8 +110,8 @@
 .home-consultation__address .home-advantage__body { color: var(--color-gray-3); white-space: nowrap; }
 .home-faq { margin-top: 120px; }
 .home-faq__items { display: flex; flex-direction: column; gap: 32px; margin-top: 48px; }
-.homepage #contacts { margin-top: 120px; scroll-margin-top: 24px; }
+.homepage #contacts { margin-top: 120px; scroll-margin-top: calc(var(--header-height) + 24px); }
 
-.homepage .site-header { position: relative; z-index: 1; }
+.homepage .site-header { position: sticky; top: 0; z-index: 100; }
 .homepage .section-heading > .type-eyebrow { line-height: 14px; }
 .home-finance h2 { white-space: nowrap; }
