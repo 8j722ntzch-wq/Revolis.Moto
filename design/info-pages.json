@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "fileKey": "JkXOsnFvWZmMab1VYjVQAJ",
+  "capturedAt": "2026-10-21",
+  "contexts": [
+    {
+      "nodeId": "1:22666",
+      "name": "Contacts Desktop",
+      "width": 1470,
+      "height": 1770,
+      "quality": "high-fidelity",
+      "contextFile": "design/context/info-1-22666.txt"
+    },
+    {
+      "nodeId": "1:22576",
+      "name": "Contacts Mobile",
+      "width": 390,
+      "height": 2602,
+      "quality": "high-fidelity",
+      "contextFile": "design/context/info-1-22576.txt"
+    },
+    {
+      "nodeId": "1:22712",
+      "name": "Privacy Desktop",
+      "width": 1470,
+      "height": 3548,
+      "quality": "high-fidelity",
+      "contextFile": "design/context/info-1-22712.txt"
+    },
+    {
+      "nodeId": "1:22621",
+      "name": "Privacy Mobile",
+      "width": 390,
+      "height": 6926,
+      "quality": "high-fidelity",
+      "contextFile": "design/context/info-1-22621.txt"
+    },
+    {
+      "nodeId": "1:22747",
+      "name": "404 Desktop",
+      "width": 1470,
+      "height": 1160,
+      "quality": "high-fidelity",
+      "contextFile": "design/context/info-1-22747.txt"
+    },
+    {
+      "nodeId": "1:22656",
+      "name": "404 Mobile",
+      "width": 390,
+      "height": 1846,
+      "quality": "high-fidelity",
+      "contextFile": "design/context/info-1-22656.txt"
+    }
+  ]
+}

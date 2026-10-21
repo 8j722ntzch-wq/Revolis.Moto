@@ -22,3 +22,12 @@ export interface FooterDestinations {
   privacy?: string;
   personalData?: string;
 }
+
+// Address confirmed by the user on 2026-10-21; organization map cards are pending.
+const mapAddress = encodeURIComponent('Беларусь, Витебск, проспект Московский, 111');
+export const siteDestinations: FooterDestinations = {
+  privacy: '/privacypolicy/',
+  yandex: `https://yandex.ru/maps/?text=${mapAddress}`,
+  google: `https://www.google.com/maps/search/?api=1&query=${mapAddress}`,
+};
+export const contactMapEmbed = `https://yandex.ru/map-widget/v1/?z=16&mode=search&text=${mapAddress}`;

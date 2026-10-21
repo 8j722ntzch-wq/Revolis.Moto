@@ -1155,6 +1155,62 @@
       ],
       "transfer": "Original PNG downloaded from Figma MCP asset URL; unmodified",
       "sha256": "b21e87be26f691e0739066eb243272092826a7ab9a29a09b7a0f071f3a18881f"
+    },
+    {
+      "id": "info-404-desktop",
+      "nodeId": "1:22749",
+      "kind": "exported-svg",
+      "localPath": "public/assets/info-pages/404-desktop.svg",
+      "slots": [
+        {
+          "nodeId": "1:22749",
+          "sectionNodeId": "1:22747"
+        }
+      ],
+      "transfer": "Original Figma SVG, unmodified; map icons exported with Plugin API SVG_STRING",
+      "sha256": "19ee69416a265c2298db357987111388a2cc039dcf16b648fbe25cf37157b654"
+    },
+    {
+      "id": "info-404-mobile",
+      "nodeId": "1:22659",
+      "kind": "exported-svg",
+      "localPath": "public/assets/info-pages/404-mobile.svg",
+      "slots": [
+        {
+          "nodeId": "1:22659",
+          "sectionNodeId": "1:22656"
+        }
+      ],
+      "transfer": "Original Figma SVG, unmodified; map icons exported with Plugin API SVG_STRING",
+      "sha256": "f7f54012f7c3266a5889ce8139657c7af321b4da04f02791cc8f2517b254603f"
+    },
+    {
+      "id": "info-map-yandex",
+      "nodeId": "135:7210",
+      "kind": "exported-svg",
+      "localPath": "public/assets/info-pages/map-yandex.svg",
+      "slots": [
+        {
+          "nodeId": "135:7210",
+          "sectionNodeId": "1:22666"
+        }
+      ],
+      "transfer": "Original Figma SVG, unmodified; map icons exported with Plugin API SVG_STRING",
+      "sha256": "b2ef22a143d2a10e7f225ce07910b05c4a3b84ef1a4ad0c625e7d47214125641"
+    },
+    {
+      "id": "info-map-google",
+      "nodeId": "135:7213",
+      "kind": "exported-svg",
+      "localPath": "public/assets/info-pages/map-google.svg",
+      "slots": [
+        {
+          "nodeId": "135:7213",
+          "sectionNodeId": "1:22666"
+        }
+      ],
+      "transfer": "Original Figma SVG, unmodified; map icons exported with Plugin API SVG_STRING",
+      "sha256": "167fbd4177533843126fba095f392b01c78c2f622416eeb10f12ca60fbe30124"
     }
   ],
   "reusableUiManifest": "design/ui-assets.json",

@@ -1,7 +1,7 @@
 ---
 import Button from './ui/Button.astro';
 import { headerLinks, type HeaderLink } from '../data/navigation';
-import { footerContent, type FooterDestinations } from '../data/footer';
+import { footerContent, siteDestinations, type FooterDestinations } from '../data/footer';
 interface Props {
   links?: readonly HeaderLink[];
   destinations?: FooterDestinations;
@@ -9,7 +9,7 @@ interface Props {
   topHref?: string;
   demoAction?: boolean;
 }
-const { links = headerLinks, destinations = {}, content = footerContent, topHref = '#top', demoAction = false } = Astro.props;
+const { links = headerLinks, destinations = siteDestinations, content = footerContent, topHref = '#top', demoAction = false } = Astro.props;
 const maps = [{ key: 'yandex', label: 'Yandex Maps' }, { key: 'google', label: 'Google Maps' }] as const;
 const socials = [{ key: 'instagram', label: 'Instagram' }, { key: 'telegram', label: 'Telegram' }, { key: 'youtube', label: 'YouTube' }] as const;
 const policies = [{ key: 'privacy', label: 'Политика конфиденциальности' }, { key: 'personalData', label: 'Политика обработки персональных данных' }] as const;

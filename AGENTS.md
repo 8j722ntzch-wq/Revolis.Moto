@@ -21,6 +21,8 @@ Repository: https://github.com/8j722ntzch-wq/Revolis.Moto
 
 ## Active scope
 
+Contacts, privacy and custom 404 Desktop/Mobile are implemented (2026-10-21). Read docs/info-pages.md and design/info-pages.json. User-confirmed owner: ИП Бугаев Марк Александрович; address: Витебск, проспект Московский, 111. Use one privacy text on both devices. Organization map cards are pending; current Yandex widget searches the confirmed address.
+
 Catalogue Desktop/Mobile assembly was authorized and implemented on 2026-10-21 at /models/. Read docs/catalogue.md and design/catalogue.json for fresh Figma targets, brand filtering, asset provenance and unresolved status differences. Model detail pages remain deferred.
 
 Current milestone (2026-10-21): the user has explicitly authorized assembly of the Desktop homepage from `Main (Desktop)_1470 px` (1:13203). Reuse the reviewed styles and components from `/ui-kit/`. Dialogs are deferred until the user adds their Figma designs. This authorization covers implementation and source updates in development, not website deployment.

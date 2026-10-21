@@ -1,0 +1,57 @@
+.info-page #contacts { margin-top: 0; }
+.info-page h1 { font-size: 40px; line-height: 48px; font-weight: 600; }
+.contact-details { padding-top: 44px; padding-bottom: 40px; }
+.info-page .contact-details h1 { font-weight: 700; }
+.contact-details__grid { margin-top: 48px; display: grid; grid-template-columns: 600px 1fr; column-gap: 24px; row-gap: 24px; }
+.contact-details h2 { color: var(--color-gray-4); font-size: 14px; line-height: 18px; font-weight: 600; margin-bottom: 8px; }
+.contact-details__address { grid-column: 1; grid-row: 1 / 3; }
+.contact-details__address p { font-size: 32px; line-height: 38px; font-weight: 700; }
+.contact-details__hours { grid-column: 2; }
+.contact-details dl, .contact-details dd { margin: 0; }
+.contact-details dl { display: flex; flex-direction: column; gap: 4px; }
+.contact-details dl > div { display: flex; gap: 8px; line-height: 20px; }
+.contact-details dt { font-weight: 700; }
+.contact-details__maps { grid-column: 2; }
+.contact-details__maps > div, .contact-details__phones > div { display: flex; flex-direction: column; gap: 4px; align-items: flex-start; }
+.contact-details__maps a { display: flex; align-items: center; gap: 6px; font-size: 16px; line-height: 20px; font-weight: 600; text-decoration: none; }
+.contact-details__phones { display: none; }
+.contact-details__phones a { font-weight: 600; text-decoration: none; line-height: 20px; }
+.contact-details__socials { display: flex; justify-content: flex-end; gap: 12px; margin-top: 100px; }
+.contact-details__socials button { display: grid; place-items: center; padding: 12px; border: 0; border-radius: 50%; background: var(--color-gray-6); }
+.contact-map { position: relative; height: 671px; background: var(--color-gray-2); }
+.contact-map iframe { display: block; width: 100%; height: calc(100% - 44px); border: 0; }
+.contact-map__external { display: flex; align-items: center; min-height: 44px; background: var(--color-white); color: var(--color-black); padding: 10px 14px; font-size: 14px; }
+.not-found { min-height: 586px; padding-top: 44px; padding-bottom: 60px; }
+.not-found__number { display: block; }
+.not-found__copy { margin-top: 36px; width: 500px; max-width: 100%; }
+.info-page .not-found h1 { font-size: 32px; line-height: 38px; }
+.not-found__copy p { font-size: 16px; line-height: 20px; color: var(--color-gray-4); margin-top: 20px; }
+.not-found__copy .ui-button { margin-top: 24px; }
+.privacy-document { padding-block: 44px; }
+.privacy-document__sections { display: flex; flex-direction: column; gap: 24px; margin-top: 48px; }
+.privacy-document h2 { font-size: 24px; line-height: 30px; font-weight: 600; margin-bottom: 16px; color: var(--color-black); }
+.privacy-document p { font-size: 16px; line-height: 20px; color: #404040; white-space: pre-line; overflow-wrap: anywhere; }
+.privacy-document p.privacy-document__intro { color: var(--color-black); }
+.privacy-document a { text-underline-offset: 3px; }
+@media (max-width: 1287px) {
+  .homepage.mobile-ui.info-page #contacts { margin-top: 0; }
+  .info-page h1 { font-size: 32px; line-height: 38px; }
+  .contact-details { padding-top: 40px; }
+  .info-page .contact-details h1 { font-weight: 600; }
+  .contact-details__grid { margin-top: 28px; display: flex; flex-direction: column; gap: 28px; }
+  .contact-details__address { order: 0; }
+  .contact-details__address p { font-size: 20px; line-height: 26px; }
+  .contact-details__maps { order: 1; }
+  .contact-details__hours { order: 2; }
+  .contact-details__phones { display: block; order: 3; }
+  .contact-details__socials { margin-top: 80px; justify-content: flex-start; }
+  .contact-map { height: 750px; }
+  .not-found { min-height: 646px; padding-top: 36px; }
+  .not-found__copy { margin-top: 64px; width: 340px; }
+  .info-page .not-found h1 { font-size: 24px; line-height: 30px; }
+  .not-found__copy p { font-size: 14px; line-height: 18px; }
+  .privacy-document { padding-top: 36px; padding-bottom: 40px; }
+  .privacy-document__sections { margin-top: 40px; gap: 20px; }
+  .privacy-document h2 { font-size: 20px; line-height: 26px; margin-bottom: 12px; }
+  .privacy-document p { font-size: 14px; line-height: 18px; }
+}

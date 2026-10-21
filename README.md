@@ -4,6 +4,8 @@
 
 ## Начать работу
 
+Контакты: /contacts/. Политика: /privacypolicy/. Ошибочные адреса показывают фирменную 404. Все три страницы доступны на Desktop/Mobile; [источники и проверки](docs/info-pages.md).
+
 Агенту: прочитать [AGENTS.md](AGENTS.md), [статус и ограничения](docs/project-status.md), [бриф](docs/implementation-brief.md) и [порядок работы с Figma](docs/figma-handoff.md).
 
 Нужен Node.js 22.22+ и npm. Установка по зафиксированному package-lock.json:

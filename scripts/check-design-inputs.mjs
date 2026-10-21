@@ -56,6 +56,13 @@ try {
     if (section.quality !== 'high-fidelity' || !await nonEmptyFile(localPath(section.contextFile, 'design/context/'))) issues.push(`Missing catalogue context: ${section.nodeId}.`);
   }
   if (!catalogue.contexts?.length) issues.push('Catalogue contexts are missing.');
+  const infoPages = JSON.parse(await readFile(resolve(root, 'design/info-pages.json'), 'utf8'));
+  if (infoPages.fileKey !== source.fileKey || infoPages.contexts?.length !== 6) issues.push('Six informational page contexts are required.');
+  for (const section of infoPages.contexts ?? []) {
+    if (!nodeIdPattern.test(section.nodeId) || sectionIds.has(section.nodeId)) issues.push('Informational section IDs must be valid and unique.');
+    sectionIds.add(section.nodeId);
+    if (section.quality !== 'high-fidelity' || !await nonEmptyFile(localPath(section.contextFile, 'design/context/'))) issues.push(`Missing informational context: ${section.nodeId}.`);
+  }
   if (manifest.status !== 'imported') issues.push('Original assets have not been imported.');
   if (!Array.isArray(manifest.assets) || !manifest.assets.length) issues.push('Asset manifest is empty.');
   const assetIds = new Set();

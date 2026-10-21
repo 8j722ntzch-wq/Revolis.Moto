@@ -1,0 +1,22 @@
+---
+import InfoLayout from '../layouts/InfoLayout.astro';
+import { footerContent, siteDestinations, contactMapEmbed } from '../data/footer';
+const maps = [{key:'yandex',label:'Yandex Maps'},{key:'google',label:'Google Maps'}] as const;
+const socials = [{key:'instagram',label:'Instagram'},{key:'telegram',label:'Telegram'},{key:'youtube',label:'YouTube'}] as const;
+---
+<InfoLayout title="Контакты — Revolis.Мото" description="Контакты Revolis.Мото: г. Витебск, проспект Московский, 111. Телефоны, время работы и маршрут." pageClass="contacts-page">
+  <section class="contact-details container" aria-labelledby="contact-title">
+    <h1 id="contact-title">Контакты</h1>
+    <div class="contact-details__grid">
+      <div class="contact-details__address"><h2>Адрес:</h2><p>{footerContent.address}</p></div>
+      <div class="contact-details__hours"><h2>Режим работы:</h2><dl>{footerContent.hours.map(row=><div><dt>{row.label}</dt><dd>{row.value}</dd></div>)}</dl></div>
+      <div class="contact-details__maps"><h2>Проложить маршрут:</h2><div>{maps.map(map=><a href={siteDestinations[map.key]} target="_blank" rel="noopener noreferrer"><img src={`/assets/info-pages/map-${map.key}.svg`} alt="" />{map.label}</a>)}</div></div>
+      <div class="contact-details__phones"><h2>Телефоны:</h2><div>{footerContent.phones.map(phone=><a href={phone.href}>{phone.label}</a>)}</div></div>
+    </div>
+    <div class="contact-details__socials" aria-label="Социальные сети">{socials.map(item=><button type="button" disabled aria-label={item.label}><img src={`/assets/footer/social-${item.key}.svg`} alt="" /></button>)}</div>
+  </section>
+  <section class="contact-map" aria-label="Карта: Витебск, проспект Московский, 111">
+    <iframe title="Яндекс Карты — Витебск, проспект Московский, 111" src={contactMapEmbed} loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <a class="contact-map__external" href={siteDestinations.yandex} target="_blank" rel="noopener noreferrer">Открыть адрес в Яндекс Картах</a>
+  </section>
+</InfoLayout>
