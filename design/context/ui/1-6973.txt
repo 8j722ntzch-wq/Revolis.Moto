@@ -1,27 +1,22 @@
-Figma MCP get_design_context — captured 2026-10-21.
-Read-only reference; not application code. Temporary download URLs replaced with opaque asset identifiers. Original SVG files are registered in design/ui-assets.json.
+Figma MCP get_design_context — audited 2026-10-21 after project cleanup.
+Read-only reference; not application code. Temporary asset URLs omitted; original SVG nodes are registered in design/ui-assets.json.
 
-const imgArrow = "figma-asset:a6cd75bd-db7a-419f-8f53-5f1521ce8d71.svg";
-const imgArrow1 = "figma-asset:32bdfc29-1d86-4a07-b65d-3aed2999290d.svg";
-const imgArrow2 = "figma-asset:7a7e4111-05f8-434c-8a49-58ee9e99c023.svg";
-const imgArrow3 = "figma-asset:4954daaa-bebd-4b7f-9113-f7d738e84cbc.svg";
-const imgArrow4 = "figma-asset:5c84a43b-c610-4c3b-888b-e9c96fd1c9e3.svg";
-const imgArrow5 = "figma-asset:4feef692-615b-4f4e-83d3-3457076b13fa.svg";
-const imgArrow6 = "figma-asset:c91216e3-e174-474b-8213-c973f69392ee.svg";
-const imgArrow7 = "figma-asset:07f583bf-2192-43d0-b8d4-e0b8deea124d.svg";
-const imgArrow8 = "figma-asset:faa6f08e-3149-4449-a69c-580035a14d35.svg";
-const imgArrow9 = "figma-asset:caa1cb82-ca79-4011-8823-a40fa15c73ba.svg";
-const imgArrow10 = "figma-asset:654899aa-fcfb-4f32-aae9-c5a96ba54cde.svg";
-const imgArrow11 = "figma-asset:e63dbf3a-e82f-451a-8e75-b10bc45f79ec.svg";
-const imgArrow12 = "figma-asset:04546807-ceb4-472d-9620-c3ab60199090.svg";
-const imgArrow13 = "figma-asset:bc476810-b530-41fd-b464-0f843a1834b8.svg";
-const imgArrow14 = "figma-asset:b5117ed5-4bd2-4a7e-bcd9-5144485daf19.svg";
+const imgArrow = "figma-asset:download-omitted.svg";
+const imgArrow1 = "figma-asset:download-omitted.svg";
+const imgArrow2 = "figma-asset:download-omitted.svg";
+const imgArrow3 = "figma-asset:download-omitted.svg";
+const imgArrow4 = "figma-asset:download-omitted.svg";
+const imgArrow5 = "figma-asset:download-omitted.svg";
+const imgArrow6 = "figma-asset:download-omitted.svg";
+const imgArrow7 = "figma-asset:download-omitted.svg";
+const imgArrow8 = "figma-asset:download-omitted.svg";
+const imgArrow9 = "figma-asset:download-omitted.svg";
 
 type ButtonBasicProps = {
   className?: string;
   device?: "Desktop" | "Mobile";
   icon?: boolean;
-  size?: "XS" | "S" | "M" | "L";
+  size?: "XS" | "S" | "L";
   state?: "Default" | "Hover" | "Pressed" | "Disabled";
   type?: "Solid" | "Linear" | "Text" | "Text (Bold)" | "Icon";
 };
@@ -45,66 +40,6 @@ export default function ButtonBasic({ className, device = "Desktop", icon = fals
       </div>
     );
   }
-  if (type === "Icon" && state === "Default" && icon && size === "M" && device === "Desktop") {
-    return (
-      <div className={className || "border border-[var(--colors\\/grays\\/white,#fdfdfd)] border-solid content-stretch flex items-center justify-center p-[10px] relative rounded-[10px]"} data-node-id="1:6998" data-name="Type=Icon, State=Default, Icon=True, Size=M, Device=Desktop">
-        <div className="relative rounded-[2.353px] shrink-0 size-[20px]" data-node-id="1:6999" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
-          <div className="absolute flex items-center justify-center left-[0.08px] size-[19.849px] top-[0.08px]" data-node-id="I1:6999;1:7315">
-            <div className="-rotate-45 flex-none">
-              <div className="h-[11.228px] relative w-[16.842px]" data-name="Arrow">
-                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow} />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-  if (type === "Icon" && state === "Hover" && icon && size === "M" && device === "Desktop") {
-    return (
-      <div className={className || "bg-[var(--colors\\/grays\\/white,#fdfdfd)] content-stretch cursor-pointer flex items-center justify-center p-[10px] relative rounded-[10px]"} data-node-id="1:7000" data-name="Type=Icon, State=Hover, Icon=True, Size=M, Device=Desktop">
-        <div className="relative rounded-[2.353px] shrink-0 size-[20px]" data-node-id="1:7001" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
-          <div className="absolute flex items-center justify-center left-[0.08px] size-[19.849px] top-[0.08px]" data-node-id="I1:7001;1:7315">
-            <div className="-rotate-45 flex-none">
-              <div className="h-[11.228px] relative w-[16.842px]" data-name="Arrow">
-                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow1} />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-  if (type === "Icon" && state === "Pressed" && icon && size === "M" && device === "Desktop") {
-    return (
-      <div className={className || "bg-[var(--colors\\/grays\\/black,#0d0d0d)] content-stretch flex items-center justify-center p-[10px] relative rounded-[10px]"} data-node-id="1:7002" data-name="Type=Icon, State=Pressed, Icon=True, Size=M, Device=Desktop">
-        <div className="relative rounded-[2.353px] shrink-0 size-[20px]" data-node-id="1:7003" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
-          <div className="absolute flex items-center justify-center left-[0.08px] size-[19.849px] top-[0.08px]" data-node-id="I1:7003;1:7315">
-            <div className="-rotate-45 flex-none">
-              <div className="h-[11.228px] relative w-[16.842px]" data-name="Arrow">
-                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow} />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-  if (type === "Icon" && state === "Disabled" && icon && size === "M" && device === "Desktop") {
-    return (
-      <div className={className || "border border-[var(--colors\\/grays\\/gray-3,#c2bfc9)] border-solid content-stretch flex items-center justify-center p-[10px] relative rounded-[10px]"} data-node-id="1:7004" data-name="Type=Icon, State=Disabled, Icon=True, Size=M, Device=Desktop">
-        <div className="relative rounded-[2.353px] shrink-0 size-[20px]" data-node-id="1:7005" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
-          <div className="absolute flex items-center justify-center left-[0.08px] size-[19.849px] top-[0.08px]" data-node-id="I1:7005;1:7315">
-            <div className="-rotate-45 flex-none">
-              <div className="h-[11.228px] relative w-[16.842px]" data-name="Arrow">
-                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow2} />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
   if (type === "Solid" && state === "Default" && icon && size === "S" && device === "Desktop") {
     return (
       <div className={className || "bg-[var(--colors\\/accents\\/purple,#7c33fb)] content-stretch flex gap-[4px] items-center justify-center px-[var(--padding\\/padding-\\(16\\),16px)] py-[var(--padding\\/padding-\\(12\\),12px)] relative rounded-[10px]"} data-node-id="1:7006" data-name="Type=Solid, State=Default, Icon=True, Size=S, Device=Desktop">
@@ -113,7 +48,7 @@ export default function ButtonBasic({ className, device = "Desktop", icon = fals
         </p>
         <div className="relative rounded-[1.882px] shrink-0 size-[16px]" data-node-id="1:7008" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
           <div className="absolute h-[8.784px] left-[1.41px] top-[3.61px] w-[13.176px]" data-node-id="I1:7008;1:7283" data-name="Arrow">
-            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow3} />
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow} />
           </div>
         </div>
       </div>
@@ -127,7 +62,7 @@ export default function ButtonBasic({ className, device = "Desktop", icon = fals
         </p>
         <div className="relative rounded-[1.882px] shrink-0 size-[16px]" data-node-id="1:7011" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
           <div className="absolute h-[8.784px] left-[1.41px] top-[3.61px] w-[13.176px]" data-node-id="I1:7011;1:7283" data-name="Arrow">
-            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow4} />
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow1} />
           </div>
         </div>
       </div>
@@ -141,7 +76,7 @@ export default function ButtonBasic({ className, device = "Desktop", icon = fals
         </p>
         <div className="relative rounded-[1.647px] shrink-0 size-[14px]" data-node-id="1:7014" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
           <div className="absolute h-[7.686px] left-[1.24px] top-[3.16px] w-[11.529px]" data-node-id="I1:7014;1:7287" data-name="Arrow">
-            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow5} />
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow2} />
           </div>
         </div>
       </div>
@@ -155,7 +90,7 @@ export default function ButtonBasic({ className, device = "Desktop", icon = fals
         </p>
         <div className="relative rounded-[1.647px] shrink-0 size-[14px]" data-node-id="1:7017" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
           <div className="absolute h-[7.686px] left-[1.24px] top-[3.16px] w-[11.529px]" data-node-id="I1:7017;1:7287" data-name="Arrow">
-            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow6} />
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow3} />
           </div>
         </div>
       </div>
@@ -178,7 +113,7 @@ export default function ButtonBasic({ className, device = "Desktop", icon = fals
         </p>
         <div className="relative rounded-[1.882px] shrink-0 size-[16px]" data-node-id="1:7032" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
           <div className="absolute h-[8.784px] left-[1.41px] top-[3.61px] w-[13.176px]" data-node-id="I1:7032;1:7283" data-name="Arrow">
-            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow3} />
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow} />
           </div>
         </div>
       </div>
@@ -192,7 +127,7 @@ export default function ButtonBasic({ className, device = "Desktop", icon = fals
         </p>
         <div className="relative rounded-[1.882px] shrink-0 size-[16px]" data-node-id="1:7035" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
           <div className="absolute h-[8.784px] left-[1.41px] top-[3.61px] w-[13.176px]" data-node-id="I1:7035;1:7283" data-name="Arrow">
-            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow3} />
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow} />
           </div>
         </div>
       </div>
@@ -224,7 +159,7 @@ export default function ButtonBasic({ className, device = "Desktop", icon = fals
         </p>
         <div className="relative rounded-[1.882px] shrink-0 size-[16px]" data-node-id="1:7062" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
           <div className="absolute h-[8.784px] left-[1.41px] top-[3.61px] w-[13.176px]" data-node-id="I1:7062;1:7283" data-name="Arrow">
-            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow3} />
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow} />
           </div>
         </div>
       </div>
@@ -238,7 +173,7 @@ export default function ButtonBasic({ className, device = "Desktop", icon = fals
         </p>
         <div className="relative rounded-[1.882px] shrink-0 size-[16px]" data-node-id="1:7065" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
           <div className="absolute h-[8.784px] left-[1.41px] top-[3.61px] w-[13.176px]" data-node-id="I1:7065;1:7283" data-name="Arrow">
-            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow3} />
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow} />
           </div>
         </div>
       </div>
@@ -252,7 +187,7 @@ export default function ButtonBasic({ className, device = "Desktop", icon = fals
         </p>
         <div className="relative rounded-[1.647px] shrink-0 size-[14px]" data-node-id="1:7068" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
           <div className="absolute h-[7.686px] left-[1.24px] top-[3.16px] w-[11.529px]" data-node-id="I1:7068;1:7287" data-name="Arrow">
-            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow5} />
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow2} />
           </div>
         </div>
       </div>
@@ -266,7 +201,7 @@ export default function ButtonBasic({ className, device = "Desktop", icon = fals
         </p>
         <div className="relative rounded-[1.647px] shrink-0 size-[14px]" data-node-id="1:7071" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
           <div className="absolute h-[7.686px] left-[1.24px] top-[3.16px] w-[11.529px]" data-node-id="I1:7071;1:7287" data-name="Arrow">
-            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow5} />
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow2} />
           </div>
         </div>
       </div>
@@ -298,7 +233,7 @@ export default function ButtonBasic({ className, device = "Desktop", icon = fals
         </p>
         <div className="relative rounded-[1.882px] shrink-0 size-[16px]" data-node-id="1:7098" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
           <div className="absolute h-[8.784px] left-[1.41px] top-[3.61px] w-[13.176px]" data-node-id="I1:7098;1:7283" data-name="Arrow">
-            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow7} />
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow4} />
           </div>
         </div>
       </div>
@@ -312,7 +247,7 @@ export default function ButtonBasic({ className, device = "Desktop", icon = fals
         </p>
         <div className="relative rounded-[1.882px] shrink-0 size-[16px]" data-node-id="1:7101" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
           <div className="absolute h-[8.784px] left-[1.41px] top-[3.61px] w-[13.176px]" data-node-id="I1:7101;1:7283" data-name="Arrow">
-            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow7} />
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow4} />
           </div>
         </div>
       </div>
@@ -326,7 +261,7 @@ export default function ButtonBasic({ className, device = "Desktop", icon = fals
         </p>
         <div className="relative rounded-[1.647px] shrink-0 size-[14px]" data-node-id="1:7104" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
           <div className="absolute h-[7.686px] left-[1.24px] top-[3.16px] w-[11.529px]" data-node-id="I1:7104;1:7287" data-name="Arrow">
-            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow8} />
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow5} />
           </div>
         </div>
       </div>
@@ -340,7 +275,7 @@ export default function ButtonBasic({ className, device = "Desktop", icon = fals
         </p>
         <div className="relative rounded-[1.647px] shrink-0 size-[14px]" data-node-id="1:7107" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
           <div className="absolute h-[7.686px] left-[1.24px] top-[3.16px] w-[11.529px]" data-node-id="I1:7107;1:7287" data-name="Arrow">
-            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow8} />
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow5} />
           </div>
         </div>
       </div>
@@ -371,7 +306,7 @@ export default function ButtonBasic({ className, device = "Desktop", icon = fals
           <div className="absolute flex items-center justify-center left-[0.24px] size-[15.529px] top-[0.24px]" data-node-id="I1:7113;1:7303">
             <div className="-rotate-45 flex-none">
               <div className="h-[8.784px] relative w-[13.176px]" data-name="Arrow">
-                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow9} />
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow6} />
               </div>
             </div>
           </div>
@@ -386,7 +321,7 @@ export default function ButtonBasic({ className, device = "Desktop", icon = fals
           <div className="absolute flex items-center justify-center left-[0.24px] size-[15.529px] top-[0.24px]" data-node-id="I1:7115;1:7303">
             <div className="-rotate-45 flex-none">
               <div className="h-[8.784px] relative w-[13.176px]" data-name="Arrow">
-                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow10} />
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow7} />
               </div>
             </div>
           </div>
@@ -401,7 +336,7 @@ export default function ButtonBasic({ className, device = "Desktop", icon = fals
           <div className="absolute flex items-center justify-center left-[0.24px] size-[15.529px] top-[0.24px]" data-node-id="I1:7117;1:7303">
             <div className="-rotate-45 flex-none">
               <div className="h-[8.784px] relative w-[13.176px]" data-name="Arrow">
-                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow10} />
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow7} />
               </div>
             </div>
           </div>
@@ -416,7 +351,7 @@ export default function ButtonBasic({ className, device = "Desktop", icon = fals
           <div className="absolute flex items-center justify-center left-[0.24px] size-[15.529px] top-[0.24px]" data-node-id="I1:7119;1:7303">
             <div className="-rotate-45 flex-none">
               <div className="h-[8.784px] relative w-[13.176px]" data-name="Arrow">
-                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow11} />
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow8} />
               </div>
             </div>
           </div>
@@ -432,21 +367,7 @@ export default function ButtonBasic({ className, device = "Desktop", icon = fals
         </p>
         <div className="relative rounded-[1.882px] shrink-0 size-[16px]" data-node-id="1:7122" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
           <div className="absolute h-[8.784px] left-[1.41px] top-[3.61px] w-[13.176px]" data-node-id="I1:7122;1:7283" data-name="Arrow">
-            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow4} />
-          </div>
-        </div>
-      </div>
-    );
-  }
-  if (type === "Text" && state === "Default" && icon && size === "M" && device === "Desktop") {
-    return (
-      <div className={className || "content-stretch flex gap-[4px] items-center justify-center relative rounded-[10px]"} data-node-id="1:7123" data-name="Type=Text, State=Default, Icon=True, Size=M, Device=Desktop">
-        <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/accents\/purple,#7c33fb)] tracking-[-0.32px] whitespace-nowrap" data-node-id="1:7124">
-          Оставить заявку
-        </p>
-        <div className="relative rounded-[2.353px] shrink-0 size-[20px]" data-node-id="1:7125" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
-          <div className="absolute h-[11.228px] left-[1.58px] top-[4.39px] w-[16.842px]" data-node-id="I1:7125;1:7311" data-name="Arrow">
-            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow12} />
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow1} />
           </div>
         </div>
       </div>
@@ -460,21 +381,7 @@ export default function ButtonBasic({ className, device = "Desktop", icon = fals
         </p>
         <div className="relative rounded-[1.882px] shrink-0 size-[16px]" data-node-id="1:7128" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
           <div className="absolute h-[8.784px] left-[1.41px] top-[3.61px] w-[13.176px]" data-node-id="I1:7128;1:7283" data-name="Arrow">
-            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow13} />
-          </div>
-        </div>
-      </div>
-    );
-  }
-  if (type === "Text" && state === "Hover" && icon && size === "M" && device === "Desktop") {
-    return (
-      <div className={className || "content-stretch cursor-pointer flex gap-[4px] items-center justify-center relative rounded-[10px]"} data-node-id="1:7129" data-name="Type=Text, State=Hover, Icon=True, Size=M, Device=Desktop">
-        <p className="[text-underline-position:from-font] [word-break:break-word] decoration-from-font decoration-solid font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/accents\/purple,#7c33fb)] tracking-[-0.32px] underline whitespace-nowrap" data-node-id="1:7130">
-          Оставить заявку
-        </p>
-        <div className="relative rounded-[2.353px] shrink-0 size-[20px]" data-node-id="1:7131" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
-          <div className="absolute h-[11.228px] left-[1.58px] top-[4.39px] w-[16.842px]" data-node-id="I1:7131;1:7311" data-name="Arrow">
-            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow12} />
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow9} />
           </div>
         </div>
       </div>
@@ -488,21 +395,7 @@ export default function ButtonBasic({ className, device = "Desktop", icon = fals
         </p>
         <div className="relative rounded-[1.882px] shrink-0 size-[16px]" data-node-id="1:7134" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
           <div className="absolute h-[8.784px] left-[1.41px] top-[3.61px] w-[13.176px]" data-node-id="I1:7134;1:7283" data-name="Arrow">
-            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow13} />
-          </div>
-        </div>
-      </div>
-    );
-  }
-  if (type === "Text" && state === "Pressed" && icon && size === "M" && device === "Desktop") {
-    return (
-      <div className={className || "content-stretch flex gap-[4px] items-center justify-center opacity-70 relative rounded-[10px]"} data-node-id="1:7135" data-name="Type=Text, State=Pressed, Icon=True, Size=M, Device=Desktop">
-        <p className="[text-underline-position:from-font] [word-break:break-word] decoration-from-font decoration-solid font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/accents\/purple,#7c33fb)] tracking-[-0.32px] underline whitespace-nowrap" data-node-id="1:7136">
-          Оставить заявку
-        </p>
-        <div className="relative rounded-[2.353px] shrink-0 size-[20px]" data-node-id="1:7137" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
-          <div className="absolute h-[11.228px] left-[1.58px] top-[4.39px] w-[16.842px]" data-node-id="I1:7137;1:7311" data-name="Arrow">
-            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow12} />
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow9} />
           </div>
         </div>
       </div>
@@ -516,21 +409,7 @@ export default function ButtonBasic({ className, device = "Desktop", icon = fals
         </p>
         <div className="relative rounded-[1.882px] shrink-0 size-[16px]" data-node-id="1:7140" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
           <div className="absolute h-[8.784px] left-[1.41px] top-[3.61px] w-[13.176px]" data-node-id="I1:7140;1:7283" data-name="Arrow">
-            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow7} />
-          </div>
-        </div>
-      </div>
-    );
-  }
-  if (type === "Text" && state === "Disabled" && icon && size === "M" && device === "Desktop") {
-    return (
-      <div className={className || "content-stretch flex gap-[4px] items-center justify-center relative rounded-[10px]"} data-node-id="1:7141" data-name="Type=Text, State=Disabled, Icon=True, Size=M, Device=Desktop">
-        <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/gray-3,#c2bfc9)] tracking-[-0.32px] whitespace-nowrap" data-node-id="1:7142">
-          Оставить заявку
-        </p>
-        <div className="relative rounded-[2.353px] shrink-0 size-[20px]" data-node-id="1:7143" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
-          <div className="absolute h-[11.228px] left-[1.58px] top-[4.39px] w-[16.842px]" data-node-id="I1:7143;1:7311" data-name="Arrow">
-            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow14} />
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow4} />
           </div>
         </div>
       </div>
@@ -599,24 +478,6 @@ export default function ButtonBasic({ className, device = "Desktop", icon = fals
       </div>
     );
   }
-  if (type === "Text" && state === "Default" && !icon && size === "M" && device === "Desktop") {
-    return (
-      <div className={className || "content-stretch flex items-center justify-center relative rounded-[10px]"} data-node-id="1:7158" data-name="Type=Text, State=Default, Icon=False, Size=M, Device=Desktop">
-        <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] whitespace-nowrap" data-node-id="1:7159">
-          О нас
-        </p>
-      </div>
-    );
-  }
-  if (type === "Text (Bold)" && state === "Default" && !icon && size === "M" && device === "Desktop") {
-    return (
-      <div className={className || "content-stretch flex items-center justify-center relative rounded-[10px]"} data-node-id="1:7160" data-name="Type=Text (Bold), State=Default, Icon=False, Size=M, Device=Desktop">
-        <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.32px] whitespace-nowrap" data-node-id="1:7161">
-          О нас
-        </p>
-      </div>
-    );
-  }
   if (type === "Text" && state === "Hover" && !icon && size === "S" && device === "Desktop") {
     return (
       <div className={className || "content-stretch cursor-pointer flex items-center justify-center relative rounded-[10px]"} data-node-id="1:7164" data-name="Type=Text, State=Hover, Icon=False, Size=S, Device=Desktop">
@@ -630,24 +491,6 @@ export default function ButtonBasic({ className, device = "Desktop", icon = fals
     return (
       <div className={className || "content-stretch cursor-pointer flex items-center justify-center relative rounded-[10px]"} data-node-id="1:7166" data-name="Type=Text (Bold), State=Hover, Icon=False, Size=S, Device=Desktop">
         <p className="[text-underline-position:from-font] [word-break:break-word] decoration-from-font decoration-solid font-['Inter:Semi_Bold'] font-semibold leading-[1.25] not-italic relative shrink-0 text-[14px] text-[color:var(--colors\/accents\/purple,#7c33fb)] tracking-[-0.28px] underline whitespace-nowrap" data-node-id="1:7167">
-          О нас
-        </p>
-      </div>
-    );
-  }
-  if (type === "Text" && state === "Hover" && !icon && size === "M" && device === "Desktop") {
-    return (
-      <div className={className || "content-stretch cursor-pointer flex items-center justify-center relative rounded-[10px]"} data-node-id="1:7168" data-name="Type=Text, State=Hover, Icon=False, Size=M, Device=Desktop">
-        <p className="[text-underline-position:from-font] [word-break:break-word] decoration-from-font decoration-solid font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/accents\/purple,#7c33fb)] tracking-[-0.32px] underline whitespace-nowrap" data-node-id="1:7169">
-          О нас
-        </p>
-      </div>
-    );
-  }
-  if (type === "Text (Bold)" && state === "Hover" && !icon && size === "M" && device === "Desktop") {
-    return (
-      <div className={className || "content-stretch cursor-pointer flex items-center justify-center relative rounded-[10px]"} data-node-id="1:7170" data-name="Type=Text (Bold), State=Hover, Icon=False, Size=M, Device=Desktop">
-        <p className="[text-underline-position:from-font] [word-break:break-word] decoration-from-font decoration-solid font-['Inter:Semi_Bold'] font-semibold leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.32px] underline whitespace-nowrap" data-node-id="1:7171">
           О нас
         </p>
       </div>
@@ -680,24 +523,6 @@ export default function ButtonBasic({ className, device = "Desktop", icon = fals
       </div>
     );
   }
-  if (type === "Text" && state === "Pressed" && !icon && size === "M" && device === "Desktop") {
-    return (
-      <div className={className || "content-stretch flex items-center justify-center opacity-70 relative rounded-[10px]"} data-node-id="1:7178" data-name="Type=Text, State=Pressed, Icon=False, Size=M, Device=Desktop">
-        <p className="[text-underline-position:from-font] [word-break:break-word] decoration-from-font decoration-solid font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/accents\/purple,#7c33fb)] tracking-[-0.32px] underline whitespace-nowrap" data-node-id="1:7179">
-          О нас
-        </p>
-      </div>
-    );
-  }
-  if (type === "Text (Bold)" && state === "Pressed" && !icon && size === "M" && device === "Desktop") {
-    return (
-      <div className={className || "content-stretch flex items-center justify-center opacity-70 relative rounded-[10px]"} data-node-id="1:7180" data-name="Type=Text (Bold), State=Pressed, Icon=False, Size=M, Device=Desktop">
-        <p className="[text-underline-position:from-font] [word-break:break-word] decoration-from-font decoration-solid font-['Inter:Semi_Bold'] font-semibold leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.32px] underline whitespace-nowrap" data-node-id="1:7181">
-          О нас
-        </p>
-      </div>
-    );
-  }
   if (type === "Text" && state === "Disabled" && !icon && size === "S" && device === "Desktop") {
     return (
       <div className={className || "content-stretch flex items-center justify-center relative rounded-[10px]"} data-node-id="1:7182" data-name="Type=Text, State=Disabled, Icon=False, Size=S, Device=Desktop">
@@ -711,24 +536,6 @@ export default function ButtonBasic({ className, device = "Desktop", icon = fals
     return (
       <div className={className || "content-stretch flex items-center justify-center relative rounded-[10px]"} data-node-id="1:7184" data-name="Type=Text (Bold), State=Disabled, Icon=False, Size=S, Device=Desktop">
         <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.25] not-italic relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/gray-3,#c2bfc9)] tracking-[-0.28px] whitespace-nowrap" data-node-id="1:7185">
-          О нас
-        </p>
-      </div>
-    );
-  }
-  if (type === "Text" && state === "Disabled" && !icon && size === "M" && device === "Desktop") {
-    return (
-      <div className={className || "content-stretch flex items-center justify-center relative rounded-[10px]"} data-node-id="1:7186" data-name="Type=Text, State=Disabled, Icon=False, Size=M, Device=Desktop">
-        <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/gray-3,#c2bfc9)] tracking-[-0.32px] whitespace-nowrap" data-node-id="1:7187">
-          О нас
-        </p>
-      </div>
-    );
-  }
-  if (type === "Text (Bold)" && state === "Disabled" && !icon && size === "M" && device === "Desktop") {
-    return (
-      <div className={className || "content-stretch flex items-center justify-center relative rounded-[10px]"} data-node-id="1:7188" data-name="Type=Text (Bold), State=Disabled, Icon=False, Size=M, Device=Desktop">
-        <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/gray-3,#c2bfc9)] tracking-[-0.32px] whitespace-nowrap" data-node-id="1:7189">
           О нас
         </p>
       </div>
@@ -760,6 +567,7 @@ export default function ButtonBasic({ className, device = "Desktop", icon = fals
     </div>
   );
 }
+
 SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
 1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
 2. Convert React syntax to the target framework/library
@@ -767,6 +575,9 @@ SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the
 4. Follow the project's existing patterns and conventions
 DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
 
+
 Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
-These styles are contained in the design: H6 — 14: Font(family: "Inter", style: Semi Bold, size: 14, weight: 600, lineHeight: 1.2999999523162842, letterSpacing: -2), H7 — 12: Font(family: "Inter", style: Semi Bold, size: 12, weight: 600, lineHeight: 1.2000000476837158, letterSpacing: -2), Button (S, Mobile M) — 14: Font(family: "Inter", style: Medium, size: 14, weight: 500, lineHeight: 1.25, letterSpacing: -2), Button (M) — 16: Font(family: "Inter", style: Medium, size: 16, weight: 500, lineHeight: 1.25, letterSpacing: -2), Button (S, BOLD) — 14: Font(family: "Inter", style: Semi Bold, size: 14, weight: 600, lineHeight: 1.25, letterSpacing: -2), H4 — 20 (H3 Mobile): Font(family: "Inter", style: Semi Bold, size: 20, weight: 600, lineHeight: 1.2999999523162842, letterSpacing: -2), Button (M, BOLD) — 16: Font(family: "Inter", style: Semi Bold, size: 16, weight: 600, lineHeight: 1.25, letterSpacing: -2), Button (XS) — 12: Font(family: "Inter", style: Medium, size: 12, weight: 500, lineHeight: 1.2000000476837158, letterSpacing: -2).
-The generated code contains image and SVG URL constants, e.g. const image = 'figma-asset:550e8400-e29b-41d4-a716-446655440000.png'. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.
+
+These styles are contained in the design: H7 — 14: Font(family: "Inter", style: Semi Bold, size: 14, weight: 600, lineHeight: 1.2999999523162842, letterSpacing: -2), H8 — 12: Font(family: "Inter", style: Semi Bold, size: 12, weight: 600, lineHeight: 1.2000000476837158, letterSpacing: -2), Button (S, Mobile M) — 14: Font(family: "Inter", style: Medium, size: 14, weight: 500, lineHeight: 1.25, letterSpacing: -2), Button (S, BOLD) — 14: Font(family: "Inter", style: Semi Bold, size: 14, weight: 600, lineHeight: 1.25, letterSpacing: -2), H4 — 20 (H3 Mobile): Font(family: "Inter", style: Semi Bold, size: 20, weight: 600, lineHeight: 1.2999999523162842, letterSpacing: -2), Button (XS) — 12: Font(family: "Inter", style: Medium, size: 12, weight: 500, lineHeight: 1.2000000476837158, letterSpacing: -2).
+
+The generated code contains image and SVG URL constants, e.g. const image = 'figma-asset:download-omitted.png'. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.

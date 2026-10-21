@@ -34,12 +34,6 @@
       "contextFile": "design/context/ui/1-7252.txt"
     },
     {
-      "name": "Badge",
-      "nodeId": "1:7318",
-      "implementation": "src/components/ui/Badge.astro",
-      "contextFile": "design/context/ui/1-7318.txt"
-    },
-    {
       "name": "StatusBadge",
       "nodeId": "13:4379",
       "implementation": "src/components/ui/StatusBadge.astro",
@@ -101,23 +95,25 @@
     "fieldHeight": 52,
     "checkboxSize": 24,
     "smallRadius": 4,
-    "buttonRadius": 10
+    "buttonRadius": 10,
+    "fieldRadius": 10,
+    "iconButtonSize": 40
   },
   "observedDiscrepancies": [
-    {
-      "item": "P1 — 18",
-      "actual": "20px",
-      "resolution": "Use actual measured text size."
-    },
     {
       "item": "Secondary color sample labelled Purple",
       "actual": "Red2 #b42115",
       "resolution": "Do not use as purple hover. Hover #2e1854 measured from Button variant."
     },
     {
-      "item": "Radius foundation vs Button",
+      "item": "Foundation radius vs Button / TextField",
       "actual": "4px vs 10px",
-      "resolution": "Preserve separate semantic radius tokens."
+      "resolution": "Separate small, button and field radius tokens."
+    },
+    {
+      "item": "H1 foundation vs SectionHeading title",
+      "actual": "40px Bold 700 vs 40px Semi Bold 600",
+      "resolution": "Preserve the actual component weight separately from the foundation role."
     }
   ],
   "implementationAdditions": [
@@ -135,7 +131,9 @@
         "scrollWidth": 1351,
         "containerWidth": 1224,
         "buttonHeight": 42,
+        "iconButtonSize": 40,
         "fieldHeight": 52,
+        "fieldRadius": 10,
         "brokenImages": 0
       },
       {
@@ -144,7 +142,9 @@
         "scrollWidth": 1455,
         "containerWidth": 1224,
         "buttonHeight": 42,
+        "iconButtonSize": 40,
         "fieldHeight": 52,
+        "fieldRadius": 10,
         "brokenImages": 0
       },
       {
@@ -153,28 +153,41 @@
         "scrollWidth": 1905,
         "containerWidth": 1224,
         "buttonHeight": 42,
+        "iconButtonSize": 40,
         "fieldHeight": 52,
+        "fieldRadius": 10,
         "brokenImages": 0
       }
     ],
     "interactionChecks": [
       "Button click feedback and native disabled behavior",
-      "Field filling and checkbox state",
-      "Error field red border",
-      "FAQ mouse and keyboard activation with exclusive opening",
-      "Lead submission disabled without endpoint and policy URL"
+      "Phone typing, masked partial input, select-all deletion and clipboard paste",
+      "Name input and checkbox toggling",
+      "Error and disabled field placeholders without visible required marker",
+      "FAQ mouse and Enter activation with exclusive opening",
+      "LeadForm submission remains disabled without endpoint and policy"
     ],
+    "typographyChecks": {
+      "h1Weight": 700,
+      "h3Size": 28,
+      "sectionHeadingWeight": 600,
+      "sectionHeadingTwoLineHeight": 114.390625
+    },
     "knownLimits": [
-      "Small intrinsic text width difference: plain CTA about 143.7px rendered vs 145px in Figma; font binary and rendering not identical.",
-      "Mobile composition not implemented.",
-      "Not a complete homepage pixel comparison.",
+      "Bundled Inter Variable can have slightly different intrinsic text widths than the Figma font binary; plain CTA approximately 143.7px vs 145px.",
+      "Browser fractional line-height: SectionHeading 114.39px vs rounded Figma 114px. StatusBadge line-height explicitly 14px to preserve its 22px frame.",
+      "Mobile and full homepage visual comparison are outside this milestone.",
       "Lead backend not connected."
     ],
     "astroCheck": {
-      "files": 17,
+      "files": 19,
       "errors": 0,
       "warnings": 0,
       "hints": 0
+    },
+    "unitTests": {
+      "phoneMask": 3,
+      "passed": 3
     },
     "build": {
       "status": "passed",
@@ -182,10 +195,12 @@
     },
     "offlinePreview": {
       "embeddedImages": true,
-      "brokenImages": 0,
       "externalStylesheets": 0,
+      "externalScripts": 0,
+      "brokenImages": 0,
       "fontLoaded": true,
-      "buttonFeedback": "passed"
+      "buttonFeedback": "passed",
+      "phonePartialMask": "visually verified"
     }
   },
   "nextComponents": [
@@ -209,5 +224,27 @@
       "nodeId": "1:8514",
       "status": "not-implemented"
     }
-  ]
+  ],
+  "audit": {
+    "date": "2026-10-21",
+    "reason": "Reconcile user cleanup in Figma",
+    "removed": [
+      "Badge 1:7318 (node no longer exists), dollar asset and old context",
+      "Button Text M (variants removed)",
+      "Unsupported SectionHeading lg size"
+    ],
+    "updated": [
+      "Typography H1-H8: updated weights and new H3 28px; P1 label corrected to 20",
+      "TextField radius 10px, error/disabled placeholders, Belarus phone mask",
+      "Button text state weights and line-heights; retained Text (Bold) S/L and Icon S variants",
+      "Fresh original arrow SVGs and component contexts"
+    ],
+    "unchanged": [
+      "Checkbox geometry and original tick assets",
+      "Four StatusBadge variants and original status icons",
+      "FAQ typography, spacing and divider",
+      "Colors and spacing scale"
+    ],
+    "phoneMask": "Matches +375 __-___-__-__ from phone states. Native input and pattern validate complete numbers; original LeadForm endpoint remains disconnected."
+  }
 }

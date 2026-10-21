@@ -1,6 +1,6 @@
 # Revolis.Мото — Astro и Desktop UI Kit
 
-Обновлено 21.10.2026. Подготовлены стили и базовые компоненты из актуального Figma. **Главная ещё не свёрстана. Проект не опубликован.**
+Обновлено 21.10.2026. Повторно сверены стили и базовые компоненты после чистки Figma. Удалены устаревшие теги и Text M; обновлены типографика, поля, кнопки и SVG. **Главная ещё не свёрстана. Проект не опубликован.**
 
 ## Репозиторий и порядок работы
 
@@ -20,6 +20,7 @@
 npm ci
 npm run dev
 npm run check
+npm test
 npm run build
 npm run export:ui-kit
 ```
@@ -29,8 +30,8 @@ npm run export:ui-kit
 ## Подготовлено
 
 - Токены цветов, размеров шрифта, начертаний, отступов, контейнера и радиусов.
-- Локальный Inter Variable с кириллицей и 12 оригинальных SVG из Figma.
-- Button, TextField, Checkbox, Badge, StatusBadge, SectionHeading, FaqItem.
+- Локальный Inter Variable с кириллицей и 15 оригинальных SVG из Figma.
+- Button, TextField, Checkbox, StatusBadge, SectionHeading, FaqItem.
 - Витрина состояний: default, hover, pressed, disabled, заполнение и ошибка; клавиатурный фокус.
 - Общий BaseLayout, LeadDialog и LeadForm с контекстом заявки. Форма использует новые UI-компоненты.
 - Типизированный каталог семи моделей; неизвестные цены и наличие оставлены незаполненными.

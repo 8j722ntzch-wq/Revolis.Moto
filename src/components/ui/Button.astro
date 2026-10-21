@@ -1,8 +1,8 @@
 ---
 interface Props {
   href?: string;
-  variant?: 'solid' | 'outline' | 'text';
-  size?: 's' | 'm' | 'xs';
+  variant?: 'solid' | 'outline' | 'text' | 'text-bold' | 'icon';
+  size?: 's' | 'l' | 'xs';
   arrow?: boolean;
   disabled?: boolean;
   type?: 'button' | 'submit' | 'reset';
@@ -13,16 +13,24 @@ interface Props {
   [key: `data-${string}`]: string | undefined;
 }
 const { href, variant = 'solid', size = 's', arrow = false, disabled = false, type = 'button', class: className, target, ...attributes } = Astro.props;
-if (variant !== 'text' && size !== 's') throw new Error('Only desktop size S is captured for solid/outline buttons.');
-if (arrow && size !== 's') throw new Error('Only desktop 16px arrow is captured.');
+const sizes = { solid: ['s'], outline: ['s'], text: ['s', 'xs'], 'text-bold': ['s', 'l'], icon: ['s'] };
+if (!sizes[variant].includes(size)) throw new Error(`Unsupported desktop Button: ${variant}/${size}.`);
+if (arrow && (size !== 's' || variant === 'text-bold' || variant === 'icon')) throw new Error('This Figma variant has no inline arrow.');
+if (variant === 'icon' && !attributes['aria-label']) throw new Error('Icon buttons require an aria-label.');
 const Tag = href ? (disabled ? 'span' : 'a') : 'button';
 ---
-<Tag {...attributes} class:list={['ui-button', `ui-button--${variant}`, `ui-button--${size}`, className]} href={href && !disabled ? href : undefined} type={Tag === 'button' ? type : undefined} disabled={Tag === 'button' ? disabled : undefined} aria-disabled={disabled || undefined} target={!disabled ? target : undefined} rel={target === '_blank' ? 'noopener noreferrer' : undefined}>
-  <span class="ui-button__label"><slot /></span>
+<Tag {...attributes} class:list={['ui-button', `ui-button--${variant}`, `ui-button--${size}`, { 'ui-button--with-arrow': arrow }, className]} href={href && !disabled ? href : undefined} type={Tag === 'button' ? type : undefined} disabled={Tag === 'button' ? disabled : undefined} aria-disabled={disabled || undefined} target={!disabled ? target : undefined} rel={target === '_blank' ? 'noopener noreferrer' : undefined}>
+  {variant !== 'icon' && <span class="ui-button__label"><slot /></span>}
   {arrow && <span class="ui-button__arrow" aria-hidden="true">
     <img class="arrow-black" src="/assets/ui/arrow-black.svg" alt="" />
     <img class="arrow-white" src="/assets/ui/arrow-white.svg" alt="" />
     <img class="arrow-purple" src="/assets/ui/arrow-purple.svg" alt="" />
     <img class="arrow-disabled" src="/assets/ui/arrow-disabled.svg" alt="" />
+  </span>}
+  {variant === 'icon' && <span class="ui-button__arrow" aria-hidden="true">
+    <img class="angle-black" src="/assets/ui/angle-black.svg" alt="" />
+    <img class="angle-white" src="/assets/ui/angle-white.svg" alt="" />
+    <img class="angle-pressed" src="/assets/ui/angle-pressed.svg" alt="" />
+    <img class="angle-disabled" src="/assets/ui/angle-disabled.svg" alt="" />
   </span>}
 </Tag>

@@ -37,6 +37,7 @@
   --text-display: 64px;
   --text-heading-xl: 40px;
   --text-heading-lg: 32px;
+  --text-heading-intermediate: 28px;
   --text-heading-md: 24px;
   --text-heading-sm: 20px;
   --text-body-lg: 20px;
@@ -58,6 +59,7 @@
   --space-48: 48px;
   --radius-small: 4px;
   --radius-button: 10px;
+  --radius-field: 10px;
   --container-width: 1224px;
   --grid-gap: 24px;
   --button-height: 42px;

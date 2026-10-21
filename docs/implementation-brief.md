@@ -6,7 +6,7 @@
 
 По решению пользователя сначала создаётся библиотека Desktop-компонентов, затем составные карточки и только после этого секции главной. Доступ Figma MCP восстановлен и проверен чтением файла. Страница проекта — `1:15`, основной фрейм — `1:13203`, текущий размер — 1470 × 6236 px. Контейнер — 1224 px, интервал — 24 px.
 
-В Astro добавлены `/ui-kit/`, токены цветов/типографики/геометрии, локальный Inter Variable, Button, TextField, Checkbox, Badge, StatusBadge, SectionHeading и оформленный FaqItem. LeadForm использует общие компоненты; отправка без endpoint и политики остаётся отключённой. Перенесены 12 оригинальных SVG из Figma. Реестры и ограничения — `design/ui-foundation.json`, `design/ui-assets.json`, `docs/ui-foundation.md`.
+В Astro добавлены `/ui-kit/`, токены цветов/типографики/геометрии, локальный Inter Variable, Button, TextField, Checkbox, StatusBadge, SectionHeading и оформленный FaqItem. LeadForm использует общие компоненты; отправка без endpoint и политики остаётся отключённой. Перенесены 15 оригинальных SVG из Figma. Реестры и ограничения — `design/ui-foundation.json`, `design/ui-assets.json`, `docs/ui-foundation.md`.
 
 Дальнейшие этапы: ModelCard и BankCard → Header/диалоги/Footer → секции главной. Описания старого PDF ниже сохранены как исторический контекст; они не заменяют актуальный Figma.
 

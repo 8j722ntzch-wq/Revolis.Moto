@@ -151,27 +151,6 @@
       "transfer": "Figma Plugin API exportAsync(SVG_STRING); original icon node, unmodified"
     },
     {
-      "id": "dollar",
-      "nodeId": "1:7322",
-      "kind": "exported-svg",
-      "localPath": "public/assets/ui/dollar.svg",
-      "slots": [
-        {
-          "nodeId": "1:7322",
-          "sectionNodeId": "1:7318"
-        }
-      ],
-      "callsites": [
-        "src/components/ui/Badge.astro"
-      ],
-      "intrinsic": {
-        "width": "10",
-        "height": "14",
-        "viewBox": "0 0 10 14"
-      },
-      "transfer": "Figma Plugin API exportAsync(SVG_STRING); original icon node, unmodified"
-    },
-    {
       "id": "status-stock",
       "nodeId": "13:4397",
       "kind": "exported-svg",
@@ -254,6 +233,91 @@
         "viewBox": "0 0 8 8"
       },
       "transfer": "Figma Plugin API exportAsync(SVG_STRING); original icon node, unmodified"
+    },
+    {
+      "id": "angle-black",
+      "nodeId": "1:7113",
+      "kind": "exported-svg",
+      "localPath": "public/assets/ui/angle-black.svg",
+      "slots": [
+        {
+          "nodeId": "1:7113",
+          "sectionNodeId": "1:6973"
+        }
+      ],
+      "callsites": [
+        "src/components/ui/Button.astro"
+      ],
+      "intrinsic": {
+        "width": "16",
+        "height": "16",
+        "viewBox": "0 0 16 16"
+      },
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING); original icon node, unmodified"
+    },
+    {
+      "id": "angle-white",
+      "nodeId": "1:7115",
+      "kind": "exported-svg",
+      "localPath": "public/assets/ui/angle-white.svg",
+      "slots": [
+        {
+          "nodeId": "1:7115",
+          "sectionNodeId": "1:6973"
+        }
+      ],
+      "callsites": [
+        "src/components/ui/Button.astro"
+      ],
+      "intrinsic": {
+        "width": "16",
+        "height": "16",
+        "viewBox": "0 0 16 16"
+      },
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING); original icon node, unmodified"
+    },
+    {
+      "id": "angle-pressed",
+      "nodeId": "1:7117",
+      "kind": "exported-svg",
+      "localPath": "public/assets/ui/angle-pressed.svg",
+      "slots": [
+        {
+          "nodeId": "1:7117",
+          "sectionNodeId": "1:6973"
+        }
+      ],
+      "callsites": [
+        "src/components/ui/Button.astro"
+      ],
+      "intrinsic": {
+        "width": "16",
+        "height": "16",
+        "viewBox": "0 0 16 16"
+      },
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING); original icon node, unmodified"
+    },
+    {
+      "id": "angle-disabled",
+      "nodeId": "1:7119",
+      "kind": "exported-svg",
+      "localPath": "public/assets/ui/angle-disabled.svg",
+      "slots": [
+        {
+          "nodeId": "1:7119",
+          "sectionNodeId": "1:6973"
+        }
+      ],
+      "callsites": [
+        "src/components/ui/Button.astro"
+      ],
+      "intrinsic": {
+        "width": "16",
+        "height": "16",
+        "viewBox": "0 0 16 16"
+      },
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING); original icon node, unmodified"
     }
-  ]
+  ],
+  "verifiedAt": "2026-10-21"
 }
