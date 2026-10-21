@@ -1,0 +1,180 @@
+const imgElementKey = "https://www.figma.com/api/mcp/asset/ce8cb390-b978-443f-958f-52b03cb695d1.svg";
+const imgElementKey1 = "https://www.figma.com/api/mcp/asset/9cc43275-7fc6-4517-8bc7-94f6bc3cb2f3.svg";
+const imgElementKey2 = "https://www.figma.com/api/mcp/asset/316065d6-9013-4a12-96ef-dfd23fce441b.svg";
+const imgArrow = "https://www.figma.com/api/mcp/asset/634fb848-b94c-4c28-bc0b-d7bd32301203.svg";
+const imgGroup9 = "https://www.figma.com/api/mcp/asset/2881ee3d-6fa9-45a6-8fbd-9f4cdda97dcb.svg";
+const imgGroup10 = "https://www.figma.com/api/mcp/asset/910a0f08-b09a-4142-8f02-9bf8b7dd6088.svg";
+const imgGroup = "https://www.figma.com/api/mcp/asset/af8d299e-e55f-4494-821a-8a558df89c07.svg";
+const imgGroup1 = "https://www.figma.com/api/mcp/asset/02f396ca-3139-4b10-a905-89e56cae507a.svg";
+const imgIconAdvantages24Px32Px = "https://www.figma.com/api/mcp/asset/d7b779a2-2fc1-417f-a07b-d193952583d9.svg";
+const imgGroup2 = "https://www.figma.com/api/mcp/asset/0aca6dc4-81e0-4c9f-9f5c-8e8594cef5de.svg";
+
+export default function Component7() {
+  return (
+    <div className="relative size-full" data-node-id="199:7383" data-name="7_Прокат">
+      <div className="absolute contents left-[-420px] top-[312px]" data-node-id="199:7384">
+        <div className="absolute contents left-[-420px] top-[312px]" data-node-id="199:7385">
+          <div className="absolute contents left-[-420px] top-[312px]" data-node-id="199:7386">
+            <div className="absolute contents left-[-420px] top-[312px]" data-node-id="199:7387">
+              <div className="absolute contents left-[-420px] top-[312px]" data-node-id="199:7388">
+                <div className="absolute h-[106.667px] left-[220px] top-[418.67px] w-[320.001px]" data-node-id="199:7389" data-name="element_Key">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgElementKey} />
+                </div>
+                <div className="absolute h-[106.667px] left-[220px] top-[312px] w-[320.001px]" data-node-id="199:7390" data-name="element_Key">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgElementKey1} />
+                </div>
+                <div className="absolute h-[106.667px] left-[220px] top-[525.33px] w-[320.001px]" data-node-id="199:7391" data-name="element_Key">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgElementKey2} />
+                </div>
+                <div className="absolute h-[106.667px] left-[-100px] top-[525.33px] w-[320.001px]" data-node-id="199:7392" data-name="element_Key">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgElementKey} />
+                </div>
+                <div className="absolute h-[106.667px] left-[-100px] top-[418.67px] w-[320.001px]" data-node-id="199:7393" data-name="element_Key">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgElementKey1} />
+                </div>
+                <div className="absolute h-[106.667px] left-[-420px] top-[525.33px] w-[320.001px]" data-node-id="199:7394" data-name="element_Key">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgElementKey1} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="absolute content-stretch flex flex-col gap-[24px] items-start left-0 top-0 w-[340px]" data-node-id="199:7395" data-name="layout_Text, Button">
+        <div className="[word-break:break-word] content-stretch flex flex-col gap-[var(--spacings\/content-\(12\),12px)] items-start not-italic relative shrink-0 w-full" data-node-id="199:7396" data-name="element_Headline + Body">
+          <div className="content-stretch flex flex-col font-['Inter:Bold'] font-bold gap-[var(--spacings\/content-\(4\),4px)] items-start relative shrink-0 text-[color:var(--colors\/grays\/black,#0d0d0d)] w-full" data-node-id="199:7397" data-name="layout_Superscript, Headline">
+            <p className="leading-[1.2] relative shrink-0 text-[12px] tracking-[-0.24px] w-full" data-node-id="199:7398">
+              Прокат квадроциклов
+            </p>
+            <p className="leading-[0] relative shrink-0 text-[0px] tracking-[-0.48px] uppercase w-full" data-node-id="199:7399">
+              <span className="leading-[1.2] text-[24px]">{`Больше, чем продавцы техники. Мы `}</span>
+              <span className="leading-[1.2] text-[#ef641f] text-[24px]">продаём эмоции</span>
+            </p>
+          </div>
+          <div className="font-['Inter:Medium'] font-medium leading-[0] relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/gray-5,#43404a)] tracking-[-0.28px] w-full whitespace-pre-wrap" data-node-id="199:7400">
+            <p className="leading-[1.25] mb-0">{`Прокат квадроциклов в Сокольниках. 1-часовые `}</p>
+            <p className="leading-[1.25]">и 2-часовые трассы. Идеальный формат для отдыха с друзьями, семьёй или коллегами</p>
+          </div>
+        </div>
+        <div className="bg-[#ef641f] content-stretch cursor-pointer flex gap-[4px] items-center justify-center px-[var(--padding\/padding-\(16\),16px)] py-[var(--padding\/padding-\(12\),12px)] relative rounded-[10px] shrink-0" data-node-id="199:7401" data-name="button_Basic">
+          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.2] not-italic relative shrink-0 text-[12px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.24px] whitespace-nowrap" data-node-id="I199:7401;1:7013">
+            Перейти в Instagram проката
+          </p>
+          <div className="relative rounded-[1.647px] shrink-0 size-[14px]" data-node-id="I199:7401;1:7014" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
+            <div className="absolute h-[7.686px] left-[1.24px] top-[3.16px] w-[11.529px]" data-node-id="I199:7401;1:7014;1:7287" data-name="Arrow">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow} />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="absolute left-0 overflow-clip size-[340px] top-[273px]" data-node-id="199:7402" data-name="Stickers">
+        <div className="absolute inset-[10.16%_9.72%_9.93%_9.77%]" data-node-id="I199:7402;1241:149185">
+          <div className="absolute inset-[-1.96%_-1.94%]">
+            <img alt="" className="block max-w-none size-full" src={imgGroup9} />
+          </div>
+        </div>
+        <div className="absolute inset-[10.16%_9.77%_9.97%_9.77%]" data-node-id="I199:7402;1241:149187">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup10} />
+        </div>
+      </div>
+      <div className="absolute content-stretch flex gap-[var(--spacings\/content-\(8\),8px)] items-center left-0 top-[653px] w-[340px]" data-node-id="199:7403" data-name="frame_Advantage">
+        <div className="bg-[rgba(239,100,31,0.2)] content-stretch flex items-center overflow-clip p-[4px] relative rounded-[500px] shrink-0" data-node-id="I199:7403;160:6298" data-name="element_Advantages">
+          <div className="bg-[#ef641f] overflow-clip relative rounded-[500px] shrink-0 size-[44px]" data-node-id="I199:7403;160:6298;160:6393" data-name="Container">
+            <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 overflow-clip size-[28px] top-1/2" data-node-id="I199:7403;160:6298;160:6394" data-name="icon_Advantages (24px, 32 px)">
+              <div className="absolute inset-[8.33%]" data-node-id="I199:7403;160:6298;160:6394;115:5762" data-name="Group">
+                <div className="absolute inset-[-3.21%]">
+                  <img alt="" className="block max-w-none size-full" src={imgGroup} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="[word-break:break-word] content-stretch flex flex-[1_0_0] flex-col gap-[var(--spacings\/content-\(4\),4px)] items-start justify-center min-w-px not-italic relative text-[14px] tracking-[-0.28px]" data-node-id="I199:7403;160:6299" data-name="layout_Text">
+          <p className="font-['Inter:Bold'] font-bold leading-[1.3] relative shrink-0 text-[color:var(--colors\/grays\/black,#0d0d0d)] whitespace-nowrap" data-node-id="I199:7403;160:6300">
+            Живописные маршруты
+          </p>
+          <div className="font-['Inter:Medium'] font-medium leading-[0] min-w-full relative shrink-0 text-[color:var(--colors\/grays\/gray-5,#43404a)] w-[min-content] whitespace-pre-wrap" data-node-id="I199:7403;160:6301">
+            <p className="leading-[1.25] mb-0">{`Хвойный лес, остановки у реки Лучёса `}</p>
+            <p className="leading-[1.25]">и экстрим</p>
+          </div>
+        </div>
+      </div>
+      <div className="absolute content-stretch flex gap-[var(--spacings\/content-\(8\),8px)] items-center left-0 top-[731px] w-[340px]" data-node-id="199:7404" data-name="frame_Advantage">
+        <div className="bg-[rgba(239,100,31,0.2)] content-stretch flex items-center overflow-clip p-[4px] relative rounded-[500px] shrink-0" data-node-id="I199:7404;160:6298" data-name="element_Advantages">
+          <div className="bg-[#ef641f] overflow-clip relative rounded-[500px] shrink-0 size-[44px]" data-node-id="I199:7404;160:6298;160:6393" data-name="Container">
+            <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 overflow-clip size-[28px] top-1/2" data-node-id="I199:7404;160:6298;160:6394" data-name="icon_Advantages (24px, 32 px)">
+              <div className="absolute inset-[8.33%_4.17%_12.5%_4.17%]" data-node-id="I199:7404;160:6298;160:6394;130:6952" data-name="Group">
+                <div className="absolute inset-[-3.38%_-2.92%]">
+                  <img alt="" className="block max-w-none size-full" src={imgGroup1} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="[word-break:break-word] content-stretch flex flex-[1_0_0] flex-col gap-[var(--spacings\/content-\(4\),4px)] items-start justify-center min-w-px not-italic relative text-[14px] tracking-[-0.28px]" data-node-id="I199:7404;160:6299" data-name="layout_Text">
+          <p className="font-['Inter:Bold'] font-bold leading-[1.3] relative shrink-0 text-[color:var(--colors\/grays\/black,#0d0d0d)] whitespace-nowrap" data-node-id="I199:7404;160:6300">
+            Индивидуально и группой
+          </p>
+          <div className="font-['Inter:Medium'] font-medium leading-[0] min-w-full relative shrink-0 text-[color:var(--colors\/grays\/gray-5,#43404a)] w-[min-content] whitespace-pre-wrap" data-node-id="I199:7404;160:6301">
+            <p className="leading-[1.25] mb-0">{`Для друзей, семьи, коллег `}</p>
+            <p className="leading-[1.25]">или одиночных участников</p>
+          </div>
+        </div>
+      </div>
+      <div className="absolute content-stretch flex gap-[var(--spacings\/content-\(8\),8px)] items-center left-0 top-[809px] w-[340px]" data-node-id="199:7405" data-name="frame_Advantage">
+        <div className="bg-[rgba(239,100,31,0.2)] content-stretch flex items-center overflow-clip p-[4px] relative rounded-[500px] shrink-0" data-node-id="I199:7405;160:6298" data-name="element_Advantages">
+          <div className="bg-[#ef641f] overflow-clip relative rounded-[500px] shrink-0 size-[44px]" data-node-id="I199:7405;160:6298;160:6393" data-name="Container">
+            <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[28px] top-1/2" data-node-id="I199:7405;160:6298;160:6394" data-name="icon_Advantages (24px, 32 px)/Принудительная Сушка">
+              <div className="absolute inset-[8.33%]" data-node-id="I199:7405;160:6298;160:6394;1:8409" data-name="Group">
+                <div className="absolute inset-[-2.81%]">
+                  <img alt="" className="block max-w-none size-full" src={imgIconAdvantages24Px32Px} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="[word-break:break-word] content-stretch flex flex-[1_0_0] flex-col gap-[var(--spacings\/content-\(4\),4px)] items-start justify-center min-w-px not-italic relative text-[14px] tracking-[-0.28px]" data-node-id="I199:7405;160:6299" data-name="layout_Text">
+          <p className="font-['Inter:Bold'] font-bold leading-[1.3] relative shrink-0 text-[color:var(--colors\/grays\/black,#0d0d0d)] whitespace-nowrap" data-node-id="I199:7405;160:6300">
+            Безопасно
+          </p>
+          <div className="font-['Inter:Medium'] font-medium leading-[0] min-w-full relative shrink-0 text-[color:var(--colors\/grays\/gray-5,#43404a)] w-[min-content] whitespace-pre-wrap" data-node-id="I199:7405;160:6301">
+            <p className="leading-[1.25] mb-0">{`Экипировка, инструктаж `}</p>
+            <p className="leading-[1.25]">и обучение перед заездом</p>
+          </div>
+        </div>
+      </div>
+      <div className="absolute content-stretch flex gap-[var(--spacings\/content-\(8\),8px)] items-center left-0 top-[887px] w-[340px]" data-node-id="199:7406" data-name="frame_Advantage">
+        <div className="bg-[rgba(239,100,31,0.2)] content-stretch flex items-center overflow-clip p-[4px] relative rounded-[500px] shrink-0" data-node-id="I199:7406;160:6298" data-name="element_Advantages">
+          <div className="bg-[#ef641f] overflow-clip relative rounded-[500px] shrink-0 size-[44px]" data-node-id="I199:7406;160:6298;160:6393" data-name="Container">
+            <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 overflow-clip size-[28px] top-1/2" data-node-id="I199:7406;160:6298;160:6394" data-name="icon_Advantages (24px, 32 px)">
+              <div className="absolute inset-[16.67%_8.33%]" data-node-id="I199:7406;160:6298;160:6394;130:6960" data-name="Group">
+                <div className="absolute inset-[-4.02%_-3.21%]">
+                  <img alt="" className="block max-w-none size-full" src={imgGroup2} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="[word-break:break-word] content-stretch flex flex-[1_0_0] flex-col gap-[var(--spacings\/content-\(4\),4px)] items-start justify-center min-w-px not-italic relative text-[14px] tracking-[-0.28px]" data-node-id="I199:7406;160:6299" data-name="layout_Text">
+          <p className="font-['Inter:Bold'] font-bold leading-[1.3] relative shrink-0 text-[color:var(--colors\/grays\/black,#0d0d0d)] whitespace-nowrap" data-node-id="I199:7406;160:6300">
+            В подарок
+          </p>
+          <div className="font-['Inter:Medium'] font-medium leading-[0] min-w-full relative shrink-0 text-[color:var(--colors\/grays\/gray-5,#43404a)] w-[min-content]" data-node-id="I199:7406;160:6301">
+            <p className="leading-[1.25] mb-0">Подарочные сертификаты</p>
+            <p className="leading-[1.25]">с доставкой</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+These styles are contained in the design: H8 — 12 (Bold): Font(family: "Inter", style: Bold, size: 12, weight: 700, lineHeight: 1.2000000476837158, letterSpacing: -2), P3 — 14: Font(family: "Inter", style: Medium, size: 14, weight: 500, lineHeight: 1.25, letterSpacing: -2), H8 — 12: Font(family: "Inter", style: Semi Bold, size: 12, weight: 600, lineHeight: 1.2000000476837158, letterSpacing: -2), H7 — 14 (Bold): Font(family: "Inter", style: Bold, size: 14, weight: 700, lineHeight: 1.2999999523162842, letterSpacing: -2).
+The generated code contains image and SVG URL constants, e.g. const image = 'https://www.figma.com/api/mcp/asset/550e8400-e29b-41d4-a716-446655440000.png'. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.

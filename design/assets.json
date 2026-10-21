@@ -647,6 +647,426 @@
       ],
       "transfer": "Original SVG downloaded via curl -L from fresh Figma design context, 2026-10-21; unmodified vector paths, no embedded raster.",
       "sha256": "8caa92ada9d252735f348fb1d6f046868082295a72e858bd6a821392493b800a"
+    },
+    {
+      "id": "mobile-home-hero",
+      "nodeId": "204:8055",
+      "kind": "source-image",
+      "localPath": "public/assets/mobile-home/hero.png",
+      "slots": [
+        {
+          "nodeId": "204:8055",
+          "sectionNodeId": "204:8055"
+        }
+      ],
+      "transfer": "Figma get_design_context asset URL via curl -f -L, unmodified",
+      "sha256": "abe6fea755ee4c9d1861d0361bd29cfad4a04529535664133f79e21934917ebc"
+    },
+    {
+      "id": "mobile-home-benefit-documents",
+      "nodeId": "204:8055",
+      "kind": "exported-svg",
+      "localPath": "public/assets/mobile-home/benefit-documents.svg",
+      "slots": [
+        {
+          "nodeId": "204:8055",
+          "sectionNodeId": "204:8055"
+        }
+      ],
+      "transfer": "Figma get_design_context asset URL via curl -f -L, unmodified",
+      "sha256": "f3f8fb92340fce6d1406daa7834a674e84c20e84cc302d691506f9bdaa7fabdc"
+    },
+    {
+      "id": "mobile-home-benefit-warranty",
+      "nodeId": "I195:7177;195:6994;160:6298;160:6394",
+      "kind": "exported-svg",
+      "localPath": "public/assets/mobile-home/benefit-warranty.svg",
+      "slots": [
+        {
+          "nodeId": "I195:7177;195:6994;160:6298;160:6394",
+          "sectionNodeId": "204:8055"
+        }
+      ],
+      "transfer": "Figma get_design_context asset URL via curl -f -L, unmodified",
+      "sha256": "706ed2de701771fd2ec4951e00a20e1566df58b488940e989a22e5a094874b14"
+    },
+    {
+      "id": "mobile-home-benefit-finance",
+      "nodeId": "204:8055",
+      "kind": "exported-svg",
+      "localPath": "public/assets/mobile-home/benefit-finance.svg",
+      "slots": [
+        {
+          "nodeId": "204:8055",
+          "sectionNodeId": "204:8055"
+        }
+      ],
+      "transfer": "Figma get_design_context asset URL via curl -f -L, unmodified",
+      "sha256": "fbc19920ea31fed4f2af0161dda0b841ac0dd5a9810da92f21ce3cfec1a567bf"
+    },
+    {
+      "id": "mobile-home-benefit-test",
+      "nodeId": "204:8055",
+      "kind": "exported-svg",
+      "localPath": "public/assets/mobile-home/benefit-test.svg",
+      "slots": [
+        {
+          "nodeId": "204:8055",
+          "sectionNodeId": "204:8055"
+        }
+      ],
+      "transfer": "Figma get_design_context asset URL via curl -f -L, unmodified",
+      "sha256": "2428e060347f3c42ba138d25e4b9431a27f8bb2c9e7f25767aa1a9416f83be2e"
+    },
+    {
+      "id": "mobile-home-test-left",
+      "nodeId": "174:5420",
+      "kind": "source-image",
+      "localPath": "public/assets/mobile-home/test-left.png",
+      "slots": [
+        {
+          "nodeId": "174:5420",
+          "sectionNodeId": "174:5420"
+        }
+      ],
+      "transfer": "Figma get_design_context asset URL via curl -f -L, unmodified",
+      "sha256": "df56bb6f2ac9c29ddc87139767f25bcc4fa6a056f0f655b22036459438efa37a"
+    },
+    {
+      "id": "mobile-home-test-right",
+      "nodeId": "174:5420",
+      "kind": "source-image",
+      "localPath": "public/assets/mobile-home/test-right.png",
+      "slots": [
+        {
+          "nodeId": "174:5420",
+          "sectionNodeId": "174:5420"
+        }
+      ],
+      "transfer": "Figma get_design_context asset URL via curl -f -L, unmodified",
+      "sha256": "fbccffef1b0faa4e627b1d1647738cdd3c380b3674ba3f8046181e42f0cd7188"
+    },
+    {
+      "id": "mobile-home-test-key-1",
+      "nodeId": "174:5420",
+      "kind": "exported-svg",
+      "localPath": "public/assets/mobile-home/test-key-1.svg",
+      "slots": [
+        {
+          "nodeId": "174:5420",
+          "sectionNodeId": "174:5420"
+        }
+      ],
+      "transfer": "Figma get_design_context asset URL via curl -f -L, unmodified",
+      "sha256": "a41d362847170ce6b122b8b9ac9150dc54a88d92d7dd544f2d0432630e00bf1d"
+    },
+    {
+      "id": "mobile-home-test-key-2",
+      "nodeId": "174:5420",
+      "kind": "exported-svg",
+      "localPath": "public/assets/mobile-home/test-key-2.svg",
+      "slots": [
+        {
+          "nodeId": "174:5420",
+          "sectionNodeId": "174:5420"
+        }
+      ],
+      "transfer": "Figma get_design_context asset URL via curl -f -L, unmodified",
+      "sha256": "d97e90d168eaa4995d2b9f9343f10cba7ab07dd69a836d06686d22cffa3a2209"
+    },
+    {
+      "id": "mobile-home-test-key-3",
+      "nodeId": "174:5420",
+      "kind": "exported-svg",
+      "localPath": "public/assets/mobile-home/test-key-3.svg",
+      "slots": [
+        {
+          "nodeId": "174:5420",
+          "sectionNodeId": "174:5420"
+        }
+      ],
+      "transfer": "Figma get_design_context asset URL via curl -f -L, unmodified",
+      "sha256": "b96a3ae613c2815a46f2ab4973e046d235866af17e3271dc95c2391df70a864e"
+    },
+    {
+      "id": "mobile-home-arrow-purple",
+      "nodeId": "174:5420",
+      "kind": "exported-svg",
+      "localPath": "public/assets/mobile-home/arrow-purple.svg",
+      "slots": [
+        {
+          "nodeId": "174:5420",
+          "sectionNodeId": "174:5420"
+        }
+      ],
+      "transfer": "Figma get_design_context asset URL via curl -f -L, unmodified",
+      "sha256": "046f02344c701c58a09a1ba1e1bd93be75b70b544ad61ca9a9fb6dbbe0d07819"
+    },
+    {
+      "id": "mobile-home-test-icon",
+      "nodeId": "174:5420",
+      "kind": "exported-svg",
+      "localPath": "public/assets/mobile-home/test-icon.svg",
+      "slots": [
+        {
+          "nodeId": "174:5420",
+          "sectionNodeId": "174:5420"
+        }
+      ],
+      "transfer": "Figma get_design_context asset URL via curl -f -L, unmodified",
+      "sha256": "6188f12b37db3d16efa02d937de66093f1f1450ea9be607a49ab8c0f5f860f45"
+    },
+    {
+      "id": "mobile-home-consultation",
+      "nodeId": "174:5322",
+      "kind": "source-image",
+      "localPath": "public/assets/mobile-home/consultation.png",
+      "slots": [
+        {
+          "nodeId": "174:5322",
+          "sectionNodeId": "174:5322"
+        }
+      ],
+      "transfer": "Figma get_design_context asset URL via curl -f -L, unmodified",
+      "sha256": "59571466b700965aa5b76014fab23bb01face47d150ef6b3a4ba886b0c27597d"
+    },
+    {
+      "id": "mobile-home-cta-key-1",
+      "nodeId": "174:5322",
+      "kind": "exported-svg",
+      "localPath": "public/assets/mobile-home/cta-key-1.svg",
+      "slots": [
+        {
+          "nodeId": "174:5322",
+          "sectionNodeId": "174:5322"
+        }
+      ],
+      "transfer": "Figma get_design_context asset URL via curl -f -L, unmodified",
+      "sha256": "21078c11ed07fec54af015c2b1e1b79612698126063a6291f399d1c421dfab04"
+    },
+    {
+      "id": "mobile-home-cta-key-2",
+      "nodeId": "174:5322",
+      "kind": "exported-svg",
+      "localPath": "public/assets/mobile-home/cta-key-2.svg",
+      "slots": [
+        {
+          "nodeId": "174:5322",
+          "sectionNodeId": "174:5322"
+        }
+      ],
+      "transfer": "Figma get_design_context asset URL via curl -f -L, unmodified",
+      "sha256": "07b1faf4e76ca97e2eef931324e906e5346c8e519c3fcf2a7b10cdcfc6ae51ac"
+    },
+    {
+      "id": "mobile-home-cta-key-3",
+      "nodeId": "174:5322",
+      "kind": "exported-svg",
+      "localPath": "public/assets/mobile-home/cta-key-3.svg",
+      "slots": [
+        {
+          "nodeId": "174:5322",
+          "sectionNodeId": "174:5322"
+        }
+      ],
+      "transfer": "Figma get_design_context asset URL via curl -f -L, unmodified",
+      "sha256": "634aab26b7cef6f59baf80697af2a141bf7c33bd65dcb6641f3eea6f28a42135"
+    },
+    {
+      "id": "mobile-home-cta-shop",
+      "nodeId": "174:5322",
+      "kind": "exported-svg",
+      "localPath": "public/assets/mobile-home/cta-shop.svg",
+      "slots": [
+        {
+          "nodeId": "174:5322",
+          "sectionNodeId": "174:5322"
+        }
+      ],
+      "transfer": "Figma get_design_context asset URL via curl -f -L, unmodified",
+      "sha256": "e6ae80d8db0ca9a43a586b62d334505362fbdd422fba8df8ee65eca8321dc320"
+    },
+    {
+      "id": "mobile-home-finance-glow",
+      "nodeId": "174:5242",
+      "kind": "exported-svg",
+      "localPath": "public/assets/mobile-home/finance-glow.svg",
+      "slots": [
+        {
+          "nodeId": "174:5242",
+          "sectionNodeId": "174:5242"
+        }
+      ],
+      "transfer": "Figma get_design_context asset URL via curl -f -L, unmodified",
+      "sha256": "8fc63880ba1bad9d357021fb1a3940e692cb4b94c004c61acc49eda74e53e494"
+    },
+    {
+      "id": "mobile-home-finance-line",
+      "nodeId": "174:5242",
+      "kind": "exported-svg",
+      "localPath": "public/assets/mobile-home/finance-line.svg",
+      "slots": [
+        {
+          "nodeId": "174:5242",
+          "sectionNodeId": "174:5242"
+        }
+      ],
+      "transfer": "Figma get_design_context asset URL via curl -f -L, unmodified",
+      "sha256": "254b3ad353b0a166db872488524a07c888b72668efd2206bd6b60fa37d0ac79c"
+    },
+    {
+      "id": "mobile-home-address-key-1",
+      "nodeId": "193:6825",
+      "kind": "exported-svg",
+      "localPath": "public/assets/mobile-home/address-key-1.svg",
+      "slots": [
+        {
+          "nodeId": "193:6825",
+          "sectionNodeId": "193:6825"
+        }
+      ],
+      "transfer": "Figma get_design_context asset URL via curl -f -L, unmodified",
+      "sha256": "e68a5f89aaecc8e21bad25e565bee61c7a2487ae0863ba26d7b3ba5713949f6a"
+    },
+    {
+      "id": "mobile-home-address-key-2",
+      "nodeId": "193:6825",
+      "kind": "exported-svg",
+      "localPath": "public/assets/mobile-home/address-key-2.svg",
+      "slots": [
+        {
+          "nodeId": "193:6825",
+          "sectionNodeId": "193:6825"
+        }
+      ],
+      "transfer": "Figma get_design_context asset URL via curl -f -L, unmodified",
+      "sha256": "23df5226ba13981086329803284dcc8dc7456ffcf7aff1d993984af7e54f00b2"
+    },
+    {
+      "id": "mobile-home-rental-key-1",
+      "nodeId": "199:7383",
+      "kind": "exported-svg",
+      "localPath": "public/assets/mobile-home/rental-key-1.svg",
+      "slots": [
+        {
+          "nodeId": "199:7383",
+          "sectionNodeId": "199:7383"
+        }
+      ],
+      "transfer": "Figma get_design_context asset URL via curl -f -L, unmodified",
+      "sha256": "b8859d26d2844812150115eaba3a659ea9d505c1035dd298d6f18ae828c20b4a"
+    },
+    {
+      "id": "mobile-home-rental-key-2",
+      "nodeId": "199:7383",
+      "kind": "exported-svg",
+      "localPath": "public/assets/mobile-home/rental-key-2.svg",
+      "slots": [
+        {
+          "nodeId": "199:7383",
+          "sectionNodeId": "199:7383"
+        }
+      ],
+      "transfer": "Figma get_design_context asset URL via curl -f -L, unmodified",
+      "sha256": "e16cdef937c02802d1300169af8743ef595c480ea3ced9e376437c4a169e2a87"
+    },
+    {
+      "id": "mobile-home-rental-key-3",
+      "nodeId": "199:7383",
+      "kind": "exported-svg",
+      "localPath": "public/assets/mobile-home/rental-key-3.svg",
+      "slots": [
+        {
+          "nodeId": "199:7383",
+          "sectionNodeId": "199:7383"
+        }
+      ],
+      "transfer": "Figma get_design_context asset URL via curl -f -L, unmodified",
+      "sha256": "277b29d0bd4f40b2eadc3d38f15463d4ee64bf122ed25285a34aa4e52cbfa23a"
+    },
+    {
+      "id": "mobile-home-sticker-outline",
+      "nodeId": "199:7383",
+      "kind": "exported-svg",
+      "localPath": "public/assets/mobile-home/sticker-outline.svg",
+      "slots": [
+        {
+          "nodeId": "199:7383",
+          "sectionNodeId": "199:7383"
+        }
+      ],
+      "transfer": "Figma get_design_context asset URL via curl -f -L, unmodified",
+      "sha256": "108dd3c9a4614d902c2bb79341562200fcb6d833efbdf92e69998d315a4e1d84"
+    },
+    {
+      "id": "mobile-home-sticker-art",
+      "nodeId": "199:7383",
+      "kind": "exported-svg",
+      "localPath": "public/assets/mobile-home/sticker-art.svg",
+      "slots": [
+        {
+          "nodeId": "199:7383",
+          "sectionNodeId": "199:7383"
+        }
+      ],
+      "transfer": "Figma get_design_context asset URL via curl -f -L, unmodified",
+      "sha256": "c224fb83941b82c25e43080c38ae2d0a452c231cbd6781370239f0f69ce33be4"
+    },
+    {
+      "id": "mobile-home-rental-route",
+      "nodeId": "199:7383",
+      "kind": "exported-svg",
+      "localPath": "public/assets/mobile-home/rental-route.svg",
+      "slots": [
+        {
+          "nodeId": "199:7383",
+          "sectionNodeId": "199:7383"
+        }
+      ],
+      "transfer": "Figma get_design_context asset URL via curl -f -L, unmodified",
+      "sha256": "2428e060347f3c42ba138d25e4b9431a27f8bb2c9e7f25767aa1a9416f83be2e"
+    },
+    {
+      "id": "mobile-home-rental-group",
+      "nodeId": "199:7383",
+      "kind": "exported-svg",
+      "localPath": "public/assets/mobile-home/rental-group.svg",
+      "slots": [
+        {
+          "nodeId": "199:7383",
+          "sectionNodeId": "199:7383"
+        }
+      ],
+      "transfer": "Figma get_design_context asset URL via curl -f -L, unmodified",
+      "sha256": "7c4ffe41c4e5f04506620195d52373ae0c2b007dda82c5e9c078bd1de9561c3a"
+    },
+    {
+      "id": "mobile-home-rental-safe",
+      "nodeId": "I199:7405;160:6298;160:6394",
+      "kind": "exported-svg",
+      "localPath": "public/assets/mobile-home/rental-safe.svg",
+      "slots": [
+        {
+          "nodeId": "I199:7405;160:6298;160:6394",
+          "sectionNodeId": "199:7383"
+        }
+      ],
+      "transfer": "Figma get_design_context asset URL via curl -f -L, unmodified",
+      "sha256": "ee5547291a60882ac2f7568c19990f1b8d1aa1f9085da9fbfdc1fa7464a4a292"
+    },
+    {
+      "id": "mobile-home-rental-gift",
+      "nodeId": "199:7383",
+      "kind": "exported-svg",
+      "localPath": "public/assets/mobile-home/rental-gift.svg",
+      "slots": [
+        {
+          "nodeId": "199:7383",
+          "sectionNodeId": "199:7383"
+        }
+      ],
+      "transfer": "Figma get_design_context asset URL via curl -f -L, unmodified",
+      "sha256": "794188187d6c16fa10383fcc2c1ebb3734e0fde1671c9b028431a2fb4da88036"
     }
   ],
   "reusableUiManifest": "design/ui-assets.json",

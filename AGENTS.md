@@ -23,7 +23,7 @@ Repository: https://github.com/8j722ntzch-wq/Revolis.Moto
 
 Current milestone (2026-10-21): the user has explicitly authorized assembly of the Desktop homepage from `Main (Desktop)_1470 px` (1:13203). Reuse the reviewed styles and components from `/ui-kit/`. Dialogs are deferred until the user adds their Figma designs. This authorization covers implementation and source updates in development, not website deployment.
 
-Build the desktop homepage in Astro with CSS and small TypeScript modules. The user is designing mobile separately. Model detail pages are a later milestone. Preserve the original design rather than applying previous UX suggestions automatically.
+Build the desktop homepage in Astro with CSS and small TypeScript modules. Mobile homepage assembly was also authorized and implemented on 2026-10-21; see docs/mobile-home.md. Model detail pages are a later milestone. Preserve the original design rather than applying previous UX suggestions automatically.
 
 ## Source of truth
 
@@ -55,4 +55,4 @@ For documentation-only changes, check links, paths, commands and consistency; do
 
 ## Mobile milestone — 2026-10-21
 
-The user selected mobile styles/components before homepage assembly. Read docs/mobile-ui.md and design/mobile-ui.json. /ui-kit-mobile/ is implemented using fresh component contexts. The homepage is still desktop-only; do not mark mobile homepage complete or enable mobile styles there until its sections are assembled and verified. Preserve desktop styles and existing interactions.
+The user selected mobile styles/components before homepage assembly. Read docs/mobile-ui.md and design/mobile-ui.json. /ui-kit-mobile/ is implemented using fresh component contexts. The mobile homepage is now assembled on / (authorization followed the component review). Read docs/mobile-home.md and design/mobile-home.json. Mobile styles apply below 1288px; verify 390px and narrow widths as well as desktop. Preserve desktop styles and existing interactions.

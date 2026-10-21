@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import MobileHeader from '../components/MobileHeader.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import HomeHero from '../components/home/HomeHero.astro';
@@ -12,10 +13,11 @@ import HomeRental from '../components/home/HomeRental.astro';
 import HomeConsultation from '../components/home/HomeConsultation.astro';
 import HomeFaq from '../components/home/HomeFaq.astro';
 import '../styles/home.css';
+import '../styles/home-mobile.css';
 ---
 <BaseLayout title="Revolis.Мото — квадроциклы и вездеходы в Беларуси" description="Квадроциклы BaltMotors, Mikilon и RBMotors. Техника, тест-драйв и прокат в Витебске.">
-  <div id="top" class="homepage">
-    <SiteHeader homeHref="#top" actionHref="#contacts" />
+  <div id="top" class="homepage mobile-ui">
+    <SiteHeader homeHref="#top" actionHref="#contacts" /><MobileHeader />
     <main><HomeHero /><HomeCatalog /><HomeHighlights /><HomeFinance /><HomeTestDrive /><HomeDocuments /><HomeRental /><HomeConsultation /><HomeFaq /></main>
     <div id="contacts"><SiteFooter /></div>
   </div>

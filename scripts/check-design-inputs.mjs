@@ -39,6 +39,15 @@ try {
     if (!await nonEmptyFile(localPath(section.contextFile, 'design/context/'))) issues.push(`Missing local context for section ${section.nodeId ?? '?'}.`);
   }
 
+  const mobile = JSON.parse(await readFile(resolve(root, 'design/mobile-home.json'), 'utf8'));
+  if (mobile.fileKey !== source.fileKey || !nodeIdPattern.test(mobile.nodeId)) issues.push('Mobile target is invalid.');
+  if (!Array.isArray(mobile.contexts) || !mobile.contexts.length) issues.push('Mobile section contexts are missing.');
+  for (const section of mobile.contexts ?? []) {
+    if (!nodeIdPattern.test(section.nodeId) || sectionIds.has(section.nodeId)) issues.push('Mobile section IDs must be valid and unique.');
+    sectionIds.add(section.nodeId);
+    if (section.quality !== 'high-fidelity' || !await nonEmptyFile(localPath(section.contextFile, 'design/context/'))) issues.push(`Missing high-fidelity mobile context: ${section.nodeId}.`);
+  }
+
   if (manifest.status !== 'imported') issues.push('Original assets have not been imported.');
   if (!Array.isArray(manifest.assets) || !manifest.assets.length) issues.push('Asset manifest is empty.');
   const assetIds = new Set();
@@ -59,6 +68,7 @@ try {
     target: { fileKey: source.fileKey, nodeId: source.nodeId },
     readyForImplementation: ready,
     sectionCount: Array.isArray(source.sections) ? source.sections.length : 0,
+    mobileSectionCount: mobile.contexts?.length ?? 0,
     assetCount: Array.isArray(manifest.assets) ? manifest.assets.length : 0,
     issues,
     note: 'Checks local input completeness only. Visual, source-content and browser verification remain required.'

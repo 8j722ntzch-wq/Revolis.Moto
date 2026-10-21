@@ -3,12 +3,13 @@ import Button from '../ui/Button.astro';
 import Advantage from './AdvantageItem.astro';
 ---
 <section class="home-hero container" aria-labelledby="hero-title">
+  <div class="home-hero__mobile-image mobile-only" aria-hidden="true"><img src="/assets/mobile-home/hero.png" alt="" fetchpriority="high" /></div>
   <img class="home-hero__image" src="/assets/home/hero.png" alt="Квадроцикл на фоне горного пейзажа" width="1193" height="683" fetchpriority="high" />
   <div class="home-hero__copy">
     <p class="home-eyebrow">Официальный дилер в Беларуси</p>
-    <h1 id="hero-title">Квадроциклы<br />и вездеходы<br /><span>в Беларуси</span></h1>
-    <p class="home-hero__body">BaltMotors, Mikilon и RBMotors. Сертифицированная<br />техника с гарантией до 3 лет, документами<br />для регистрации и гибкими вариантами оплаты</p>
-    <div class="home-actions"><Button href="#models" arrow>Смотреть модели</Button><Button href="#contacts" variant="outline">Запросить консультацию</Button></div>
+    <h1 id="hero-title">Квадроциклы<br /> и вездеходы<br /> <span>в Беларуси</span></h1>
+    <p class="home-hero__body">BaltMotors, Mikilon и RBMotors. Сертифицированная<br /> техника с гарантией до 3 лет, документами<br /> для регистрации и гибкими вариантами оплаты</p>
+    <div class="home-actions"><Button href="#models" arrow>Смотреть модели</Button><Button href="#contacts" variant="outline" arrow>Запросить консультацию</Button></div>
   </div>
   <div class="home-hero__uses" aria-label="Для работы, отдыха и новых маршрутов">
     <img class="home-hero__uses-line" src="/assets/home/usage-line.svg" alt="" />
