@@ -5,7 +5,7 @@
   .homepage.mobile-ui .home-hero .ui-button--outline .ui-button__arrow { display: none; }
 }
 @media (max-width: 1287px) {
-  .homepage.mobile-ui { min-width: 0; --header-height: 60px; }
+  .homepage.mobile-ui { min-width: 0; --header-height: 60px; --rail-gutter: max(25px, calc((100vw - 600px) / 2)); }
   .homepage.mobile-ui .mobile-only { display: block; }
   .homepage.mobile-ui .site-header { display: none; }
   .homepage.mobile-ui .mobile-header { display: block; position: sticky; top: 0; z-index: 100; }
@@ -41,9 +41,9 @@
   .homepage.mobile-ui .home-mobile-icon--orange > span { background: var(--color-rental); }
   .homepage.mobile-ui .home-models__heading { display: block; }
   .homepage.mobile-ui .home-catalog-link { display: none; }
-  .homepage.mobile-ui .home-card-grid { display: flex; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; gap: 24px; margin-top: 24px; scrollbar-width: none; }
+  .homepage.mobile-ui .home-card-grid { display: flex; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; gap: 24px; margin-top: 24px; scrollbar-width: none; margin-inline: calc(-1 * var(--rail-gutter)); padding-inline: var(--rail-gutter); scroll-padding-inline: var(--rail-gutter); }
   .homepage.mobile-ui .home-card-grid::-webkit-scrollbar { display: none; }
-  .homepage.mobile-ui .home-card-grid > * { flex: 0 0 100%; scroll-snap-align: start; }
+  .homepage.mobile-ui .home-card-grid > * { flex: 0 0 min(100%, 340px); scroll-snap-align: start; }
   .homepage.mobile-ui .home-catalog-mobile { display: flex; width: 100%; margin-top: 24px; border-color: var(--color-purple); color: var(--color-black); }
   .homepage.mobile-ui .home-catalog-mobile .arrow-disabled { content: url('/assets/mobile/arrow-black.svg'); }
   .homepage.mobile-ui .home-highlights { grid-template-columns: 1fr; gap: 20px; }
@@ -85,12 +85,12 @@
   .homepage.mobile-ui .mobile-test-photo--left img { width: 212.67px; height: 374.72px; max-width: none; }
   .homepage.mobile-ui .mobile-test-photo--right { left: 80.24px; bottom: 43.86px; width: 213.537px; height: 301.052px; transform: rotate(7.42deg); }
   .homepage.mobile-ui .mobile-test-photo--right img { position: absolute; width: 213.537px; height: 377.48px; max-width: none; top: -38.65px; }
-  .homepage.mobile-ui .home-documents .home-card-grid { gap: 20px; align-items: center; }
+  .homepage.mobile-ui .home-documents .home-card-grid { gap: 20px; align-items: stretch; }
   .homepage.mobile-ui .home-document { flex-basis: min(100%,340px); }
   .homepage.mobile-ui .home-document:first-child { flex-basis: min(100%,312px); }
   .homepage.mobile-ui .home-document h3 { font-size: 20px; line-height: 26px; }
   .homepage.mobile-ui .home-document p { font-size: 14px; line-height: 18px; }
-  .homepage.mobile-ui .home-document__image, .homepage.mobile-ui .home-document__empty { width: 280px; height: 280px; max-width: 100%; object-fit: contain; }
+  .homepage.mobile-ui .home-document__image, .homepage.mobile-ui .home-document__empty { width: 280px; height: 280px; max-width: 100%; object-fit: contain; margin-top: auto; flex-shrink: 0; }
   .homepage.mobile-ui .home-rental { height: auto; }
   .homepage.mobile-ui .home-rental__pattern { display: none; }
   .homepage.mobile-ui .home-rental__copy { width: auto; }
@@ -118,6 +118,7 @@
   .homepage #contacts { scroll-margin-top: 60px; }
 }
 @media (max-width: 374px) {
+  .homepage.mobile-ui { --rail-gutter: 16px; }
   .homepage.mobile-ui .container { width: calc(100% - 32px); }
   .homepage.mobile-ui .home-test__handwriting { margin-left: 30px; }
   .homepage.mobile-ui .home-hours { margin-left: 0; }
@@ -140,7 +141,7 @@
 
 @media (max-width:1287px) {
   .homepage.mobile-ui .home-models .model-card__surface { transform: none; }
-  .homepage.mobile-ui #home-striker-500 .model-card__photo { width: 274px; height: 206px; transform: none; }
+  .homepage.mobile-ui #home-striker-500 .model-card__photo { width: min(100%, 274px); height: auto; }
   .homepage.mobile-ui .home-test__advantages { margin-top: 28px; }
 }
 @media (max-width:1287px) {

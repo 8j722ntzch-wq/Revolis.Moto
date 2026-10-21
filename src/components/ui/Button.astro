@@ -11,6 +11,7 @@ interface Props {
   id?: string;
   target?: '_blank';
   'aria-label'?: string;
+  'aria-controls'?: string;
   [key: `data-${string}`]: string | undefined;
 }
 const { href, variant = 'solid', size = 's', tone = 'default', arrow = false, disabled = false, type = 'button', class: className, target, ...attributes } = Astro.props;

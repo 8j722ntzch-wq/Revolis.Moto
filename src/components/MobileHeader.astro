@@ -39,7 +39,7 @@ const { links = headerLinks, homeHref = '#top', actionHref = '#contacts', id = '
   .mobile-header__body p { font-size: 14px; line-height: 18px; font-weight: 600; color: var(--color-gray-4); }
   .mobile-header__body nav > div { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; margin-top: 12px; }
   .mobile-header__body a { text-decoration: none; font-size: 20px; line-height: 26px; font-weight: 600; }
-  .mobile-header__body a:hover { color: var(--color-purple); }
+  .mobile-header__body a:is(:active, :focus-visible) { color: var(--color-purple); }
   .mobile-header__phones { margin-top: 32px; }
   .mobile-header__phones > div { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; margin-top: 12px; }
   .mobile-header__phones a { font-size: 16px; line-height: 20px; }

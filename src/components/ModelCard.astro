@@ -47,7 +47,9 @@ const price = model.priceByn === null ? null : new Intl.NumberFormat('ru-BY', { 
 <style>
   .model-card { width: var(--model-card-width); min-height: var(--model-card-height); flex-shrink: 0; }
   .model-card__surface { display: flex; flex-direction: column; gap: var(--space-12); min-height: var(--model-card-height); padding: var(--space-16); border-radius: var(--radius-card); background: var(--color-white); color: var(--color-model-text); transition: transform var(--motion-fast); }
-  .model-card:is(:hover, :focus-within, [data-demo-state='hover']) .model-card__surface { transform: translateY(-8px); }
+  @media (min-width: 1288px) and (hover: hover) and (pointer: fine) {
+    .model-card:is(:hover, :focus-within, [data-demo-state='hover']) .model-card__surface { transform: translateY(-8px); }
+  }
   .model-card__media { position: relative; height: var(--model-card-media-height); flex-shrink: 0; display: grid; place-items: center; overflow: hidden; border-radius: var(--radius-card-media); background: var(--color-media); }
   .model-card__photo { display: block; width: 320px; height: var(--photo-height, 213px); object-fit: cover; transform: translateY(var(--photo-offset, .5px)); }
   .model-card__image-pending { color: var(--color-text-muted); }
@@ -63,6 +65,8 @@ const price = model.priceByn === null ? null : new Intl.NumberFormat('ru-BY', { 
   .model-card__pricing { display: flex; flex-direction: column; gap: var(--space-8); margin-top: auto; }
   .model-card__finance { color: var(--color-purple); }
   .model-card :global(.model-card__action) { width: 100%; }
-  .model-card:is(:hover, :focus-within, [data-demo-state='hover']) :global(.model-card__action:not(:disabled)) { background: var(--color-purple-hover); }
+  @media (min-width: 1288px) and (hover: hover) and (pointer: fine) {
+    .model-card:is(:hover, :focus-within, [data-demo-state='hover']) :global(.model-card__action:not(:disabled)) { background: var(--color-purple-hover); }
+  }
   .model-card :global(.model-card__action:active:not(:disabled)) { background: var(--color-purple); }
 </style>

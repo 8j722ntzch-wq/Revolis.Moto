@@ -65,7 +65,13 @@ const action = {
   .bank-card__consultation span { color: var(--color-purple); }
   .bank-card__consultation > p { color: var(--color-gray-2); }
   .bank-card :global(.bank-card__action) { width: 100%; margin-top: 19px; }
-  .bank-card:is(:hover, :focus-within, [data-demo-state='hover']) { --inverse-bg: var(--bank-action-hover); --inverse-rest-display: none; --inverse-hover-display: block; --inverse-shadow: none; }
-  .bank-card--consultation:is(:hover, :focus-within, [data-demo-state='hover']) { --inverse-color: var(--color-white-monochrome); }
-  .bank-card:is(:hover, :focus-within, [data-demo-state='hover']) .bank-card__surface { transform: translateY(-8px); }
+  @media (min-width: 1288px) and (hover: hover) and (pointer: fine) {
+    .bank-card:is(:hover, :focus-within, [data-demo-state='hover']) { --inverse-bg: var(--bank-action-hover); --inverse-rest-display: none; --inverse-hover-display: block; --inverse-shadow: none; }
+  }
+  @media (min-width: 1288px) and (hover: hover) and (pointer: fine) {
+    .bank-card--consultation:is(:hover, :focus-within, [data-demo-state='hover']) { --inverse-color: var(--color-white-monochrome); }
+  }
+  @media (min-width: 1288px) and (hover: hover) and (pointer: fine) {
+    .bank-card:is(:hover, :focus-within, [data-demo-state='hover']) .bank-card__surface { transform: translateY(-8px); }
+  }
 </style>

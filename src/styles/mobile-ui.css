@@ -35,7 +35,7 @@
 .mobile-ui .text-field__placeholder { left: 17px; font-size: 14px; line-height: 18px; }
 .mobile-ui .mobile-fields { --color-surface: var(--color-gray-6); --color-input-text: var(--color-white); --color-text-muted: var(--color-gray-2); color: var(--color-white); }
 .mobile-ui .model-card__surface { transform: none; }
-.mobile-ui .model-card__photo { max-width: none; }
+.mobile-ui .model-card__photo { width: min(100%, 320px); height: auto; max-width: 100%; object-fit: contain; transform: none; }
 .mobile-ui .model-card__features { gap: 20px; }
 .mobile-ui .model-card__features li { gap: 8px; }
 .mobile-ui .bank-card__surface { transform: none; }
