@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const dist = resolve(root, 'dist');
 const homepage = process.argv.includes('--homepage');
+const catalogue = process.argv.includes('--catalogue');
 const mobile = process.argv.includes('--mobile');
 const mime = { '.svg': 'image/svg+xml', '.woff2': 'font/woff2', '.woff': 'font/woff', '.png': 'image/png', '.webp': 'image/webp' };
 
@@ -28,7 +29,7 @@ async function replaceAsync(text, pattern, replacer) {
   return text.replace(pattern, () => values[index++]);
 }
 
-let html = await readFile(resolve(dist, homepage ? 'index.html' : mobile ? 'ui-kit-mobile/index.html' : 'ui-kit/index.html'), 'utf8');
+let html = await readFile(resolve(dist, catalogue ? 'models/index.html' : homepage ? 'index.html' : mobile ? 'ui-kit-mobile/index.html' : 'ui-kit/index.html'), 'utf8');
 html = await replaceAsync(html, /<link rel="stylesheet" href="([^"]+)"\s*\/?>/g, async ([, url]) => {
   const path = localAsset(url, dist);
   if (!path) throw new Error('External stylesheet is not supported in the offline preview.');
@@ -43,6 +44,6 @@ html = await replaceAsync(html, /\bsrc="(\/(?:assets|_astro)\/[^"]+)"/g, async (
 if (/<script[^>]+src=|\b(?:src|href)="\/(?:assets|_astro)\//.test(html)) throw new Error('Unresolved runtime dependency in offline preview.');
 await mkdir(resolve(root, 'preview'), { recursive: true });
 if (homepage) html = html.replaceAll('href="/#', 'href="#');
-const output = resolve(root, homepage ? 'preview/Revolis_Moto_Homepage.html' : mobile ? 'preview/Revolis_Moto_Mobile_UI_Kit.html' : 'preview/Revolis_Moto_UI_Kit.html');
+const output = resolve(root, catalogue ? 'preview/Revolis_Moto_Catalogue.html' : homepage ? 'preview/Revolis_Moto_Homepage.html' : mobile ? 'preview/Revolis_Moto_Mobile_UI_Kit.html' : 'preview/Revolis_Moto_UI_Kit.html');
 await writeFile(output, html);
 console.log(`Exported ${output} (${Buffer.byteLength(html)} bytes)`);

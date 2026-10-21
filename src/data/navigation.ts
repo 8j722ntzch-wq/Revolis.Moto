@@ -1,7 +1,7 @@
 export interface HeaderLink { label: string; href: string; }
 // Homepage section IDs are the integration contract for the next milestone.
 export const headerLinks: readonly HeaderLink[] = [
-  { label: 'Модели', href: '/#models' },
+  { label: 'Модели', href: '/models/' },
   { label: 'О нас', href: '/#about' },
   { label: 'Кредиты и рассрочки', href: '/#finance' },
   { label: 'Вопросы', href: '/#faq' },

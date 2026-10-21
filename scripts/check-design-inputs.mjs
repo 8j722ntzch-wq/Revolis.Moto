@@ -48,6 +48,14 @@ try {
     if (section.quality !== 'high-fidelity' || !await nonEmptyFile(localPath(section.contextFile, 'design/context/'))) issues.push(`Missing high-fidelity mobile context: ${section.nodeId}.`);
   }
 
+  const catalogue = JSON.parse(await readFile(resolve(root, 'design/catalogue.json'), 'utf8'));
+  if (catalogue.fileKey !== source.fileKey || !nodeIdPattern.test(catalogue.desktop?.nodeId) || !nodeIdPattern.test(catalogue.mobile?.nodeId)) issues.push('Catalogue targets are invalid.');
+  for (const section of catalogue.contexts ?? []) {
+    if (!nodeIdPattern.test(section.nodeId) || sectionIds.has(section.nodeId)) issues.push('Catalogue section IDs must be valid and unique.');
+    sectionIds.add(section.nodeId);
+    if (section.quality !== 'high-fidelity' || !await nonEmptyFile(localPath(section.contextFile, 'design/context/'))) issues.push(`Missing catalogue context: ${section.nodeId}.`);
+  }
+  if (!catalogue.contexts?.length) issues.push('Catalogue contexts are missing.');
   if (manifest.status !== 'imported') issues.push('Original assets have not been imported.');
   if (!Array.isArray(manifest.assets) || !manifest.assets.length) issues.push('Asset manifest is empty.');
   const assetIds = new Set();

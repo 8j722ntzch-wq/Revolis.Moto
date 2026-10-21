@@ -1085,6 +1085,76 @@
       ],
       "transfer": "Figma get_design_context asset, curl -L, unmodified SVG",
       "sha256": "3e0153df757173787322884b57269078529ac04ab3c7f2f3ede46b634aef5131"
+    },
+    {
+      "id": "catalogue-striker-400",
+      "nodeId": "I143:9218;72:6711;143:9636",
+      "kind": "source-image",
+      "localPath": "public/assets/catalogue/striker-400.png",
+      "slots": [
+        {
+          "nodeId": "I143:9218;72:6711;143:9636",
+          "sectionNodeId": "143:9218"
+        }
+      ],
+      "transfer": "Original PNG downloaded from Figma MCP asset URL; unmodified",
+      "sha256": "aef652e87307b9f3fc84fb94b3a3acfe6ebc35fbafc4d7ee7d1387e49d696166"
+    },
+    {
+      "id": "catalogue-striker-500",
+      "nodeId": "I143:9276;72:6711;143:9638",
+      "kind": "source-image",
+      "localPath": "public/assets/catalogue/striker-500.png",
+      "slots": [
+        {
+          "nodeId": "I143:9276;72:6711;143:9638",
+          "sectionNodeId": "143:9276"
+        }
+      ],
+      "transfer": "Original PNG downloaded from Figma MCP asset URL; unmodified",
+      "sha256": "d827f73cd3cae395963ecd388ad02a8dda12515037a68b1105915243e253c464"
+    },
+    {
+      "id": "catalogue-striker-700",
+      "nodeId": "I143:9392;72:6711;143:9644",
+      "kind": "source-image",
+      "localPath": "public/assets/catalogue/striker-700.png",
+      "slots": [
+        {
+          "nodeId": "I143:9392;72:6711;143:9644",
+          "sectionNodeId": "143:9392"
+        }
+      ],
+      "transfer": "Original PNG downloaded from Figma MCP asset URL; unmodified",
+      "sha256": "c600f89459cd0ba14601e2130d84ed9229fdfabaae46454acdac5ca40e16107b"
+    },
+    {
+      "id": "catalogue-striker-700-eps",
+      "nodeId": "I143:9334;72:6711;143:9642",
+      "kind": "source-image",
+      "localPath": "public/assets/catalogue/striker-700-eps.png",
+      "slots": [
+        {
+          "nodeId": "I143:9334;72:6711;143:9642",
+          "sectionNodeId": "143:9334"
+        }
+      ],
+      "transfer": "Original PNG downloaded from Figma MCP asset URL; unmodified",
+      "sha256": "579ee63950a57a2008989a9d7c578db524916a2a2b98ecab683ec130c1804e7a"
+    },
+    {
+      "id": "catalogue-athlete",
+      "nodeId": "I143:9450;72:6711;75:6774",
+      "kind": "source-image",
+      "localPath": "public/assets/catalogue/athlete.png",
+      "slots": [
+        {
+          "nodeId": "I143:9450;72:6711;75:6774",
+          "sectionNodeId": "143:9450"
+        }
+      ],
+      "transfer": "Original PNG downloaded from Figma MCP asset URL; unmodified",
+      "sha256": "b21e87be26f691e0739066eb243272092826a7ab9a29a09b7a0f071f3a18881f"
     }
   ],
   "reusableUiManifest": "design/ui-assets.json",

@@ -1,0 +1,9 @@
+export default function BlockHeadline() {
+  return (
+    <div className="content-stretch flex flex-col gap-[var(--spacings\/content-\(4\),4px)] items-start relative size-full" data-node-id="159:4805" data-name="block_Headline">
+      <p className="[word-break:break-word] font-['Inter:Bold'] font-bold leading-[1.2] not-italic relative shrink-0 text-[28px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.56px] whitespace-nowrap" data-node-id="I159:4805;5:4037">
+        Наши модели
+      </p>
+    </div>
+  );
+}

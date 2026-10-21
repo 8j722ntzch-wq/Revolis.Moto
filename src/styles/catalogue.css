@@ -1,0 +1,21 @@
+.catalogue { margin-top: 40px; }
+.catalogue h1 { font-size: 40px; line-height: 48px; font-weight: 700; letter-spacing: -.02em; }
+catalogue-filter { display: block; }
+.catalogue__filters { display: flex; gap: 8px; margin-block: 32px; flex-wrap: wrap; }
+.catalogue__filters button { padding: 11px; border: 1px solid var(--color-black); border-radius: 10px; background: transparent; color: var(--color-black); font: 600 14px/18px var(--font-family); letter-spacing: -.02em; cursor: pointer; min-height: 42px; }
+.catalogue__filters button[aria-pressed='true'] { color: var(--color-white); background: var(--color-purple); border-color: var(--color-purple); }
+.catalogue__filters button:focus-visible { outline: 2px solid var(--color-purple); outline-offset: 4px; }
+.catalogue__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.catalogue__grid > [hidden] { display: none; }
+.catalogue .model-card__action:disabled { background: var(--color-purple); color: var(--color-white); }
+.catalogue .model-card__action:disabled .arrow-disabled { display: none; }
+.catalogue .model-card__action:disabled .arrow-white { display: block; }
+@media (min-width: 1288px) and (hover: hover) and (pointer: fine) {
+  .catalogue .model-card:is(:hover, :focus-within) .model-card__action:disabled { background: var(--color-purple-hover); }
+}
+@media (max-width: 1287px) {
+  .catalogue h1 { font-size: 28px; line-height: 34px; }
+  .catalogue__filters button { font-size: 12px; line-height: 14px; min-height: 38px; }
+  .catalogue__grid { grid-template-columns: minmax(0, 1fr); }
+  .catalogue-page.mobile-ui .model-card__photo { width: min(100%, var(--photo-mobile-width, 320px)); height: auto; transform: scaleX(var(--photo-direction, 1)); }
+}

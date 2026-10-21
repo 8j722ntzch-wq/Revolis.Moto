@@ -12,7 +12,7 @@ interface Props {
   demoAction?: boolean;
 }
 const { model, id, headingLevel: Heading = 'h3', demoState, demoAction = false } = Astro.props;
-const statuses = { 'in-stock': 'stock', 'on-order': 'order', 'coming-soon': 'soon' } as const;
+const statuses = { 'in-stock': 'stock', 'on-order': 'order', 'coming-soon': 'soon', 'special-offer': 'offer' } as const;
 const status = model.availability === 'unconfirmed' ? null : statuses[model.availability];
 const registrations = { gai: 'Регистрация в ГАИ', gostekhnadzor: 'Регистрация в Гостехнадзоре' };
 const registration = model.registration === 'unconfirmed' ? null : registrations[model.registration];
@@ -21,7 +21,7 @@ const price = model.priceByn === null ? null : new Intl.NumberFormat('ru-BY', { 
 <article id={id} class="model-card" data-model-id={model.id} data-demo-state={demoState} aria-labelledby={`${id}-title`}>
   <div class="model-card__surface">
     <div class="model-card__media">
-      {model.image ? <img class="model-card__photo" src={model.image} alt={model.imageAlt ?? `${model.brand} ${model.name}`} width="320" height={model.imageHeight ?? 213} style={`--photo-height: ${model.imageHeight ?? 213}px; --photo-offset: ${model.imageHeight === 240 ? 0 : .5}px`} loading="lazy" decoding="async" /> : <p class="model-card__image-pending type-small">Изображение уточняется</p>}
+      {model.image ? <img class="model-card__photo" src={model.image} alt={model.imageAlt ?? `${model.brand} ${model.name}`} width={model.imageWidth ?? 320} height={model.imageHeight ?? 213} style={`--photo-width: ${model.imageWidth ?? 320}px; --photo-mobile-width: ${model.mobileImageWidth ?? 320}px; --photo-height: ${model.imageHeight ?? 213}px; --photo-offset: ${model.imageHeight === 240 ? 0 : .5}px; --photo-direction: ${model.imageMirrored ? -1 : 1}`} loading="lazy" decoding="async" /> : <p class="model-card__image-pending type-small">Изображение уточняется</p>}
       {status && <div class="model-card__status"><StatusBadge status={status} /></div>}
     </div>
     <div class="model-card__content">
@@ -30,7 +30,7 @@ const price = model.priceByn === null ? null : new Intl.NumberFormat('ru-BY', { 
           <p class="type-body">{model.brand}</p>
           <Heading id={`${id}-title`} class="type-heading-sm weight-bold">{model.name}</Heading>
         </div>
-        {model.subtitle && <p class="model-card__subtitle type-small">{model.subtitle}</p>}
+        {model.subtitle && <p class="model-card__subtitle type-small">{model.mobileSubtitle ? <><span class="model-card__desktop-copy">{model.subtitle}</span><span class="model-card__mobile-copy">{model.mobileSubtitle}</span></> : model.subtitle}</p>}
         {model.features?.length ? <ul class="model-card__features" aria-label="Характеристики">
           {model.features.map(feature => <li><img src={`/assets/model-card/${feature.icon}.svg`} alt="" aria-hidden="true" /><span class="type-heading-xxs">{feature.label}</span></li>)}
         </ul> : null}
@@ -51,7 +51,12 @@ const price = model.priceByn === null ? null : new Intl.NumberFormat('ru-BY', { 
     .model-card:is(:hover, :focus-within, [data-demo-state='hover']) .model-card__surface { transform: translateY(-8px); }
   }
   .model-card__media { position: relative; height: var(--model-card-media-height); flex-shrink: 0; display: grid; place-items: center; overflow: hidden; border-radius: var(--radius-card-media); background: var(--color-media); }
-  .model-card__photo { display: block; width: 320px; height: var(--photo-height, 213px); object-fit: cover; transform: translateY(var(--photo-offset, .5px)); }
+  .model-card__photo { display: block; width: var(--photo-width, 320px); height: var(--photo-height, 213px); object-fit: cover; transform: translateY(var(--photo-offset, .5px)) scaleX(var(--photo-direction, 1)); }
+  .model-card__mobile-copy { display: none; }
+  @media (max-width: 1287px) {
+    .model-card__desktop-copy { display: none; }
+    .model-card__mobile-copy { display: inline; }
+  }
   .model-card__image-pending { color: var(--color-text-muted); }
   .model-card__status { position: absolute; left: var(--space-16); bottom: var(--space-16); display: flex; }
   .model-card__content { display: flex; flex: 1; flex-direction: column; gap: var(--space-20); }
