@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "status": "imported",
-  "scope": "desktop-ui-foundation",
+  "scope": "desktop-ui-foundation-and-composite-components",
   "assets": [
     {
       "id": "arrow-white",
@@ -12,10 +12,19 @@
         {
           "nodeId": "1:7008",
           "sectionNodeId": "1:6973"
+        },
+        {
+          "nodeId": "I19:4477;1:7008",
+          "sectionNodeId": "19:4818"
+        },
+        {
+          "nodeId": "I19:4855;1:7032",
+          "sectionNodeId": "19:4818"
         }
       ],
       "callsites": [
-        "src/components/ui/Button.astro"
+        "src/components/ui/Button.astro",
+        "src/components/ModelCard.astro (via Button)"
       ],
       "intrinsic": {
         "width": "16",
@@ -159,10 +168,19 @@
         {
           "nodeId": "13:4397",
           "sectionNodeId": "13:4379"
+        },
+        {
+          "nodeId": "I72:6711;72:6707;13:4397",
+          "sectionNodeId": "19:4818"
+        },
+        {
+          "nodeId": "I73:6762;72:6707;13:4397",
+          "sectionNodeId": "19:4818"
         }
       ],
       "callsites": [
-        "src/components/ui/StatusBadge.astro"
+        "src/components/ui/StatusBadge.astro",
+        "src/components/ModelCard.astro (via StatusBadge)"
       ],
       "intrinsic": {
         "width": "8",
@@ -317,6 +335,139 @@
         "viewBox": "0 0 16 16"
       },
       "transfer": "Figma Plugin API exportAsync(SVG_STRING); original icon node, unmodified"
+    },
+    {
+      "id": "model-card-engine",
+      "nodeId": "I19:4447;15:4412",
+      "kind": "exported-svg",
+      "localPath": "public/assets/model-card/engine.svg",
+      "slots": [
+        {
+          "nodeId": "I19:4447;15:4412",
+          "sectionNodeId": "19:4818"
+        },
+        {
+          "nodeId": "I19:4828;15:4412",
+          "sectionNodeId": "19:4818"
+        }
+      ],
+      "callsites": [
+        "src/components/ModelCard.astro"
+      ],
+      "intrinsic": {
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      },
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING); original whole icon node, unmodified"
+    },
+    {
+      "id": "model-card-drive",
+      "nodeId": "I19:4432;15:4412",
+      "kind": "exported-svg",
+      "localPath": "public/assets/model-card/drive.svg",
+      "slots": [
+        {
+          "nodeId": "I19:4432;15:4412",
+          "sectionNodeId": "19:4818"
+        },
+        {
+          "nodeId": "I19:4829;15:4412",
+          "sectionNodeId": "19:4818"
+        }
+      ],
+      "callsites": [
+        "src/components/ModelCard.astro"
+      ],
+      "intrinsic": {
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      },
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING); original whole icon node, unmodified"
+    },
+    {
+      "id": "model-card-passport",
+      "nodeId": "I19:4439;15:4412",
+      "kind": "exported-svg",
+      "localPath": "public/assets/model-card/passport.svg",
+      "slots": [
+        {
+          "nodeId": "I19:4439;15:4412",
+          "sectionNodeId": "19:4818"
+        },
+        {
+          "nodeId": "I19:4830;15:4412",
+          "sectionNodeId": "19:4818"
+        }
+      ],
+      "callsites": [
+        "src/components/ModelCard.astro"
+      ],
+      "intrinsic": {
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      },
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING); original whole icon node, unmodified"
+    },
+    {
+      "id": "model-card-registration",
+      "nodeId": "101:7757",
+      "kind": "exported-svg",
+      "localPath": "public/assets/model-card/registration.svg",
+      "slots": [
+        {
+          "nodeId": "101:7757",
+          "sectionNodeId": "19:4818"
+        },
+        {
+          "nodeId": "101:7750",
+          "sectionNodeId": "19:4818"
+        }
+      ],
+      "callsites": [
+        "src/components/ModelCard.astro"
+      ],
+      "intrinsic": {
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      },
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING); original whole icon node, unmodified"
+    },
+    {
+      "id": "model-card-figma-atv-reference",
+      "nodeId": "72:6737",
+      "kind": "exported-raster",
+      "localPath": "public/assets/model-card/figma-atv-reference.png",
+      "slots": [
+        {
+          "nodeId": "I72:6711;72:6737",
+          "sectionNodeId": "19:4818"
+        },
+        {
+          "nodeId": "I73:6762;72:6737",
+          "sectionNodeId": "19:4818"
+        }
+      ],
+      "callsites": [
+        "src/data/catalog.ts (modelCardReference only)",
+        "src/components/ModelCard.astro"
+      ],
+      "intrinsic": {
+        "width": 640,
+        "height": 426
+      },
+      "placement": {
+        "width": 320,
+        "height": 213,
+        "objectFit": "cover",
+        "position": "center + 0.5px vertical"
+      },
+      "sourceImageHash": "eeaf0ab54d85183d13f9a820dd016805893f6859",
+      "transfer": "Figma Plugin API exportAsync(PNG, SCALE 2) of the photo layer only; original crop retained, no UI screenshot",
+      "note": "Reference artwork only; product identity not confirmed."
     }
   ],
   "verifiedAt": "2026-10-21"

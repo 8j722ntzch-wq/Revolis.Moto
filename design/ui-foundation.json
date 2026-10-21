@@ -3,7 +3,7 @@
   "fileKey": "JkXOsnFvWZmMab1VYjVQAJ",
   "pageNodeId": "1:15",
   "capturedAt": "2026-10-21",
-  "scope": "desktop-ui-foundation",
+  "scope": "desktop-ui-foundation-and-composite-components",
   "status": "implemented-and-browser-checked",
   "previewRoute": "/ui-kit/",
   "tokens": "src/styles/tokens.css",
@@ -50,6 +50,13 @@
       "nodeId": "1:7495",
       "implementation": "src/components/ui/SectionHeading.astro",
       "contextFile": "design/context/ui/1-7495.txt"
+    },
+    {
+      "name": "ModelCard",
+      "nodeId": "19:4818",
+      "implementation": "src/components/ModelCard.astro",
+      "contextFile": "design/context/ui/19-4818.txt",
+      "detailManifest": "design/model-card.json"
     }
   ],
   "foundations": [
@@ -85,7 +92,11 @@
       700,
       900
     ],
-    "note": "Locally bundled Cyrillic and Latin. Original Figma font binary was not supplied; intrinsic text widths may differ slightly."
+    "note": "Locally bundled Cyrillic and Latin. Original Figma font binary was not supplied; intrinsic text widths may differ slightly.",
+    "styles": [
+      "normal",
+      "italic"
+    ]
   },
   "geometry": {
     "container": 1224,
@@ -180,7 +191,7 @@
       "Lead backend not connected."
     ],
     "astroCheck": {
-      "files": 19,
+      "files": 20,
       "errors": 0,
       "warnings": 0,
       "hints": 0
@@ -204,11 +215,6 @@
     }
   },
   "nextComponents": [
-    {
-      "name": "ModelCard",
-      "nodeId": "19:4818",
-      "status": "inventory-only"
-    },
     {
       "name": "BankCard",
       "nodeId": "26:5495",
@@ -246,5 +252,6 @@
       "Colors and spacing scale"
     ],
     "phoneMask": "Matches +375 __-___-__-__ from phone states. Native input and pattern validate complete numbers; original LeadForm endpoint remains disconnected."
-  }
+  },
+  "compositeVerification": "design/model-card.json"
 }

@@ -7,6 +7,8 @@ import StatusBadge from '../components/ui/StatusBadge.astro';
 import SectionHeading from '../components/ui/SectionHeading.astro';
 import FaqItem from '../components/FaqItem.astro';
 import LeadForm from '../components/LeadForm.astro';
+import ModelCard from '../components/ModelCard.astro';
+import { modelCardReference } from '../data/catalog';
 
 const colors = [
   ['Purple', 'purple', '#7C33FB'], ['Purple / hover', 'purple-hover', '#2E1854'],
@@ -36,8 +38,8 @@ const states = ['default', 'hover', 'pressed', 'disabled'] as const;
 <BaseLayout title="Revolis.Мото — стили и компоненты" description="Рабочая библиотека Desktop-компонентов на основе проекта Figma.">
   <header class="kit-header container">
     <a class="kit-brand" href="#top">revolis<span>.Мото</span></a>
-    <nav aria-label="Разделы библиотеки"><a href="#tokens">Стили</a><a href="#buttons">Кнопки</a><a href="#fields">Формы</a><a href="#faq">FAQ</a></nav>
-    <span class="kit-version">Desktop · UI foundation / 02</span>
+    <nav aria-label="Разделы библиотеки"><a href="#tokens">Стили</a><a href="#buttons">Кнопки</a><a href="#fields">Формы</a><a href="#faq">FAQ</a><a href="#model-cards">Карточки</a></nav>
+    <span class="kit-version">Desktop · UI foundation / 03</span>
   </header>
   <main id="top" class="container">
     <section class="kit-intro" aria-labelledby="kit-title">
@@ -89,12 +91,24 @@ const states = ['default', 'hover', 'pressed', 'disabled'] as const;
       <div class="kit-section__intro"><p class="kit-eyebrow">08 / РАСКРЫВАЮЩИЙСЯ БЛОК</p><h2 id="faq-title">FAQ: внешний вид и поведение</h2><p>Это демонстрация компонента. Финальные вопросы и ответы добавим при сборке главной.</p></div>
       <div class="faq-stack"><FaqItem question="Как работает раскрытие ответа?" group="ui-kit">Нажмите на вопрос или используйте Enter либо пробел с клавиатуры. При открытии следующего вопроса предыдущий закрывается.</FaqItem><FaqItem question="Можно ли заменить текст без изменения оформления?" group="ui-kit">Да. Вопрос и ответ передаются компоненту отдельно. Общие цвета, типографика и отступы остаются едиными для всех экземпляров.</FaqItem></div>
     </section>
-    <footer class="kit-footer"><p>Revolis.Мото / Desktop UI foundation</p><p>Следующий этап: карточки техники и банков → секции главной.</p><a href="#top">Наверх ↑</a></footer>
+    <section id="model-cards" class="kit-section" aria-labelledby="model-card-title">
+      <div class="kit-section__intro"><p class="kit-eyebrow">09 / КАРТОЧКА ТЕХНИКИ</p><h2 id="model-card-title">ModelCard: обычное состояние и наведение</h2><p>Наведите курсор на первую карточку или перейдите к её кнопке клавишей Tab.</p></div>
+      <div class="model-card-showcase">
+        <div class="model-card-example"><p class="sample-label">Обычное · интерактивный пример</p><ModelCard id="model-card-default" model={modelCardReference} demoAction /></div>
+        <div class="model-card-example"><p class="sample-label">Наведение · зафиксированное состояние</p><ModelCard id="model-card-hover" model={modelCardReference} demoState="hover" demoAction /></div>
+      </div>
+      <p id="model-card-feedback" class="kit-feedback" role="status" aria-live="polite">Демонстрационные данные из Figma. Цена, объём двигателя и наличие в этих примерах не являются предложением о продаже.</p>
+      <p class="kit-note">Карточка 392 × 642 px, изображение 320 × 213 px внутри области 360 × 320 px. Наведение поднимает карточку на 8 px. В шаблоне Hammer Touring 200 указано 300 см³ — наполнение сверим отдельно перед сборкой каталога.</p>
+    </section>
+    <footer class="kit-footer"><p>Revolis.Мото / Desktop UI foundation</p><p>Следующий этап: карточки банков → остальные компоненты → секции главной.</p><a href="#top">Наверх ↑</a></footer>
   </main>
 </BaseLayout>
 <script>
   document.querySelectorAll<HTMLElement>('[data-demo-action]').forEach(button => button.addEventListener('click', () => {
     document.getElementById('button-feedback')!.textContent = 'Нажатие обработано. Данные никуда не отправляются.';
+  }));
+  document.querySelectorAll<HTMLElement>('[data-model-card-demo]').forEach(button => button.addEventListener('click', () => {
+    document.getElementById('model-card-feedback')!.textContent = 'Кнопка карточки работает. Страницу модели подключим после её подготовки; сейчас это демонстрация данных Figma.';
   }));
 </script>
 <style>
@@ -151,5 +165,8 @@ const states = ['default', 'hover', 'pressed', 'disabled'] as const;
   .badge-row { display: flex; align-items: center; gap: 24px; margin-top: 24px; }
   .heading-sample { padding-block: 32px; }
   .faq-stack { display: flex; flex-direction: column; gap: 32px; }
+  .model-card-showcase { display: grid; grid-template-columns: repeat(2, var(--model-card-width)); justify-content: center; gap: var(--space-24); padding-block: var(--space-24); background: var(--color-gray-1); border-radius: var(--radius-card); }
+  .model-card-example { display: flex; flex-direction: column; gap: var(--space-24); }
+  .model-card-example > .sample-label { padding-inline: var(--space-16); }
   .kit-footer { padding: 32px 0 48px; display: flex; justify-content: space-between; font-size: 12px; color: var(--color-gray-4); }
 </style>

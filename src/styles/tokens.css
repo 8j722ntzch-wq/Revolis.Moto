@@ -65,6 +65,13 @@
   --button-height: 42px;
   --field-height: 52px;
   --checkbox-size: 24px;
+  --model-card-width: 392px;
+  --model-card-height: 642px;
+  --model-card-media-height: 320px;
+  --radius-card: 16px;
+  --radius-card-media: 12px;
+  --color-media: #fff;
+  --color-model-text: #000;
   /* Implementation additions: no focus ring/motion timing is specified in Figma. */
   --focus-width: 2px;
   --focus-offset: 3px;
