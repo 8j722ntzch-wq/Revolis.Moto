@@ -1,12 +1,22 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-// Development placeholder only. No visual reconstruction is claimed here.
-// Replace after obtaining current high-fidelity Figma context and local assets.
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import HomeHero from '../components/home/HomeHero.astro';
+import HomeCatalog from '../components/home/HomeCatalog.astro';
+import HomeHighlights from '../components/home/HomeHighlights.astro';
+import HomeFinance from '../components/home/HomeFinance.astro';
+import HomeTestDrive from '../components/home/HomeTestDrive.astro';
+import HomeDocuments from '../components/home/HomeDocuments.astro';
+import HomeRental from '../components/home/HomeRental.astro';
+import HomeConsultation from '../components/home/HomeConsultation.astro';
+import HomeFaq from '../components/home/HomeFaq.astro';
+import '../styles/home.css';
 ---
-<BaseLayout title="Revolis.Мото — разработка главной страницы" description="Техническая основа проекта Astro. Главная страница ещё не свёрстана.">
-  <main class="container" style="padding-block:64px">
-    <h1>Revolis.Мото</h1>
-    <p>Главная страница в разработке.</p>
-    <p style="margin-top:24px"><a href="/ui-kit/">Открыть стили и компоненты →</a></p>
-  </main>
+<BaseLayout title="Revolis.Мото — квадроциклы и вездеходы в Беларуси" description="Квадроциклы BaltMotors, Mikilon и RBMotors. Техника, тест-драйв и прокат в Витебске.">
+  <div id="top" class="homepage">
+    <SiteHeader homeHref="#top" actionHref="#contacts" />
+    <main><HomeHero /><HomeCatalog /><HomeHighlights /><HomeFinance /><HomeTestDrive /><HomeDocuments /><HomeRental /><HomeConsultation /><HomeFaq /></main>
+    <div id="contacts"><SiteFooter /></div>
+  </div>
 </BaseLayout>

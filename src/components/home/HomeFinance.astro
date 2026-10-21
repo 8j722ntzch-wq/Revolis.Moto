@@ -1,0 +1,8 @@
+---
+import BankCard from '../BankCard.astro';
+import { bankCardsReference } from '../../data/finance';
+---
+<section id="finance" class="home-finance" aria-labelledby="finance-title">
+  <div class="home-finance__art"><img src="/assets/home/finance-glow.svg" alt="" /><img src="/assets/home/finance-line.svg" alt="" /></div>
+  <div class="container home-finance__grid"><div class="home-finance__copy"><div><p class="home-eyebrow">Забирай сейчас — плати потом</p><h2 id="finance-title"><span>Кредит</span> и рассрочка<br />от банков-партнёров</h2></div><p>Поможем подобрать удобные условия финансирования</p></div>{bankCardsReference.map(bank => <BankCard id={`home-bank-${bank.variant}`} {...bank} actionHref="#contacts" description="Расскажем о доступных программах и поможем оформить" />)}</div>
+</section>

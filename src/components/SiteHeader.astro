@@ -6,9 +6,10 @@ interface Props {
   phone?: { label: string; href: `tel:${string}` };
   homeHref?: string;
   dialogId?: string;
+  actionHref?: string;
   demoAction?: boolean;
 }
-const { links = headerLinks, phone = headerPhone, homeHref = '/', dialogId, demoAction = false } = Astro.props;
+const { links = headerLinks, phone = headerPhone, homeHref = '/', dialogId, actionHref, demoAction = false } = Astro.props;
 ---
 <header class="site-header">
   <div class="site-header__inner container">
@@ -16,7 +17,7 @@ const { links = headerLinks, phone = headerPhone, homeHref = '/', dialogId, demo
     <Button class="site-header__phone" variant="text" href={phone.href}>{phone.label}</Button>
     <div class="site-header__actions">
       <nav class="site-header__nav" aria-label="Основная навигация">{links.map(link => <Button variant="text" href={link.href}>{link.label}</Button>)}</nav>
-      <Button class="site-header__lead" disabled={!dialogId && !demoAction} data-open-lead={demoAction ? undefined : dialogId} data-header-demo={demoAction ? 'true' : undefined} data-intent="consultation" data-source="header">Оставить заявку</Button>
+      <Button class="site-header__lead" href={actionHref} disabled={!dialogId && !demoAction && !actionHref} data-open-lead={demoAction ? undefined : dialogId} data-header-demo={demoAction ? 'true' : undefined} data-intent="consultation" data-source="header">Оставить заявку</Button>
     </div>
   </div>
 </header>

@@ -1,0 +1,8 @@
+---
+interface Props { icon: string; title: string; class?: string; }
+const { icon, title, class: className } = Astro.props;
+---
+<div class:list={['home-advantage', className]}>
+  <img src={`/assets/home/${icon}.svg`} alt="" width="56" height="56" loading="lazy" />
+  <div><p class="home-advantage__title">{title}</p><p class="home-advantage__body"><slot /></p></div>
+</div>

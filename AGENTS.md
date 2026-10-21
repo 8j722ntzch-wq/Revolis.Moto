@@ -13,7 +13,7 @@ Repository: https://github.com/8j722ntzch-wq/Revolis.Moto
 
 ## Active scope
 
-Current milestone (2026-10-21): implement and review Desktop styles and reusable components first, then composite cards, then homepage sections. The active showcase is `/ui-kit/`; `design/ui-foundation.json` and `design/ui-assets.json` record its source mapping. Do not interpret this milestone as authorization to publish or complete the homepage immediately.
+Current milestone (2026-10-21): the user has explicitly authorized assembly of the Desktop homepage from `Main (Desktop)_1470 px` (1:13203). Reuse the reviewed styles and components from `/ui-kit/`. Dialogs are deferred until the user adds their Figma designs. This authorization covers implementation and source updates in development, not website deployment.
 
 Build the desktop homepage in Astro with CSS and small TypeScript modules. The user is designing mobile separately. Model detail pages are a later milestone. Preserve the original design rather than applying previous UX suggestions automatically.
 

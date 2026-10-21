@@ -1,0 +1,9 @@
+---
+import SectionHeading from '../ui/SectionHeading.astro';
+import ModelCard from '../ModelCard.astro';
+import { homepageModelReferences } from '../../data/catalog';
+---
+<section id="models" class="home-models container" aria-labelledby="models-title">
+  <div class="home-models__heading"><SectionHeading eyebrow="Наши модели" id="models-title" bold><span>Надёжная техника</span><br />от проверенных брендов</SectionHeading><button class="home-catalog-link" disabled>Перейти в каталог<img src="/assets/home/catalog-arrow.svg" alt="" /></button></div>
+  <div class="home-card-grid">{homepageModelReferences.map(model => <ModelCard model={model} id={model.id} />)}</div>
+</section>

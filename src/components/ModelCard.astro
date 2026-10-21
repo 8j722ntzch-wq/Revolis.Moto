@@ -21,7 +21,7 @@ const price = model.priceByn === null ? null : new Intl.NumberFormat('ru-BY', { 
 <article id={id} class="model-card" data-model-id={model.id} data-demo-state={demoState} aria-labelledby={`${id}-title`}>
   <div class="model-card__surface">
     <div class="model-card__media">
-      {model.image ? <img class="model-card__photo" src={model.image} alt={model.imageAlt ?? `${model.brand} ${model.name}`} width="320" height="213" loading="lazy" decoding="async" /> : <p class="model-card__image-pending type-small">Изображение уточняется</p>}
+      {model.image ? <img class="model-card__photo" src={model.image} alt={model.imageAlt ?? `${model.brand} ${model.name}`} width="320" height={model.imageHeight ?? 213} style={`--photo-height: ${model.imageHeight ?? 213}px; --photo-offset: ${model.imageHeight === 240 ? 0 : .5}px`} loading="lazy" decoding="async" /> : <p class="model-card__image-pending type-small">Изображение уточняется</p>}
       {status && <div class="model-card__status"><StatusBadge status={status} /></div>}
     </div>
     <div class="model-card__content">
@@ -49,7 +49,7 @@ const price = model.priceByn === null ? null : new Intl.NumberFormat('ru-BY', { 
   .model-card__surface { display: flex; flex-direction: column; gap: var(--space-12); min-height: var(--model-card-height); padding: var(--space-16); border-radius: var(--radius-card); background: var(--color-white); color: var(--color-model-text); transition: transform var(--motion-fast); }
   .model-card:is(:hover, :focus-within, [data-demo-state='hover']) .model-card__surface { transform: translateY(-8px); }
   .model-card__media { position: relative; height: var(--model-card-media-height); flex-shrink: 0; display: grid; place-items: center; overflow: hidden; border-radius: var(--radius-card-media); background: var(--color-media); }
-  .model-card__photo { display: block; width: 320px; height: 213px; object-fit: cover; transform: translateY(.5px); }
+  .model-card__photo { display: block; width: 320px; height: var(--photo-height, 213px); object-fit: cover; transform: translateY(var(--photo-offset, .5px)); }
   .model-card__image-pending { color: var(--color-text-muted); }
   .model-card__status { position: absolute; left: var(--space-16); bottom: var(--space-16); display: flex; }
   .model-card__content { display: flex; flex: 1; flex-direction: column; gap: var(--space-20); }

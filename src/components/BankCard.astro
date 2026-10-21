@@ -11,11 +11,14 @@ interface Props {
   modelId?: string;
   demoState?: 'hover';
   demoAction?: boolean;
+  actionHref?: string;
+  description?: string;
 }
-const { id, variant, terms, headingLevel: Heading = 'h3', dialogId, modelId, demoState, demoAction = false } = Astro.props;
+const { id, variant, terms, headingLevel: Heading = 'h3', dialogId, modelId, demoState, demoAction = false, actionHref, description = 'Проконсультируем и вместе оформим заявление в банк' } = Astro.props;
 const bank = variant === 'consultation' ? null : banks[variant];
 const action = {
-  disabled: !dialogId && !demoAction,
+  href: actionHref,
+  disabled: !dialogId && !demoAction && !actionHref,
   'data-demo-state': demoState,
   'data-bank-card-demo': demoAction ? variant : undefined,
   'data-open-lead': demoAction ? undefined : dialogId,
@@ -41,7 +44,7 @@ const action = {
     </> : <>
       <div class="bank-card__consultation">
         <Heading id={`${id}-title`} class="type-heading-xs">Поможем подобрать <span>комфортные</span> условия</Heading>
-        <p class="type-small">Проконсультируем и вместе оформим заявление в банк</p>
+        <p class="type-small">{description}</p>
       </div>
       <Button {...action} class="bank-card__action" variant="outline" tone="inverse" arrow>Подобрать условия оплаты</Button>
     </>}

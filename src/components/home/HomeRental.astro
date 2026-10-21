@@ -1,0 +1,10 @@
+---
+import Button from '../ui/Button.astro';
+import Advantage from './AdvantageItem.astro';
+---
+<section id="rental" class="home-rental container" aria-labelledby="rental-title">
+  <img class="home-rental__pattern" src="/assets/home/rental-pattern.svg" alt="" />
+  <div class="home-rental__copy"><p class="home-eyebrow">Прокат квадроциклов</p><h2 id="rental-title">Больше, чем продавцы техники. Мы <span>продаём эмоции</span></h2><p class="home-banner__body">Прокат квадроциклов в Сокольниках. 1-часовые и 2-часовые трассы. Идеальный формат для отдыха с друзьями, семьёй или коллегами</p><Button class="home-rental__button" arrow disabled>Перейти в Instagram проката</Button></div>
+  <img class="home-rental__sticker" src="/assets/home/rental-sticker.png" alt="Медведь и аист на квадроцикле" width="496" height="496" loading="lazy" />
+  <div class="home-rental__advantages"><Advantage icon="rental-route" title="Живописные маршруты">Хвойный лес, остановки у<br />реки Лучёса и экстрим</Advantage><Advantage icon="rental-safe" title="Безопасно">Экипировка, инструктаж<br />и обучение перед заездом</Advantage><Advantage icon="rental-group" title="Индивидуально и группой">Для друзей, семьи, коллег<br />или одиночных участников</Advantage><Advantage icon="rental-gift" title="В подарок">Подарочные сертификаты<br />с доставкой</Advantage></div>
+</section>

@@ -5,23 +5,112 @@
   "url": "https://www.figma.com/design/JkXOsnFvWZmMab1VYjVQAJ/?node-id=1-13203",
   "framework": "astro",
   "scope": "desktop-homepage",
-  "status": "partial-ui-foundation",
-  "capturedAt": null,
+  "status": "captured",
+  "capturedAt": "2026-10-21",
   "frame": {
     "width": 1470,
     "height": 6236
   },
-  "sections": [],
+  "sections": [
+    {
+      "nodeId": "1:23712",
+      "name": "Header",
+      "contextQuality": "high-fidelity",
+      "contextFile": "design/context/home/1-23712.txt",
+      "y": 0,
+      "height": 64
+    },
+    {
+      "nodeId": "91:7728",
+      "name": "Hero",
+      "contextQuality": "high-fidelity",
+      "contextFile": "design/context/home/91-7728.txt",
+      "y": 64,
+      "height": 672
+    },
+    {
+      "nodeId": "19:4794",
+      "name": "Models",
+      "contextQuality": "high-fidelity",
+      "contextFile": "design/context/home/19-4794.txt",
+      "y": 856,
+      "height": 804
+    },
+    {
+      "nodeId": "122:6178",
+      "name": "Highlights",
+      "contextQuality": "high-fidelity",
+      "contextFile": "design/context/home/122-6178.txt",
+      "y": 1754,
+      "height": 112
+    },
+    {
+      "nodeId": "37:6569",
+      "name": "Finance",
+      "contextQuality": "high-fidelity",
+      "contextFile": "design/context/home/37-6569.txt",
+      "y": 1986,
+      "height": 294
+    },
+    {
+      "nodeId": "31:5960",
+      "name": "Test drive",
+      "contextQuality": "high-fidelity",
+      "contextFile": "design/context/home/31-5960.txt",
+      "y": 2400,
+      "height": 488
+    },
+    {
+      "nodeId": "31:6062",
+      "name": "Documents",
+      "contextQuality": "high-fidelity",
+      "contextFile": "design/context/home/31-6062.txt",
+      "y": 3008,
+      "height": 750
+    },
+    {
+      "nodeId": "130:6976",
+      "name": "Rental",
+      "contextQuality": "high-fidelity",
+      "contextFile": "design/context/home/130-6976.txt",
+      "y": 3918,
+      "height": 496
+    },
+    {
+      "nodeId": "129:7067",
+      "name": "Consultation",
+      "contextQuality": "high-fidelity",
+      "contextFile": "design/context/home/129-7067.txt",
+      "y": 4574,
+      "height": 440
+    },
+    {
+      "nodeId": "104:7996",
+      "name": "FAQ",
+      "contextQuality": "high-fidelity",
+      "contextFile": "design/context/home/104-7996.txt",
+      "y": 5134,
+      "height": 472
+    },
+    {
+      "nodeId": "1:23741",
+      "name": "Footer",
+      "contextQuality": "high-fidelity",
+      "contextFile": "design/context/home/1-23741.txt",
+      "y": 5726,
+      "height": 510
+    }
+  ],
   "reviewViewports": [
     1366,
     1470,
     1920
   ],
   "notes": [
-    "MCP access works; current page inventory and reusable component contexts received on 2026-10-21.",
-    "Current milestone: Desktop styles and reusable components before homepage layout.",
-    "Full homepage high-fidelity context and original asset inventory remain incomplete; sections are deliberately empty.",
-    "Historical PDF dimensions are not current implementation input."
+    "Current Desktop homepage explicitly authorized by user; dialogs deferred.",
+    "High-fidelity contexts and screenshots captured for all 11 sections.",
+    "Reference 1470 × 6236; desktop container 1224. No mobile design inferred.",
+    "Commercial copy is the current Figma reference, not verified production offers."
   ],
   "pageNodeId": "1:15",
   "foundationManifest": "design/ui-foundation.json",

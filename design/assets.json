@@ -1,9 +1,620 @@
 {
   "schemaVersion": 1,
-  "status": "partial-ui-foundation",
-  "assets": [],
+  "status": "imported",
+  "assets": [
+    {
+      "id": "usage-work",
+      "nodeId": "87:6909",
+      "kind": "exported-svg",
+      "localPath": "public/assets/home/usage-work.svg",
+      "slots": [
+        {
+          "nodeId": "87:6909",
+          "sectionNodeId": "91:7728"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "82d606194262785f703360492635a8b746fcd3eeff4fc6ed59fbb45e1f054027"
+    },
+    {
+      "id": "usage-rest",
+      "nodeId": "87:6922",
+      "kind": "exported-svg",
+      "localPath": "public/assets/home/usage-rest.svg",
+      "slots": [
+        {
+          "nodeId": "87:6922",
+          "sectionNodeId": "91:7728"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "dab8f516cc1b528fecd3263760ac6dc45418d0727d432ee608d846ef3d14d660"
+    },
+    {
+      "id": "usage-route",
+      "nodeId": "87:6935",
+      "kind": "exported-svg",
+      "localPath": "public/assets/home/usage-route.svg",
+      "slots": [
+        {
+          "nodeId": "87:6935",
+          "sectionNodeId": "91:7728"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "270d4734b34fc1e20668d1b5083008b9987160d67f14a5854e813c18afba877b"
+    },
+    {
+      "id": "usage-line",
+      "nodeId": "87:6906",
+      "kind": "exported-svg",
+      "localPath": "public/assets/home/usage-line.svg",
+      "slots": [
+        {
+          "nodeId": "87:6906",
+          "sectionNodeId": "91:7728"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "6234ddec0048031ebd6be55875ae32596fe2cd4ea10e98f2b35afccfc22aaf01"
+    },
+    {
+      "id": "benefit-documents",
+      "nodeId": "I37:6116;91:7328;91:7311",
+      "kind": "exported-svg",
+      "localPath": "public/assets/home/benefit-documents.svg",
+      "slots": [
+        {
+          "nodeId": "I37:6116;91:7328;91:7311",
+          "sectionNodeId": "91:7728"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "41d4d4e051103e0fbcddb810c2b4fc5f41caa2bc3dafe77090b9ef2b36130f1e"
+    },
+    {
+      "id": "benefit-warranty",
+      "nodeId": "I37:6116;91:7414;91:7311",
+      "kind": "exported-svg",
+      "localPath": "public/assets/home/benefit-warranty.svg",
+      "slots": [
+        {
+          "nodeId": "I37:6116;91:7414;91:7311",
+          "sectionNodeId": "91:7728"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "cb54a94bf8a11bddf38156aa11636a2cad97b199dd733f8c1dff1afe4004027a"
+    },
+    {
+      "id": "benefit-finance",
+      "nodeId": "I37:6116;91:7502;91:7311",
+      "kind": "exported-svg",
+      "localPath": "public/assets/home/benefit-finance.svg",
+      "slots": [
+        {
+          "nodeId": "I37:6116;91:7502;91:7311",
+          "sectionNodeId": "91:7728"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "91c0e22754b095147361ec82d0abba502fa6ae13c130b25cccc4f4ab3ccf66c3"
+    },
+    {
+      "id": "benefit-test",
+      "nodeId": "I37:6116;91:7587;91:7311",
+      "kind": "exported-svg",
+      "localPath": "public/assets/home/benefit-test.svg",
+      "slots": [
+        {
+          "nodeId": "I37:6116;91:7587;91:7311",
+          "sectionNodeId": "91:7728"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "fb5a76bef08a6eedc85584645d118eee7161ffdf66c38eaecda21bf5a4e50339"
+    },
+    {
+      "id": "belarus",
+      "nodeId": "91:7713",
+      "kind": "exported-svg",
+      "localPath": "public/assets/home/belarus.svg",
+      "slots": [
+        {
+          "nodeId": "91:7713",
+          "sectionNodeId": "122:6178"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "fbd156cfae75a3648ed95053f51152bfdeb7b3bcad8da55028e24a82ef1c99ea"
+    },
+    {
+      "id": "shop-white",
+      "nodeId": "I91:7692;91:7311",
+      "kind": "exported-svg",
+      "localPath": "public/assets/home/shop-white.svg",
+      "slots": [
+        {
+          "nodeId": "I91:7692;91:7311",
+          "sectionNodeId": "122:6178"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "da7816028371bcc8f9fefc859b0416478acdc717e8c0af34922960c67decb156"
+    },
+    {
+      "id": "address-pattern",
+      "nodeId": "104:8112",
+      "kind": "exported-svg",
+      "localPath": "public/assets/home/address-pattern.svg",
+      "slots": [
+        {
+          "nodeId": "104:8112",
+          "sectionNodeId": "122:6178"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "a4750cc89faced56ebe8d50e0c75930e722b81b955186b9d609275c963f6da4c"
+    },
+    {
+      "id": "finance-glow",
+      "nodeId": "37:6570",
+      "kind": "exported-svg",
+      "localPath": "public/assets/home/finance-glow.svg",
+      "slots": [
+        {
+          "nodeId": "37:6570",
+          "sectionNodeId": "37:6569"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "5e3b4c33bb7fd7be9c24523e63eabe50da9052ab866d37096785a3924f67ae70"
+    },
+    {
+      "id": "finance-line",
+      "nodeId": "37:6571",
+      "kind": "exported-svg",
+      "localPath": "public/assets/home/finance-line.svg",
+      "slots": [
+        {
+          "nodeId": "37:6571",
+          "sectionNodeId": "37:6569"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "92a27ef7b4357154bf12ce2953342022034a7c336de855a39d4c64dc835ebdb6"
+    },
+    {
+      "id": "test-pattern",
+      "nodeId": "I31:5960;160:6894",
+      "kind": "exported-svg",
+      "localPath": "public/assets/home/test-pattern.svg",
+      "slots": [
+        {
+          "nodeId": "I31:5960;160:6894",
+          "sectionNodeId": "31:5960"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "ea73fb0d936b4793fd84cc01f20d9fefda63f0f2003072954d65302ce33dbb7f"
+    },
+    {
+      "id": "test-discount",
+      "nodeId": "I31:5960;31:5928",
+      "kind": "exported-svg",
+      "localPath": "public/assets/home/test-discount.svg",
+      "slots": [
+        {
+          "nodeId": "I31:5960;31:5928",
+          "sectionNodeId": "31:5960"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "f7bf2905bf1f453e94fc400e2803fd8f82d9a7360cc944eafb77e29270b8f022"
+    },
+    {
+      "id": "test-route",
+      "nodeId": "I31:5960;31:5944",
+      "kind": "exported-svg",
+      "localPath": "public/assets/home/test-route.svg",
+      "slots": [
+        {
+          "nodeId": "I31:5960;31:5944",
+          "sectionNodeId": "31:5960"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "93c800437a878ee3f3e3dde32cbde21c881a9375085fc6a23c2eebd6435a4f06"
+    },
+    {
+      "id": "doc-gost",
+      "nodeId": "I31:6009;1:8974",
+      "kind": "exported-svg",
+      "localPath": "public/assets/home/doc-gost.svg",
+      "slots": [
+        {
+          "nodeId": "I31:6009;1:8974",
+          "sectionNodeId": "31:6062"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "c4f0940fe603d10d7c6cdb52d343f3da8107373ac3e52a42b4a3d0fbc793bcdc"
+    },
+    {
+      "id": "doc-supply",
+      "nodeId": "I31:6044;1:8974",
+      "kind": "exported-svg",
+      "localPath": "public/assets/home/doc-supply.svg",
+      "slots": [
+        {
+          "nodeId": "I31:6044;1:8974",
+          "sectionNodeId": "31:6062"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "3a6ff33dc97a88d9d0a642c0d7dceedbce1db1fb0786fd1bda56ed9d69a91e8c"
+    },
+    {
+      "id": "doc-registration",
+      "nodeId": "I31:6027;1:8974",
+      "kind": "exported-svg",
+      "localPath": "public/assets/home/doc-registration.svg",
+      "slots": [
+        {
+          "nodeId": "I31:6027;1:8974",
+          "sectionNodeId": "31:6062"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "23c3b79928b5147027bc90c54f2baf8f4ba3d02b13b0ed8f9f5b14eac1946653"
+    },
+    {
+      "id": "rental-pattern",
+      "nodeId": "130:6861",
+      "kind": "exported-svg",
+      "localPath": "public/assets/home/rental-pattern.svg",
+      "slots": [
+        {
+          "nodeId": "130:6861",
+          "sectionNodeId": "130:6976"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "52e5faf184666b6b1e85039898d38f51ca880a180e0b1283a730cfdfa30d6ea5"
+    },
+    {
+      "id": "rental-route",
+      "nodeId": "I130:6838;91:7311",
+      "kind": "exported-svg",
+      "localPath": "public/assets/home/rental-route.svg",
+      "slots": [
+        {
+          "nodeId": "I130:6838;91:7311",
+          "sectionNodeId": "130:6976"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "f86983972d95a184f05fa8da13c23a163ba0c9346730d2567f027be47037de2f"
+    },
+    {
+      "id": "rental-safe",
+      "nodeId": "I130:6920;91:7311",
+      "kind": "exported-svg",
+      "localPath": "public/assets/home/rental-safe.svg",
+      "slots": [
+        {
+          "nodeId": "I130:6920;91:7311",
+          "sectionNodeId": "130:6976"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "b441a42ec427960ced492d224ce7d64442e99faf22a5332aa637c7c316d97e8b"
+    },
+    {
+      "id": "rental-group",
+      "nodeId": "I130:6932;91:7311",
+      "kind": "exported-svg",
+      "localPath": "public/assets/home/rental-group.svg",
+      "slots": [
+        {
+          "nodeId": "I130:6932;91:7311",
+          "sectionNodeId": "130:6976"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "5ff62fd665213c6147e72e31949f698ff9598a37218499670d7c23c6b397740c"
+    },
+    {
+      "id": "rental-gift",
+      "nodeId": "I130:6933;91:7311",
+      "kind": "exported-svg",
+      "localPath": "public/assets/home/rental-gift.svg",
+      "slots": [
+        {
+          "nodeId": "I130:6933;91:7311",
+          "sectionNodeId": "130:6976"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "ecdf6f394a39540cc07c0cf576b84100c7cbd2c875aec1be876452e40dc406fa"
+    },
+    {
+      "id": "cta-pattern",
+      "nodeId": "I129:7067;128:6306",
+      "kind": "exported-svg",
+      "localPath": "public/assets/home/cta-pattern.svg",
+      "slots": [
+        {
+          "nodeId": "I129:7067;128:6306",
+          "sectionNodeId": "129:7067"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "3f247f82d968372596742d47d6ea82dfe1a9db699b1369996f7271faff2f2a0c"
+    },
+    {
+      "id": "cta-shop",
+      "nodeId": "I129:7067;129:6779;91:7311",
+      "kind": "exported-svg",
+      "localPath": "public/assets/home/cta-shop.svg",
+      "slots": [
+        {
+          "nodeId": "I129:7067;129:6779;91:7311",
+          "sectionNodeId": "129:7067"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "bb030c938d5d8b59004d321c2cc7cbeea29d7bf127683463fee8494db6adbfd9"
+    },
+    {
+      "id": "usage-dot",
+      "nodeId": "87:6950",
+      "kind": "exported-svg",
+      "localPath": "public/assets/home/usage-dot.svg",
+      "slots": [
+        {
+          "nodeId": "87:6950",
+          "sectionNodeId": "91:7728"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "ac372a35561f7c5421686c3851801f465cb5f911e4284b5a50ef670a6559e55a"
+    },
+    {
+      "id": "catalog-arrow",
+      "nodeId": "I19:4791;19:4801;1:7125",
+      "kind": "exported-svg",
+      "localPath": "public/assets/home/catalog-arrow.svg",
+      "slots": [
+        {
+          "nodeId": "I19:4791;19:4801;1:7125",
+          "sectionNodeId": "19:4794"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "4146269f16820b7e510d05f48c2f8541303f36048919db45b80c4d61c41e17b0"
+    },
+    {
+      "id": "hero",
+      "nodeId": "91:7008",
+      "kind": "exported-raster",
+      "localPath": "public/assets/home/hero.png",
+      "slots": [
+        {
+          "nodeId": "91:7008",
+          "sectionNodeId": "91:7728"
+        }
+      ],
+      "intrinsic": {
+        "width": 1193,
+        "height": 683
+      },
+      "transfer": "Isolated original graphic rendered through Figma MCP screenshot/Plugin API node.screenshot(contentsOnly:true); temporary asset download blocked by network. No full UI section rasterized.",
+      "sha256": "624ff5f26493b4819b7b849988d7833c1fa827a21c8aef953fa58650ef41455b"
+    },
+    {
+      "id": "model-200",
+      "nodeId": "I185:6030;72:6711;72:6737",
+      "kind": "exported-raster",
+      "localPath": "public/assets/home/model-200.png",
+      "slots": [
+        {
+          "nodeId": "I185:6030;72:6711;72:6737",
+          "sectionNodeId": "19:4794"
+        }
+      ],
+      "intrinsic": {
+        "width": 320,
+        "height": 213
+      },
+      "transfer": "Isolated original graphic rendered through Figma MCP screenshot/Plugin API node.screenshot(contentsOnly:true); temporary asset download blocked by network. No full UI section rasterized.",
+      "sha256": "e93e50098a04cc411dad70bead615c636deac1f28982cec7c97ea6150859de07"
+    },
+    {
+      "id": "model-500",
+      "nodeId": "I185:5920;72:6711;143:9646",
+      "kind": "exported-raster",
+      "localPath": "public/assets/home/model-500.png",
+      "slots": [
+        {
+          "nodeId": "I185:5920;72:6711;143:9646",
+          "sectionNodeId": "19:4794"
+        }
+      ],
+      "intrinsic": {
+        "width": 320,
+        "height": 240
+      },
+      "transfer": "Isolated original graphic rendered through Figma MCP screenshot/Plugin API node.screenshot(contentsOnly:true); temporary asset download blocked by network. No full UI section rasterized.",
+      "sha256": "f52c009e0af6f8eed9bb0833ef3ac9b4cbe5de2eba88c723f9b4870594eba028"
+    },
+    {
+      "id": "model-300",
+      "nodeId": "I185:5975;72:6711;72:6760",
+      "kind": "exported-raster",
+      "localPath": "public/assets/home/model-300.png",
+      "slots": [
+        {
+          "nodeId": "I185:5975;72:6711;72:6760",
+          "sectionNodeId": "19:4794"
+        }
+      ],
+      "intrinsic": {
+        "width": 320,
+        "height": 213
+      },
+      "transfer": "Isolated original graphic rendered through Figma MCP screenshot/Plugin API node.screenshot(contentsOnly:true); temporary asset download blocked by network. No full UI section rasterized.",
+      "sha256": "37bf4b17862b0e9a0cd93194026f18050a69dde0f8aebe1b3572bc721b0e90ae"
+    },
+    {
+      "id": "test-photo-left",
+      "nodeId": "I31:5960;84:6841",
+      "kind": "exported-raster",
+      "localPath": "public/assets/home/test-photo-left.png",
+      "slots": [
+        {
+          "nodeId": "I31:5960;84:6841",
+          "sectionNodeId": "31:5960"
+        }
+      ],
+      "intrinsic": {
+        "width": 277,
+        "height": 367
+      },
+      "transfer": "Isolated original graphic rendered through Figma MCP screenshot/Plugin API node.screenshot(contentsOnly:true); temporary asset download blocked by network. No full UI section rasterized.",
+      "sha256": "eefd2507aa6d7d8926f754aeffe75eee27fc281bd011e957758ea1362c476ff9"
+    },
+    {
+      "id": "test-photo-right",
+      "nodeId": "I31:5960;84:6837",
+      "kind": "exported-raster",
+      "localPath": "public/assets/home/test-photo-right.png",
+      "slots": [
+        {
+          "nodeId": "I31:5960;84:6837",
+          "sectionNodeId": "31:5960"
+        }
+      ],
+      "intrinsic": {
+        "width": 281,
+        "height": 369
+      },
+      "transfer": "Isolated original graphic rendered through Figma MCP screenshot/Plugin API node.screenshot(contentsOnly:true); temporary asset download blocked by network. No full UI section rasterized.",
+      "sha256": "7e60b43e5becc58ad0aa39ff597165a6ebbc31cff71f0a9e747dcfc2840f5a11"
+    },
+    {
+      "id": "test-photo-front",
+      "nodeId": "I31:5960;84:6839",
+      "kind": "exported-raster",
+      "localPath": "public/assets/home/test-photo-front.png",
+      "slots": [
+        {
+          "nodeId": "I31:5960;84:6839",
+          "sectionNodeId": "31:5960"
+        }
+      ],
+      "intrinsic": {
+        "width": 244,
+        "height": 344
+      },
+      "transfer": "Isolated original graphic rendered through Figma MCP screenshot/Plugin API node.screenshot(contentsOnly:true); temporary asset download blocked by network. No full UI section rasterized.",
+      "sha256": "0e3ce6f6594aa9ae8b44d873d92125e0bb138d54fc656a67c17251a80aac88de"
+    },
+    {
+      "id": "test-handwriting",
+      "nodeId": "I31:5960;160:7034",
+      "kind": "exported-raster",
+      "localPath": "public/assets/home/test-handwriting.png",
+      "slots": [
+        {
+          "nodeId": "I31:5960;160:7034",
+          "sectionNodeId": "31:5960"
+        }
+      ],
+      "intrinsic": {
+        "width": 474,
+        "height": 238
+      },
+      "transfer": "Isolated original graphic rendered through Figma MCP screenshot/Plugin API node.screenshot(contentsOnly:true); temporary asset download blocked by network. No full UI section rasterized.",
+      "sha256": "fa9ebe8419a82e3c1a43685849cecf384ac9013e36cfeb2847cb66aec0be3530"
+    },
+    {
+      "id": "certificate",
+      "nodeId": "I31:6009;109:5536",
+      "kind": "exported-raster",
+      "localPath": "public/assets/home/certificate.png",
+      "slots": [
+        {
+          "nodeId": "I31:6009;109:5536",
+          "sectionNodeId": "31:6062"
+        }
+      ],
+      "intrinsic": {
+        "width": 360,
+        "height": 360
+      },
+      "transfer": "Isolated original graphic rendered through Figma MCP screenshot/Plugin API node.screenshot(contentsOnly:true); temporary asset download blocked by network. No full UI section rasterized.",
+      "sha256": "bd09ef232e6b054ce12df71ea0fbebc98f935822568e2df67c92234e507703e3"
+    },
+    {
+      "id": "registration-documents",
+      "nodeId": "I31:6027;109:5536",
+      "kind": "exported-raster",
+      "localPath": "public/assets/home/registration-documents.png",
+      "slots": [
+        {
+          "nodeId": "I31:6027;109:5536",
+          "sectionNodeId": "31:6062"
+        }
+      ],
+      "intrinsic": {
+        "width": 360,
+        "height": 360
+      },
+      "transfer": "Isolated original graphic rendered through Figma MCP screenshot/Plugin API node.screenshot(contentsOnly:true); temporary asset download blocked by network. No full UI section rasterized.",
+      "sha256": "ac6565cc84bbb2bbef8868a6656ddabd7591c722b1554a34223af8f653df3f5f"
+    },
+    {
+      "id": "rental-sticker",
+      "nodeId": "130:6324",
+      "kind": "exported-raster",
+      "localPath": "public/assets/home/rental-sticker.png",
+      "slots": [
+        {
+          "nodeId": "130:6324",
+          "sectionNodeId": "130:6976"
+        }
+      ],
+      "intrinsic": {
+        "width": 496,
+        "height": 496
+      },
+      "transfer": "Isolated original graphic rendered through Figma MCP screenshot/Plugin API node.screenshot(contentsOnly:true); temporary asset download blocked by network. No full UI section rasterized.",
+      "sha256": "777baea8842baab5633880f478cbe1f2543a47095953fd6e812be3bd5553932f"
+    },
+    {
+      "id": "consultation",
+      "nodeId": "I129:7067;129:6485",
+      "kind": "exported-raster",
+      "localPath": "public/assets/home/consultation.png",
+      "slots": [
+        {
+          "nodeId": "I129:7067;129:6485",
+          "sectionNodeId": "129:7067"
+        }
+      ],
+      "intrinsic": {
+        "width": 732,
+        "height": 440
+      },
+      "transfer": "Isolated original graphic rendered through Figma MCP screenshot/Plugin API node.screenshot(contentsOnly:true); temporary asset download blocked by network. No full UI section rasterized.",
+      "sha256": "209fb95c1979af6f92fc66e3ec6972adbb2063365e676bd5a789787605191730"
+    }
+  ],
   "reusableUiManifest": "design/ui-assets.json",
   "notes": [
-    "The 34 imported original UI assets (33 SVGs and 1 photo PNG), source nodes and callsites are recorded in reusableUiManifest. The photo is a ModelCard showcase reference; homepage image inventory is pending."
+    "Original shared logos, arrows, bank logos, model icons, status badges and footer icons remain mapped in reusableUiManifest.",
+    "Only new homepage graphics are duplicated here; filenames and hashes preserve provenance.",
+    "Document graphic composites retain source redactions. Empty supplier graphic is intentionally empty in Figma."
   ]
 }

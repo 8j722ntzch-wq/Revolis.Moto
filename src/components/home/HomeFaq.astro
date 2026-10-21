@@ -1,0 +1,6 @@
+---
+import SectionHeading from '../ui/SectionHeading.astro';
+import FaqItem from '../FaqItem.astro';
+const questions = ['Можно ли ездить на квадроцикле по дорогам общего пользования?', 'Можно ли купить квадроцикл в кредит или рассрочку?', 'Какая гарантия предоставляется на квадроциклы?', 'Можно ли пройти тест-драйв перед покупкой?', 'Осуществляется ли доставка квадроциклов по Беларуси?'];
+---
+<section id="faq" class="home-faq container" aria-labelledby="faq-title"><SectionHeading eyebrow="Вопросы и ответы" id="faq-title" bold>Всё, что <span>важно знать</span> перед покупкой</SectionHeading><div class="home-faq__items">{questions.map(question => <FaqItem question={question} answerReady={false} />)}</div></section>

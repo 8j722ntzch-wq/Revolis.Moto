@@ -1,0 +1,90 @@
+const imgIconLogomark30Px = "[temporary-asset-url-omitted]";
+const imgElementName = "[temporary-asset-url-omitted]";
+const imgSubtract = "[temporary-asset-url-omitted]";
+
+type ElementLogoProps = {
+  className?: string;
+  type?: "Type4";
+};
+
+function ElementLogo({ className, type = "Type4" }: ElementLogoProps) {
+  return (
+    <div className={className || "h-[36px] relative w-[116px]"} data-node-id="1:7473">
+      <div className="absolute h-[36.011px] left-[-0.75px] top-[0.17px] w-[116.036px]" data-node-id="1:23587" data-name="element_Logo">
+        <div className="-translate-y-1/2 absolute left-[-5px] size-[37.011px] top-[calc(50%+0.5px)]" data-node-id="I1:23587;4587:8186" data-name="icon_Logomark (30px)">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIconLogomark30Px} />
+        </div>
+        <div className="-translate-y-1/2 absolute h-[30.009px] right-0 top-[calc(50%+2px)] w-[83.026px]" data-node-id="I1:23587;4587:8187" data-name="element_Name">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgElementName} />
+        </div>
+      </div>
+      <div className="absolute h-[5.877px] left-[32.24px] top-[26.35px] w-[19.506px]" data-node-id="1:23588" data-name="Subtract">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSubtract} />
+      </div>
+    </div>
+  );
+}
+
+type BlockHeaderProps = {
+  className?: string;
+  device?: "Desktop";
+};
+
+function BlockHeader({ className, device = "Desktop" }: BlockHeaderProps) {
+  return (
+    <div className={className || "bg-[var(--colors\\/grays\\/white,#fdfdfd)] h-[64px] overflow-clip relative w-[1470px]"} data-node-id="1:8465">
+      <div className="-translate-y-1/2 absolute content-stretch flex gap-[var(--spacings\/content-\(16\),16px)] items-center left-[747px] top-1/2" data-node-id="1:8466" data-name="element_Layout">
+        <div className="content-stretch flex items-center justify-center relative rounded-[10px] shrink-0" data-node-id="1:8467" data-name="button_Basic">
+          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.28px] whitespace-nowrap" data-node-id="I1:8467;1:7155">
+            Модели
+          </p>
+        </div>
+        <div className="content-stretch flex items-center justify-center relative rounded-[10px] shrink-0" data-node-id="1:8468" data-name="button_Basic">
+          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.28px] whitespace-nowrap" data-node-id="I1:8468;1:7155">
+            О нас
+          </p>
+        </div>
+        <div className="content-stretch flex items-center justify-center relative rounded-[10px] shrink-0" data-node-id="1:8469" data-name="button_Basic">
+          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.28px] whitespace-nowrap" data-node-id="I1:8469;1:7155">
+            Кредиты и рассрочки
+          </p>
+        </div>
+        <div className="content-stretch flex items-center justify-center relative rounded-[10px] shrink-0" data-node-id="1:8471" data-name="button_Basic">
+          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.28px] whitespace-nowrap" data-node-id="I1:8471;1:7155">
+            Вопросы
+          </p>
+        </div>
+        <div className="content-stretch flex items-center justify-center relative rounded-[10px] shrink-0" data-node-id="1:8472" data-name="button_Basic">
+          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.28px] whitespace-nowrap" data-node-id="I1:8472;1:7155">
+            Контакты
+          </p>
+        </div>
+      </div>
+      <div className="-translate-y-1/2 absolute bg-[var(--colors\/accents\/purple,#7c33fb)] content-stretch flex items-center justify-center left-[1203px] px-[var(--padding\/padding-\(16\),16px)] py-[var(--padding\/padding-\(12\),12px)] rounded-[10px] top-1/2" data-node-id="1:8473" data-name="button_Basic">
+        <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.28px] whitespace-nowrap" data-node-id="I1:8473;1:6975">
+          Оставить заявку
+        </p>
+      </div>
+      <div className="absolute content-stretch flex items-center justify-center left-[331px] rounded-[10px] top-[23px]" data-node-id="1:8474" data-name="button_Basic">
+        <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.28px] whitespace-nowrap" data-node-id="I1:8474;1:7155">
+          +375 (25) 971-19-02
+        </p>
+      </div>
+      <ElementLogo className="absolute h-[36px] left-[123px] top-[14px] w-[116px]" />
+    </div>
+  );
+}
+
+export default function BlockHeader1() {
+  return <BlockHeader className="bg-[var(--colors\/grays\/white,#fdfdfd)] relative size-full" />;
+}
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+These styles are contained in the design: H7 — 14: Font(family: "Inter", style: Semi Bold, size: 14, weight: 600, lineHeight: 1.2999999523162842, letterSpacing: -2).
+The generated code contains image and SVG URL constants, e.g. const image = '[temporary-asset-url-omitted] These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.

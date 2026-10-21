@@ -6,6 +6,7 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const issues = [];
 const strict = process.argv.includes('--strict');
 const nodeIdPattern = /^\d+:\d+$/;
+const assetNodeIdPattern = /^I?\d+:\d+(?:;\d+:\d+)*$/;
 
 function localPath(value, prefix) {
   if (typeof value !== 'string' || !value.startsWith(prefix) || value.includes('\\')) return null;
@@ -44,12 +45,12 @@ try {
   for (const asset of Array.isArray(manifest.assets) ? manifest.assets : []) {
     if (!asset.id || assetIds.has(asset.id)) issues.push('Asset IDs must be present and unique.');
     assetIds.add(asset.id);
-    if (!nodeIdPattern.test(asset.nodeId)) issues.push(`Asset ${asset.id ?? '?'} has no source node.`);
+    if (!assetNodeIdPattern.test(asset.nodeId)) issues.push(`Asset ${asset.id ?? '?'} has no source node.`);
     if (!['source-image', 'exported-svg', 'exported-raster'].includes(asset.kind)) issues.push(`Asset ${asset.id ?? '?'} has no supported origin kind.`);
     if (!await nonEmptyFile(localPath(asset.localPath, 'public/assets/'))) issues.push(`Missing or empty local asset: ${asset.id ?? '?'}.`);
     if (!Array.isArray(asset.slots) || !asset.slots.length) issues.push(`Asset ${asset.id ?? '?'} has no design slots.`);
     for (const slot of Array.isArray(asset.slots) ? asset.slots : []) {
-      if (!nodeIdPattern.test(slot.nodeId) || !sectionIds.has(slot.sectionNodeId)) issues.push(`Asset ${asset.id ?? '?'} has an invalid design slot.`);
+      if (!assetNodeIdPattern.test(slot.nodeId) || !sectionIds.has(slot.sectionNodeId)) issues.push(`Asset ${asset.id ?? '?'} has an invalid design slot.`);
     }
   }
 

@@ -18,6 +18,7 @@ export interface Model {
   priceFrom?: boolean;
   financeLabel?: string | null;
   imageAlt?: string;
+  imageHeight?: number;
 }
 
 // Product list comes from the agreed MVP scope. Commercial fields await
@@ -54,3 +55,10 @@ export const modelCardReference: Readonly<Model> = {
   registration: 'gostekhnadzor',
   pageReady: false,
 };
+
+// Current homepage Figma fixtures (1:13203), not confirmed production offers.
+export const homepageModelReferences: readonly Model[] = [
+  { id: 'home-hammer-200', brand: 'Mikilon', name: 'Hammer 200 Touring', path: '/models/mikilon-hammer-touring-200/', subtitle: 'Для прогулок по загородным маршрутам', features: [{ icon: 'engine', label: '196 см³' }, { icon: 'drive', label: '4x2' }, { icon: 'passport', label: 'Карбюратор' }], priceByn: 11500, financeLabel: 'В кредит и рассрочку', availability: 'in-stock', image: '/assets/home/model-200.png', registration: 'gostekhnadzor', pageReady: false },
+  { id: 'home-striker-500', brand: 'BaltMotors', name: 'Striker 500 EFI/EPS', path: '/models/baltmotors-500-efi-eps/', subtitle: 'Универсальный вариант с электроусилителем руля', features: [{ icon: 'engine', label: '471 см³' }, { icon: 'drive', label: '4x4 LOCK' }, { icon: 'passport', label: 'EPS' }], priceByn: 25000, priceFrom: true, financeLabel: 'В кредит и рассрочку', availability: 'in-stock', image: '/assets/home/model-500.png', imageHeight: 240, registration: 'gai', pageReady: false },
+  { id: 'home-hammer-300', brand: 'Mikilon', name: 'Hammer 300 Touring', path: '/models/mikilon-hammer-touring-300/', subtitle: 'Для загородных поездок с пассажиром', features: [{ icon: 'engine', label: '270,5 см³' }, { icon: 'drive', label: '4x2' }, { icon: 'passport', label: 'EFI' }], priceByn: 16500, financeLabel: 'В кредит и рассрочку', availability: 'in-stock', image: '/assets/home/model-300.png', registration: 'gostekhnadzor', pageReady: false },
+];
