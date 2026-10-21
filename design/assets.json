@@ -1067,6 +1067,24 @@
       ],
       "transfer": "Figma get_design_context asset URL via curl -f -L, unmodified",
       "sha256": "794188187d6c16fa10383fcc2c1ebb3734e0fde1671c9b028431a2fb4da88036"
+    },
+    {
+      "id": "mobile-document-slider-chevron",
+      "nodeId": "I1:8995;1:6622",
+      "kind": "exported-svg",
+      "localPath": "public/assets/mobile-home/slider-chevron.svg",
+      "slots": [
+        {
+          "nodeId": "I1:8995;1:6622",
+          "sectionNodeId": "179:5602"
+        },
+        {
+          "nodeId": "I1:8994;1:6622",
+          "sectionNodeId": "179:5602"
+        }
+      ],
+      "transfer": "Figma get_design_context asset, curl -L, unmodified SVG",
+      "sha256": "3e0153df757173787322884b57269078529ac04ab3c7f2f3ede46b634aef5131"
     }
   ],
   "reusableUiManifest": "design/ui-assets.json",

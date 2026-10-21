@@ -1,13 +1,13 @@
-const imgEllipse21 = "https://www.figma.com/api/mcp/asset/64fba9c6-14bd-4e5f-8c43-cf5b1213f7e4.svg";
-const img19 = "https://www.figma.com/api/mcp/asset/fee73a68-79a3-4018-8a6c-17dc7d6d5174.png";
-const imgImage12 = "https://www.figma.com/api/mcp/asset/bdacaf49-aa57-4532-a927-35360af6d11f.png";
-const img110 = "https://www.figma.com/api/mcp/asset/390df677-3789-4f3a-8caa-a17aeceebe9c.png";
-const imgGroup = "https://www.figma.com/api/mcp/asset/49483ff5-a4b5-4d21-b154-616552f48c8f.svg";
-const imgGroup1 = "https://www.figma.com/api/mcp/asset/61450d3c-bf81-4bc6-9ffb-c9a40b00b983.svg";
-const imgIconAdvantages24Px32Px = "https://www.figma.com/api/mcp/asset/aeffbadc-a4f5-4379-a74d-f552dac5d20c.svg";
-const imgGroup2 = "https://www.figma.com/api/mcp/asset/b2678763-181a-4484-923a-df4747124f08.svg";
-const imgArrow = "https://www.figma.com/api/mcp/asset/98743101-171d-46f6-b022-f1c9bc5347c6.svg";
-const imgArrow1 = "https://www.figma.com/api/mcp/asset/b5f0da21-023e-484d-a13d-e167b46ba186.svg";
+const imgEllipse21 = "https://www.figma.com/api/mcp/asset/6186fea5-24aa-43f6-8232-d546a01b3d8a.svg";
+const img19 = "https://www.figma.com/api/mcp/asset/59655fff-4505-4918-8cfc-f3ddc84967ab.png";
+const imgImage12 = "https://www.figma.com/api/mcp/asset/50ca932b-f952-4297-ac94-8e4c84368ff7.png";
+const img110 = "https://www.figma.com/api/mcp/asset/d8628ef7-3b46-43c6-8037-1e75d94317a5.png";
+const imgGroup = "https://www.figma.com/api/mcp/asset/a7bc298c-8a8d-47d1-9d04-68c923e36775.svg";
+const imgGroup1 = "https://www.figma.com/api/mcp/asset/c8ee1088-28f9-46dc-bb6a-7d9af43013fa.svg";
+const imgIconAdvantages24Px32Px = "https://www.figma.com/api/mcp/asset/b9a14af6-e60a-4ef0-a28b-b9465438e7be.svg";
+const imgGroup2 = "https://www.figma.com/api/mcp/asset/4eb01f34-f473-4016-8151-e5923dc49569.svg";
+const imgArrow = "https://www.figma.com/api/mcp/asset/27abaa17-b9aa-4fc6-8ac5-a1240cad8b53.svg";
+const imgArrow1 = "https://www.figma.com/api/mcp/asset/0c69c7ba-2ba3-4ff5-b907-2676233bcc89.svg";
 
 type ElementPricingTagProps = {
   className?: string;
@@ -56,7 +56,7 @@ export default function Component2() {
           <p className="leading-[1.2]">от проверенных брендов</p>
         </div>
       </div>
-      <div className="content-stretch cursor-pointer flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="192:6290" data-name="layout_Models">
+      <div className="content-stretch cursor-pointer flex flex-col gap-[24px] items-start justify-center relative shrink-0 w-full" data-node-id="192:6290" data-name="layout_Models">
         <div className="h-[592px] relative shrink-0 w-[340px]" data-node-id="192:6291" data-name="Frame_ATV Model">
           <div className="absolute bg-[var(--colors\/grays\/white,#fdfdfd)] content-stretch flex flex-col gap-[12px] items-start left-0 overflow-clip p-[16px] rounded-[16px] top-0 w-[340px]" data-node-id="I192:6291;156:4435" data-name="Frame_ATV Model">
             <ElementAtvCards className="bg-white h-[274px] overflow-clip relative rounded-[12px] shrink-0 w-[308px]" />
@@ -345,6 +345,7 @@ export default function Component2() {
     </div>
   );
 }
+
 SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
 1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
 2. Convert React syntax to the target framework/library
@@ -352,6 +353,9 @@ SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the
 4. Follow the project's existing patterns and conventions
 DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
 
+
 Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+
 These styles are contained in the design: H8 — 12 (Bold): Font(family: "Inter", style: Bold, size: 12, weight: 700, lineHeight: 1.2000000476837158, letterSpacing: -2), H2 — 32 (Bold): Font(family: "Inter", style: Bold, size: 32, weight: 700, lineHeight: 1.2000000476837158, letterSpacing: -2), Superscript — 12: Font(family: "Inter", style: Semi Bold, size: 12, weight: 600, lineHeight: 1.2000000476837158, letterSpacing: -2), P2 — 16: Font(family: "Inter", style: Medium, size: 16, weight: 500, lineHeight: 1.25, letterSpacing: -2), H5 — 20 (Bold): Font(family: "Inter", style: Bold, size: 20, weight: 700, lineHeight: 1.2999999523162842, letterSpacing: -2), P3 — 14: Font(family: "Inter", style: Medium, size: 14, weight: 500, lineHeight: 1.25, letterSpacing: -2), H7 — 14: Font(family: "Inter", style: Semi Bold, size: 14, weight: 600, lineHeight: 1.2999999523162842, letterSpacing: -2), H8 — 12: Font(family: "Inter", style: Semi Bold, size: 12, weight: 600, lineHeight: 1.2000000476837158, letterSpacing: -2).
+
 The generated code contains image and SVG URL constants, e.g. const image = 'https://www.figma.com/api/mcp/asset/550e8400-e29b-41d4-a716-446655440000.png'. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.

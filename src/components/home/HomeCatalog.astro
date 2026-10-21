@@ -2,11 +2,10 @@
 import Button from '../ui/Button.astro';
 import SectionHeading from '../ui/SectionHeading.astro';
 import ModelCard from '../ModelCard.astro';
-import CardRail from './CardRail.astro';
 import { homepageModelReferences } from '../../data/catalog';
 ---
 <section id="models" class="home-models container" aria-labelledby="models-title">
   <div class="home-models__heading"><SectionHeading eyebrow="Наши модели" id="models-title" bold><span>Надёжная техника</span><br />от проверенных брендов</SectionHeading><button class="home-catalog-link" disabled>Перейти в каталог<img src="/assets/home/catalog-arrow.svg" alt="" /></button></div>
-  <CardRail id="models-rail" label="Модели — листайте горизонтально" previousLabel="Предыдущая модель" nextLabel="Следующая модель">{homepageModelReferences.map(model => <ModelCard model={model} id={model.id} />)}</CardRail>
+  <div class="home-card-grid">{homepageModelReferences.map(model => <ModelCard model={model} id={model.id} />)}</div>
   <Button class="mobile-only home-catalog-mobile" variant="outline" arrow disabled>Перейти в каталог</Button>
 </section>

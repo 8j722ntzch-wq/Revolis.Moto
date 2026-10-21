@@ -178,12 +178,21 @@
     {
       "nodeId": "199:7383",
       "path": "public/assets/mobile-home/rental-gift.svg"
+    },
+    {
+      "nodeId": "179:5602",
+      "path": "public/assets/mobile-home/slider-chevron.svg"
     }
   ],
   "reused": "Original model photos/icons, bank logos, Belarus outline, document composites, test-drive handwriting, header/footer and mobile UI assets.",
   "differences": [
-    "Model carousel uses tallest card height to preserve two-line BaltMotors description; no clipping.",
+    "Mobile models follow vertical flow with 24px gaps; height grows for longer descriptions without clipping.",
     "Widths outside 390px are responsive adaptations, not separate Figma frames.",
     "Font rendering may produce different line breaks across browsers."
-  ]
+  ],
+  "reviewedSections": {
+    "192:6288": "Vertical models, 24px gap; no slider controls",
+    "179:5602": "36px black round slider buttons, 8px gap, right aligned 24px below cards; equal card heights retained per user request",
+    "190:6145": "24px between accordion items and from heading to list; 24px from closed question to divider"
+  }
 }

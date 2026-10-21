@@ -41,9 +41,10 @@
   .homepage.mobile-ui .home-mobile-icon--orange > span { background: var(--color-rental); }
   .homepage.mobile-ui .home-models__heading { display: block; }
   .homepage.mobile-ui .home-catalog-link { display: none; }
-  .homepage.mobile-ui .home-card-grid { display: flex; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; gap: 24px; margin-top: 24px; scrollbar-width: none; margin-inline: calc(-1 * var(--rail-gutter)); padding-inline: var(--rail-gutter); scroll-padding-inline: var(--rail-gutter); }
-  .homepage.mobile-ui .home-card-grid::-webkit-scrollbar { display: none; }
-  .homepage.mobile-ui .home-card-grid > * { flex: 0 0 min(100%, 340px); scroll-snap-align: start; }
+  .homepage.mobile-ui .home-models .home-card-grid { display: flex; flex-direction: column; gap: 24px; margin-top: 24px; }
+  .homepage.mobile-ui .home-documents .home-card-grid { display: flex; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; gap: 24px; margin-top: 24px; scrollbar-width: none; margin-inline: calc(-1 * var(--rail-gutter)); padding-inline: var(--rail-gutter); scroll-padding-inline: var(--rail-gutter); }
+  .homepage.mobile-ui .home-documents .home-card-grid::-webkit-scrollbar { display: none; }
+  .homepage.mobile-ui .home-documents .home-card-grid > * { flex: 0 0 min(100%, 340px); scroll-snap-align: start; }
   .homepage.mobile-ui .home-catalog-mobile { display: flex; width: 100%; margin-top: 24px; border-color: var(--color-purple); color: var(--color-black); }
   .homepage.mobile-ui .home-catalog-mobile .arrow-disabled { content: url('/assets/mobile/arrow-black.svg'); }
   .homepage.mobile-ui .home-highlights { grid-template-columns: 1fr; gap: 20px; }
@@ -113,7 +114,7 @@
   .homepage.mobile-ui .home-consultation .home-banner__copy > .ui-button { margin-top: 20px; }
   .homepage.mobile-ui .home-consultation__address { position: relative; left: auto; bottom: auto; margin: 48px 20px 0; width: 260px; min-height: 58px; }
   .homepage.mobile-ui .home-consultation__address .home-advantage__body { white-space: normal; color: var(--color-white); }
-  .homepage.mobile-ui .home-faq__items { margin-top: 24px; }
+  .homepage.mobile-ui .home-faq__items { margin-top: 24px; gap: 24px; }
   .homepage.mobile-ui .home-faq .section-heading__title { max-width: none; }
   .homepage #contacts { scroll-margin-top: 60px; }
 }

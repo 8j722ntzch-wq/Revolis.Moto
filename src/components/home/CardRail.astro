@@ -1,5 +1,5 @@
 ---
-import Button from '../ui/Button.astro';
+import SliderButton from '../ui/SliderButton.astro';
 
 interface Props {
   id: string;
@@ -12,20 +12,16 @@ const { id, label, previousLabel, nextLabel } = Astro.props;
 <card-rail>
   <div id={id} class="home-card-grid" tabindex="0" role="region" aria-label={label} data-rail-track><slot /></div>
   <div class="card-rail__controls" data-rail-controls>
-    <Button variant="outline" arrow class="card-rail__previous" aria-label={previousLabel} aria-controls={id} data-rail-previous />
-    <p class="card-rail__count" aria-live="polite" aria-atomic="true" data-rail-count></p>
-    <Button variant="outline" arrow aria-label={nextLabel} aria-controls={id} data-rail-next />
+    <SliderButton direction="previous" label={previousLabel} controls={id} />
+    <p class="sr-only" aria-live="polite" aria-atomic="true" data-rail-count></p>
+    <SliderButton direction="next" label={nextLabel} controls={id} />
   </div>
 </card-rail>
 <style>
   card-rail { display: block; min-width: 0; }
   .card-rail__controls { display: none; }
   @media (max-width: 1287px) {
-    card-rail[data-overflow='true'] .card-rail__controls { display: flex; justify-content: center; align-items: center; gap: 16px; margin-top: 16px; }
-    .card-rail__count { min-width: 48px; text-align: center; font-size: 14px; color: var(--color-gray-4); }
-    .card-rail__controls :global(.ui-button) { width: 44px; height: 44px; }
-    .card-rail__controls :global(.ui-button__label) { display: none; }
-    .card-rail__controls :global(.card-rail__previous .ui-button__arrow) { transform: rotate(180deg); }
+    card-rail[data-overflow='true'] .card-rail__controls { display: flex; justify-content: flex-end; align-items: center; gap: 8px; margin-top: 24px; }
     [data-rail-track]:focus-visible { outline-offset: -2px; }
   }
 </style>
