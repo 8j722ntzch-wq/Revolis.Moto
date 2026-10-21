@@ -52,3 +52,7 @@ Null model prices and unconfirmed availability are intentional, not missing valu
 `npm run design:status` reports available design inputs. The homepage manifests and originals are populated; run `npm run design:check` to detect regressions. Passing is not proof of visual fidelity. Run `npm run check` and `npm run build` after implementation changes. At the design width compare rendered sections, fonts, line wraps, layers and every asset with Figma; then inspect 1366 and 1920 px desktop widths. State any browser-verification limitation explicitly. Keep the project unpublished while it is preparation-only.
 
 For documentation-only changes, check links, paths, commands and consistency; do not claim a new visual review or rerun unrelated UI tests. After code changes, also run relevant tests (`npm test` for phone-mask changes), and regenerate affected previews after a successful build. Record which checks ran now versus reports from earlier work.
+
+## Mobile milestone — 2026-10-21
+
+The user selected mobile styles/components before homepage assembly. Read docs/mobile-ui.md and design/mobile-ui.json. /ui-kit-mobile/ is implemented using fresh component contexts. The homepage is still desktop-only; do not mark mobile homepage complete or enable mobile styles there until its sections are assembled and verified. Preserve desktop styles and existing interactions.

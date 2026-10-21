@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import MobileHeader from '../components/MobileHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import Button from '../components/ui/Button.astro';
+import TextField from '../components/ui/TextField.astro';
+import Checkbox from '../components/ui/Checkbox.astro';
+import StatusBadge from '../components/ui/StatusBadge.astro';
+import SectionHeading from '../components/ui/SectionHeading.astro';
+import HomeFaq from '../components/home/HomeFaq.astro';
+import ModelCard from '../components/ModelCard.astro';
+import BankCard from '../components/BankCard.astro';
+import { homepageModelReferences } from '../data/catalog';
+import { bankCardsReference } from '../data/finance';
+import { headerLinks } from '../data/navigation';
+import '../styles/mobile-ui.css';
+const targets = ['#models', '#styles', '#banks', '#faq', '#contacts'];
+const links = headerLinks.map((link, index) => ({ ...link, href: targets[index] }));
+const states = ['default', 'pressed', 'disabled'] as const;
+---
+<BaseLayout title="Revolis.Мото — мобильные компоненты" description="Мобильная библиотека по Figma: стили, кнопки, формы, карточки и навигация.">
+  <div class="mobile-ui mobile-kit" id="top">
+    <MobileHeader links={links} />
+    <main>
+      <section class="container kit-section" id="styles">
+        <p class="kit-caption">Мобильная библиотека · 390 px</p>
+        <SectionHeading eyebrow="Стили и компоненты" title="Основа мобильной версии" level="h1" bold />
+        <p class="kit-note">Компоненты из Figma для проверки перед сборкой главной. Данные моделей и банков — образцы макета.</p>
+        <div class="palette" aria-label="Основные цвета">{['purple', 'black', 'gray-1', 'white'].map(color => <span style={`background:var(--color-${color})`} title={color}></span>)}</div>
+        <div class="stack type-samples">
+          <p class="type-display">Квадроциклы<br />и вездеходы</p>
+          <p class="section-heading__title">Заголовок секции</p>
+          <p class="type-heading-sm weight-bold">Заголовок карточки</p>
+          <p class="type-body-lg">Основной текст — 16 / 20</p>
+          <p class="type-small">Описание — 14 / 18</p>
+          <p class="type-eyebrow">Надзаголовок — 12 / 14</p>
+        </div>
+      </section>
+      <section class="container kit-section" id="buttons">
+        <SectionHeading eyebrow="Действия" title="Кнопки" bold />
+        {(['solid', 'outline'] as const).map(variant => <div class="stack button-samples">{states.map(state => <div class="button-row"><span class="kit-caption">{state === 'default' ? 'Обычная' : state === 'pressed' ? 'Нажатая' : 'Недоступна'}</span><Button variant={variant} data-demo-state={state} disabled={state === 'disabled'} data-mobile-demo="true">Оставить заявку</Button><Button variant={variant} arrow data-demo-state={state} disabled={state === 'disabled'} data-mobile-demo="true">Оставить заявку</Button></div>)}</div>)}
+        <p id="mobile-feedback" class="kit-note" role="status" aria-live="polite">Кнопки демонстрационные, заявка не отправляется.</p>
+      </section>
+      <section class="kit-section fields-panel" id="fields">
+        <div class="container mobile-fields stack">
+          <SectionHeading eyebrow="Ввод данных" title="Поля и согласие" bold />
+          <TextField id="mobile-name" name="name" label="Ваше имя" required />
+          <TextField id="mobile-phone" name="phone" label="Ваш номер телефона" type="tel" required />
+          <TextField id="mobile-filled" name="filled" label="Ваше имя" value="Александр" />
+          <TextField id="mobile-error" name="error" label="Ваше имя" error="Заполните поле." />
+          <TextField id="mobile-disabled" name="disabled" label="Ваше имя" disabled />
+          <Checkbox id="mobile-consent" name="consent">Согласен на обработку персональных данных</Checkbox>
+          <Checkbox id="mobile-consent-checked" name="checked" checked>Выбранное состояние</Checkbox>
+          <Checkbox id="mobile-consent-disabled" name="disabled" disabled checked>Недоступное состояние</Checkbox>
+        </div>
+      </section>
+      <section class="container kit-section stack" id="models">
+        <SectionHeading eyebrow="Техника" title="Карточка модели" bold />
+        <ModelCard id="mobile-model" model={homepageModelReferences[0]} demoAction />
+        <div class="badges"><StatusBadge status="stock" /><StatusBadge status="order" /><StatusBadge status="offer" /><StatusBadge status="soon" /></div>
+      </section>
+      <section class="container kit-section stack" id="banks">
+        <SectionHeading eyebrow="Финансирование" title="Карточки банков" bold />
+        {bankCardsReference.map(bank => <BankCard id={`mobile-bank-${bank.variant}`} {...bank} actionHref="#fields" />)}
+      </section>
+      <HomeFaq />
+    </main>
+    <div id="contacts"><SiteFooter links={links} /></div>
+  </div>
+</BaseLayout>
+<style>
+  :global(body) { background: var(--color-gray-2); }
+  .mobile-kit { width: min(100%, 390px); margin-inline: auto; background: var(--color-gray-1); }
+  .mobile-kit :global(.mobile-header) { position: sticky; top: 0; z-index: 100; }
+  .kit-section { margin-top: 64px; scroll-margin-top: 84px; }
+  .kit-caption { font-size: 12px; line-height: 16px; color: var(--color-gray-4); }
+  .kit-note { margin-top: 16px; color: var(--color-gray-4); line-height: 20px; }
+  .palette { display: flex; gap: 12px; margin-top: 24px; }
+  .palette span { width: 56px; height: 56px; border-radius: 10px; }
+  .stack { display: flex; flex-direction: column; gap: 24px; }
+  .type-samples, .button-samples { margin-top: 24px; }
+  .button-row { display: flex; flex-wrap: wrap; gap: 12px; }
+  .button-row > span { width: 100%; }
+  .fields-panel { background: var(--color-black); padding-block: 32px; }
+  .badges { display: flex; flex-wrap: wrap; gap: 12px; }
+  .mobile-kit :global(.home-faq) { margin-top: 80px; scroll-margin-top: 84px; }
+  .mobile-kit :global(.home-faq__items) { display: flex; flex-direction: column; gap: 32px; margin-top: 24px; }
+  #contacts { margin-top: 80px; scroll-margin-top: 60px; }
+</style>
+<script>
+  document.querySelectorAll('[data-mobile-demo], [data-model-card-demo]').forEach(button => {
+    button.addEventListener('click', () => {
+      document.querySelector('#mobile-feedback')!.textContent = 'Нажатие работает. Это образец компонента, заявка не отправлена.';
+    });
+  });
+</script>

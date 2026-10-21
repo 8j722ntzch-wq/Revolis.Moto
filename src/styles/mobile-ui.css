@@ -1,0 +1,72 @@
+/* Opt-in mobile components. The desktop homepage does not load this sheet. */
+.mobile-ui {
+  --button-height: 38px;
+  --field-height: 48px;
+  --model-card-width: 100%;
+  --model-card-height: 592px;
+  --model-card-media-height: 274px;
+  --bank-card-width: 100%;
+  --header-height: 60px;
+  font-size: 14px;
+  line-height: 18px;
+}
+.mobile-ui .container { width: calc(100% - 50px); max-width: 340px; }
+.mobile-ui .ui-button:is(.ui-button--solid, .ui-button--outline):not(.ui-button--inverse) { font-size: 12px; line-height: 14px; }
+.mobile-ui .ui-button--solid:is(:active, [data-demo-state='pressed']):not(:disabled) { background: var(--color-purple-hover); }
+.mobile-ui .ui-button--with-arrow:not(.ui-button--inverse) .ui-button__arrow { width: 14px; height: 14px; flex-basis: 14px; }
+.mobile-ui .ui-button--with-arrow:not(.ui-button--inverse) .ui-button__arrow img { left: 1.24px; top: 3.16px; }
+.mobile-ui .ui-button--with-arrow:not(.ui-button--inverse) .arrow-white { content: url('/assets/mobile/arrow-white.svg'); }
+.mobile-ui .ui-button--with-arrow:not(.ui-button--inverse) .arrow-black { content: url('/assets/mobile/arrow-black.svg'); }
+.mobile-ui .ui-button--with-arrow:not(.ui-button--inverse) .arrow-disabled { content: url('/assets/mobile/arrow-disabled.svg'); }
+.mobile-ui .type-display { font-size: clamp(32px, 10.2564vw, 40px); line-height: 44px; }
+.mobile-ui .section-heading__title { font-size: 32px; line-height: 38px; font-weight: 700; }
+.mobile-ui .section-heading__title span { color: var(--color-purple); }
+.mobile-ui .section-heading .type-eyebrow { line-height: 14px; }
+.mobile-ui .type-body-lg { font-size: 16px; line-height: 20px; }
+.mobile-ui .type-small { line-height: 18px; }
+.mobile-ui .faq-item { padding-bottom: 24px; }
+.mobile-ui .faq-item::after { width: 100%; background-image: url('/assets/mobile/faq-line.svg'); background-size: 100% 1px; }
+.mobile-ui .faq-item summary { gap: 16px; }
+.mobile-ui .faq-item__question { font-size: 20px; line-height: 26px; }
+.mobile-ui .faq-item__action { opacity: 1; }
+.mobile-ui .faq-item__answer { padding-top: 24px; font-size: 16px; line-height: 20px; }
+.mobile-ui .faq-item[open] { padding-bottom: 24px; }
+.mobile-ui .text-field__input { padding-inline: 16px; font-size: 14px; line-height: 18px; }
+.mobile-ui .text-field__placeholder { left: 17px; font-size: 14px; line-height: 18px; }
+.mobile-ui .mobile-fields { --color-surface: var(--color-gray-6); --color-input-text: var(--color-white); --color-text-muted: var(--color-gray-2); color: var(--color-white); }
+.mobile-ui .model-card__surface { transform: none; }
+.mobile-ui .model-card__photo { max-width: none; }
+.mobile-ui .model-card__features { gap: 20px; }
+.mobile-ui .model-card__features li { gap: 8px; }
+.mobile-ui .bank-card__surface { transform: none; }
+.mobile-ui .bank-card--consultation { --bank-card-height: 190px; }
+.mobile-ui .bank-card--consultation .bank-card__surface { padding: 20px; }
+.mobile-ui .bank-card__consultation h3 { font-size: 20px; line-height: 26px; }
+.mobile-ui .bank-card .bank-card__action { margin-top: 16px; min-height: 42px; }
+.mobile-ui .site-footer .site-footer__inner { min-height: 1140px; padding-block: 40px; }
+.mobile-ui .site-footer .site-footer__main { display: contents; }
+.mobile-ui .site-footer .site-footer__navigation { order: 0; }
+.mobile-ui .site-footer .site-footer__contacts { order: 1; margin-top: 32px; }
+.mobile-ui .site-footer .site-footer__contacts .site-footer__address p { white-space: normal; font-size: 20px; line-height: 26px; margin-top: 16px; }
+.mobile-ui .site-footer .site-footer__details { display: flex; flex-direction: column; gap: 32px; margin-top: 32px; }
+.mobile-ui .site-footer .site-footer__maps { order: -1; }
+.mobile-ui .site-footer .site-footer__contacts .site-footer__details h2 { margin-bottom: 16px; }
+.mobile-ui .site-footer .site-footer__maps > div { gap: 12px; }
+.mobile-ui .site-footer .site-footer__map img { transform: scale(1.111111); margin: 1px; }
+.mobile-ui .site-footer .site-footer__details .ui-button { font-size: 16px; line-height: 20px; }
+.mobile-ui .site-footer .site-footer__details .site-footer__hours p { font-size: 16px; line-height: 20px; }
+.mobile-ui .site-footer .site-footer__phones > div { gap: 8px; }
+.mobile-ui .site-footer .site-footer__socials { order: 2; margin-top: 32px; padding-top: 0; justify-content: flex-start; }
+.mobile-ui .site-footer .site-footer__top { order: 3; width: 100%; margin-top: 80px; font-size: 12px; line-height: 14px; }
+.mobile-ui .site-footer .site-footer__legal { display: contents; }
+.mobile-ui .site-footer .site-footer__legal > div { order: 4; margin-top: 24px; flex-direction: column; align-items: flex-start; gap: 4px; }
+.mobile-ui .site-footer .site-footer__registration { order: 5; margin-top: 24px; }
+.mobile-ui .site-footer .site-footer__legal > p { order: 6; margin-top: 24px; text-align: center; font-size: 12px; line-height: 14px; }
+@media (max-width: 374px) {
+  .mobile-ui .container { width: calc(100% - 32px); }
+  .mobile-ui .model-card__features { gap: 10px; flex-wrap: wrap; }
+  .mobile-ui .model-card__features li { gap: 4px; }
+}
+
+.mobile-ui .site-footer .site-footer__details .site-footer__maps > div { gap: 12px; }
+.mobile-ui .site-footer .site-footer__top img { transform: scale(.875); margin-inline: -1px; }

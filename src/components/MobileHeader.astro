@@ -1,0 +1,74 @@
+---
+import Button from './ui/Button.astro';
+import { headerLinks, type HeaderLink } from '../data/navigation';
+import { footerContent } from '../data/footer';
+interface Props { links?: readonly HeaderLink[]; homeHref?: string; actionHref?: string; id?: string; }
+const { links = headerLinks, homeHref = '#top', actionHref = '#contacts', id = 'mobile-menu' } = Astro.props;
+---
+<header class="mobile-header" data-mobile-header>
+  <div class="mobile-header__bar">
+    <a class="mobile-header__logo" href={homeHref} aria-label="Revolis.Мото — на главную"><img src="/assets/site/logo.svg" alt="" /></a>
+    <button class="mobile-header__toggle" type="button" aria-label="Открыть меню" aria-controls={id} aria-expanded="false" data-menu-open><img src="/assets/mobile/menu.svg" alt="" /></button>
+    <Button class="mobile-header__lead" href={actionHref}>Оставить заявку</Button>
+  </div>
+  <dialog id={id} class="mobile-header__dialog" aria-label="Меню сайта">
+    <div class="mobile-header__bar">
+      <a class="mobile-header__logo" href={homeHref} aria-label="Revolis.Мото — на главную"><img src="/assets/site/logo.svg" alt="" /></a>
+      <button class="mobile-header__toggle" type="button" aria-label="Закрыть меню" data-menu-close autofocus><img src="/assets/mobile/close.svg" alt="" /></button>
+      <Button class="mobile-header__lead" href={actionHref}>Оставить заявку</Button>
+    </div>
+    <div class="mobile-header__body">
+      <nav aria-label="Мобильная навигация"><p>Навигация:</p><div>{links.map(link => <a href={link.href}>{link.label}</a>)}</div></nav>
+      <div class="mobile-header__phones"><p>Телефоны:</p><div>{footerContent.phones.map(phone => <a href={phone.href}>{phone.label}</a>)}</div></div>
+      <p class="mobile-header__copyright">{footerContent.copyright}</p>
+    </div>
+  </dialog>
+</header>
+<style>
+  .mobile-header { background: var(--color-white); color: var(--color-black); height: 60px; }
+  .mobile-header__bar { display: grid; grid-template-columns: calc((100% - 60px) / 2 - 6px) 60px 1fr; align-items: center; padding-inline: 25px; height: 60px; }
+  .mobile-header__logo { display: block; width: 116px; height: 36px; position: relative; }
+  .mobile-header__logo img { display: block; position: absolute; left: -5.754px; }
+  .mobile-header__toggle { height: 60px; padding: 0; display: grid; place-items: center; border: 0; border-inline: 1px solid var(--color-gray-2); background: transparent; }
+  .mobile-header__toggle img { display: block; }
+  .mobile-header :global(.mobile-header__lead) { justify-self: end; width: 129px; min-height: 38px; font-size: 12px; line-height: 14px; }
+  .mobile-header__dialog { padding: 0; border: 0; margin: 0 auto; inset: 0; width: min(100%, 390px); max-width: none; height: 100dvh; max-height: none; background: var(--color-white); color: var(--color-black); }
+  .mobile-header__dialog::backdrop { background: #0d0d0d66; }
+  .mobile-header__dialog .mobile-header__bar { border-bottom: 1px solid var(--color-gray-2); }
+  .mobile-header__body { display: flex; flex-direction: column; min-height: calc(100dvh - 60px); padding: 40px 25px 70px; }
+  .mobile-header__body p { font-size: 14px; line-height: 18px; font-weight: 600; color: var(--color-gray-4); }
+  .mobile-header__body nav > div { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; margin-top: 12px; }
+  .mobile-header__body a { text-decoration: none; font-size: 20px; line-height: 26px; font-weight: 600; }
+  .mobile-header__body a:hover { color: var(--color-purple); }
+  .mobile-header__phones { margin-top: 32px; }
+  .mobile-header__phones > div { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; margin-top: 12px; }
+  .mobile-header__phones a { font-size: 16px; line-height: 20px; }
+  .mobile-header__body .mobile-header__copyright { margin-top: auto; padding-top: 40px; text-align: center; font-size: 12px; line-height: 14px; font-weight: 500; color: var(--color-gray-3); }
+  @media (max-width: 374px) {
+    .mobile-header__bar { padding-inline: 16px; grid-template-columns: 1fr 44px 1fr; gap: 6px; }
+    .mobile-header :global(.mobile-header__lead) { width: auto; padding-inline: 8px; }
+    .mobile-header__body { padding-inline: 16px; }
+  }
+</style>
+<script>
+  for (const header of document.querySelectorAll<HTMLElement>('[data-mobile-header]')) {
+    const dialog = header.querySelector('dialog')!;
+    const opener = header.querySelector<HTMLButtonElement>('[data-menu-open]')!;
+    let previousOverflow = '';
+    opener.addEventListener('click', () => {
+      previousOverflow = document.documentElement.style.overflow;
+      document.documentElement.style.overflow = 'hidden';
+      dialog.showModal();
+      opener.setAttribute('aria-expanded', 'true');
+    });
+    dialog.querySelector('[data-menu-close]')!.addEventListener('click', () => dialog.close());
+    dialog.addEventListener('close', () => {
+      document.documentElement.style.overflow = previousOverflow;
+      opener.setAttribute('aria-expanded', 'false');
+    });
+    dialog.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      dialog.close();
+      document.documentElement.style.overflow = previousOverflow;
+    }));
+  }
+</script>
