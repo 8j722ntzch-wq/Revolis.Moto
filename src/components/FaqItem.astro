@@ -6,3 +6,62 @@ const { question, group = 'faq', open = false, answerReady = true } = Astro.prop
   <summary><span class="faq-item__question">{question}</span><span class="faq-item__action" aria-hidden="true"><span class="faq-open">Открыть</span><span class="faq-close">Закрыть</span></span></summary>
   <div class="faq-item__answer"><slot /></div>
 </details> : <div class="faq-item"><p class="faq-item__question">{question}</p></div>}
+
+<script>
+  const items = Array.from(document.querySelectorAll<HTMLDetailsElement>('details.faq-item'));
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const states = new Map<HTMLDetailsElement, { expanded: boolean; group: string; animation?: Animation }>();
+
+  function toggle(item: HTMLDetailsElement, expanded: boolean) {
+    const state = states.get(item)!;
+    const height = item.getBoundingClientRect().height;
+    state.animation?.cancel();
+    state.animation = undefined;
+    state.expanded = expanded;
+    item.style.removeProperty('height');
+    item.style.removeProperty('overflow');
+    item.open = expanded;
+    const targetHeight = item.getBoundingClientRect().height;
+    if (reducedMotion.matches) return;
+
+    // Keep the answer rendered until the closing animation finishes.
+    item.open = true;
+    item.style.overflow = 'hidden';
+    const animation = item.animate(
+      [{ height: `${height}px` }, { height: `${targetHeight}px` }],
+      { duration: 320, easing: 'cubic-bezier(0.22, 1, 0.36, 1)' },
+    );
+    state.animation = animation;
+    animation.onfinish = () => {
+      item.open = state.expanded;
+      item.style.removeProperty('overflow');
+      state.animation = undefined;
+    };
+  }
+
+  for (const item of items) {
+    const group = item.name;
+    states.set(item, { expanded: item.open, group });
+    // Handle exclusivity here so the previous answer also closes smoothly.
+    item.removeAttribute('name');
+    item.querySelector('summary')!.addEventListener('click', (event) => {
+      event.preventDefault();
+      const expanded = !states.get(item)!.expanded;
+      if (expanded && group) {
+        for (const other of items) {
+          const state = states.get(other)!;
+          if (other !== item && state.group === group && state.expanded) toggle(other, false);
+        }
+      }
+      toggle(item, expanded);
+    });
+  }
+
+  reducedMotion.addEventListener('change', () => {
+    if (reducedMotion.matches) {
+      for (const [item, state] of states) {
+        if (state.animation) toggle(item, state.expanded);
+      }
+    }
+  });
+</script>
