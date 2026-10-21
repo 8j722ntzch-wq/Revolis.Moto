@@ -1,3 +1,6 @@
+@media (prefers-reduced-motion: no-preference) {
+  html:has(.homepage) { scroll-behavior: smooth; }
+}
 /* Current Desktop 1470 frame, 1:13203. Mobile follows its own future design. */
 .homepage { --color-rental: #ef641f; min-width: 1288px; overflow-x: clip; background: var(--color-gray-1); }
 .homepage section { scroll-margin-top: calc(var(--header-height) + 32px); }
