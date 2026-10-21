@@ -575,24 +575,6 @@
       "sha256": "ac6565cc84bbb2bbef8868a6656ddabd7591c722b1554a34223af8f653df3f5f"
     },
     {
-      "id": "rental-sticker",
-      "nodeId": "130:6324",
-      "kind": "exported-raster",
-      "localPath": "public/assets/home/rental-sticker.png",
-      "slots": [
-        {
-          "nodeId": "130:6324",
-          "sectionNodeId": "130:6976"
-        }
-      ],
-      "intrinsic": {
-        "width": 496,
-        "height": 496
-      },
-      "transfer": "Isolated original graphic rendered through Figma MCP screenshot/Plugin API node.screenshot(contentsOnly:true); temporary asset download blocked by network. No full UI section rasterized.",
-      "sha256": "777baea8842baab5633880f478cbe1f2543a47095953fd6e812be3bd5553932f"
-    },
-    {
       "id": "consultation",
       "nodeId": "I129:7067;129:6485",
       "kind": "exported-raster",
@@ -609,6 +591,62 @@
       },
       "transfer": "Isolated original graphic rendered through Figma MCP screenshot/Plugin API node.screenshot(contentsOnly:true); temporary asset download blocked by network. No full UI section rasterized.",
       "sha256": "209fb95c1979af6f92fc66e3ec6972adbb2063365e676bd5a789787605191730"
+    },
+    {
+      "id": "rental-sticker-outline",
+      "nodeId": "I130:6324;1241:149185",
+      "kind": "exported-svg",
+      "localPath": "public/assets/home/rental-sticker-outline.svg",
+      "slots": [
+        {
+          "nodeId": "I130:6324;1241:149185",
+          "sectionNodeId": "130:6976"
+        }
+      ],
+      "intrinsic": {
+        "width": "414.871",
+        "height": "411.896",
+        "viewBox": "0 0 414.871 411.896"
+      },
+      "placement": {
+        "x": 40.684,
+        "y": 42.625,
+        "containerWidth": 496,
+        "containerHeight": 496
+      },
+      "callsites": [
+        "src/components/home/HomeRental.astro"
+      ],
+      "transfer": "Original SVG downloaded via curl -L from fresh Figma design context, 2026-10-21; unmodified vector paths, no embedded raster.",
+      "sha256": "86d26bf37ac2c938dbde3c5f36826037a4db74c0be7236b4e9f4f7d2b63d933e"
+    },
+    {
+      "id": "rental-sticker-art",
+      "nodeId": "I130:6324;1241:149187",
+      "kind": "exported-svg",
+      "localPath": "public/assets/home/rental-sticker-art.svg",
+      "slots": [
+        {
+          "nodeId": "I130:6324;1241:149187",
+          "sectionNodeId": "130:6976"
+        }
+      ],
+      "intrinsic": {
+        "width": "399.362",
+        "height": "396.396",
+        "viewBox": "0 0 399.362 396.396"
+      },
+      "placement": {
+        "x": 48.439,
+        "y": 50.375,
+        "containerWidth": 496,
+        "containerHeight": 496
+      },
+      "callsites": [
+        "src/components/home/HomeRental.astro"
+      ],
+      "transfer": "Original SVG downloaded via curl -L from fresh Figma design context, 2026-10-21; unmodified vector paths, no embedded raster.",
+      "sha256": "8caa92ada9d252735f348fb1d6f046868082295a72e858bd6a821392493b800a"
     }
   ],
   "reusableUiManifest": "design/ui-assets.json",

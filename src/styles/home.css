@@ -1,7 +1,8 @@
 /* Current Desktop 1470 frame, 1:13203. Mobile follows its own future design. */
 .homepage { --color-rental: #ef641f; min-width: 1288px; overflow-x: clip; background: var(--color-gray-1); }
 .homepage section { scroll-margin-top: 32px; }
-.homepage img { display: block; }
+/* Button icons manage their own visible state; never reveal all variants. */
+.homepage img:not(.ui-button__arrow img) { display: block; }
 .homepage h1 span, .homepage h2 span { color: var(--color-purple); }
 .homepage .section-heading__title.weight-bold { font-weight: 700; }
 .home-eyebrow { font-size: 12px; line-height: 14px; font-weight: 700; }
@@ -32,6 +33,7 @@
 .home-card-grid { display: grid; grid-template-columns: repeat(3, 392px); gap: 24px; margin-top: 48px; }
 /* Keep the source's resting appearance while model routes are deferred. */
 .home-models .model-card__action:disabled { background: var(--color-purple); color: var(--color-white); }
+.home-models .model-card:is(:hover, :focus-within, [data-demo-state='hover']) .model-card__action:disabled { background: var(--color-purple-hover); }
 .home-models .model-card__action:disabled .arrow-disabled { display: none; }
 .home-models .model-card__action:disabled .arrow-white { display: block; }
 .home-highlights { display: grid; grid-template-columns: 600px 600px; gap: 24px; margin-top: 94px; }
@@ -96,7 +98,9 @@
 .home-rental .home-rental__button:disabled { background: var(--color-rental); color: var(--color-white); }
 .home-rental .home-rental__button:disabled .arrow-disabled { display: none; }
 .home-rental .home-rental__button:disabled .arrow-white { display: block; }
-.home-rental__sticker { position: absolute; left: 624px; top: 0; }
+.home-rental__sticker { position: absolute; left: 624px; top: 0; width: 496px; height: 496px; overflow: hidden; pointer-events: none; }
+.home-rental__sticker-outline { position: absolute; left: 40.684px; top: 42.625px; }
+.home-rental__sticker-art { position: absolute; left: 48.439px; top: 50.375px; }
 .home-rental__advantages { position: absolute; top: 344px; left: 0; display: grid; grid-template-columns: 276px 276px; gap: 24px 36px; }
 .home-consultation { margin-top: 160px; height: 440px; background: var(--color-black); }
 .home-consultation__photo { position: absolute; top: 0; right: 0; }

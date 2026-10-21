@@ -270,5 +270,17 @@
     "design/bank-card.json",
     "design/site-header.json",
     "design/site-footer.json"
-  ]
+  ],
+  "buttonStateCorrection": {
+    "verifiedAt": "2026-10-21",
+    "nodeId": "1:6973",
+    "textSNoIconWeight": 600,
+    "states": [
+      "default",
+      "hover",
+      "pressed",
+      "disabled"
+    ],
+    "contextFile": "design/context/ui/button-state-correction-2026-10-21.json"
+  }
 }
