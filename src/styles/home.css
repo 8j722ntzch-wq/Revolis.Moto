@@ -118,3 +118,6 @@
 .homepage .site-header { position: sticky; top: 0; z-index: 100; }
 .homepage .section-heading > .type-eyebrow { line-height: 14px; }
 .home-finance h2 { white-space: nowrap; }
+
+/* Center the 294px desktop finance block in the area below the header. */
+.homepage #finance { scroll-margin-top: max(calc(var(--header-height) + 24px), calc((100vh + var(--header-height) - 294px) / 2)); }
