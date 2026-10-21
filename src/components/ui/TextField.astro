@@ -1,0 +1,16 @@
+---
+interface Props {
+  id: string; name: string; label: string; type?: 'text' | 'tel';
+  value?: string; placeholder?: string; required?: boolean; disabled?: boolean;
+  error?: string; autocomplete?: string; maxlength?: number; class?: string;
+}
+const { id, name, label, type = 'text', value, placeholder = label, required = false, disabled = false, error, autocomplete, maxlength, class: className } = Astro.props;
+---
+<div class:list={['text-field', className]}>
+  <label class="sr-only" for={id}>{label}{required ? ' (обязательно)' : ''}</label>
+  <div class="text-field__control">
+    <input class="text-field__input" id={id} name={name} type={type} value={value} placeholder=" " required={required} disabled={disabled} aria-invalid={error ? 'true' : undefined} aria-describedby={error ? `${id}-error` : undefined} autocomplete={autocomplete} maxlength={maxlength} inputmode={type === 'tel' ? 'tel' : undefined} />
+    <span class="text-field__placeholder" aria-hidden="true">{placeholder}{required && <span class="text-field__asterisk">*</span>}</span>
+  </div>
+  {error && <p class="text-field__error type-caption" id={`${id}-error`}>{error}</p>}
+</div>

@@ -1,0 +1,32 @@
+Figma MCP get_design_context — captured 2026-10-21.
+Read-only reference; not application code. Temporary download URLs replaced with opaque asset identifiers. Original SVG files are registered in design/ui-assets.json.
+
+type BlockHeadlineProps = {
+  className?: string;
+  device?: "Desktop";
+  type?: "Default";
+};
+
+function BlockHeadline({ className, device = "Desktop", type = "Default" }: BlockHeadlineProps) {
+  return (
+    <div className={className || "[word-break:break-word] content-stretch flex flex-col gap-[var(--spacings\\/content-\\(4\\),4px)] items-start not-italic relative text-[color:var(--colors\\/grays\\/black,#0d0d0d)] w-[1224px]"} data-node-id="1:7495">
+      <p className="font-['Inter:Bold'] font-bold leading-[1.2] relative shrink-0 text-[12px] tracking-[-0.24px] w-[232px]" data-node-id="1:7496">
+        Обрабатываем за 2 дня
+      </p>
+      <div className="font-['Inter:Semi_Bold'] font-semibold leading-[0] relative shrink-0 text-[40px] tracking-[-0.8px] whitespace-nowrap" data-node-id="5:4037">
+        <p className="leading-[1.2] mb-0">Обрабатываем за 2 дня</p>
+        <p className="leading-[1.2]">в соответствии со всеми технологиями</p>
+      </div>
+    </div>
+  );
+}
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+These styles are contained in the design: H1 — 40: Font(family: "Inter", style: Semi Bold, size: 40, weight: 600, lineHeight: 1.2000000476837158, letterSpacing: -2).
+The generated code contains image and SVG URL constants, e.g. const image = 'figma-asset:550e8400-e29b-41d4-a716-446655440000.png'. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.

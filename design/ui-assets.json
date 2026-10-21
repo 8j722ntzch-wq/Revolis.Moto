@@ -1,0 +1,259 @@
+{
+  "schemaVersion": 1,
+  "status": "imported",
+  "scope": "desktop-ui-foundation",
+  "assets": [
+    {
+      "id": "arrow-white",
+      "nodeId": "1:7008",
+      "kind": "exported-svg",
+      "localPath": "public/assets/ui/arrow-white.svg",
+      "slots": [
+        {
+          "nodeId": "1:7008",
+          "sectionNodeId": "1:6973"
+        }
+      ],
+      "callsites": [
+        "src/components/ui/Button.astro"
+      ],
+      "intrinsic": {
+        "width": "16",
+        "height": "16",
+        "viewBox": "0 0 16 16"
+      },
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING); original icon node, unmodified"
+    },
+    {
+      "id": "arrow-black",
+      "nodeId": "1:7011",
+      "kind": "exported-svg",
+      "localPath": "public/assets/ui/arrow-black.svg",
+      "slots": [
+        {
+          "nodeId": "1:7011",
+          "sectionNodeId": "1:6973"
+        }
+      ],
+      "callsites": [
+        "src/components/ui/Button.astro"
+      ],
+      "intrinsic": {
+        "width": "16",
+        "height": "16",
+        "viewBox": "0 0 16 16"
+      },
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING); original icon node, unmodified"
+    },
+    {
+      "id": "arrow-disabled",
+      "nodeId": "1:7098",
+      "kind": "exported-svg",
+      "localPath": "public/assets/ui/arrow-disabled.svg",
+      "slots": [
+        {
+          "nodeId": "1:7098",
+          "sectionNodeId": "1:6973"
+        }
+      ],
+      "callsites": [
+        "src/components/ui/Button.astro"
+      ],
+      "intrinsic": {
+        "width": "16",
+        "height": "16",
+        "viewBox": "0 0 16 16"
+      },
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING); original icon node, unmodified"
+    },
+    {
+      "id": "arrow-purple",
+      "nodeId": "1:7128",
+      "kind": "exported-svg",
+      "localPath": "public/assets/ui/arrow-purple.svg",
+      "slots": [
+        {
+          "nodeId": "1:7128",
+          "sectionNodeId": "1:6973"
+        }
+      ],
+      "callsites": [
+        "src/components/ui/Button.astro"
+      ],
+      "intrinsic": {
+        "width": "16",
+        "height": "16",
+        "viewBox": "0 0 16 16"
+      },
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING); original icon node, unmodified"
+    },
+    {
+      "id": "check",
+      "nodeId": "1:7257",
+      "kind": "exported-svg",
+      "localPath": "public/assets/ui/check.svg",
+      "slots": [
+        {
+          "nodeId": "1:7257",
+          "sectionNodeId": "1:7252"
+        }
+      ],
+      "callsites": [
+        "src/components/ui/Checkbox.astro"
+      ],
+      "intrinsic": {
+        "width": "20",
+        "height": "20",
+        "viewBox": "0 0 20 20"
+      },
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING); original icon node, unmodified"
+    },
+    {
+      "id": "check-disabled",
+      "nodeId": "1:7259",
+      "kind": "exported-svg",
+      "localPath": "public/assets/ui/check-disabled.svg",
+      "slots": [
+        {
+          "nodeId": "1:7259",
+          "sectionNodeId": "1:7252"
+        }
+      ],
+      "callsites": [
+        "src/components/ui/Checkbox.astro"
+      ],
+      "intrinsic": {
+        "width": "20",
+        "height": "20",
+        "viewBox": "0 0 20 20"
+      },
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING); original icon node, unmodified"
+    },
+    {
+      "id": "faq-line",
+      "nodeId": "1:7350",
+      "kind": "exported-svg",
+      "localPath": "public/assets/ui/faq-line.svg",
+      "slots": [
+        {
+          "nodeId": "1:7350",
+          "sectionNodeId": "1:7343"
+        }
+      ],
+      "callsites": [
+        "src/styles/ui.css (.faq-item::after)"
+      ],
+      "intrinsic": {
+        "width": "1224",
+        "height": "1",
+        "viewBox": "0 0 1224 1"
+      },
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING); original icon node, unmodified"
+    },
+    {
+      "id": "dollar",
+      "nodeId": "1:7322",
+      "kind": "exported-svg",
+      "localPath": "public/assets/ui/dollar.svg",
+      "slots": [
+        {
+          "nodeId": "1:7322",
+          "sectionNodeId": "1:7318"
+        }
+      ],
+      "callsites": [
+        "src/components/ui/Badge.astro"
+      ],
+      "intrinsic": {
+        "width": "10",
+        "height": "14",
+        "viewBox": "0 0 10 14"
+      },
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING); original icon node, unmodified"
+    },
+    {
+      "id": "status-stock",
+      "nodeId": "13:4397",
+      "kind": "exported-svg",
+      "localPath": "public/assets/ui/status-stock.svg",
+      "slots": [
+        {
+          "nodeId": "13:4397",
+          "sectionNodeId": "13:4379"
+        }
+      ],
+      "callsites": [
+        "src/components/ui/StatusBadge.astro"
+      ],
+      "intrinsic": {
+        "width": "8",
+        "height": "8",
+        "viewBox": "0 0 8 8"
+      },
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING); original icon node, unmodified"
+    },
+    {
+      "id": "status-order",
+      "nodeId": "13:4399",
+      "kind": "exported-svg",
+      "localPath": "public/assets/ui/status-order.svg",
+      "slots": [
+        {
+          "nodeId": "13:4399",
+          "sectionNodeId": "13:4379"
+        }
+      ],
+      "callsites": [
+        "src/components/ui/StatusBadge.astro"
+      ],
+      "intrinsic": {
+        "width": "8",
+        "height": "8",
+        "viewBox": "0 0 8 8"
+      },
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING); original icon node, unmodified"
+    },
+    {
+      "id": "status-offer",
+      "nodeId": "13:4400",
+      "kind": "exported-svg",
+      "localPath": "public/assets/ui/status-offer.svg",
+      "slots": [
+        {
+          "nodeId": "13:4400",
+          "sectionNodeId": "13:4379"
+        }
+      ],
+      "callsites": [
+        "src/components/ui/StatusBadge.astro"
+      ],
+      "intrinsic": {
+        "width": "8",
+        "height": "8",
+        "viewBox": "0 0 8 8"
+      },
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING); original icon node, unmodified"
+    },
+    {
+      "id": "status-soon",
+      "nodeId": "13:4401",
+      "kind": "exported-svg",
+      "localPath": "public/assets/ui/status-soon.svg",
+      "slots": [
+        {
+          "nodeId": "13:4401",
+          "sectionNodeId": "13:4379"
+        }
+      ],
+      "callsites": [
+        "src/components/ui/StatusBadge.astro"
+      ],
+      "intrinsic": {
+        "width": "8",
+        "height": "8",
+        "viewBox": "0 0 8 8"
+      },
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING); original icon node, unmodified"
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/ui/Button.astro';
+import TextField from '../components/ui/TextField.astro';
+import Checkbox from '../components/ui/Checkbox.astro';
+import Badge from '../components/ui/Badge.astro';
+import StatusBadge from '../components/ui/StatusBadge.astro';
+import SectionHeading from '../components/ui/SectionHeading.astro';
+import FaqItem from '../components/FaqItem.astro';
+import LeadForm from '../components/LeadForm.astro';
+
+const colors = [
+  ['Purple', 'purple', '#7C33FB'], ['Purple / hover', 'purple-hover', '#2E1854'],
+  ['Black', 'black', '#0D0D0D'], ['Gray 6', 'gray-6', '#242424'],
+  ['Gray 5', 'gray-5', '#43404A'], ['Gray 4', 'gray-4', '#736F79'],
+  ['Gray 3', 'gray-3', '#C2BFC9'], ['Gray 2', 'gray-2', '#EBE7F1'],
+  ['Gray 1', 'gray-1', '#F1EEF8'], ['White', 'white', '#FDFDFD'],
+];
+const typeSamples = [
+  ['heading-xl', '40 / 48 · Semi Bold', 'Квадроциклы для ваших задач'],
+  ['heading-lg', '32 / 38,4 · Semi Bold', 'Техника и новые маршруты'],
+  ['heading-md', '24 / 30 · Semi Bold', 'Выберите свой квадроцикл'],
+  ['heading-sm', '20 / 26 · Semi Bold', 'Характеристики модели'],
+  ['heading-xs', '16 / 20 · Semi Bold', 'Подробности предложения'],
+  ['body-lg', '20 / 26 · Medium', 'Пространство для впечатлений.'],
+  ['body', '16 / 20 · Medium', 'Поможем разобраться в характеристиках техники.'],
+  ['small', '14 / 17,5 · Medium', 'Уточните условия у консультанта.'],
+  ['eyebrow', '12 / 14,4 · Semi Bold', 'ПРОКАТ КВАДРОЦИКЛОВ'],
+];
+const states = ['default', 'hover', 'pressed', 'disabled'] as const;
+---
+<BaseLayout title="Revolis.Мото — стили и компоненты" description="Рабочая библиотека Desktop-компонентов на основе проекта Figma.">
+  <header class="kit-header container">
+    <a class="kit-brand" href="#top">revolis<span>.Мото</span></a>
+    <nav aria-label="Разделы библиотеки"><a href="#tokens">Стили</a><a href="#buttons">Кнопки</a><a href="#fields">Формы</a><a href="#faq">FAQ</a></nav>
+    <span class="kit-version">Desktop · UI foundation / 01</span>
+  </header>
+  <main id="top" class="container">
+    <section class="kit-intro" aria-labelledby="kit-title">
+      <div><p class="kit-eyebrow">REVOLIS.МОТО / БИБЛИОТЕКА ИНТЕРФЕЙСА</p><h1 id="kit-title">Сначала —<br /><span>единая система.</span></h1><p class="kit-intro__description">Стили и компоненты из вашего Figma-проекта.<br />Основа для главной, каталога и страниц техники.</p></div>
+      <div class="kit-intro__facts"><span>01</span><p>1470 px — исходный экран<br />1224 px — контейнер<br />24 px — интервал сетки</p><a href="https://www.figma.com/design/JkXOsnFvWZmMab1VYjVQAJ/?node-id=1-15" target="_blank" rel="noopener noreferrer">Открыть проект в Figma ↗</a></div>
+    </section>
+    <section id="tokens" class="kit-section" aria-labelledby="color-title">
+      <div class="kit-section__intro"><p class="kit-eyebrow">01 / ЦВЕТ</p><h2 id="color-title">Фирменная палитра</h2><p>Точные значения из переменных и компонентов Figma.</p></div>
+      <div class="color-grid">{colors.map(([name, token, hex]) => <article class="color-sample"><div style={`background:var(--color-${token})`}></div><strong>{name}</strong><code>{hex}</code></article>)}</div>
+    </section>
+    <section class="kit-section" aria-labelledby="type-title">
+      <div class="kit-section__intro"><p class="kit-eyebrow">02 / ТИПОГРАФИКА</p><h2 id="type-title">Inter. Общий ритм.</h2><p>Локальный шрифт с кириллицей. Межбуквенное расстояние −2%.</p></div>
+      <div class="display-sample"><span class="sample-label">Hero / 64 · Black · 110%</span><p class="type-display">Квадроциклы<br />и вездеходы<br /><span>в Беларуси</span></p></div>
+      <div class="type-list">{typeSamples.map(([role, label, sample]) => <div class="type-row"><code>{label}</code><p class={`type-${role}`}>{sample}</p></div>)}</div>
+      <p class="kit-note">В Figma образец «P1 — 18» фактически имеет размер 20 px. Здесь сохранено фактическое значение.</p>
+    </section>
+    <section class="kit-section" aria-labelledby="spacing-title">
+      <div class="kit-section__intro"><p class="kit-eyebrow">03 / ГЕОМЕТРИЯ</p><h2 id="spacing-title">Отступы и скругления</h2></div>
+      <div class="geometry"><div class="spacing-list">{[4,8,12,16,20,24,32,40,48].map(space => <div><code>{space}</code><span style={`width:${space}px`}></span></div>)}</div><div class="radius-sample"><span style="border-radius:4px">4 px</span><p>Поля, чекбоксы, теги</p></div><div class="radius-sample"><span style="border-radius:10px">10 px</span><p>Кнопки</p></div></div>
+      <div class="grid-sample">{[1,2,3].map(n => <div><span>{String(n).padStart(2,'0')}</span><p>392 px</p></div>)}</div><p class="kit-note">Сетка 1224 px: три колонки по 392 px и два интервала по 24 px.</p>
+    </section>
+    <section id="buttons" class="kit-section" aria-labelledby="button-title">
+      <div class="kit-section__intro"><p class="kit-eyebrow">04 / КНОПКИ</p><h2 id="button-title">Одно действие. Все состояния.</h2><p>Наведите курсор, нажмите кнопку или перейдите к ней клавишей Tab.</p></div>
+      <div class="button-matrix"><div></div>{['Обычное','Наведение','Нажатие','Недоступно'].map(label => <span class="sample-label">{label}</span>)}
+        {(['solid','outline'] as const).map(variant => <><strong>{variant === 'solid' ? 'Основная' : 'Контурная'}</strong>{states.map(state => <div><Button variant={variant} disabled={state === 'disabled'} data-demo-state={state} data-demo-action="true">Оставить заявку</Button></div>)}</>)}
+        <strong>С иконкой</strong>{states.map(state => <div><Button arrow disabled={state === 'disabled'} data-demo-state={state} data-demo-action="true">Оставить заявку</Button></div>)}
+        <strong>Ссылка</strong>{states.map(state => <div><Button variant="text" href="#fields" disabled={state === 'disabled'} data-demo-state={state}>О нас</Button></div>)}
+      </div>
+      <p id="button-feedback" class="kit-feedback" role="status" aria-live="polite">Кнопки здесь демонстрационные: заявка не отправляется.</p>
+    </section>
+    <section id="fields" class="kit-section" aria-labelledby="fields-title">
+      <div class="kit-section__intro"><p class="kit-eyebrow">05 / ВВОД ДАННЫХ</p><h2 id="fields-title">Поля и согласие</h2><p>Высота поля — 52 px. Фокус, заполнение, ошибка и недоступное состояние.</p></div>
+      <div class="field-grid"><div class="field-demo"><span class="sample-label">Имя / обычное</span><TextField id="demo-name" name="demo-name" label="Ваше имя" required /></div><div class="field-demo"><span class="sample-label">Телефон / обычное</span><TextField id="demo-phone" name="demo-phone" label="Ваш номер телефона" type="tel" autocomplete="tel" required /></div><div class="field-demo"><span class="sample-label">Заполнено</span><TextField id="demo-filled" name="demo-filled" label="Ваше имя" value="Александр" /></div><div class="field-demo"><span class="sample-label">Ошибка</span><TextField id="demo-error" name="demo-error" label="Ваш номер телефона" type="tel" value="+375" error="Проверьте номер телефона." /></div><div class="field-demo"><span class="sample-label">Недоступно</span><TextField id="demo-disabled" name="demo-disabled" label="Ваше имя" disabled /></div><div class="field-demo check-demo"><Checkbox id="check-default" name="check-default">Согласен на обработку персональных данных</Checkbox><Checkbox id="check-selected" name="check-selected" checked>Выбранное состояние</Checkbox><Checkbox id="check-disabled" name="check-disabled" checked disabled>Недоступное выбранное состояние</Checkbox></div></div>
+      <details class="form-demo"><summary>Проверить сборку формы из компонентов</summary><div><LeadForm id="ui-kit-lead" source="ui-kit" /></div></details>
+    </section>
+    <section class="kit-section" aria-labelledby="badges-title">
+      <div class="kit-section__intro"><p class="kit-eyebrow">06 / МЕТКИ</p><h2 id="badges-title">Статусы и короткие акценты</h2><p>Образцы интерфейса, без привязки к наличию конкретной модели.</p></div>
+      <div class="badge-row"><StatusBadge status="stock" /><StatusBadge status="order" /><StatusBadge status="offer" /><StatusBadge status="soon" /></div><div class="badge-row"><Badge>Интервал: 1 час</Badge><Badge variant="price">Обсуждается дополнительно</Badge></div>
+    </section>
+    <section class="kit-section" aria-labelledby="section-title">
+      <div class="kit-section__intro"><p class="kit-eyebrow">07 / ЗАГОЛОВОК СЕКЦИИ</p><h2 id="section-title">Переиспользуемая композиция</h2></div>
+      <div class="heading-sample"><SectionHeading eyebrow="НАША ТЕХНИКА" title="Квадроциклы для ваших задач" /></div>
+    </section>
+    <section id="faq" class="kit-section" aria-labelledby="faq-title">
+      <div class="kit-section__intro"><p class="kit-eyebrow">08 / РАСКРЫВАЮЩИЙСЯ БЛОК</p><h2 id="faq-title">FAQ: внешний вид и поведение</h2><p>Это демонстрация компонента. Финальные вопросы и ответы добавим при сборке главной.</p></div>
+      <div class="faq-stack"><FaqItem question="Как работает раскрытие ответа?" group="ui-kit">Нажмите на вопрос или используйте Enter либо пробел с клавиатуры. При открытии следующего вопроса предыдущий закрывается.</FaqItem><FaqItem question="Можно ли заменить текст без изменения оформления?" group="ui-kit">Да. Вопрос и ответ передаются компоненту отдельно. Общие цвета, типографика и отступы остаются едиными для всех экземпляров.</FaqItem></div>
+    </section>
+    <footer class="kit-footer"><p>Revolis.Мото / Desktop UI foundation</p><p>Следующий этап: карточки техники и банков → секции главной.</p><a href="#top">Наверх ↑</a></footer>
+  </main>
+</BaseLayout>
+<script>
+  document.querySelectorAll<HTMLElement>('[data-demo-action]').forEach(button => button.addEventListener('click', () => {
+    document.getElementById('button-feedback')!.textContent = 'Нажатие обработано. Данные никуда не отправляются.';
+  }));
+</script>
+<style>
+  .kit-header { display: flex; align-items: center; justify-content: space-between; height: 88px; }
+  .kit-brand { font-size: 26px; font-weight: 800; letter-spacing: -1px; text-decoration: none; }
+  .kit-brand span { color: var(--color-purple); font-size: 16px; margin-left: 4px; letter-spacing: -.3px; }
+  nav { display: flex; gap: 28px; font-size: 14px; }
+  nav a { text-decoration: none; }
+  nav a:hover { color: var(--color-purple); }
+  .kit-version, .kit-eyebrow, .sample-label { font-size: 12px; font-weight: 600; letter-spacing: .035em; color: var(--color-gray-4); }
+  .kit-intro { border-top: 1px solid var(--color-gray-2); border-bottom: 1px solid var(--color-gray-2); padding: 64px 0; display: flex; justify-content: space-between; align-items: flex-end; }
+  .kit-intro h1 { font-size: 64px; line-height: 1.06; font-weight: 700; letter-spacing: -.045em; margin: 24px 0; }
+  .kit-intro h1 span { color: var(--color-purple); }
+  .kit-intro__description { font-size: 18px; line-height: 1.4; color: var(--color-gray-5); }
+  .kit-intro__facts { padding: 28px 32px; background: var(--color-gray-1); width: 308px; }
+  .kit-intro__facts > span { color: var(--color-purple); font-size: 80px; line-height: 1; font-weight: 600; }
+  .kit-intro__facts p { margin: 20px 0 28px; font-size: 14px; line-height: 1.8; }
+  .kit-intro__facts a { font-size: 12px; color: var(--color-purple); }
+  .kit-section { padding-block: 64px; border-bottom: 1px solid var(--color-gray-2); scroll-margin-top: 32px; }
+  .kit-section__intro { margin-bottom: 32px; }
+  .kit-section__intro h2 { font-size: 32px; font-weight: 600; margin-top: 12px; line-height: 1.2; }
+  .kit-section__intro > p:last-child:not(:first-child) { margin-top: 12px; color: var(--color-gray-4); font-size: 14px; }
+  .color-grid { display: grid; grid-template-columns: repeat(10, 1fr); gap: 16px; }
+  .color-sample > div { height: 88px; border: 1px solid #0d0d0d0d; margin-bottom: 12px; }
+  .color-sample strong { font-size: 12px; display: block; }
+  code { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 12px; font-weight: 400; letter-spacing: 0; }
+  .color-sample code { display: block; margin-top: 6px; color: var(--color-gray-4); }
+  .display-sample { background: var(--color-gray-1); padding: 32px; margin-bottom: 24px; }
+  .display-sample > p { margin-top: 24px; color: #000; }
+  .display-sample > p > span { color: var(--color-purple); }
+  .type-row { display: grid; grid-template-columns: 240px 1fr; gap: 32px; align-items: baseline; padding: 20px 0; border-bottom: 1px solid var(--color-gray-2); }
+  .type-row code { color: var(--color-gray-4); }
+  .kit-note { font-size: 12px; color: var(--color-gray-4); margin-top: 20px; line-height: 1.5; }
+  .geometry { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; align-items: center; }
+  .spacing-list { display: flex; flex-wrap: wrap; gap: 16px 24px; }
+  .spacing-list > div { display: flex; gap: 12px; align-items: center; min-width: 120px; }
+  .spacing-list code { width: 20px; }
+  .spacing-list span { height: 18px; background: var(--color-purple); }
+  .radius-sample span { display: grid; place-items: center; width: 100px; height: 72px; border: 1px solid var(--color-purple); color: var(--color-purple); }
+  .radius-sample p { font-size: 12px; margin-top: 12px; color: var(--color-gray-4); }
+  .grid-sample { display: grid; grid-template-columns: repeat(3,1fr); gap: var(--grid-gap); margin-top: 32px; }
+  .grid-sample > div { height: 100px; padding: 20px; background: var(--color-gray-1); display: flex; justify-content: space-between; align-items: center; }
+  .grid-sample span { font-size: 32px; font-weight: 600; color: var(--color-purple); }
+  .grid-sample p { font-size: 12px; color: var(--color-gray-4); }
+  .button-matrix { display: grid; grid-template-columns: 136px repeat(4, 1fr); gap: 28px 12px; align-items: center; }
+  .button-matrix > strong { font-size: 12px; font-weight: 500; color: var(--color-gray-4); }
+  .kit-feedback { font-size: 12px; margin-top: 32px; padding: 16px; background: var(--color-gray-1); color: var(--color-gray-5); }
+  .field-grid { display: grid; grid-template-columns: repeat(2,529px); justify-content: space-between; gap: 28px; }
+  .field-demo { display: flex; flex-direction: column; gap: 12px; }
+  .check-demo { gap: 16px; }
+  .form-demo { margin-top: 32px; font-size: 14px; }
+  .form-demo > summary { cursor: pointer; color: var(--color-purple); }
+  .form-demo > div { width: 529px; margin-top: 24px; padding: 24px; border: 1px solid var(--color-gray-2); }
+  .badge-row { display: flex; align-items: center; gap: 24px; margin-top: 24px; }
+  .heading-sample { padding-block: 32px; }
+  .faq-stack { display: flex; flex-direction: column; gap: 32px; }
+  .kit-footer { padding: 32px 0 48px; display: flex; justify-content: space-between; font-size: 12px; color: var(--color-gray-4); }
+</style>

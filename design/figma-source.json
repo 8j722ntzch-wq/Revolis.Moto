@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "fileKey": "JkXOsnFvWZmMab1VYjVQAJ",
+  "nodeId": "1:13203",
+  "url": "https://www.figma.com/design/JkXOsnFvWZmMab1VYjVQAJ/?node-id=1-13203",
+  "framework": "astro",
+  "scope": "desktop-homepage",
+  "status": "partial-ui-foundation",
+  "capturedAt": null,
+  "frame": {
+    "width": 1470,
+    "height": 6236
+  },
+  "sections": [],
+  "reviewViewports": [
+    1366,
+    1470,
+    1920
+  ],
+  "notes": [
+    "MCP access works; current page inventory and reusable component contexts received on 2026-10-21.",
+    "Current milestone: Desktop styles and reusable components before homepage layout.",
+    "Full homepage high-fidelity context and original asset inventory remain incomplete; sections are deliberately empty.",
+    "Historical PDF dimensions are not current implementation input."
+  ],
+  "pageNodeId": "1:15",
+  "foundationManifest": "design/ui-foundation.json",
+  "lastInspectedAt": "2026-10-21"
+}

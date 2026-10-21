@@ -1,0 +1,136 @@
+Figma MCP get_design_context — captured 2026-10-21.
+Read-only reference; not application code. Temporary download URLs replaced with opaque asset identifiers. Original SVG files are registered in design/ui-assets.json.
+
+type InputPhoneProps = {
+  className?: string;
+  device?: "Desktop" | "Mobile";
+  state?: "Default" | "Hover" | "Active" | "Focus" | "Filled" | "Error" | "Disabled";
+};
+
+export default function InputPhone({ className, device = "Desktop", state = "Default" }: InputPhoneProps) {
+  if (state === "Default" && device === "Mobile") {
+    return (
+      <button className={className || "bg-[var(--colors\\/grays\\/gray-1,#f1eef8)] block cursor-pointer h-[48px] overflow-clip relative rounded-[4px] w-[529px]"} data-node-id="1:7228" data-name="State=Default, Device=Mobile">
+        <p className="[word-break:break-word] absolute font-['Inter:Medium'] font-medium leading-[1.25] left-[17px] not-italic text-[14px] text-[color:var(--colors\/grays\/gray-4,#736f79)] text-left top-[calc(50%-9px)] tracking-[-0.28px] whitespace-nowrap" data-node-id="1:7229">
+          Ваш номер телефона*
+        </p>
+      </button>
+    );
+  }
+  if (state === "Error" && device === "Desktop") {
+    return (
+      <div className={className || "border border-[var(--colors\\/accents\\/red,#ef4435)] border-solid h-[52px] overflow-clip relative rounded-[4px] w-[529px]"} data-node-id="1:7230" data-name="State=Error, Device=Desktop">
+        <p className="[word-break:break-word] absolute font-['Inter:Medium'] font-medium leading-[1.25] left-[19px] not-italic text-[16px] text-[color:var(--colors\/accents\/red,#ef4435)] top-[calc(50%-10px)] tracking-[-0.32px] whitespace-nowrap" data-node-id="1:7231">
+          Ваш номер телефона
+        </p>
+      </div>
+    );
+  }
+  if (state === "Error" && device === "Mobile") {
+    return (
+      <div className={className || "border border-[var(--colors\\/accents\\/red,#ef4435)] border-solid h-[48px] overflow-clip relative rounded-[4px] w-[529px]"} data-node-id="1:7232" data-name="State=Error, Device=Mobile">
+        <p className="[word-break:break-word] absolute font-['Inter:Medium'] font-medium leading-[1.25] left-[16px] not-italic text-[14px] text-[color:var(--colors\/accents\/red,#ef4435)] top-[calc(50%-9px)] tracking-[-0.28px] whitespace-nowrap" data-node-id="1:7233">
+          Ваш номер телефона
+        </p>
+      </div>
+    );
+  }
+  if (state === "Disabled" && device === "Desktop") {
+    return (
+      <div className={className || "border border-[var(--colors\\/grays\\/gray-3,#c2bfc9)] border-solid h-[52px] overflow-clip relative rounded-[4px] w-[529px]"} data-node-id="1:7234" data-name="State=Disabled, Device=Desktop">
+        <p className="[word-break:break-word] absolute font-['Inter:Medium'] font-medium leading-[1.25] left-[19px] not-italic text-[16px] text-[color:var(--colors\/grays\/gray-3,#c2bfc9)] top-[calc(50%-10px)] tracking-[-0.32px] whitespace-nowrap" data-node-id="1:7235">
+          Ваш номер телефона
+        </p>
+      </div>
+    );
+  }
+  if (state === "Disabled" && device === "Mobile") {
+    return (
+      <div className={className || "border border-[var(--colors\\/grays\\/gray-3,#c2bfc9)] border-solid h-[48px] overflow-clip relative rounded-[4px] w-[529px]"} data-node-id="1:7236" data-name="State=Disabled, Device=Mobile">
+        <p className="[word-break:break-word] absolute font-['Inter:Medium'] font-medium leading-[1.25] left-[16px] not-italic text-[14px] text-[color:var(--colors\/grays\/gray-3,#c2bfc9)] top-[calc(50%-9px)] tracking-[-0.28px] whitespace-nowrap" data-node-id="1:7237">
+          Ваш номер телефона
+        </p>
+      </div>
+    );
+  }
+  if (state === "Hover" && device === "Desktop") {
+    return (
+      <button className={className || "bg-[var(--colors\\/grays\\/gray-1,#f1eef8)] block cursor-pointer h-[52px] overflow-clip relative rounded-[4px] w-[529px]"} data-node-id="1:7238" data-name="State=Hover, Device=Desktop">
+        <p className="[word-break:break-word] absolute font-['Inter:Medium'] font-medium leading-[1.25] left-[20px] not-italic text-[16px] text-[color:var(--colors\/black-\(monochrome\),#010101)] text-left top-[calc(50%-10px)] tracking-[-0.32px] whitespace-nowrap" data-node-id="1:7239">
+          +375 __-___-__-__
+        </p>
+      </button>
+    );
+  }
+  if (state === "Active" && device === "Desktop") {
+    return (
+      <div className={className || "bg-[var(--colors\\/grays\\/gray-1,#f1eef8)] h-[52px] overflow-clip relative rounded-[4px] w-[529px]"} data-node-id="1:7240" data-name="State=Active, Device=Desktop">
+        <p className="[word-break:break-word] absolute font-['Inter:Medium'] font-medium leading-[1.25] left-[20px] not-italic text-[16px] text-[color:var(--colors\/black-\(monochrome\),#010101)] top-[calc(50%-10px)] tracking-[-0.32px] whitespace-nowrap" data-node-id="1:7241">
+          +375 |__-___-__-__
+        </p>
+      </div>
+    );
+  }
+  if (state === "Active" && device === "Mobile") {
+    return (
+      <div className={className || "bg-[var(--colors\\/grays\\/gray-1,#f1eef8)] h-[48px] overflow-clip relative rounded-[4px] w-[529px]"} data-node-id="1:7242" data-name="State=Active, Device=Mobile">
+        <p className="[word-break:break-word] absolute font-['Inter:Medium'] font-medium leading-[1.25] left-[17px] not-italic text-[14px] text-[color:var(--colors\/black-\(monochrome\),#010101)] top-[calc(50%-9px)] tracking-[-0.28px] whitespace-nowrap" data-node-id="1:7243">
+          +375 |__-___-__-__
+        </p>
+      </div>
+    );
+  }
+  if (state === "Focus" && device === "Desktop") {
+    return (
+      <div className={className || "bg-[var(--colors\\/grays\\/gray-1,#f1eef8)] h-[52px] overflow-clip relative rounded-[4px] w-[529px]"} data-node-id="1:7244" data-name="State=Focus, Device=Desktop">
+        <p className="[word-break:break-word] absolute font-['Inter:Medium'] font-medium leading-[1.25] left-[20px] not-italic text-[16px] text-[color:var(--colors\/black-\(monochrome\),#010101)] top-[calc(50%-10px)] tracking-[-0.32px] whitespace-nowrap" data-node-id="1:7245">
+          +375 29-62|_-__-__
+        </p>
+      </div>
+    );
+  }
+  if (state === "Focus" && device === "Mobile") {
+    return (
+      <div className={className || "bg-[var(--colors\\/grays\\/gray-1,#f1eef8)] h-[48px] overflow-clip relative rounded-[4px] w-[529px]"} data-node-id="1:7246" data-name="State=Focus, Device=Mobile">
+        <p className="[word-break:break-word] absolute font-['Inter:Medium'] font-medium leading-[1.25] left-[17px] not-italic text-[14px] text-[color:var(--colors\/black-\(monochrome\),#010101)] top-[calc(50%-9px)] tracking-[-0.28px] whitespace-nowrap" data-node-id="1:7247">
+          +375 29-62|_-__-__
+        </p>
+      </div>
+    );
+  }
+  if (state === "Filled" && device === "Desktop") {
+    return (
+      <div className={className || "border border-[var(--colors\\/accents\\/purple,#7c33fb)] border-solid h-[52px] overflow-clip relative rounded-[4px] w-[529px]"} data-node-id="1:7248" data-name="State=Filled, Device=Desktop">
+        <p className="[word-break:break-word] absolute font-['Inter:Medium'] font-medium leading-[1.25] left-[19px] not-italic text-[16px] text-[color:var(--colors\/black-\(monochrome\),#010101)] top-[calc(50%-10px)] tracking-[-0.32px] whitespace-nowrap" data-node-id="1:7249">
+          +375 29-624-12-34
+        </p>
+      </div>
+    );
+  }
+  if (state === "Filled" && device === "Mobile") {
+    return (
+      <div className={className || "border border-[var(--colors\\/accents\\/purple,#7c33fb)] border-solid h-[48px] overflow-clip relative rounded-[4px] w-[529px]"} data-node-id="1:7250" data-name="State=Filled, Device=Mobile">
+        <p className="[word-break:break-word] absolute font-['Inter:Medium'] font-medium leading-[1.25] left-[16px] not-italic text-[14px] text-[color:var(--colors\/black-\(monochrome\),#010101)] top-[calc(50%-9px)] tracking-[-0.28px] whitespace-nowrap" data-node-id="1:7251">
+          +375 29-624-12-34
+        </p>
+      </div>
+    );
+  }
+  return (
+    <div className={className || "bg-[var(--colors\\/grays\\/gray-1,#f1eef8)] h-[52px] overflow-clip relative rounded-[4px] w-[529px]"} data-node-id="1:7226" data-name="State=Default, Device=Desktop">
+      <p className="[word-break:break-word] absolute font-['Inter:Medium'] font-medium leading-[1.25] left-[20px] not-italic text-[16px] text-[color:var(--colors\/grays\/gray-4,#736f79)] top-[calc(50%-10px)] tracking-[-0.32px] whitespace-nowrap" data-node-id="1:7227">
+        Ваш номер телефона*
+      </p>
+    </div>
+  );
+}
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+These styles are contained in the design: P2 — 16 (P1 Mobile): Font(family: "Inter", style: Medium, size: 16, weight: 500, lineHeight: 1.25, letterSpacing: -2), P3 — 14 (P2 Mobile): Font(family: "Inter", style: Medium, size: 14, weight: 500, lineHeight: 1.25, letterSpacing: -2).
+The generated code contains image and SVG URL constants, e.g. const image = 'figma-asset:550e8400-e29b-41d4-a716-446655440000.png'. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.

@@ -1,0 +1,78 @@
+---
+import type { LeadIntent } from '../lib/leads';
+import Button from './ui/Button.astro';
+import TextField from './ui/TextField.astro';
+import Checkbox from './ui/Checkbox.astro';
+interface Props {
+  id: string;
+  intent?: LeadIntent;
+  source: string;
+  modelId?: string;
+  bank?: 'alfa' | 'technobank';
+  policyUrl?: string;
+}
+const { id, intent = 'consultation', source, modelId, bank, policyUrl } = Astro.props;
+const endpoint = import.meta.env.PUBLIC_LEAD_ENDPOINT ?? '';
+const ready = Boolean(endpoint && policyUrl);
+---
+<form class="lead-form" data-lead-form data-endpoint={endpoint} data-intent={intent} data-source={source} data-model-id={modelId} data-bank={bank}>
+  <TextField id={`${id}-name`} name="name" label="Ваше имя" autocomplete="given-name" maxlength={80} required />
+  <TextField id={`${id}-phone`} name="phone" label="Ваш номер телефона" type="tel" autocomplete="tel" maxlength={30} required />
+  <Checkbox id={`${id}-consent`} name="consent" required>
+    Согласен на обработку персональных данных
+    {policyUrl && <a href={policyUrl} target="_blank" rel="noopener">по условиям политики</a>}
+  </Checkbox>
+  <Button type="submit" disabled={!ready}>Получить консультацию</Button>
+  <p data-form-status role="status" aria-live="polite">{!ready && 'Отправка заявок пока недоступна.'}</p>
+  <noscript>Для отправки формы включите JavaScript в браузере.</noscript>
+</form>
+<style>
+  .lead-form { display: flex; flex-direction: column; align-items: stretch; gap: var(--space-16); }
+  [data-form-status] { font-size: var(--text-small); line-height: var(--leading-body); color: var(--color-text-muted); }
+</style>
+<script>
+  import { isValidPhone, normalizePhone, submitLead } from '../lib/leads';
+  import type { LeadIntent } from '../lib/leads';
+
+  document.querySelectorAll<HTMLFormElement>('[data-lead-form]').forEach((form) => {
+    const status = form.querySelector<HTMLElement>('[data-form-status]')!;
+    const submit = form.querySelector<HTMLButtonElement>('button[type="submit"]')!;
+    const phone = form.elements.namedItem('phone') as HTMLInputElement;
+    const name = form.elements.namedItem('name') as HTMLInputElement;
+    phone.addEventListener('input', () => phone.setCustomValidity(''));
+    name.addEventListener('input', () => name.setCustomValidity(''));
+    let submitting = false;
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (submitting || submit.disabled) return;
+      name.setCustomValidity(name.value.trim() ? '' : 'Укажите ваше имя.');
+      phone.setCustomValidity(isValidPhone(phone.value) ? '' : 'Проверьте номер телефона.');
+      if (!form.reportValidity()) return;
+      submitting = true;
+      submit.disabled = true;
+      form.setAttribute('aria-busy', 'true');
+      status.textContent = 'Отправляем заявку…';
+      try {
+        const bank = form.dataset.bank;
+        await submitLead(form.dataset.endpoint ?? '', {
+          name: name.value.trim(),
+          phone: normalizePhone(phone.value),
+          consent: true,
+          intent: form.dataset.intent as LeadIntent,
+          source: form.dataset.source ?? '',
+          ...(form.dataset.modelId ? { modelId: form.dataset.modelId } : {}),
+          ...(bank === 'alfa' || bank === 'technobank' ? { bank } : {}),
+        });
+        status.textContent = 'Спасибо! Ваша заявка получена.';
+        form.reset();
+      } catch {
+        status.textContent = 'Заявка не отправлена. Попробуйте ещё раз.';
+      } finally {
+        submitting = false;
+        submit.disabled = false;
+        form.removeAttribute('aria-busy');
+      }
+    });
+  });
+</script>

@@ -1,0 +1,40 @@
+---
+import LeadForm from './LeadForm.astro';
+interface Props { id?: string; policyUrl?: string; }
+const { id = 'lead-dialog', policyUrl } = Astro.props;
+---
+<dialog id={id} data-lead-dialog aria-labelledby={`${id}-title`}>
+  <button type="button" data-close-dialog aria-label="Закрыть окно">Закрыть</button>
+  <h2 id={`${id}-title`}>Поможем подобрать квадроцикл</h2>
+  <LeadForm id={`${id}-form`} source="dialog" policyUrl={policyUrl} />
+</dialog>
+<script>
+  import type { LeadIntent } from '../lib/leads';
+  const intents: LeadIntent[] = ['consultation', 'model', 'finance', 'test-drive'];
+  document.querySelectorAll<HTMLDialogElement>('[data-lead-dialog]').forEach((dialog) => {
+    let trigger: HTMLElement | null = null;
+    document.querySelectorAll<HTMLElement>('[data-open-lead]').forEach((button) => {
+      if (button.dataset.openLead !== dialog.id) return;
+      button.addEventListener('click', () => {
+        const form = dialog.querySelector<HTMLFormElement>('[data-lead-form]')!;
+        if (form.getAttribute('aria-busy') === 'true') {
+          dialog.showModal();
+          return;
+        }
+        const intent = button.dataset.intent as LeadIntent;
+        form.dataset.intent = intents.includes(intent) ? intent : 'consultation';
+        form.dataset.source = button.dataset.source ?? 'dialog';
+        form.dataset.modelId = button.dataset.modelId ?? '';
+        form.dataset.bank = button.dataset.bank ?? '';
+        trigger = button;
+        dialog.showModal();
+      });
+    });
+    dialog.querySelector('[data-close-dialog]')?.addEventListener('click', () => dialog.close());
+    dialog.addEventListener('click', (event) => {
+      const bounds = dialog.getBoundingClientRect();
+      if (event.target === dialog && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) dialog.close();
+    });
+    dialog.addEventListener('close', () => trigger?.focus());
+  });
+</script>

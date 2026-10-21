@@ -1,0 +1,18 @@
+@import './tokens.css';
+@import './typography.css';
+@import './ui.css';
+
+*, *::before, *::after { box-sizing: border-box; }
+html { color-scheme: light; background: var(--color-bg); }
+body { margin: 0; font-family: var(--font-family); font-size: var(--text-body); font-weight: var(--font-medium); line-height: var(--leading-body); letter-spacing: var(--tracking); color: var(--color-text); }
+h1, h2, h3, h4, h5, h6, p { margin: 0; }
+button, input, textarea, select { font: inherit; letter-spacing: inherit; }
+button, a, input, summary { -webkit-tap-highlight-color: transparent; }
+button { cursor: pointer; }
+button:disabled { cursor: not-allowed; }
+a { color: inherit; }
+button, input { margin: 0; }
+:focus-visible { outline: var(--focus-width) solid var(--color-purple); outline-offset: var(--focus-offset); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+.container { width: min(var(--container-width), calc(100% - 64px)); margin-inline: auto; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: 0.01ms !important; scroll-behavior: auto !important; } }

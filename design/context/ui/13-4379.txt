@@ -1,0 +1,38 @@
+Figma MCP get_design_context — captured 2026-10-21.
+Read-only reference; not application code. Temporary download URLs replaced with opaque asset identifiers. Original SVG files are registered in design/ui-assets.json.
+
+const imgEllipse21 = "figma-asset:d03385e2-c5fd-415f-ada9-d566e8659979.svg";
+const imgEllipse22 = "figma-asset:8ee0aa54-f93c-45aa-9318-e7ea88e6b14e.svg";
+const imgEllipse23 = "figma-asset:43a2bdb7-07aa-4fe2-afae-dbefbdad8595.svg";
+const imgEllipse24 = "figma-asset:890d98b3-27a6-4fec-ba87-e60bc88a7087.svg";
+
+type ElementPricingTagProps = {
+  className?: string;
+  icon?: "Скоро в продаже" | "В наличии" | "Под заказ" | "Специальное предложение";
+};
+
+export default function ElementPricingTag({ className, icon = "В наличии" }: ElementPricingTagProps) {
+  const is = icon === "Под заказ";
+  const is1 = icon === "Специальное предложение";
+  const is2 = icon === "Скоро в продаже";
+  return (
+    <div className={className || `${String.raw`content-stretch flex gap-[var(--spacings\/content-\(8\),8px)] items-center justify-center px-[8px] py-[4px] relative rounded-[4px] `}${is2 ? "bg-[rgba(17,91,240,0.2)]" : is1 ? String.raw`bg-[var(--purple-\(transparent\),rgba(124,51,251,0.2))]` : is ? "bg-[rgba(194,191,201,0.2)]" : "bg-[rgba(7,160,56,0.2)]"}`} id={is2 ? "node-13_4394" : is1 ? "node-13_4390" : is ? "node-13_4386" : "node-13_4380"}>
+      <div className="relative shrink-0 size-[8px]" id={is2 ? "node-13_4401" : is1 ? "node-13_4400" : is ? "node-13_4399" : "node-13_4397"}>
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={is2 ? imgEllipse24 : is1 ? imgEllipse23 : is ? imgEllipse22 : imgEllipse21} />
+      </div>
+      <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.2] not-italic relative shrink-0 text-[12px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.24px] whitespace-nowrap" id={is2 ? "node-13_4395" : is1 ? "node-13_4391" : is ? "node-13_4387" : "node-13_4381"}>
+        {is2 ? "Скоро в продаже" : is1 ? "Специальное предложение" : is ? "Под заказ" : "В наличии"}
+      </p>
+    </div>
+  );
+}
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+These styles are contained in the design: Superscript — 12: Font(family: "Inter", style: Semi Bold, size: 12, weight: 600, lineHeight: 1.2000000476837158, letterSpacing: -2).
+The generated code contains image and SVG URL constants, e.g. const image = 'figma-asset:550e8400-e29b-41d4-a716-446655440000.png'. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.
