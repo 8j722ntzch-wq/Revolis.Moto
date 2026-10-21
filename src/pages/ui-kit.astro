@@ -8,6 +8,7 @@ import SectionHeading from '../components/ui/SectionHeading.astro';
 import FaqItem from '../components/FaqItem.astro';
 import LeadForm from '../components/LeadForm.astro';
 import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
 import { headerLinks, headerPhone } from '../data/navigation';
 import BankCard from '../components/BankCard.astro';
 import { bankCardsReference } from '../data/finance';
@@ -44,7 +45,7 @@ const states = ['default', 'hover', 'pressed', 'disabled'] as const;
 <BaseLayout title="Revolis.Мото — стили и компоненты" description="Рабочая библиотека Desktop-компонентов на основе проекта Figma.">
   <header class="kit-header container">
     <a class="kit-brand" href="#top">revolis<span>.Мото</span></a>
-    <nav aria-label="Разделы библиотеки"><a href="#tokens">Стили</a><a href="#buttons">Кнопки</a><a href="#fields">Формы</a><a href="#faq">FAQ</a><a href="#model-cards">Техника</a><a href="#bank-cards">Банки</a><a href="#site-header">Шапка</a></nav>
+    <nav aria-label="Разделы библиотеки"><a href="#tokens">Стили</a><a href="#buttons">Кнопки</a><a href="#fields">Формы</a><a href="#faq">FAQ</a><a href="#model-cards">Техника</a><a href="#bank-cards">Банки</a><a href="#site-header">Шапка</a><a href="#site-footer">Футер</a></nav>
     <span class="kit-version">Desktop · UI foundation / 05</span>
   </header>
   <main id="top" class="container">
@@ -120,10 +121,18 @@ const states = ['default', 'hover', 'pressed', 'disabled'] as const;
       <p id="header-feedback" class="kit-feedback" role="status" aria-live="polite">Кнопка демонстрационная: заявка не отправляется.</p>
       <div class="header-demo-notes"><div id="header-about" tabindex="-1"><h3>О нас · цель ссылки</h3><p>Здесь проверяем навигацию шапки. Секцию о компании соберём на следующем этапе.</p></div><div id="header-contacts" tabindex="-1"><h3>Контакты · цель ссылки</h3><p>Телефон из макета: <a href={headerPhone.href}>{headerPhone.label}</a>.</p></div></div>
     </section>
-    <footer class="kit-footer"><p>Revolis.Мото / Desktop UI foundation</p><p>Следующий этап: диалоги и Footer → секции главной.</p><a href="#top">Наверх ↑</a></footer>
+    <section id="site-footer" class="kit-section" aria-labelledby="site-footer-title">
+      <div class="kit-section__intro"><p class="kit-eyebrow">12 / ФУТЕР САЙТА</p><h2 id="site-footer-title">SiteFooter: Desktop</h2><p>Адрес, график и реквизиты перенесены из Figma. Ссылки на карты, соцсети и политики пока не предоставлены.</p></div>
+      <div class="footer-showcase"><SiteFooter links={headerDemoLinks} demoAction /></div>
+      <p id="footer-feedback" class="kit-feedback" role="status" aria-live="polite">Навигация и возврат наверх работают. Остальные кнопки без адресов показывают пояснение.</p>
+    </section>
+    <footer class="kit-footer"><p>Revolis.Мото / Desktop UI foundation</p><p>Следующий этап: секции главной; диалоги — после проверки наличия дизайна.</p><a href="#top">Наверх ↑</a></footer>
   </main>
 </BaseLayout>
 <script>
+  document.querySelectorAll<HTMLElement>('[data-footer-missing]').forEach(button => button.addEventListener('click', () => {
+    document.getElementById('footer-feedback')!.textContent = `${button.dataset.footerMissing}: ссылка пока не предоставлена. Подключим подтверждённый адрес перед публикацией.`;
+  }));
   document.querySelectorAll<HTMLElement>('[data-demo-action]').forEach(button => button.addEventListener('click', () => {
     document.getElementById('button-feedback')!.textContent = 'Нажатие обработано. Данные никуда не отправляются.';
   }));
@@ -202,5 +211,6 @@ const states = ['default', 'hover', 'pressed', 'disabled'] as const;
   .header-showcase :global(.site-header__inner) { width: 100%; }
   .header-demo-notes { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 24px; font-size: 14px; color: var(--color-gray-4); }
   .header-demo-notes h3 { font-size: 14px; color: var(--color-black); margin-bottom: 8px; }
+  .footer-showcase :global(.site-footer__inner) { width: 100%; }
   .kit-footer { padding: 32px 0 48px; display: flex; justify-content: space-between; font-size: 12px; color: var(--color-gray-4); }
 </style>

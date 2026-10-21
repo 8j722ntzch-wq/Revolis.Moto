@@ -77,6 +77,13 @@
       "implementation": "src/components/SiteHeader.astro",
       "contextFile": "design/context/ui/1-8464.txt",
       "detailManifest": "design/site-header.json"
+    },
+    {
+      "name": "SiteFooter",
+      "nodeId": "1:8514",
+      "implementation": "src/components/SiteFooter.astro",
+      "contextFile": "design/context/ui/1-8514.txt",
+      "detailManifest": "design/site-footer.json"
     }
   ],
   "foundations": [
@@ -212,7 +219,7 @@
       "Lead backend not connected."
     ],
     "astroCheck": {
-      "files": 24,
+      "files": 26,
       "errors": 0,
       "warnings": 0,
       "hints": 0
@@ -235,13 +242,7 @@
       "phonePartialMask": "visually verified"
     }
   },
-  "nextComponents": [
-    {
-      "name": "SiteFooter",
-      "nodeId": "1:8514",
-      "status": "not-implemented"
-    }
-  ],
+  "nextComponents": [],
   "audit": {
     "date": "2026-10-21",
     "reason": "Reconcile user cleanup in Figma",
@@ -267,6 +268,7 @@
   "compositeVerification": [
     "design/model-card.json",
     "design/bank-card.json",
-    "design/site-header.json"
+    "design/site-header.json",
+    "design/site-footer.json"
   ]
 }

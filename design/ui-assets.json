@@ -637,6 +637,153 @@
         "top": 0
       },
       "transfer": "Figma Plugin API exportAsync(SVG_STRING); whole original logo instance, unmodified; painted overflow retained."
+    },
+    {
+      "id": "map-yandex",
+      "nodeId": "1:8544",
+      "kind": "exported-svg",
+      "localPath": "public/assets/footer/map-yandex.svg",
+      "slots": [
+        {
+          "nodeId": "1:8544",
+          "sectionNodeId": "1:8514"
+        }
+      ],
+      "callsites": [
+        "src/components/SiteFooter.astro"
+      ],
+      "intrinsic": {
+        "width": "18",
+        "height": "18",
+        "viewBox": "0 0 18 18"
+      },
+      "transfer": "Figma Plugin API SVG_STRING; whole original icon, unmodified"
+    },
+    {
+      "id": "map-google",
+      "nodeId": "1:8547",
+      "kind": "exported-svg",
+      "localPath": "public/assets/footer/map-google.svg",
+      "slots": [
+        {
+          "nodeId": "1:8547",
+          "sectionNodeId": "1:8514"
+        }
+      ],
+      "callsites": [
+        "src/components/SiteFooter.astro"
+      ],
+      "intrinsic": {
+        "width": "18",
+        "height": "18",
+        "viewBox": "0 0 18 18"
+      },
+      "transfer": "Figma Plugin API SVG_STRING; whole original icon, unmodified"
+    },
+    {
+      "id": "arrow-up",
+      "nodeId": "I106:4505;1:7011",
+      "kind": "exported-svg",
+      "localPath": "public/assets/footer/arrow-up.svg",
+      "slots": [
+        {
+          "nodeId": "I106:4505;1:7011",
+          "sectionNodeId": "1:8514"
+        }
+      ],
+      "callsites": [
+        "src/components/SiteFooter.astro"
+      ],
+      "intrinsic": {
+        "width": "16",
+        "height": "16",
+        "viewBox": "0 0 16 16"
+      },
+      "transfer": "Figma Plugin API SVG_STRING; whole original icon, unmodified"
+    },
+    {
+      "id": "social-telegram",
+      "nodeId": "I108:4689;108:4672",
+      "kind": "exported-svg",
+      "localPath": "public/assets/footer/social-telegram.svg",
+      "slots": [
+        {
+          "nodeId": "I108:4689;108:4672",
+          "sectionNodeId": "1:8514"
+        }
+      ],
+      "callsites": [
+        "src/components/SiteFooter.astro"
+      ],
+      "intrinsic": {
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      },
+      "transfer": "Figma Plugin API SVG_STRING; whole original icon, unmodified"
+    },
+    {
+      "id": "social-youtube",
+      "nodeId": "I108:4694;108:4672",
+      "kind": "exported-svg",
+      "localPath": "public/assets/footer/social-youtube.svg",
+      "slots": [
+        {
+          "nodeId": "I108:4694;108:4672",
+          "sectionNodeId": "1:8514"
+        }
+      ],
+      "callsites": [
+        "src/components/SiteFooter.astro"
+      ],
+      "intrinsic": {
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      },
+      "transfer": "Figma Plugin API SVG_STRING; whole original icon, unmodified"
+    },
+    {
+      "id": "social-instagram",
+      "nodeId": "I108:4684;108:4672",
+      "kind": "exported-svg",
+      "localPath": "public/assets/footer/social-instagram.svg",
+      "slots": [
+        {
+          "nodeId": "I108:4684;108:4672",
+          "sectionNodeId": "1:8514"
+        }
+      ],
+      "callsites": [
+        "src/components/SiteFooter.astro"
+      ],
+      "intrinsic": {
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      },
+      "transfer": "Figma Plugin API SVG_STRING; whole original icon, unmodified"
+    },
+    {
+      "id": "social-instagram-hover",
+      "nodeId": "108:4680",
+      "kind": "exported-svg",
+      "localPath": "public/assets/footer/social-instagram-hover.svg",
+      "slots": [
+        {
+          "nodeId": "108:4680",
+          "sectionNodeId": "108:4679"
+        }
+      ],
+      "callsites": [
+        "src/components/SiteFooter.astro"
+      ],
+      "intrinsic": {
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      },
+      "transfer": "Figma Plugin API SVG_STRING; whole original icon, unmodified"
     }
   ],
   "verifiedAt": "2026-10-21"
