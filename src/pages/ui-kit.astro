@@ -1,4 +1,5 @@
 ---
+import PopupShowcase from '../components/PopupShowcase.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Button from '../components/ui/Button.astro';
 import TextField from '../components/ui/TextField.astro';
@@ -126,8 +127,9 @@ const states = ['default', 'hover', 'pressed', 'disabled'] as const;
       <div class="footer-showcase"><SiteFooter links={headerDemoLinks} demoAction /></div>
       <p id="footer-feedback" class="kit-feedback" role="status" aria-live="polite">Навигация и возврат наверх работают. Остальные кнопки без адресов показывают пояснение.</p>
     </section>
-    <footer class="kit-footer"><p>Revolis.Мото / Desktop UI foundation</p><p>Следующий этап: секции главной; диалоги — после проверки наличия дизайна.</p><a href="#top">Наверх ↑</a></footer>
-  </main>
+    <footer class="kit-footer"><p>Revolis.Мото / Desktop UI foundation</p><p>Главная и диалоги собраны. Приём заявок подключим отдельным этапом.</p><a href="#top">Наверх ↑</a></footer>
+  <PopupShowcase />
+</main>
 </BaseLayout>
 <script>
   document.querySelectorAll<HTMLElement>('[data-footer-missing]').forEach(button => button.addEventListener('click', () => {

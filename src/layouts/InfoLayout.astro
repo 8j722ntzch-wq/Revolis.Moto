@@ -11,7 +11,7 @@ const { title, description, pageClass } = Astro.props;
 ---
 <BaseLayout title={title} description={description}>
   <div id="top" class:list={['homepage mobile-ui info-page', pageClass]}>
-    <SiteHeader homeHref="/" actionHref="/contacts/" /><MobileHeader homeHref="/" actionHref="/contacts/" />
+    <SiteHeader homeHref="/" dialogId="lead-dialog" /><MobileHeader homeHref="/" dialogId="lead-dialog" />
     <main><slot /></main>
     <div id="contacts"><SiteFooter /></div>
   </div>

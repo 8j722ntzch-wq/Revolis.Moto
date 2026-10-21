@@ -25,7 +25,7 @@ Contacts, privacy and custom 404 Desktop/Mobile are implemented (2026-10-21). Re
 
 Catalogue Desktop/Mobile assembly was authorized and implemented on 2026-10-21 at /models/. Read docs/catalogue.md and design/catalogue.json for fresh Figma targets, brand filtering, asset provenance and unresolved status differences. Model detail pages remain deferred.
 
-Current milestone (2026-10-21): the user has explicitly authorized assembly of the Desktop homepage from `Main (Desktop)_1470 px` (1:13203). Reuse the reviewed styles and components from `/ui-kit/`. Dialogs are deferred until the user adds their Figma designs. This authorization covers implementation and source updates in development, not website deployment.
+Current milestone (2026-10-21): the user has explicitly authorized assembly of the Desktop homepage from `Main (Desktop)_1470 px` (1:13203). Reuse the reviewed styles and components from `/ui-kit/`. Desktop/Mobile consultation, bank and thank-you dialogs are implemented; read docs/popups.md and design/popups.json. The user deferred delivery integration and will supply the personal-data policy as a PDF. This authorization covers implementation and source updates in development, not website deployment.
 
 Build the desktop homepage in Astro with CSS and small TypeScript modules. Mobile homepage assembly was also authorized and implemented on 2026-10-21; see docs/mobile-home.md. Model detail pages are a later milestone. Preserve the original design rather than applying previous UX suggestions automatically.
 

@@ -2,20 +2,20 @@
 import Button from './ui/Button.astro';
 import { headerLinks, type HeaderLink } from '../data/navigation';
 import { footerContent } from '../data/footer';
-interface Props { links?: readonly HeaderLink[]; homeHref?: string; actionHref?: string; id?: string; }
-const { links = headerLinks, homeHref = '#top', actionHref = '#contacts', id = 'mobile-menu' } = Astro.props;
+interface Props { links?: readonly HeaderLink[]; homeHref?: string; actionHref?: string; dialogId?: string; id?: string; }
+const { links = headerLinks, homeHref = '#top', actionHref, dialogId = 'lead-dialog', id = 'mobile-menu' } = Astro.props;
 ---
 <header class="mobile-header" data-mobile-header>
   <div class="mobile-header__bar">
     <a class="mobile-header__logo" href={homeHref} aria-label="Revolis.Мото — на главную"><img src="/assets/site/logo.svg" alt="" /></a>
     <button class="mobile-header__toggle" type="button" aria-label="Открыть меню" aria-controls={id} aria-expanded="false" data-menu-open><img src="/assets/mobile/menu.svg" alt="" /></button>
-    <Button class="mobile-header__lead" href={actionHref}>Оставить заявку</Button>
+    <Button class="mobile-header__lead" href={actionHref} data-open-lead={actionHref ? undefined : dialogId} data-intent="consultation" data-source="mobile-header">Оставить заявку</Button>
   </div>
   <dialog id={id} class="mobile-header__dialog" aria-label="Меню сайта">
     <div class="mobile-header__bar">
       <a class="mobile-header__logo" href={homeHref} aria-label="Revolis.Мото — на главную"><img src="/assets/site/logo.svg" alt="" /></a>
       <button class="mobile-header__toggle" type="button" aria-label="Закрыть меню" data-menu-close autofocus><img src="/assets/mobile/close.svg" alt="" /></button>
-      <Button class="mobile-header__lead" href={actionHref}>Оставить заявку</Button>
+      <Button class="mobile-header__lead" href={actionHref} data-open-lead={actionHref ? undefined : dialogId} data-intent="consultation" data-source="mobile-header">Оставить заявку</Button>
     </div>
     <div class="mobile-header__body">
       <nav aria-label="Мобильная навигация"><p>Навигация:</p><div>{links.map(link => <a href={link.href}>{link.label}</a>)}</div></nav>

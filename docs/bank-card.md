@@ -1,6 +1,6 @@
 # BankCard — Desktop
 
-Второй составной компонент перенесён из свежего контекста и снимка Figma `26:5495` от 21.10.2026. В витрине `/ui-kit/#bank-cards` показаны Альфа Банк, Технобанк и подбор условий оплаты — обычное состояние и наведение. Мобильные варианты не реализованы.
+Второй составной компонент перенесён из свежего контекста и снимка Figma `26:5495` от 21.10.2026. В витрине `/ui-kit/#bank-cards` показаны Альфа Банк, Технобанк и подбор условий оплаты — обычное состояние и наведение. Мобильные варианты реализованы; см. mobile-ui.md.
 
 ## API и данные
 
@@ -12,10 +12,10 @@ import LeadDialog from '../components/LeadDialog.astro';
 <BankCard id="finance-alfa" variant="alfa" dialogId="finance-dialog" />
 <BankCard id="finance-techno" variant="technobank" dialogId="finance-dialog" />
 <BankCard id="finance-help" variant="consultation" dialogId="finance-dialog" />
-<LeadDialog id="finance-dialog" />
+<LeadDialog id="finance-dialog" kind="bank" />
 ```
 
-`id` уникален, `variant` обязателен. `terms` содержит подтверждённые `durationLabel` и `rateLabel`; без него банковская карточка пишет «Условия уточняются». `modelId` необязателен. `headingLevel` — h2/h3/h4, по умолчанию h3. Без `dialogId` или демонстрационного действия кнопка отключена. Указанный dialog должен присутствовать на той же странице. Оформление самого диалога — отдельный этап.
+`id` уникален, `variant` обязателен. `terms` содержит подтверждённые `durationLabel` и `rateLabel`; без него банковская карточка пишет «Условия уточняются». `modelId` необязателен. `headingLevel` — h2/h3/h4, по умолчанию h3. Без `dialogId` или демонстрационного действия кнопка отключена. Указанный dialog должен присутствовать на той же странице. Банковское окно реализовано: используйте dialogId="bank-dialog", см. popups.md.
 
 Кнопка передаёт общему LeadDialog `intent=finance`, `source=bank-cards`, банк `alfa` / `technobank` и необязательную модель. Подбор условий без выбранного банка очищает предыдущий выбор. Витрина использует `demoAction`: локально сообщает выбор и не открывает форму. `demoState="hover"` фиксирует состояние для сравнения.
 

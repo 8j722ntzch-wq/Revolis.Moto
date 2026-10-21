@@ -1211,6 +1211,58 @@
       ],
       "transfer": "Original Figma SVG, unmodified; map icons exported with Plugin API SVG_STRING",
       "sha256": "167fbd4177533843126fba095f392b01c78c2f622416eeb10f12ca60fbe30124"
+    },
+    {
+      "id": "popup-close",
+      "nodeId": "I1:7946;1:7955",
+      "kind": "exported-svg",
+      "localPath": "public/assets/popups/close.svg",
+      "slots": [
+        {
+          "nodeId": "I1:7946;1:7955",
+          "sectionNodeId": "1:9039"
+        },
+        {
+          "nodeId": "I1:7946;1:7955",
+          "sectionNodeId": "1:9059"
+        },
+        {
+          "nodeId": "I1:7946;1:7955",
+          "sectionNodeId": "266:8776"
+        },
+        {
+          "nodeId": "I1:7946;1:7955",
+          "sectionNodeId": "266:8789"
+        },
+        {
+          "nodeId": "I1:7946;1:7955",
+          "sectionNodeId": "1:9083"
+        },
+        {
+          "nodeId": "I1:7946;1:7955",
+          "sectionNodeId": "1:9092"
+        }
+      ],
+      "transfer": "Figma MCP asset URL, curl -L, unmodified",
+      "sha256": "1a77b59c58d5632153171127c82f41e2b3728d3d66abc619926063d399637e54"
+    },
+    {
+      "id": "popup-bank",
+      "nodeId": "I283:8879;115:5886",
+      "kind": "exported-svg",
+      "localPath": "public/assets/popups/bank.svg",
+      "slots": [
+        {
+          "nodeId": "I283:8879;115:5886",
+          "sectionNodeId": "266:8776"
+        },
+        {
+          "nodeId": "I283:8879;115:5886",
+          "sectionNodeId": "266:8789"
+        }
+      ],
+      "transfer": "Figma MCP asset URL, curl -L, unmodified",
+      "sha256": "eedb49e208e40fa46e3bb4ded1ae13cec0ce218cb6e8f6497728e070feb4332f"
     }
   ],
   "reusableUiManifest": "design/ui-assets.json",

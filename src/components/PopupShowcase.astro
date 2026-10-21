@@ -1,0 +1,14 @@
+---
+import Button from './ui/Button.astro';
+---
+<section class="container popup-showcase" id="popups">
+  <h2>Всплывающие окна</h2>
+  <p>Просмотр компонентов. Заявки не отправляются. Окно благодарности здесь — демонстрация.</p>
+  <div><Button data-open-lead="lead-dialog" data-intent="consultation" data-source="ui-kit">Получение консультации</Button><Button data-open-lead="bank-dialog" data-intent="finance" data-source="ui-kit">Банк</Button><Button data-open-lead="thanks-dialog">Благодарю за заявку · демо</Button></div>
+</section>
+<style>
+  .popup-showcase { margin-block: 64px; scroll-margin-top: 84px; }
+  h2 { font-size: 28px; line-height: 1.2; }
+  p { margin-block: 16px; color: var(--color-gray-4); font-size: 14px; }
+  div { display: flex; flex-wrap: wrap; gap: 12px; }
+</style>

@@ -1,4 +1,5 @@
 ---
+import PopupShowcase from '../components/PopupShowcase.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import MobileHeader from '../components/MobileHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
@@ -61,10 +62,11 @@ const states = ['default', 'pressed', 'disabled'] as const;
       </section>
       <section class="container kit-section stack" id="banks">
         <SectionHeading eyebrow="Финансирование" title="Карточки банков" bold />
-        {bankCardsReference.map(bank => <BankCard id={`mobile-bank-${bank.variant}`} {...bank} actionHref="#fields" />)}
+        {bankCardsReference.map(bank => <BankCard id={`mobile-bank-${bank.variant}`} {...bank} dialogId="bank-dialog" />)}
       </section>
       <HomeFaq />
-    </main>
+    <PopupShowcase />
+</main>
     <div id="contacts"><SiteFooter links={links} /></div>
   </div>
 </BaseLayout>

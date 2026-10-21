@@ -2,6 +2,7 @@
 import '@fontsource-variable/inter/wght.css';
 import '@fontsource-variable/inter/wght-italic.css';
 import '../styles/global.css';
+import LeadDialog from '../components/LeadDialog.astro';
 interface Props { title: string; description: string; canonical?: string; indexable?: boolean; }
 const { title, description, canonical, indexable = false } = Astro.props;
 ---
@@ -15,5 +16,5 @@ const { title, description, canonical, indexable = false } = Astro.props;
     {canonical && <link rel="canonical" href={canonical} />}
     <title>{title}</title>
   </head>
-  <body><slot /></body>
+  <body><slot /><LeadDialog /><LeadDialog id="bank-dialog" kind="bank" /><LeadDialog id="thanks-dialog" kind="thanks" /></body>
 </html>

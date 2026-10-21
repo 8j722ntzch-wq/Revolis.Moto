@@ -1,40 +1,24 @@
 ---
 import LeadForm from './LeadForm.astro';
-interface Props { id?: string; policyUrl?: string; }
-const { id = 'lead-dialog', policyUrl } = Astro.props;
+import Button from './ui/Button.astro';
+import '../styles/popups.css';
+interface Props { id?: string; policyUrl?: string; kind?: 'consultation' | 'bank' | 'thanks'; }
+const { id = 'lead-dialog', policyUrl = '/privacypolicy/', kind = 'consultation' } = Astro.props;
 ---
-<dialog id={id} data-lead-dialog aria-labelledby={`${id}-title`}>
-  <button type="button" data-close-dialog aria-label="Закрыть окно">Закрыть</button>
-  <h2 id={`${id}-title`}>Поможем подобрать квадроцикл</h2>
-  <LeadForm id={`${id}-form`} source="dialog" policyUrl={policyUrl} />
+<dialog id={id} class:list={['lead-dialog', `lead-dialog--${kind}`]} data-lead-dialog aria-labelledby={`${id}-title`} aria-describedby={`${id}-description`}>
+  <div class="lead-dialog__content">
+    <button class="lead-dialog__close" type="button" data-close-dialog aria-label="Закрыть окно"><img src="/assets/popups/close.svg" alt="" /></button>
+    <div class="lead-dialog__heading">
+      <h2 id={`${id}-title`} tabindex="-1" autofocus>{kind === 'thanks' ? <><span>Благодарим</span> за оставление заявки!</> : kind === 'bank' ? <><span>Подберём</span> удобный вариант оплаты</> : <><span>Поможем</span> выбрать квадроцикл</>}</h2>
+      <p id={`${id}-description`}>{kind === 'thanks' ? 'Наш менеджер свяжется с вами в ближайшее время' : kind === 'bank' ? 'Поможем узнать условия кредита или рассрочки от банков-партнёров' : 'Оставьте контакты — обсудим модели, комплектацию и условия покупки'}</p>
+    </div>
+    {kind === 'thanks' ? <>
+      <div class="lead-dialog__processing"><p>Ваша заявка находится в обработке</p><div class="lead-dialog__progress" aria-hidden="true"><span></span><span></span></div></div>
+      <Button href="/" arrow>Вернуться на главную</Button>
+    </> : <LeadForm id={`${id}-form`} source="dialog" intent={kind === 'bank' ? 'finance' : 'consultation'} policyUrl={policyUrl} bankSelection={kind === 'bank'} />}
+    {kind === 'bank' && <p class="lead-dialog__bank-note">Условия и решение по финансированию принимает банк</p>}
+  </div>
 </dialog>
 <script>
-  import type { LeadIntent } from '../lib/leads';
-  const intents: LeadIntent[] = ['consultation', 'model', 'finance', 'test-drive'];
-  document.querySelectorAll<HTMLDialogElement>('[data-lead-dialog]').forEach((dialog) => {
-    let trigger: HTMLElement | null = null;
-    document.querySelectorAll<HTMLElement>('[data-open-lead]').forEach((button) => {
-      if (button.dataset.openLead !== dialog.id) return;
-      button.addEventListener('click', () => {
-        const form = dialog.querySelector<HTMLFormElement>('[data-lead-form]')!;
-        if (form.getAttribute('aria-busy') === 'true') {
-          dialog.showModal();
-          return;
-        }
-        const intent = button.dataset.intent as LeadIntent;
-        form.dataset.intent = intents.includes(intent) ? intent : 'consultation';
-        form.dataset.source = button.dataset.source ?? 'dialog';
-        form.dataset.modelId = button.dataset.modelId ?? '';
-        form.dataset.bank = button.dataset.bank ?? '';
-        trigger = button;
-        dialog.showModal();
-      });
-    });
-    dialog.querySelector('[data-close-dialog]')?.addEventListener('click', () => dialog.close());
-    dialog.addEventListener('click', (event) => {
-      const bounds = dialog.getBoundingClientRect();
-      if (event.target === dialog && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) dialog.close();
-    });
-    dialog.addEventListener('close', () => trigger?.focus());
-  });
+  import '../lib/dialogs';
 </script>

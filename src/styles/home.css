@@ -85,7 +85,7 @@
 @media (min-width: 1288px) and (hover: hover) and (pointer: fine) {
   .home-test .home-test__button:hover { background: var(--color-gray-2); }
 }
-.home-test__handwriting { position: absolute; left: 291px; top: 225.9px; }
+.home-test__handwriting { pointer-events: none; position: absolute; left: 291px; top: 225.9px; }
 .home-test__advantages { position: absolute; left: 36px; top: 396px; display: flex; gap: 48px; }
 .home-test__advantages p { display: flex; align-items: center; gap: 8px; position: relative; color: var(--color-gray-2); line-height: 20px; }
 .home-test__advantages p + p::before { position: absolute; left: -24px; top: 10px; content: ''; width: 1px; height: 36px; background: var(--color-white-20); }
