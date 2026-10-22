@@ -1,6 +1,7 @@
 ---
+import { imageAttrs, type ImageRole } from "../../lib/responsive-images";
 import type { ProductPhoto } from '../../data/products/types';
-interface Props { photo: ProductPhoto; eager?: boolean; }
-const { photo, eager = false } = Astro.props;
+interface Props { photo: ProductPhoto; eager?: boolean; role?: ImageRole; }
+const { photo, eager = false, role = "hero" } = Astro.props;
 ---
-<img src={photo.src} alt={photo.alt} width={photo.width} height={photo.height} loading={eager ? 'eager' : 'lazy'} decoding="async" style={`object-fit:${photo.fit ?? 'contain'};object-position:${photo.position ?? 'center'}`} />
+<img {...imageAttrs(photo.src, role)} alt={photo.alt} width={photo.width} height={photo.height} loading={eager ? 'eager' : 'lazy'} fetchpriority={eager ? "high" : undefined} decoding="async" style={`object-fit:${photo.fit ?? 'contain'};object-position:${photo.position ?? 'center'}`} />

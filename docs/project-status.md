@@ -55,3 +55,9 @@ Validation this turn: Astro check (62 files, no errors/warnings), static build (
 Семь страниц с 252 строками характеристик, индивидуальными обзорами, особенностями и FAQ. Каталог, главная и похожие модели используют единые modelId и данные. Хлебные крошки бренда открывают фильтр каталога. RBMotors скрыт. Подробности источников, решения пользователя по диапазонам Hammer 300 и проверки 500 EPS: [product-content-audit.md](product-content-audit.md).
 
 Проверка этого этапа: Astro check — 70 файлов, 0 ошибок/предупреждений; build — 14 маршрутов; 15 тестов; строгая проверка design-inputs пройдена. В браузере проверены все семь SKU на 320/390/1470 px без горизонтального переполнения, Hammer 300 дополнительно на 1366/1920 px; фильтры, карточки, брендовая хлебная крошка, раскрытие ТТХ и modelId формы. Каталог Desktop и Hammer 300 Mobile просмотрены визуально. Все 14 офлайн-превью пересобраны. Это проверка наполнения существующего шаблона, а не новая сверка с Figma. Фотографии, подтверждение цен/наличия и доставка заявок остаются отдельными задачами. Публикации сайта не было.
+
+## 2026-10-22 - responsive WebP
+
+21 raster sources generated 84 WebP variants, with transparency and no upscaling. Largest variants total 1,998,898 bytes versus 12,111,026 bytes of PNG originals (83.5% smaller; not a page traffic estimate). SVG files unchanged. See [images.md](images.md).
+
+Validation: Astro check without errors/warnings; 14-route build; 17 passing tests; strict design-input check. Browser: homepage at 390px and catalogue at 1470px, no overflow or broken loaded images, WebP sources confirmed. Temporary five-photo fixture verified thumbnail selection, Hero srcset retention, full-screen WebP and Escape; fixture removed. Real SKU photos remain pending. All standalone previews regenerated.

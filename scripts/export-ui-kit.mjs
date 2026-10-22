@@ -46,6 +46,17 @@ html = await replaceAsync(html, /<link rel="stylesheet" href="([^"]+)"\s*\/?>/g,
   return `<style>${css}</style>`;
 });
 html = await replaceAsync(html, /\bsrc="(\/(?:assets|_astro)\/[^"]+)"/g, async ([, url]) => `src="${await asDataUrl(localAsset(url, dist))}"`);
+// Inline responsive candidates as well as fallback src for standalone previews.
+html = await replaceAsync(html, /\bsrcset="([^"]+)"/g, async ([, value]) => {
+  const candidates = await Promise.all(value.split(',').map(async candidate => {
+    const [url, descriptor] = candidate.trim().split(/\s+/);
+    const path = localAsset(url, dist);
+    return `${path ? await asDataUrl(path) : url} ${descriptor}`;
+  }));
+  return `srcset="${candidates.join(', ')}"`;
+});
+// Serialized Hero viewer URLs also need to work offline.
+html = await replaceAsync(html, /\/assets\/optimized\/[a-zA-Z0-9/_\-.]+\.webp/g, async ([url]) => asDataUrl(localAsset(url, dist)));
 if (/<script[^>]+src=|\b(?:src|href)="\/(?:assets|_astro)\//.test(html)) throw new Error('Unresolved runtime dependency in offline preview.');
 await mkdir(resolve(root, 'preview'), { recursive: true });
 if (homepage) html = html.replaceAll('href="/#', 'href="#');

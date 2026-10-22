@@ -49,3 +49,5 @@
 ## Hero media update (2026-10-22)
 
 `photos` now contains Hero media only. `galleryPhotos` is an independent optional array for the lower gallery; there is no fallback or automatic copying. Both arrays use ProductPhoto. Hero thumbnails exclude the main image: mobile shows two thumbnails and a remaining-photo counter (5 total = +2), desktop shows three and a counter. Main opens the selected photo; +N opens the first hidden photo. The modal uses existing SliderButton and CloseButton components, contains the entire image, supports arrow keys, Escape, touch swipe and focus restoration. No slider arrows in Hero itself.
+
+Адаптивные WebP и порядок добавления фотографий: [images.md](images.md).

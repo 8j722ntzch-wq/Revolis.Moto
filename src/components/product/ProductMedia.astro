@@ -1,4 +1,5 @@
 ---
+import { imageAttrs, fullImage } from "../../lib/responsive-images";
 import type { ProductPhoto } from '../../data/products/types';
 import { mediaPreview } from '../../lib/product-media';
 import Photo from './ProductPhoto.astro';
@@ -10,14 +11,14 @@ const { photos } = Astro.props;
 const desktop = mediaPreview(photos.length, 4);
 const mobile = mediaPreview(photos.length, 3);
 ---
-<product-media class="product-media" data-photos={JSON.stringify(photos)}>
+<product-media class="product-media" data-photos={JSON.stringify(photos.map(photo => ({...photo, hero: imageAttrs(photo.src, "hero"), full: imageAttrs(photo.src, "full"), fullSrc: fullImage(photo.src)})))}>
   <div class="product-media__main">
-    {photos[0] ? <a href={photos[0].src} data-open-photo aria-label="Открыть главное фото во весь экран"><Photo photo={photos[0]} eager /></a> : <p class="product-photo-pending">Фотографии скоро появятся</p>}
+    {photos[0] ? <a href={fullImage(photos[0].src)} data-open-photo aria-label="Открыть главное фото во весь экран"><Photo photo={photos[0]} eager /></a> : <p class="product-photo-pending">Фотографии скоро появятся</p>}
   </div>
   <div class="product-media__thumbs" aria-label={photos.length ? 'Выбор фотографии' : undefined} aria-hidden={!photos.length || undefined}>
-    {photos.length ? desktop.indices.map(index => <a href={photos[index].src} class:list={{ 'product-media__thumb--mobile-hidden': index > mobile.indices.length }} data-photo-index={index} aria-label={`Фото ${index+1}: ${photos[index].alt}`}><Photo photo={photos[index]} /></a>) : Array.from({length:4},() => <div class="product-media__empty"></div>)}
-    {mobile.hidden > 0 && <a class="product-media__more product-media__more--mobile" href={photos[mobile.firstHidden].src} data-open-photo={mobile.firstHidden} aria-label={`Ещё ${mobile.hidden} фото`}>+{mobile.hidden}</a>}
-    {desktop.hidden > 0 && <a class="product-media__more product-media__more--desktop" href={photos[desktop.firstHidden].src} data-open-photo={desktop.firstHidden} aria-label={`Ещё ${desktop.hidden} фото`}>+{desktop.hidden}</a>}
+    {photos.length ? desktop.indices.map(index => <a href={fullImage(photos[index].src)} class:list={{ 'product-media__thumb--mobile-hidden': index > mobile.indices.length }} data-photo-index={index} aria-label={`Фото ${index+1}: ${photos[index].alt}`}><Photo photo={photos[index]} role="thumbnail" /></a>) : Array.from({length:4},() => <div class="product-media__empty"></div>)}
+    {mobile.hidden > 0 && <a class="product-media__more product-media__more--mobile" href={fullImage(photos[mobile.firstHidden].src)} data-open-photo={mobile.firstHidden} aria-label={`Ещё ${mobile.hidden} фото`}>+{mobile.hidden}</a>}
+    {desktop.hidden > 0 && <a class="product-media__more product-media__more--desktop" href={fullImage(photos[desktop.firstHidden].src)} data-open-photo={desktop.firstHidden} aria-label={`Ещё ${desktop.hidden} фото`}>+{desktop.hidden}</a>}
   </div>
   {photos.length > 0 && <dialog class="photo-viewer" aria-label="Фотографии модели">
     <div class="photo-viewer__bar"><p class="photo-viewer__count" aria-live="polite" aria-atomic="true"></p><CloseButton label="Закрыть просмотр фотографий" /></div>
@@ -32,7 +33,7 @@ const mobile = mediaPreview(photos.length, 3);
     connectedCallback() {
       if (this.dataset.ready) return;
       this.dataset.ready = 'true';
-      const photos: ProductPhoto[] = JSON.parse(this.dataset.photos ?? '[]');
+      const photos: (ProductPhoto & { hero: {src: string; srcset?: string; sizes?: string}; full: {src: string; srcset?: string; sizes?: string}; fullSrc: string })[] = JSON.parse(this.dataset.photos ?? '[]');
       const main = this.querySelector<HTMLImageElement>('.product-media__main img');
       const dialog = this.querySelector<HTMLDialogElement>('dialog');
       if (!main || !dialog || !photos.length) return;
@@ -44,7 +45,9 @@ const mobile = mediaPreview(photos.length, 3);
       let opener: HTMLElement | null = null;
       let previousOverflow = '';
       const render = () => {
-        full.src = photos[viewed].src;
+        full.sizes = photos[viewed].full.sizes ?? "100vw";
+        full.srcset = photos[viewed].full.srcset ?? "";
+        full.src = photos[viewed].full.src;
         full.alt = photos[viewed].alt;
         counter.textContent = `${viewed + 1} из ${photos.length}`;
       };
@@ -53,8 +56,11 @@ const mobile = mediaPreview(photos.length, 3);
         event.preventDefault();
         selected = Number(link.dataset.photoIndex);
         const image = link.querySelector('img')!;
-        for (const attribute of ['src','alt','width','height','style']) main.setAttribute(attribute,image.getAttribute(attribute) ?? '');
-        mainLink.href = photos[selected].src;
+        for (const attribute of ['alt','width','height','style']) main.setAttribute(attribute,image.getAttribute(attribute) ?? '');
+        main.sizes = photos[selected].hero.sizes ?? "";
+        main.srcset = photos[selected].hero.srcset ?? "";
+        main.src = photos[selected].hero.src;
+        mainLink.href = photos[selected].fullSrc;
         links.forEach(item => item.removeAttribute('aria-current'));
         link.setAttribute('aria-current','true');
       }));

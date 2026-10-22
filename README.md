@@ -71,3 +71,5 @@ npm run export:ui-kit
 Общий шаблон Desktop/Mobile и первый Striker 500 EFI/EPS: `/models/baltmotors-500-efi-eps/`. [Архитектура и добавление следующей модели](docs/product-pages.md). Фото пока ожидаются. Для отдельного офлайн-превью: `npm run export:sku` после сборки.
 
 SKU media: `photos` is the Hero collection; `galleryPhotos` is the independent lower gallery. See [SKU instructions](docs/product-pages.md).
+
+Адаптивные WebP и порядок добавления фотографий: [docs/images.md](docs/images.md).

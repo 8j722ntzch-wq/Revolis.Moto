@@ -1,0 +1,653 @@
+{
+  "/assets/catalogue/athlete.png": {
+    "width": 1400,
+    "height": 816,
+    "originalBytes": 618381,
+    "variants": [
+      {
+        "src": "/assets/optimized/catalogue/athlete-160.webp",
+        "width": 160,
+        "height": 93,
+        "bytes": 5296
+      },
+      {
+        "src": "/assets/optimized/catalogue/athlete-320.webp",
+        "width": 320,
+        "height": 187,
+        "bytes": 13110
+      },
+      {
+        "src": "/assets/optimized/catalogue/athlete-480.webp",
+        "width": 480,
+        "height": 280,
+        "bytes": 21984
+      },
+      {
+        "src": "/assets/optimized/catalogue/athlete-768.webp",
+        "width": 768,
+        "height": 448,
+        "bytes": 41048
+      },
+      {
+        "src": "/assets/optimized/catalogue/athlete-1200.webp",
+        "width": 1200,
+        "height": 699,
+        "bytes": 74922
+      },
+      {
+        "src": "/assets/optimized/catalogue/athlete-1400.webp",
+        "width": 1400,
+        "height": 816,
+        "bytes": 74720
+      }
+    ]
+  },
+  "/assets/catalogue/striker-400.png": {
+    "width": 800,
+    "height": 600,
+    "originalBytes": 359467,
+    "variants": [
+      {
+        "src": "/assets/optimized/catalogue/striker-400-160.webp",
+        "width": 160,
+        "height": 120,
+        "bytes": 3972
+      },
+      {
+        "src": "/assets/optimized/catalogue/striker-400-320.webp",
+        "width": 320,
+        "height": 240,
+        "bytes": 11874
+      },
+      {
+        "src": "/assets/optimized/catalogue/striker-400-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 23038
+      },
+      {
+        "src": "/assets/optimized/catalogue/striker-400-768.webp",
+        "width": 768,
+        "height": 576,
+        "bytes": 48852
+      },
+      {
+        "src": "/assets/optimized/catalogue/striker-400-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 51030
+      }
+    ]
+  },
+  "/assets/catalogue/striker-500.png": {
+    "width": 800,
+    "height": 600,
+    "originalBytes": 384732,
+    "variants": [
+      {
+        "src": "/assets/optimized/catalogue/striker-500-160.webp",
+        "width": 160,
+        "height": 120,
+        "bytes": 4208
+      },
+      {
+        "src": "/assets/optimized/catalogue/striker-500-320.webp",
+        "width": 320,
+        "height": 240,
+        "bytes": 13102
+      },
+      {
+        "src": "/assets/optimized/catalogue/striker-500-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 25618
+      },
+      {
+        "src": "/assets/optimized/catalogue/striker-500-768.webp",
+        "width": 768,
+        "height": 576,
+        "bytes": 54730
+      },
+      {
+        "src": "/assets/optimized/catalogue/striker-500-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 57386
+      }
+    ]
+  },
+  "/assets/catalogue/striker-700-eps.png": {
+    "width": 800,
+    "height": 600,
+    "originalBytes": 306743,
+    "variants": [
+      {
+        "src": "/assets/optimized/catalogue/striker-700-eps-160.webp",
+        "width": 160,
+        "height": 120,
+        "bytes": 3268
+      },
+      {
+        "src": "/assets/optimized/catalogue/striker-700-eps-320.webp",
+        "width": 320,
+        "height": 240,
+        "bytes": 10210
+      },
+      {
+        "src": "/assets/optimized/catalogue/striker-700-eps-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 19598
+      },
+      {
+        "src": "/assets/optimized/catalogue/striker-700-eps-768.webp",
+        "width": 768,
+        "height": 576,
+        "bytes": 44234
+      },
+      {
+        "src": "/assets/optimized/catalogue/striker-700-eps-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 50016
+      }
+    ]
+  },
+  "/assets/catalogue/striker-700.png": {
+    "width": 1200,
+    "height": 800,
+    "originalBytes": 656082,
+    "variants": [
+      {
+        "src": "/assets/optimized/catalogue/striker-700-160.webp",
+        "width": 160,
+        "height": 107,
+        "bytes": 3430
+      },
+      {
+        "src": "/assets/optimized/catalogue/striker-700-320.webp",
+        "width": 320,
+        "height": 213,
+        "bytes": 10866
+      },
+      {
+        "src": "/assets/optimized/catalogue/striker-700-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 21510
+      },
+      {
+        "src": "/assets/optimized/catalogue/striker-700-768.webp",
+        "width": 768,
+        "height": 512,
+        "bytes": 46516
+      },
+      {
+        "src": "/assets/optimized/catalogue/striker-700-1200.webp",
+        "width": 1200,
+        "height": 800,
+        "bytes": 96998
+      }
+    ]
+  },
+  "/assets/home/certificate.png": {
+    "width": 360,
+    "height": 360,
+    "originalBytes": 133924,
+    "variants": [
+      {
+        "src": "/assets/optimized/home/certificate-160.webp",
+        "width": 160,
+        "height": 160,
+        "bytes": 2690
+      },
+      {
+        "src": "/assets/optimized/home/certificate-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 8564
+      },
+      {
+        "src": "/assets/optimized/home/certificate-360.webp",
+        "width": 360,
+        "height": 360,
+        "bytes": 11544
+      }
+    ]
+  },
+  "/assets/home/consultation.png": {
+    "width": 732,
+    "height": 440,
+    "originalBytes": 629966,
+    "variants": [
+      {
+        "src": "/assets/optimized/home/consultation-160.webp",
+        "width": 160,
+        "height": 96,
+        "bytes": 5130
+      },
+      {
+        "src": "/assets/optimized/home/consultation-320.webp",
+        "width": 320,
+        "height": 192,
+        "bytes": 17602
+      },
+      {
+        "src": "/assets/optimized/home/consultation-480.webp",
+        "width": 480,
+        "height": 289,
+        "bytes": 35890
+      },
+      {
+        "src": "/assets/optimized/home/consultation-732.webp",
+        "width": 732,
+        "height": 440,
+        "bytes": 70168
+      }
+    ]
+  },
+  "/assets/home/hero.png": {
+    "width": 1193,
+    "height": 683,
+    "originalBytes": 1191709,
+    "variants": [
+      {
+        "src": "/assets/optimized/home/hero-160.webp",
+        "width": 160,
+        "height": 92,
+        "bytes": 3240
+      },
+      {
+        "src": "/assets/optimized/home/hero-320.webp",
+        "width": 320,
+        "height": 183,
+        "bytes": 10332
+      },
+      {
+        "src": "/assets/optimized/home/hero-480.webp",
+        "width": 480,
+        "height": 275,
+        "bytes": 19744
+      },
+      {
+        "src": "/assets/optimized/home/hero-768.webp",
+        "width": 768,
+        "height": 440,
+        "bytes": 40788
+      },
+      {
+        "src": "/assets/optimized/home/hero-1193.webp",
+        "width": 1193,
+        "height": 683,
+        "bytes": 75396
+      }
+    ]
+  },
+  "/assets/home/model-200.png": {
+    "width": 320,
+    "height": 213,
+    "originalBytes": 65090,
+    "variants": [
+      {
+        "src": "/assets/optimized/home/model-200-160.webp",
+        "width": 160,
+        "height": 107,
+        "bytes": 3072
+      },
+      {
+        "src": "/assets/optimized/home/model-200-320.webp",
+        "width": 320,
+        "height": 213,
+        "bytes": 8752
+      }
+    ]
+  },
+  "/assets/home/model-300.png": {
+    "width": 320,
+    "height": 213,
+    "originalBytes": 80640,
+    "variants": [
+      {
+        "src": "/assets/optimized/home/model-300-160.webp",
+        "width": 160,
+        "height": 107,
+        "bytes": 3564
+      },
+      {
+        "src": "/assets/optimized/home/model-300-320.webp",
+        "width": 320,
+        "height": 213,
+        "bytes": 9790
+      }
+    ]
+  },
+  "/assets/home/model-500.png": {
+    "width": 320,
+    "height": 240,
+    "originalBytes": 91172,
+    "variants": [
+      {
+        "src": "/assets/optimized/home/model-500-160.webp",
+        "width": 160,
+        "height": 120,
+        "bytes": 4380
+      },
+      {
+        "src": "/assets/optimized/home/model-500-320.webp",
+        "width": 320,
+        "height": 240,
+        "bytes": 13842
+      }
+    ]
+  },
+  "/assets/home/registration-documents.png": {
+    "width": 360,
+    "height": 360,
+    "originalBytes": 52565,
+    "variants": [
+      {
+        "src": "/assets/optimized/home/registration-documents-160.webp",
+        "width": 160,
+        "height": 160,
+        "bytes": 3594
+      },
+      {
+        "src": "/assets/optimized/home/registration-documents-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 9332
+      },
+      {
+        "src": "/assets/optimized/home/registration-documents-360.webp",
+        "width": 360,
+        "height": 360,
+        "bytes": 10724
+      }
+    ]
+  },
+  "/assets/home/test-handwriting.png": {
+    "width": 474,
+    "height": 238,
+    "originalBytes": 21746,
+    "variants": [
+      {
+        "src": "/assets/optimized/home/test-handwriting-160.webp",
+        "width": 160,
+        "height": 80,
+        "bytes": 4932
+      },
+      {
+        "src": "/assets/optimized/home/test-handwriting-320.webp",
+        "width": 320,
+        "height": 161,
+        "bytes": 12846
+      },
+      {
+        "src": "/assets/optimized/home/test-handwriting-474.webp",
+        "width": 474,
+        "height": 238,
+        "bytes": 9432
+      }
+    ]
+  },
+  "/assets/home/test-photo-front.png": {
+    "width": 244,
+    "height": 344,
+    "originalBytes": 226441,
+    "variants": [
+      {
+        "src": "/assets/optimized/home/test-photo-front-160.webp",
+        "width": 160,
+        "height": 226,
+        "bytes": 16790
+      },
+      {
+        "src": "/assets/optimized/home/test-photo-front-244.webp",
+        "width": 244,
+        "height": 344,
+        "bytes": 37182
+      }
+    ]
+  },
+  "/assets/home/test-photo-left.png": {
+    "width": 277,
+    "height": 367,
+    "originalBytes": 214436,
+    "variants": [
+      {
+        "src": "/assets/optimized/home/test-photo-left-160.webp",
+        "width": 160,
+        "height": 212,
+        "bytes": 16572
+      },
+      {
+        "src": "/assets/optimized/home/test-photo-left-277.webp",
+        "width": 277,
+        "height": 367,
+        "bytes": 35872
+      }
+    ]
+  },
+  "/assets/home/test-photo-right.png": {
+    "width": 281,
+    "height": 369,
+    "originalBytes": 220573,
+    "variants": [
+      {
+        "src": "/assets/optimized/home/test-photo-right-160.webp",
+        "width": 160,
+        "height": 210,
+        "bytes": 15914
+      },
+      {
+        "src": "/assets/optimized/home/test-photo-right-281.webp",
+        "width": 281,
+        "height": 369,
+        "bytes": 36186
+      }
+    ]
+  },
+  "/assets/mobile-home/consultation.png": {
+    "width": 1536,
+    "height": 1024,
+    "originalBytes": 2643323,
+    "variants": [
+      {
+        "src": "/assets/optimized/mobile-home/consultation-160.webp",
+        "width": 160,
+        "height": 107,
+        "bytes": 6208
+      },
+      {
+        "src": "/assets/optimized/mobile-home/consultation-320.webp",
+        "width": 320,
+        "height": 213,
+        "bytes": 21642
+      },
+      {
+        "src": "/assets/optimized/mobile-home/consultation-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 43978
+      },
+      {
+        "src": "/assets/optimized/mobile-home/consultation-768.webp",
+        "width": 768,
+        "height": 512,
+        "bytes": 97914
+      },
+      {
+        "src": "/assets/optimized/mobile-home/consultation-1200.webp",
+        "width": 1200,
+        "height": 800,
+        "bytes": 187922
+      },
+      {
+        "src": "/assets/optimized/mobile-home/consultation-1536.webp",
+        "width": 1536,
+        "height": 1024,
+        "bytes": 267922
+      }
+    ]
+  },
+  "/assets/mobile-home/hero.png": {
+    "width": 1536,
+    "height": 1024,
+    "originalBytes": 2479078,
+    "variants": [
+      {
+        "src": "/assets/optimized/mobile-home/hero-160.webp",
+        "width": 160,
+        "height": 107,
+        "bytes": 5692
+      },
+      {
+        "src": "/assets/optimized/mobile-home/hero-320.webp",
+        "width": 320,
+        "height": 213,
+        "bytes": 18524
+      },
+      {
+        "src": "/assets/optimized/mobile-home/hero-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 36526
+      },
+      {
+        "src": "/assets/optimized/mobile-home/hero-768.webp",
+        "width": 768,
+        "height": 512,
+        "bytes": 78078
+      },
+      {
+        "src": "/assets/optimized/mobile-home/hero-1200.webp",
+        "width": 1200,
+        "height": 800,
+        "bytes": 153444
+      },
+      {
+        "src": "/assets/optimized/mobile-home/hero-1536.webp",
+        "width": 1536,
+        "height": 1024,
+        "bytes": 214978
+      }
+    ]
+  },
+  "/assets/mobile-home/test-left.png": {
+    "width": 1206,
+    "height": 2125,
+    "originalBytes": 723886,
+    "variants": [
+      {
+        "src": "/assets/optimized/mobile-home/test-left-160.webp",
+        "width": 160,
+        "height": 282,
+        "bytes": 20822
+      },
+      {
+        "src": "/assets/optimized/mobile-home/test-left-320.webp",
+        "width": 320,
+        "height": 564,
+        "bytes": 72580
+      },
+      {
+        "src": "/assets/optimized/mobile-home/test-left-480.webp",
+        "width": 480,
+        "height": 846,
+        "bytes": 138372
+      },
+      {
+        "src": "/assets/optimized/mobile-home/test-left-768.webp",
+        "width": 768,
+        "height": 1353,
+        "bytes": 242430
+      },
+      {
+        "src": "/assets/optimized/mobile-home/test-left-1200.webp",
+        "width": 1200,
+        "height": 2114,
+        "bytes": 392080
+      },
+      {
+        "src": "/assets/optimized/mobile-home/test-left-1206.webp",
+        "width": 1206,
+        "height": 2125,
+        "bytes": 403136
+      }
+    ]
+  },
+  "/assets/mobile-home/test-right.png": {
+    "width": 1206,
+    "height": 2132,
+    "originalBytes": 783071,
+    "variants": [
+      {
+        "src": "/assets/optimized/mobile-home/test-right-160.webp",
+        "width": 160,
+        "height": 283,
+        "bytes": 20348
+      },
+      {
+        "src": "/assets/optimized/mobile-home/test-right-320.webp",
+        "width": 320,
+        "height": 566,
+        "bytes": 74836
+      },
+      {
+        "src": "/assets/optimized/mobile-home/test-right-480.webp",
+        "width": 480,
+        "height": 849,
+        "bytes": 145430
+      },
+      {
+        "src": "/assets/optimized/mobile-home/test-right-768.webp",
+        "width": 768,
+        "height": 1358,
+        "bytes": 270942
+      },
+      {
+        "src": "/assets/optimized/mobile-home/test-right-1200.webp",
+        "width": 1200,
+        "height": 2121,
+        "bytes": 432676
+      },
+      {
+        "src": "/assets/optimized/mobile-home/test-right-1206.webp",
+        "width": 1206,
+        "height": 2132,
+        "bytes": 439472
+      }
+    ]
+  },
+  "/assets/model-card/figma-atv-reference.png": {
+    "width": 640,
+    "height": 426,
+    "originalBytes": 228001,
+    "variants": [
+      {
+        "src": "/assets/optimized/model-card/figma-atv-reference-160.webp",
+        "width": 160,
+        "height": 107,
+        "bytes": 3112
+      },
+      {
+        "src": "/assets/optimized/model-card/figma-atv-reference-320.webp",
+        "width": 320,
+        "height": 213,
+        "bytes": 8772
+      },
+      {
+        "src": "/assets/optimized/model-card/figma-atv-reference-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 15718
+      },
+      {
+        "src": "/assets/optimized/model-card/figma-atv-reference-640.webp",
+        "width": 640,
+        "height": 426,
+        "bytes": 24352
+      }
+    ]
+  }
+}

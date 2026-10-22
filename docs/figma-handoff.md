@@ -46,3 +46,5 @@ Whole bank cards open the popup. Bank selector states refreshed from Figma 300:1
 ## 22.10.2026 — контент семи SKU
 
 Существующий шаблон наполнен из семи страниц Notion без переноса их редакционных предложений по новой композиции. Изменены тексты, источники данных, навигация и перенос строк длинных характеристик. Фотографии Hero/галереи ожидаются. Свежая сверка всей композиции Figma в этом этапе не проводилась; использован ранее собранный шаблон. Реестр: design/product-content.json; аудит: docs/product-content-audit.md.
+
+2026-10-22: responsive WebP delivery added for existing raster assets; composition and SVG preserved. This is not a fresh Figma visual sync. See images.md.

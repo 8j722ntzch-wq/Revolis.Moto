@@ -1,12 +1,13 @@
 ---
+import { imageAttrs } from "../../lib/responsive-images";
 import SectionHeading from '../ui/SectionHeading.astro';
 import CardRail from './CardRail.astro';
 ---
 <section id="about" class="home-documents container" aria-labelledby="documents-title">
   <SectionHeading eyebrow="Официально. Надёжно. Прозрачно." id="documents-title" bold>Вся техника сертифицирована,<br />растаможена и <span>готова к постановке на учёт</span></SectionHeading>
   <CardRail id="documents-rail" label="Документы — листайте горизонтально" previousLabel="Предыдущий документ" nextLabel="Следующий документ">
-    <article class="home-document"><img src="/assets/home/doc-gost.svg" alt="" width="56" height="56" /><div><h3>Соответствие<br />ГОСТ</h3><p>Импортируемая техника соответствует всем требованиям ГОСТ и прошла испытания</p></div><img class="home-document__image" src="/assets/home/certificate.png" alt="Сертификат соответствия из макета" width="360" height="360" loading="lazy" /></article>
+    <article class="home-document"><img src="/assets/home/doc-gost.svg" alt="" width="56" height="56" /><div><h3>Соответствие<br />ГОСТ</h3><p>Импортируемая техника соответствует всем требованиям ГОСТ и прошла испытания</p></div><img class="home-document__image" {...imageAttrs("/assets/home/certificate.png", "banner")} alt="Сертификат соответствия из макета" width="360" height="360" loading="lazy" /></article>
     <article class="home-document"><img src="/assets/home/doc-supply.svg" alt="" width="56" height="56" /><div><h3>Прозрачные<br />поставки</h3><p>Сотрудничаем напрямую с производителями, которым доверяем</p></div><div class="home-document__empty" aria-hidden="true"></div></article>
-    <article class="home-document home-document--purple"><img src="/assets/home/doc-registration.svg" alt="" width="56" height="56" /><div><h3>Регистрация в ГАИ<br />или Гостехнадзоре</h3><p>Помогаем в оформлении документов и постановке квадроциклов на учёт</p></div><img class="home-document__image" src="/assets/home/registration-documents.png" alt="Образцы документов для регистрации" width="360" height="360" loading="lazy" /></article>
+    <article class="home-document home-document--purple"><img src="/assets/home/doc-registration.svg" alt="" width="56" height="56" /><div><h3>Регистрация в ГАИ<br />или Гостехнадзоре</h3><p>Помогаем в оформлении документов и постановке квадроциклов на учёт</p></div><img class="home-document__image" {...imageAttrs("/assets/home/registration-documents.png", "banner")} alt="Образцы документов для регистрации" width="360" height="360" loading="lazy" /></article>
   </CardRail>
 </section>
