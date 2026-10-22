@@ -1,0 +1,160 @@
+const imgGroup = "https://www.figma.com/api/mcp/asset/0f784744-f222-45eb-8865-ffb4e054f85f.svg";
+const imgGroup1 = "https://www.figma.com/api/mcp/asset/ed454098-5746-4963-9bea-cdbe8d13849b.svg";
+const imgGroup2 = "https://www.figma.com/api/mcp/asset/8127d0e9-1110-4ad6-8395-a48f620222b2.svg";
+const imgGroup3 = "https://www.figma.com/api/mcp/asset/000cefe6-498b-49ed-b8b5-12ed312e804e.svg";
+const imgGroup4 = "https://www.figma.com/api/mcp/asset/a6ba10a9-2f36-44a5-b507-15a025411d85.svg";
+const imgGroup5 = "https://www.figma.com/api/mcp/asset/e58826ed-5ab5-460d-8c84-1bd09d2c1b5b.svg";
+
+export default function Component3() {
+  return (
+    <div className="content-stretch flex flex-col gap-[var(--spacings\/content-\(48\),48px)] items-start relative size-full" data-node-id="233:7494" data-name="3_Преимущества">
+      <div className="[word-break:break-word] content-stretch flex flex-col font-['Inter:Bold'] font-bold gap-[var(--spacings\/content-\(4\),4px)] items-start not-italic relative shrink-0 text-[color:var(--colors\/grays\/black,#0d0d0d)] w-full" data-node-id="233:7146" data-name="block_Headline">
+        <p className="leading-[1.2] relative shrink-0 text-[12px] tracking-[-0.24px] w-[232px]" data-node-id="I233:7146;1:7496">
+          Преимущества
+        </p>
+        <p className="leading-[0] relative shrink-0 text-[40px] tracking-[-0.8px] whitespace-nowrap" data-node-id="I233:7146;5:4037">
+          <span className="leading-[1.2]">{`Ключевые `}</span>
+          <span className="leading-[1.2] text-[#7c33fb]">особенности</span>
+        </p>
+      </div>
+      <div className="gap-x-[24px] gap-y-[24px] grid grid-cols-[repeat(3,minmax(0,1fr))] grid-rows-[repeat(2,minmax(0,1fr))] h-[428px] relative shrink-0 w-full" data-node-id="233:7493" data-name="layout_Cards">
+        <div className="bg-[var(--colors\/accents\/purple,#7c33fb)] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch p-[var(--padding\/padding-\(16\),16px)] relative rounded-[16px] self-stretch shrink-0" data-node-id="233:7231" data-name="element_Our Advantages_1">
+          <div className="bg-[var(--white-\(transparent\),rgba(253,253,253,0.2))] content-stretch flex items-center overflow-clip p-[4px] relative rounded-[500px] shrink-0" data-node-id="I233:7231;233:7351" data-name="element_Advantages">
+            <div className="bg-[var(--colors\/grays\/white,#fdfdfd)] overflow-clip relative rounded-[500px] shrink-0 size-[48px]" data-node-id="I233:7231;233:7351;1:8627" data-name="Container">
+              <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 overflow-clip size-[32px] top-1/2" data-node-id="I233:7231;233:7351;1:8628" data-name="icon_Advantages (24px, 32 px)">
+                <div className="absolute inset-[8.33%_12.5%_12.5%_12.5%]" data-node-id="I233:7231;233:7351;1:8628;233:7423" data-name="Group">
+                  <div className="absolute inset-[-2.96%_-3.13%]">
+                    <img alt="" className="block max-w-none size-full" src={imgGroup} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="[word-break:break-word] content-stretch flex flex-col gap-[var(--spacings\/content-\(8\),8px)] items-start leading-[1.25] not-italic relative shrink-0 text-[color:var(--colors\/grays\/white,#fdfdfd)] w-full" data-node-id="I233:7231;233:7352" data-name="layout_Text Content">
+            <p className="font-['Inter:Semi_Bold'] font-semibold relative shrink-0 text-[24px] tracking-[-0.48px] w-full" data-node-id="I233:7231;233:7353">
+              Электроусилитель EPS
+            </p>
+            <p className="font-['Inter:Medium'] font-medium relative shrink-0 text-[16px] tracking-[-0.32px] w-full" data-node-id="I233:7231;233:7354">
+              Снижает усилие на руле и делает маневрирование комфортнее.
+            </p>
+          </div>
+        </div>
+        <div className="bg-[var(--colors\/grays\/white,#fdfdfd)] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch p-[var(--padding\/padding-\(16\),16px)] relative rounded-[16px] self-stretch shrink-0" data-node-id="233:7209" data-name="element_Our Advantages_1">
+          <div className="bg-[var(--purple-\(transparent\),rgba(124,51,251,0.2))] content-stretch flex items-center overflow-clip p-[4px] relative rounded-[500px] shrink-0" data-node-id="I233:7209;233:7152" data-name="element_Advantages">
+            <div className="bg-[var(--colors\/accents\/purple,#7c33fb)] overflow-clip relative rounded-[500px] shrink-0 size-[48px]" data-node-id="I233:7209;233:7152;1:8627" data-name="Container">
+              <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 overflow-clip size-[32px] top-1/2" data-node-id="I233:7209;233:7152;1:8628" data-name="icon_Advantages (24px, 32 px)">
+                <div className="absolute inset-[16.67%_8.33%]" data-node-id="I233:7209;233:7152;1:8628;207:8247" data-name="Group">
+                  <div className="absolute inset-[-3.52%_-2.84%_-3.51%_-2.84%]">
+                    <img alt="" className="block max-w-none size-full" src={imgGroup1} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="[word-break:break-word] content-stretch flex flex-col gap-[var(--spacings\/content-\(8\),8px)] items-start leading-[1.25] not-italic relative shrink-0 w-full" data-node-id="I233:7209;233:7153" data-name="layout_Text Content">
+            <p className="font-['Inter:Semi_Bold'] font-semibold relative shrink-0 text-[24px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.48px] w-full" data-node-id="I233:7209;233:7154">
+              Пассажирская спинка
+            </p>
+            <p className="font-['Inter:Medium'] font-medium relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/gray-4,#736f79)] tracking-[-0.32px] w-full" data-node-id="I233:7209;233:7155">
+              Спинка пассажирского места и защита рук предусмотрены заводом.
+            </p>
+          </div>
+        </div>
+        <div className="bg-[var(--colors\/grays\/white,#fdfdfd)] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch p-[var(--padding\/padding-\(16\),16px)] relative rounded-[16px] self-stretch shrink-0" data-node-id="233:7248" data-name="element_Our Advantages_1">
+          <div className="bg-[var(--purple-\(transparent\),rgba(124,51,251,0.2))] content-stretch flex items-center overflow-clip p-[4px] relative rounded-[500px] shrink-0" data-node-id="I233:7248;233:7152" data-name="element_Advantages">
+            <div className="bg-[var(--colors\/accents\/purple,#7c33fb)] overflow-clip relative rounded-[500px] shrink-0 size-[48px]" data-node-id="I233:7248;233:7152;1:8627" data-name="Container">
+              <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 overflow-clip size-[32px] top-1/2" data-node-id="I233:7248;233:7152;1:8628" data-name="icon_Advantages (24px, 32 px)">
+                <div className="absolute inset-[12.5%_16.67%]" data-node-id="I233:7248;233:7152;1:8628;233:7409" data-name="Group">
+                  <div className="absolute inset-[-3.13%_-3.52%]">
+                    <img alt="" className="block max-w-none size-full" src={imgGroup2} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="[word-break:break-word] content-stretch flex flex-col gap-[var(--spacings\/content-\(8\),8px)] items-start leading-[1.25] not-italic relative shrink-0 w-full" data-node-id="I233:7248;233:7153" data-name="layout_Text Content">
+            <p className="font-['Inter:Semi_Bold'] font-semibold relative shrink-0 text-[24px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.48px] w-full" data-node-id="I233:7248;233:7154">
+              Понижающая передача
+            </p>
+            <p className="font-['Inter:Medium'] font-medium relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/gray-4,#736f79)] tracking-[-0.32px] w-full" data-node-id="I233:7248;233:7155">
+              Дополнительный диапазон вариатора для задач, требующих большей тяги на малой скорости.
+            </p>
+          </div>
+        </div>
+        <div className="bg-[var(--colors\/grays\/white,#fdfdfd)] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch p-[var(--padding\/padding-\(16\),16px)] relative rounded-[16px] self-stretch shrink-0" data-node-id="233:7265" data-name="element_Our Advantages_1">
+          <div className="bg-[var(--purple-\(transparent\),rgba(124,51,251,0.2))] content-stretch flex items-center overflow-clip p-[4px] relative rounded-[500px] shrink-0" data-node-id="I233:7265;233:7152" data-name="element_Advantages">
+            <div className="bg-[var(--colors\/accents\/purple,#7c33fb)] overflow-clip relative rounded-[500px] shrink-0 size-[48px]" data-node-id="I233:7265;233:7152;1:8627" data-name="Container">
+              <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 overflow-clip size-[32px] top-1/2" data-node-id="I233:7265;233:7152;1:8628" data-name="icon_Advantages (24px, 32 px)">
+                <div className="absolute inset-[8.33%_16.67%]" data-node-id="I233:7265;233:7152;1:8628;233:7413" data-name="Group">
+                  <div className="absolute inset-[-2.81%_-3.52%]">
+                    <img alt="" className="block max-w-none size-full" src={imgGroup3} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="[word-break:break-word] content-stretch flex flex-col gap-[var(--spacings\/content-\(8\),8px)] items-start leading-[1.25] not-italic relative shrink-0 w-full" data-node-id="I233:7265;233:7153" data-name="layout_Text Content">
+            <p className="font-['Inter:Semi_Bold'] font-semibold relative shrink-0 text-[24px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.48px] w-full" data-node-id="I233:7265;233:7154">
+              Независимая подвеска
+            </p>
+            <p className="font-['Inter:Medium'] font-medium relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/gray-4,#736f79)] tracking-[-0.32px] w-full" data-node-id="I233:7265;233:7155">
+              Двухрычажная конструкция спереди и сзади с пружинно-гидравлическими амортизаторами.
+            </p>
+          </div>
+        </div>
+        <div className="bg-[var(--colors\/accents\/purple,#7c33fb)] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch p-[var(--padding\/padding-\(16\),16px)] relative rounded-[16px] self-stretch shrink-0" data-node-id="233:7266" data-name="element_Our Advantages_1">
+          <div className="bg-[var(--white-\(transparent\),rgba(253,253,253,0.2))] content-stretch flex items-center overflow-clip p-[4px] relative rounded-[500px] shrink-0" data-node-id="I233:7266;233:7351" data-name="element_Advantages">
+            <div className="bg-[var(--colors\/grays\/white,#fdfdfd)] overflow-clip relative rounded-[500px] shrink-0 size-[48px]" data-node-id="I233:7266;233:7351;1:8627" data-name="Container">
+              <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 overflow-clip size-[32px] top-1/2" data-node-id="I233:7266;233:7351;1:8628" data-name="icon_Advantages (24px, 32 px)">
+                <div className="absolute inset-[8.33%_12.5%]" data-node-id="I233:7266;233:7351;1:8628;115:5773" data-name="Group">
+                  <div className="absolute inset-[-2.81%_-3.13%]">
+                    <img alt="" className="block max-w-none size-full" src={imgGroup4} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="[word-break:break-word] content-stretch flex flex-col gap-[var(--spacings\/content-\(8\),8px)] items-start leading-[1.25] not-italic relative shrink-0 text-[color:var(--colors\/grays\/white,#fdfdfd)] w-full" data-node-id="I233:7266;233:7352" data-name="layout_Text Content">
+            <p className="font-['Inter:Semi_Bold'] font-semibold relative shrink-0 text-[24px] tracking-[-0.48px] w-full" data-node-id="I233:7266;233:7353">
+              Подключаемый 4×4
+            </p>
+            <p className="font-['Inter:Medium'] font-medium relative shrink-0 text-[16px] tracking-[-0.32px] w-full" data-node-id="I233:7266;233:7354">
+              Задний и полный привод с возможностью блокировки переднего дифференциала.
+            </p>
+          </div>
+        </div>
+        <div className="bg-[var(--colors\/grays\/white,#fdfdfd)] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch p-[var(--padding\/padding-\(16\),16px)] relative rounded-[16px] self-stretch shrink-0" data-node-id="233:7267" data-name="element_Our Advantages_1">
+          <div className="bg-[var(--purple-\(transparent\),rgba(124,51,251,0.2))] content-stretch flex items-center overflow-clip p-[4px] relative rounded-[500px] shrink-0" data-node-id="I233:7267;233:7152" data-name="element_Advantages">
+            <div className="bg-[var(--colors\/accents\/purple,#7c33fb)] overflow-clip relative rounded-[500px] shrink-0 size-[48px]" data-node-id="I233:7267;233:7152;1:8627" data-name="Container">
+              <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 overflow-clip size-[32px] top-1/2" data-node-id="I233:7267;233:7152;1:8628" data-name="icon_Advantages (24px, 32 px)">
+                <div className="absolute inset-[16.67%_8.33%]" data-node-id="I233:7267;233:7152;1:8628;233:7429" data-name="Group">
+                  <div className="absolute inset-[-3.52%_-2.81%]">
+                    <img alt="" className="block max-w-none size-full" src={imgGroup5} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="[word-break:break-word] content-stretch flex flex-col gap-[var(--spacings\/content-\(8\),8px)] items-start leading-[1.25] not-italic relative shrink-0 w-full" data-node-id="I233:7267;233:7153" data-name="layout_Text Content">
+            <p className="font-['Inter:Semi_Bold'] font-semibold relative shrink-0 text-[24px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.48px] w-full" data-node-id="I233:7267;233:7154">
+              Лебёдка 3500 lb
+            </p>
+            <p className="font-['Inter:Medium'] font-medium relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/gray-4,#736f79)] tracking-[-0.32px] w-full" data-node-id="I233:7267;233:7155">
+              Электрическая лебёдка входит в заявленную заводскую комплектацию.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+These styles are contained in the design: H8 — 12 (Bold): Font(family: "Inter", style: Bold, size: 12, weight: 700, lineHeight: 1.2000000476837158, letterSpacing: -2), H1 — 40 (Bold): Font(family: "Inter", style: Bold, size: 40, weight: 700, lineHeight: 1.2000000476837158, letterSpacing: -2), H4 — 24: Font(family: "Inter", style: Semi Bold, size: 24, weight: 600, lineHeight: 1.25, letterSpacing: -2), P2 — 16: Font(family: "Inter", style: Medium, size: 16, weight: 500, lineHeight: 1.25, letterSpacing: -2).
+The generated code contains image and SVG URL constants, e.g. const image = 'https://www.figma.com/api/mcp/asset/550e8400-e29b-41d4-a716-446655440000.png'. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.

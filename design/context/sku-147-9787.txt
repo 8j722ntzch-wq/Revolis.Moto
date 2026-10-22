@@ -1,0 +1,200 @@
+const imgArrow = "https://www.figma.com/api/mcp/asset/55d2f1dd-c7a6-4f69-9e06-b52205a7378d.svg";
+const imgArrow1 = "https://www.figma.com/api/mcp/asset/1e1c1976-c475-48c9-96e9-d52a8afb90b8.svg";
+const imgVector = "https://www.figma.com/api/mcp/asset/62066520-cd66-42bd-acfd-ac384a8ca763.svg";
+const imgVector1 = "https://www.figma.com/api/mcp/asset/fa6fd72a-4aae-425b-9ca4-8e26bad9dbed.svg";
+const imgGroup = "https://www.figma.com/api/mcp/asset/8f9c950b-3307-452d-9345-f5cab78d72f2.svg";
+const imgGroup1 = "https://www.figma.com/api/mcp/asset/d7591544-4e33-4b7d-8a6b-0f291b2c5c94.svg";
+const imgVector2 = "https://www.figma.com/api/mcp/asset/43b49db5-32b8-4412-bed0-ed9cb08aef9e.svg";
+const imgVector3 = "https://www.figma.com/api/mcp/asset/db349b41-a238-4ecb-aaf0-59c23a38f18b.svg";
+const imgLayer1000 = "https://www.figma.com/api/mcp/asset/3f569881-4cda-4923-b5d7-388f511a067c.svg";
+const imgArrow2 = "https://www.figma.com/api/mcp/asset/1219bc5a-b5e7-4164-8089-55da7ccfbb66.svg";
+
+function ButtonBasicIconDefaultTrueMDesktop({ className }: { className?: string }) {
+  return (
+    <div className={className || "border border-[var(--colors\\/grays\\/white,#fdfdfd)] border-solid content-stretch flex items-center justify-center p-[10px] relative rounded-[10px]"} data-node-id="1:6998" data-name="button_Basic/Icon/Default/True/M/Desktop">
+      <div className="relative rounded-[2.353px] shrink-0 size-[20px]" data-node-id="1:6999" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
+        <div className="absolute flex items-center justify-center left-[0.08px] size-[19.849px] top-[0.08px]" data-node-id="I1:6999;1:7315">
+          <div className="-rotate-45 flex-none">
+            <div className="h-[11.228px] relative w-[16.842px]" data-name="Arrow">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow} />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ButtonBasicIconHoverTrueMDesktop({ className }: { className?: string }) {
+  return (
+    <div className={className || "bg-[var(--colors\\/grays\\/white,#fdfdfd)] content-stretch cursor-pointer flex items-center justify-center p-[10px] relative rounded-[10px]"} data-node-id="1:7000" data-name="button_Basic/Icon/Hover/True/M/Desktop">
+      <div className="relative rounded-[2.353px] shrink-0 size-[20px]" data-node-id="1:7001" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
+        <div className="absolute flex items-center justify-center left-[0.08px] size-[19.849px] top-[0.08px]" data-node-id="I1:7001;1:7315">
+          <div className="-rotate-45 flex-none">
+            <div className="h-[11.228px] relative w-[16.842px]" data-name="Arrow">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow1} />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+type LogoAlfaProps = {
+  className?: string;
+  property1?: "Default";
+};
+
+function LogoAlfa({ className, property1 = "Default" }: LogoAlfaProps) {
+  return (
+    <div className={className || "h-[34px] overflow-clip relative w-[170px]"} data-node-id="26:5413">
+      <div className="absolute inset-[19.75%_0.46%_32.21%_90.27%]" data-node-id="26:5397" data-name="Vector">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector} />
+      </div>
+      <div className="absolute inset-[19.75%_11.61%_32.21%_80.08%]" data-node-id="26:5398" data-name="Vector">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector1} />
+      </div>
+      <div className="absolute contents inset-[0_0.46%_0_0]" data-node-id="26:5399" data-name="Clip path group">
+        <div className="absolute inset-[0_21.3%_0_0] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-size-[169.21px_34px]" data-node-id="26:5402" style={{ maskImage: `url("${imgGroup}")` }} data-name="Group">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup1} />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+type ElementBankProps = {
+  className?: string;
+  device?: "Desktop";
+  state?: "Default";
+  type?: "Альфа";
+};
+
+function ElementBank({ className, device = "Desktop", state = "Default", type = "Альфа" }: ElementBankProps) {
+  return (
+    <div className={className || "h-[174px] relative w-[288px]"} data-node-id="26:5440">
+      <div className="absolute bg-[#ef3124] h-[174px] left-0 rounded-[16px] top-0 w-[288px]" data-node-id="26:5524" data-name="Container">
+        <LogoAlfa className="absolute h-[34px] left-[20px] overflow-clip top-[20px] w-[170px]" />
+        <ButtonBasicIconDefaultTrueMDesktop className="absolute border border-[var(--colors\/grays\/white,#fdfdfd)] border-solid content-stretch flex items-center justify-center left-[228px] p-[10px] rounded-[10px] top-[114px]" />
+        <div className="[word-break:break-word] absolute content-stretch flex flex-col gap-[var(--spacings\/content-\(12\),12px)] items-start left-[20px] not-italic text-[14px] text-white top-[84px] tracking-[-0.28px] w-[139px]" data-node-id="26:5439" data-name="layout_Heading, Body">
+          <p className="font-['Inter:Semi_Bold'] font-semibold leading-[1.3] min-w-full relative shrink-0 w-[min-content]" data-node-id="26:5435">
+            Кредит и рассрочка
+          </p>
+          <div className="content-stretch flex flex-col font-['Inter:Medium'] font-medium gap-[var(--spacings\/content-\(4\),4px)] items-start leading-[1.25] relative shrink-0 w-[123px]" data-node-id="26:5438" data-name="layout_Body">
+            <p className="relative shrink-0 w-full" data-node-id="26:5436">
+              До 12 месяцев
+            </p>
+            <p className="relative shrink-0 w-full" data-node-id="26:5437">
+              От 0,01 % годовых
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function Component7() {
+  return (
+    <div className="relative size-full" data-node-id="147:9787" data-name="7_Кредиты">
+      <div className="absolute bg-[var(--colors\/grays\/black,#0d0d0d)] h-[294px] left-0 top-0 w-[1470px]" data-node-id="147:9788" />
+      <div className="absolute flex inset-[-131.18%_6.6%_-130.9%_-5.51%] items-center justify-center" data-node-id="147:9789" style={{ containerType: "size" }}>
+        <div className="flex-none h-[100cqw] rotate-90 w-[100cqh]">
+          <div className="relative size-full">
+            <div className="absolute inset-[-2.03%_-2.78%]">
+              <img alt="" className="block max-w-none size-full" src={imgVector2} />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="absolute flex inset-[-131.18%_6.6%_-130.9%_-5.51%] items-center justify-center" data-node-id="147:9790" style={{ containerType: "size" }}>
+        <div className="flex-none h-[100cqw] rotate-90 w-[100cqh]">
+          <div className="relative size-full">
+            <div className="absolute inset-[-0.28%_-0.38%]">
+              <img alt="" className="block max-w-none size-full" src={imgVector3} />
+            </div>
+          </div>
+        </div>
+      </div>
+      <p className="[word-break:break-word] absolute blur-[25px] font-['Inter:Semi_Bold'] font-semibold leading-[1.2] left-[123px] not-italic text-[28px] text-[color:var(--colors\/accents\/purple,#7c33fb)] top-[78px] tracking-[-0.56px] w-[288px]" data-node-id="147:9791">
+        Кредит
+      </p>
+      <div className="absolute content-stretch flex gap-[24px] items-center left-[123px] top-[60px]" data-node-id="147:9792" data-name="3_Кредиты">
+        <div className="[word-break:break-word] content-stretch flex flex-col gap-[var(--spacings\/content-\(48\),48px)] items-start not-italic relative shrink-0 w-[288px]" data-node-id="147:9793" data-name="layout_Headline, Text">
+          <div className="content-stretch flex flex-col gap-[var(--spacings\/content-\(4\),4px)] items-start relative shrink-0 text-[color:var(--colors\/grays\/white,#fdfdfd)] w-full" data-node-id="147:9794" data-name="block_Headline">
+            <p className="font-['Inter:Bold'] font-bold leading-[1.2] relative shrink-0 text-[12px] tracking-[-0.24px] whitespace-nowrap" data-node-id="147:9795">
+              Забирай сейчас — плати потом
+            </p>
+            <div className="font-['Inter:Semi_Bold'] font-semibold leading-[0] relative shrink-0 text-[28px] tracking-[-0.56px] w-[288px]" data-node-id="147:9796">
+              <p className="mb-0">
+                <span className="leading-[1.2] text-[#7c33fb]">Кредит</span>
+                <span className="leading-[1.2]">{` и рассрочка`}</span>
+              </p>
+              <p className="leading-[1.2]">от банков-партнёров</p>
+            </div>
+          </div>
+          <p className="font-['Inter:Medium'] font-medium leading-[1.25] relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/gray-2,#ebe7f1)] tracking-[-0.32px] w-[288px]" data-node-id="147:9797">{`Поможем подобрать удобные условия финансирования `}</p>
+        </div>
+        <div className="content-stretch flex gap-[24px] items-center relative shrink-0" data-node-id="147:9798" data-name="layout_Banks">
+          <ElementBank className="h-[174px] relative shrink-0 w-[288px]" />
+          <div className="h-[174px] relative shrink-0 w-[288px]" data-node-id="147:9800" data-name="element_Bank">
+            <div className="absolute bg-[#052eb7] h-[174px] left-0 rounded-[16px] top-0 w-[288px]" data-node-id="I147:9800;26:5641" data-name="Container">
+              <ButtonBasicIconDefaultTrueMDesktop className="absolute border border-[var(--colors\/grays\/white,#fdfdfd)] border-solid content-stretch flex items-center justify-center left-[228px] p-[10px] rounded-[10px] top-[114px]" />
+              <div className="[word-break:break-word] absolute content-stretch flex flex-col gap-[var(--spacings\/content-\(12\),12px)] items-start left-[20px] not-italic text-[14px] text-[color:var(--colors\/grays\/white,#fdfdfd)] top-[84px] tracking-[-0.28px] w-[139px]" data-node-id="I147:9800;26:5645" data-name="layout_Heading, Body">
+                <p className="font-['Inter:Semi_Bold'] font-semibold leading-[1.3] min-w-full relative shrink-0 w-[min-content]" data-node-id="I147:9800;26:5646">
+                  Кредит и рассрочка
+                </p>
+                <div className="content-stretch flex flex-col font-['Inter:Medium'] font-medium gap-[var(--spacings\/content-\(4\),4px)] items-start leading-[1.25] relative shrink-0 w-[123px]" data-node-id="I147:9800;26:5647" data-name="layout_Body">
+                  <p className="relative shrink-0 w-full" data-node-id="I147:9800;26:5648">
+                    До 12 месяцев
+                  </p>
+                  <p className="relative shrink-0 w-full" data-node-id="I147:9800;26:5649">
+                    От 0,01 % годовых
+                  </p>
+                </div>
+              </div>
+              <div className="absolute h-[34px] left-[20px] overflow-clip top-[20px] w-[248px]" data-node-id="I147:9800;104:7832" data-name="logo_Techno">
+                <div className="absolute inset-[25.8%_-0.01%_21%_0.01%]" data-node-id="I147:9800;104:7832;104:7814" data-name="Layer1000">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLayer1000} />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="h-[174px] relative shrink-0 w-[288px]" data-node-id="147:9801" data-name="element_Bank">
+            <div className="absolute bg-[var(--colors\/grays\/gray-6,#242424)] h-[174px] left-0 rounded-[16px] top-0 w-[288px]" data-node-id="I147:9801;26:5737" data-name="Container">
+              <div className="absolute border border-[var(--colors\/grays\/white,#fdfdfd)] border-solid content-stretch flex gap-[4px] items-center justify-center left-[20px] px-[var(--padding\/padding-\(16\),16px)] py-[var(--padding\/padding-\(12\),12px)] rounded-[10px] top-[112px] w-[248px]" data-node-id="I147:9801;26:5740" data-name="button_Basic">
+                <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.28px] whitespace-nowrap" data-node-id="I147:9801;26:5740;1:7010">
+                  Подобрать условия оплаты
+                </p>
+                <div className="relative rounded-[1.882px] shrink-0 size-[16px]" data-node-id="I147:9801;26:5740;1:7011" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
+                  <div className="absolute h-[8.784px] left-[1.41px] top-[3.61px] w-[13.176px]" data-node-id="I147:9801;26:5740;1:7011;1:7283" data-name="Arrow">
+                    <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow2} />
+                  </div>
+                </div>
+              </div>
+              <div className="[word-break:break-word] absolute content-stretch flex flex-col gap-[var(--spacings\/content-\(4\),4px)] items-start left-[20px] not-italic top-[13px] w-[248px]" data-node-id="I147:9801;26:5741" data-name="layout_Heading, Body">
+                <p className="font-['Inter:Bold'] font-bold leading-[0] relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.32px] w-full" data-node-id="I147:9801;26:5744">
+                  <span className="leading-[1.25]">{`Поможем подобрать `}</span>
+                  <span className="leading-[1.25] text-[#7c33fb]">комфортные</span>
+                  <span className="leading-[1.25]">{` условия`}</span>
+                </p>
+                <p className="font-['Inter:Medium'] font-medium leading-[1.25] relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/gray-2,#ebe7f1)] tracking-[-0.28px] w-full whitespace-pre-wrap" data-node-id="I147:9801;26:5764">{`Расскажем о доступных  программах и поможем оформить`}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+These styles are contained in the design: P2 — 16: Font(family: "Inter", style: Medium, size: 16, weight: 500, lineHeight: 1.25, letterSpacing: -2), H7 — 14: Font(family: "Inter", style: Semi Bold, size: 14, weight: 600, lineHeight: 1.2999999523162842, letterSpacing: -2), P3 — 14: Font(family: "Inter", style: Medium, size: 14, weight: 500, lineHeight: 1.25, letterSpacing: -2), H6 — 16 (Bold): Font(family: "Inter", style: Bold, size: 16, weight: 700, lineHeight: 1.25, letterSpacing: -2).
+The generated code contains image and SVG URL constants, e.g. const image = 'https://www.figma.com/api/mcp/asset/550e8400-e29b-41d4-a716-446655440000.png'. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.

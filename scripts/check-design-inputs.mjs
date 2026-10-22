@@ -70,6 +70,14 @@ try {
     sectionIds.add(section.nodeId);
     if (section.quality !== 'high-fidelity' || !await nonEmptyFile(localPath(section.contextFile, 'design/context/'))) issues.push(`Missing popup context: ${section.nodeId}.`);
   }
+  const productPages = JSON.parse(await readFile(resolve(root, 'design/product-pages.json'), 'utf8'));
+  if (productPages.fileKey !== source.fileKey || !nodeIdPattern.test(productPages.desktop?.nodeId) || !nodeIdPattern.test(productPages.mobile?.nodeId)) issues.push('SKU targets are invalid.');
+  if (!productPages.contexts?.length) issues.push('SKU contexts are missing.');
+  for (const section of productPages.contexts ?? []) {
+    if (!nodeIdPattern.test(section.nodeId) || sectionIds.has(section.nodeId)) issues.push('SKU section IDs must be valid and unique.');
+    sectionIds.add(section.nodeId);
+    if (section.quality !== 'high-fidelity' || !await nonEmptyFile(localPath(section.contextFile, 'design/context/'))) issues.push(`Missing SKU context: ${section.nodeId}.`);
+  }
   if (manifest.status !== 'imported') issues.push('Original assets have not been imported.');
   if (!Array.isArray(manifest.assets) || !manifest.assets.length) issues.push('Asset manifest is empty.');
   const assetIds = new Set();

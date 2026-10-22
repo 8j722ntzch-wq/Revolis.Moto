@@ -1,0 +1,833 @@
+const imgFrame = "https://www.figma.com/api/mcp/asset/1df394da-e65b-4713-bb66-9b93942a436e.svg";
+
+type TablePrimaryProps = {
+  className?: string;
+  prop1?: string;
+  prop2?: string;
+  prop3?: string;
+  prop4?: string;
+  prop5?: string;
+  propValue?: string;
+};
+
+function TablePrimary({ className, prop1 = "Рабочий объём", prop2 = "Рабочий объём", prop3 = "Рабочий объём", prop4 = "Рабочий объём", prop5 = "Рабочий объём", propValue = "Рабочий объём" }: TablePrimaryProps) {
+  return (
+    <div className={className || "bg-[var(--colors\\/grays\\/white,#fdfdfd)] content-stretch flex items-start overflow-clip py-[4px] relative w-[1224px]"} data-node-id="288:9270" data-name="Table / Primary">
+      <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[309px]" data-node-id="288:9240" data-name="Cell">
+        <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="288:9275" data-name="Content">
+          <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="288:9276">
+            <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="288:9279">
+              {propValue}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[183px]" data-node-id="288:9245" data-name="Cell">
+        <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="288:9296" data-name="Content">
+          <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="288:9297">
+            <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="288:9300">
+              {prop1}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[183px]" data-node-id="288:9250" data-name="Cell">
+        <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="288:9302" data-name="Content">
+          <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="288:9303">
+            <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="288:9306">
+              {prop2}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[183px]" data-node-id="288:9255" data-name="Cell">
+        <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="288:9308" data-name="Content">
+          <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="288:9309">
+            <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="288:9312">
+              {prop3}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[183px]" data-node-id="288:9260" data-name="Cell">
+        <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="288:9314" data-name="Content">
+          <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="288:9315">
+            <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="288:9318">
+              {prop4}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[183px]" data-node-id="288:9265" data-name="Cell">
+        <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="288:9320" data-name="Content">
+          <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="288:9321">
+            <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="288:9324">
+              {prop5}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+type TableSecondaryProps = {
+  className?: string;
+  prop1?: string;
+  prop2?: string;
+  prop3?: string;
+  prop4?: string;
+  prop5?: string;
+  propValue?: string;
+};
+
+function TableSecondary({ className, prop1 = "Рабочий объём", prop2 = "Рабочий объём", prop3 = "Рабочий объём", prop4 = "Рабочий объём", prop5 = "Рабочий объём", propValue = "Рабочий объём" }: TableSecondaryProps) {
+  return (
+    <div className={className || "bg-[var(--colors\\/grays\\/gray-1,#f1eef8)] content-stretch flex items-start overflow-clip py-[4px] relative w-[1224px]"} data-node-id="288:9357" data-name="Table / Secondary">
+      <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[309px]" data-node-id="288:9327" data-name="Cell">
+        <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="288:9362" data-name="Content">
+          <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="288:9363">
+            <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="288:9366">
+              {propValue}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[183px]" data-node-id="288:9332" data-name="Cell">
+        <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="288:9383" data-name="Content">
+          <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="288:9384">
+            <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="288:9387">
+              {prop1}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[183px]" data-node-id="288:9337" data-name="Cell">
+        <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="288:9389" data-name="Content">
+          <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="288:9390">
+            <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="288:9393">
+              {prop2}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[183px]" data-node-id="288:9342" data-name="Cell">
+        <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="288:9395" data-name="Content">
+          <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="288:9396">
+            <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="288:9399">
+              {prop3}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[183px]" data-node-id="288:9347" data-name="Cell">
+        <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="288:9401" data-name="Content">
+          <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="288:9402">
+            <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="288:9405">
+              {prop4}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[183px]" data-node-id="288:9352" data-name="Cell">
+        <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="288:9407" data-name="Content">
+          <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="288:9408">
+            <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="288:9411">
+              {prop5}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+type TableHeaderProps = {
+  className?: string;
+  prop1?: string;
+  prop2?: string;
+  prop3?: string;
+  prop4?: string;
+  prop5?: string;
+  propValue?: string;
+};
+
+function TableHeader({ className, prop1 = "400 EFI", prop2 = "500 EFI", prop3 = "500 EFI/EPS", prop4 = "700 EFI", prop5 = "700 EFI/EPS", propValue = "Характеристика" }: TableHeaderProps) {
+  return (
+    <div className={className || "bg-[var(--colors\\/grays\\/gray-1,#f1eef8)] content-stretch flex items-start overflow-clip py-[4px] relative w-[1224px]"} data-node-id="288:9207" data-name="Table / Header">
+      <div className="h-[20px] relative shrink-0 w-[309px]" data-node-id="288:9220" data-name="Column header">
+        <p className="[word-break:break-word] absolute font-['Inter:Bold'] font-bold leading-[1.25] left-0 not-italic text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] top-[calc(50%-10px)] tracking-[-0.32px] whitespace-nowrap" data-node-id="288:9221">
+          {propValue}
+        </p>
+      </div>
+      <div className="h-[20px] relative shrink-0 w-[183px]" data-node-id="288:9223" data-name="Column header">
+        <p className="[word-break:break-word] absolute font-['Inter:Bold'] font-bold leading-[1.25] left-0 not-italic text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] top-[calc(50%-10px)] tracking-[-0.32px] whitespace-nowrap" data-node-id="288:9224">
+          {prop1}
+        </p>
+      </div>
+      <div className="h-[20px] relative shrink-0 w-[183px]" data-node-id="288:9226" data-name="Column header">
+        <p className="[word-break:break-word] absolute font-['Inter:Bold'] font-bold leading-[1.25] left-0 not-italic text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] top-[calc(50%-10px)] tracking-[-0.32px] whitespace-nowrap" data-node-id="288:9227">
+          {prop2}
+        </p>
+      </div>
+      <div className="h-[20px] relative shrink-0 w-[183px]" data-node-id="288:9229" data-name="Column header">
+        <p className="[word-break:break-word] absolute font-['Inter:Bold'] font-bold leading-[1.25] left-0 not-italic text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] top-[calc(50%-10px)] tracking-[-0.32px] whitespace-nowrap" data-node-id="288:9230">
+          {prop3}
+        </p>
+      </div>
+      <div className="h-[20px] relative shrink-0 w-[183px]" data-node-id="288:9232" data-name="Column header">
+        <p className="[word-break:break-word] absolute font-['Inter:Bold'] font-bold leading-[1.25] left-0 not-italic text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] top-[calc(50%-10px)] tracking-[-0.32px] whitespace-nowrap" data-node-id="288:9233">
+          {prop4}
+        </p>
+      </div>
+      <div className="h-[20px] relative shrink-0 w-[183px]" data-node-id="288:9235" data-name="Column header">
+        <p className="[word-break:break-word] absolute font-['Inter:Bold'] font-bold leading-[1.25] left-0 not-italic text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] top-[calc(50%-10px)] tracking-[-0.32px] whitespace-nowrap" data-node-id="288:9236">
+          {prop5}
+        </p>
+      </div>
+    </div>
+  );
+}
+
+export default function Component8() {
+  return (
+    <div className="content-stretch flex flex-col gap-[48px] items-start relative size-full" data-node-id="308:9030" data-name="8_Сравнение">
+      <div className="[word-break:break-word] content-stretch flex flex-col font-['Inter:Bold'] font-bold gap-[var(--spacings\/content-\(4\),4px)] items-start not-italic relative shrink-0 text-[color:var(--colors\/grays\/black,#0d0d0d)] w-full" data-node-id="296:9986" data-name="block_Headline">
+        <p className="leading-[1.2] relative shrink-0 text-[12px] tracking-[-0.24px] w-[232px]" data-node-id="I296:9986;1:7496">
+          Сравнение
+        </p>
+        <div className="leading-[0] relative shrink-0 text-[40px] tracking-[-0.8px] whitespace-nowrap" data-node-id="I296:9986;5:4037">
+          <p className="mb-0">
+            <span className="leading-[1.2] text-[#7c33fb]">Сравнение</span>
+            <span className="leading-[1.2]">{` моделей`}</span>
+          </p>
+          <p className="leading-[1.2]">BaltMotors Striker</p>
+        </div>
+      </div>
+      <div className="content-stretch flex flex-col items-start overflow-clip relative shrink-0 w-full" data-node-id="303:11053" data-name="Таблица характеристик">
+        <TableHeader className="bg-[var(--colors\/grays\/gray-1,#f1eef8)] content-stretch flex items-start overflow-clip py-[4px] relative shrink-0 w-[1224px]" />
+        <TablePrimary className="bg-[var(--colors\/grays\/white,#fdfdfd)] content-stretch flex items-start overflow-clip py-[4px] relative shrink-0 w-[1224px]" prop1="392 см³" prop2="471 см³" prop3="471 см³" prop4="686 см³" prop5="686 см³" />
+        <TableSecondary className="bg-[var(--colors\/grays\/gray-1,#f1eef8)] content-stretch flex items-start overflow-clip py-[4px] relative shrink-0 w-[1224px]" prop1="—" prop2="—" prop3="—" prop4="53 Н·м" prop5="53 Н·м" propValue="Крутящий момент" />
+        <TablePrimary className="bg-[var(--colors\/grays\/white,#fdfdfd)] content-stretch flex items-start overflow-clip py-[4px] relative shrink-0 w-[1224px]" prop1="F–N–R" prop2="L–H–N–R–P" prop3="L–H–N–R–P" prop4="L–H–N–R–P" prop5="L–H–N–R–P" propValue="Вариатор" />
+        <div className="bg-[var(--colors\/grays\/gray-1,#f1eef8)] content-stretch flex items-center overflow-clip py-[4px] relative shrink-0 w-[1224px]" data-node-id="303:11058" data-name="Secondary — Подключаемый полный привод">
+          <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[309px]" data-node-id="I303:11058;288:9327" data-name="Cell">
+            <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I303:11058;288:9362" data-name="Content">
+              <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="I303:11058;288:9363">
+                <div className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[0] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I303:11058;288:9366">
+                  <p className="leading-[1.25] mb-0">Подключаемый полный</p>
+                  <p className="leading-[1.25]">привод</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[183px]" data-node-id="I303:11058;288:9332" data-name="Cell">
+            <div className="content-stretch flex items-center justify-center overflow-clip relative shrink-0 w-[20px]" data-node-id="I303:11058;288:9333" data-name="Indicator">
+              <div className="relative shrink-0 size-[20px]" data-node-id="I303:11058;288:9334" data-name="Checkmark">
+                <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[12px] top-1/2" data-node-id="I303:11058;288:9334;1:7262" data-name="Frame">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFrame} />
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I303:11058;288:9383" data-name="Content">
+              <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="I303:11058;288:9384">
+                <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I303:11058;288:9387">
+                  Да
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[183px]" data-node-id="I303:11058;288:9337" data-name="Cell">
+            <div className="content-stretch flex items-center justify-center overflow-clip relative shrink-0 w-[20px]" data-node-id="I303:11058;288:9338" data-name="Indicator">
+              <div className="relative shrink-0 size-[20px]" data-node-id="I303:11058;288:9339" data-name="Checkmark">
+                <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[12px] top-1/2" data-node-id="I303:11058;288:9339;1:7262" data-name="Frame">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFrame} />
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I303:11058;288:9389" data-name="Content">
+              <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="I303:11058;288:9390">
+                <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I303:11058;288:9393">
+                  Да
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[183px]" data-node-id="I303:11058;288:9342" data-name="Cell">
+            <div className="content-stretch flex items-center justify-center overflow-clip relative shrink-0 w-[20px]" data-node-id="I303:11058;288:9343" data-name="Indicator">
+              <div className="relative shrink-0 size-[20px]" data-node-id="I303:11058;288:9344" data-name="Checkmark">
+                <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[12px] top-1/2" data-node-id="I303:11058;288:9344;1:7262" data-name="Frame">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFrame} />
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I303:11058;288:9395" data-name="Content">
+              <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="I303:11058;288:9396">
+                <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I303:11058;288:9399">
+                  Да
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[183px]" data-node-id="I303:11058;288:9347" data-name="Cell">
+            <div className="content-stretch flex items-center justify-center overflow-clip relative shrink-0 w-[20px]" data-node-id="I303:11058;288:9348" data-name="Indicator">
+              <div className="relative shrink-0 size-[20px]" data-node-id="I303:11058;288:9349" data-name="Checkmark">
+                <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[12px] top-1/2" data-node-id="I303:11058;288:9349;1:7262" data-name="Frame">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFrame} />
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I303:11058;288:9401" data-name="Content">
+              <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="I303:11058;288:9402">
+                <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I303:11058;288:9405">
+                  Да
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[183px]" data-node-id="I303:11058;288:9352" data-name="Cell">
+            <div className="content-stretch flex items-center justify-center overflow-clip relative shrink-0 w-[20px]" data-node-id="I303:11058;288:9353" data-name="Indicator">
+              <div className="relative shrink-0 size-[20px]" data-node-id="I303:11058;288:9354" data-name="Checkmark">
+                <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[12px] top-1/2" data-node-id="I303:11058;288:9354;1:7262" data-name="Frame">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFrame} />
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I303:11058;288:9407" data-name="Content">
+              <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="I303:11058;288:9408">
+                <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I303:11058;288:9411">
+                  Да
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="bg-[var(--colors\/grays\/white,#fdfdfd)] content-stretch flex items-center overflow-clip py-[4px] relative shrink-0 w-[1224px]" data-node-id="303:11059" data-name="Primary — Блокировка переднего дифференциала">
+          <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[309px]" data-node-id="I303:11059;288:9240" data-name="Cell">
+            <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I303:11059;288:9275" data-name="Content">
+              <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="I303:11059;288:9276">
+                <div className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[0] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I303:11059;288:9279">
+                  <p className="leading-[1.25] mb-0">Блокировка переднего</p>
+                  <p className="leading-[1.25]">дифференциала</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[4px] items-center overflow-clip relative shrink-0 w-[183px]" data-node-id="I303:11059;288:9245" data-name="Cell">
+            <div className="content-stretch flex h-[26px] items-center justify-center overflow-clip relative shrink-0 w-[20px]" data-node-id="I303:11059;288:9246" data-name="Indicator">
+              <div className="relative shrink-0 size-[20px]" data-node-id="I303:11059;288:9247" data-name="Checkmark">
+                <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[12px] top-1/2" data-node-id="I303:11059;288:9247;1:7262" data-name="Frame">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFrame} />
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I303:11059;288:9296" data-name="Content">
+              <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="I303:11059;288:9297">
+                <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I303:11059;288:9300">
+                  Да
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[4px] items-center overflow-clip relative shrink-0 w-[183px]" data-node-id="I303:11059;288:9250" data-name="Cell">
+            <div className="content-stretch flex h-[26px] items-center justify-center overflow-clip relative shrink-0 w-[20px]" data-node-id="I303:11059;288:9251" data-name="Indicator">
+              <div className="relative shrink-0 size-[20px]" data-node-id="I303:11059;288:9252" data-name="Checkmark">
+                <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[12px] top-1/2" data-node-id="I303:11059;288:9252;1:7262" data-name="Frame">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFrame} />
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I303:11059;288:9302" data-name="Content">
+              <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="I303:11059;288:9303">
+                <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I303:11059;288:9306">
+                  Да
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[4px] items-center overflow-clip relative shrink-0 w-[183px]" data-node-id="I303:11059;288:9255" data-name="Cell">
+            <div className="content-stretch flex h-[26px] items-center justify-center overflow-clip relative shrink-0 w-[20px]" data-node-id="I303:11059;288:9256" data-name="Indicator">
+              <div className="relative shrink-0 size-[20px]" data-node-id="I303:11059;288:9257" data-name="Checkmark">
+                <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[12px] top-1/2" data-node-id="I303:11059;288:9257;1:7262" data-name="Frame">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFrame} />
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I303:11059;288:9308" data-name="Content">
+              <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="I303:11059;288:9309">
+                <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I303:11059;288:9312">
+                  Да
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[4px] items-center overflow-clip relative shrink-0 w-[183px]" data-node-id="I303:11059;288:9260" data-name="Cell">
+            <div className="content-stretch flex h-[26px] items-center justify-center overflow-clip relative shrink-0 w-[20px]" data-node-id="I303:11059;288:9261" data-name="Indicator">
+              <div className="relative shrink-0 size-[20px]" data-node-id="I303:11059;288:9262" data-name="Checkmark">
+                <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[12px] top-1/2" data-node-id="I303:11059;288:9262;1:7262" data-name="Frame">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFrame} />
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I303:11059;288:9314" data-name="Content">
+              <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="I303:11059;288:9315">
+                <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I303:11059;288:9318">
+                  Да
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[4px] items-center overflow-clip relative shrink-0 w-[183px]" data-node-id="I303:11059;288:9265" data-name="Cell">
+            <div className="content-stretch flex h-[26px] items-center justify-center overflow-clip relative shrink-0 w-[20px]" data-node-id="I303:11059;288:9266" data-name="Indicator">
+              <div className="relative shrink-0 size-[20px]" data-node-id="I303:11059;288:9267" data-name="Checkmark">
+                <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[12px] top-1/2" data-node-id="I303:11059;288:9267;1:7262" data-name="Frame">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFrame} />
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I303:11059;288:9320" data-name="Content">
+              <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="I303:11059;288:9321">
+                <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I303:11059;288:9324">
+                  Да
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="bg-[var(--colors\/grays\/gray-1,#f1eef8)] content-stretch flex items-center overflow-clip py-[4px] relative shrink-0 w-[1224px]" data-node-id="303:11060" data-name="Secondary — Понижающая передача">
+          <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[309px]" data-node-id="I303:11060;288:9327" data-name="Cell">
+            <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I303:11060;288:9362" data-name="Content">
+              <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="I303:11060;288:9363">
+                <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I303:11060;288:9366">
+                  Понижающая передача
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[4px] items-center overflow-clip relative shrink-0 w-[183px]" data-node-id="I303:11060;288:9332" data-name="Cell">
+            <div className="content-stretch flex h-[26px] items-center justify-center overflow-clip relative shrink-0 w-[20px]" data-node-id="I303:11060;288:9333" data-name="Indicator">
+              <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.3] not-italic relative shrink-0 text-[20px] text-[color:var(--colors\/grays\/gray-3,#c2bfc9)] tracking-[-0.4px] whitespace-nowrap" data-node-id="I303:11060;288:9335">
+                –
+              </p>
+            </div>
+            <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I303:11060;288:9383" data-name="Content">
+              <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="I303:11060;288:9384">
+                <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/gray-3,#c2bfc9)] tracking-[-0.32px]" data-node-id="I303:11060;288:9387">
+                  Нет
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[183px]" data-node-id="I303:11060;288:9337" data-name="Cell">
+            <div className="content-stretch flex items-center justify-center overflow-clip relative shrink-0 w-[20px]" data-node-id="I303:11060;288:9338" data-name="Indicator">
+              <div className="relative shrink-0 size-[20px]" data-node-id="I303:11060;288:9339" data-name="Checkmark">
+                <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[12px] top-1/2" data-node-id="I303:11060;288:9339;1:7262" data-name="Frame">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFrame} />
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I303:11060;288:9389" data-name="Content">
+              <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="I303:11060;288:9390">
+                <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I303:11060;288:9393">
+                  Есть
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[183px]" data-node-id="I303:11060;288:9342" data-name="Cell">
+            <div className="content-stretch flex items-center justify-center overflow-clip relative shrink-0 w-[20px]" data-node-id="I303:11060;288:9343" data-name="Indicator">
+              <div className="relative shrink-0 size-[20px]" data-node-id="I303:11060;288:9344" data-name="Checkmark">
+                <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[12px] top-1/2" data-node-id="I303:11060;288:9344;1:7262" data-name="Frame">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFrame} />
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I303:11060;288:9395" data-name="Content">
+              <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="I303:11060;288:9396">
+                <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I303:11060;288:9399">
+                  Есть
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[183px]" data-node-id="I303:11060;288:9347" data-name="Cell">
+            <div className="content-stretch flex items-center justify-center overflow-clip relative shrink-0 w-[20px]" data-node-id="I303:11060;288:9348" data-name="Indicator">
+              <div className="relative shrink-0 size-[20px]" data-node-id="I303:11060;288:9349" data-name="Checkmark">
+                <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[12px] top-1/2" data-node-id="I303:11060;288:9349;1:7262" data-name="Frame">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFrame} />
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I303:11060;288:9401" data-name="Content">
+              <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="I303:11060;288:9402">
+                <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I303:11060;288:9405">
+                  Есть
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[183px]" data-node-id="I303:11060;288:9352" data-name="Cell">
+            <div className="content-stretch flex items-center justify-center overflow-clip relative shrink-0 w-[20px]" data-node-id="I303:11060;288:9353" data-name="Indicator">
+              <div className="relative shrink-0 size-[20px]" data-node-id="I303:11060;288:9354" data-name="Checkmark">
+                <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[12px] top-1/2" data-node-id="I303:11060;288:9354;1:7262" data-name="Frame">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFrame} />
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I303:11060;288:9407" data-name="Content">
+              <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="I303:11060;288:9408">
+                <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I303:11060;288:9411">
+                  Есть
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="bg-[var(--colors\/grays\/white,#fdfdfd)] content-stretch flex items-center overflow-clip py-[4px] relative shrink-0 w-[1224px]" data-node-id="303:11061" data-name="Primary — Электроусилитель EPS">
+          <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[309px]" data-node-id="I303:11061;288:9240" data-name="Cell">
+            <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I303:11061;288:9275" data-name="Content">
+              <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="I303:11061;288:9276">
+                <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I303:11061;288:9279">
+                  Электроусилитель EPS
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[4px] items-center overflow-clip relative shrink-0 w-[183px]" data-node-id="I303:11061;288:9245" data-name="Cell">
+            <div className="content-stretch flex items-center justify-center overflow-clip relative shrink-0 w-[20px]" data-node-id="I303:11061;288:9246" data-name="Indicator">
+              <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.3] not-italic relative shrink-0 text-[20px] text-[color:var(--colors\/grays\/gray-3,#c2bfc9)] tracking-[-0.4px] whitespace-nowrap" data-node-id="I303:11061;288:9248">
+                –
+              </p>
+            </div>
+            <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I303:11061;288:9296" data-name="Content">
+              <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="I303:11061;288:9297">
+                <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/gray-3,#c2bfc9)] tracking-[-0.32px]" data-node-id="I303:11061;288:9300">
+                  Нет
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[4px] items-center overflow-clip relative shrink-0 w-[183px]" data-node-id="I303:11061;288:9250" data-name="Cell">
+            <div className="content-stretch flex items-center justify-center overflow-clip relative shrink-0 w-[20px]" data-node-id="I303:11061;288:9251" data-name="Indicator">
+              <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.3] not-italic relative shrink-0 text-[20px] text-[color:var(--colors\/grays\/gray-3,#c2bfc9)] tracking-[-0.4px] whitespace-nowrap" data-node-id="I303:11061;288:9253">
+                –
+              </p>
+            </div>
+            <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I303:11061;288:9302" data-name="Content">
+              <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="I303:11061;288:9303">
+                <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/gray-3,#c2bfc9)] tracking-[-0.32px]" data-node-id="I303:11061;288:9306">
+                  Нет
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[183px]" data-node-id="I303:11061;288:9255" data-name="Cell">
+            <div className="content-stretch flex items-center justify-center overflow-clip relative shrink-0 w-[20px]" data-node-id="I303:11061;288:9256" data-name="Indicator">
+              <div className="relative shrink-0 size-[20px]" data-node-id="I303:11061;288:9257" data-name="Checkmark">
+                <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[12px] top-1/2" data-node-id="I303:11061;288:9257;1:7262" data-name="Frame">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFrame} />
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I303:11061;288:9308" data-name="Content">
+              <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="I303:11061;288:9309">
+                <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I303:11061;288:9312">
+                  Есть
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[183px]" data-node-id="I303:11061;288:9260" data-name="Cell">
+            <div className="content-stretch flex items-center justify-center overflow-clip relative shrink-0 w-[20px]" data-node-id="I303:11061;288:9261" data-name="Indicator">
+              <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.3] not-italic relative shrink-0 text-[20px] text-[color:var(--colors\/grays\/gray-3,#c2bfc9)] tracking-[-0.4px] whitespace-nowrap" data-node-id="I303:11061;288:9263">
+                –
+              </p>
+            </div>
+            <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I303:11061;288:9314" data-name="Content">
+              <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="I303:11061;288:9315">
+                <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/gray-3,#c2bfc9)] tracking-[-0.32px]" data-node-id="I303:11061;288:9318">
+                  Нет
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[183px]" data-node-id="I303:11061;288:9265" data-name="Cell">
+            <div className="content-stretch flex items-center justify-center overflow-clip relative shrink-0 w-[20px]" data-node-id="I303:11061;288:9266" data-name="Indicator">
+              <div className="relative shrink-0 size-[20px]" data-node-id="I303:11061;288:9267" data-name="Checkmark">
+                <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[12px] top-1/2" data-node-id="I303:11061;288:9267;1:7262" data-name="Frame">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFrame} />
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I303:11061;288:9320" data-name="Content">
+              <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="I303:11061;288:9321">
+                <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I303:11061;288:9324">
+                  Есть
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="bg-[var(--colors\/grays\/gray-1,#f1eef8)] content-stretch flex items-center overflow-clip py-[4px] relative shrink-0 w-[1224px]" data-node-id="303:11062" data-name="Secondary — Электрическая лебёдка">
+          <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[309px]" data-node-id="I303:11062;288:9327" data-name="Cell">
+            <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I303:11062;288:9362" data-name="Content">
+              <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="I303:11062;288:9363">
+                <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I303:11062;288:9366">
+                  Электрическая лебёдка
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[4px] items-center overflow-clip relative shrink-0 w-[183px]" data-node-id="I303:11062;288:9332" data-name="Cell">
+            <div className="content-stretch flex h-[26px] items-center justify-center overflow-clip relative shrink-0 w-[20px]" data-node-id="I303:11062;288:9333" data-name="Indicator">
+              <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.3] not-italic relative shrink-0 text-[20px] text-[color:var(--colors\/grays\/gray-3,#c2bfc9)] tracking-[-0.4px] whitespace-nowrap" data-node-id="I303:11062;288:9335">
+                –
+              </p>
+            </div>
+            <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I303:11062;288:9383" data-name="Content">
+              <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="I303:11062;288:9384">
+                <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/gray-3,#c2bfc9)] tracking-[-0.32px]" data-node-id="I303:11062;288:9387">
+                  Нет
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[183px]" data-node-id="I303:11062;288:9337" data-name="Cell">
+            <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I303:11062;288:9389" data-name="Content">
+              <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="I303:11062;288:9390">
+                <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I303:11062;288:9393">
+                  3500 lb
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[183px]" data-node-id="I303:11062;288:9342" data-name="Cell">
+            <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I303:11062;288:9395" data-name="Content">
+              <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="I303:11062;288:9396">
+                <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I303:11062;288:9399">
+                  3500 lb
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[183px]" data-node-id="I303:11062;288:9347" data-name="Cell">
+            <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I303:11062;288:9401" data-name="Content">
+              <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="I303:11062;288:9402">
+                <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I303:11062;288:9405">
+                  3500 lb
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[183px]" data-node-id="I303:11062;288:9352" data-name="Cell">
+            <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I303:11062;288:9407" data-name="Content">
+              <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="I303:11062;288:9408">
+                <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I303:11062;288:9411">
+                  3500 lb
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="bg-[var(--colors\/grays\/white,#fdfdfd)] content-stretch flex items-center overflow-clip py-[4px] relative shrink-0 w-[1224px]" data-node-id="303:11063" data-name="Primary — Пассажирская спинка">
+          <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[309px]" data-node-id="I303:11063;288:9240" data-name="Cell">
+            <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I303:11063;288:9275" data-name="Content">
+              <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="I303:11063;288:9276">
+                <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I303:11063;288:9279">
+                  Пассажирская спинка
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[4px] items-center overflow-clip relative shrink-0 w-[183px]" data-node-id="I303:11063;288:9245" data-name="Cell">
+            <div className="content-stretch flex h-[26px] items-center justify-center overflow-clip relative shrink-0 w-[20px]" data-node-id="I303:11063;288:9246" data-name="Indicator">
+              <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.3] not-italic relative shrink-0 text-[20px] text-[color:var(--colors\/grays\/gray-3,#c2bfc9)] tracking-[-0.4px] whitespace-nowrap" data-node-id="I303:11063;288:9248">
+                –
+              </p>
+            </div>
+            <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I303:11063;288:9296" data-name="Content">
+              <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="I303:11063;288:9297">
+                <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/gray-3,#c2bfc9)] tracking-[-0.32px]" data-node-id="I303:11063;288:9300">
+                  Нет
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[183px]" data-node-id="I303:11063;288:9250" data-name="Cell">
+            <div className="content-stretch flex h-[26px] items-center justify-center overflow-clip relative shrink-0 w-[20px]" data-node-id="I303:11063;288:9251" data-name="Indicator">
+              <div className="relative shrink-0 size-[20px]" data-node-id="I303:11063;288:9252" data-name="Checkmark">
+                <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[12px] top-1/2" data-node-id="I303:11063;288:9252;1:7262" data-name="Frame">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFrame} />
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I303:11063;288:9302" data-name="Content">
+              <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="I303:11063;288:9303">
+                <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I303:11063;288:9306">
+                  Есть
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[183px]" data-node-id="I303:11063;288:9255" data-name="Cell">
+            <div className="content-stretch flex h-[26px] items-center justify-center overflow-clip relative shrink-0 w-[20px]" data-node-id="I303:11063;288:9256" data-name="Indicator">
+              <div className="relative shrink-0 size-[20px]" data-node-id="I303:11063;288:9257" data-name="Checkmark">
+                <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[12px] top-1/2" data-node-id="I303:11063;288:9257;1:7262" data-name="Frame">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFrame} />
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I303:11063;288:9308" data-name="Content">
+              <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="I303:11063;288:9309">
+                <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I303:11063;288:9312">
+                  Есть
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[183px]" data-node-id="I303:11063;288:9260" data-name="Cell">
+            <div className="content-stretch flex h-[26px] items-center justify-center overflow-clip relative shrink-0 w-[20px]" data-node-id="I303:11063;288:9261" data-name="Indicator">
+              <div className="relative shrink-0 size-[20px]" data-node-id="I303:11063;288:9262" data-name="Checkmark">
+                <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[12px] top-1/2" data-node-id="I303:11063;288:9262;1:7262" data-name="Frame">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFrame} />
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I303:11063;288:9314" data-name="Content">
+              <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="I303:11063;288:9315">
+                <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I303:11063;288:9318">
+                  Есть
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[183px]" data-node-id="I303:11063;288:9265" data-name="Cell">
+            <div className="content-stretch flex h-[26px] items-center justify-center overflow-clip relative shrink-0 w-[20px]" data-node-id="I303:11063;288:9266" data-name="Indicator">
+              <div className="relative shrink-0 size-[20px]" data-node-id="I303:11063;288:9267" data-name="Checkmark">
+                <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[12px] top-1/2" data-node-id="I303:11063;288:9267;1:7262" data-name="Frame">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFrame} />
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I303:11063;288:9320" data-name="Content">
+              <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="I303:11063;288:9321">
+                <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I303:11063;288:9324">
+                  Есть
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="bg-[var(--colors\/grays\/gray-1,#f1eef8)] content-stretch flex items-center overflow-clip py-[4px] relative shrink-0 w-[1224px]" data-node-id="303:11064" data-name="Secondary — Защита рук">
+          <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[309px]" data-node-id="I303:11064;288:9327" data-name="Cell">
+            <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I303:11064;288:9362" data-name="Content">
+              <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="I303:11064;288:9363">
+                <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I303:11064;288:9366">
+                  Защита рук
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[183px]" data-node-id="I303:11064;288:9332" data-name="Cell">
+            <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I303:11064;288:9383" data-name="Content">
+              <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="I303:11064;288:9384">
+                <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/gray-3,#c2bfc9)] tracking-[-0.32px]" data-node-id="I303:11064;288:9387">
+                  Не заявлена
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[183px]" data-node-id="I303:11064;288:9337" data-name="Cell">
+            <div className="content-stretch flex h-[26px] items-center justify-center overflow-clip relative shrink-0 w-[20px]" data-node-id="I303:11064;288:9338" data-name="Indicator">
+              <div className="relative shrink-0 size-[20px]" data-node-id="I303:11064;288:9339" data-name="Checkmark">
+                <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[12px] top-1/2" data-node-id="I303:11064;288:9339;1:7262" data-name="Frame">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFrame} />
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I303:11064;288:9389" data-name="Content">
+              <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="I303:11064;288:9390">
+                <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I303:11064;288:9393">
+                  Есть
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[183px]" data-node-id="I303:11064;288:9342" data-name="Cell">
+            <div className="content-stretch flex h-[26px] items-center justify-center overflow-clip relative shrink-0 w-[20px]" data-node-id="I303:11064;288:9343" data-name="Indicator">
+              <div className="relative shrink-0 size-[20px]" data-node-id="I303:11064;288:9344" data-name="Checkmark">
+                <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[12px] top-1/2" data-node-id="I303:11064;288:9344;1:7262" data-name="Frame">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFrame} />
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I303:11064;288:9395" data-name="Content">
+              <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="I303:11064;288:9396">
+                <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I303:11064;288:9399">
+                  Есть
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[183px]" data-node-id="I303:11064;288:9347" data-name="Cell">
+            <div className="content-stretch flex h-[26px] items-center justify-center overflow-clip relative shrink-0 w-[20px]" data-node-id="I303:11064;288:9348" data-name="Indicator">
+              <div className="relative shrink-0 size-[20px]" data-node-id="I303:11064;288:9349" data-name="Checkmark">
+                <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[12px] top-1/2" data-node-id="I303:11064;288:9349;1:7262" data-name="Frame">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFrame} />
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I303:11064;288:9401" data-name="Content">
+              <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="I303:11064;288:9402">
+                <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I303:11064;288:9405">
+                  Есть
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[4px] items-start overflow-clip relative shrink-0 w-[183px]" data-node-id="I303:11064;288:9352" data-name="Cell">
+            <div className="content-stretch flex h-[26px] items-center justify-center overflow-clip relative shrink-0 w-[20px]" data-node-id="I303:11064;288:9353" data-name="Indicator">
+              <div className="relative shrink-0 size-[20px]" data-node-id="I303:11064;288:9354" data-name="Checkmark">
+                <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[12px] top-1/2" data-node-id="I303:11064;288:9354;1:7262" data-name="Frame">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFrame} />
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I303:11064;288:9407" data-name="Content">
+              <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="I303:11064;288:9408">
+                <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I303:11064;288:9411">
+                  Есть
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+These styles are contained in the design: H8 — 12 (Bold): Font(family: "Inter", style: Bold, size: 12, weight: 700, lineHeight: 1.2000000476837158, letterSpacing: -2), H1 — 40 (Bold): Font(family: "Inter", style: Bold, size: 40, weight: 700, lineHeight: 1.2000000476837158, letterSpacing: -2), H6 — 16 (Bold): Font(family: "Inter", style: Bold, size: 16, weight: 700, lineHeight: 1.25, letterSpacing: -2), P2 — 16: Font(family: "Inter", style: Medium, size: 16, weight: 500, lineHeight: 1.25, letterSpacing: -2), P1 — 20: Font(family: "Inter", style: Medium, size: 20, weight: 500, lineHeight: 1.2999999523162842, letterSpacing: -2).
+Component descriptions: The following components have usage descriptions or documentation links defined in Figma. These descriptions provide important context about the intended usage, best practices, and any constraints for each component. Follow these guidelines when implementing or using these components.
+
+## Table / Header
+**Node ID:** 288:9207
+
+Таблица 1224 px. Локальные стили Inter, галочки Primary / Orange (Papaya).
+
+## Table / Primary
+**Node ID:** 288:9270
+
+Таблица 1224 px. Локальные стили Inter, галочки Primary / Orange (Papaya).
+
+## Table / Secondary
+**Node ID:** 288:9357
+
+Таблица 1224 px. Локальные стили Inter, галочки Primary / Orange (Papaya).
+The generated code contains image and SVG URL constants, e.g. const image = 'https://www.figma.com/api/mcp/asset/550e8400-e29b-41d4-a716-446655440000.png'. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.

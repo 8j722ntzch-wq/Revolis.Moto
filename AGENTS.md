@@ -23,11 +23,11 @@ Repository: https://github.com/8j722ntzch-wq/Revolis.Moto
 
 Contacts, privacy and custom 404 Desktop/Mobile are implemented (2026-10-21). Read docs/info-pages.md and design/info-pages.json. User-confirmed owner: ИП Бугаев Марк Александрович; address: Витебск, проспект Московский, 111. Use one privacy text on both devices. Organization map cards are pending; current Yandex widget searches the confirmed address.
 
-Catalogue Desktop/Mobile assembly was authorized and implemented on 2026-10-21 at /models/. Read docs/catalogue.md and design/catalogue.json for fresh Figma targets, brand filtering, asset provenance and unresolved status differences. Model detail pages remain deferred.
+Catalogue Desktop/Mobile assembly was authorized and implemented on 2026-10-21 at /models/. Read docs/catalogue.md and design/catalogue.json for fresh Figma targets, brand filtering, asset provenance and unresolved status differences. The reusable SKU template and first Striker 500 EFI/EPS page are implemented (2026-10-22); read docs/product-pages.md and design/product-pages.json.
 
 Current milestone (2026-10-21): the user has explicitly authorized assembly of the Desktop homepage from `Main (Desktop)_1470 px` (1:13203). Reuse the reviewed styles and components from `/ui-kit/`. Desktop/Mobile consultation, bank and thank-you dialogs are implemented; read docs/popups.md and design/popups.json. The user deferred delivery integration and will supply the personal-data policy as a PDF. This authorization covers implementation and source updates in development, not website deployment.
 
-Build the desktop homepage in Astro with CSS and small TypeScript modules. Mobile homepage assembly was also authorized and implemented on 2026-10-21; see docs/mobile-home.md. Model detail pages are a later milestone. Preserve the original design rather than applying previous UX suggestions automatically.
+Build the desktop homepage in Astro with CSS and small TypeScript modules. Mobile homepage assembly was also authorized and implemented on 2026-10-21; see docs/mobile-home.md. SKU assembly is authorized; register only populated detail pages. Preserve the original design rather than applying previous UX suggestions automatically.
 
 ## Source of truth
 
@@ -35,7 +35,7 @@ Build the desktop homepage in Astro with CSS and small TypeScript modules. Mobil
 
 ## Implementation
 
-Keep model data in `src/data/catalog.ts`. Reuse the existing base layout, FAQ and lead components where appropriate. Place original graphic assets under `public/assets/` and record source node IDs and slots in `design/assets.json`. Use the asset transfer method returned by Figma. Temporary asset URLs must not remain in site code. Screenshot references are QA material, not page assets.
+Keep canonical model/card data in `src/data/catalog.ts` and SKU content/media in `src/data/products/`; use the shared template and route registry. Reuse the existing base layout, FAQ and lead components where appropriate. Place original graphic assets under `public/assets/` and record source node IDs and slots in `design/assets.json`. Use the asset transfer method returned by Figma. Temporary asset URLs must not remain in site code. Screenshot references are QA material, not page assets.
 
 Use normal document flow, grid and flex for layout; reserve positioning for layers that actually overlap. Extract measured tokens only after reading the current design. Preserve SVG intrinsic geometry. Do not add an entire UI framework for this page.
 

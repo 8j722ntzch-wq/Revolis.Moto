@@ -1,0 +1,49 @@
+type BlockPhotoProps = {
+  className?: string;
+  device?: "Mobile";
+  size?: "L" | "M" | "S";
+};
+
+function BlockPhoto({ className, device = "Mobile", size = "L" }: BlockPhotoProps) {
+  const isMAndMobile = size === "M" && device === "Mobile";
+  const isSAndMobile = size === "S" && device === "Mobile";
+  return (
+    <div className={className || `${String.raw`bg-[var(--colors\/grays\/white,#fdfdfd)] overflow-clip relative rounded-[12px] `}${isSAndMobile ? "size-[340px]" : isMAndMobile ? "h-[280px] w-[340px]" : "h-[240px] w-[340px]"}`} id={isSAndMobile ? "node-316_11927" : isMAndMobile ? "node-316_11921" : "node-316_11915"}>
+      <div className="absolute bottom-0 h-[60px] left-0 w-[280px]" id={isSAndMobile ? "node-316_11939" : isMAndMobile ? "node-316_11933" : "node-316_11916"} data-name="frame_Подпись">
+        <div className="absolute bg-[var(--colors\/accents\/purple,#7c33fb)] h-[60px] left-0 rounded-tr-[500px] top-0 w-[240px]" id={isSAndMobile ? "node-316_11940" : isMAndMobile ? "node-316_11934" : "node-316_11917"} />
+        <div className="[word-break:break-word] absolute content-stretch flex flex-col items-start leading-[1.2] left-[16px] text-[12px] text-[color:var(--colors\/grays\/white,#fdfdfd)] top-[16px] tracking-[-0.24px] w-[128px]" id={isSAndMobile ? "node-316_11941" : isMAndMobile ? "node-316_11935" : "node-316_11918"} data-name="layout_Text">
+          <p className="font-['Inter:Bold'] font-bold not-italic relative shrink-0 w-full" id={isSAndMobile ? "node-316_11942" : isMAndMobile ? "node-316_11936" : "node-316_11919"}>
+            Striker 500 EFI/EPS
+          </p>
+          <p className="font-['Inter:Medium_Italic'] font-medium italic relative shrink-0 w-full" id={isSAndMobile ? "node-316_11943" : isMAndMobile ? "node-316_11937" : "node-316_11920"}>
+            Вид сбоку
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function Component5() {
+  return (
+    <div className="relative size-full" data-node-id="316:11945" data-name="5_Галерея">
+      <BlockPhoto className="-translate-x-1/2 absolute bg-[var(--colors\/grays\/white,#fdfdfd)] h-[240px] left-1/2 overflow-clip rounded-[12px] top-0 w-[340px]" />
+      <BlockPhoto className="absolute bg-[var(--colors\/grays\/white,#fdfdfd)] h-[240px] left-0 overflow-clip rounded-[12px] top-[1916px] w-[340px]" />
+      <BlockPhoto className="absolute bg-[var(--colors\/grays\/white,#fdfdfd)] h-[280px] left-0 overflow-clip rounded-[12px] top-[256px] w-[340px]" size="M" />
+      <BlockPhoto className="-translate-x-1/2 absolute bg-[var(--colors\/grays\/white,#fdfdfd)] h-[280px] left-1/2 overflow-clip rounded-[12px] top-[1620px] w-[340px]" size="M" />
+      <BlockPhoto className="-translate-x-1/2 absolute bg-[var(--colors\/grays\/white,#fdfdfd)] left-1/2 overflow-clip rounded-[12px] size-[340px] top-[1264px]" size="S" />
+      <BlockPhoto className="absolute bg-[var(--colors\/grays\/white,#fdfdfd)] left-0 overflow-clip rounded-[12px] size-[340px] top-[908px]" size="S" />
+      <BlockPhoto className="-translate-x-1/2 absolute bg-[var(--colors\/grays\/white,#fdfdfd)] left-1/2 overflow-clip rounded-[12px] size-[340px] top-[552px]" size="S" />
+    </div>
+  );
+}
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+These styles are contained in the design: H8 — 12 (Bold): Font(family: "Inter", style: Bold, size: 12, weight: 700, lineHeight: 1.2000000476837158, letterSpacing: -2).
+The generated code contains image and SVG URL constants, e.g. const image = 'https://www.figma.com/api/mcp/asset/550e8400-e29b-41d4-a716-446655440000.png'. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.

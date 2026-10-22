@@ -65,3 +65,7 @@ npm run export:ui-kit
 ## Каталог моделей
 
 Страница /models/ реализована для Desktop и Mobile с фильтрацией по брендам. Документация: [docs/catalogue.md](docs/catalogue.md). Офлайн-превью: `npm run build && npm run export:catalogue`. Цены/наличие требуют подтверждения перед публикацией.
+
+## Страницы SKU
+
+Общий шаблон Desktop/Mobile и первый Striker 500 EFI/EPS: `/models/baltmotors-500-efi-eps/`. [Архитектура и добавление следующей модели](docs/product-pages.md). Фото пока ожидаются. Для отдельного офлайн-превью: `npm run export:sku` после сборки.

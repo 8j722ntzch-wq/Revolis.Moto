@@ -1,0 +1,6 @@
+---
+import type { ProductPhoto } from '../../data/products/types';
+interface Props { photo: ProductPhoto; eager?: boolean; }
+const { photo, eager = false } = Astro.props;
+---
+<img src={photo.src} alt={photo.alt} width={photo.width} height={photo.height} loading={eager ? 'eager' : 'lazy'} decoding="async" style={`object-fit:${photo.fit ?? 'contain'};object-position:${photo.position ?? 'center'}`} />

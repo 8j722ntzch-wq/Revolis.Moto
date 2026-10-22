@@ -1263,6 +1263,314 @@
       ],
       "transfer": "Figma MCP asset URL, curl -L, unmodified",
       "sha256": "eedb49e208e40fa46e3bb4ded1ae13cec0ce218cb6e8f6497728e070feb4332f"
+    },
+    {
+      "id": "sku-feature-eps",
+      "nodeId": "I233:7231;233:7351",
+      "kind": "exported-svg",
+      "localPath": "public/assets/product/feature-eps.svg",
+      "slots": [
+        {
+          "nodeId": "I233:7231;233:7351",
+          "sectionNodeId": "233:7494"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "0e3d73c570ba869db3098a4ff9e100e6ffee1c1dbd9acc469e8c46f440ee52bb"
+    },
+    {
+      "id": "sku-feature-seat",
+      "nodeId": "I233:7209;233:7152",
+      "kind": "exported-svg",
+      "localPath": "public/assets/product/feature-seat.svg",
+      "slots": [
+        {
+          "nodeId": "I233:7209;233:7152",
+          "sectionNodeId": "233:7494"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "697cd8ccaf1688804bb56684853cde7d1f94bad17539c58bda0900d813ff41f1"
+    },
+    {
+      "id": "sku-feature-low",
+      "nodeId": "I233:7248;233:7152",
+      "kind": "exported-svg",
+      "localPath": "public/assets/product/feature-low.svg",
+      "slots": [
+        {
+          "nodeId": "I233:7248;233:7152",
+          "sectionNodeId": "233:7494"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "817b56ac1a7760166b3aadb395f103d72d6c8e80b02eff1b9fa807e3cefc27e6"
+    },
+    {
+      "id": "sku-feature-suspension",
+      "nodeId": "I233:7265;233:7152",
+      "kind": "exported-svg",
+      "localPath": "public/assets/product/feature-suspension.svg",
+      "slots": [
+        {
+          "nodeId": "I233:7265;233:7152",
+          "sectionNodeId": "233:7494"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "82683196ec9a7e98d8d0e872308595e5167d15280b42a1f25361f4eb23f5cf67"
+    },
+    {
+      "id": "sku-feature-drive",
+      "nodeId": "I233:7266;233:7351",
+      "kind": "exported-svg",
+      "localPath": "public/assets/product/feature-drive.svg",
+      "slots": [
+        {
+          "nodeId": "I233:7266;233:7351",
+          "sectionNodeId": "233:7494"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "50e0509d8474225b2f89bb9322a47676955223bef7a28b0e4cc32c759ab72069"
+    },
+    {
+      "id": "sku-feature-winch",
+      "nodeId": "I233:7267;233:7152",
+      "kind": "exported-svg",
+      "localPath": "public/assets/product/feature-winch.svg",
+      "slots": [
+        {
+          "nodeId": "I233:7267;233:7152",
+          "sectionNodeId": "233:7494"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "f8d9cddcca9564f82c7ab263db664c466cd9e3cac3d45e766f85edb7f224623f"
+    },
+    {
+      "id": "sku-support-warranty",
+      "nodeId": "I285:8897;1:8974",
+      "kind": "exported-svg",
+      "localPath": "public/assets/product/support-warranty.svg",
+      "slots": [
+        {
+          "nodeId": "I285:8897;1:8974",
+          "sectionNodeId": "298:10251"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "cd4dfa4bf1362b3c482c00cc5f36569acbe801eca8e31dfcfcb70b4370c2d6a1"
+    },
+    {
+      "id": "sku-support-documents",
+      "nodeId": "I285:8927;1:8974",
+      "kind": "exported-svg",
+      "localPath": "public/assets/product/support-documents.svg",
+      "slots": [
+        {
+          "nodeId": "I285:8927;1:8974",
+          "sectionNodeId": "298:10251"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "775f9532de422f8f80cfdfef7bfd1a523d2d250e3187ab89e70c271654972f81"
+    },
+    {
+      "id": "sku-support-parts",
+      "nodeId": "I285:8956;1:8974",
+      "kind": "exported-svg",
+      "localPath": "public/assets/product/support-parts.svg",
+      "slots": [
+        {
+          "nodeId": "I285:8956;1:8974",
+          "sectionNodeId": "298:10251"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "b656f8711d7475e97140ca9e7f18d9168d32bd99bf8caa6602d0937a43cf6074"
+    },
+    {
+      "id": "sku-benefit-confidence",
+      "nodeId": "I207:8098;91:7328;91:7311",
+      "kind": "exported-svg",
+      "localPath": "public/assets/product/benefit-confidence.svg",
+      "slots": [
+        {
+          "nodeId": "I207:8098;91:7328;91:7311",
+          "sectionNodeId": "233:7145"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "5b2ee928dba8ba34e6feb8c91e08acd6fe265bb393ef7dd058dfb8431707a66c"
+    },
+    {
+      "id": "sku-benefit-strength",
+      "nodeId": "I207:8098;91:7414;91:7311",
+      "kind": "exported-svg",
+      "localPath": "public/assets/product/benefit-strength.svg",
+      "slots": [
+        {
+          "nodeId": "I207:8098;91:7414;91:7311",
+          "sectionNodeId": "233:7145"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "cb54a94bf8a11bddf38156aa11636a2cad97b199dd733f8c1dff1afe4004027a"
+    },
+    {
+      "id": "sku-benefit-comfort",
+      "nodeId": "I207:8098;91:7502;91:7311",
+      "kind": "exported-svg",
+      "localPath": "public/assets/product/benefit-comfort.svg",
+      "slots": [
+        {
+          "nodeId": "I207:8098;91:7502;91:7311",
+          "sectionNodeId": "233:7145"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "697cd8ccaf1688804bb56684853cde7d1f94bad17539c58bda0900d813ff41f1"
+    },
+    {
+      "id": "sku-benefit-choice",
+      "nodeId": "I207:8098;91:7587;91:7311",
+      "kind": "exported-svg",
+      "localPath": "public/assets/product/benefit-choice.svg",
+      "slots": [
+        {
+          "nodeId": "I207:8098;91:7587;91:7311",
+          "sectionNodeId": "233:7145"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "676766003a6a8863d58eda0dfe45e77d3c21cd434f8ceafed983f4742fff7907"
+    },
+    {
+      "id": "sku-warranty-art",
+      "nodeId": "I285:8897;109:5536",
+      "kind": "exported-svg",
+      "localPath": "public/assets/product/warranty-art.svg",
+      "slots": [
+        {
+          "nodeId": "I285:8897;109:5536",
+          "sectionNodeId": "298:10251"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "94bb50934e259a79d75b4c89b16f49a1cea185944ea09cff989f08e720ac905a"
+    },
+    {
+      "id": "sku-parts-art",
+      "nodeId": "I285:8956;109:5536",
+      "kind": "exported-svg",
+      "localPath": "public/assets/product/parts-art.svg",
+      "slots": [
+        {
+          "nodeId": "I285:8956;109:5536",
+          "sectionNodeId": "298:10251"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "294591afcb205ac3e7225e02f63a04bde315d2ce9079e3ff877458c51f52a8b0"
+    },
+    {
+      "id": "sku-documents-art",
+      "nodeId": "I285:8927;109:5536",
+      "kind": "exported-svg",
+      "localPath": "public/assets/product/documents-art.svg",
+      "slots": [
+        {
+          "nodeId": "I285:8927;109:5536",
+          "sectionNodeId": "298:10251"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "501120796ae86176ad26ec617c5e2f66b185c54ea77e0d501507c5bc489f7859"
+    },
+    {
+      "id": "sku-alfa",
+      "nodeId": "211:8953",
+      "kind": "exported-svg",
+      "localPath": "public/assets/product/alfa.svg",
+      "slots": [
+        {
+          "nodeId": "211:8953",
+          "sectionNodeId": "233:7145"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "cfae73a178d85e9da92179185c14eea74d42e49b84e3d37602be5f00c10baa6e"
+    },
+    {
+      "id": "sku-techno",
+      "nodeId": "211:8968",
+      "kind": "exported-svg",
+      "localPath": "public/assets/product/techno.svg",
+      "slots": [
+        {
+          "nodeId": "211:8968",
+          "sectionNodeId": "233:7145"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "9a890276d062ca148c3a9a999871fb014f26c4bcc75a236e91157e7083cccb90"
+    },
+    {
+      "id": "sku-registration",
+      "nodeId": "207:8324",
+      "kind": "exported-svg",
+      "localPath": "public/assets/product/registration.svg",
+      "slots": [
+        {
+          "nodeId": "207:8324",
+          "sectionNodeId": "233:7145"
+        }
+      ],
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING), unmodified",
+      "sha256": "0669999b779c1a6a499a78721864c8b847639261f2a39d6ee4cd9d1b51adaeb0"
+    },
+    {
+      "id": "sku-description-line-1",
+      "nodeId": "233:7228",
+      "kind": "exported-svg",
+      "localPath": "public/assets/product/description-line-1.svg",
+      "slots": [
+        {
+          "nodeId": "233:7228",
+          "sectionNodeId": "233:7227"
+        }
+      ],
+      "transfer": "Figma MCP asset URL via curl -L, original SVG",
+      "sha256": "5ba5e0107bb0f3fde019909eab6373734fb025d3cff9b6a3a30b13a1344b3c05"
+    },
+    {
+      "id": "sku-description-line-2",
+      "nodeId": "233:7229",
+      "kind": "exported-svg",
+      "localPath": "public/assets/product/description-line-2.svg",
+      "slots": [
+        {
+          "nodeId": "233:7229",
+          "sectionNodeId": "233:7227"
+        }
+      ],
+      "transfer": "Figma MCP asset URL via curl -L, original SVG",
+      "sha256": "254b3ad353b0a166db872488524a07c888b72668efd2206bd6b60fa37d0ac79c"
+    },
+    {
+      "id": "sku-check",
+      "nodeId": "I303:11058;288:9334;1:7262",
+      "kind": "exported-svg",
+      "localPath": "public/assets/product/check.svg",
+      "slots": [
+        {
+          "nodeId": "I303:11058;288:9334;1:7262",
+          "sectionNodeId": "308:9030"
+        }
+      ],
+      "transfer": "Figma MCP asset URL via curl -L, original SVG",
+      "sha256": "e07b4375801662fb00027c505b016c8ea888c031909b90b0e46254f288cdd196"
     }
   ],
   "reusableUiManifest": "design/ui-assets.json",

@@ -1,0 +1,57 @@
+---
+import type { SpecificationGroup } from '../../data/products/types';
+import SectionHeading from '../ui/SectionHeading.astro';
+interface Props { groups: SpecificationGroup[]; }
+const { groups } = Astro.props;
+---
+<section id="specifications" class="product-section product-specifications container" aria-labelledby="specifications-title">
+  <SectionHeading eyebrow="Детали" id="specifications-title" bold>Технические <span>характеристики</span></SectionHeading>
+  <product-specifications>
+    <div id="specification-tables" class="product-specifications__window">
+      <div class="product-specifications__grid">{groups.map((group,index) => <div class:list={['product-specifications__group',{'product-specifications__group--engine':index===0}]}>
+        <h3>{group.title}</h3>
+        <table><caption class="sr-only">{group.title}</caption><thead><tr><th scope="col">Характеристика</th><th scope="col">Значение</th></tr></thead><tbody>{group.rows.map(row => <tr><th scope="row">{row.label}</th><td>{row.value ?? 'Уточняется'}</td></tr>)}</tbody></table>
+      </div>)}</div>
+    </div>
+    <button hidden type="button" class="ui-button ui-button--outline ui-button--s product-specifications__toggle" aria-expanded="true" aria-controls="specification-tables"><span>Открыть все характеристики</span><img src="/assets/ui/arrow-black.svg" alt="" /></button>
+  </product-specifications>
+</section>
+<script>
+  class ProductSpecifications extends HTMLElement {
+    private cleanup?: () => void;
+    connectedCallback() {
+      const viewport = this.querySelector<HTMLElement>('.product-specifications__window')!;
+      const content = this.querySelector<HTMLElement>('.product-specifications__grid')!;
+      const button = this.querySelector<HTMLButtonElement>('button')!;
+      const label = button.querySelector('span')!;
+      const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+      let expanded = false;
+      let animation: Animation | undefined;
+      const collapsedHeight = () => parseFloat(getComputedStyle(this).getPropertyValue('--spec-preview-height'));
+      const update = () => {
+        animation?.cancel();
+        const needsToggle = content.scrollHeight > collapsedHeight();
+        button.hidden = !needsToggle;
+        this.dataset.collapsed = String(needsToggle && !expanded);
+        button.setAttribute('aria-expanded',String(expanded || !needsToggle));
+        viewport.style.height = needsToggle && !expanded ? collapsedHeight() + 'px' : 'auto';
+      };
+      button.addEventListener('click', () => {
+        const from = viewport.getBoundingClientRect().height;
+        animation?.cancel();
+        expanded = !expanded;
+        update();
+        label.textContent = expanded ? 'Свернуть характеристики' : 'Открыть все характеристики';
+        const to = viewport.getBoundingClientRect().height;
+        if (!reduced.matches) animation = viewport.animate([{height:from+'px'},{height:to+'px'}],{duration:420,easing:'cubic-bezier(.22,1,.36,1)'});
+        if (!expanded && this.getBoundingClientRect().top < 0) this.closest('section')?.scrollIntoView({behavior:reduced.matches ? 'instant' : 'smooth'});
+      });
+      const observer = new ResizeObserver(update);
+      observer.observe(content);
+      this.cleanup = () => { observer.disconnect(); animation?.cancel(); };
+      update();
+    }
+    disconnectedCallback() { this.cleanup?.(); }
+  }
+  if (!customElements.get('product-specifications')) customElements.define('product-specifications',ProductSpecifications);
+</script>

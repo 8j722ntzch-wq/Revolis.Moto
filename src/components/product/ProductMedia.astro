@@ -1,0 +1,33 @@
+---
+import type { ProductPhoto } from '../../data/products/types';
+import Photo from './ProductPhoto.astro';
+interface Props { photos: ProductPhoto[]; }
+const { photos } = Astro.props;
+---
+<product-media class="product-media">
+  <div class="product-media__main">
+    {photos[0] ? <a href="#product-gallery" aria-label="Перейти к фотографиям модели"><Photo photo={photos[0]} eager /></a> : <p class="product-photo-pending">Фотографии скоро появятся</p>}
+  </div>
+  <div class="product-media__thumbs" aria-label={photos.length ? 'Выбор фотографии' : undefined} aria-hidden={!photos.length || undefined}>
+    {photos.length ? photos.slice(0,4).map((photo,index) => <a href={photo.src} class:list={{ "product-media__thumb--mobile-hidden": index >= (photos.length > 3 ? 2 : 3), "product-media__thumb--desktop-hidden": index === 3 && photos.length > 4 }} data-photo-index={index} aria-label={`Фото ${index+1}: ${photo.alt}`} aria-current={index === 0 ? 'true' : undefined}><Photo photo={photo} /></a>) : Array.from({length:4},() => <div class="product-media__empty"></div>)}
+    {photos.length > 3 && <a class="product-media__more product-media__more--mobile" href="#product-gallery" aria-label={`Все ${photos.length} фото`}>+{photos.length - 2}</a>}
+    {photos.length > 4 && <a class="product-media__more product-media__more--desktop" href="#product-gallery" aria-label={`Все ${photos.length} фото`}>+{photos.length - 3}</a>}
+  </div>
+</product-media>
+<script>
+  class ProductMedia extends HTMLElement {
+    connectedCallback() {
+      const main = this.querySelector<HTMLImageElement>('.product-media__main img');
+      if (!main) return;
+      const links = Array.from(this.querySelectorAll<HTMLAnchorElement>('[data-photo-index]'));
+      links.forEach(link => link.addEventListener('click', event => {
+        event.preventDefault();
+        const image = link.querySelector('img')!;
+        for (const attribute of ['src','alt','width','height','style']) main.setAttribute(attribute,image.getAttribute(attribute) ?? '');
+        links.forEach(item => item.removeAttribute('aria-current'));
+        link.setAttribute('aria-current','true');
+      }));
+    }
+  }
+  if (!customElements.get('product-media')) customElements.define('product-media',ProductMedia);
+</script>

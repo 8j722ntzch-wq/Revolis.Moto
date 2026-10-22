@@ -1,10 +1,12 @@
 ---
 import Button from '../ui/Button.astro';
 import Advantage from './AdvantageItem.astro';
+interface Props { modelId?: string; }
+const { modelId } = Astro.props;
 ---
 <section id="consultation" class="home-consultation home-banner container" aria-labelledby="consultation-title">
   <img class="mobile-only home-consultation__mobile-photo" src="/assets/mobile-home/consultation.png" alt="" loading="lazy" /><div class="mobile-only mobile-pattern mobile-pattern--cta" aria-hidden="true">{[3,1,2].map((n,i) => <img src={`/assets/mobile-home/cta-key-${n}.svg`} alt="" style={`--tile:${i}`} />)}</div><img class="home-consultation__photo" src="/assets/home/consultation.png" alt="Квадроцикл на горной дороге" width="732" height="440" loading="lazy" />
   <div class="home-consultation__gradient"></div><img class="home-decoration" src="/assets/home/cta-pattern.svg" alt="" />
-  <div class="home-banner__copy"><p class="home-eyebrow">Подберём идеальный вариант</p><h2 id="consultation-title">Не знаете, <span>какой</span><br /> квадроцикл <span>выбрать?</span></h2><p class="home-banner__body">Расскажите о своих задачах — поможем подобрать модель, рассчитаем условия покупки и ответим<br /> на все вопросы</p><Button data-open-lead="lead-dialog" data-source="consultation" data-intent="consultation" arrow>Получить консультацию</Button></div>
+  <div class="home-banner__copy"><p class="home-eyebrow">Подберём идеальный вариант</p><h2 id="consultation-title">Не знаете, <span>какой</span><br /> квадроцикл <span>выбрать?</span></h2><p class="home-banner__body">Расскажите о своих задачах — поможем подобрать модель, рассчитаем условия покупки и ответим<br /> на все вопросы</p><Button data-open-lead="lead-dialog" data-source="consultation" data-model-id={modelId} data-intent="consultation" arrow>Получить консультацию</Button></div>
   <Advantage class="home-consultation__address" icon="cta-shop" title="Ждём Вас в магазине">По адресу: Витебск, пр-т Московский, 111</Advantage>
 </section>

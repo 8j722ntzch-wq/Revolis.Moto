@@ -1,4 +1,5 @@
 ---
+import { hasProductPage } from '../data/products';
 import type { Model } from '../data/catalog';
 import Button from './ui/Button.astro';
 import StatusBadge from './ui/StatusBadge.astro';
@@ -8,10 +9,11 @@ interface Props {
   id: string;
   headingLevel?: 'h2' | 'h3' | 'h4';
   demoState?: 'hover';
-  // A local showcase action; real model links require model.pageReady.
+  // A local showcase action; real model links require a registered product page.
   demoAction?: boolean;
 }
 const { model, id, headingLevel: Heading = 'h3', demoState, demoAction = false } = Astro.props;
+const pageReady = hasProductPage(model.path);
 const statuses = { 'in-stock': 'stock', 'on-order': 'order', 'coming-soon': 'soon', 'special-offer': 'offer' } as const;
 const status = model.availability === 'unconfirmed' ? null : statuses[model.availability];
 const registrations = { gai: 'Регистрация в ГАИ', gostekhnadzor: 'Регистрация в Гостехнадзоре' };
@@ -40,7 +42,7 @@ const price = model.priceByn === null ? null : new Intl.NumberFormat('ru-BY', { 
         <p class="type-heading-sm weight-bold">{price === null ? 'Цена уточняется' : `${model.priceFrom ? 'от ' : ''}${price} BYN`}</p>
         {model.financeLabel && <p class="model-card__finance type-eyebrow weight-bold">{model.financeLabel}</p>}
       </div>
-      <Button class="model-card__action" arrow href={model.pageReady && !demoAction ? model.path : undefined} disabled={!model.pageReady && !demoAction} data-demo-state={demoState} data-model-card-demo={demoAction ? model.id : undefined}>Перейти к модели</Button>
+      <Button class="model-card__action" arrow href={pageReady && !demoAction ? model.path : undefined} disabled={!pageReady && !demoAction} data-demo-state={demoState} data-model-card-demo={demoAction ? model.id : undefined}>Перейти к модели</Button>
     </div>
   </div>
 </article>

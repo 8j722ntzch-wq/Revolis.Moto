@@ -1,0 +1,142 @@
+const imgImage8 = "https://www.figma.com/api/mcp/asset/85d6f712-29a5-41d4-acd7-f44eae02b5ea.png";
+const imgElementKey = "https://www.figma.com/api/mcp/asset/6d1beb98-dfbb-434a-9c59-613cf23b4e35.svg";
+const imgElementKey1 = "https://www.figma.com/api/mcp/asset/14640537-06d1-469d-92c7-7a7e2824f397.svg";
+const imgElementKey2 = "https://www.figma.com/api/mcp/asset/a7202f7d-120b-43e2-91b9-9fa4380da25f.svg";
+const imgArrow = "https://www.figma.com/api/mcp/asset/5b007dd2-cac3-4700-aae0-18b42857cd31.svg";
+const imgGroup = "https://www.figma.com/api/mcp/asset/bff880a3-cbb6-48c9-b2b4-e4c82dca2dd4.svg";
+
+type BlockApplicationSellProps = {
+  className?: string;
+  device?: "Mobile";
+};
+
+function BlockApplicationSell({ className, device = "Mobile" }: BlockApplicationSellProps) {
+  return (
+    <div className={className || "bg-[var(--colors\\/grays\\/black,#0d0d0d)] h-[762px] overflow-clip relative rounded-[16px] w-[340px]"} data-node-id="160:6201">
+      <div className="-translate-x-1/2 absolute bottom-[-80px] h-[488px] left-[calc(50%-70px)] w-[732px]" data-node-id="160:6202" data-name="image 8">
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage8} />
+      </div>
+      <div className="-translate-x-1/2 absolute bottom-[116.07px] flex h-[413.024px] items-center justify-center left-[calc(50%-4.68px)] w-[464.593px]" data-node-id="160:6294">
+        <div className="flex-none rotate-170">
+          <div className="bg-gradient-to-b from-[rgba(13,13,13,0)] h-[347px] relative to-[#0d0d0d] to-[61.538%] w-[410.575px]" />
+        </div>
+      </div>
+      <div className="absolute contents left-[-94px] top-0" data-node-id="160:6204">
+        <div className="absolute contents left-[-94px] top-0" data-node-id="160:6205">
+          <div className="absolute contents left-[-94px] top-0" data-node-id="160:6206">
+            <div className="absolute contents left-[-94px] top-0" data-node-id="160:6207">
+              <div className="absolute contents left-[-94px] top-0" data-node-id="160:6208">
+                <div className="absolute flex h-[111.111px] items-center justify-center left-[-94px] top-[111.11px] w-[333.333px]" data-node-id="160:6209">
+                  <div className="flex-none rotate-180">
+                    <div className="h-[111.111px] opacity-20 relative w-[333.333px]" data-name="element_Key">
+                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgElementKey} />
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute flex h-[111.111px] items-center justify-center left-[-94px] top-[222.22px] w-[333.333px]" data-node-id="160:6210">
+                  <div className="flex-none rotate-180">
+                    <div className="h-[111.111px] opacity-20 relative w-[333.333px]" data-name="element_Key">
+                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgElementKey1} />
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute flex h-[111.111px] items-center justify-center left-[-94px] top-0 w-[333.333px]" data-node-id="160:6211">
+                  <div className="flex-none rotate-180">
+                    <div className="h-[111.111px] opacity-20 relative w-[333.333px]" data-name="element_Key">
+                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgElementKey2} />
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute flex h-[111.111px] items-center justify-center left-[239.34px] top-0 w-[333.333px]" data-node-id="160:6212">
+                  <div className="flex-none rotate-180">
+                    <div className="h-[111.111px] opacity-20 relative w-[333.333px]" data-name="element_Key">
+                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgElementKey} />
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute flex h-[111.111px] items-center justify-center left-[239.34px] top-[111.11px] w-[333.333px]" data-node-id="160:6213">
+                  <div className="flex-none rotate-180">
+                    <div className="h-[111.111px] opacity-20 relative w-[333.333px]" data-name="element_Key">
+                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgElementKey1} />
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute flex h-[111.111px] items-center justify-center left-[572.67px] top-0 w-[333.333px]" data-node-id="160:6214">
+                  <div className="flex-none rotate-180">
+                    <div className="h-[111.111px] opacity-20 relative w-[333.333px]" data-name="element_Key">
+                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgElementKey1} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="absolute content-stretch flex flex-col gap-[var(--spacings\/content-\(20\),20px)] items-start left-[20px] top-[20px] w-[300px]" data-node-id="160:6215" data-name="layout_Text, Button">
+        <div className="[word-break:break-word] content-stretch flex flex-col gap-[var(--spacings\/content-\(8\),8px)] items-start not-italic relative shrink-0 w-full" data-node-id="160:6216" data-name="element_Headline + Body">
+          <div className="content-stretch flex flex-col font-['Inter:Bold'] font-bold gap-[var(--spacings\/content-\(4\),4px)] items-start relative shrink-0 text-[color:var(--colors\/grays\/white,#fdfdfd)] w-full" data-node-id="160:6217" data-name="layout_Superscript, Headline">
+            <p className="leading-[1.2] relative shrink-0 text-[12px] tracking-[-0.24px] w-full" data-node-id="160:6218">
+              Подберём идеальный вариант
+            </p>
+            <p className="leading-[0] relative shrink-0 text-[0px] tracking-[-0.56px] w-full" data-node-id="160:6219">
+              <span className="leading-[1.2] text-[28px]">{`НЕ ЗНАЕТЕ, `}</span>
+              <span className="leading-[1.2] text-[#7c33fb] text-[28px]">КАКОЙ</span>
+              <span className="leading-[1.2] text-[28px]">{` КВАДРОЦИКЛ `}</span>
+              <span className="leading-[1.2] text-[#7c33fb] text-[28px]">ВЫБРАТЬ?</span>
+            </p>
+          </div>
+          <p className="font-['Inter:Medium'] font-medium leading-[1.25] relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/gray-3,#c2bfc9)] tracking-[-0.28px] w-full" data-node-id="160:6220">
+            Расскажите о своих задачах — поможем подобрать модель, рассчитаем условия покупки и ответим на все вопросы
+          </p>
+        </div>
+        <div className="bg-[var(--colors\/accents\/purple,#7c33fb)] content-stretch cursor-pointer flex gap-[4px] items-center justify-center px-[var(--padding\/padding-\(16\),16px)] py-[var(--padding\/padding-\(12\),12px)] relative rounded-[10px] shrink-0" data-node-id="160:6221" data-name="button_Basic">
+          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.2] not-italic relative shrink-0 text-[12px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.24px] whitespace-nowrap" data-node-id="I160:6221;1:7013">
+            Получить консультацию
+          </p>
+          <div className="relative rounded-[1.647px] shrink-0 size-[14px]" data-node-id="I160:6221;1:7014" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
+            <div className="absolute h-[7.686px] left-[1.24px] top-[3.16px] w-[11.529px]" data-node-id="I160:6221;1:7014;1:7287" data-name="Arrow">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow} />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="absolute bottom-[398px] content-stretch flex gap-[var(--spacings\/content-\(8\),8px)] items-center left-[20px]" data-node-id="160:6222" data-name="frame_Advantage">
+        <div className="bg-[var(--purple-\(transparent\),rgba(124,51,251,0.2))] content-stretch flex items-center overflow-clip p-[4px] relative rounded-[500px] shrink-0" data-node-id="I160:6222;160:6298" data-name="element_Advantages">
+          <div className="bg-[var(--colors\/accents\/purple,#7c33fb)] overflow-clip relative rounded-[500px] shrink-0 size-[44px]" data-node-id="I160:6222;160:6298;160:6393" data-name="Container">
+            <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 overflow-clip size-[28px] top-1/2" data-node-id="I160:6222;160:6298;160:6394" data-name="icon_Advantages (24px, 32 px)">
+              <div className="absolute inset-[12.56%_8.33%_8.33%_8.33%]" data-node-id="I160:6222;160:6298;160:6394;115:5747" data-name="Group">
+                <div className="absolute inset-[-3.39%_-3.21%]">
+                  <img alt="" className="block max-w-none size-full" src={imgGroup} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="[word-break:break-word] content-stretch flex flex-col gap-[var(--spacings\/content-\(4\),4px)] items-start justify-center not-italic relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.28px] whitespace-nowrap" data-node-id="I160:6222;160:6299" data-name="layout_Text">
+          <p className="font-['Inter:Bold'] font-bold leading-[1.3] relative shrink-0" data-node-id="I160:6222;160:6300">
+            Ждём Вас в магазине
+          </p>
+          <div className="font-['Inter:Medium'] font-medium leading-[0] relative shrink-0" data-node-id="I160:6222;160:6301">
+            <p className="leading-[1.25] mb-0 whitespace-pre">{`По адресу: Витебск, `}</p>
+            <p className="leading-[1.25] whitespace-pre">пр-т Московский, 111</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function BlockApplicationSell1() {
+  return <BlockApplicationSell className="bg-[var(--colors\/grays\/black,#0d0d0d)] overflow-clip relative rounded-[16px] size-full" />;
+}
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+These styles are contained in the design: H8 — 12 (Bold): Font(family: "Inter", style: Bold, size: 12, weight: 700, lineHeight: 1.2000000476837158, letterSpacing: -2), H3 — 28 (Bold): Font(family: "Inter", style: Bold, size: 28, weight: 700, lineHeight: 1.2000000476837158, letterSpacing: -2), P3 — 14: Font(family: "Inter", style: Medium, size: 14, weight: 500, lineHeight: 1.25, letterSpacing: -2), H8 — 12: Font(family: "Inter", style: Semi Bold, size: 12, weight: 600, lineHeight: 1.2000000476837158, letterSpacing: -2), H7 — 14 (Bold): Font(family: "Inter", style: Bold, size: 14, weight: 700, lineHeight: 1.2999999523162842, letterSpacing: -2).
+The generated code contains image and SVG URL constants, e.g. const image = 'https://www.figma.com/api/mcp/asset/550e8400-e29b-41d4-a716-446655440000.png'. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.

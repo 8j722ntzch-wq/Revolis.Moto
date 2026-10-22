@@ -1,0 +1,42 @@
+---
+import type { ProductPage } from '../../data/products';
+import { getRelatedModels } from '../../data/products';
+import SiteHeader from '../SiteHeader.astro';
+import MobileHeader from '../MobileHeader.astro';
+import SiteFooter from '../SiteFooter.astro';
+import SectionHeading from '../ui/SectionHeading.astro';
+import Button from '../ui/Button.astro';
+import ModelCard from '../ModelCard.astro';
+import FaqItem from '../FaqItem.astro';
+import CardRail from '../home/CardRail.astro';
+import HomeFinance from '../home/HomeFinance.astro';
+import HomeConsultation from '../home/HomeConsultation.astro';
+import Hero from './ProductHero.astro';
+import Specifications from './ProductSpecifications.astro';
+import Gallery from './ProductGallery.astro';
+interface Props { product: ProductPage; }
+const { product } = Astro.props;
+const { details, model } = product;
+const related = getRelatedModels(details.relatedModelIds ?? []);
+---
+<div id="top" class="homepage mobile-ui product-page" data-product-id={model.id}>
+  <SiteHeader homeHref="/" dialogId="lead-dialog" /><MobileHeader homeHref="/" dialogId="lead-dialog" />
+  <main>
+    <nav class="product-breadcrumbs container" aria-label="Хлебные крошки"><ol><li><a href="/">Главная</a></li><li><a href="/models/">Модели</a></li><li aria-current="page">{model.brand} {model.name}</li></ol></nav>
+    <Hero product={product} />
+    {details.description && <section class="product-section product-description" aria-labelledby="description-title">
+      <div class="product-description__art" aria-hidden="true"><img src="/assets/product/description-line-1.svg" alt="" /><img src="/assets/product/description-line-2.svg" alt="" /></div>
+      <div class="container"><h2 id="description-title">{details.description.title}{details.description.accent && <><br /><span>{details.description.accent}</span></>}</h2><div class="product-description__text">{details.description.paragraphs.map(text => <p>{text}</p>)}</div></div>
+    </section>}
+    {details.features?.length && <section class="product-section product-features container" aria-labelledby="features-title"><SectionHeading eyebrow="Преимущества" id="features-title" bold>Ключевые <span>особенности</span></SectionHeading><div class="product-features__grid">{details.features.map(item => <article class:list={['product-feature',{'product-feature--accent':item.accent}]}><img src={item.icon} alt="" width="56" height="56" /><div><h3>{item.title}</h3><p>{item.body}</p></div></article>)}</div></section>}
+    {details.specifications?.length && <Specifications groups={details.specifications} />}
+    <Gallery photos={details.photos} />
+    {details.support?.length && <section class="product-section product-support container" aria-labelledby="support-title"><SectionHeading eyebrow="Сопровождение" id="support-title" bold>Гарантия, документы и <span>поддержка</span></SectionHeading><CardRail id="product-support-rail" label="Гарантия, документы и поддержка" previousLabel="Предыдущая карточка" nextLabel="Следующая карточка">{details.support.map(item => <article class:list={['product-support__card',{'product-support__card--accent':item.accent}]}><img src={item.icon} width="56" height="56" alt="" /><div><h3>{item.title}</h3><p>{item.body}</p></div>{item.art && <img class="product-support__art" src={item.art} alt="" width="360" height="360" loading="lazy" />}</article>)}</CardRail></section>}
+    <HomeFinance modelId={model.id} />
+    {details.comparison && <section class="product-section product-comparison container" aria-labelledby="comparison-title"><SectionHeading eyebrow="Сравнение" id="comparison-title" bold><span>Сравнение</span> моделей<br />{details.comparison.family}</SectionHeading><table><caption class="sr-only">Сравнение моделей {details.comparison.family}</caption><thead><tr><th scope="col">Характеристика</th>{details.comparison.models.map(name => <th scope="col">{name}</th>)}</tr></thead><tbody>{details.comparison.rows.map(row => <tr><th scope="row">{row.label}</th>{row.values.map(value => <td class:list={{'product-comparison__absent':value==='Нет'||value==='Не заявлена'}}>{(value==='Есть'||value==='Да') ? <img src="/assets/product/check.svg" alt="" /> : value==='Нет' ? <span aria-hidden="true">– </span> : null}{value}</td>)}</tr>)}</tbody></table></section>}
+    {related.length > 0 && <section class="home-models product-related container" aria-labelledby="related-title"><div class="home-models__heading"><SectionHeading eyebrow="Похожие модели" id="related-title" bold>Выберите квадроцикл<br />под <span>любые задачи</span></SectionHeading><Button class="home-catalog-link" variant="text" href="/models/" arrow>Перейти в каталог</Button></div><div class="home-card-grid">{related.map((item,index)=><ModelCard model={item} id={`related-${index}`} />)}</div><Button class="mobile-only home-catalog-mobile" variant="outline" href="/models/" arrow>Перейти в каталог</Button></section>}
+    <HomeConsultation modelId={model.id} />
+    {details.faq?.length && <section class="home-faq product-faq container" aria-labelledby="product-faq-title"><SectionHeading eyebrow="Вопросы и ответы" id="product-faq-title" bold><span>Всё,</span> что важно знать перед покупкой</SectionHeading><div class="home-faq__items">{details.faq.map(item => <FaqItem question={item.question} group="product-faq"><p>{item.answer}</p></FaqItem>)}</div></section>}
+  </main>
+  <div id="contacts"><SiteFooter /></div>
+</div>
