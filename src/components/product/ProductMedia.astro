@@ -1,32 +1,91 @@
 ---
 import type { ProductPhoto } from '../../data/products/types';
+import { mediaPreview } from '../../lib/product-media';
 import Photo from './ProductPhoto.astro';
+import SliderButton from '../ui/SliderButton.astro';
+import CloseButton from '../ui/CloseButton.astro';
+import '../../styles/photo-viewer.css';
 interface Props { photos: ProductPhoto[]; }
 const { photos } = Astro.props;
+const desktop = mediaPreview(photos.length, 4);
+const mobile = mediaPreview(photos.length, 3);
 ---
-<product-media class="product-media">
+<product-media class="product-media" data-photos={JSON.stringify(photos)}>
   <div class="product-media__main">
-    {photos[0] ? <a href="#product-gallery" aria-label="Перейти к фотографиям модели"><Photo photo={photos[0]} eager /></a> : <p class="product-photo-pending">Фотографии скоро появятся</p>}
+    {photos[0] ? <a href={photos[0].src} data-open-photo aria-label="Открыть главное фото во весь экран"><Photo photo={photos[0]} eager /></a> : <p class="product-photo-pending">Фотографии скоро появятся</p>}
   </div>
   <div class="product-media__thumbs" aria-label={photos.length ? 'Выбор фотографии' : undefined} aria-hidden={!photos.length || undefined}>
-    {photos.length ? photos.slice(0,4).map((photo,index) => <a href={photo.src} class:list={{ "product-media__thumb--mobile-hidden": index >= (photos.length > 3 ? 2 : 3), "product-media__thumb--desktop-hidden": index === 3 && photos.length > 4 }} data-photo-index={index} aria-label={`Фото ${index+1}: ${photo.alt}`} aria-current={index === 0 ? 'true' : undefined}><Photo photo={photo} /></a>) : Array.from({length:4},() => <div class="product-media__empty"></div>)}
-    {photos.length > 3 && <a class="product-media__more product-media__more--mobile" href="#product-gallery" aria-label={`Все ${photos.length} фото`}>+{photos.length - 2}</a>}
-    {photos.length > 4 && <a class="product-media__more product-media__more--desktop" href="#product-gallery" aria-label={`Все ${photos.length} фото`}>+{photos.length - 3}</a>}
+    {photos.length ? desktop.indices.map(index => <a href={photos[index].src} class:list={{ 'product-media__thumb--mobile-hidden': index > mobile.indices.length }} data-photo-index={index} aria-label={`Фото ${index+1}: ${photos[index].alt}`}><Photo photo={photos[index]} /></a>) : Array.from({length:4},() => <div class="product-media__empty"></div>)}
+    {mobile.hidden > 0 && <a class="product-media__more product-media__more--mobile" href={photos[mobile.firstHidden].src} data-open-photo={mobile.firstHidden} aria-label={`Ещё ${mobile.hidden} фото`}>+{mobile.hidden}</a>}
+    {desktop.hidden > 0 && <a class="product-media__more product-media__more--desktop" href={photos[desktop.firstHidden].src} data-open-photo={desktop.firstHidden} aria-label={`Ещё ${desktop.hidden} фото`}>+{desktop.hidden}</a>}
   </div>
+  {photos.length > 0 && <dialog class="photo-viewer" aria-label="Фотографии модели">
+    <div class="photo-viewer__bar"><p class="photo-viewer__count" aria-live="polite" aria-atomic="true"></p><CloseButton label="Закрыть просмотр фотографий" /></div>
+    <div class="photo-viewer__stage" id="hero-photo-stage"><img alt="" draggable="false" /></div>
+    {photos.length > 1 && <div class="photo-viewer__navigation"><SliderButton direction="previous" label="Предыдущее фото" controls="hero-photo-stage" /><SliderButton direction="next" label="Следующее фото" controls="hero-photo-stage" /></div>}
+  </dialog>}
 </product-media>
 <script>
+  import { nextPhoto } from '../../lib/product-media';
+  import type { ProductPhoto } from '../../data/products/types';
   class ProductMedia extends HTMLElement {
     connectedCallback() {
+      if (this.dataset.ready) return;
+      this.dataset.ready = 'true';
+      const photos: ProductPhoto[] = JSON.parse(this.dataset.photos ?? '[]');
       const main = this.querySelector<HTMLImageElement>('.product-media__main img');
-      if (!main) return;
-      const links = Array.from(this.querySelectorAll<HTMLAnchorElement>('[data-photo-index]'));
+      const dialog = this.querySelector<HTMLDialogElement>('dialog');
+      if (!main || !dialog || !photos.length) return;
+      const mainLink = this.querySelector<HTMLAnchorElement>('.product-media__main a')!;
+      const full = dialog.querySelector<HTMLImageElement>('.photo-viewer__stage img')!;
+      const counter = dialog.querySelector<HTMLElement>('.photo-viewer__count')!;
+      const links = [...this.querySelectorAll<HTMLAnchorElement>('[data-photo-index]')];
+      let selected = 0, viewed = 0;
+      let opener: HTMLElement | null = null;
+      let previousOverflow = '';
+      const render = () => {
+        full.src = photos[viewed].src;
+        full.alt = photos[viewed].alt;
+        counter.textContent = `${viewed + 1} из ${photos.length}`;
+      };
+      const step = (delta: number) => { viewed = nextPhoto(viewed, delta, photos.length); render(); };
       links.forEach(link => link.addEventListener('click', event => {
         event.preventDefault();
+        selected = Number(link.dataset.photoIndex);
         const image = link.querySelector('img')!;
         for (const attribute of ['src','alt','width','height','style']) main.setAttribute(attribute,image.getAttribute(attribute) ?? '');
+        mainLink.href = photos[selected].src;
         links.forEach(item => item.removeAttribute('aria-current'));
         link.setAttribute('aria-current','true');
       }));
+      this.querySelectorAll<HTMLAnchorElement>('[data-open-photo]').forEach(link => link.addEventListener('click', event => {
+        event.preventDefault();
+        viewed = link.dataset.openPhoto === '' ? selected : Number(link.dataset.openPhoto);
+        opener = link; render();
+        previousOverflow = document.documentElement.style.overflow;
+        document.documentElement.style.overflow = 'hidden';
+        dialog.showModal();
+      }));
+      dialog.querySelector('[data-close-dialog]')!.addEventListener('click', () => dialog.close());
+      dialog.querySelector('[data-rail-previous]')?.addEventListener('click', () => step(-1));
+      dialog.querySelector('[data-rail-next]')?.addEventListener('click', () => step(1));
+      dialog.addEventListener('keydown', event => {
+        if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') { event.preventDefault(); step(event.key === 'ArrowLeft' ? -1 : 1); }
+      });
+      dialog.addEventListener('close', () => {
+        document.documentElement.style.overflow = previousOverflow;
+        opener?.focus({ preventScroll: true });
+      });
+      const stage = dialog.querySelector<HTMLElement>('.photo-viewer__stage')!;
+      let start: { x: number; y: number } | null = null;
+      stage.addEventListener('touchstart', e => { start = e.touches.length === 1 ? { x:e.touches[0].clientX, y:e.touches[0].clientY } : null; }, { passive:true });
+      stage.addEventListener('touchend', e => {
+        if (!start || !e.changedTouches.length) return;
+        const dx=e.changedTouches[0].clientX-start.x, dy=e.changedTouches[0].clientY-start.y;
+        if (Math.abs(dx)>50 && Math.abs(dx)>Math.abs(dy)*1.5) step(dx<0 ? 1 : -1);
+        start=null;
+      }, { passive:true });
+      stage.addEventListener('touchcancel', () => { start=null; });
     }
   }
   if (!customElements.get('product-media')) customElements.define('product-media',ProductMedia);

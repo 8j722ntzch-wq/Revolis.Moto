@@ -43,3 +43,9 @@
 Шаблон и Striker 500 EFI/EPS проверены локально на 320/390/768/1366/1470/1920 px: горизонтального переполнения нет; проверены изображения SVG, раскрытие/сворачивание ТТХ, FAQ, мобильная лента поддержки, переход из каталога, контекст modelId у предложения/шапки/банковской формы, Escape и возврат фокуса. При пустом photos интерактивные миниатюры не показываются; заполненный фоторяд требует проверки после получения фотографий. Длинный подзаголовок первой похожей модели увеличивает карточку по содержимому вместо обрезки до высоты рамки Figma.
 
 Astro check: 0 ошибок/предупреждений; build: 8 страниц; test: 8 проверок; design:check: без замечаний. Офлайн-превью обновляются из текущей сборки. Сайт остаётся noindex и не развёрнут публично; реальные отправки заявок не подключены.
+
+## 2026-10-22 - bank cards and independent Hero viewer
+
+Whole bank cards open the popup. Bank selector states refreshed from Figma 300:10927. Hero viewer uses shared close/slider controls, keyboard navigation, Escape and swipe. Lower gallery is separate via galleryPhotos. Mobile five-photo counter is +2. Actual Striker photos remain pending.
+
+Validation this turn: Astro check (62 files, no errors/warnings), static build (8 routes), 11 tests, strict design-input check passed. Browser: bank card click outside arrow opens preselected bank, both banks select correctly; desktop/mobile viewer tested with temporary 5-image fixture, +2 opens image 4, arrows and Escape/focus return verified. Catalogue overflow checked at 320/1366/1920; popup and viewer visually checked at 390/1470. Temporary fixture removed before build. Touch swipe implemented but not physically verified on a phone. All standalone previews regenerated. No deployment.

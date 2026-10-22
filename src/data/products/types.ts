@@ -14,7 +14,9 @@ export interface ProductDetails {
   source: { fileKey: string; desktop: string; mobile: string; capturedAt: string; contentStatus: 'figma-reference' | 'verified' };
   subtitle: string;
   intro: string;
+  /** Hero photographs only; independent of the editorial gallery below. */
   photos: ProductPhoto[];
+  galleryPhotos?: ProductPhoto[];
   description?: { title: string; accent?: string; paragraphs: string[] };
   benefits?: ProductCard[];
   features?: ProductCard[];

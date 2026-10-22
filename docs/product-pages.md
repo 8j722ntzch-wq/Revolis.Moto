@@ -26,7 +26,7 @@
 
 ## Фотографии
 
-Для каждой модели отдельная папка `public/assets/products/<model-id>/`. В массиве photos порядок задаёт главную фотографию, миниатюры и галерею. Поля: `src` (локальный /assets/ URL), `alt` (описание снимка), `width`, `height`; необязательные `fit` (contain по умолчанию, cover для согласованного кадрирования), `position` (например center).
+Для каждой модели отдельная папка `public/assets/products/<model-id>/`. Массив `photos` задаёт фотографии Hero, а независимый массив `galleryPhotos` — нижнюю галерею. Поля: `src` (локальный /assets/ URL), `alt` (описание снимка), `width`, `height`; необязательные `fit` (contain по умолчанию, cover для согласованного кадрирования), `position` (например center).
 
 При пустом photos показаны пустые места из Figma и подпись «Фотографии скоро появятся», без чужих фото и фиктивного «+11». После наполнения: выбор миниатюры меняет главное фото; галерея открывает исходный снимок по ссылке. Количество снимков берётся из массива. Заполненный фоторяд нужно визуально проверить после получения реальных материалов.
 
@@ -45,3 +45,7 @@
 ## Проверки
 
 Текущие результаты проверки и ограничения записываются в project-status.md. Онлайн-публикация в объём этапа не входит.
+
+## Hero media update (2026-10-22)
+
+`photos` now contains Hero media only. `galleryPhotos` is an independent optional array for the lower gallery; there is no fallback or automatic copying. Both arrays use ProductPhoto. Hero thumbnails exclude the main image: mobile shows two thumbnails and a remaining-photo counter (5 total = +2), desktop shows three and a counter. Main opens the selected photo; +N opens the first hidden photo. The modal uses existing SliderButton and CloseButton components, contains the entire image, supports arrow keys, Escape, touch swipe and focus restoration. No slider arrows in Hero itself.

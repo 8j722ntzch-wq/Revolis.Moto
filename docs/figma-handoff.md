@@ -38,3 +38,7 @@
 ## SKU — 22.10.2026
 
 Текущие цели: Desktop 147:9784 и Mobile 147:9821. Перечитаны 24 контекста секций/логотипов; реестр — design/product-pages.json. Исходные SVG экспортированы без изменения геометрии. В generated context Figma неверно объединял несколько иконок/иллюстраций под общим URL: реальные экземпляры экспортированы через read-only Plugin API. Фотографии отсутствуют по поручению пользователя; два спорных значения ТТХ согласованы как «Уточняется». Порядок расширения шаблона — docs/product-pages.md.
+
+## 2026-10-22 - bank cards and independent Hero viewer
+
+Whole bank cards open the popup. Bank selector states refreshed from Figma 300:10927. Hero viewer uses shared close/slider controls, keyboard navigation, Escape and swipe. Lower gallery is separate via galleryPhotos. Mobile five-photo counter is +2. Actual Striker photos remain pending.

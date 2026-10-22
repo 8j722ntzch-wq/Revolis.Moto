@@ -51,5 +51,12 @@
       "quality": "high-fidelity",
       "contextFile": "design/context/popups-1-9092.txt"
     }
-  ]
+  ],
+  "bankSelectorReview": {
+    "nodeId": "300:10927",
+    "capturedAt": "2026-10-22",
+    "contextFile": "design/context/bank-selector-300-10927.txt",
+    "quality": "high-fidelity",
+    "adaptation": "Stable transparent border prevents 2px layout shifts."
+  }
 }

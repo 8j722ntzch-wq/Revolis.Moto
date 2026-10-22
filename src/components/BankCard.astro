@@ -39,7 +39,7 @@ const action = {
             {terms ? <><p>{terms.durationLabel}</p><p>{terms.rateLabel}</p></> : <p>Условия уточняются</p>}
           </div>
         </div>
-        <Button {...action} variant="icon" size="m" tone="inverse" aria-label={`Подобрать условия оплаты — ${bank.name}`} />
+        <Button {...action} class="bank-card__trigger" variant="icon" size="m" tone="inverse" aria-label={`Подобрать условия оплаты — ${bank.name}`} />
       </div>
     </> : <>
       <div class="bank-card__consultation">
@@ -52,11 +52,14 @@ const action = {
 </article>
 <style>
   .bank-card { width: var(--bank-card-width); min-height: var(--bank-card-height); flex-shrink: 0; --bank-action-hover: var(--color-white); }
-  .bank-card__surface { display: flex; flex-direction: column; justify-content: space-between; min-height: var(--bank-card-height); padding: var(--space-20); border-radius: var(--radius-card); color: var(--color-white); transition: transform var(--motion-fast); }
+  .bank-card__surface { position: relative; display: flex; flex-direction: column; justify-content: space-between; min-height: var(--bank-card-height); padding: var(--space-20); border-radius: var(--radius-card); color: var(--color-white); transition: transform var(--motion-fast); }
   .bank-card--alfa .bank-card__surface { background: var(--color-bank-alfa); color: var(--color-media); }
   .bank-card--technobank .bank-card__surface { background: var(--color-bank-techno); }
   .bank-card--consultation { --bank-action-hover: var(--color-purple); }
   .bank-card--consultation .bank-card__surface { padding-top: 13px; background: var(--color-gray-6); }
+  .bank-card :global(.bank-card__trigger) { position: static; }
+  .bank-card :global(.bank-card__trigger:not(:disabled)::after) { content: ""; position: absolute; inset: 0; border-radius: var(--radius-card); }
+  .bank-card :global(.bank-card__trigger:focus-visible::after) { outline: 2px solid var(--color-purple); outline-offset: 3px; }
   .bank-card__logo { display: block; align-self: flex-start; flex-shrink: 0; }
   .bank-card__bottom { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--space-12); margin-top: 30px; }
   .bank-card__offer { display: flex; flex-direction: column; gap: var(--space-12); }

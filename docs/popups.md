@@ -24,3 +24,7 @@ BaseLayout подключает три native dialog по одному разу.
 Astro check/build, 4 теста (включая контракт ответа сервера и передачу банка), design:check (83 ресурса). Проверены открытие из шапки и банковской карточки, смена/сброс банка, крестик/Escape/фон, возврат фокуса и переход из мобильного меню. В браузере проверены 320/390/1366/1470/1920 px, горизонтального переполнения окон нет. Визуально сверены Desktop и Mobile. Реальная доставка не проверялась и не подключалась.
 
 При проверке обнаружен прозрачный край рукописного декора тест-драйва над мобильной кнопкой. Декор больше не перехватывает нажатия (pointer-events: none); позиция и изображение сохранены.
+
+## Bank selector update (2026-10-22)
+
+Whole bank cards open the existing dialog through a single accessible button. Bank/model context is preserved. Fresh Figma 300:10927: default colored border, hover 20% fill, selected/pressed solid fill. Transparent borders preserve dimensions instead of the 2px shifts between Figma states. Wallet SVG keeps intrinsic geometry. Context: design/context/bank-selector-300-10927.txt. Shared CloseButton is reused by lead dialogs and Hero viewer.

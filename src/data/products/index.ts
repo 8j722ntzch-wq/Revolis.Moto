@@ -11,7 +11,7 @@ export function validateProducts(entries: readonly ProductDetails[]) {
     if (ids.has(entry.modelId)) throw new Error('Duplicate product: ' + entry.modelId);
     ids.add(entry.modelId);
     if (!models.some(model => model.id === entry.modelId)) throw new Error('Unknown product: ' + entry.modelId);
-    for (const photo of entry.photos) {
+    for (const photo of [...entry.photos, ...entry.galleryPhotos ?? []]) {
       if (!photo.src.startsWith('/assets/') || photo.src.includes('..') || !photo.alt.trim() || !(photo.width > 0 && photo.height > 0)) throw new Error('Invalid product photo: ' + entry.modelId);
     }
     for (const id of entry.relatedModelIds ?? []) {
