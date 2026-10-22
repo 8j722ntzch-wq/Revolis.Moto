@@ -6,13 +6,13 @@ import SiteFooter from '../../components/SiteFooter.astro';
 import ModelCard from '../../components/ModelCard.astro';
 import HomeFinance from '../../components/home/HomeFinance.astro';
 import HomeConsultation from '../../components/home/HomeConsultation.astro';
-import { catalogueModelReferences } from '../../data/catalog';
+import { catalogueModels } from '../../data/catalog';
 import '../../styles/home.css';
 import '../../styles/home-mobile.css';
 import '../../styles/catalogue.css';
-const brands = ['Все', 'Mikilon', 'BaltMotors', 'RBMotors'];
+const brands = ['Все', ...new Set(catalogueModels.map(model => model.brand))];
 ---
-<BaseLayout title="Наши модели — Revolis.Мото" description="Каталог квадроциклов Mikilon, BaltMotors и вездеходов RBMotors. Подбор техники по бренду.">
+<BaseLayout title="Наши модели — Revolis.Мото" description="Каталог квадроциклов Mikilon и BaltMotors. Подбор техники по бренду.">
   <div id="top" class="homepage mobile-ui catalogue-page">
     <SiteHeader homeHref="/" dialogId="lead-dialog" /><MobileHeader homeHref="/" />
     <main>
@@ -22,9 +22,9 @@ const brands = ['Все', 'Mikilon', 'BaltMotors', 'RBMotors'];
           <div class="catalogue__filters" role="group" aria-label="Фильтр по бренду">
             {brands.map((brand, i) => <button type="button" data-brand={i ? brand : 'all'} aria-pressed={i === 0 ? 'true' : 'false'} aria-controls="catalogue-grid">{brand}</button>)}
           </div>
-          <p class="sr-only" role="status" aria-live="polite" aria-atomic="true" data-filter-status>Показано моделей: 8</p>
+          <p class="sr-only" role="status" aria-live="polite" aria-atomic="true" data-filter-status>Показано моделей: {catalogueModels.length}</p>
           <div id="catalogue-grid" class="catalogue__grid">
-            {catalogueModelReferences.map(model => <div data-catalogue-brand={model.brand}><ModelCard model={model} id={model.id} headingLevel="h2" /></div>)}
+            {catalogueModels.map(model => <div data-catalogue-brand={model.brand}><ModelCard model={model} id={model.id} headingLevel="h2" /></div>)}
           </div>
         </catalogue-filter>
       </section>
@@ -39,12 +39,24 @@ const brands = ['Все', 'Mikilon', 'BaltMotors', 'RBMotors'];
       const buttons = Array.from(this.querySelectorAll<HTMLButtonElement>('button[data-brand]'));
       const cards = Array.from(this.querySelectorAll<HTMLElement>('[data-catalogue-brand]'));
       const status = this.querySelector<HTMLElement>('[data-filter-status]');
+      const select = (brand: string) => {
+        buttons.forEach(item => item.setAttribute('aria-pressed', String(item.dataset.brand === brand)));
+        cards.forEach(card => { card.hidden = brand !== 'all' && card.dataset.catalogueBrand !== brand; });
+        if (status) status.textContent = `Показано моделей: ${cards.filter(card => !card.hidden).length}`;
+      };
+      const fromUrl = () => {
+        const requested = new URL(location.href).searchParams.get('brand');
+        select(buttons.some(button => button.dataset.brand === requested) ? requested! : 'all');
+      };
+      fromUrl();
+      window.addEventListener('popstate', fromUrl);
       buttons.forEach((button, index) => {
         button.onclick = () => {
-          const brand = button.dataset.brand;
-          buttons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
-          cards.forEach(card => { card.hidden = brand !== 'all' && card.dataset.catalogueBrand !== brand; });
-          if (status) status.textContent = `${button.textContent}: показано моделей — ${cards.filter(card => !card.hidden).length}`;
+          const brand = button.dataset.brand ?? 'all';
+          select(brand);
+          const url = new URL(location.href);
+          if (brand === 'all') url.searchParams.delete('brand'); else url.searchParams.set('brand', brand);
+          history.replaceState(null, '', url);
         };
         button.onkeydown = event => {
           const targets: Record<string, number> = { ArrowRight: (index + 1) % buttons.length, ArrowLeft: (index + buttons.length - 1) % buttons.length, Home: 0, End: buttons.length - 1 };

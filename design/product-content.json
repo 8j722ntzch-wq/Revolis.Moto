@@ -1,0 +1,107 @@
+{
+  "retrievedAt": "2026-10-22",
+  "records": [
+    {
+      "modelId": "baltmotors-400-efi",
+      "notionUrl": "https://www.notion.so/3fbe0b8f9856816cb0a1d73a4025acb3",
+      "retrievedAt": "2026-10-22",
+      "sourceSha256": "5a63fae0d31180280e531b986a9e85c59421ca64898f54bfd351ce5f03c8ea34",
+      "specificationRows": 31,
+      "file": "striker-400-efi.ts",
+      "export": "striker400",
+      "sourceStatus": "Notion: Данные проверяются / Не проверены",
+      "unknownFields": [
+        "Диаметр цилиндра × ход поршня",
+        "Режимы коробки в основной карточке",
+        "Сухая масса",
+        "Дорожный просвет",
+        "Объём бака"
+      ]
+    },
+    {
+      "modelId": "baltmotors-500-efi",
+      "notionUrl": "https://www.notion.so/3fbe0b8f985681f28746fba914455b93",
+      "retrievedAt": "2026-10-22",
+      "sourceSha256": "d635bc30950c737365210cd3971b494bc77ed39a08c83f5970f54cd5102d03ef",
+      "specificationRows": 34,
+      "file": "striker-500-efi.ts",
+      "export": "striker500",
+      "sourceStatus": "Notion: Данные проверяются / Не проверены",
+      "unknownFields": [
+        "Сухая масса",
+        "Дорожный просвет",
+        "Топливный бак"
+      ]
+    },
+    {
+      "modelId": "baltmotors-500-efi-eps",
+      "notionUrl": "https://www.notion.so/3fbe0b8f985681cbb327d91656d7ab9e",
+      "retrievedAt": "2026-10-22",
+      "sourceSha256": "f7699a7d735e44883c7c71e7997096aa4edc491c89df4f9d107c8fa171ba64b5",
+      "specificationRows": 37,
+      "file": "striker-500-efi-eps.ts",
+      "export": "striker500Eps",
+      "sourceStatus": "Notion: Данные проверяются / Не проверены",
+      "unknownFields": [
+        "Топливный бак",
+        "Сухая масса",
+        "Дорожный просвет"
+      ]
+    },
+    {
+      "modelId": "baltmotors-700-efi",
+      "notionUrl": "https://www.notion.so/3fbe0b8f9856814f8232fbacae4e0750",
+      "retrievedAt": "2026-10-22",
+      "sourceSha256": "1d63d584c11379909051885460fdd7a204f0cda30e68601c911087d877a51616",
+      "specificationRows": 39,
+      "file": "striker-700-efi.ts",
+      "export": "striker700",
+      "sourceStatus": "Notion: Данные проверяются / Не проверены",
+      "unknownFields": [
+        "Сухая масса",
+        "Дорожный просвет",
+        "Топливный бак"
+      ]
+    },
+    {
+      "modelId": "baltmotors-700-efi-eps",
+      "notionUrl": "https://www.notion.so/3fbe0b8f985681c0bbd6f24131d32b58",
+      "retrievedAt": "2026-10-22",
+      "sourceSha256": "b040322aa29c867b37ebe36a397f14c4d646fc4eaee061e6cbbcced6deb32075",
+      "specificationRows": 39,
+      "file": "striker-700-efi-eps.ts",
+      "export": "striker700Eps",
+      "sourceStatus": "Notion: Данные проверяются / Не проверены",
+      "unknownFields": [
+        "Сухая масса",
+        "Дорожный просвет",
+        "Топливный бак"
+      ]
+    },
+    {
+      "modelId": "mikilon-hammer-touring-200",
+      "notionUrl": "https://www.notion.so/3fbe0b8f985681e7a4bbfb56b3115862",
+      "retrievedAt": "2026-10-22",
+      "sourceSha256": "f28363b8a42588187bd6417bea9a8ba36a7926ecab703babcdc6574fe4af8f67",
+      "specificationRows": 36,
+      "file": "hammer-touring-200.ts",
+      "export": "hammer200",
+      "sourceStatus": "Notion: Данные проверяются / Не проверены",
+      "unknownFields": []
+    },
+    {
+      "modelId": "mikilon-hammer-touring-300",
+      "notionUrl": "https://www.notion.so/3fbe0b8f985681ba8631d2aa29ad28d1",
+      "retrievedAt": "2026-10-22",
+      "sourceSha256": "eea768201eb0673df0e8922d13684dc64d16e6ca04ab2a72742ae95306ed284f",
+      "specificationRows": 36,
+      "file": "hammer-touring-300.ts",
+      "export": "hammer300",
+      "sourceStatus": "Notion: Данные проверяются / Не проверены",
+      "unknownFields": []
+    }
+  ],
+  "images": "Hero and lower gallery pending; existing catalogue illustrations retained",
+  "commercialData": "Not supplied by Notion: price and availability remain unconfirmed",
+  "hammer300Decision": "User approved unified name; length 1940–1970 mm and operating mass 290–300 kg depend on equipment"
+}

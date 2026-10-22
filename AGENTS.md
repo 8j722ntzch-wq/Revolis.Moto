@@ -27,7 +27,7 @@ Catalogue Desktop/Mobile assembly was authorized and implemented on 2026-10-21 a
 
 Current milestone (2026-10-21): the user has explicitly authorized assembly of the Desktop homepage from `Main (Desktop)_1470 px` (1:13203). Reuse the reviewed styles and components from `/ui-kit/`. Desktop/Mobile consultation, bank and thank-you dialogs are implemented; read docs/popups.md and design/popups.json. The user deferred delivery integration and will supply the personal-data policy as a PDF. This authorization covers implementation and source updates in development, not website deployment.
 
-Build the desktop homepage in Astro with CSS and small TypeScript modules. Mobile homepage assembly was also authorized and implemented on 2026-10-21; see docs/mobile-home.md. SKU assembly is authorized; register only populated detail pages. Preserve the original design rather than applying previous UX suggestions automatically.
+Build the desktop homepage in Astro with CSS and small TypeScript modules. Mobile homepage assembly was also authorized and implemented on 2026-10-21; see docs/mobile-home.md. SKU assembly is authorized; register only populated detail pages. Seven Notion-backed SKU pages are now populated (2026-10-22); read docs/product-content-audit.md and design/product-content.json. Public cards use catalogueModels/homepageModels with catalog-content.ts, not commercial Figma fixtures. RBMotors is hidden. Preserve the user-approved Hammer 300 ranges and unified name. Preserve the original design rather than applying previous UX suggestions automatically.
 
 ## Source of truth
 

@@ -11,7 +11,7 @@ export interface ProductCard { title: string; body: string; icon: string; accent
 export interface SpecificationGroup { title: string; rows: { label: string; value: string | null }[]; }
 export interface ProductDetails {
   modelId: string;
-  source: { fileKey: string; desktop: string; mobile: string; capturedAt: string; contentStatus: 'figma-reference' | 'verified' };
+  source: { fileKey: string; desktop: string; mobile: string; capturedAt: string; contentStatus: 'figma-reference' | 'notion-reference' | 'verified'; notionUrl?: string; retrievedAt?: string };
   subtitle: string;
   intro: string;
   /** Hero photographs only; independent of the editorial gallery below. */
@@ -21,6 +21,7 @@ export interface ProductDetails {
   benefits?: ProductCard[];
   features?: ProductCard[];
   specifications?: SpecificationGroup[];
+  specificationNote?: string;
   support?: ProductCard[];
   comparison?: { family: string; models: string[]; rows: { label: string; values: string[] }[] };
   relatedModelIds?: string[];

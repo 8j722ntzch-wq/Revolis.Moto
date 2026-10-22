@@ -1,9 +1,14 @@
-import { models, catalogueModelReferences } from '../catalog.ts';
-import { striker500Eps } from './striker-500-efi-eps.ts';
+import { models } from '../catalog.ts';
 import type { ProductDetails } from './types.ts';
-
+import { striker400 } from './striker-400-efi.ts';
+import { striker500 } from './striker-500-efi.ts';
+import { striker500Eps } from './striker-500-efi-eps.ts';
+import { striker700 } from './striker-700-efi.ts';
+import { striker700Eps } from './striker-700-efi-eps.ts';
+import { hammer200 } from './hammer-touring-200.ts';
+import { hammer300 } from './hammer-touring-300.ts';
 /** Register only populated pages. Layout readiness is separate from offer verification. */
-export const productDetails: readonly ProductDetails[] = [striker500Eps];
+export const productDetails: readonly ProductDetails[] = [striker400, striker500, striker500Eps, striker700, striker700Eps, hammer200, hammer300];
 
 export function validateProducts(entries: readonly ProductDetails[]) {
   const ids = new Set<string>();
@@ -24,16 +29,14 @@ export function validateProducts(entries: readonly ProductDetails[]) {
 }
 validateProducts(productDetails);
 
-/** Commercial values still come from explicit catalogue fixtures until verified. */
+/** Model cards and detail pages share one current catalogue source. */
 export const productPages = productDetails.map(details => {
-  const canonical = models.find(model => model.id === details.modelId)!;
-  const reference = catalogueModelReferences.find(model => model.path === canonical.path);
-  if (!reference) throw new Error('Missing catalogue reference: ' + details.modelId);
-  return { details, model: { ...reference, id: canonical.id, pageReady: true }, slug: canonical.path.split('/')[2] };
+ const model = models.find(model => model.id === details.modelId)!;
+ return { details, model, slug: model.path.split('/')[2] };
 });
 export type ProductPage = typeof productPages[number];
 export const hasProductPage = (path: string) => productPages.some(page => page.model.path === path);
-export const getRelatedModels = (ids: readonly string[]) => ids.map(id => {
-  const canonical = models.find(model => model.id === id)!;
-  return catalogueModelReferences.find(model => model.path === canonical.path)!;
+export const getRelatedModels = (ids: readonly string[]) => ids.flatMap(id => {
+ const model = models.find(model => model.id === id);
+ return model ? [model] : [];
 });

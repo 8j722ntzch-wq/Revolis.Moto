@@ -42,3 +42,7 @@
 ## 2026-10-22 - bank cards and independent Hero viewer
 
 Whole bank cards open the popup. Bank selector states refreshed from Figma 300:10927. Hero viewer uses shared close/slider controls, keyboard navigation, Escape and swipe. Lower gallery is separate via galleryPhotos. Mobile five-photo counter is +2. Actual Striker photos remain pending.
+
+## 22.10.2026 — контент семи SKU
+
+Существующий шаблон наполнен из семи страниц Notion без переноса их редакционных предложений по новой композиции. Изменены тексты, источники данных, навигация и перенос строк длинных характеристик. Фотографии Hero/галереи ожидаются. Свежая сверка всей композиции Figma в этом этапе не проводилась; использован ранее собранный шаблон. Реестр: design/product-content.json; аудит: docs/product-content-audit.md.

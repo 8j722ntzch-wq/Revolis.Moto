@@ -64,7 +64,7 @@ const price = model.priceByn === null ? null : new Intl.NumberFormat('ru-BY', { 
   .model-card__content { display: flex; flex: 1; flex-direction: column; gap: var(--space-20); }
   .model-card__identity { display: flex; flex-direction: column; gap: var(--space-8); }
   .model-card__subtitle { color: var(--color-purple); font-style: italic; font-synthesis: none; }
-  .model-card__features { display: flex; align-items: center; gap: var(--space-20); padding: 0; margin: 0; list-style: none; }
+  .model-card__features { display: flex; flex-wrap: wrap; row-gap: 8px; align-items: center; gap: var(--space-20); padding: 0; margin: 0; list-style: none; }
   .model-card__features li { display: flex; align-items: center; gap: var(--space-8); }
   .model-card__features span { white-space: nowrap; }
   .model-card__features img, .model-card__registration img { display: block; flex-shrink: 0; }

@@ -1,11 +1,12 @@
 ---
 import type { SpecificationGroup } from '../../data/products/types';
 import SectionHeading from '../ui/SectionHeading.astro';
-interface Props { groups: SpecificationGroup[]; }
-const { groups } = Astro.props;
+interface Props { groups: SpecificationGroup[]; note?: string; }
+const { groups, note } = Astro.props;
 ---
 <section id="specifications" class="product-section product-specifications container" aria-labelledby="specifications-title">
   <SectionHeading eyebrow="Детали" id="specifications-title" bold>Технические <span>характеристики</span></SectionHeading>
+  {note && <p class="product-specifications__note">{note}</p>}
   <product-specifications>
     <div id="specification-tables" class="product-specifications__window">
       <div class="product-specifications__grid">{groups.map((group,index) => <div class:list={['product-specifications__group',{'product-specifications__group--engine':index===0}]}>

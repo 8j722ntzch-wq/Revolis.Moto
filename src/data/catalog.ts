@@ -1,3 +1,4 @@
+import { catalogueContent } from './catalog-content.ts';
 export interface ModelFeature {
   icon: 'engine' | 'drive' | 'passport';
   label: string;
@@ -27,7 +28,8 @@ export interface Model {
 
 // Product list comes from the agreed MVP scope. Commercial fields await
 // model-specific confirmation; PDF example prices are not production prices.
-export const models: readonly Model[] = [
+const modelRegistry: readonly Model[] = [
+  { id: 'baltmotors-400-efi', brand: 'BaltMotors', name: 'Striker 400 EFI', path: '/models/baltmotors-400-efi/', priceByn: null, availability: 'unconfirmed', image: null, registration: 'gai', pageReady: false },
   { id: 'baltmotors-500-efi', brand: 'BaltMotors', name: '500 EFI', path: '/models/baltmotors-500-efi/', priceByn: null, availability: 'unconfirmed', image: null, registration: 'unconfirmed', pageReady: false },
   { id: 'baltmotors-500-efi-eps', brand: 'BaltMotors', name: '500 EFI/EPS', path: '/models/baltmotors-500-efi-eps/', priceByn: null, availability: 'unconfirmed', image: null, registration: 'unconfirmed', pageReady: false },
   { id: 'baltmotors-700-efi', brand: 'BaltMotors', name: '700 EFI', path: '/models/baltmotors-700-efi/', priceByn: null, availability: 'unconfirmed', image: null, registration: 'unconfirmed', pageReady: false },
@@ -79,3 +81,17 @@ export const catalogueModelReferences: readonly Model[] = [
   { id: 'catalogue-striker-700-eps', brand: 'BaltMotors', name: 'Striker 700 EFI/EPS', path: '/models/baltmotors-700-efi-eps/', subtitle: 'Мощность и комфорт управления', features: [{ icon: 'engine', label: '686 см³' }, { icon: 'drive', label: '4x4 LOCK' }, { icon: 'passport', label: 'EPS' }], priceByn: 28500, priceFrom: true, financeLabel: 'В кредит и рассрочку', availability: 'in-stock', image: '/assets/catalogue/striker-700-eps.png', imageHeight: 280, imageWidth: 373.333, mobileImageWidth: 280, registration: 'gai', pageReady: false },
   { id: 'catalogue-athlete', brand: 'RBMotors', name: 'Athlete', path: '/models/rbmotors-athlete/', subtitle: 'Специализированная техника', features: [{ icon: 'engine', label: '1496 см³' }, { icon: 'drive', label: '4x4 LOCK' }, { icon: 'passport', label: 'Плавает' }], priceByn: 55000, priceFrom: true, financeLabel: 'В кредит и рассрочку', availability: 'special-offer', image: '/assets/catalogue/athlete.png', imageHeight: 245, imageWidth: 420, mobileImageWidth: 360, imageMirrored: true, registration: 'gostekhnadzor', pageReady: false },
 ];
+
+// Current sales scope. Reference fixtures above remain available only for design demos.
+export const models: readonly Model[] = modelRegistry.filter(model => model.brand !== 'RBMotors').map(model => {
+ const visual = catalogueModelReferences.find(reference => reference.path === model.path);
+ return { ...visual, ...model, image: visual?.image ?? null, registration: visual?.registration ?? model.registration, ...catalogueContent[model.id], pageReady: true };
+});
+export const catalogueModels = catalogueModelReferences.flatMap(reference => {
+ const model = models.find(model => model.path === reference.path);
+ return model ? [model] : [];
+});
+export const homepageModels = homepageModelReferences.flatMap(reference => {
+ const model = models.find(model => model.path === reference.path);
+ return model ? [model] : [];
+});

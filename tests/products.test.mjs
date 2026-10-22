@@ -5,7 +5,7 @@ import { productDetails, productPages, hasProductPage, getRelatedModels, validat
 
 test('only registered SKU paths are available and all related cards resolve', () => {
  assert.equal(hasProductPage('/models/baltmotors-500-efi-eps/'),true);
- assert.equal(hasProductPage('/models/baltmotors-700-efi/'),false);
+ assert.equal(hasProductPage('/models/baltmotors-700-efi/'),true);
  assert.equal(new Set(productPages.map(p=>p.slug)).size,productPages.length);
  for (const page of productPages) {
   assert.equal(page.model.id,page.details.modelId);
@@ -13,10 +13,10 @@ test('only registered SKU paths are available and all related cards resolve', ()
  }
 });
 test('incomplete content is explicit and missing photos do not invent images', () => {
- const page=productDetails[0];
+ const page=productDetails.find(p=>p.modelId==='baltmotors-500-efi-eps');
  assert.deepEqual(page.photos,[]);
  const pending=page.specifications.flatMap(g=>g.rows).filter(r=>r.value===null);
- assert.deepEqual(pending.map(r=>r.label).sort(),['Диаметр цилиндра × ход поршня','Сухая масса'].sort());
+ assert.deepEqual(pending.map(r=>r.label).sort(),['Сухая масса','Дорожный просвет','Топливный бак'].sort());
 });
 test('invalid additions fail before route generation', () => {
  const entry=structuredClone(productDetails[0]);

@@ -11,13 +11,13 @@
 | Офлайн-превью | Есть в preview/ | Пересобирать после изменения интерфейса |
 | Мобильная версия | Главная адаптирована на /; библиотека на /ui-kit-mobile/ | Проверить на физических устройствах перед публикацией |
 | Мобильные модели и документы | 3 модели вертикально; документы листаются круглыми кнопками Figma, swipe и клавиатурой; фото без обрезки; документы одной высоты | Сохранять отсутствие hover на Mobile и боковую видимость ленты документов |
-| Каталог /models/ | Desktop/Mobile реализованы; фильтры Все/Mikilon/BaltMotors/RBMotors | См. docs/catalogue.md; подтвердить коммерческие данные |
+| Каталог /models/ | Desktop/Mobile реализованы; 7 моделей; фильтры Все/Mikilon/BaltMotors; RBMotors скрыт | См. docs/catalogue.md; подтвердить коммерческие данные |
 | Контакты, политика, 404 | Desktop/Mobile реализованы; Яндекс Карты по подтверждённому адресу | См. docs/info-pages.md; карточка организации на карте ожидается |
-| Страницы отдельных моделей | Общий Desktop/Mobile шаблон; Striker 500 EFI/EPS на /models/baltmotors-500-efi-eps/ | Фото позже, два значения ТТХ «Уточняется»; остальные SKU наполнить по docs/product-pages.md |
+| Страницы отдельных моделей | Семь SKU Desktop/Mobile наполнены по Notion; карточки и хлебные крошки подключены | Фото позже; спорные ТТХ — docs/product-content-audit.md |
 | Диалоги | Консультация, банк и благодарность Desktop/Mobile реализованы | См. docs/popups.md; благодарность на сайте только после подтверждённой отправки |
 | Приём заявок | Backend отсутствует | Согласовать канал доставки, endpoint и политику; проверить доставку |
 | FAQ | Пять ответов предоставлены пользователем 21.10.2026; аккордеон подключён | Обновлять при изменении условий |
-| Цены, наличие, ТТХ, банковские условия | На главной образцы Figma | Подтвердить для каждой модели/программы |
+| Цены, наличие, ТТХ, банковские условия | Цены/наличие моделей не подтверждены, ТТХ перенесены из Notion; ставки главной остаются образцами Figma | Подтвердить для каждой модели/программы |
 | Карты, соцсети, политики | Адресные карты и политика конфиденциальности подключены; соцсети и отдельная политика обработки данных не подтверждены | Получить точные ссылки |
 | Публикация | Не выполнена в рамках этой работы | Отдельное поручение, домен, финальный контент и проверка |
 
@@ -49,3 +49,9 @@ Astro check: 0 ошибок/предупреждений; build: 8 страни�
 Whole bank cards open the popup. Bank selector states refreshed from Figma 300:10927. Hero viewer uses shared close/slider controls, keyboard navigation, Escape and swipe. Lower gallery is separate via galleryPhotos. Mobile five-photo counter is +2. Actual Striker photos remain pending.
 
 Validation this turn: Astro check (62 files, no errors/warnings), static build (8 routes), 11 tests, strict design-input check passed. Browser: bank card click outside arrow opens preselected bank, both banks select correctly; desktop/mobile viewer tested with temporary 5-image fixture, +2 opens image 4, arrows and Escape/focus return verified. Catalogue overflow checked at 320/1366/1920; popup and viewer visually checked at 390/1470. Temporary fixture removed before build. Touch swipe implemented but not physically verified on a phone. All standalone previews regenerated. No deployment.
+
+## 22.10.2026 — семь SKU из Notion
+
+Семь страниц с 252 строками характеристик, индивидуальными обзорами, особенностями и FAQ. Каталог, главная и похожие модели используют единые modelId и данные. Хлебные крошки бренда открывают фильтр каталога. RBMotors скрыт. Подробности источников, решения пользователя по диапазонам Hammer 300 и проверки 500 EPS: [product-content-audit.md](product-content-audit.md).
+
+Проверка этого этапа: Astro check — 70 файлов, 0 ошибок/предупреждений; build — 14 маршрутов; 15 тестов; строгая проверка design-inputs пройдена. В браузере проверены все семь SKU на 320/390/1470 px без горизонтального переполнения, Hammer 300 дополнительно на 1366/1920 px; фильтры, карточки, брендовая хлебная крошка, раскрытие ТТХ и modelId формы. Каталог Desktop и Hammer 300 Mobile просмотрены визуально. Все 14 офлайн-превью пересобраны. Это проверка наполнения существующего шаблона, а не новая сверка с Figma. Фотографии, подтверждение цен/наличия и доставка заявок остаются отдельными задачами. Публикации сайта не было.
