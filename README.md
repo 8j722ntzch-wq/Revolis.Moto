@@ -87,3 +87,5 @@ SKU Hero color palette added on 2026-10-23; per-model color lists are configured
 ## Подготовка публикации на hoster.by — 23.10.2026
 
 Добавлен `.github/workflows/deploy-hoster.yml`: проверки, сборка Astro и передача `dist/` по FTPS при push в `master`. Изменения в `development` не публикуются. Четыре необходимых secrets, проверка каталога и порядок первого релиза: [инструкция](docs/deployment-hoster.md). Подключение к хостингу пока не проверено, публикация не выполнялась.
+
+Для диагностики без публикации добавлен `Check hoster.by FTPS (read only)` в development. Результат подключения смотреть в Actions; повторный запуск — Re-run all jobs после исправления secrets. Проверка не изменяет файлы хостинга.
