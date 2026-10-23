@@ -51,3 +51,7 @@
 `photos` now contains Hero media only. `galleryPhotos` is an independent optional array for the lower gallery; there is no fallback or automatic copying. Both arrays use ProductPhoto. Hero thumbnails exclude the main image: mobile shows two thumbnails and a remaining-photo counter (5 total = +2), desktop shows three and a counter. Main opens the selected photo; +N opens the first hidden photo. The modal uses existing SliderButton and CloseButton components, contains the entire image, supports arrow keys, Escape, touch swipe and focus restoration. No slider arrows in Hero itself.
 
 Адаптивные WebP и порядок добавления фотографий: [images.md](images.md).
+
+## 2026-10-23 - SKU Hero colors
+
+Shared ProductColors component follows fresh Desktop 333:9925 and Mobile 333:10359: 40px swatches, 8px gap/radius, between intro and price. Original camouflage SVG retained. Palette is provisional for all seven SKU pages until the user supplies per-model availability. Set `colors: ['gray', 'blue']` in a model data file to override; omit for the six-color template palette, or use `colors: []` to hide the block. Registry: src/data/product-colors.ts. Names are exposed on hover/focus/tap; swatches do not change photos, price or lead data.

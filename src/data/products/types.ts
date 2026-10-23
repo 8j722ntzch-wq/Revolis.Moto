@@ -1,3 +1,4 @@
+import type { ProductColorId } from '../product-colors';
 export interface ProductPhoto {
   /** Site-local original; no temporary Figma URLs. */
   src: string;
@@ -15,6 +16,8 @@ export interface ProductDetails {
   subtitle: string;
   intro: string;
   /** Hero photographs only; independent of the editorial gallery below. */
+  /** Undefined: provisional template palette. Empty: hide block. Explicit list: model palette. */
+  colors?: readonly ProductColorId[];
   photos: ProductPhoto[];
   galleryPhotos?: ProductPhoto[];
   description?: { title: string; accent?: string; paragraphs: string[] };

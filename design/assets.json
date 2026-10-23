@@ -1571,6 +1571,25 @@
       ],
       "transfer": "Figma MCP asset URL via curl -L, original SVG",
       "sha256": "e07b4375801662fb00027c505b016c8ea888c031909b90b0e46254f288cdd196"
+    },
+    {
+      "id": "product-color-camouflage",
+      "nodeId": "333:9926",
+      "kind": "exported-svg",
+      "localPath": "public/assets/product/color-camouflage.svg",
+      "slots": [
+        {
+          "nodeId": "333:9926",
+          "sectionNodeId": "233:7145"
+        },
+        {
+          "nodeId": "333:10367",
+          "sectionNodeId": "316:12045"
+        }
+      ],
+      "width": 41.6667,
+      "height": 41.6667,
+      "note": "Original g12 export; centered in 40px clipped swatch, scaleY(-1) as in Figma."
     }
   ],
   "reusableUiManifest": "design/ui-assets.json",

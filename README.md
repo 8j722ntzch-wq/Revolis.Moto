@@ -73,3 +73,5 @@ npm run export:ui-kit
 SKU media: `photos` is the Hero collection; `galleryPhotos` is the independent lower gallery. See [SKU instructions](docs/product-pages.md).
 
 Адаптивные WebP и порядок добавления фотографий: [docs/images.md](docs/images.md).
+
+SKU Hero color palette added on 2026-10-23; per-model color lists are configured in product data. See [product page instructions](docs/product-pages.md).

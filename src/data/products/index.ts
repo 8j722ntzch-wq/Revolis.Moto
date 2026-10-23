@@ -1,3 +1,4 @@
+import { productColors } from '../product-colors.ts';
 import { models } from '../catalog.ts';
 import type { ProductDetails } from './types.ts';
 import { striker400 } from './striker-400-efi.ts';
@@ -15,6 +16,7 @@ export function validateProducts(entries: readonly ProductDetails[]) {
   for (const entry of entries) {
     if (ids.has(entry.modelId)) throw new Error('Duplicate product: ' + entry.modelId);
     ids.add(entry.modelId);
+    if (entry.colors && (new Set(entry.colors).size !== entry.colors.length || entry.colors.some(id => !Object.hasOwn(productColors, id)))) throw new Error('Invalid product colors: ' + entry.modelId);
     if (!models.some(model => model.id === entry.modelId)) throw new Error('Unknown product: ' + entry.modelId);
     for (const photo of [...entry.photos, ...entry.galleryPhotos ?? []]) {
       if (!photo.src.startsWith('/assets/') || photo.src.includes('..') || !photo.alt.trim() || !(photo.width > 0 && photo.height > 0)) throw new Error('Invalid product photo: ' + entry.modelId);

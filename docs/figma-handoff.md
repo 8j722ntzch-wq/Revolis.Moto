@@ -48,3 +48,7 @@ Whole bank cards open the popup. Bank selector states refreshed from Figma 300:1
 Существующий шаблон наполнен из семи страниц Notion без переноса их редакционных предложений по новой композиции. Изменены тексты, источники данных, навигация и перенос строк длинных характеристик. Фотографии Hero/галереи ожидаются. Свежая сверка всей композиции Figma в этом этапе не проводилась; использован ранее собранный шаблон. Реестр: design/product-content.json; аудит: docs/product-content-audit.md.
 
 2026-10-22: responsive WebP delivery added for existing raster assets; composition and SVG preserved. This is not a fresh Figma visual sync. See images.md.
+
+## 2026-10-23 - SKU Hero colors
+
+Shared ProductColors component follows fresh Desktop 333:9925 and Mobile 333:10359: 40px swatches, 8px gap/radius, between intro and price. Original camouflage SVG retained. Palette is provisional for all seven SKU pages until the user supplies per-model availability. Set `colors: ['gray', 'blue']` in a model data file to override; omit for the six-color template palette, or use `colors: []` to hide the block. Registry: src/data/product-colors.ts. Names are exposed on hover/focus/tap; swatches do not change photos, price or lead data.

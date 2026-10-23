@@ -3,6 +3,7 @@ import type { ProductPage } from '../../data/products';
 import Button from '../ui/Button.astro';
 import StatusBadge from '../ui/StatusBadge.astro';
 import Media from './ProductMedia.astro';
+import Colors from './ProductColors.astro';
 interface Props { product: ProductPage; }
 const { details, model } = Astro.props.product;
 const statuses = { 'in-stock': 'stock', 'on-order': 'order', 'coming-soon': 'soon', 'special-offer': 'offer' } as const;
@@ -19,6 +20,7 @@ const price = model.priceByn === null ? 'Цена уточняется' : `${mod
     {model.features?.length && <ul class="product-hero__features" aria-label="Основные характеристики">{model.features.map(feature => <li><img src={`/assets/model-card/${feature.icon}.svg`} alt="" />{feature.label}</li>)}</ul>}
     {model.registration !== 'unconfirmed' && <p class="product-hero__registration"><img src="/assets/product/registration.svg" alt="" />{model.registration === 'gai' ? 'Регистрация в ГАИ' : 'Регистрация в Гостехнадзоре'}</p>}
     <p class="product-hero__intro">{details.intro}</p>
+    <Colors colors={details.colors} />
   </div>
   <div class="product-hero__purchase">
     <p class="product-hero__price">{price}</p>

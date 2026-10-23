@@ -61,3 +61,9 @@ Validation this turn: Astro check (62 files, no errors/warnings), static build (
 21 raster sources generated 84 WebP variants, with transparency and no upscaling. Largest variants total 1,998,898 bytes versus 12,111,026 bytes of PNG originals (83.5% smaller; not a page traffic estimate). SVG files unchanged. See [images.md](images.md).
 
 Validation: Astro check without errors/warnings; 14-route build; 17 passing tests; strict design-input check. Browser: homepage at 390px and catalogue at 1470px, no overflow or broken loaded images, WebP sources confirmed. Temporary five-photo fixture verified thumbnail selection, Hero srcset retention, full-screen WebP and Escape; fixture removed. Real SKU photos remain pending. All standalone previews regenerated.
+
+## 2026-10-23 - SKU Hero colors
+
+Shared ProductColors component follows fresh Desktop 333:9925 and Mobile 333:10359: 40px swatches, 8px gap/radius, between intro and price. Original camouflage SVG retained. Palette is provisional for all seven SKU pages until the user supplies per-model availability. Set `colors: ['gray', 'blue']` in a model data file to override; omit for the six-color template palette, or use `colors: []` to hide the block. Registry: src/data/product-colors.ts. Names are exposed on hover/focus/tap; swatches do not change photos, price or lead data.
+
+Validation: check (75 files, no errors/warnings), build (14 routes), 17 tests, strict design check. Hero reviewed at 1470/390px against fresh Figma; overflow and swatch geometry checked at 320/390/1366/1470/1920px. Name reveal by click/focus and keyboard Tab verified. Seven generated SKU pages include six swatches; camouflage loads locally at native geometry inside its 40px clipped slot. Per-model availability still pending.

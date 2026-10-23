@@ -26,7 +26,7 @@
 .product-hero__registration { display:flex; align-items:center; gap:4px; margin-top:24px; color:var(--color-purple); font-size:14px; line-height:18px; }
 .product-hero__registration img { width:24px; height:24px; }
 .product-hero__intro { margin-top:24px; color:var(--color-gray-5); line-height:20px; }
-.product-hero__purchase { grid-column:2; margin-top:54px; }
+.product-hero__purchase { grid-column:2; margin-top:24px; }
 .product-hero__price { font-size:40px; line-height:48px; font-weight:700; }
 .product-hero__actions { display:flex; gap:12px; margin-top:12px; max-width:492px; }
 .product-hero__actions .ui-button { flex:1; }
