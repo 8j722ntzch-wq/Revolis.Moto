@@ -1,0 +1,192 @@
+const imgGroup = "https://www.figma.com/api/mcp/asset/0e8736bd-6b3f-447a-b525-0dbd58dc003f.svg";
+const imgImg37701 = "https://www.figma.com/api/mcp/asset/da84450d-7170-49fe-a1b6-4e17dec357a4.png";
+const imgImg37691 = "https://www.figma.com/api/mcp/asset/6f128ff3-dbe3-4065-9349-692bb978e9d2.png";
+const imgElementKey = "https://www.figma.com/api/mcp/asset/56ba6135-b304-491a-a7a2-97da40001ee2.svg";
+const imgElementKey1 = "https://www.figma.com/api/mcp/asset/fab66a81-213f-4aae-b25a-35501afc3636.svg";
+const imgElementKey2 = "https://www.figma.com/api/mcp/asset/8f0a0476-eccb-46a8-8746-19c28e77b5a7.svg";
+const imgVector31 = "https://www.figma.com/api/mcp/asset/33a6babf-b59e-4391-a78e-54248f7959bd.svg";
+const imgArrow = "https://www.figma.com/api/mcp/asset/dc4d373f-15ab-4034-b25e-9da3dc6a04b0.svg";
+const imgElementDivider = "https://www.figma.com/api/mcp/asset/4443ac48-6de4-4228-a244-110605422e32.svg";
+
+type ElementAdvantagesProps = {
+  className?: string;
+  device?: "Mobile";
+  type?: "Linear";
+};
+
+function ElementAdvantages({ className, device = "Mobile", type = "Linear" }: ElementAdvantagesProps) {
+  return (
+    <div className={className || "content-stretch flex items-center overflow-clip p-[4px] relative rounded-[500px]"} data-node-id="160:6395">
+      <div className="border border-[var(--colors\/grays\/white,#fdfdfd)] border-solid overflow-clip relative rounded-[500px] shrink-0 size-[44px]" data-node-id="160:6396" data-name="Container">
+        <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[32px] top-1/2" data-node-id="160:6397" data-name="icon_Advantages (24px, 32 px)/Принудительная Сушка">
+          <div className="absolute inset-[8.33%]" data-node-id="I160:6397;1:8409" data-name="Group">
+            <div className="absolute inset-[-2.81%]">
+              <img alt="" className="block max-w-none size-full" src={imgGroup} />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+type BlockApplicationProps = {
+  className?: string;
+  device?: "Mobile";
+};
+
+function BlockApplication({ className, device = "Mobile" }: BlockApplicationProps) {
+  return (
+    <div className={className || "bg-[var(--colors\\/accents\\/purple,#7c33fb)] h-[1020px] overflow-clip relative rounded-[16px] w-[340px]"} data-node-id="160:7150">
+      <div className="absolute contents left-[-120px] top-0" data-node-id="160:7157" data-name="illustration">
+        <div className="absolute flex h-[162.667px] items-center justify-center left-[-120px] top-[162.67px] w-[488px]" data-node-id="160:7158">
+          <div className="flex-none rotate-180">
+            <div className="h-[162.667px] opacity-20 relative w-[488px]" data-name="element_Key">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgElementKey} />
+            </div>
+          </div>
+        </div>
+        <div className="absolute flex h-[162.667px] items-center justify-center left-[-120px] top-[325.33px] w-[488px]" data-node-id="160:7159">
+          <div className="flex-none rotate-180">
+            <div className="h-[162.667px] opacity-20 relative w-[488px]" data-name="element_Key">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgElementKey1} />
+            </div>
+          </div>
+        </div>
+        <div className="absolute flex h-[162.667px] items-center justify-center left-[-120px] top-0 w-[488px]" data-node-id="160:7160">
+          <div className="flex-none rotate-180">
+            <div className="h-[162.667px] opacity-20 relative w-[488px]" data-name="element_Key">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgElementKey2} />
+            </div>
+          </div>
+        </div>
+        <div className="absolute flex h-[162.667px] items-center justify-center left-[368px] top-0 w-[488px]" data-node-id="160:7161">
+          <div className="flex-none rotate-180">
+            <div className="h-[162.667px] opacity-20 relative w-[488px]" data-name="element_Key">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgElementKey} />
+            </div>
+          </div>
+        </div>
+        <div className="absolute flex h-[162.667px] items-center justify-center left-[368px] top-[162.67px] w-[488px]" data-node-id="160:7162">
+          <div className="flex-none rotate-180">
+            <div className="h-[162.667px] opacity-20 relative w-[488px]" data-name="element_Key">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgElementKey1} />
+            </div>
+          </div>
+        </div>
+        <div className="absolute flex h-[162.667px] items-center justify-center left-[856px] top-0 w-[488px]" data-node-id="160:7163">
+          <div className="flex-none rotate-180">
+            <div className="h-[162.667px] opacity-20 relative w-[488px]" data-name="element_Key">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgElementKey1} />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="-translate-x-1/2 absolute bottom-[150.9px] flex h-[315.521px] items-center justify-center left-[calc(50%-32.26px)] w-[235.481px]" data-node-id="160:7154">
+        <div className="-scale-y-100 flex-none rotate-[175.5deg]">
+          <div className="bg-white h-[299.771px] opacity-10 relative rounded-[13.943px] w-[212.628px]" data-name="shade_3" />
+        </div>
+      </div>
+      <div className="-translate-x-1/2 absolute bottom-[144.03px] flex h-[315.521px] items-center justify-center left-[calc(50%-24.32px)] w-[235.481px]" data-node-id="160:7179">
+        <div className="-scale-y-100 flex-none rotate-[175.5deg]">
+          <div className="bg-white h-[299.771px] overflow-clip relative rounded-[13.943px] w-[212.628px]" data-name="photo_3">
+            <div className="-translate-y-1/2 absolute h-[300.642px] left-0 top-[calc(50%+0.44px)] w-[212.628px]" data-node-id="160:7180" data-name="IMG_3770 1">
+              <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                <img alt="" className="absolute h-[124.64%] left-[-0.01%] max-w-none top-0 w-[100.02%]" src={imgImg37701} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="-translate-x-1/2 absolute bottom-[37.93px] flex h-[326.12px] items-center justify-center left-[calc(50%+24.39px)] w-[250.647px]" data-node-id="160:7155">
+        <div className="flex-none rotate-[7.42deg]">
+          <div className="bg-white h-[301.052px] opacity-10 relative rounded-[14.002px] w-[213.537px]" data-name="shade_2" />
+        </div>
+      </div>
+      <div className="-translate-x-1/2 absolute bottom-[31.33px] flex h-[326.12px] items-center justify-center left-[calc(50%+17.01px)] w-[250.647px]" data-node-id="160:7181">
+        <div className="flex-none rotate-[7.42deg]">
+          <div className="bg-white h-[301.052px] overflow-clip relative rounded-[14.002px] w-[213.537px]" data-name="photo_2">
+            <div className="absolute h-[376.315px] left-0 top-[-37.63px] w-[213.537px]" data-node-id="160:7182" data-name="IMG_3769 1">
+              <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                <img alt="" className="absolute h-[100.31%] left-0 max-w-none top-[-0.27%] w-full" src={imgImg37691} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="absolute h-[115.525px] left-[67px] top-[247px] w-[235.037px]" data-node-id="160:7185" data-name="frame_Text, Underline">
+        <div className="absolute h-[115.525px] left-[10.46px] top-0 w-[224.574px]" data-node-id="160:7186">
+          <div className="absolute inset-[-1.3%_-0.67%]">
+            <img alt="" className="block max-w-none size-full" src={imgVector31} />
+          </div>
+        </div>
+        <div className="-translate-x-1/2 absolute flex h-[70.923px] items-center justify-center left-[112.1px] top-[24.61px] w-[224.204px]" data-node-id="160:7187">
+          <div className="flex-none rotate-[-8.68deg]">
+            <div className="[word-break:break-word] font-['Caveat:Regular'] font-normal leading-[0] relative text-[24px] text-[color:var(--colors\/grays\/white,#fdfdfd)] text-center tracking-[-0.48px] whitespace-nowrap">
+              <p className="leading-[0.8] mb-0 whitespace-pre">{`150 BYN тест-драйв = `}</p>
+              <p className="leading-[0.8] whitespace-pre">150 BYN скидка при покупке</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="absolute content-stretch flex flex-col gap-[24px] items-start left-[20px] top-[20px] w-[300px]" data-node-id="160:7164" data-name="layout_Text, Button">
+        <div className="[word-break:break-word] content-stretch flex flex-col gap-[var(--spacings\/content-\(12\),12px)] items-start not-italic relative shrink-0 text-[color:var(--colors\/grays\/white,#fdfdfd)] w-full" data-node-id="160:7165" data-name="element_Headline + Body">
+          <div className="content-stretch flex flex-col font-['Inter:Bold'] font-bold gap-[var(--spacings\/content-\(4\),4px)] items-start leading-[1.2] relative shrink-0 w-full" data-node-id="160:7166" data-name="layout_Superscript, Headline">
+            <p className="relative shrink-0 text-[12px] tracking-[-0.24px] w-full" data-node-id="160:7167">
+              Тест-драйв
+            </p>
+            <p className="relative shrink-0 text-[28px] tracking-[-0.56px] w-full" data-node-id="160:7168">
+              ПОПРОБУЙТЕ КВАДРОЦИКЛ ПЕРЕД ПОКУПКОЙ
+            </p>
+          </div>
+          <p className="font-['Inter:Medium'] font-medium leading-[1.25] relative shrink-0 text-[14px] tracking-[-0.28px] w-full" data-node-id="160:7169">
+            Пройдите подготовленный лесной маршрут, оцените управление, возможности и эмоции от техники
+          </p>
+        </div>
+        <div className="bg-[var(--colors\/grays\/white,#fdfdfd)] content-stretch cursor-pointer flex gap-[4px] items-center justify-center px-[var(--padding\/padding-\(16\),16px)] py-[var(--padding\/padding-\(12\),12px)] relative rounded-[10px] shrink-0" data-node-id="160:7170" data-name="button_Basic">
+          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.2] not-italic relative shrink-0 text-[12px] text-[color:var(--colors\/accents\/purple,#7c33fb)] tracking-[-0.24px] whitespace-nowrap" data-node-id="I160:7170;1:7013">
+            Записаться на тест-драйв
+          </p>
+          <div className="relative rounded-[1.647px] shrink-0 size-[14px]" data-node-id="I160:7170;1:7014" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
+            <div className="absolute h-[7.686px] left-[1.24px] top-[3.16px] w-[11.529px]" data-node-id="I160:7170;1:7014;1:7287" data-name="Arrow">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow} />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="-translate-x-1/2 absolute bottom-[500px] content-stretch flex flex-col gap-[var(--spacings\/content-\(12\),12px)] items-start justify-center left-1/2" data-node-id="160:7171" data-name="layout_Advantages, Divider">
+        <div className="content-stretch flex gap-[var(--spacings\/content-\(8\),8px)] items-center relative shrink-0" data-node-id="160:7172" data-name="layout_Advantage, Text">
+          <ElementAdvantages className="content-stretch flex items-center overflow-clip p-[4px] relative rounded-[500px] shrink-0" />
+          <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/gray-2,#ebe7f1)] tracking-[-0.32px] whitespace-nowrap" data-node-id="160:7174">
+            Скидка на сумму тест-драйва
+          </p>
+        </div>
+        <div className="h-0 relative shrink-0 w-[300px]" data-node-id="160:7175" data-name="element_Divider">
+          <div className="absolute inset-[-1px_0_0_0]">
+            <img alt="" className="block max-w-none size-full" src={imgElementDivider} />
+          </div>
+        </div>
+        <div className="content-stretch flex gap-[var(--spacings\/content-\(8\),8px)] items-center relative shrink-0" data-node-id="160:7176" data-name="layout_Advantage, Text">
+          <ElementAdvantages className="content-stretch flex items-center overflow-clip p-[4px] relative rounded-[500px] shrink-0" />
+          <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/gray-2,#ebe7f1)] tracking-[-0.32px] whitespace-nowrap" data-node-id="160:7178">
+            Лесной маршрут
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function BlockApplication1() {
+  return <BlockApplication className="bg-[var(--colors\/accents\/purple,#7c33fb)] overflow-clip relative rounded-[16px] size-full" />;
+}
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+These styles are contained in the design: H8 — 12 (Bold): Font(family: "Inter", style: Bold, size: 12, weight: 700, lineHeight: 1.2000000476837158, letterSpacing: -2), H3 — 28 (Bold): Font(family: "Inter", style: Bold, size: 28, weight: 700, lineHeight: 1.2000000476837158, letterSpacing: -2), P3 — 14: Font(family: "Inter", style: Medium, size: 14, weight: 500, lineHeight: 1.25, letterSpacing: -2), H8 — 12: Font(family: "Inter", style: Semi Bold, size: 12, weight: 600, lineHeight: 1.2000000476837158, letterSpacing: -2), P2 — 16: Font(family: "Inter", style: Medium, size: 16, weight: 500, lineHeight: 1.25, letterSpacing: -2).
+The generated code contains image and SVG URL constants, e.g. const image = 'https://www.figma.com/api/mcp/asset/550e8400-e29b-41d4-a716-446655440000.png'. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.

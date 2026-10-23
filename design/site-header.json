@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "fileKey": "JkXOsnFvWZmMab1VYjVQAJ",
+  "capturedAt": "2026-10-21",
+  "componentSet": "1:8464",
+  "desktopNodeId": "1:8465",
+  "contextFile": "design/context/ui/1-8464.txt",
+  "implementation": "src/components/SiteHeader.astro",
+  "data": "src/data/navigation.ts",
+  "status": "implemented-and-browser-checked",
+  "geometry": {
+    "frame": [
+      1470,
+      64
+    ],
+    "container": 1224,
+    "logo": [
+      123,
+      14,
+      116,
+      36
+    ],
+    "phone": [
+      331,
+      23,
+      137,
+      18
+    ],
+    "nav": [
+      747,
+      23,
+      433,
+      18
+    ],
+    "navColumns": [
+      55,
+      38,
+      149,
+      61,
+      66
+    ],
+    "navGap": 16,
+    "cta": [
+      1203,
+      11,
+      145,
+      42
+    ],
+    "actionsGap": 23,
+    "actionsOffsetX": 1
+  },
+  "logo": {
+    "nodeId": "1:8475",
+    "path": "public/assets/site/logo.svg",
+    "intrinsic": [
+      122,
+      38
+    ],
+    "left": -5.75390625,
+    "top": 0
+  },
+  "behavior": {
+    "position": "normal document flow",
+    "phone": "tel:+375259711902",
+    "ctaIntent": "consultation",
+    "ctaSource": "header",
+    "withoutDialog": "disabled unless demoAction",
+    "defaultAnchors": [
+      "/#models",
+      "/#about",
+      "/#finance",
+      "/#faq",
+      "/#contacts"
+    ],
+    "showcaseAnchors": [
+      "#model-cards",
+      "#header-about",
+      "#bank-cards",
+      "#faq",
+      "#header-contacts"
+    ]
+  },
+  "verification": {
+    "widths": [
+      1366,
+      1470,
+      1920
+    ],
+    "containerWidth": 1224,
+    "headerHeight": 64,
+    "horizontalOverflow": false,
+    "logoLoaded": true,
+    "designWidthPositions": "logo x123; phone x331; nav x747; CTA x1203 y11 145x42",
+    "interaction": [
+      "Showcase link targets exist; finance link click navigates to #bank-cards",
+      "Phone tel href matches source",
+      "CTA Enter opens LeadDialog with consultation/header and empty model/bank",
+      "Escape closes dialog and restores CTA focus",
+      "Submit remains disabled without endpoint/policy",
+      "Showcase CTA Enter displays demo feedback"
+    ],
+    "check": "passed: 24 files, 0 errors/warnings/hints",
+    "build": "passed: 2 pages",
+    "offlinePreview": {
+      "logoEmbedded": true,
+      "logoLoaded": true,
+      "externalStyles": 0,
+      "externalScripts": 0,
+      "ctaFeedback": "passed",
+      "horizontalOverflow": false
+    }
+  },
+  "limits": [
+    "Desktop only; mobile variants excluded",
+    "Homepage sections and default anchor destinations are pending; showcase overrides hrefs to existing demo targets",
+    "Phone copied from Figma, requires business confirmation before publication",
+    "Dialog visual design is a subsequent step; existing dialog used for integration QA",
+    "Bundled Inter has fractional line-height 18.1875 versus rounded Figma 18"
+  ]
+}

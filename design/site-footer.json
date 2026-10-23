@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "fileKey": "JkXOsnFvWZmMab1VYjVQAJ",
+  "componentSet": "1:8514",
+  "desktopNodeId": "1:8515",
+  "capturedAt": "2026-10-21",
+  "status": "implemented-and-browser-checked",
+  "implementation": "src/components/SiteFooter.astro",
+  "data": "src/data/footer.ts",
+  "geometry": {
+    "height": 510,
+    "container": 1224,
+    "nav": [
+      123,
+      40
+    ],
+    "address": [
+      435,
+      40
+    ],
+    "hours": [
+      435,
+      128
+    ],
+    "maps": [
+      645,
+      128
+    ],
+    "phones": [
+      851,
+      128
+    ],
+    "top": [
+      1169,
+      40,
+      175,
+      42
+    ],
+    "socials": [
+      1179,
+      332,
+      168,
+      48
+    ],
+    "registration": [
+      123,
+      404,
+      1224,
+      28
+    ],
+    "legal": [
+      123,
+      456,
+      1224,
+      14
+    ]
+  },
+  "verification": {
+    "widths": [
+      1366,
+      1470,
+      1920
+    ],
+    "horizontalOverflow": false,
+    "height": 510,
+    "allSevenImagesLoaded": true,
+    "iconSizes": [
+      18,
+      16,
+      24
+    ],
+    "actions": [
+      "Enter on back-to-top navigates to #top",
+      "Models navigation click navigates to #model-cards",
+      "Missing Instagram destination produces explanatory feedback in showcase"
+    ],
+    "astroCheck": {
+      "files": 26,
+      "errors": 0,
+      "warnings": 0,
+      "hints": 0
+    },
+    "build": {
+      "pages": 2,
+      "status": "passed"
+    },
+    "offlinePreview": {
+      "allImagesEmbeddedAndLoaded": true,
+      "height": 510,
+      "externalScripts": 0,
+      "externalStyles": 0,
+      "demoFeedback": "passed"
+    }
+  },
+  "limits": [
+    "Desktop only",
+    "Default homepage anchors require future homepage sections and #top target",
+    "Missing map, social and policy URLs disabled in production; demo explains missing destination",
+    "Address, phones and hours copied from Figma, business confirmation pending",
+    "Registration text ends with an unfilled trade registry entry, retained from source",
+    "Muted footer text contrast preserved from source; not an accessibility certification",
+    "Instagram hover uses original purple icon; Telegram and YouTube keep their own original icons, no incorrect Instagram swap"
+  ]
+}

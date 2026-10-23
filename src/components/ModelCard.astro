@@ -1,0 +1,82 @@
+---
+import { imageAttrs } from "../lib/responsive-images";
+import { hasProductPage } from '../data/products';
+import type { Model } from '../data/catalog';
+import Button from './ui/Button.astro';
+import StatusBadge from './ui/StatusBadge.astro';
+
+interface Props {
+  model: Readonly<Model>;
+  id: string;
+  headingLevel?: 'h2' | 'h3' | 'h4';
+  demoState?: 'hover';
+  // A local showcase action; real model links require a registered product page.
+  demoAction?: boolean;
+}
+const { model, id, headingLevel: Heading = 'h3', demoState, demoAction = false } = Astro.props;
+const pageReady = hasProductPage(model.path);
+const statuses = { 'in-stock': 'stock', 'on-order': 'order', 'coming-soon': 'soon', 'special-offer': 'offer' } as const;
+const status = model.availability === 'unconfirmed' ? null : statuses[model.availability];
+const registrations = { gai: 'Регистрация в ГАИ', gostekhnadzor: 'Регистрация в Гостехнадзоре' };
+const registration = model.registration === 'unconfirmed' ? null : registrations[model.registration];
+const price = model.priceByn === null ? null : new Intl.NumberFormat('ru-BY', { maximumFractionDigits: 0 }).format(model.priceByn);
+---
+<article id={id} class="model-card" data-model-id={model.id} data-demo-state={demoState} aria-labelledby={`${id}-title`}>
+  <div class="model-card__surface">
+    <div class="model-card__media">
+      {model.image ? <img class="model-card__photo" data-product-photo={model.image?.startsWith("/assets/products/") || undefined} {...imageAttrs(model.image, "card")} alt={model.imageAlt ?? `${model.brand} ${model.name}`} width={model.imageWidth ?? 320} height={model.imageHeight ?? 213} style={`--photo-width: ${model.imageWidth ?? 320}px; --photo-mobile-width: ${model.mobileImageWidth ?? 320}px; --photo-height: ${model.imageHeight ?? 213}px; --photo-offset: ${model.imageHeight === 240 ? 0 : .5}px; --photo-direction: ${model.imageMirrored ? -1 : 1}`} loading="lazy" decoding="async" /> : <p class="model-card__image-pending type-small">Изображение уточняется</p>}
+      {status && <div class="model-card__status"><StatusBadge status={status} /></div>}
+    </div>
+    <div class="model-card__content">
+      <div class="model-card__identity">
+        <div>
+          <p class="type-body">{model.brand}</p>
+          <Heading id={`${id}-title`} class="type-heading-sm weight-bold">{model.name}</Heading>
+        </div>
+        {model.subtitle && <p class="model-card__subtitle type-small">{model.mobileSubtitle ? <><span class="model-card__desktop-copy">{model.subtitle}</span><span class="model-card__mobile-copy">{model.mobileSubtitle}</span></> : model.subtitle}</p>}
+        {model.features?.length ? <ul class="model-card__features" aria-label="Характеристики">
+          {model.features.map(feature => <li><img src={`/assets/model-card/${feature.icon}.svg`} alt="" aria-hidden="true" /><span class="type-heading-xxs">{feature.label}</span></li>)}
+        </ul> : null}
+      </div>
+      {registration && <p class="model-card__registration type-small"><img src="/assets/model-card/registration.svg" alt="" aria-hidden="true" />{registration}</p>}
+      <div class="model-card__pricing">
+        <p class="type-heading-sm weight-bold">{price === null ? 'Цена уточняется' : `${model.priceFrom ? 'от ' : ''}${price} BYN`}</p>
+        {model.financeLabel && <p class="model-card__finance type-eyebrow weight-bold">{model.financeLabel}</p>}
+      </div>
+      <Button class="model-card__action" arrow href={pageReady && !demoAction ? model.path : undefined} disabled={!pageReady && !demoAction} data-demo-state={demoState} data-model-card-demo={demoAction ? model.id : undefined}>Перейти к модели</Button>
+    </div>
+  </div>
+</article>
+<style>
+  .model-card { width: var(--model-card-width); min-height: var(--model-card-height); flex-shrink: 0; }
+  .model-card__surface { display: flex; flex-direction: column; gap: var(--space-12); min-height: var(--model-card-height); padding: var(--space-16); border-radius: var(--radius-card); background: var(--color-white); color: var(--color-model-text); transition: transform var(--motion-fast); }
+  @media (min-width: 1288px) and (hover: hover) and (pointer: fine) {
+    .model-card:is(:hover, :focus-within, [data-demo-state='hover']) .model-card__surface { transform: translateY(-8px); }
+  }
+  .model-card__media { position: relative; height: var(--model-card-media-height); flex-shrink: 0; display: grid; place-items: center; overflow: hidden; border-radius: var(--radius-card-media); background: var(--color-media); }
+  .model-card__photo { display: block; width: var(--photo-width, 320px); height: var(--photo-height, 213px); object-fit: cover; transform: translateY(var(--photo-offset, .5px)) scaleX(var(--photo-direction, 1)); }
+  .model-card__mobile-copy { display: none; }
+  @media (max-width: 1287px) {
+    .model-card__desktop-copy { display: none; }
+    .model-card__mobile-copy { display: inline; }
+  }
+  .model-card__image-pending { color: var(--color-text-muted); }
+  .model-card__status { position: absolute; left: var(--space-16); bottom: var(--space-16); display: flex; }
+  .model-card__content { display: flex; flex: 1; flex-direction: column; gap: var(--space-20); }
+  .model-card__identity { display: flex; flex-direction: column; gap: var(--space-8); }
+  .model-card__subtitle { color: var(--color-purple); font-style: italic; font-synthesis: none; }
+  .model-card__features { display: flex; flex-wrap: wrap; row-gap: 8px; align-items: center; gap: var(--space-20); padding: 0; margin: 0; list-style: none; }
+  .model-card__features li { display: flex; align-items: center; gap: var(--space-8); }
+  .model-card__features span { white-space: nowrap; }
+  .model-card__features img, .model-card__registration img { display: block; flex-shrink: 0; }
+  .model-card__registration { display: flex; align-items: center; gap: var(--space-4); color: var(--color-gray-4); }
+  .model-card__pricing { display: flex; flex-direction: column; gap: var(--space-8); margin-top: auto; }
+  .model-card__finance { color: var(--color-purple); }
+  .model-card :global(.model-card__action) { width: 100%; }
+  @media (min-width: 1288px) and (hover: hover) and (pointer: fine) {
+    .model-card:is(:hover, :focus-within, [data-demo-state='hover']) :global(.model-card__action:not(:disabled)) { background: var(--color-purple-hover); }
+  }
+  .model-card :global(.model-card__action:active:not(:disabled)) { background: var(--color-purple); }
+</style>
+
+<style>.model-card .model-card__photo[data-product-photo] { width:100%; height:100%; object-fit:contain; transform:none; }</style>

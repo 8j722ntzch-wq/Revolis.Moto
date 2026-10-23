@@ -1,0 +1,326 @@
+const imgEllipse21 = "https://www.figma.com/api/mcp/asset/abcaa29e-4e5a-43fc-996e-34d01c04b6dd.svg";
+const imgImage10 = "https://www.figma.com/api/mcp/asset/46824a12-77cb-4bc6-97d6-09b3717a3099.png";
+const imgImage13 = "https://www.figma.com/api/mcp/asset/8427e702-4515-4756-b65a-a7fcbac692ca.png";
+const imgImage14 = "https://www.figma.com/api/mcp/asset/4a1783e8-a70d-4691-a5fe-72cfbabe5129.png";
+const imgArrow = "https://www.figma.com/api/mcp/asset/c8445239-77c0-4a0e-a0c1-8926c462e8e3.svg";
+const imgGroup = "https://www.figma.com/api/mcp/asset/2c7130f9-bfb1-4a31-a1c1-652a983684e4.svg";
+const imgGroup1 = "https://www.figma.com/api/mcp/asset/24f1495c-bfe3-433c-9ffe-db781c7fc6aa.svg";
+const imgGroup2 = "https://www.figma.com/api/mcp/asset/46de329e-bfb3-4c3d-9a98-bdb0f22974f2.svg";
+const imgArrow1 = "https://www.figma.com/api/mcp/asset/b382d424-3909-47db-92d1-b9f21d9a92c0.svg";
+const imgIconAdvantages24Px32Px = "https://www.figma.com/api/mcp/asset/f464fed6-290a-4440-b6c9-2438ca1edfa2.svg";
+
+type ElementPricingTagProps = {
+  className?: string;
+  icon?: "В наличии";
+};
+
+function ElementPricingTag({ className, icon = "В наличии" }: ElementPricingTagProps) {
+  return (
+    <div className={className || "bg-[rgba(7,160,56,0.2)] content-stretch flex gap-[var(--spacings\\/content-\\(8\\),8px)] items-center justify-center px-[8px] py-[4px] relative rounded-[4px]"} data-node-id="13:4380">
+      <div className="relative shrink-0 size-[8px]" data-node-id="13:4397">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse21} />
+      </div>
+      <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.2] not-italic relative shrink-0 text-[12px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.24px] whitespace-nowrap" data-node-id="13:4381">
+        В наличии
+      </p>
+    </div>
+  );
+}
+
+export default function Component9() {
+  return (
+    <div className="content-stretch flex flex-col gap-[var(--spacings\/content-\(48\),48px)] items-start relative size-full" data-node-id="207:8534" data-name="9_Похожие модели">
+      <div className="content-stretch flex items-end justify-between relative shrink-0 w-full" data-node-id="207:8535" data-name="block_Headline">
+        <div className="[word-break:break-word] content-stretch flex flex-col font-['Inter:Bold'] font-bold gap-[4px] items-start not-italic relative shrink-0" data-node-id="I207:8535;19:4808" data-name="layout_Superscript, Heading">
+          <p className="leading-[1.2] relative shrink-0 text-[12px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.24px] w-[232px]" data-node-id="I207:8535;19:4796">
+            Похожие модели
+          </p>
+          <div className="leading-[0] relative shrink-0 text-[40px] text-[color:var(--colors\/accents\/purple,#7c33fb)] tracking-[-0.8px] whitespace-nowrap" data-node-id="I207:8535;19:4797">
+            <p className="leading-[1.2] mb-0 text-[#0d0d0d]">Выберите квадроцикл</p>
+            <p>
+              <span className="leading-[1.2] text-[#0d0d0d]">{`под `}</span>
+              <span className="leading-[1.2]">любые задачи</span>
+            </p>
+          </div>
+        </div>
+        <div className="content-stretch flex gap-[4px] items-center justify-center relative rounded-[10px] shrink-0" data-node-id="I207:8535;19:4801" data-name="button_Basic/Text/Default/True/M/Desktop">
+          <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/accents\/purple,#7c33fb)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I207:8535;19:4801;1:7124">
+            Перейти в каталог
+          </p>
+          <div className="relative rounded-[2.353px] shrink-0 size-[20px]" data-node-id="I207:8535;19:4801;1:7125" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
+            <div className="absolute h-[11.228px] left-[1.58px] top-[4.39px] w-[16.842px]" data-node-id="I207:8535;19:4801;1:7125;1:7311" data-name="Arrow">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow} />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-node-id="207:8536" data-name="layout_Models">
+        <div className="h-[642px] relative shrink-0 w-[392px]" data-node-id="258:8555" data-name="Frame_ATV Model">
+          <div className="absolute bg-[var(--colors\/grays\/white,#fdfdfd)] content-stretch flex flex-col gap-[12px] items-start left-0 overflow-clip p-[16px] rounded-[16px] top-0 w-[392px]" data-node-id="I258:8555;22:5104" data-name="Frame_ATV Model">
+            <div className="bg-white h-[320px] overflow-clip relative rounded-[12px] shrink-0 w-[360px]" data-node-id="I258:8555;72:6711" data-name="element_ATV Cards">
+              <ElementPricingTag className="absolute bg-[rgba(7,160,56,0.2)] content-stretch flex gap-[var(--spacings\/content-\(8\),8px)] items-center justify-center left-[16px] px-[8px] py-[4px] rounded-[4px] top-[282px]" />
+              <div className="-translate-y-1/2 absolute h-[240px] left-[20px] top-1/2 w-[320px]" data-node-id="I258:8555;72:6711;143:9638" data-name="image 10">
+                <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage10} />
+              </div>
+            </div>
+            <div className="content-stretch flex flex-col gap-[var(--spacings\/content-\(20\),20px)] items-start relative shrink-0 w-full" data-node-id="I258:8555;19:4455" data-name="layout_Model, Advantages">
+              <div className="content-stretch flex flex-col gap-[var(--spacings\/content-\(8\),8px)] items-start relative shrink-0 w-full" data-node-id="I258:8555;19:4495" data-name="layout_Text, Advantages">
+                <div className="[word-break:break-word] content-stretch flex flex-col items-start not-italic relative shrink-0 text-black w-full" data-node-id="I258:8555;13:4378" data-name="layout_Model">
+                  <p className="font-['Inter:Medium'] font-medium leading-[1.25] relative shrink-0 text-[16px] tracking-[-0.32px] w-full" data-node-id="I258:8555;11:4370">
+                    BaltMotors
+                  </p>
+                  <p className="font-['Inter:Bold'] font-bold leading-[1.3] relative shrink-0 text-[20px] tracking-[-0.4px] w-full" data-node-id="I258:8555;11:4371">
+                    Striker 500 EFI
+                  </p>
+                </div>
+                <p className="[word-break:break-word] font-['Inter:Medium_Italic'] font-medium italic leading-[1.25] relative shrink-0 text-[14px] text-[color:var(--colors\/accents\/purple,#7c33fb)] tracking-[-0.28px] w-full" data-node-id="I258:8555;143:9553">
+                  Универсальный вариант для работы и отдыха
+                </p>
+                <div className="content-stretch flex gap-[var(--spacings\/content-\(20\),20px)] items-center relative shrink-0 w-full" data-node-id="I258:8555;19:4454" data-name="layout_Blocks">
+                  <div className="content-stretch flex gap-[8px] items-center relative shrink-0" data-node-id="I258:8555;19:4447" data-name="layout_Icon, Text">
+                    <div className="overflow-clip relative shrink-0 size-[24px]" data-node-id="I258:8555;19:4447;15:4412" data-name="icon_Advantages (24px, 32 px)">
+                      <div className="absolute inset-[8.33%_10.72%]" data-node-id="I258:8555;19:4447;15:4412;115:5767" data-name="Group">
+                        <div className="absolute inset-[-2.81%_-2.98%]">
+                          <img alt="" className="block max-w-none size-full" src={imgGroup} />
+                        </div>
+                      </div>
+                    </div>
+                    <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[14px] text-black tracking-[-0.28px] whitespace-nowrap" data-node-id="I258:8555;19:4447;15:4418">
+                      471 см³
+                    </p>
+                  </div>
+                  <div className="content-stretch flex gap-[8px] items-center relative shrink-0" data-node-id="I258:8555;19:4432" data-name="layout_Icon, Text">
+                    <div className="overflow-clip relative shrink-0 size-[24px]" data-node-id="I258:8555;19:4432;15:4412" data-name="icon_Advantages (24px, 32 px)">
+                      <div className="absolute inset-[8.33%_12.5%]" data-node-id="I258:8555;19:4432;15:4412;115:5773" data-name="Group">
+                        <div className="absolute inset-[-2.81%_-3.13%]">
+                          <img alt="" className="block max-w-none size-full" src={imgGroup1} />
+                        </div>
+                      </div>
+                    </div>
+                    <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[14px] text-black tracking-[-0.28px] whitespace-nowrap" data-node-id="I258:8555;19:4432;15:4418">
+                      4x4 LOCK
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="content-stretch flex gap-[var(--spacings\/content-\(4\),4px)] items-center relative shrink-0 w-full" data-node-id="I258:8555;101:7756" data-name="layout_Illustr, Text">
+                <div className="overflow-clip relative shrink-0 size-[24px]" data-node-id="I258:8555;101:7757" data-name="icon_Advantages (24px, 32 px)">
+                  <div className="absolute inset-[8.33%]" data-node-id="I258:8555;101:7757;112:5687" data-name="Group">
+                    <div className="absolute inset-[-3.75%]">
+                      <img alt="" className="block max-w-none size-full" src={imgGroup2} />
+                    </div>
+                  </div>
+                </div>
+                <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/gray-4,#736f79)] tracking-[-0.28px] whitespace-nowrap" data-node-id="I258:8555;101:7758">
+                  Регистрация в ГАИ
+                </p>
+              </div>
+              <div className="[word-break:break-word] content-stretch flex flex-col font-['Inter:Bold'] font-bold gap-[var(--spacings\/content-\(8\),8px)] items-start not-italic relative shrink-0 w-full" data-node-id="I258:8555;19:4487" data-name="layout_Price, Banks">
+                <p className="leading-[1.3] min-w-full relative shrink-0 text-[20px] text-black tracking-[-0.4px] w-[min-content]" data-node-id="I258:8555;11:4374">
+                  от 23 500 BYN
+                </p>
+                <p className="leading-[1.2] relative shrink-0 text-[12px] text-[color:var(--colors\/accents\/purple,#7c33fb)] tracking-[-0.24px] whitespace-nowrap" data-node-id="I258:8555;19:4488">
+                  В кредит и рассрочку
+                </p>
+              </div>
+              <div className="bg-[var(--colors\/accents\/purple,#7c33fb)] content-stretch flex gap-[4px] items-center justify-center px-[var(--padding\/padding-\(16\),16px)] py-[var(--padding\/padding-\(12\),12px)] relative rounded-[10px] shrink-0 w-full" data-node-id="I258:8555;19:4477" data-name="button_Basic">
+                <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.28px] whitespace-nowrap" data-node-id="I258:8555;19:4477;1:7007">
+                  Перейти к модели
+                </p>
+                <div className="relative rounded-[1.882px] shrink-0 size-[16px]" data-node-id="I258:8555;19:4477;1:7008" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
+                  <div className="absolute h-[8.784px] left-[1.41px] top-[3.61px] w-[13.176px]" data-node-id="I258:8555;19:4477;1:7008;1:7283" data-name="Arrow">
+                    <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow1} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="h-[642px] relative shrink-0 w-[392px]" data-node-id="258:8556" data-name="Frame_ATV Model">
+          <div className="absolute bg-[var(--colors\/grays\/white,#fdfdfd)] content-stretch flex flex-col gap-[12px] items-start left-0 overflow-clip p-[16px] rounded-[16px] top-0 w-[392px]" data-node-id="I258:8556;22:5104" data-name="Frame_ATV Model">
+            <div className="bg-white h-[320px] overflow-clip relative rounded-[12px] shrink-0 w-[360px]" data-node-id="I258:8556;72:6711" data-name="element_ATV Cards">
+              <ElementPricingTag className="absolute bg-[rgba(7,160,56,0.2)] content-stretch flex gap-[var(--spacings\/content-\(8\),8px)] items-center justify-center left-[16px] px-[8px] py-[4px] rounded-[4px] top-[282px]" />
+              <div className="-translate-y-1/2 absolute h-[240px] left-[-0.28px] top-[calc(50%+0.5px)] w-[360px]" data-node-id="I258:8556;72:6711;143:9644" data-name="image 13">
+                <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage13} />
+              </div>
+            </div>
+            <div className="content-stretch flex flex-col gap-[var(--spacings\/content-\(20\),20px)] items-start relative shrink-0 w-full" data-node-id="I258:8556;19:4455" data-name="layout_Model, Advantages">
+              <div className="content-stretch flex flex-col gap-[var(--spacings\/content-\(8\),8px)] items-start relative shrink-0 w-full" data-node-id="I258:8556;19:4495" data-name="layout_Text, Advantages">
+                <div className="[word-break:break-word] content-stretch flex flex-col items-start not-italic relative shrink-0 text-black w-full" data-node-id="I258:8556;13:4378" data-name="layout_Model">
+                  <p className="font-['Inter:Medium'] font-medium leading-[1.25] relative shrink-0 text-[16px] tracking-[-0.32px] w-full" data-node-id="I258:8556;11:4370">
+                    BaltMotors
+                  </p>
+                  <p className="font-['Inter:Bold'] font-bold leading-[1.3] relative shrink-0 text-[20px] tracking-[-0.4px] w-full" data-node-id="I258:8556;11:4371">
+                    Striker 700 EFI
+                  </p>
+                </div>
+                <p className="[word-break:break-word] font-['Inter:Medium_Italic'] font-medium italic leading-[1.25] relative shrink-0 text-[14px] text-[color:var(--colors\/accents\/purple,#7c33fb)] tracking-[-0.28px] w-full" data-node-id="I258:8556;143:9553">
+                  Мощный квадрицикл для серьёзных задач
+                </p>
+                <div className="content-stretch flex gap-[var(--spacings\/content-\(20\),20px)] items-center relative shrink-0 w-full" data-node-id="I258:8556;19:4454" data-name="layout_Blocks">
+                  <div className="content-stretch flex gap-[8px] items-center relative shrink-0" data-node-id="I258:8556;19:4447" data-name="layout_Icon, Text">
+                    <div className="overflow-clip relative shrink-0 size-[24px]" data-node-id="I258:8556;19:4447;15:4412" data-name="icon_Advantages (24px, 32 px)">
+                      <div className="absolute inset-[8.33%_10.72%]" data-node-id="I258:8556;19:4447;15:4412;115:5767" data-name="Group">
+                        <div className="absolute inset-[-2.81%_-2.98%]">
+                          <img alt="" className="block max-w-none size-full" src={imgGroup} />
+                        </div>
+                      </div>
+                    </div>
+                    <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[14px] text-black tracking-[-0.28px] whitespace-nowrap" data-node-id="I258:8556;19:4447;15:4418">
+                      686 см³
+                    </p>
+                  </div>
+                  <div className="content-stretch flex gap-[8px] items-center relative shrink-0" data-node-id="I258:8556;19:4432" data-name="layout_Icon, Text">
+                    <div className="overflow-clip relative shrink-0 size-[24px]" data-node-id="I258:8556;19:4432;15:4412" data-name="icon_Advantages (24px, 32 px)">
+                      <div className="absolute inset-[8.33%_12.5%]" data-node-id="I258:8556;19:4432;15:4412;115:5773" data-name="Group">
+                        <div className="absolute inset-[-2.81%_-3.13%]">
+                          <img alt="" className="block max-w-none size-full" src={imgGroup1} />
+                        </div>
+                      </div>
+                    </div>
+                    <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[14px] text-black tracking-[-0.28px] whitespace-nowrap" data-node-id="I258:8556;19:4432;15:4418">
+                      4x4 LOCK
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="content-stretch flex gap-[var(--spacings\/content-\(4\),4px)] items-center relative shrink-0 w-full" data-node-id="I258:8556;101:7756" data-name="layout_Illustr, Text">
+                <div className="overflow-clip relative shrink-0 size-[24px]" data-node-id="I258:8556;101:7757" data-name="icon_Advantages (24px, 32 px)">
+                  <div className="absolute inset-[8.33%]" data-node-id="I258:8556;101:7757;112:5687" data-name="Group">
+                    <div className="absolute inset-[-3.75%]">
+                      <img alt="" className="block max-w-none size-full" src={imgGroup2} />
+                    </div>
+                  </div>
+                </div>
+                <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/gray-4,#736f79)] tracking-[-0.28px] whitespace-nowrap" data-node-id="I258:8556;101:7758">
+                  Регистрация в ГАИ
+                </p>
+              </div>
+              <div className="[word-break:break-word] content-stretch flex flex-col font-['Inter:Bold'] font-bold gap-[var(--spacings\/content-\(8\),8px)] items-start not-italic relative shrink-0 w-full" data-node-id="I258:8556;19:4487" data-name="layout_Price, Banks">
+                <p className="leading-[1.3] min-w-full relative shrink-0 text-[20px] text-black tracking-[-0.4px] w-[min-content]" data-node-id="I258:8556;11:4374">
+                  от 27 000 BYN
+                </p>
+                <p className="leading-[1.2] relative shrink-0 text-[12px] text-[color:var(--colors\/accents\/purple,#7c33fb)] tracking-[-0.24px] whitespace-nowrap" data-node-id="I258:8556;19:4488">
+                  В кредит и рассрочку
+                </p>
+              </div>
+              <div className="bg-[var(--colors\/accents\/purple,#7c33fb)] content-stretch flex gap-[4px] items-center justify-center px-[var(--padding\/padding-\(16\),16px)] py-[var(--padding\/padding-\(12\),12px)] relative rounded-[10px] shrink-0 w-full" data-node-id="I258:8556;19:4477" data-name="button_Basic">
+                <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.28px] whitespace-nowrap" data-node-id="I258:8556;19:4477;1:7007">
+                  Перейти к модели
+                </p>
+                <div className="relative rounded-[1.882px] shrink-0 size-[16px]" data-node-id="I258:8556;19:4477;1:7008" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
+                  <div className="absolute h-[8.784px] left-[1.41px] top-[3.61px] w-[13.176px]" data-node-id="I258:8556;19:4477;1:7008;1:7283" data-name="Arrow">
+                    <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow1} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="h-[642px] relative shrink-0 w-[392px]" data-node-id="258:8557" data-name="Frame_ATV Model">
+          <div className="absolute bg-[var(--colors\/grays\/white,#fdfdfd)] content-stretch flex flex-col gap-[12px] items-start left-0 overflow-clip p-[16px] rounded-[16px] top-0 w-[392px]" data-node-id="I258:8557;22:5104" data-name="Frame_ATV Model">
+            <div className="bg-white h-[320px] overflow-clip relative rounded-[12px] shrink-0 w-[360px]" data-node-id="I258:8557;72:6711" data-name="element_ATV Cards">
+              <div className="absolute h-[280px] left-[-6.67px] top-[20px] w-[373.333px]" data-node-id="I258:8557;72:6711;143:9642" data-name="image 14">
+                <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage14} />
+              </div>
+              <ElementPricingTag className="absolute bg-[rgba(7,160,56,0.2)] content-stretch flex gap-[var(--spacings\/content-\(8\),8px)] items-center justify-center left-[16px] px-[8px] py-[4px] rounded-[4px] top-[282px]" />
+            </div>
+            <div className="content-stretch flex flex-col gap-[var(--spacings\/content-\(20\),20px)] items-start relative shrink-0 w-full" data-node-id="I258:8557;19:4455" data-name="layout_Model, Advantages">
+              <div className="content-stretch flex flex-col gap-[var(--spacings\/content-\(8\),8px)] items-start relative shrink-0 w-full" data-node-id="I258:8557;19:4495" data-name="layout_Text, Advantages">
+                <div className="[word-break:break-word] content-stretch flex flex-col items-start not-italic relative shrink-0 text-black w-full" data-node-id="I258:8557;13:4378" data-name="layout_Model">
+                  <p className="font-['Inter:Medium'] font-medium leading-[1.25] relative shrink-0 text-[16px] tracking-[-0.32px] w-full" data-node-id="I258:8557;11:4370">
+                    BaltMotors
+                  </p>
+                  <p className="font-['Inter:Bold'] font-bold leading-[1.3] relative shrink-0 text-[20px] tracking-[-0.4px] w-full" data-node-id="I258:8557;11:4371">
+                    Striker 700 EFI/EPS
+                  </p>
+                </div>
+                <p className="[word-break:break-word] font-['Inter:Medium_Italic'] font-medium italic leading-[1.25] relative shrink-0 text-[14px] text-[color:var(--colors\/accents\/purple,#7c33fb)] tracking-[-0.28px] w-full" data-node-id="I258:8557;143:9553">
+                  Мощность и комфорт управления
+                </p>
+                <div className="content-stretch flex gap-[var(--spacings\/content-\(20\),20px)] items-center relative shrink-0 w-full" data-node-id="I258:8557;19:4454" data-name="layout_Blocks">
+                  <div className="content-stretch flex gap-[8px] items-center relative shrink-0" data-node-id="I258:8557;19:4447" data-name="layout_Icon, Text">
+                    <div className="overflow-clip relative shrink-0 size-[24px]" data-node-id="I258:8557;19:4447;15:4412" data-name="icon_Advantages (24px, 32 px)">
+                      <div className="absolute inset-[8.33%_10.72%]" data-node-id="I258:8557;19:4447;15:4412;115:5767" data-name="Group">
+                        <div className="absolute inset-[-2.81%_-2.98%]">
+                          <img alt="" className="block max-w-none size-full" src={imgGroup} />
+                        </div>
+                      </div>
+                    </div>
+                    <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[14px] text-black tracking-[-0.28px] whitespace-nowrap" data-node-id="I258:8557;19:4447;15:4418">
+                      686 см³
+                    </p>
+                  </div>
+                  <div className="content-stretch flex gap-[8px] items-center relative shrink-0" data-node-id="I258:8557;19:4432" data-name="layout_Icon, Text">
+                    <div className="overflow-clip relative shrink-0 size-[24px]" data-node-id="I258:8557;19:4432;15:4412" data-name="icon_Advantages (24px, 32 px)">
+                      <div className="absolute inset-[8.33%_12.5%]" data-node-id="I258:8557;19:4432;15:4412;115:5773" data-name="Group">
+                        <div className="absolute inset-[-2.81%_-3.13%]">
+                          <img alt="" className="block max-w-none size-full" src={imgGroup1} />
+                        </div>
+                      </div>
+                    </div>
+                    <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[14px] text-black tracking-[-0.28px] whitespace-nowrap" data-node-id="I258:8557;19:4432;15:4418">
+                      4x4 LOCK
+                    </p>
+                  </div>
+                  <div className="content-stretch flex gap-[8px] items-center relative shrink-0" data-node-id="I258:8557;19:4439" data-name="layout_Icon, Text">
+                    <div className="relative shrink-0 size-[24px]" data-node-id="I258:8557;19:4439;15:4412" data-name="icon_Advantages (24px, 32 px)/Реставрируем кузов">
+                      <div className="absolute inset-[8.33%]" data-node-id="I258:8557;19:4439;15:4412;1:8425" data-name="Group">
+                        <div className="absolute inset-[-2.81%]">
+                          <img alt="" className="block max-w-none size-full" src={imgIconAdvantages24Px32Px} />
+                        </div>
+                      </div>
+                    </div>
+                    <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[14px] text-black tracking-[-0.28px] whitespace-nowrap" data-node-id="I258:8557;19:4439;15:4418">
+                      EPS
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="content-stretch flex gap-[var(--spacings\/content-\(4\),4px)] items-center relative shrink-0 w-full" data-node-id="I258:8557;101:7756" data-name="layout_Illustr, Text">
+                <div className="overflow-clip relative shrink-0 size-[24px]" data-node-id="I258:8557;101:7757" data-name="icon_Advantages (24px, 32 px)">
+                  <div className="absolute inset-[8.33%]" data-node-id="I258:8557;101:7757;112:5687" data-name="Group">
+                    <div className="absolute inset-[-3.75%]">
+                      <img alt="" className="block max-w-none size-full" src={imgGroup2} />
+                    </div>
+                  </div>
+                </div>
+                <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/gray-4,#736f79)] tracking-[-0.28px] whitespace-nowrap" data-node-id="I258:8557;101:7758">
+                  Регистрация в ГАИ
+                </p>
+              </div>
+              <div className="[word-break:break-word] content-stretch flex flex-col font-['Inter:Bold'] font-bold gap-[var(--spacings\/content-\(8\),8px)] items-start not-italic relative shrink-0 w-full" data-node-id="I258:8557;19:4487" data-name="layout_Price, Banks">
+                <p className="leading-[1.3] min-w-full relative shrink-0 text-[20px] text-black tracking-[-0.4px] w-[min-content]" data-node-id="I258:8557;11:4374">
+                  от 28 500 BYN
+                </p>
+                <p className="leading-[1.2] relative shrink-0 text-[12px] text-[color:var(--colors\/accents\/purple,#7c33fb)] tracking-[-0.24px] whitespace-nowrap" data-node-id="I258:8557;19:4488">
+                  В кредит и рассрочку
+                </p>
+              </div>
+              <div className="bg-[var(--colors\/accents\/purple,#7c33fb)] content-stretch flex gap-[4px] items-center justify-center px-[var(--padding\/padding-\(16\),16px)] py-[var(--padding\/padding-\(12\),12px)] relative rounded-[10px] shrink-0 w-full" data-node-id="I258:8557;19:4477" data-name="button_Basic">
+                <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.28px] whitespace-nowrap" data-node-id="I258:8557;19:4477;1:7007">
+                  Перейти к модели
+                </p>
+                <div className="relative rounded-[1.882px] shrink-0 size-[16px]" data-node-id="I258:8557;19:4477;1:7008" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
+                  <div className="absolute h-[8.784px] left-[1.41px] top-[3.61px] w-[13.176px]" data-node-id="I258:8557;19:4477;1:7008;1:7283" data-name="Arrow">
+                    <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow1} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+These styles are contained in the design: H8 — 12 (Bold): Font(family: "Inter", style: Bold, size: 12, weight: 700, lineHeight: 1.2000000476837158, letterSpacing: -2), H1 — 40 (Bold): Font(family: "Inter", style: Bold, size: 40, weight: 700, lineHeight: 1.2000000476837158, letterSpacing: -2), Button (M) — 16: Font(family: "Inter", style: Medium, size: 16, weight: 500, lineHeight: 1.25, letterSpacing: -2), Superscript — 12: Font(family: "Inter", style: Semi Bold, size: 12, weight: 600, lineHeight: 1.2000000476837158, letterSpacing: -2), P2 — 16: Font(family: "Inter", style: Medium, size: 16, weight: 500, lineHeight: 1.25, letterSpacing: -2), H5 — 20 (Bold): Font(family: "Inter", style: Bold, size: 20, weight: 700, lineHeight: 1.2999999523162842, letterSpacing: -2), P3 — 14: Font(family: "Inter", style: Medium, size: 14, weight: 500, lineHeight: 1.25, letterSpacing: -2), H7 — 14: Font(family: "Inter", style: Semi Bold, size: 14, weight: 600, lineHeight: 1.2999999523162842, letterSpacing: -2).
+The generated code contains image and SVG URL constants, e.g. const image = 'https://www.figma.com/api/mcp/asset/550e8400-e29b-41d4-a716-446655440000.png'. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.

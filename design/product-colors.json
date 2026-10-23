@@ -1,0 +1,52 @@
+{
+  "fileKey": "JkXOsnFvWZmMab1VYjVQAJ",
+  "capturedAt": "2026-10-23",
+  "desktop": "333:9925",
+  "mobile": "333:10359",
+  "heroDesktop": "233:7145",
+  "heroMobile": "316:12045",
+  "quality": "high-fidelity",
+  "swatchSize": 40,
+  "radius": 8,
+  "gap": 8,
+  "contextFile": "design/context/sku-colors-333-9925.txt",
+  "availability": "Per-model colors confirmed by user on 2026-10-23; photographs deferred.",
+  "modelColors": {
+    "hammer-touring-300": [
+      "blue",
+      "yellow"
+    ],
+    "hammer-touring-200": [
+      "blue",
+      "gray"
+    ],
+    "striker-400-efi": [
+      "green"
+    ],
+    "striker-500-efi": [
+      "gray",
+      "green",
+      "black",
+      "camouflage"
+    ],
+    "striker-500-efi-eps": [
+      "gray",
+      "green",
+      "black",
+      "camouflage"
+    ],
+    "striker-700-efi": [
+      "gray",
+      "green",
+      "black",
+      "camouflage"
+    ],
+    "striker-700-efi-eps": [
+      "gray",
+      "green",
+      "black",
+      "camouflage"
+    ]
+  },
+  "naming": "green = Зелёный; camouflage = Камуфляж. Хаки is not a separate option."
+}

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "status": "imported",
-  "scope": "desktop-ui-foundation",
+  "scope": "desktop-ui-foundation-and-composite-components",
   "assets": [
     {
       "id": "arrow-white",
@@ -12,10 +12,19 @@
         {
           "nodeId": "1:7008",
           "sectionNodeId": "1:6973"
+        },
+        {
+          "nodeId": "I19:4477;1:7008",
+          "sectionNodeId": "19:4818"
+        },
+        {
+          "nodeId": "I19:4855;1:7032",
+          "sectionNodeId": "19:4818"
         }
       ],
       "callsites": [
-        "src/components/ui/Button.astro"
+        "src/components/ui/Button.astro",
+        "src/components/ModelCard.astro (via Button)"
       ],
       "intrinsic": {
         "width": "16",
@@ -151,27 +160,6 @@
       "transfer": "Figma Plugin API exportAsync(SVG_STRING); original icon node, unmodified"
     },
     {
-      "id": "dollar",
-      "nodeId": "1:7322",
-      "kind": "exported-svg",
-      "localPath": "public/assets/ui/dollar.svg",
-      "slots": [
-        {
-          "nodeId": "1:7322",
-          "sectionNodeId": "1:7318"
-        }
-      ],
-      "callsites": [
-        "src/components/ui/Badge.astro"
-      ],
-      "intrinsic": {
-        "width": "10",
-        "height": "14",
-        "viewBox": "0 0 10 14"
-      },
-      "transfer": "Figma Plugin API exportAsync(SVG_STRING); original icon node, unmodified"
-    },
-    {
       "id": "status-stock",
       "nodeId": "13:4397",
       "kind": "exported-svg",
@@ -180,10 +168,19 @@
         {
           "nodeId": "13:4397",
           "sectionNodeId": "13:4379"
+        },
+        {
+          "nodeId": "I72:6711;72:6707;13:4397",
+          "sectionNodeId": "19:4818"
+        },
+        {
+          "nodeId": "I73:6762;72:6707;13:4397",
+          "sectionNodeId": "19:4818"
         }
       ],
       "callsites": [
-        "src/components/ui/StatusBadge.astro"
+        "src/components/ui/StatusBadge.astro",
+        "src/components/ModelCard.astro (via StatusBadge)"
       ],
       "intrinsic": {
         "width": "8",
@@ -254,6 +251,540 @@
         "viewBox": "0 0 8 8"
       },
       "transfer": "Figma Plugin API exportAsync(SVG_STRING); original icon node, unmodified"
+    },
+    {
+      "id": "angle-black",
+      "nodeId": "1:7113",
+      "kind": "exported-svg",
+      "localPath": "public/assets/ui/angle-black.svg",
+      "slots": [
+        {
+          "nodeId": "1:7113",
+          "sectionNodeId": "1:6973"
+        }
+      ],
+      "callsites": [
+        "src/components/ui/Button.astro"
+      ],
+      "intrinsic": {
+        "width": "16",
+        "height": "16",
+        "viewBox": "0 0 16 16"
+      },
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING); original icon node, unmodified"
+    },
+    {
+      "id": "angle-white",
+      "nodeId": "1:7115",
+      "kind": "exported-svg",
+      "localPath": "public/assets/ui/angle-white.svg",
+      "slots": [
+        {
+          "nodeId": "1:7115",
+          "sectionNodeId": "1:6973"
+        }
+      ],
+      "callsites": [
+        "src/components/ui/Button.astro"
+      ],
+      "intrinsic": {
+        "width": "16",
+        "height": "16",
+        "viewBox": "0 0 16 16"
+      },
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING); original icon node, unmodified"
+    },
+    {
+      "id": "angle-pressed",
+      "nodeId": "1:7117",
+      "kind": "exported-svg",
+      "localPath": "public/assets/ui/angle-pressed.svg",
+      "slots": [
+        {
+          "nodeId": "1:7117",
+          "sectionNodeId": "1:6973"
+        }
+      ],
+      "callsites": [
+        "src/components/ui/Button.astro"
+      ],
+      "intrinsic": {
+        "width": "16",
+        "height": "16",
+        "viewBox": "0 0 16 16"
+      },
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING); original icon node, unmodified"
+    },
+    {
+      "id": "angle-disabled",
+      "nodeId": "1:7119",
+      "kind": "exported-svg",
+      "localPath": "public/assets/ui/angle-disabled.svg",
+      "slots": [
+        {
+          "nodeId": "1:7119",
+          "sectionNodeId": "1:6973"
+        }
+      ],
+      "callsites": [
+        "src/components/ui/Button.astro"
+      ],
+      "intrinsic": {
+        "width": "16",
+        "height": "16",
+        "viewBox": "0 0 16 16"
+      },
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING); original icon node, unmodified"
+    },
+    {
+      "id": "model-card-engine",
+      "nodeId": "I19:4447;15:4412",
+      "kind": "exported-svg",
+      "localPath": "public/assets/model-card/engine.svg",
+      "slots": [
+        {
+          "nodeId": "I19:4447;15:4412",
+          "sectionNodeId": "19:4818"
+        },
+        {
+          "nodeId": "I19:4828;15:4412",
+          "sectionNodeId": "19:4818"
+        }
+      ],
+      "callsites": [
+        "src/components/ModelCard.astro"
+      ],
+      "intrinsic": {
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      },
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING); original whole icon node, unmodified"
+    },
+    {
+      "id": "model-card-drive",
+      "nodeId": "I19:4432;15:4412",
+      "kind": "exported-svg",
+      "localPath": "public/assets/model-card/drive.svg",
+      "slots": [
+        {
+          "nodeId": "I19:4432;15:4412",
+          "sectionNodeId": "19:4818"
+        },
+        {
+          "nodeId": "I19:4829;15:4412",
+          "sectionNodeId": "19:4818"
+        }
+      ],
+      "callsites": [
+        "src/components/ModelCard.astro"
+      ],
+      "intrinsic": {
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      },
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING); original whole icon node, unmodified"
+    },
+    {
+      "id": "model-card-passport",
+      "nodeId": "I19:4439;15:4412",
+      "kind": "exported-svg",
+      "localPath": "public/assets/model-card/passport.svg",
+      "slots": [
+        {
+          "nodeId": "I19:4439;15:4412",
+          "sectionNodeId": "19:4818"
+        },
+        {
+          "nodeId": "I19:4830;15:4412",
+          "sectionNodeId": "19:4818"
+        }
+      ],
+      "callsites": [
+        "src/components/ModelCard.astro"
+      ],
+      "intrinsic": {
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      },
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING); original whole icon node, unmodified"
+    },
+    {
+      "id": "model-card-registration",
+      "nodeId": "101:7757",
+      "kind": "exported-svg",
+      "localPath": "public/assets/model-card/registration.svg",
+      "slots": [
+        {
+          "nodeId": "101:7757",
+          "sectionNodeId": "19:4818"
+        },
+        {
+          "nodeId": "101:7750",
+          "sectionNodeId": "19:4818"
+        }
+      ],
+      "callsites": [
+        "src/components/ModelCard.astro"
+      ],
+      "intrinsic": {
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      },
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING); original whole icon node, unmodified"
+    },
+    {
+      "id": "model-card-figma-atv-reference",
+      "nodeId": "72:6737",
+      "kind": "exported-raster",
+      "localPath": "public/assets/model-card/figma-atv-reference.png",
+      "slots": [
+        {
+          "nodeId": "I72:6711;72:6737",
+          "sectionNodeId": "19:4818"
+        },
+        {
+          "nodeId": "I73:6762;72:6737",
+          "sectionNodeId": "19:4818"
+        }
+      ],
+      "callsites": [
+        "src/data/catalog.ts (modelCardReference only)",
+        "src/components/ModelCard.astro"
+      ],
+      "intrinsic": {
+        "width": 640,
+        "height": 426
+      },
+      "placement": {
+        "width": 320,
+        "height": 213,
+        "objectFit": "cover",
+        "position": "center + 0.5px vertical"
+      },
+      "sourceImageHash": "eeaf0ab54d85183d13f9a820dd016805893f6859",
+      "transfer": "Figma Plugin API exportAsync(PNG, SCALE 2) of the photo layer only; original crop retained, no UI screenshot",
+      "note": "Reference artwork only; product identity not confirmed."
+    },
+    {
+      "id": "bank-alfa-logo",
+      "nodeId": "26:5414",
+      "kind": "exported-svg",
+      "localPath": "public/assets/bank-card/alfa.svg",
+      "slots": [
+        {
+          "nodeId": "26:5414",
+          "sectionNodeId": "26:5495"
+        },
+        {
+          "nodeId": "26:5498",
+          "sectionNodeId": "26:5495"
+        }
+      ],
+      "callsites": [
+        "src/components/BankCard.astro"
+      ],
+      "intrinsic": {
+        "width": "170",
+        "height": "34",
+        "viewBox": "0 0 170 34"
+      },
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING); original whole node, unmodified"
+    },
+    {
+      "id": "bank-techno-logo",
+      "nodeId": "104:7832",
+      "kind": "exported-svg",
+      "localPath": "public/assets/bank-card/techno.svg",
+      "slots": [
+        {
+          "nodeId": "104:7832",
+          "sectionNodeId": "26:5495"
+        },
+        {
+          "nodeId": "104:7869",
+          "sectionNodeId": "26:5495"
+        }
+      ],
+      "callsites": [
+        "src/components/BankCard.astro"
+      ],
+      "intrinsic": {
+        "width": "248",
+        "height": "34",
+        "viewBox": "0 0 248 34"
+      },
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING); original whole node, unmodified"
+    },
+    {
+      "id": "angle-inverse",
+      "nodeId": "I26:5429;1:6999",
+      "kind": "exported-svg",
+      "localPath": "public/assets/ui/angle-inverse.svg",
+      "slots": [
+        {
+          "nodeId": "I26:5429;1:6999",
+          "sectionNodeId": "26:5495"
+        },
+        {
+          "nodeId": "I26:5644;1:6999",
+          "sectionNodeId": "26:5495"
+        }
+      ],
+      "callsites": [
+        "src/components/ui/Button.astro (BankCard icon M, inverse)"
+      ],
+      "intrinsic": {
+        "width": "20",
+        "height": "20",
+        "viewBox": "0 0 20 20"
+      },
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING); original whole node, unmodified"
+    },
+    {
+      "id": "angle-inverse-hover",
+      "nodeId": "I26:5499;1:7001",
+      "kind": "exported-svg",
+      "localPath": "public/assets/ui/angle-inverse-hover.svg",
+      "slots": [
+        {
+          "nodeId": "I26:5499;1:7001",
+          "sectionNodeId": "26:5495"
+        },
+        {
+          "nodeId": "I26:5654;1:7001",
+          "sectionNodeId": "26:5495"
+        }
+      ],
+      "callsites": [
+        "src/components/ui/Button.astro (BankCard icon M, inverse)"
+      ],
+      "intrinsic": {
+        "width": "20",
+        "height": "20",
+        "viewBox": "0 0 20 20"
+      },
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING); original whole node, unmodified"
+    },
+    {
+      "id": "arrow-inverse",
+      "nodeId": "I26:5740;1:7011",
+      "kind": "exported-svg",
+      "localPath": "public/assets/ui/arrow-inverse.svg",
+      "slots": [
+        {
+          "nodeId": "I26:5740;1:7011",
+          "sectionNodeId": "26:5495"
+        }
+      ],
+      "callsites": [
+        "src/components/ui/Button.astro (BankCard outline S, inverse)"
+      ],
+      "intrinsic": {
+        "width": "16",
+        "height": "16",
+        "viewBox": "0 0 16 16"
+      },
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING); original whole node, unmodified"
+    },
+    {
+      "id": "arrow-inverse-hover",
+      "nodeId": "I31:5806;1:7035",
+      "kind": "exported-svg",
+      "localPath": "public/assets/ui/arrow-inverse-hover.svg",
+      "slots": [
+        {
+          "nodeId": "I31:5806;1:7035",
+          "sectionNodeId": "26:5495"
+        }
+      ],
+      "callsites": [
+        "src/components/ui/Button.astro (BankCard outline S, inverse)"
+      ],
+      "intrinsic": {
+        "width": "16",
+        "height": "16",
+        "viewBox": "0 0 16 16"
+      },
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING); original whole node, unmodified"
+    },
+    {
+      "id": "site-logo",
+      "nodeId": "1:8475",
+      "kind": "exported-svg",
+      "localPath": "public/assets/site/logo.svg",
+      "slots": [
+        {
+          "nodeId": "1:8475",
+          "sectionNodeId": "1:8464"
+        }
+      ],
+      "callsites": [
+        "src/components/SiteHeader.astro"
+      ],
+      "intrinsic": {
+        "width": "122",
+        "height": "38",
+        "viewBox": "0 0 122 38"
+      },
+      "placement": {
+        "logicalWidth": 116,
+        "logicalHeight": 36,
+        "left": -5.75390625,
+        "top": 0
+      },
+      "transfer": "Figma Plugin API exportAsync(SVG_STRING); whole original logo instance, unmodified; painted overflow retained."
+    },
+    {
+      "id": "map-yandex",
+      "nodeId": "1:8544",
+      "kind": "exported-svg",
+      "localPath": "public/assets/footer/map-yandex.svg",
+      "slots": [
+        {
+          "nodeId": "1:8544",
+          "sectionNodeId": "1:8514"
+        }
+      ],
+      "callsites": [
+        "src/components/SiteFooter.astro"
+      ],
+      "intrinsic": {
+        "width": "18",
+        "height": "18",
+        "viewBox": "0 0 18 18"
+      },
+      "transfer": "Figma Plugin API SVG_STRING; whole original icon, unmodified"
+    },
+    {
+      "id": "map-google",
+      "nodeId": "1:8547",
+      "kind": "exported-svg",
+      "localPath": "public/assets/footer/map-google.svg",
+      "slots": [
+        {
+          "nodeId": "1:8547",
+          "sectionNodeId": "1:8514"
+        }
+      ],
+      "callsites": [
+        "src/components/SiteFooter.astro"
+      ],
+      "intrinsic": {
+        "width": "18",
+        "height": "18",
+        "viewBox": "0 0 18 18"
+      },
+      "transfer": "Figma Plugin API SVG_STRING; whole original icon, unmodified"
+    },
+    {
+      "id": "arrow-up",
+      "nodeId": "I106:4505;1:7011",
+      "kind": "exported-svg",
+      "localPath": "public/assets/footer/arrow-up.svg",
+      "slots": [
+        {
+          "nodeId": "I106:4505;1:7011",
+          "sectionNodeId": "1:8514"
+        }
+      ],
+      "callsites": [
+        "src/components/SiteFooter.astro"
+      ],
+      "intrinsic": {
+        "width": "16",
+        "height": "16",
+        "viewBox": "0 0 16 16"
+      },
+      "transfer": "Figma Plugin API SVG_STRING; whole original icon, unmodified"
+    },
+    {
+      "id": "social-telegram",
+      "nodeId": "I108:4689;108:4672",
+      "kind": "exported-svg",
+      "localPath": "public/assets/footer/social-telegram.svg",
+      "slots": [
+        {
+          "nodeId": "I108:4689;108:4672",
+          "sectionNodeId": "1:8514"
+        }
+      ],
+      "callsites": [
+        "src/components/SiteFooter.astro"
+      ],
+      "intrinsic": {
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      },
+      "transfer": "Figma Plugin API SVG_STRING; whole original icon, unmodified"
+    },
+    {
+      "id": "social-youtube",
+      "nodeId": "I108:4694;108:4672",
+      "kind": "exported-svg",
+      "localPath": "public/assets/footer/social-youtube.svg",
+      "slots": [
+        {
+          "nodeId": "I108:4694;108:4672",
+          "sectionNodeId": "1:8514"
+        }
+      ],
+      "callsites": [
+        "src/components/SiteFooter.astro"
+      ],
+      "intrinsic": {
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      },
+      "transfer": "Figma Plugin API SVG_STRING; whole original icon, unmodified"
+    },
+    {
+      "id": "social-instagram",
+      "nodeId": "I108:4684;108:4672",
+      "kind": "exported-svg",
+      "localPath": "public/assets/footer/social-instagram.svg",
+      "slots": [
+        {
+          "nodeId": "I108:4684;108:4672",
+          "sectionNodeId": "1:8514"
+        }
+      ],
+      "callsites": [
+        "src/components/SiteFooter.astro"
+      ],
+      "intrinsic": {
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      },
+      "transfer": "Figma Plugin API SVG_STRING; whole original icon, unmodified"
+    },
+    {
+      "id": "social-instagram-hover",
+      "nodeId": "108:4680",
+      "kind": "exported-svg",
+      "localPath": "public/assets/footer/social-instagram-hover.svg",
+      "slots": [
+        {
+          "nodeId": "108:4680",
+          "sectionNodeId": "108:4679"
+        }
+      ],
+      "callsites": [
+        "src/components/SiteFooter.astro"
+      ],
+      "intrinsic": {
+        "width": "24",
+        "height": "24",
+        "viewBox": "0 0 24 24"
+      },
+      "transfer": "Figma Plugin API SVG_STRING; whole original icon, unmodified"
     }
-  ]
+  ],
+  "verifiedAt": "2026-10-21"
 }

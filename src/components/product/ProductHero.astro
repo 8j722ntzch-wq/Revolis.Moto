@@ -1,0 +1,35 @@
+---
+import type { ProductPage } from '../../data/products';
+import Button from '../ui/Button.astro';
+import StatusBadge from '../ui/StatusBadge.astro';
+import Media from './ProductMedia.astro';
+import Colors from './ProductColors.astro';
+interface Props { product: ProductPage; }
+const { details, model } = Astro.props.product;
+const statuses = { 'in-stock': 'stock', 'on-order': 'order', 'coming-soon': 'soon', 'special-offer': 'offer' } as const;
+const price = model.priceByn === null ? 'Цена уточняется' : `${model.priceFrom ? 'от ' : ''}${new Intl.NumberFormat('ru-BY').format(model.priceByn)} BYN`;
+---
+<section class="product-hero container" aria-labelledby="product-title">
+  <div class="product-hero__identity">
+    {model.availability !== 'unconfirmed' && <StatusBadge status={statuses[model.availability]} />}
+    <div><p>{model.brand}</p><h1 id="product-title">{model.name}</h1></div>
+  </div>
+  {details.colors?.map(color => <Media photos={details.photos.filter(photo => !photo.color || photo.color === color)} color={color} hidden={color !== details.defaultColor} />)}
+  <div class="product-hero__copy">
+    <p class="product-hero__subtitle">{model.subtitle ?? details.subtitle}</p>
+    {model.features?.length && <ul class="product-hero__features" aria-label="Основные характеристики">{model.features.map(feature => <li><img src={`/assets/model-card/${feature.icon}.svg`} alt="" />{feature.label}</li>)}</ul>}
+    {model.registration !== 'unconfirmed' && <p class="product-hero__registration"><img src="/assets/product/registration.svg" alt="" />{model.registration === 'gai' ? 'Регистрация в ГАИ' : 'Регистрация в Гостехнадзоре'}</p>}
+    <p class="product-hero__intro">{details.intro}</p>
+    <Colors colors={details.colors} selected={details.defaultColor} />
+  </div>
+  <div class="product-hero__purchase">
+    <p class="product-hero__price">{price}</p>
+    <div class="product-hero__actions">
+      <Button data-open-lead="lead-dialog" data-intent="consultation" data-source="product-offer" data-model-id={model.id} arrow>Получить предложение</Button>
+      <Button variant="outline" data-open-lead="lead-dialog" data-intent="test-drive" data-source="product-test-drive" data-model-id={model.id}>Записаться на тест-драйв</Button>
+    </div>
+    {details.specifications?.length && <Button href="#specifications" variant="text" arrow class="product-spec-link">Смотреть характеристики</Button>}
+    <div class="product-hero__banks"><p>В кредит и рассрочку:</p><div><a href="#finance" aria-label="Финансирование в Альфа-Банке"><img src="/assets/product/alfa.svg" alt="Альфа Банк" width="140" height="28" /></a><a href="#finance" aria-label="Финансирование в Технобанке"><img src="/assets/product/techno.svg" alt="Технобанк" width="204" height="28" /></a></div></div>
+  </div>
+  {details.benefits?.length && <ul class="product-benefits">{details.benefits.map(item => <li><img src={item.icon} alt="" width="56" height="56" /><div><strong>{item.title}</strong><p>{item.body}</p></div></li>)}</ul>}
+</section>

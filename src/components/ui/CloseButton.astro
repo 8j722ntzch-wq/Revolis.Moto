@@ -1,0 +1,10 @@
+---
+interface Props { label?: string; }
+const { label = 'Закрыть окно' } = Astro.props;
+---
+<button class="dialog-close" type="button" data-close-dialog aria-label={label}><img src="/assets/popups/close.svg" alt="" /></button>
+<style>
+.dialog-close { display:grid; place-items:center; width:36px; height:36px; border:0; border-radius:50%; background:#fdfdfd; padding:0; }
+.dialog-close img { display:block; }
+@media(hover:hover) and (pointer:fine) { .dialog-close:hover { background:#c2bfc9; } }
+</style>

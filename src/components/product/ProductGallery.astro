@@ -1,0 +1,10 @@
+---
+import { fullImage } from "../../lib/responsive-images";
+import type { ProductPhoto } from '../../data/products/types';
+import Photo from './ProductPhoto.astro';
+interface Props { photos: ProductPhoto[]; }
+const { photos } = Astro.props;
+---
+{photos.length > 0 && <section id="product-gallery" class="product-section product-gallery container" aria-label="Фотографии модели">
+  {photos.map((photo,index) => <a class="product-gallery__tile" href={fullImage(photo.src)} aria-label={`Открыть фотографию ${index+1}: ${photo.alt}`}><Photo photo={photo} role="gallery" /></a>)}
+</section>}

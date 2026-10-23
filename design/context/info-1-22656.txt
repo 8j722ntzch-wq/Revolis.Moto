@@ -1,0 +1,321 @@
+const imgIconLogomark30Px = "https://www.figma.com/api/mcp/asset/c3a4b349-a627-4dba-9ee7-9031ef7087bb.svg";
+const imgElementName = "https://www.figma.com/api/mcp/asset/fd40b015-451a-49b0-aec0-03b9e4209542.svg";
+const imgSubtract = "https://www.figma.com/api/mcp/asset/e0fe71da-e48f-4c42-b0b3-4854079fe9a8.svg";
+const imgBurgerMenu20Px = "https://www.figma.com/api/mcp/asset/40cf1b0b-0975-4d29-b46a-7a986203b984.svg";
+const imgElementLineVertical = "https://www.figma.com/api/mcp/asset/c96a0818-5c08-409a-b0c3-357188df7649.svg";
+const imgSocialInstagram = "https://www.figma.com/api/mcp/asset/ad98510d-c8bf-47aa-82ff-f4566b7ff222.svg";
+const img404 = "https://www.figma.com/api/mcp/asset/335f62de-68ec-49f3-a16b-0b76818dd489.svg";
+const imgArrow = "https://www.figma.com/api/mcp/asset/40a1b64c-da43-490b-8168-c898b51c66e1.svg";
+const imgArrow1 = "https://www.figma.com/api/mcp/asset/5a68b27b-a9d1-48fb-aba1-6d0dc78f3087.svg";
+const imgIconMaps = "https://www.figma.com/api/mcp/asset/0adcf417-30b0-494c-9f00-04d8afd34b12.svg";
+const imgGroup = "https://www.figma.com/api/mcp/asset/2686837a-167e-4e5c-87dc-be9b9cc639bc.svg";
+const imgGroup1 = "https://www.figma.com/api/mcp/asset/a91c56d3-417b-4ac3-b3cc-405706e5b91d.svg";
+const imgVector = "https://www.figma.com/api/mcp/asset/e0c7413d-ad72-4549-86c2-cf64a4b4bcc4.svg";
+const imgSvgInsragram = "https://www.figma.com/api/mcp/asset/32f7efe0-0075-4e1d-a989-11bf820751c0.svg";
+const imgSvgInsragram1 = "https://www.figma.com/api/mcp/asset/d745c441-48cc-4e75-89d4-a2f67b053ba7.svg";
+
+type ElementLogoProps = {
+  className?: string;
+  type?: "Type4";
+};
+
+function ElementLogo({ className, type = "Type4" }: ElementLogoProps) {
+  return (
+    <div className={className || "h-[36px] relative w-[116px]"} data-node-id="1:7473">
+      <div className="absolute h-[36.011px] left-[-0.75px] top-[0.17px] w-[116.036px]" data-node-id="1:23587" data-name="element_Logo">
+        <div className="-translate-y-1/2 absolute left-[-5px] size-[37.011px] top-[calc(50%+0.5px)]" data-node-id="I1:23587;4587:8186" data-name="icon_Logomark (30px)">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIconLogomark30Px} />
+        </div>
+        <div className="-translate-y-1/2 absolute h-[30.009px] right-0 top-[calc(50%+2px)] w-[83.026px]" data-node-id="I1:23587;4587:8187" data-name="element_Name">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgElementName} />
+        </div>
+      </div>
+      <div className="absolute h-[5.877px] left-[32.24px] top-[26.35px] w-[19.506px]" data-node-id="1:23588" data-name="Subtract">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSubtract} />
+      </div>
+    </div>
+  );
+}
+
+type BlockHeaderProps = {
+  className?: string;
+  device?: "Mobile";
+};
+
+function BlockHeader({ className, device = "Mobile" }: BlockHeaderProps) {
+  return (
+    <div className={className || "bg-[var(--colors\\/grays\\/white,#fdfdfd)] h-[60px] relative w-[390px]"} data-node-id="1:8476">
+      <button className="absolute block cursor-pointer right-[183px] size-[36px] top-[12px]" data-node-id="1:8477" data-name="icon_Burger Menu (36 px)">
+        <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[14px] left-1/2 top-1/2 w-[34px]" data-node-id="I1:8477;1:8985" data-name="Burger Menu - 20px">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgBurgerMenu20Px} />
+        </div>
+      </button>
+      <div className="absolute flex h-[60px] items-center justify-center left-[219px] top-0 w-0" data-node-id="1:8478">
+        <div className="flex-none rotate-90">
+          <div className="h-0 relative w-[60px]" data-name="element_Line (vertical)">
+            <div className="absolute inset-[-1px_0_0_0]">
+              <img alt="" className="block max-w-none size-full" src={imgElementLineVertical} />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="absolute flex h-[60px] items-center justify-center left-[159px] top-0 w-0" data-node-id="1:8479">
+        <div className="flex-none rotate-90">
+          <div className="h-0 relative w-[60px]" data-name="element_Line (vertical)">
+            <div className="absolute inset-[-1px_0_0_0]">
+              <img alt="" className="block max-w-none size-full" src={imgElementLineVertical} />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="absolute bg-[var(--colors\/accents\/purple,#7c33fb)] content-stretch cursor-pointer flex items-center justify-center px-[var(--padding\/padding-\(16\),16px)] py-[var(--padding\/padding-\(12\),12px)] right-[25px] rounded-[10px] top-[11px]" data-node-id="1:8480" data-name="button_Basic">
+        <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.2] not-italic relative shrink-0 text-[12px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.24px] whitespace-nowrap" data-node-id="I1:8480;1:6977">
+          Оставить заявку
+        </p>
+      </div>
+      <ElementLogo className="absolute h-[36px] left-[25px] top-[12px] w-[116px]" />
+    </div>
+  );
+}
+
+type SvgInsragramProps = {
+  className?: string;
+  social?: "Instagram";
+};
+
+function SvgInsragram({ className, social = "Instagram" }: SvgInsragramProps) {
+  return (
+    <div className={className || "relative size-[24px]"} data-node-id="108:4643">
+      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSocialInstagram} />
+    </div>
+  );
+}
+
+type ButtonSocialsProps = {
+  className?: string;
+  property1?: "Default";
+};
+
+function ButtonSocials({ className, property1 = "Default" }: ButtonSocialsProps) {
+  return (
+    <div className={className || "bg-[var(--colors\\/grays\\/gray-6,#242424)] content-stretch flex items-center p-[var(--padding\\/padding-\\(12\\),12px)] relative rounded-[500px]"} data-node-id="108:4677">
+      <SvgInsragram className="relative shrink-0 size-[24px]" />
+    </div>
+  );
+}
+
+export default function Component404Mobile() {
+  return (
+    <div className="bg-[var(--colors\/grays\/gray-1,#f1eef8)] relative size-full" data-node-id="1:22656" data-name="404 (Mobile)">
+      <div className="-translate-x-1/2 absolute h-[104px] left-[calc(50%-45px)] top-[96px] w-[250px]" data-node-id="1:22659" data-name="404">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={img404} />
+      </div>
+      <div className="absolute content-stretch flex flex-col gap-[var(--spacings\/content-\(24\),24px)] items-start left-[25px] top-[264px] w-[340px]" data-node-id="1:22660" data-name="layout_Body, Button">
+        <div className="[word-break:break-word] content-stretch flex flex-col gap-[var(--padding\/button\,-vertical-\(m\),20px)] items-start leading-[1.25] not-italic relative shrink-0 w-full" data-node-id="1:22661" data-name="layout_Headline, Body">
+          <p className="font-['Inter:Semi_Bold'] font-semibold relative shrink-0 text-[24px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.48px] whitespace-nowrap" data-node-id="1:22662">
+            Страница не найдена
+          </p>
+          <p className="font-['Inter:Medium'] font-medium min-w-full relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/gray-4,#736f79)] tracking-[-0.28px] w-[min-content]" data-node-id="1:22663">
+            Похоже, что такой страницы не существует. Пожалуйста, вернитесь на главную, чтобы найти то, что вас интересует.
+          </p>
+        </div>
+        <div className="bg-[var(--colors\/accents\/purple,#7c33fb)] content-stretch cursor-pointer flex gap-[4px] items-center justify-center px-[var(--padding\/padding-\(16\),16px)] py-[var(--padding\/padding-\(12\),12px)] relative rounded-[10px] shrink-0" data-node-id="109:5022" data-name="button_Basic">
+          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.2] not-italic relative shrink-0 text-[12px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.24px] whitespace-nowrap" data-node-id="I109:5022;1:7013">
+            Перейти на главную
+          </p>
+          <div className="relative rounded-[1.647px] shrink-0 size-[14px]" data-node-id="I109:5022;1:7014" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
+            <div className="absolute h-[7.686px] left-[1.24px] top-[3.16px] w-[11.529px]" data-node-id="I109:5022;1:7014;1:7287" data-name="Arrow">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow} />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="-translate-x-1/2 absolute bg-[var(--colors\/grays\/black,#0d0d0d)] bottom-0 h-[1140px] left-1/2 w-[390px]" data-node-id="109:4926" data-name="block_Footer">
+        <p className="-translate-x-1/2 [word-break:break-word] absolute bottom-[54px] font-['Inter:Medium'] font-medium leading-[1.2] left-1/2 not-italic text-[12px] text-[color:var(--colors\/grays\/gray-5,#43404a)] text-center tracking-[-0.24px] translate-y-full whitespace-nowrap" data-node-id="I109:4926;1:8571">
+          Revolis.Мото © 2026 All rights reserved
+        </p>
+        <p className="[word-break:break-word] absolute bottom-[176px] font-['Inter:Medium'] font-medium leading-[1.2] left-[calc(50%-170px)] not-italic text-[12px] text-[color:var(--colors\/grays\/gray-5,#43404a)] tracking-[-0.24px] translate-y-full uppercase w-[340px]" data-node-id="I109:4926;109:4775">
+          ИП Бугаев Марк Александрович. УНП: 391844915. Республика Беларусь, г. Витебск, пр-т Московский, 111, пом. 224. Свидетельство о государственной регистрации от 29 июня 2023 года. Выдано Администрацией Октябрьского района г. Витебска. Внесён в Торговый реестр Республики Беларусь:
+        </p>
+        <div className="-translate-x-1/2 absolute bottom-[200px] content-stretch flex flex-col gap-[var(--spacings\/content-\(4\),4px)] items-start justify-center left-[calc(50%-44px)]" data-node-id="I109:4926;1:8572" data-name="element_Layout">
+          <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I109:4926;1:8573" data-name="button_Basic">
+            <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.2] not-italic relative shrink-0 text-[12px] text-[color:var(--colors\/grays\/gray-5,#43404a)] tracking-[-0.24px] whitespace-nowrap" data-node-id="I109:4926;1:8573;1:7191">
+              Политика конфиденциальности
+            </p>
+          </div>
+          <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I109:4926;1:8574" data-name="button_Basic">
+            <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.2] not-italic relative shrink-0 text-[12px] text-[color:var(--colors\/grays\/gray-5,#43404a)] tracking-[-0.24px] whitespace-nowrap" data-node-id="I109:4926;1:8574;1:7191">
+              Политика обработки персональных данных
+            </p>
+          </div>
+        </div>
+        <div className="-translate-x-1/2 absolute border border-[var(--colors\/grays\/white,#fdfdfd)] border-solid bottom-[256px] content-stretch cursor-pointer flex gap-[4px] items-center justify-center left-1/2 px-[var(--padding\/padding-\(16\),16px)] py-[var(--padding\/padding-\(12\),12px)] rounded-[10px] w-[340px]" data-node-id="I109:4926;1:8584" data-name="button_Basic">
+          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.2] not-italic relative shrink-0 text-[12px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.24px] whitespace-nowrap" data-node-id="I109:4926;1:8584;1:7016">
+            Вернуться наверх
+          </p>
+          <div className="relative rounded-[1.647px] shrink-0 size-[14px]" data-node-id="I109:4926;1:8584;1:7017" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
+            <div className="absolute flex h-[11.529px] items-center justify-center left-[3.16px] top-[1.24px] w-[7.686px]" data-node-id="I109:4926;1:8584;1:7017;1:7295">
+              <div className="-rotate-90 flex-none">
+                <div className="h-[7.686px] relative w-[11.529px]" data-name="Arrow">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow1} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="[word-break:break-word] absolute content-stretch flex flex-col font-['Inter:Semi_Bold'] font-semibold gap-[var(--padding\/padding-\(16\),16px)] items-start leading-[1.3] left-[25px] not-italic top-[264px] whitespace-nowrap" data-node-id="I109:4926;1:8591" data-name="layout_Адрес">
+          <p className="relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/gray-5,#43404a)] tracking-[-0.28px]" data-node-id="I109:4926;1:8592">
+            Адрес:
+          </p>
+          <p className="relative shrink-0 text-[20px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.4px]" data-node-id="I109:4926;1:8593">
+            г. Витебск, пр-т Московский, 111
+          </p>
+        </div>
+        <div className="absolute content-stretch flex flex-col gap-[var(--padding\/padding-\(16\),16px)] items-start left-[25px] top-[356px]" data-node-id="I109:4926;1:8594" data-name="layout_Карты">
+          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/gray-5,#43404a)] tracking-[-0.28px] whitespace-nowrap" data-node-id="I109:4926;1:8595">
+            Проложить маршрут:
+          </p>
+          <div className="content-stretch flex flex-col gap-[var(--spacings\/content-\(12\),12px)] items-start relative shrink-0 w-full" data-node-id="I109:4926;1:8596" data-name="layout_Yandex Maps, Google Maps">
+            <div className="content-stretch flex gap-[6px] items-center relative shrink-0" data-node-id="I109:4926;1:8597" data-name="Yandex Maps">
+              <div className="relative shrink-0 size-[20px]" data-node-id="I109:4926;1:8598" data-name="icon_Maps">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIconMaps} />
+              </div>
+              <div className="content-stretch flex items-center justify-center relative rounded-[10px] shrink-0" data-node-id="I109:4926;1:8599" data-name="button_Basic/Text (Bold)/Default/False/M/Desktop">
+                <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I109:4926;1:8599;1:7161">
+                  Yandex Maps
+                </p>
+              </div>
+            </div>
+            <div className="content-stretch flex gap-[6px] items-center relative shrink-0" data-node-id="I109:4926;1:8600" data-name="Google Maps">
+              <div className="bg-[var(--colors\/grays\/white,#fdfdfd)] overflow-clip relative rounded-[4px] shrink-0 size-[20px]" data-node-id="I109:4926;1:8601" data-name="icon_Maps">
+                <div className="-translate-x-1/2 -translate-y-1/2 absolute contents left-1/2 top-1/2" data-node-id="I109:4926;1:8601;1:7433" data-name="Clip path group">
+                  <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[15.859px] left-[calc(50%-0.07px)] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[2.156px_0.516px] mask-size-[12.563px_18px] top-1/2 w-[13.906px]" data-node-id="I109:4926;1:8601;1:7436" style={{ maskImage: `url("${imgGroup}")` }} data-name="Group">
+                    <div className="absolute inset-[-12.21%_-13.99%_-10.28%_-14.02%]">
+                      <img alt="" className="block max-w-none size-full" src={imgGroup1} />
+                    </div>
+                  </div>
+                </div>
+                <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[3.984px] top-[calc(50%-2.27px)]" data-node-id="I109:4926;1:8601;1:7442" data-name="Vector">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector} />
+                </div>
+              </div>
+              <div className="content-stretch flex items-center justify-center relative rounded-[10px] shrink-0" data-node-id="I109:4926;1:8602" data-name="button_Basic/Text (Bold)/Default/False/M/Desktop">
+                <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I109:4926;1:8602;1:7161">
+                  Google Maps
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="absolute content-stretch flex flex-col gap-[var(--spacings\/content-\(12\),12px)] items-start left-[25px] top-[608px]" data-node-id="I109:4926;1:8603" data-name="layout_Телефоны">
+          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/gray-5,#43404a)] tracking-[-0.28px] whitespace-nowrap" data-node-id="I109:4926;1:8604">
+            Телефоны:
+          </p>
+          <div className="content-stretch flex flex-col gap-[var(--spacings\/content-\(8\),8px)] items-start relative shrink-0" data-node-id="I109:4926;1:8605" data-name="layout_МТС, А1">
+            <div className="content-stretch flex gap-[var(--spacings\/content-\(4\),4px)] items-center relative shrink-0 w-full" data-node-id="I109:4926;1:8606" data-name="layout_МТС">
+              <div className="content-stretch flex items-center justify-center relative rounded-[10px] shrink-0" data-node-id="I109:4926;1:8607" data-name="button_Basic/Text (Bold)/Default/False/M/Desktop">
+                <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I109:4926;1:8607;1:7161">
+                  +375 (25) 971-19-02
+                </p>
+              </div>
+            </div>
+            <div className="content-stretch flex gap-[var(--spacings\/content-\(4\),4px)] items-center relative shrink-0" data-node-id="I109:4926;1:8609" data-name="layout_А1">
+              <div className="content-stretch flex items-center justify-center relative rounded-[10px] shrink-0" data-node-id="I109:4926;1:8610" data-name="button_Basic/Text (Bold)/Default/False/M/Desktop">
+                <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I109:4926;1:8610;1:7161">
+                  +375 (29) 676-67-65
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="[word-break:break-word] absolute content-stretch flex flex-col gap-[var(--padding\/padding-\(16\),16px)] items-start left-[25px] not-italic top-[474px] whitespace-nowrap" data-node-id="I109:4926;1:8612" data-name="layout_Режим работы">
+          <p className="font-['Inter:Semi_Bold'] font-semibold leading-[1.3] relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/gray-5,#43404a)] tracking-[-0.28px]" data-node-id="I109:4926;1:8613">
+            Режим работы:
+          </p>
+          <div className="content-stretch flex flex-col gap-[var(--spacings\/content-\(4\),4px)] items-start leading-[1.25] relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.32px] w-full" data-node-id="I109:4926;1:8614" data-name="layout_Пн-Пт, Сб, Вс">
+            <div className="content-stretch flex gap-[var(--spacings\/content-\(8\),8px)] items-center relative shrink-0" data-node-id="I109:4926;1:8615" data-name="layout_Пн-Пт">
+              <p className="font-['Inter:Semi_Bold'] font-semibold relative shrink-0" data-node-id="I109:4926;1:8616">
+                Пн, Пт:
+              </p>
+              <p className="font-['Inter:Medium'] font-medium relative shrink-0" data-node-id="I109:4926;1:8617">
+                18:00 – 20:00
+              </p>
+            </div>
+            <div className="content-stretch flex gap-[var(--spacings\/content-\(8\),8px)] items-center relative shrink-0" data-node-id="I109:4926;1:8618" data-name="layout_Сб">
+              <p className="font-['Inter:Semi_Bold'] font-semibold relative shrink-0" data-node-id="I109:4926;1:8619">
+                Суббота:
+              </p>
+              <p className="font-['Inter:Medium'] font-medium relative shrink-0" data-node-id="I109:4926;1:8620">
+                10:00 – 13:00
+              </p>
+            </div>
+            <div className="content-stretch flex gap-[var(--spacings\/content-\(8\),8px)] items-center relative shrink-0" data-node-id="I109:4926;1:8621" data-name="layout_Вс">
+              <p className="font-['Inter:Semi_Bold'] font-semibold relative shrink-0" data-node-id="I109:4926;1:8622">
+                В другое время:
+              </p>
+              <p className="font-['Inter:Medium'] font-medium relative shrink-0" data-node-id="I109:4926;1:8623">
+                По записи
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="absolute content-stretch flex flex-col gap-[var(--spacings\/content-\(12\),12px)] items-start left-[25px] top-[40px]" data-node-id="I109:4926;1:8521" data-name="element_Layout">
+          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/gray-5,#43404a)] tracking-[-0.28px] whitespace-nowrap" data-node-id="I109:4926;1:8522">
+            Навигация:
+          </p>
+          <div className="content-stretch cursor-pointer flex flex-col gap-[var(--spacings\/content-\(8\),8px)] items-start relative shrink-0 w-full" data-node-id="I109:4926;1:8523">
+            <div className="content-stretch flex items-center justify-center relative rounded-[10px] shrink-0" data-node-id="I109:4926;106:4474" data-name="button_Basic">
+              <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[20px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.4px] whitespace-nowrap" data-node-id="I109:4926;106:4474;1:7163">
+                Модели
+              </p>
+            </div>
+            <div className="content-stretch flex items-center justify-center relative rounded-[10px] shrink-0" data-node-id="I109:4926;106:4481" data-name="button_Basic">
+              <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[20px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.4px] whitespace-nowrap" data-node-id="I109:4926;106:4481;1:7163">
+                О нас
+              </p>
+            </div>
+            <div className="content-stretch flex items-center justify-center relative rounded-[10px] shrink-0" data-node-id="I109:4926;106:4487" data-name="button_Basic">
+              <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[20px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.4px] whitespace-nowrap" data-node-id="I109:4926;106:4487;1:7163">
+                Кредиты и рассрочки
+              </p>
+            </div>
+            <div className="content-stretch flex items-center justify-center relative rounded-[10px] shrink-0" data-node-id="I109:4926;106:4493" data-name="button_Basic">
+              <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[20px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.4px] whitespace-nowrap" data-node-id="I109:4926;106:4493;1:7163">
+                Вопросы
+              </p>
+            </div>
+            <div className="content-stretch flex items-center justify-center relative rounded-[10px] shrink-0" data-node-id="I109:4926;106:4499" data-name="button_Basic">
+              <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[20px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.4px] whitespace-nowrap" data-node-id="I109:4926;106:4499;1:7163">
+                Контакты
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="absolute content-stretch flex gap-[var(--spacings\/content-\(12\),12px)] items-center right-[197px] top-[718px]" data-node-id="I109:4926;109:4739" data-name="layout_Buttons">
+          <ButtonSocials className="bg-[var(--colors\/grays\/gray-6,#242424)] content-stretch flex items-center p-[var(--padding\/padding-\(12\),12px)] relative rounded-[500px] shrink-0" />
+          <div className="bg-[var(--colors\/grays\/gray-6,#242424)] content-stretch flex items-center p-[var(--padding\/padding-\(12\),12px)] relative rounded-[500px] shrink-0" data-node-id="I109:4926;109:4741" data-name="button_Socials">
+            <div className="relative shrink-0 size-[24px]" data-node-id="I109:4926;109:4741;108:4672" data-name="svg_Insragram">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSvgInsragram} />
+            </div>
+          </div>
+          <div className="bg-[var(--colors\/grays\/gray-6,#242424)] content-stretch flex items-center p-[var(--padding\/padding-\(12\),12px)] relative rounded-[500px] shrink-0" data-node-id="I109:4926;109:4742" data-name="button_Socials">
+            <div className="relative shrink-0 size-[24px]" data-node-id="I109:4926;109:4742;108:4672" data-name="svg_Insragram">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSvgInsragram1} />
+            </div>
+          </div>
+        </div>
+      </div>
+      <BlockHeader className="-translate-x-1/2 absolute bg-[var(--colors\/grays\/white,#fdfdfd)] h-[60px] left-1/2 top-0 w-[390px]" />
+    </div>
+  );
+}
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+These styles are contained in the design: H3 — 24 (H2 Mobile): Font(family: "Inter", style: Semi Bold, size: 24, weight: 600, lineHeight: 1.25, letterSpacing: -2), P3 — 14 (P2 Mobile): Font(family: "Inter", style: Medium, size: 14, weight: 500, lineHeight: 1.25, letterSpacing: -2), H8 — 12: Font(family: "Inter", style: Semi Bold, size: 12, weight: 600, lineHeight: 1.2000000476837158, letterSpacing: -2), Button (XS) — 12: Font(family: "Inter", style: Medium, size: 12, weight: 500, lineHeight: 1.2000000476837158, letterSpacing: -2), H7 — 14: Font(family: "Inter", style: Semi Bold, size: 14, weight: 600, lineHeight: 1.2999999523162842, letterSpacing: -2), H4 — 20 (H3 Mobile): Font(family: "Inter", style: Semi Bold, size: 20, weight: 600, lineHeight: 1.2999999523162842, letterSpacing: -2), H5 — 16: Font(family: "Inter", style: Semi Bold, size: 16, weight: 600, lineHeight: 1.25, letterSpacing: -2), P2 — 16 (P1 Mobile): Font(family: "Inter", style: Medium, size: 16, weight: 500, lineHeight: 1.25, letterSpacing: -2), Primary - Reddish Orange: #FF4A14.
+The generated code contains image and SVG URL constants, e.g. const image = 'https://www.figma.com/api/mcp/asset/550e8400-e29b-41d4-a716-446655440000.png'. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.

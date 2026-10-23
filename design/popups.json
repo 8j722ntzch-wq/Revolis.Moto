@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "fileKey": "JkXOsnFvWZmMab1VYjVQAJ",
+  "capturedAt": "2026-10-21",
+  "contexts": [
+    {
+      "nodeId": "1:9039",
+      "name": "consultation-desktop",
+      "width": 704,
+      "height": 404,
+      "quality": "high-fidelity",
+      "contextFile": "design/context/popups-1-9039.txt"
+    },
+    {
+      "nodeId": "1:9059",
+      "name": "consultation-mobile",
+      "width": 340,
+      "height": 466,
+      "quality": "high-fidelity",
+      "contextFile": "design/context/popups-1-9059.txt"
+    },
+    {
+      "nodeId": "266:8776",
+      "name": "bank-desktop",
+      "width": 704,
+      "height": 526,
+      "quality": "high-fidelity",
+      "contextFile": "design/context/popups-266-8776.txt"
+    },
+    {
+      "nodeId": "266:8789",
+      "name": "bank-mobile",
+      "width": 340,
+      "height": 570,
+      "quality": "high-fidelity",
+      "contextFile": "design/context/popups-266-8789.txt"
+    },
+    {
+      "nodeId": "1:9083",
+      "name": "thanks-desktop",
+      "width": 704,
+      "height": 254,
+      "quality": "high-fidelity",
+      "contextFile": "design/context/popups-1-9083.txt"
+    },
+    {
+      "nodeId": "1:9092",
+      "name": "thanks-mobile",
+      "width": 340,
+      "height": 276,
+      "quality": "high-fidelity",
+      "contextFile": "design/context/popups-1-9092.txt"
+    }
+  ],
+  "bankSelectorReview": {
+    "nodeId": "300:10927",
+    "capturedAt": "2026-10-22",
+    "contextFile": "design/context/bank-selector-300-10927.txt",
+    "quality": "high-fidelity",
+    "adaptation": "Stable transparent border prevents 2px layout shifts."
+  }
+}

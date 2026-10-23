@@ -10,7 +10,16 @@
     "preview": "astro preview",
     "design:status": "node scripts/check-design-inputs.mjs",
     "design:check": "node scripts/check-design-inputs.mjs --strict",
-    "export:ui-kit": "node scripts/export-ui-kit.mjs"
+    "export:ui-kit": "node scripts/export-ui-kit.mjs",
+    "test": "node --experimental-strip-types --test tests/*.test.mjs",
+    "export:homepage": "node scripts/export-ui-kit.mjs --homepage",
+    "export:mobile": "node scripts/export-ui-kit.mjs --mobile",
+    "export:catalogue": "node scripts/export-ui-kit.mjs --catalogue",
+    "export:contacts": "node scripts/export-ui-kit.mjs --page=contacts",
+    "export:privacy": "node scripts/export-ui-kit.mjs --page=privacy",
+    "export:404": "node scripts/export-ui-kit.mjs --page=404",
+    "export:sku": "node scripts/export-ui-kit.mjs --sku=baltmotors-500-efi-eps",
+    "images:prepare": "node scripts/prepare-images.mjs"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.3.0",

@@ -1,0 +1,198 @@
+{
+  "fileKey": "JkXOsnFvWZmMab1VYjVQAJ",
+  "nodeId": "1:13204",
+  "capturedAt": "2026-10-21",
+  "designWidth": 390,
+  "route": "/",
+  "breakpoint": 1288,
+  "breakpointReason": "Existing desktop composition requires 1288px; smaller viewports use flowing mobile layout with a 600px maximum container.",
+  "contexts": [
+    {
+      "nodeId": "204:8055",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/mobile-home/204-8055.txt"
+    },
+    {
+      "nodeId": "192:6288",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/mobile-home/192-6288.txt"
+    },
+    {
+      "nodeId": "193:6825",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/mobile-home/193-6825.txt"
+    },
+    {
+      "nodeId": "174:5242",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/mobile-home/174-5242.txt"
+    },
+    {
+      "nodeId": "174:5420",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/mobile-home/174-5420.txt"
+    },
+    {
+      "nodeId": "179:5602",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/mobile-home/179-5602.txt"
+    },
+    {
+      "nodeId": "199:7383",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/mobile-home/199-7383.txt"
+    },
+    {
+      "nodeId": "174:5322",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/mobile-home/174-5322.txt"
+    },
+    {
+      "nodeId": "190:6145",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/mobile-home/190-6145.txt"
+    },
+    {
+      "nodeId": "109:4839",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/mobile-home/109-4839.txt"
+    }
+  ],
+  "assets": [
+    {
+      "nodeId": "204:8055",
+      "path": "public/assets/mobile-home/hero.png"
+    },
+    {
+      "nodeId": "204:8055",
+      "path": "public/assets/mobile-home/benefit-documents.svg"
+    },
+    {
+      "nodeId": "I195:7177;195:6994;160:6298;160:6394",
+      "path": "public/assets/mobile-home/benefit-warranty.svg"
+    },
+    {
+      "nodeId": "204:8055",
+      "path": "public/assets/mobile-home/benefit-finance.svg"
+    },
+    {
+      "nodeId": "204:8055",
+      "path": "public/assets/mobile-home/benefit-test.svg"
+    },
+    {
+      "nodeId": "174:5420",
+      "path": "public/assets/mobile-home/test-left.png"
+    },
+    {
+      "nodeId": "174:5420",
+      "path": "public/assets/mobile-home/test-right.png"
+    },
+    {
+      "nodeId": "174:5420",
+      "path": "public/assets/mobile-home/test-key-1.svg"
+    },
+    {
+      "nodeId": "174:5420",
+      "path": "public/assets/mobile-home/test-key-2.svg"
+    },
+    {
+      "nodeId": "174:5420",
+      "path": "public/assets/mobile-home/test-key-3.svg"
+    },
+    {
+      "nodeId": "174:5420",
+      "path": "public/assets/mobile-home/arrow-purple.svg"
+    },
+    {
+      "nodeId": "174:5420",
+      "path": "public/assets/mobile-home/test-icon.svg"
+    },
+    {
+      "nodeId": "174:5322",
+      "path": "public/assets/mobile-home/consultation.png"
+    },
+    {
+      "nodeId": "174:5322",
+      "path": "public/assets/mobile-home/cta-key-1.svg"
+    },
+    {
+      "nodeId": "174:5322",
+      "path": "public/assets/mobile-home/cta-key-2.svg"
+    },
+    {
+      "nodeId": "174:5322",
+      "path": "public/assets/mobile-home/cta-key-3.svg"
+    },
+    {
+      "nodeId": "174:5322",
+      "path": "public/assets/mobile-home/cta-shop.svg"
+    },
+    {
+      "nodeId": "174:5242",
+      "path": "public/assets/mobile-home/finance-glow.svg"
+    },
+    {
+      "nodeId": "174:5242",
+      "path": "public/assets/mobile-home/finance-line.svg"
+    },
+    {
+      "nodeId": "193:6825",
+      "path": "public/assets/mobile-home/address-key-1.svg"
+    },
+    {
+      "nodeId": "193:6825",
+      "path": "public/assets/mobile-home/address-key-2.svg"
+    },
+    {
+      "nodeId": "199:7383",
+      "path": "public/assets/mobile-home/rental-key-1.svg"
+    },
+    {
+      "nodeId": "199:7383",
+      "path": "public/assets/mobile-home/rental-key-2.svg"
+    },
+    {
+      "nodeId": "199:7383",
+      "path": "public/assets/mobile-home/rental-key-3.svg"
+    },
+    {
+      "nodeId": "199:7383",
+      "path": "public/assets/mobile-home/sticker-outline.svg"
+    },
+    {
+      "nodeId": "199:7383",
+      "path": "public/assets/mobile-home/sticker-art.svg"
+    },
+    {
+      "nodeId": "199:7383",
+      "path": "public/assets/mobile-home/rental-route.svg"
+    },
+    {
+      "nodeId": "199:7383",
+      "path": "public/assets/mobile-home/rental-group.svg"
+    },
+    {
+      "nodeId": "I199:7405;160:6298;160:6394",
+      "path": "public/assets/mobile-home/rental-safe.svg"
+    },
+    {
+      "nodeId": "199:7383",
+      "path": "public/assets/mobile-home/rental-gift.svg"
+    },
+    {
+      "nodeId": "179:5602",
+      "path": "public/assets/mobile-home/slider-chevron.svg"
+    }
+  ],
+  "reused": "Original model photos/icons, bank logos, Belarus outline, document composites, test-drive handwriting, header/footer and mobile UI assets.",
+  "differences": [
+    "Mobile models follow vertical flow with 24px gaps; height grows for longer descriptions without clipping.",
+    "Widths outside 390px are responsive adaptations, not separate Figma frames.",
+    "Font rendering may produce different line breaks across browsers."
+  ],
+  "reviewedSections": {
+    "192:6288": "Vertical models, 24px gap; no slider controls",
+    "179:5602": "36px black round slider buttons, 8px gap, right aligned 24px below cards; equal card heights retained per user request",
+    "190:6145": "24px between accordion items and from heading to list; 24px from closed question to divider"
+  }
+}

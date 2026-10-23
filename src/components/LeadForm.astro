@@ -10,19 +10,23 @@ interface Props {
   modelId?: string;
   bank?: 'alfa' | 'technobank';
   policyUrl?: string;
+  bankSelection?: boolean;
 }
-const { id, intent = 'consultation', source, modelId, bank, policyUrl } = Astro.props;
+const { id, intent = 'consultation', source, modelId, bank, policyUrl, bankSelection = false } = Astro.props;
 const endpoint = import.meta.env.PUBLIC_LEAD_ENDPOINT ?? '';
-const ready = Boolean(endpoint && policyUrl);
+const personalDataUrl = import.meta.env.PUBLIC_PERSONAL_DATA_POLICY_URL ?? '';
+const ready = Boolean(endpoint && policyUrl && personalDataUrl);
 ---
 <form class="lead-form" data-lead-form data-endpoint={endpoint} data-intent={intent} data-source={source} data-model-id={modelId} data-bank={bank}>
+  {bankSelection && <fieldset class="lead-form__banks"><legend class="sr-only">Банк для консультации (необязательно)</legend>{([{ value: 'alfa', label: 'Альфа Банк' }, { value: 'technobank', label: 'Технобанк' }] as const).map(item => <label class={`lead-form__bank lead-form__bank--${item.value}`}><input type="radio" name="bank" value={item.value} checked={bank === item.value} /><span><img src="/assets/popups/bank.svg" alt="" /><strong>{item.label}</strong></span></label>)}</fieldset>}
+  <div class="lead-form__fields">
   <TextField id={`${id}-name`} name="name" label="Ваше имя" autocomplete="given-name" maxlength={80} required />
   <TextField id={`${id}-phone`} name="phone" label="Ваш номер телефона" type="tel" autocomplete="tel" maxlength={30} required />
+  </div>
   <Checkbox id={`${id}-consent`} name="consent" required>
-    Согласен на обработку персональных данных
-    {policyUrl && <a href={policyUrl} target="_blank" rel="noopener">по условиям политики</a>}
+    Согласен (-а) с {policyUrl ? <a href={policyUrl} target="_blank" rel="noopener">Политикой конфиденциальности</a> : 'Политикой конфиденциальности'} и {personalDataUrl ? <a href={personalDataUrl} target="_blank" rel="noopener">Политикой обработки персональных данных</a> : <span title="Документ будет добавлен перед подключением отправки">Политикой обработки персональных данных</span>}
   </Checkbox>
-  <Button type="submit" disabled={!ready}>Получить консультацию</Button>
+  <Button type="submit" arrow disabled={!ready}>Получить консультацию</Button>
   <p data-form-status role="status" aria-live="polite">{!ready && 'Отправка заявок пока недоступна.'}</p>
   <noscript>Для отправки формы включите JavaScript в браузере.</noscript>
 </form>
@@ -54,7 +58,8 @@ const ready = Boolean(endpoint && policyUrl);
       form.setAttribute('aria-busy', 'true');
       status.textContent = 'Отправляем заявку…';
       try {
-        const bank = form.dataset.bank;
+        const selectedBank = form.querySelector<HTMLInputElement>('[name="bank"]:checked');
+        const bank = selectedBank?.value ?? (form.querySelector('[name="bank"]') ? '' : form.dataset.bank);
         await submitLead(form.dataset.endpoint ?? '', {
           name: name.value.trim(),
           phone: normalizePhone(phone.value),
@@ -66,6 +71,7 @@ const ready = Boolean(endpoint && policyUrl);
         });
         status.textContent = 'Спасибо! Ваша заявка получена.';
         form.reset();
+        form.dispatchEvent(new CustomEvent('lead:success', { bubbles: true }));
       } catch {
         status.textContent = 'Заявка не отправлена. Попробуйте ещё раз.';
       } finally {

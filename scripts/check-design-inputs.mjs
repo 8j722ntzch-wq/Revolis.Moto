@@ -6,6 +6,7 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const issues = [];
 const strict = process.argv.includes('--strict');
 const nodeIdPattern = /^\d+:\d+$/;
+const assetNodeIdPattern = /^I?\d+:\d+(?:;\d+:\d+)*$/;
 
 function localPath(value, prefix) {
   if (typeof value !== 'string' || !value.startsWith(prefix) || value.includes('\\')) return null;
@@ -38,18 +39,57 @@ try {
     if (!await nonEmptyFile(localPath(section.contextFile, 'design/context/'))) issues.push(`Missing local context for section ${section.nodeId ?? '?'}.`);
   }
 
+  const mobile = JSON.parse(await readFile(resolve(root, 'design/mobile-home.json'), 'utf8'));
+  if (mobile.fileKey !== source.fileKey || !nodeIdPattern.test(mobile.nodeId)) issues.push('Mobile target is invalid.');
+  if (!Array.isArray(mobile.contexts) || !mobile.contexts.length) issues.push('Mobile section contexts are missing.');
+  for (const section of mobile.contexts ?? []) {
+    if (!nodeIdPattern.test(section.nodeId) || sectionIds.has(section.nodeId)) issues.push('Mobile section IDs must be valid and unique.');
+    sectionIds.add(section.nodeId);
+    if (section.quality !== 'high-fidelity' || !await nonEmptyFile(localPath(section.contextFile, 'design/context/'))) issues.push(`Missing high-fidelity mobile context: ${section.nodeId}.`);
+  }
+
+  const catalogue = JSON.parse(await readFile(resolve(root, 'design/catalogue.json'), 'utf8'));
+  if (catalogue.fileKey !== source.fileKey || !nodeIdPattern.test(catalogue.desktop?.nodeId) || !nodeIdPattern.test(catalogue.mobile?.nodeId)) issues.push('Catalogue targets are invalid.');
+  for (const section of catalogue.contexts ?? []) {
+    if (!nodeIdPattern.test(section.nodeId) || sectionIds.has(section.nodeId)) issues.push('Catalogue section IDs must be valid and unique.');
+    sectionIds.add(section.nodeId);
+    if (section.quality !== 'high-fidelity' || !await nonEmptyFile(localPath(section.contextFile, 'design/context/'))) issues.push(`Missing catalogue context: ${section.nodeId}.`);
+  }
+  if (!catalogue.contexts?.length) issues.push('Catalogue contexts are missing.');
+  const infoPages = JSON.parse(await readFile(resolve(root, 'design/info-pages.json'), 'utf8'));
+  if (infoPages.fileKey !== source.fileKey || infoPages.contexts?.length !== 6) issues.push('Six informational page contexts are required.');
+  for (const section of infoPages.contexts ?? []) {
+    if (!nodeIdPattern.test(section.nodeId) || sectionIds.has(section.nodeId)) issues.push('Informational section IDs must be valid and unique.');
+    sectionIds.add(section.nodeId);
+    if (section.quality !== 'high-fidelity' || !await nonEmptyFile(localPath(section.contextFile, 'design/context/'))) issues.push(`Missing informational context: ${section.nodeId}.`);
+  }
+  const popups = JSON.parse(await readFile(resolve(root, 'design/popups.json'), 'utf8'));
+  if (popups.fileKey !== source.fileKey || popups.contexts?.length !== 6) issues.push('Six popup contexts are required.');
+  for (const section of popups.contexts ?? []) {
+    if (!nodeIdPattern.test(section.nodeId) || sectionIds.has(section.nodeId)) issues.push('Popup section IDs must be valid and unique.');
+    sectionIds.add(section.nodeId);
+    if (section.quality !== 'high-fidelity' || !await nonEmptyFile(localPath(section.contextFile, 'design/context/'))) issues.push(`Missing popup context: ${section.nodeId}.`);
+  }
+  const productPages = JSON.parse(await readFile(resolve(root, 'design/product-pages.json'), 'utf8'));
+  if (productPages.fileKey !== source.fileKey || !nodeIdPattern.test(productPages.desktop?.nodeId) || !nodeIdPattern.test(productPages.mobile?.nodeId)) issues.push('SKU targets are invalid.');
+  if (!productPages.contexts?.length) issues.push('SKU contexts are missing.');
+  for (const section of productPages.contexts ?? []) {
+    if (!nodeIdPattern.test(section.nodeId) || sectionIds.has(section.nodeId)) issues.push('SKU section IDs must be valid and unique.');
+    sectionIds.add(section.nodeId);
+    if (section.quality !== 'high-fidelity' || !await nonEmptyFile(localPath(section.contextFile, 'design/context/'))) issues.push(`Missing SKU context: ${section.nodeId}.`);
+  }
   if (manifest.status !== 'imported') issues.push('Original assets have not been imported.');
   if (!Array.isArray(manifest.assets) || !manifest.assets.length) issues.push('Asset manifest is empty.');
   const assetIds = new Set();
   for (const asset of Array.isArray(manifest.assets) ? manifest.assets : []) {
     if (!asset.id || assetIds.has(asset.id)) issues.push('Asset IDs must be present and unique.');
     assetIds.add(asset.id);
-    if (!nodeIdPattern.test(asset.nodeId)) issues.push(`Asset ${asset.id ?? '?'} has no source node.`);
+    if (!assetNodeIdPattern.test(asset.nodeId)) issues.push(`Asset ${asset.id ?? '?'} has no source node.`);
     if (!['source-image', 'exported-svg', 'exported-raster'].includes(asset.kind)) issues.push(`Asset ${asset.id ?? '?'} has no supported origin kind.`);
     if (!await nonEmptyFile(localPath(asset.localPath, 'public/assets/'))) issues.push(`Missing or empty local asset: ${asset.id ?? '?'}.`);
     if (!Array.isArray(asset.slots) || !asset.slots.length) issues.push(`Asset ${asset.id ?? '?'} has no design slots.`);
     for (const slot of Array.isArray(asset.slots) ? asset.slots : []) {
-      if (!nodeIdPattern.test(slot.nodeId) || !sectionIds.has(slot.sectionNodeId)) issues.push(`Asset ${asset.id ?? '?'} has an invalid design slot.`);
+      if (!assetNodeIdPattern.test(slot.nodeId) || !sectionIds.has(slot.sectionNodeId)) issues.push(`Asset ${asset.id ?? '?'} has an invalid design slot.`);
     }
   }
 
@@ -58,6 +98,7 @@ try {
     target: { fileKey: source.fileKey, nodeId: source.nodeId },
     readyForImplementation: ready,
     sectionCount: Array.isArray(source.sections) ? source.sections.length : 0,
+    mobileSectionCount: mobile.contexts?.length ?? 0,
     assetCount: Array.isArray(manifest.assets) ? manifest.assets.length : 0,
     issues,
     note: 'Checks local input completeness only. Visual, source-content and browser verification remain required.'

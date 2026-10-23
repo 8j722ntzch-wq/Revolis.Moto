@@ -1,0 +1,199 @@
+const imgIconLogomark30Px = "https://www.figma.com/api/mcp/asset/b5d410df-32a9-4738-8833-8d9eb1b70a70.svg";
+const imgElementName = "https://www.figma.com/api/mcp/asset/5fac4ca0-763d-4b48-8f95-55f1583e29c1.svg";
+const imgSubtract = "https://www.figma.com/api/mcp/asset/fe81ac70-6c92-4f60-9096-689095df0c4b.svg";
+const imgBurgerMenu20Px = "https://www.figma.com/api/mcp/asset/9fb70e7f-4a5f-4245-8459-4f1d77e47ac2.svg";
+const imgElementLineVertical = "https://www.figma.com/api/mcp/asset/7c329752-5a9e-497b-a6f6-0d1f38e65ac0.svg";
+const imgElementLineHorizontal = "https://www.figma.com/api/mcp/asset/9840e19a-b911-41f8-8b53-3a1d329195ef.svg";
+const imgBurgerMenu20Px1 = "https://www.figma.com/api/mcp/asset/81286925-6101-47d3-9f7e-8df05a718fc9.svg";
+
+type ElementLogoProps = {
+  className?: string;
+  type?: "Type4";
+};
+
+function ElementLogo({ className, type = "Type4" }: ElementLogoProps) {
+  return (
+    <div className={className || "h-[36px] relative w-[116px]"} data-node-id="1:7473">
+      <div className="absolute h-[36.011px] left-[-0.75px] top-[0.17px] w-[116.036px]" data-node-id="1:23587" data-name="element_Logo">
+        <div className="-translate-y-1/2 absolute left-[-5px] size-[37.011px] top-[calc(50%+0.5px)]" data-node-id="I1:23587;4587:8186" data-name="icon_Logomark (30px)">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIconLogomark30Px} />
+        </div>
+        <div className="-translate-y-1/2 absolute h-[30.009px] right-0 top-[calc(50%+2px)] w-[83.026px]" data-node-id="I1:23587;4587:8187" data-name="element_Name">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgElementName} />
+        </div>
+      </div>
+      <div className="absolute h-[5.877px] left-[32.24px] top-[26.35px] w-[19.506px]" data-node-id="1:23588" data-name="Subtract">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSubtract} />
+      </div>
+    </div>
+  );
+}
+
+type BlockHeaderProps = {
+  className?: string;
+  device?: "Mobile" | "Mobile (Opened)";
+};
+
+function BlockHeader({ className, device = "Mobile" }: BlockHeaderProps) {
+  const isMobile = device === "Mobile";
+  const isMobileOpened = device === "Mobile (Opened)";
+  return (
+    <div className={className || `${String.raw`bg-[var(--colors\/grays\/white,#fdfdfd)] relative w-[390px] `}${isMobileOpened ? "h-[880px]" : "h-[60px]"}`} id={isMobileOpened ? "node-1_8482" : "node-1_8476"}>
+      {isMobile && (
+        <>
+          <button className="absolute block cursor-pointer right-[183px] size-[36px] top-[12px]" data-node-id="1:8477" data-name="icon_Burger Menu (36 px)">
+            <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[14px] left-1/2 top-1/2 w-[34px]" data-node-id="I1:8477;1:8985" data-name="Burger Menu - 20px">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgBurgerMenu20Px} />
+            </div>
+          </button>
+          <div className="absolute flex h-[60px] items-center justify-center left-[219px] top-0 w-0" data-node-id="1:8478">
+            <div className="flex-none rotate-90">
+              <div className="h-0 relative w-[60px]" data-name="element_Line (vertical)">
+                <div className="absolute inset-[-1px_0_0_0]">
+                  <img alt="" className="block max-w-none size-full" src={imgElementLineVertical} />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="absolute flex h-[60px] items-center justify-center left-[159px] top-0 w-0" data-node-id="1:8479">
+            <div className="flex-none rotate-90">
+              <div className="h-0 relative w-[60px]" data-name="element_Line (vertical)">
+                <div className="absolute inset-[-1px_0_0_0]">
+                  <img alt="" className="block max-w-none size-full" src={imgElementLineVertical} />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="absolute bg-[var(--colors\/accents\/purple,#7c33fb)] content-stretch cursor-pointer flex items-center justify-center px-[var(--padding\/padding-\(16\),16px)] py-[var(--padding\/padding-\(12\),12px)] right-[25px] rounded-[10px] top-[11px]" data-node-id="1:8480" data-name="button_Basic">
+            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.2] not-italic relative shrink-0 text-[12px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.24px] whitespace-nowrap" data-node-id="I1:8480;1:6977">
+              Оставить заявку
+            </p>
+          </div>
+          <div className="absolute h-[36px] left-[25px] top-[12px] w-[116px]" data-node-id="1:8481" data-name="element_Logo">
+            <div className="absolute h-[36.011px] left-[-0.75px] top-[0.17px] w-[116.036px]" data-node-id="I1:8481;1:23587" data-name="element_Logo">
+              <div className="-translate-y-1/2 absolute left-[-5px] size-[37.011px] top-[calc(50%+0.5px)]" data-node-id="I1:8481;1:23587;4587:8186" data-name="icon_Logomark (30px)">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIconLogomark30Px} />
+              </div>
+              <div className="-translate-y-1/2 absolute h-[30.009px] right-0 top-[calc(50%+2px)] w-[83.026px]" data-node-id="I1:8481;1:23587;4587:8187" data-name="element_Name">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgElementName} />
+              </div>
+            </div>
+            <div className="absolute h-[5.877px] left-[32.24px] top-[26.35px] w-[19.506px]" data-node-id="I1:8481;1:23588" data-name="Subtract">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSubtract} />
+            </div>
+          </div>
+        </>
+      )}
+      {isMobileOpened && (
+        <>
+          <div className="absolute content-stretch flex flex-col gap-[var(--spacings\/content-\(12\),12px)] items-start left-[25px] top-[100px] w-[94px]" data-node-id="1:8483" data-name="layout_Навигация">
+            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/gray-4,#736f79)] tracking-[-0.28px] w-full" data-node-id="1:8484">
+              Навигация:
+            </p>
+            <div className="content-stretch cursor-pointer flex flex-col gap-[var(--spacings\/content-\(8\),8px)] items-start justify-center relative shrink-0 w-full" data-node-id="1:8485" data-name="Header Menu">
+              <a className="content-stretch flex items-center justify-center relative rounded-[10px] shrink-0" data-node-id="1:8486" data-name="button_Basic">
+                <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[20px] text-[color:var(--colors\/grays\/black,#0d0d0d)] text-left tracking-[-0.4px] whitespace-nowrap" data-node-id="I1:8486;1:7163">
+                  Модели
+                </p>
+              </a>
+              <div className="content-stretch flex items-center justify-center relative rounded-[10px] shrink-0" data-node-id="1:8487" data-name="button_Basic">
+                <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[20px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.4px] whitespace-nowrap" data-node-id="I1:8487;1:7163">
+                  О нас
+                </p>
+              </div>
+              <div className="content-stretch flex items-center justify-center relative rounded-[10px] shrink-0" data-node-id="1:8488" data-name="button_Basic">
+                <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[20px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.4px] whitespace-nowrap" data-node-id="I1:8488;1:7163">
+                  Кредиты и рассрочки
+                </p>
+              </div>
+              <div className="content-stretch flex items-center justify-center relative rounded-[10px] shrink-0" data-node-id="1:8490" data-name="button_Basic">
+                <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[20px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.4px] whitespace-nowrap" data-node-id="I1:8490;1:7163">
+                  Вопросы
+                </p>
+              </div>
+              <a className="content-stretch flex items-center justify-center relative rounded-[10px] shrink-0" data-node-id="1:8491" data-name="button_Basic">
+                <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[20px] text-[color:var(--colors\/grays\/black,#0d0d0d)] text-left tracking-[-0.4px] whitespace-nowrap" data-node-id="I1:8491;1:7163">
+                  Контакты
+                </p>
+              </a>
+            </div>
+          </div>
+          <div className="absolute content-stretch flex flex-col gap-[var(--spacings\/content-\(12\),12px)] items-start left-[25px] top-[324px]" data-node-id="1:8492" data-name="layout_Телефоны">
+            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/gray-4,#736f79)] tracking-[-0.28px] whitespace-nowrap" data-node-id="1:8493">
+              Телефоны:
+            </p>
+            <div className="content-stretch flex flex-col gap-[var(--spacings\/content-\(8\),8px)] items-start relative shrink-0" data-node-id="1:8494" data-name="layout_МТС, А1">
+              <div className="content-stretch flex gap-[var(--spacings\/content-\(4\),4px)] items-center relative shrink-0 w-full" data-node-id="1:8495" data-name="layout_МТС">
+                <div className="content-stretch flex items-center justify-center relative rounded-[10px] shrink-0" data-node-id="1:8496" data-name="button_Basic/Text (Bold)/Default/False/M/Desktop">
+                  <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I1:8496;1:7161">
+                    +375 (25) 971-19-02
+                  </p>
+                </div>
+              </div>
+              <div className="content-stretch flex gap-[var(--spacings\/content-\(4\),4px)] items-center relative shrink-0" data-node-id="1:8498" data-name="layout_А1">
+                <div className="content-stretch flex items-center justify-center relative rounded-[10px] shrink-0" data-node-id="1:8499" data-name="button_Basic/Text (Bold)/Default/False/M/Desktop">
+                  <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I1:8499;1:7161">
+                    +375 (29) 676-67-65
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="-translate-x-1/2 absolute bottom-[820px] h-0 left-1/2 w-[390px]" data-node-id="1:8501" data-name="element_Line (horizontal)">
+            <div className="absolute inset-[-1px_0_0_0]">
+              <img alt="" className="block max-w-none size-full" src={imgElementLineHorizontal} />
+            </div>
+          </div>
+          <button className="absolute block cursor-pointer right-[183px] size-[36px] top-[12px]" data-node-id="1:8502" data-name="icon_Burger Menu (36 px)">
+            <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[14px] left-1/2 top-1/2 w-[34px]" data-node-id="I1:8502;1:8989" data-name="Burger Menu - 20px">
+              <div className="absolute inset-[-34.38%_0]">
+                <img alt="" className="block max-w-none size-full" src={imgBurgerMenu20Px1} />
+              </div>
+            </div>
+          </button>
+          <div className="absolute flex h-[60px] items-center justify-center left-[219px] top-0 w-0" data-node-id="1:8503">
+            <div className="flex-none rotate-90">
+              <div className="h-0 relative w-[60px]" data-name="element_Line (vertical)">
+                <div className="absolute inset-[-1px_0_0_0]">
+                  <img alt="" className="block max-w-none size-full" src={imgElementLineVertical} />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="absolute flex h-[60px] items-center justify-center left-[159px] top-0 w-0" data-node-id="1:8504">
+            <div className="flex-none rotate-90">
+              <div className="h-0 relative w-[60px]" data-name="element_Line (vertical)">
+                <div className="absolute inset-[-1px_0_0_0]">
+                  <img alt="" className="block max-w-none size-full" src={imgElementLineVertical} />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="absolute bg-[var(--colors\/accents\/purple,#7c33fb)] content-stretch cursor-pointer flex items-center justify-center px-[var(--padding\/padding-\(16\),16px)] py-[var(--padding\/padding-\(12\),12px)] right-[25px] rounded-[10px] top-[11px]" data-node-id="1:8505" data-name="button_Basic">
+            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.2] not-italic relative shrink-0 text-[12px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.24px] whitespace-nowrap" data-node-id="I1:8505;1:6977">
+              Оставить заявку
+            </p>
+          </div>
+          <ElementLogo className="absolute h-[36px] left-[25px] top-[12px] w-[116px]" />
+          <p className="-translate-x-1/2 [word-break:break-word] absolute bottom-[84px] font-['Inter:Medium'] font-medium leading-[1.2] left-1/2 not-italic text-[12px] text-[color:var(--colors\/grays\/gray-3,#c2bfc9)] text-center tracking-[-0.24px] translate-y-full whitespace-nowrap" data-node-id="1:8507">
+            Revolis.Мото © 2026 All rights reserved
+          </p>
+        </>
+      )}
+    </div>
+  );
+}
+
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+
+These styles are contained in the design: H7 — 14: Font(family: "Inter", style: Semi Bold, size: 14, weight: 600, lineHeight: 1.2999999523162842, letterSpacing: -2), H4 — 20 (H3 Mobile): Font(family: "Inter", style: Semi Bold, size: 20, weight: 600, lineHeight: 1.2999999523162842, letterSpacing: -2), H8 — 12: Font(family: "Inter", style: Semi Bold, size: 12, weight: 600, lineHeight: 1.2000000476837158, letterSpacing: -2), Button (XS) — 12: Font(family: "Inter", style: Medium, size: 12, weight: 500, lineHeight: 1.2000000476837158, letterSpacing: -2).
+
+The generated code contains image and SVG URL constants, e.g. const image = 'https://www.figma.com/api/mcp/asset/550e8400-e29b-41d4-a716-446655440000.png'. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.

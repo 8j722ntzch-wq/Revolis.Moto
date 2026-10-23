@@ -1,0 +1,127 @@
+@media (prefers-reduced-motion: no-preference) {
+  html:has(.homepage) { scroll-behavior: smooth; }
+}
+/* Current Desktop 1470 frame, 1:13203. Mobile follows its own future design. */
+.homepage { --color-rental: #ef641f; min-width: 1288px; overflow-x: clip; background: var(--color-gray-1); }
+.homepage section { scroll-margin-top: calc(var(--header-height) + 32px); }
+/* Button icons manage their own visible state; never reveal all variants. */
+.homepage img:not(.ui-button__arrow img) { display: block; }
+.homepage h1 span, .homepage h2 span { color: var(--color-purple); }
+.homepage .section-heading__title.weight-bold { font-weight: 700; }
+.home-eyebrow { font-size: 12px; line-height: 14px; font-weight: 700; }
+.home-actions { display: flex; align-items: center; gap: 12px; }
+.home-decoration { position: absolute; top: 0; left: 0; pointer-events: none; }
+.home-advantage { display: flex; align-items: center; gap: 8px; width: 276px; min-height: 64px; position: relative; }
+.home-advantage > img { flex: 0 0 56px; }
+.home-advantage > div { flex: 1; min-width: 0; }
+.home-advantage__title { font-weight: 700; line-height: 20px; white-space: nowrap; }
+.home-advantage__body { margin-top: 4px; line-height: 20px; color: var(--color-gray-4); }
+.home-hero { height: 672px; position: relative; }
+.home-hero__image { position: absolute; left: 64px; top: -17px; pointer-events: none; }
+.home-hero__copy { position: relative; padding-top: 50px; margin-left: -1px; width: 560px; }
+.home-hero h1 { font-size: 64px; font-weight: 900; line-height: 70px; text-transform: uppercase; margin-top: 4px; }
+.home-hero__body { margin-top: 24px; width: 496px; color: var(--color-gray-5); line-height: 20px; }
+.home-hero .home-actions { margin-top: 24px; }
+.home-hero__uses { position: absolute; left: 936px; top: 151px; width: 288px; height: 176px; border: 1px solid var(--color-white); background: var(--color-white-20); border-radius: 12px; padding: 27px 30px; }
+.home-hero__uses p { position: relative; display: flex; gap: 12px; align-items: center; font-size: 14px; line-height: 18px; color: var(--color-purple-hover); white-space: nowrap; }
+.home-hero__uses p + p { margin-top: 12px; }
+.home-hero__uses-line { position: absolute; top: 11px; left: 16px; }
+.home-hero__dot { position: absolute; left: -21px; top: 8.5px; }
+.home-hero__advantages { position: absolute; top: 584px; left: 0; width: 100%; height: 88px; display: grid; grid-template-columns: repeat(4, 276px); gap: 32px; padding: 12px; background: var(--color-white); border-radius: 16px; }
+.home-hero__advantages .home-advantage + .home-advantage::before { content: ''; position: absolute; left: -16px; top: 4px; height: 56px; width: 1px; background: var(--color-gray-2); }
+.home-models { margin-top: 120px; }
+.home-models__heading { display: flex; justify-content: space-between; align-items: flex-end; }
+.home-catalog-link { text-decoration: none; display: flex; align-items: center; gap: 4px; color: var(--color-purple); background: none; border: 0; padding: 0; font-size: 16px; line-height: 20px; }
+.home-catalog-link img { width: 20px; height: 20px; }
+.home-card-grid { display: grid; grid-template-columns: repeat(3, 392px); gap: 24px; margin-top: 48px; }
+/* Keep the source's resting appearance while model routes are deferred. */
+.home-models .model-card__action:disabled { background: var(--color-purple); color: var(--color-white); }
+@media (min-width: 1288px) and (hover: hover) and (pointer: fine) {
+  .home-models .model-card:is(:hover, :focus-within, [data-demo-state='hover']) .model-card__action:disabled { background: var(--color-purple-hover); }
+}
+.home-models .model-card__action:disabled .arrow-disabled { display: none; }
+.home-models .model-card__action:disabled .arrow-white { display: block; }
+.home-highlights { display: grid; grid-template-columns: 600px 600px; gap: 24px; margin-top: 94px; }
+.home-highlights > div { position: relative; height: 112px; border-radius: 16px; overflow: hidden; }
+.home-highlights__reach { background: var(--color-white); }
+.home-highlights__count { position: absolute; top: 11px; left: 20px; width: 221px; }
+.home-highlights__count > p { color: var(--color-purple); font-size: 40px; font-weight: 700; line-height: 48px; }
+.home-highlights__count > span { display: block; margin-top: -3px; }
+.home-highlights__reach span { font-size: 14px; line-height: 18px; color: var(--color-gray-4); }
+.home-highlights__reach > img { position: absolute; top: 16px; left: 320px; }
+.home-highlights__country { position: absolute; top: 18px; left: 412px; font-size: 14px; line-height: 18px; }
+.home-highlights__country > p { font-weight: 600; }
+.home-highlights__country > span { display: block; margin-top: 2px; }
+.home-highlights__shop { background: var(--color-purple); color: var(--color-white); display: flex; align-items: center; gap: 16px; padding: 20px; }
+.home-highlights__shop .home-advantage__body { color: inherit; }
+.home-hours { position: relative; display: flex; flex-direction: column; gap: 4px; font-size: 14px; line-height: 18px; white-space: nowrap; }
+.home-hours p { display: flex; gap: 8px; }
+.home-hours strong { font-weight: 600; }
+.home-finance { position: relative; margin-top: 120px; background: var(--color-black); color: var(--color-white); }
+.home-finance__grid { display: grid; grid-template-columns: repeat(4, 288px); gap: 24px; padding-block: 60px; position: relative; }
+.home-finance__copy { display: flex; flex-direction: column; gap: 48px; }
+.home-finance h2 { margin-top: 4px; font-size: 28px; line-height: 34px; font-weight: 600; }
+.home-finance h2 span { text-shadow: 0 0 45px var(--color-purple); }
+.home-finance__copy > p { color: var(--color-gray-2); line-height: 20px; }
+.home-finance__art { position: absolute; width: 1470px; height: 294px; left: 50%; top: 0; transform: translateX(-50%); pointer-events: none; }
+.home-finance__art img { position: absolute; left: 0; top: 0; }
+.home-banner { position: relative; overflow: hidden; border-radius: 16px; color: var(--color-white); }
+.home-banner__copy { position: relative; width: 465px; margin-left: 36px; padding-top: 28px; }
+.home-banner h2, .home-rental h2 { margin-top: 4px; font-size: 32px; line-height: 38px; font-weight: 700; text-transform: uppercase; }
+.home-banner__body { margin-top: 12px; line-height: 20px; }
+.home-banner__copy > .ui-button, .home-rental__copy > .ui-button { margin-top: 24px; }
+.home-test { margin-top: 120px; height: 488px; background: var(--color-purple); }
+.home-test__photos img { position: absolute; }
+.home-test__photo--left { left: 555px; top: 65px; }
+.home-test__photo--right { left: 910px; top: 84px; }
+.home-test__photo--front { left: 746px; top: 44px; }
+.home-test__shade { position: absolute; width: 244px; height: 344px; border-radius: 16px; background: #fff; opacity: .1; }
+.home-test__shade--left { left: 562.47px; top: 68.26px; transform: rotate(-5.7deg); }
+.home-test__shade--right { left: 936.07px; top: 88.31px; transform: rotate(6.28deg); }
+.home-test__shade--front { left: 746px; top: 36px; }
+.home-test .home-test__button { background: var(--color-white); color: var(--color-purple); }
+.home-test .home-test__button .arrow-white { display: none; }
+.home-test .home-test__button .arrow-purple { display: block; }
+@media (min-width: 1288px) and (hover: hover) and (pointer: fine) {
+  .home-test .home-test__button:hover { background: var(--color-gray-2); }
+}
+.home-test__handwriting { pointer-events: none; position: absolute; left: 291px; top: 225.9px; }
+.home-test__advantages { position: absolute; left: 36px; top: 396px; display: flex; gap: 48px; }
+.home-test__advantages p { display: flex; align-items: center; gap: 8px; position: relative; color: var(--color-gray-2); line-height: 20px; }
+.home-test__advantages p + p::before { position: absolute; left: -24px; top: 10px; content: ''; width: 1px; height: 36px; background: var(--color-white-20); }
+.home-documents { margin-top: 120px; }
+.home-document { display: flex; flex-direction: column; gap: 16px; padding: 16px; border-radius: 16px; background: var(--color-white); }
+.home-document h3 { font-size: 24px; line-height: 30px; font-weight: 600; }
+.home-document p { margin-top: 8px; color: var(--color-gray-4); line-height: 20px; }
+.home-document__image, .home-document__empty { width: 360px; height: 360px; border-radius: 12px; }
+.home-document__empty { background: #fff; }
+.home-document--purple { background: var(--color-purple); color: var(--color-white); }
+.home-document--purple p { color: var(--color-gray-2); }
+.home-rental { position: relative; margin-top: 160px; height: 496px; }
+.home-rental__pattern { position: absolute; top: -40px; left: -123px; pointer-events: none; }
+.home-rental__copy { position: relative; width: 465px; }
+.home-rental h2 span { color: var(--color-rental); }
+.home-rental__copy > p.home-banner__body { color: var(--color-gray-5); }
+.home-rental .home-rental__button:disabled { background: var(--color-rental); color: var(--color-white); }
+.home-rental .home-rental__button:disabled .arrow-disabled { display: none; }
+.home-rental .home-rental__button:disabled .arrow-white { display: block; }
+.home-rental__sticker { position: absolute; left: 624px; top: 0; width: 496px; height: 496px; overflow: hidden; pointer-events: none; }
+.home-rental__sticker-outline { position: absolute; left: 40.684px; top: 42.625px; }
+.home-rental__sticker-art { position: absolute; left: 48.439px; top: 50.375px; }
+.home-rental__advantages { position: absolute; top: 344px; left: 0; display: grid; grid-template-columns: 276px 276px; gap: 24px 36px; }
+.home-consultation { margin-top: 160px; height: 440px; background: var(--color-black); }
+.home-consultation__photo { position: absolute; top: 0; right: 0; }
+.home-consultation__gradient { position: absolute; left: 146.279px; top: 117.1715px; width: 871px; height: 346.962px; background: linear-gradient(180deg, transparent 0%, var(--color-black) 61.538%); transform: rotate(100.25deg); transform-origin: center; }
+.home-consultation .home-banner__body { color: var(--color-gray-3); }
+.home-consultation__address { position: absolute; left: 36px; bottom: 40px; min-height: 56px; width: auto; }
+.home-consultation__address .home-advantage__body { color: var(--color-gray-3); white-space: nowrap; }
+.home-faq { margin-top: 120px; }
+.home-faq__items { display: flex; flex-direction: column; gap: 32px; margin-top: 48px; }
+.homepage #contacts { margin-top: 120px; scroll-margin-top: calc(var(--header-height) + 24px); }
+
+.homepage .site-header { position: sticky; top: 0; z-index: 100; }
+.homepage .section-heading > .type-eyebrow { line-height: 14px; }
+.home-finance h2 { white-space: nowrap; }
+
+/* Center the 294px desktop finance block in the area below the header. */
+.homepage #finance { scroll-margin-top: max(calc(var(--header-height) + 24px), calc((100vh + var(--header-height) - 294px) / 2)); }

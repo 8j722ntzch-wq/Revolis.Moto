@@ -1,0 +1,132 @@
+const imgImage8 = "https://www.figma.com/api/mcp/asset/487cbff7-281b-402e-bc0f-00e5f46d1e4c.png";
+const imgElementKey = "https://www.figma.com/api/mcp/asset/b3d675e6-e094-4086-ab4b-51df7215b412.svg";
+const imgElementKey1 = "https://www.figma.com/api/mcp/asset/6c029f42-e672-4341-b3fe-e4a08dadc327.svg";
+const imgElementKey2 = "https://www.figma.com/api/mcp/asset/b3588349-3efc-47a4-972d-cc0af3a4d897.svg";
+const imgArrow = "https://www.figma.com/api/mcp/asset/35448790-3591-458d-987a-4737d3dcd791.svg";
+const imgGroup = "https://www.figma.com/api/mcp/asset/431e10ef-9b5a-4460-a2ef-5dae5ac28e8a.svg";
+
+type BlockApplicationSellProps = {
+  className?: string;
+  device?: "Desktop";
+};
+
+function BlockApplicationSell({ className, device = "Desktop" }: BlockApplicationSellProps) {
+  return (
+    <div className={className || "bg-[var(--colors\\/grays\\/black,#0d0d0d)] h-[440px] overflow-clip relative rounded-[16px] w-[1224px]"} data-node-id="128:6416">
+      <div className="absolute h-[488px] right-0 top-0 w-[732px]" data-node-id="129:6485" data-name="image 8">
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage8} />
+      </div>
+      <div className="absolute flex h-[918.845px] items-center justify-center left-[333.56px] top-[-168.77px] w-[496.438px]" data-node-id="129:6487">
+        <div className="flex-none rotate-[100.25deg]">
+          <div className="bg-gradient-to-b from-[rgba(13,13,13,0)] h-[346.962px] relative to-[#0d0d0d] to-[61.538%] w-[871px]" />
+        </div>
+      </div>
+      <div className="absolute contents left-[-120px] top-0" data-node-id="128:6306">
+        <div className="absolute contents left-[-120px] top-0" data-node-id="128:6307">
+          <div className="absolute contents left-[-120px] top-0" data-node-id="128:6308">
+            <div className="absolute contents left-[-120px] top-0" data-node-id="128:6309">
+              <div className="absolute contents left-[-120px] top-0" data-node-id="128:6310">
+                <div className="absolute flex h-[162.667px] items-center justify-center left-[-120px] top-[162.67px] w-[488px]" data-node-id="128:6311">
+                  <div className="flex-none rotate-180">
+                    <div className="h-[162.667px] opacity-20 relative w-[488px]" data-name="element_Key">
+                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgElementKey} />
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute flex h-[162.667px] items-center justify-center left-[-120px] top-[325.33px] w-[488px]" data-node-id="128:6312">
+                  <div className="flex-none rotate-180">
+                    <div className="h-[162.667px] opacity-20 relative w-[488px]" data-name="element_Key">
+                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgElementKey1} />
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute flex h-[162.667px] items-center justify-center left-[-120px] top-0 w-[488px]" data-node-id="128:6313">
+                  <div className="flex-none rotate-180">
+                    <div className="h-[162.667px] opacity-20 relative w-[488px]" data-name="element_Key">
+                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgElementKey2} />
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute flex h-[162.667px] items-center justify-center left-[368px] top-0 w-[488px]" data-node-id="128:6314">
+                  <div className="flex-none rotate-180">
+                    <div className="h-[162.667px] opacity-20 relative w-[488px]" data-name="element_Key">
+                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgElementKey} />
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute flex h-[162.667px] items-center justify-center left-[368px] top-[162.67px] w-[488px]" data-node-id="128:6315">
+                  <div className="flex-none rotate-180">
+                    <div className="h-[162.667px] opacity-20 relative w-[488px]" data-name="element_Key">
+                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgElementKey1} />
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute flex h-[162.667px] items-center justify-center left-[856px] top-0 w-[488px]" data-node-id="128:6316">
+                  <div className="flex-none rotate-180">
+                    <div className="h-[162.667px] opacity-20 relative w-[488px]" data-name="element_Key">
+                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgElementKey1} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="absolute content-stretch flex flex-col gap-[24px] items-start left-[36px] top-[28px] w-[465px]" data-node-id="128:6317" data-name="layout_Text, Button">
+        <div className="[word-break:break-word] content-stretch flex flex-col gap-[var(--spacings\/content-\(12\),12px)] items-start not-italic relative shrink-0 w-full" data-node-id="128:6318" data-name="element_Headline + Body">
+          <div className="content-stretch flex flex-col font-['Inter:Bold'] font-bold gap-[var(--spacings\/content-\(4\),4px)] items-start relative shrink-0 text-[color:var(--colors\/grays\/white,#fdfdfd)] w-full" data-node-id="128:6319" data-name="layout_Superscript, Headline">
+            <p className="leading-[1.2] relative shrink-0 text-[12px] tracking-[-0.24px] w-full" data-node-id="128:6320">
+              Подберём идеальный вариант
+            </p>
+            <p className="leading-[0] relative shrink-0 text-[32px] tracking-[-0.64px] w-full" data-node-id="128:6321">
+              <span className="leading-[1.2]">{`НЕ ЗНАЕТЕ, `}</span>
+              <span className="leading-[1.2] text-[#7c33fb]">КАКОЙ</span>
+              <span className="leading-[1.2]">{` КВАДРОЦИКЛ `}</span>
+              <span className="leading-[1.2] text-[#7c33fb]">ВЫБРАТЬ?</span>
+            </p>
+          </div>
+          <div className="font-['Inter:Medium'] font-medium leading-[0] relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/gray-3,#c2bfc9)] tracking-[-0.32px] w-full whitespace-pre-wrap" data-node-id="128:6322">
+            <p className="leading-[1.25] mb-0">{`Расскажите о своих задачах — поможем подобрать модель, рассчитаем условия покупки и ответим `}</p>
+            <p className="leading-[1.25]">на все вопросы</p>
+          </div>
+        </div>
+        <div className="bg-[var(--colors\/accents\/purple,#7c33fb)] content-stretch flex gap-[4px] items-center justify-center px-[var(--padding\/padding-\(16\),16px)] py-[var(--padding\/padding-\(12\),12px)] relative rounded-[10px] shrink-0" data-node-id="129:6794" data-name="button_Basic">
+          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.28px] whitespace-nowrap" data-node-id="I129:6794;1:7007">
+            Получить консультацию
+          </p>
+          <div className="relative rounded-[1.882px] shrink-0 size-[16px]" data-node-id="I129:6794;1:7008" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
+            <div className="absolute h-[8.784px] left-[1.41px] top-[3.61px] w-[13.176px]" data-node-id="I129:6794;1:7008;1:7283" data-name="Arrow">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow} />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="-translate-y-1/2 absolute content-stretch flex gap-[var(--spacings\/content-\(8\),8px)] items-center left-[36px] top-[calc(50%+152px)] w-[276px]" data-node-id="129:6779" data-name="frame_Advantage">
+        <div className="bg-[var(--purple-\(transparent\),rgba(124,51,251,0.2))] content-stretch flex items-center overflow-clip p-[4px] relative rounded-[500px] shrink-0" data-node-id="I129:6779;91:7311" data-name="element_Advantages">
+          <div className="bg-[var(--colors\/accents\/purple,#7c33fb)] overflow-clip relative rounded-[500px] shrink-0 size-[48px]" data-node-id="I129:6779;91:7311;1:8627" data-name="Container">
+            <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 overflow-clip size-[32px] top-1/2" data-node-id="I129:6779;91:7311;1:8628" data-name="icon_Advantages (24px, 32 px)">
+              <div className="absolute inset-[12.56%_8.33%_8.33%_8.33%]" data-node-id="I129:6779;91:7311;1:8628;115:5747" data-name="Group">
+                <div className="absolute inset-[-2.96%_-2.81%]">
+                  <img alt="" className="block max-w-none size-full" src={imgGroup} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="[word-break:break-word] content-stretch flex flex-[1_0_0] flex-col gap-[var(--spacings\/content-\(4\),4px)] items-start justify-center leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I129:6779;91:7312" data-name="layout_Text">
+          <p className="font-['Inter:Bold'] font-bold relative shrink-0" data-node-id="I129:6779;91:7313">
+            Ждём Вас в магазине
+          </p>
+          <p className="font-['Inter:Medium'] font-medium relative shrink-0" data-node-id="I129:6779;91:7314">
+            По адресу: пр-т Московский, 111
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function BlockApplicationSell1() {
+  return <BlockApplicationSell className="bg-[var(--colors\/grays\/black,#0d0d0d)] overflow-clip relative rounded-[16px] size-full" />;
+}

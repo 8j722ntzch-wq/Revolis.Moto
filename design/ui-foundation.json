@@ -3,7 +3,7 @@
   "fileKey": "JkXOsnFvWZmMab1VYjVQAJ",
   "pageNodeId": "1:15",
   "capturedAt": "2026-10-21",
-  "scope": "desktop-ui-foundation",
+  "scope": "desktop-ui-foundation-and-composite-components",
   "status": "implemented-and-browser-checked",
   "previewRoute": "/ui-kit/",
   "tokens": "src/styles/tokens.css",
@@ -13,7 +13,13 @@
       "name": "Button",
       "nodeId": "1:6973",
       "implementation": "src/components/ui/Button.astro",
-      "contextFile": "design/context/ui/1-6973.txt"
+      "contextFile": "design/context/ui/1-6973.txt",
+      "additionalContextFiles": [
+        "design/context/ui/26-5495.txt"
+      ],
+      "extensions": [
+        "Inverse outline S and icon M measured from BankCard instances; existing default-tone variants unchanged."
+      ]
     },
     {
       "name": "TextField / name",
@@ -34,12 +40,6 @@
       "contextFile": "design/context/ui/1-7252.txt"
     },
     {
-      "name": "Badge",
-      "nodeId": "1:7318",
-      "implementation": "src/components/ui/Badge.astro",
-      "contextFile": "design/context/ui/1-7318.txt"
-    },
-    {
       "name": "StatusBadge",
       "nodeId": "13:4379",
       "implementation": "src/components/ui/StatusBadge.astro",
@@ -56,6 +56,34 @@
       "nodeId": "1:7495",
       "implementation": "src/components/ui/SectionHeading.astro",
       "contextFile": "design/context/ui/1-7495.txt"
+    },
+    {
+      "name": "ModelCard",
+      "nodeId": "19:4818",
+      "implementation": "src/components/ModelCard.astro",
+      "contextFile": "design/context/ui/19-4818.txt",
+      "detailManifest": "design/model-card.json"
+    },
+    {
+      "name": "BankCard",
+      "nodeId": "26:5495",
+      "implementation": "src/components/BankCard.astro",
+      "contextFile": "design/context/ui/26-5495.txt",
+      "detailManifest": "design/bank-card.json"
+    },
+    {
+      "name": "SiteHeader",
+      "nodeId": "1:8464",
+      "implementation": "src/components/SiteHeader.astro",
+      "contextFile": "design/context/ui/1-8464.txt",
+      "detailManifest": "design/site-header.json"
+    },
+    {
+      "name": "SiteFooter",
+      "nodeId": "1:8514",
+      "implementation": "src/components/SiteFooter.astro",
+      "contextFile": "design/context/ui/1-8514.txt",
+      "detailManifest": "design/site-footer.json"
     }
   ],
   "foundations": [
@@ -91,7 +119,11 @@
       700,
       900
     ],
-    "note": "Locally bundled Cyrillic and Latin. Original Figma font binary was not supplied; intrinsic text widths may differ slightly."
+    "note": "Locally bundled Cyrillic and Latin. Original Figma font binary was not supplied; intrinsic text widths may differ slightly.",
+    "styles": [
+      "normal",
+      "italic"
+    ]
   },
   "geometry": {
     "container": 1224,
@@ -101,23 +133,26 @@
     "fieldHeight": 52,
     "checkboxSize": 24,
     "smallRadius": 4,
-    "buttonRadius": 10
+    "buttonRadius": 10,
+    "fieldRadius": 10,
+    "iconButtonSize": 40,
+    "headerHeight": 64
   },
   "observedDiscrepancies": [
-    {
-      "item": "P1 — 18",
-      "actual": "20px",
-      "resolution": "Use actual measured text size."
-    },
     {
       "item": "Secondary color sample labelled Purple",
       "actual": "Red2 #b42115",
       "resolution": "Do not use as purple hover. Hover #2e1854 measured from Button variant."
     },
     {
-      "item": "Radius foundation vs Button",
+      "item": "Foundation radius vs Button / TextField",
       "actual": "4px vs 10px",
-      "resolution": "Preserve separate semantic radius tokens."
+      "resolution": "Separate small, button and field radius tokens."
+    },
+    {
+      "item": "H1 foundation vs SectionHeading title",
+      "actual": "40px Bold 700 vs 40px Semi Bold 600",
+      "resolution": "Preserve the actual component weight separately from the foundation role."
     }
   ],
   "implementationAdditions": [
@@ -135,7 +170,9 @@
         "scrollWidth": 1351,
         "containerWidth": 1224,
         "buttonHeight": 42,
+        "iconButtonSize": 40,
         "fieldHeight": 52,
+        "fieldRadius": 10,
         "brokenImages": 0
       },
       {
@@ -144,7 +181,9 @@
         "scrollWidth": 1455,
         "containerWidth": 1224,
         "buttonHeight": 42,
+        "iconButtonSize": 40,
         "fieldHeight": 52,
+        "fieldRadius": 10,
         "brokenImages": 0
       },
       {
@@ -153,28 +192,41 @@
         "scrollWidth": 1905,
         "containerWidth": 1224,
         "buttonHeight": 42,
+        "iconButtonSize": 40,
         "fieldHeight": 52,
+        "fieldRadius": 10,
         "brokenImages": 0
       }
     ],
     "interactionChecks": [
       "Button click feedback and native disabled behavior",
-      "Field filling and checkbox state",
-      "Error field red border",
-      "FAQ mouse and keyboard activation with exclusive opening",
-      "Lead submission disabled without endpoint and policy URL"
+      "Phone typing, masked partial input, select-all deletion and clipboard paste",
+      "Name input and checkbox toggling",
+      "Error and disabled field placeholders without visible required marker",
+      "FAQ mouse and Enter activation with exclusive opening",
+      "LeadForm submission remains disabled without endpoint and policy"
     ],
+    "typographyChecks": {
+      "h1Weight": 700,
+      "h3Size": 28,
+      "sectionHeadingWeight": 600,
+      "sectionHeadingTwoLineHeight": 114.390625
+    },
     "knownLimits": [
-      "Small intrinsic text width difference: plain CTA about 143.7px rendered vs 145px in Figma; font binary and rendering not identical.",
-      "Mobile composition not implemented.",
-      "Not a complete homepage pixel comparison.",
+      "Bundled Inter Variable can have slightly different intrinsic text widths than the Figma font binary; plain CTA approximately 143.7px vs 145px.",
+      "Browser fractional line-height: SectionHeading 114.39px vs rounded Figma 114px. StatusBadge line-height explicitly 14px to preserve its 22px frame.",
+      "Mobile and full homepage visual comparison are outside this milestone.",
       "Lead backend not connected."
     ],
     "astroCheck": {
-      "files": 17,
+      "files": 26,
       "errors": 0,
       "warnings": 0,
       "hints": 0
+    },
+    "unitTests": {
+      "phoneMask": 3,
+      "passed": 3
     },
     "build": {
       "status": "passed",
@@ -182,32 +234,53 @@
     },
     "offlinePreview": {
       "embeddedImages": true,
-      "brokenImages": 0,
       "externalStylesheets": 0,
+      "externalScripts": 0,
+      "brokenImages": 0,
       "fontLoaded": true,
-      "buttonFeedback": "passed"
+      "buttonFeedback": "passed",
+      "phonePartialMask": "visually verified"
     }
   },
-  "nextComponents": [
-    {
-      "name": "ModelCard",
-      "nodeId": "19:4818",
-      "status": "inventory-only"
-    },
-    {
-      "name": "BankCard",
-      "nodeId": "26:5495",
-      "status": "inventory-only"
-    },
-    {
-      "name": "SiteHeader",
-      "nodeId": "1:8464",
-      "status": "not-implemented"
-    },
-    {
-      "name": "SiteFooter",
-      "nodeId": "1:8514",
-      "status": "not-implemented"
-    }
-  ]
+  "nextComponents": [],
+  "audit": {
+    "date": "2026-10-21",
+    "reason": "Reconcile user cleanup in Figma",
+    "removed": [
+      "Badge 1:7318 (node no longer exists), dollar asset and old context",
+      "Button Text M (variants removed)",
+      "Unsupported SectionHeading lg size"
+    ],
+    "updated": [
+      "Typography H1-H8: updated weights and new H3 28px; P1 label corrected to 20",
+      "TextField radius 10px, error/disabled placeholders, Belarus phone mask",
+      "Button text state weights and line-heights; retained Text (Bold) S/L and Icon S variants",
+      "Fresh original arrow SVGs and component contexts"
+    ],
+    "unchanged": [
+      "Checkbox geometry and original tick assets",
+      "Four StatusBadge variants and original status icons",
+      "FAQ typography, spacing and divider",
+      "Colors and spacing scale"
+    ],
+    "phoneMask": "Matches +375 __-___-__-__ from phone states. Native input and pattern validate complete numbers; original LeadForm endpoint remains disconnected."
+  },
+  "compositeVerification": [
+    "design/model-card.json",
+    "design/bank-card.json",
+    "design/site-header.json",
+    "design/site-footer.json"
+  ],
+  "buttonStateCorrection": {
+    "verifiedAt": "2026-10-21",
+    "nodeId": "1:6973",
+    "textSNoIconWeight": 600,
+    "states": [
+      "default",
+      "hover",
+      "pressed",
+      "disabled"
+    ],
+    "contextFile": "design/context/ui/button-state-correction-2026-10-21.json"
+  }
 }

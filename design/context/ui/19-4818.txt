@@ -1,0 +1,160 @@
+Figma ModelCard 19:4818 — captured 2026-10-21; Desktop variants implemented. Mobile context retained for source completeness only. Temporary asset URLs removed; see design/ui-assets.json.
+
+const imgEllipse21 = "figma-asset:download-omitted";
+const img19 = "figma-asset:download-omitted";
+const imgGroup = "figma-asset:download-omitted";
+const imgGroup1 = "figma-asset:download-omitted";
+const imgIconAdvantages24Px32Px = "figma-asset:download-omitted";
+const imgGroup2 = "figma-asset:download-omitted";
+const imgArrow = "figma-asset:download-omitted";
+const imgArrow1 = "figma-asset:download-omitted";
+
+type ElementPricingTagProps = {
+  className?: string;
+  icon?: "В наличии";
+};
+
+function ElementPricingTag({ className, icon = "В наличии" }: ElementPricingTagProps) {
+  return (
+    <div className={className || "bg-[rgba(7,160,56,0.2)] content-stretch flex gap-[var(--spacings\\/content-\\(8\\),8px)] items-center justify-center px-[8px] py-[4px] relative rounded-[4px]"} data-node-id="13:4380">
+      <div className="relative shrink-0 size-[8px]" data-node-id="13:4397">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse21} />
+      </div>
+      <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.2] not-italic relative shrink-0 text-[12px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.24px] whitespace-nowrap" data-node-id="13:4381">
+        В наличии
+      </p>
+    </div>
+  );
+}
+
+type ElementAtvCardsProps = {
+  className?: string;
+  device?: "Desktop" | "Mobile";
+  type?: "U58-200";
+};
+
+function ElementAtvCards({ className, device = "Desktop", type = "U58-200" }: ElementAtvCardsProps) {
+  const isU58200AndMobile = type === "U58-200" && device === "Mobile";
+  return (
+    <div className={className || `bg-white overflow-clip relative rounded-[12px] ${isU58200AndMobile ? "h-[274px] w-[308px]" : "h-[320px] w-[360px]"}`} id={isU58200AndMobile ? "node-157_4528" : "node-72_6710"}>
+      {type === "U58-200" && device === "Desktop" && <ElementPricingTag className="absolute bg-[rgba(7,160,56,0.2)] content-stretch flex gap-[var(--spacings\/content-\(8\),8px)] items-center justify-center left-[16px] px-[8px] py-[4px] rounded-[4px] top-[282px]" />}
+      <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[213px] left-1/2 top-[calc(50%+0.5px)] w-[320px]" id={isU58200AndMobile ? "node-157_4530" : "node-72_6737"} data-name="1 9">
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img19} />
+      </div>
+      {isU58200AndMobile && <ElementPricingTag className="absolute bg-[rgba(7,160,56,0.2)] bottom-[16px] content-stretch flex gap-[var(--spacings\/content-\(8\),8px)] items-center justify-center left-[16px] px-[8px] py-[4px] rounded-[4px]" />}
+    </div>
+  );
+}
+
+type FrameAtvModelProps = {
+  className?: string;
+  device?: "Mobile" | "Desktop";
+  state?: "Default" | "Hover";
+};
+
+export default function FrameAtvModel({ className, device = "Desktop", state = "Default" }: FrameAtvModelProps) {
+  const isDefaultAndMobile = state === "Default" && device === "Mobile";
+  const isHoverAndDesktop = state === "Hover" && device === "Desktop";
+  const isHoverAndMobile = state === "Hover" && device === "Mobile";
+  const isMobile = device === "Mobile";
+  return (
+    <div className={className || `relative ${isHoverAndMobile ? "h-[592px] w-[340px]" : isDefaultAndMobile ? "cursor-pointer h-[592px] w-[340px]" : "h-[642px] w-[392px]"}`} id={isHoverAndDesktop ? "node-19_4819" : isHoverAndMobile ? "node-157_4734" : isDefaultAndMobile ? "node-156_4434" : "node-19_4501"}>
+      <div className={`${String.raw`absolute bg-[var(--colors\/grays\/white,#fdfdfd)] content-stretch flex flex-col gap-[12px] items-start left-0 p-[16px] rounded-[16px] `}${isHoverAndDesktop ? "-translate-y-1/2 top-[calc(50%-8px)]" : isHoverAndMobile ? "overflow-clip top-[-4px] w-[340px]" : isDefaultAndMobile ? "overflow-clip top-0 w-[340px]" : "overflow-clip top-0 w-[392px]"}`} id={isHoverAndDesktop ? "node-22_5353" : isHoverAndMobile ? "node-157_4735" : isDefaultAndMobile ? "node-156_4435" : "node-22_5104"} data-name="Frame_ATV Model">
+        <ElementAtvCards className={`bg-white overflow-clip relative rounded-[12px] shrink-0 ${isMobile ? "h-[274px] w-[308px]" : "h-[320px] w-[360px]"}`} device={isMobile ? "Mobile" : undefined} />
+        <div className="content-stretch flex flex-col gap-[var(--spacings\/content-\(20\),20px)] items-start relative shrink-0 w-full" id={isHoverAndDesktop ? "node-19_4822" : isHoverAndMobile ? "node-157_4737" : isDefaultAndMobile ? "node-156_4437" : "node-19_4455"} data-name="layout_Model, Advantages">
+          <div className="content-stretch flex flex-col gap-[var(--spacings\/content-\(8\),8px)] items-start relative shrink-0 w-full" id={isHoverAndDesktop ? "node-19_4823" : isHoverAndMobile ? "node-157_4738" : isDefaultAndMobile ? "node-156_4438" : "node-19_4495"} data-name="layout_Text, Advantages">
+            <div className="[word-break:break-word] content-stretch flex flex-col items-start not-italic relative shrink-0 text-black w-full" id={isHoverAndDesktop ? "node-19_4824" : isHoverAndMobile ? "node-157_4739" : isDefaultAndMobile ? "node-156_4439" : "node-13_4378"} data-name="layout_Model">
+              <p className="font-['Inter:Medium'] font-medium leading-[1.25] relative shrink-0 text-[16px] tracking-[-0.32px] w-full" id={isHoverAndDesktop ? "node-19_4825" : isHoverAndMobile ? "node-157_4740" : isDefaultAndMobile ? "node-156_4440" : "node-11_4370"}>
+                Mikilon
+              </p>
+              <p className="font-['Inter:Bold'] font-bold leading-[1.3] relative shrink-0 text-[20px] tracking-[-0.4px] w-full" id={isHoverAndDesktop ? "node-19_4826" : isHoverAndMobile ? "node-157_4741" : isDefaultAndMobile ? "node-156_4441" : "node-11_4371"}>
+                Hammer Touring 200
+              </p>
+            </div>
+            <p className={`[word-break:break-word] font-["Inter:Medium_Italic"] font-medium italic leading-[1.25] relative shrink-0 text-[14px] tracking-[-0.28px] w-full ${isHoverAndDesktop ? "text-[#7c33fb]" : String.raw`text-[color:var(--colors\/accents\/purple,#7c33fb)]`}`} id={isHoverAndDesktop ? "node-143_9566" : isHoverAndMobile ? "node-157_4746" : isDefaultAndMobile ? "node-156_4446" : "node-143_9553"}>
+              Mikilon
+            </p>
+            <div className="content-stretch flex gap-[var(--spacings\/content-\(20\),20px)] items-center relative shrink-0 w-full" id={isHoverAndDesktop ? "node-19_4827" : isHoverAndMobile ? "node-157_4742" : isDefaultAndMobile ? "node-156_4442" : "node-19_4454"} data-name="layout_Blocks">
+              <div className="content-stretch flex gap-[8px] items-center relative shrink-0" id={isHoverAndDesktop ? "node-19_4828" : isHoverAndMobile ? "node-157_4743" : isDefaultAndMobile ? "node-156_4443" : "node-19_4447"} data-name="layout_Icon, Text">
+                <div className="overflow-clip relative shrink-0 size-[24px]" id={isHoverAndDesktop ? "node-I19_4828-15_4412" : isHoverAndMobile ? "node-I157_4743-15_4412" : isDefaultAndMobile ? "node-I156_4443-15_4412" : "node-I19_4447-15_4412"} data-name="icon_Advantages (24px, 32 px)">
+                  <div className="absolute inset-[8.33%_10.72%]" id={isHoverAndDesktop ? "node-I19_4828-15_4412-115_5767" : isHoverAndMobile ? "node-I157_4743-15_4412-115_5767" : isDefaultAndMobile ? "node-I156_4443-15_4412-115_5767" : "node-I19_4447-15_4412-115_5767"} data-name="Group">
+                    <div className="absolute inset-[-2.81%_-2.98%]">
+                      <img alt="" className="block max-w-none size-full" src={imgGroup} />
+                    </div>
+                  </div>
+                </div>
+                <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[14px] text-black tracking-[-0.28px] whitespace-nowrap" id={isHoverAndDesktop ? "node-I19_4828-15_4418" : isHoverAndMobile ? "node-I157_4743-15_4418" : isDefaultAndMobile ? "node-I156_4443-15_4418" : "node-I19_4447-15_4418"}>
+                  300 см³
+                </p>
+              </div>
+              <div className="content-stretch flex gap-[8px] items-center relative shrink-0" id={isHoverAndDesktop ? "node-19_4829" : isHoverAndMobile ? "node-157_4744" : isDefaultAndMobile ? "node-156_4444" : "node-19_4432"} data-name="layout_Icon, Text">
+                <div className="overflow-clip relative shrink-0 size-[24px]" id={isHoverAndDesktop ? "node-I19_4829-15_4412" : isHoverAndMobile ? "node-I157_4744-15_4412" : isDefaultAndMobile ? "node-I156_4444-15_4412" : "node-I19_4432-15_4412"} data-name="icon_Advantages (24px, 32 px)">
+                  <div className="absolute inset-[8.33%_12.5%]" id={isHoverAndDesktop ? "node-I19_4829-15_4412-115_5773" : isHoverAndMobile ? "node-I157_4744-15_4412-115_5773" : isDefaultAndMobile ? "node-I156_4444-15_4412-115_5773" : "node-I19_4432-15_4412-115_5773"} data-name="Group">
+                    <div className="absolute inset-[-2.81%_-3.13%]">
+                      <img alt="" className="block max-w-none size-full" src={imgGroup1} />
+                    </div>
+                  </div>
+                </div>
+                <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[14px] text-black tracking-[-0.28px] whitespace-nowrap" id={isHoverAndDesktop ? "node-I19_4829-15_4418" : isHoverAndMobile ? "node-I157_4744-15_4418" : isDefaultAndMobile ? "node-I156_4444-15_4418" : "node-I19_4432-15_4418"}>
+                  2x4
+                </p>
+              </div>
+              <div className="content-stretch flex gap-[8px] items-center relative shrink-0" id={isHoverAndDesktop ? "node-19_4830" : isHoverAndMobile ? "node-157_4745" : isDefaultAndMobile ? "node-156_4445" : "node-19_4439"} data-name="layout_Icon, Text">
+                <div className="relative shrink-0 size-[24px]" id={isHoverAndDesktop ? "node-I19_4830-15_4412" : isHoverAndMobile ? "node-I157_4745-15_4412" : isDefaultAndMobile ? "node-I156_4445-15_4412" : "node-I19_4439-15_4412"} data-name="icon_Advantages (24px, 32 px)/Реставрируем кузов">
+                  <div className="absolute inset-[8.33%]" id={isHoverAndDesktop ? "node-I19_4830-15_4412-1_8425" : isHoverAndMobile ? "node-I157_4745-15_4412-1_8425" : isDefaultAndMobile ? "node-I156_4445-15_4412-1_8425" : "node-I19_4439-15_4412-1_8425"} data-name="Group">
+                    <div className="absolute inset-[-2.81%]">
+                      <img alt="" className="block max-w-none size-full" src={imgIconAdvantages24Px32Px} />
+                    </div>
+                  </div>
+                </div>
+                <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[14px] text-black tracking-[-0.28px] whitespace-nowrap" id={isHoverAndDesktop ? "node-I19_4830-15_4418" : isHoverAndMobile ? "node-I157_4745-15_4418" : isDefaultAndMobile ? "node-I156_4445-15_4418" : "node-I19_4439-15_4418"}>
+                  ЭПСМ
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[var(--spacings\/content-\(4\),4px)] items-center relative shrink-0 w-full" id={isHoverAndDesktop ? "node-19_4831" : isHoverAndMobile ? "node-157_4747" : isDefaultAndMobile ? "node-156_4447" : "node-101_7756"} data-name="layout_Illustr, Text">
+            <div className="overflow-clip relative shrink-0 size-[24px]" id={isHoverAndDesktop ? "node-101_7750" : isHoverAndMobile ? "node-157_4748" : isDefaultAndMobile ? "node-156_4448" : "node-101_7757"} data-name="icon_Advantages (24px, 32 px)">
+              <div className="absolute inset-[8.33%]" id={isHoverAndDesktop ? "node-I101_7750-112_5687" : isHoverAndMobile ? "node-I157_4748-112_5687" : isDefaultAndMobile ? "node-I156_4448-112_5687" : "node-I101_7757-112_5687"} data-name="Group">
+                <div className="absolute inset-[-3.75%]">
+                  <img alt="" className="block max-w-none size-full" src={imgGroup2} />
+                </div>
+              </div>
+            </div>
+            <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/gray-4,#736f79)] tracking-[-0.28px] whitespace-nowrap" id={isHoverAndDesktop ? "node-101_7749" : isHoverAndMobile ? "node-157_4749" : isDefaultAndMobile ? "node-156_4449" : "node-101_7758"}>
+              Регистрация в Гостехнадзоре
+            </p>
+          </div>
+          <div className="[word-break:break-word] content-stretch flex flex-col font-['Inter:Bold'] font-bold gap-[var(--spacings\/content-\(8\),8px)] items-start not-italic relative shrink-0 w-full" id={isHoverAndDesktop ? "node-19_4834" : isHoverAndMobile ? "node-157_4750" : isDefaultAndMobile ? "node-156_4450" : "node-19_4487"} data-name="layout_Price, Banks">
+            <p className="leading-[1.3] min-w-full relative shrink-0 text-[20px] text-black tracking-[-0.4px] w-[min-content]" id={isHoverAndDesktop ? "node-19_4835" : isHoverAndMobile ? "node-157_4751" : isDefaultAndMobile ? "node-156_4451" : "node-11_4374"}>
+              от 34 500 BYN
+            </p>
+            <p className="leading-[1.2] relative shrink-0 text-[12px] text-[color:var(--colors\/accents\/purple,#7c33fb)] tracking-[-0.24px] whitespace-nowrap" id={isHoverAndDesktop ? "node-19_4837" : isHoverAndMobile ? "node-157_4752" : isDefaultAndMobile ? "node-156_4452" : "node-19_4488"}>
+              В кредит и рассрочку
+            </p>
+          </div>
+          <div className={`${String.raw`content-stretch flex gap-[4px] items-center justify-center px-[var(--padding\/padding-\(16\),16px)] py-[var(--padding\/padding-\(12\),12px)] relative rounded-[10px] shrink-0 w-full `}${isHoverAndDesktop ? String.raw`bg-[var(--colors\/accents\/purple-\(hover\),#2e1854)] cursor-pointer` : isHoverAndMobile ? String.raw`bg-[var(--colors\/accents\/purple-\(hover\),#2e1854)]` : isDefaultAndMobile ? String.raw`bg-[var(--colors\/accents\/purple,#7c33fb)] cursor-pointer` : String.raw`bg-[var(--colors\/accents\/purple,#7c33fb)]`}`} id={isHoverAndDesktop ? "node-19_4855" : isHoverAndMobile ? "node-157_4753" : isDefaultAndMobile ? "node-156_4453" : "node-19_4477"} data-name="button_Basic">
+            <p className={`${String.raw`[word-break:break-word] font-["Inter:Semi_Bold"] font-semibold not-italic relative shrink-0 text-[color:var(--colors\/grays\/white,#fdfdfd)] whitespace-nowrap `}${isMobile ? "leading-[1.2] text-[12px] tracking-[-0.24px]" : "leading-[1.3] text-[14px] tracking-[-0.28px]"}`} id={isHoverAndDesktop ? "node-I19_4855-1_7031" : isHoverAndMobile ? "node-I157_4753-1_7067" : isDefaultAndMobile ? "node-I156_4453-1_7013" : "node-I19_4477-1_7007"}>
+              Перейти к модели
+            </p>
+            <div className={`relative shrink-0 ${isMobile ? "rounded-[1.647px] size-[14px]" : "rounded-[1.882px] size-[16px]"}`} id={isHoverAndDesktop ? "node-I19_4855-1_7032" : isHoverAndMobile ? "node-I157_4753-1_7068" : isDefaultAndMobile ? "node-I156_4453-1_7014" : "node-I19_4477-1_7008"} data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
+              <div className={`absolute ${isMobile ? "h-[7.686px] left-[1.24px] top-[3.16px] w-[11.529px]" : "h-[8.784px] left-[1.41px] top-[3.61px] w-[13.176px]"}`} id={isHoverAndDesktop ? "node-I19_4855-1_7032-1_7283" : isHoverAndMobile ? "node-I157_4753-1_7068-1_7287" : isDefaultAndMobile ? "node-I156_4453-1_7014-1_7287" : "node-I19_4477-1_7008-1_7283"} data-name="Arrow">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={isMobile ? imgArrow1 : imgArrow} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+These styles are contained in the design: Superscript — 12: Font(family: "Inter", style: Semi Bold, size: 12, weight: 600, lineHeight: 1.2000000476837158, letterSpacing: -2), P2 — 16: Font(family: "Inter", style: Medium, size: 16, weight: 500, lineHeight: 1.25, letterSpacing: -2), H5 — 20 (Bold): Font(family: "Inter", style: Bold, size: 20, weight: 700, lineHeight: 1.2999999523162842, letterSpacing: -2), P3 — 14: Font(family: "Inter", style: Medium, size: 14, weight: 500, lineHeight: 1.25, letterSpacing: -2), H7 — 14: Font(family: "Inter", style: Semi Bold, size: 14, weight: 600, lineHeight: 1.2999999523162842, letterSpacing: -2), H8 — 12 (Bold): Font(family: "Inter", style: Bold, size: 12, weight: 700, lineHeight: 1.2000000476837158, letterSpacing: -2), H8 — 12: Font(family: "Inter", style: Semi Bold, size: 12, weight: 600, lineHeight: 1.2000000476837158, letterSpacing: -2).
+The generated code contains image and SVG URL constants, e.g. const image = 'figma-asset:download-omitted These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.

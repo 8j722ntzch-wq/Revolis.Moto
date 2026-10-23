@@ -1,0 +1,16 @@
+---
+import InfoLayout from '../layouts/InfoLayout.astro';
+import policy from '../data/privacy.json';
+---
+<InfoLayout title="Политика конфиденциальности — Revolis.Мото" description="Политика конфиденциальности и обработки персональных данных Revolis.Мото." pageClass="privacy-page">
+  <article class="privacy-document container">
+    <h1>Политика конфиденциальности</h1>
+    <div class="privacy-document__sections">
+      <p class="privacy-document__intro">{policy.intro}</p>
+      {policy.sections.map((section, i) => <section aria-labelledby={`policy-section-${i+1}`}>
+        <h2 id={`policy-section-${i+1}`}>{section.title}</h2>
+        <p>{section.body}</p>
+      </section>)}
+    </div>
+  </article>
+</InfoLayout>

@@ -1,0 +1,78 @@
+const imgGroup = "https://www.figma.com/api/mcp/asset/b22d5355-a280-4d3d-a6cd-fdde52a14737.svg";
+const imgArrow = "https://www.figma.com/api/mcp/asset/e1b28417-301c-403e-91cc-bc935d2eb3a0.svg";
+
+type ButtonCloseProps = {
+  className?: string;
+  state?: "Default";
+};
+
+function ButtonClose({ className, state = "Default" }: ButtonCloseProps) {
+  return (
+    <div className={className || "bg-[var(--colors\\/grays\\/white,#fdfdfd)] relative rounded-[320px] size-[36px]"} data-node-id="1:7945">
+      <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[24px] top-1/2" data-node-id="1:7946" data-name="icon_Cross (24 px)">
+        <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[10.607px] top-1/2" data-node-id="I1:7946;1:7955" data-name="Group">
+          <div className="absolute inset-[-4.71%]">
+            <img alt="" className="block max-w-none size-full" src={imgGroup} />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+type PopUpProps = {
+  className?: string;
+  device?: "Mobile";
+};
+
+function PopUp({ className, device = "Mobile" }: PopUpProps) {
+  return (
+    <div className={className || "bg-[var(--colors\\/grays\\/black,#0d0d0d)] h-[276px] overflow-clip relative rounded-[16px] w-[340px]"} data-node-id="1:9092">
+      <div className="absolute flex h-[30px] items-center justify-center right-0 top-[416px] w-[20px]" data-node-id="1:9094">
+        <div className="flex-none rotate-180">
+          <div className="bg-gradient-to-r from-[#fdfdfd] from-[68.269%] h-[30px] relative to-[rgba(253,253,253,0)] w-[20px]" data-name="element_Shade" />
+        </div>
+      </div>
+      <div className="absolute bg-gradient-to-r from-[#fdfdfd] from-[68.269%] h-[30px] left-0 to-[rgba(253,253,253,0)] top-[416px] w-[20px]" data-node-id="1:9095" data-name="element_Shade" />
+      <div className="[word-break:break-word] absolute content-stretch flex flex-col gap-[var(--spacings\/content-\(12\),12px)] items-start left-[20px] not-italic top-[20px] w-[300px]" data-node-id="1:9096" data-name="element_Headline + Body">
+        <p className="font-['Inter:Semi_Bold'] font-semibold leading-[0] relative shrink-0 text-[24px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.48px] w-[248px]" data-node-id="1:9097">
+          <span className="leading-[1.25] text-[#7c33fb]">Благодарим</span>
+          <span className="leading-[1.25]">{` за оставление заявки!`}</span>
+        </p>
+        <p className="font-['Inter:Medium'] font-medium leading-[1.25] min-w-full relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/gray-3,#c2bfc9)] tracking-[-0.32px] w-[min-content]" data-node-id="1:9098">
+          Наш менеджер свяжется с вами в ближайшее время
+        </p>
+      </div>
+      <div className="-translate-x-1/2 absolute content-stretch flex flex-col gap-[12px] items-start left-1/2 top-[156px] w-[300px]" data-node-id="1:9100" data-name="layout_Headline, Loading">
+        <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.28px] w-full" data-node-id="1:9101">
+          Ваша заявка находится в обработке
+        </p>
+        <div className="h-[8px] overflow-clip relative shrink-0 w-full" data-node-id="1:9102" data-name="element_Loading">
+          <div className="absolute bg-[var(--colors\/accents\/purple,#7c33fb)] h-[8px] left-0 rounded-[500px] top-0 w-[148px]" data-node-id="I1:9102;1:9127" data-name="element_Part 1" />
+          <div className="absolute bg-[var(--purple-\(transparent\),rgba(124,51,251,0.2))] h-[8px] left-[152px] rounded-[500px] top-0 w-[148px]" data-node-id="I1:9102;1:9128" data-name="element_Part 2" />
+        </div>
+      </div>
+      <div className="-translate-x-1/2 absolute bg-[var(--colors\/accents\/purple,#7c33fb)] bottom-[20px] content-stretch cursor-pointer flex gap-[4px] items-center justify-center left-1/2 px-[var(--padding\/padding-\(16\),16px)] py-[var(--padding\/padding-\(12\),12px)] rounded-[10px] w-[300px]" data-node-id="266:8768" data-name="button_Basic">
+        <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.2] not-italic relative shrink-0 text-[12px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.24px] whitespace-nowrap" data-node-id="I266:8768;1:7013">
+          Вернуться на главную
+        </p>
+        <div className="relative rounded-[1.647px] shrink-0 size-[14px]" data-node-id="I266:8768;1:7014" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
+          <div className="absolute h-[7.686px] left-[1.24px] top-[3.16px] w-[11.529px]" data-node-id="I266:8768;1:7014;1:7287" data-name="Arrow">
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow} />
+          </div>
+        </div>
+      </div>
+      <ButtonClose className="absolute bg-[var(--colors\/grays\/white,#fdfdfd)] right-[20px] rounded-[320px] size-[36px] top-[20px]" />
+    </div>
+  );
+}
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+These styles are contained in the design: H3 — 24 (H2 Mobile): Font(family: "Inter", style: Semi Bold, size: 24, weight: 600, lineHeight: 1.25, letterSpacing: -2), P2 — 16: Font(family: "Inter", style: Medium, size: 16, weight: 500, lineHeight: 1.25, letterSpacing: -2), H6 — 14: Font(family: "Inter", style: Semi Bold, size: 14, weight: 600, lineHeight: 1.2999999523162842, letterSpacing: -2), H8 — 12: Font(family: "Inter", style: Semi Bold, size: 12, weight: 600, lineHeight: 1.2000000476837158, letterSpacing: -2).
+The generated code contains image and SVG URL constants, e.g. const image = 'https://www.figma.com/api/mcp/asset/550e8400-e29b-41d4-a716-446655440000.png'. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.

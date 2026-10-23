@@ -1,0 +1,45 @@
+{
+  "source": "Figma get_design_context",
+  "fileKey": "JkXOsnFvWZmMab1VYjVQAJ",
+  "nodeId": "1:6973",
+  "verifiedAt": "2026-10-21",
+  "observedVariants": [
+    {
+      "nodeId": "1:7154",
+      "state": "Default",
+      "fontFamily": "Inter",
+      "fontStyle": "Semi Bold",
+      "weight": 600,
+      "size": 14,
+      "lineHeight": 1.3
+    },
+    {
+      "nodeId": "1:7164",
+      "state": "Hover",
+      "fontFamily": "Inter",
+      "fontStyle": "Semi Bold",
+      "weight": 600,
+      "size": 14,
+      "lineHeight": 1.3
+    },
+    {
+      "nodeId": "1:7174",
+      "state": "Pressed",
+      "fontFamily": "Inter",
+      "fontStyle": "Semi Bold",
+      "weight": 600,
+      "size": 14,
+      "lineHeight": 1.3
+    },
+    {
+      "nodeId": "1:7182",
+      "state": "Disabled",
+      "fontFamily": "Inter",
+      "fontStyle": "Semi Bold",
+      "weight": 600,
+      "size": 14,
+      "lineHeight": 1.3
+    }
+  ],
+  "scope": "Text, Icon=False, Size=S, Device=Desktop"
+}

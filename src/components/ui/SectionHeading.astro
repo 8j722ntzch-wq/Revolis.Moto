@@ -1,8 +1,8 @@
 ---
-interface Props { eyebrow?: string; title: string; level?: 'h1' | 'h2' | 'h3'; size?: 'xl' | 'lg'; id?: string; }
-const { eyebrow, title, level: Heading = 'h2', size = 'xl', id } = Astro.props;
+interface Props { eyebrow?: string; title?: string; bold?: boolean; level?: 'h1' | 'h2' | 'h3'; id?: string; }
+const { eyebrow, title, level: Heading = 'h2', id, bold = false } = Astro.props;
 ---
 <div class="section-heading">
   {eyebrow && <p class="type-eyebrow weight-bold">{eyebrow}</p>}
-  <Heading id={id} class={`type-heading-${size}`}>{title}</Heading>
+  <Heading id={id} class:list={["section-heading__title", { "weight-bold": bold }]}><slot>{title}</slot></Heading>
 </div>

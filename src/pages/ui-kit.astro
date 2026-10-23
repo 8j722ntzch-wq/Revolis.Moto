@@ -1,13 +1,20 @@
 ---
+import PopupShowcase from '../components/PopupShowcase.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Button from '../components/ui/Button.astro';
 import TextField from '../components/ui/TextField.astro';
 import Checkbox from '../components/ui/Checkbox.astro';
-import Badge from '../components/ui/Badge.astro';
 import StatusBadge from '../components/ui/StatusBadge.astro';
 import SectionHeading from '../components/ui/SectionHeading.astro';
 import FaqItem from '../components/FaqItem.astro';
 import LeadForm from '../components/LeadForm.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import { headerLinks, headerPhone } from '../data/navigation';
+import BankCard from '../components/BankCard.astro';
+import { bankCardsReference } from '../data/finance';
+import ModelCard from '../components/ModelCard.astro';
+import { modelCardReference } from '../data/catalog';
 
 const colors = [
   ['Purple', 'purple', '#7C33FB'], ['Purple / hover', 'purple-hover', '#2E1854'],
@@ -17,23 +24,30 @@ const colors = [
   ['Gray 1', 'gray-1', '#F1EEF8'], ['White', 'white', '#FDFDFD'],
 ];
 const typeSamples = [
-  ['heading-xl', '40 / 48 · Semi Bold', 'Квадроциклы для ваших задач'],
-  ['heading-lg', '32 / 38,4 · Semi Bold', 'Техника и новые маршруты'],
-  ['heading-md', '24 / 30 · Semi Bold', 'Выберите свой квадроцикл'],
-  ['heading-sm', '20 / 26 · Semi Bold', 'Характеристики модели'],
-  ['heading-xs', '16 / 20 · Semi Bold', 'Подробности предложения'],
-  ['body-lg', '20 / 26 · Medium', 'Пространство для впечатлений.'],
-  ['body', '16 / 20 · Medium', 'Поможем разобраться в характеристиках техники.'],
-  ['small', '14 / 17,5 · Medium', 'Уточните условия у консультанта.'],
-  ['eyebrow', '12 / 14,4 · Semi Bold', 'ПРОКАТ КВАДРОЦИКЛОВ'],
+  ['heading-xl', 'H1 · 40 / 48 · Bold', 'Квадроциклы для ваших задач'],
+  ['heading-lg', 'H2 · 32 / 38,4 · Bold', 'Техника и новые маршруты'],
+  ['heading-intermediate', 'H3 · 28 / 36,4 · Bold', 'Откройте новый маршрут'],
+  ['heading-md', 'H4 · 24 / 30 · Semi Bold', 'Выберите свой квадроцикл'],
+  ['heading-sm weight-bold', 'H5 · 20 / 26 · Bold', 'Характеристики модели'],
+  ['heading-sm', 'H5 · 20 / 26 · Semi Bold', 'Характеристики модели'],
+  ['heading-xs', 'H6 · 16 / 20 · Bold', 'Подробности предложения'],
+  ['heading-xxs weight-bold', 'H7 · 14 / 18,2 · Bold', 'Уточните условия'],
+  ['heading-xxs', 'H7 · 14 / 18,2 · Semi Bold', 'Уточните условия'],
+  ['eyebrow weight-bold', 'H8 · 12 / 14,4 · Bold', 'ПРОКАТ КВАДРОЦИКЛОВ'],
+  ['eyebrow', 'H8 · 12 / 14,4 · Semi Bold', 'ПРОКАТ КВАДРОЦИКЛОВ'],
+  ['body-lg', 'P1 · 20 / 26 · Medium', 'Пространство для впечатлений.'],
+  ['body', 'P2 · 16 / 20 · Medium', 'Поможем разобраться в характеристиках техники.'],
+  ['small', 'P3 · 14 / 17,5 · Medium', 'Уточните условия у консультанта.'],
 ];
+const headerDemoTargets = ['#model-cards', '#header-about', '#bank-cards', '#faq', '#header-contacts'];
+const headerDemoLinks = headerLinks.map((link, index) => ({ ...link, href: headerDemoTargets[index] }));
 const states = ['default', 'hover', 'pressed', 'disabled'] as const;
 ---
 <BaseLayout title="Revolis.Мото — стили и компоненты" description="Рабочая библиотека Desktop-компонентов на основе проекта Figma.">
   <header class="kit-header container">
     <a class="kit-brand" href="#top">revolis<span>.Мото</span></a>
-    <nav aria-label="Разделы библиотеки"><a href="#tokens">Стили</a><a href="#buttons">Кнопки</a><a href="#fields">Формы</a><a href="#faq">FAQ</a></nav>
-    <span class="kit-version">Desktop · UI foundation / 01</span>
+    <nav aria-label="Разделы библиотеки"><a href="#tokens">Стили</a><a href="#buttons">Кнопки</a><a href="#fields">Формы</a><a href="#faq">FAQ</a><a href="#model-cards">Техника</a><a href="#bank-cards">Банки</a><a href="#site-header">Шапка</a><a href="#site-footer">Футер</a></nav>
+    <span class="kit-version">Desktop · UI foundation / 05</span>
   </header>
   <main id="top" class="container">
     <section class="kit-intro" aria-labelledby="kit-title">
@@ -48,45 +62,91 @@ const states = ['default', 'hover', 'pressed', 'disabled'] as const;
       <div class="kit-section__intro"><p class="kit-eyebrow">02 / ТИПОГРАФИКА</p><h2 id="type-title">Inter. Общий ритм.</h2><p>Локальный шрифт с кириллицей. Межбуквенное расстояние −2%.</p></div>
       <div class="display-sample"><span class="sample-label">Hero / 64 · Black · 110%</span><p class="type-display">Квадроциклы<br />и вездеходы<br /><span>в Беларуси</span></p></div>
       <div class="type-list">{typeSamples.map(([role, label, sample]) => <div class="type-row"><code>{label}</code><p class={`type-${role}`}>{sample}</p></div>)}</div>
-      <p class="kit-note">В Figma образец «P1 — 18» фактически имеет размер 20 px. Здесь сохранено фактическое значение.</p>
     </section>
     <section class="kit-section" aria-labelledby="spacing-title">
       <div class="kit-section__intro"><p class="kit-eyebrow">03 / ГЕОМЕТРИЯ</p><h2 id="spacing-title">Отступы и скругления</h2></div>
-      <div class="geometry"><div class="spacing-list">{[4,8,12,16,20,24,32,40,48].map(space => <div><code>{space}</code><span style={`width:${space}px`}></span></div>)}</div><div class="radius-sample"><span style="border-radius:4px">4 px</span><p>Поля, чекбоксы, теги</p></div><div class="radius-sample"><span style="border-radius:10px">10 px</span><p>Кнопки</p></div></div>
+      <div class="geometry"><div class="spacing-list">{[4,8,12,16,20,24,32,40,48].map(space => <div><code>{space}</code><span style={`width:${space}px`}></span></div>)}</div><div class="radius-sample"><span style="border-radius:4px">4 px</span><p>Чекбоксы и статусы</p></div><div class="radius-sample"><span style="border-radius:10px">10 px</span><p>Кнопки и поля</p></div></div>
       <div class="grid-sample">{[1,2,3].map(n => <div><span>{String(n).padStart(2,'0')}</span><p>392 px</p></div>)}</div><p class="kit-note">Сетка 1224 px: три колонки по 392 px и два интервала по 24 px.</p>
     </section>
     <section id="buttons" class="kit-section" aria-labelledby="button-title">
       <div class="kit-section__intro"><p class="kit-eyebrow">04 / КНОПКИ</p><h2 id="button-title">Одно действие. Все состояния.</h2><p>Наведите курсор, нажмите кнопку или перейдите к ней клавишей Tab.</p></div>
       <div class="button-matrix"><div></div>{['Обычное','Наведение','Нажатие','Недоступно'].map(label => <span class="sample-label">{label}</span>)}
         {(['solid','outline'] as const).map(variant => <><strong>{variant === 'solid' ? 'Основная' : 'Контурная'}</strong>{states.map(state => <div><Button variant={variant} disabled={state === 'disabled'} data-demo-state={state} data-demo-action="true">Оставить заявку</Button></div>)}</>)}
-        <strong>С иконкой</strong>{states.map(state => <div><Button arrow disabled={state === 'disabled'} data-demo-state={state} data-demo-action="true">Оставить заявку</Button></div>)}
-        <strong>Ссылка</strong>{states.map(state => <div><Button variant="text" href="#fields" disabled={state === 'disabled'} data-demo-state={state}>О нас</Button></div>)}
+        {(['solid','outline'] as const).map(variant => <><strong>{variant === 'solid' ? 'Основная + стрелка' : 'Контурная + стрелка'}</strong>{states.map(state => <div><Button variant={variant} arrow disabled={state === 'disabled'} data-demo-state={state} data-demo-action="true">Оставить заявку</Button></div>)}</>)}
+        <strong>Text S</strong>{states.map(state => <div><Button variant="text" href="#fields" disabled={state === 'disabled'} data-demo-state={state}>О нас</Button></div>)}
+        <strong>Text S + стрелка</strong>{states.map(state => <div><Button variant="text" arrow href="#fields" disabled={state === 'disabled'} data-demo-state={state}>Подробнее</Button></div>)}
+        <strong>Text (Bold) S</strong>{states.map(state => <div><Button variant="text-bold" href="#fields" disabled={state === 'disabled'} data-demo-state={state}>О нас</Button></div>)}
+        <strong>Text (Bold) L</strong>{states.map(state => <div>{state === 'default' || state === 'hover' ? <Button variant="text-bold" size="l" href="#fields" data-demo-state={state}>О нас</Button> : <span class="sample-label">—</span>}</div>)}
+        <strong>Text XS</strong>{states.map(state => <div>{state === 'default' || state === 'hover' ? <Button variant="text" size="xs" href="#fields" data-demo-state={state}>О нас</Button> : <span class="sample-label">—</span>}</div>)}
+        <strong>Icon S</strong>{states.map(state => <div><Button variant="icon" aria-label="Перейти к полям" href="#fields" disabled={state === 'disabled'} data-demo-state={state} /></div>)}
       </div>
       <p id="button-feedback" class="kit-feedback" role="status" aria-live="polite">Кнопки здесь демонстрационные: заявка не отправляется.</p>
     </section>
     <section id="fields" class="kit-section" aria-labelledby="fields-title">
       <div class="kit-section__intro"><p class="kit-eyebrow">05 / ВВОД ДАННЫХ</p><h2 id="fields-title">Поля и согласие</h2><p>Высота поля — 52 px. Фокус, заполнение, ошибка и недоступное состояние.</p></div>
-      <div class="field-grid"><div class="field-demo"><span class="sample-label">Имя / обычное</span><TextField id="demo-name" name="demo-name" label="Ваше имя" required /></div><div class="field-demo"><span class="sample-label">Телефон / обычное</span><TextField id="demo-phone" name="demo-phone" label="Ваш номер телефона" type="tel" autocomplete="tel" required /></div><div class="field-demo"><span class="sample-label">Заполнено</span><TextField id="demo-filled" name="demo-filled" label="Ваше имя" value="Александр" /></div><div class="field-demo"><span class="sample-label">Ошибка</span><TextField id="demo-error" name="demo-error" label="Ваш номер телефона" type="tel" value="+375" error="Проверьте номер телефона." /></div><div class="field-demo"><span class="sample-label">Недоступно</span><TextField id="demo-disabled" name="demo-disabled" label="Ваше имя" disabled /></div><div class="field-demo check-demo"><Checkbox id="check-default" name="check-default">Согласен на обработку персональных данных</Checkbox><Checkbox id="check-selected" name="check-selected" checked>Выбранное состояние</Checkbox><Checkbox id="check-disabled" name="check-disabled" checked disabled>Недоступное выбранное состояние</Checkbox></div></div>
+      <div class="field-grid"><div class="field-demo"><span class="sample-label">Имя / обычное</span><TextField id="demo-name" name="demo-name" label="Ваше имя" required /></div><div class="field-demo"><span class="sample-label">Телефон / обычное</span><TextField id="demo-phone" name="demo-phone" label="Ваш номер телефона" type="tel" autocomplete="tel" required /></div><div class="field-demo"><span class="sample-label">Заполнено</span><TextField id="demo-filled" name="demo-filled" label="Ваше имя" value="Александр" /></div><div class="field-demo"><span class="sample-label">Ошибка</span><TextField id="demo-error" name="demo-error" label="Ваш номер телефона" type="tel" required error="Проверьте номер телефона." /></div><div class="field-demo"><span class="sample-label">Недоступно</span><TextField id="demo-disabled" name="demo-disabled" label="Ваше имя" required disabled /></div><div class="field-demo check-demo"><Checkbox id="check-default" name="check-default">Согласен на обработку персональных данных</Checkbox><Checkbox id="check-selected" name="check-selected" checked>Выбранное состояние</Checkbox><Checkbox id="check-error" name="check-error" invalid>Ошибка согласия</Checkbox><Checkbox id="check-disabled" name="check-disabled" checked disabled>Недоступное выбранное состояние</Checkbox></div></div>
       <details class="form-demo"><summary>Проверить сборку формы из компонентов</summary><div><LeadForm id="ui-kit-lead" source="ui-kit" /></div></details>
     </section>
     <section class="kit-section" aria-labelledby="badges-title">
-      <div class="kit-section__intro"><p class="kit-eyebrow">06 / МЕТКИ</p><h2 id="badges-title">Статусы и короткие акценты</h2><p>Образцы интерфейса, без привязки к наличию конкретной модели.</p></div>
-      <div class="badge-row"><StatusBadge status="stock" /><StatusBadge status="order" /><StatusBadge status="offer" /><StatusBadge status="soon" /></div><div class="badge-row"><Badge>Интервал: 1 час</Badge><Badge variant="price">Обсуждается дополнительно</Badge></div>
+      <div class="kit-section__intro"><p class="kit-eyebrow">06 / МЕТКИ</p><h2 id="badges-title">Статусы моделей</h2><p>Образцы интерфейса, без привязки к наличию конкретной модели.</p></div>
+      <div class="badge-row"><StatusBadge status="stock" /><StatusBadge status="order" /><StatusBadge status="offer" /><StatusBadge status="soon" /></div>
     </section>
     <section class="kit-section" aria-labelledby="section-title">
       <div class="kit-section__intro"><p class="kit-eyebrow">07 / ЗАГОЛОВОК СЕКЦИИ</p><h2 id="section-title">Переиспользуемая композиция</h2></div>
-      <div class="heading-sample"><SectionHeading eyebrow="НАША ТЕХНИКА" title="Квадроциклы для ваших задач" /></div>
+      <div class="heading-sample"><SectionHeading eyebrow="НАША ТЕХНИКА" title={"Заголовок главной страницы\nвозможно в 2 строки"} /></div>
     </section>
     <section id="faq" class="kit-section" aria-labelledby="faq-title">
       <div class="kit-section__intro"><p class="kit-eyebrow">08 / РАСКРЫВАЮЩИЙСЯ БЛОК</p><h2 id="faq-title">FAQ: внешний вид и поведение</h2><p>Это демонстрация компонента. Финальные вопросы и ответы добавим при сборке главной.</p></div>
       <div class="faq-stack"><FaqItem question="Как работает раскрытие ответа?" group="ui-kit">Нажмите на вопрос или используйте Enter либо пробел с клавиатуры. При открытии следующего вопроса предыдущий закрывается.</FaqItem><FaqItem question="Можно ли заменить текст без изменения оформления?" group="ui-kit">Да. Вопрос и ответ передаются компоненту отдельно. Общие цвета, типографика и отступы остаются едиными для всех экземпляров.</FaqItem></div>
     </section>
-    <footer class="kit-footer"><p>Revolis.Мото / Desktop UI foundation</p><p>Следующий этап: карточки техники и банков → секции главной.</p><a href="#top">Наверх ↑</a></footer>
-  </main>
+    <section id="model-cards" class="kit-section" aria-labelledby="model-card-title">
+      <div class="kit-section__intro"><p class="kit-eyebrow">09 / КАРТОЧКА ТЕХНИКИ</p><h2 id="model-card-title">ModelCard: обычное состояние и наведение</h2><p>Наведите курсор на первую карточку или перейдите к её кнопке клавишей Tab.</p></div>
+      <div class="model-card-showcase">
+        <div class="model-card-example"><p class="sample-label">Обычное · интерактивный пример</p><ModelCard id="model-card-default" model={modelCardReference} demoAction /></div>
+        <div class="model-card-example"><p class="sample-label">Наведение · зафиксированное состояние</p><ModelCard id="model-card-hover" model={modelCardReference} demoState="hover" demoAction /></div>
+      </div>
+      <p id="model-card-feedback" class="kit-feedback" role="status" aria-live="polite">Демонстрационные данные из Figma. Цена, объём двигателя и наличие в этих примерах не являются предложением о продаже.</p>
+      <p class="kit-note">Карточка 392 × 642 px, изображение 320 × 213 px внутри области 360 × 320 px. Наведение поднимает карточку на 8 px. В шаблоне Hammer Touring 200 указано 300 см³ — наполнение сверим отдельно перед сборкой каталога.</p>
+    </section>
+    <section id="bank-cards" class="kit-section" aria-labelledby="bank-card-title">
+      <div class="kit-section__intro"><p class="kit-eyebrow">10 / БАНКИ И ОПЛАТА</p><h2 id="bank-card-title">BankCard: три варианта</h2><p>Обычное состояние и наведение. Кнопки показывают выбранный банк; заявка не отправляется.</p></div>
+      <div class="bank-card-showcase">
+        {(['default', 'hover'] as const).map(state => <div class="bank-card-row"><p class="sample-label">{state === 'default' ? 'Обычное · интерактивные примеры' : 'Наведение · зафиксированные состояния'}</p><div>{bankCardsReference.map(card => <BankCard id={`bank-${card.variant}-${state}`} {...card} demoState={state === 'hover' ? 'hover' : undefined} demoAction />)}</div></div>)}
+      </div>
+      <p id="bank-card-feedback" class="kit-feedback" role="status" aria-live="polite">Срок и ставка перенесены из Figma для проверки оформления. Это демонстрационные условия, не действующее предложение банков.</p>
+      <p class="kit-note">Карточки 288 × 174 px, подъём при наведении — 8 px. Логотипы и стрелки экспортированы из исходных узлов Figma.</p>
+    </section>
+    <section id="site-header" class="kit-section" aria-labelledby="site-header-title">
+      <div class="kit-section__intro"><p class="kit-eyebrow">11 / ШАПКА САЙТА</p><h2 id="site-header-title">SiteHeader: Desktop</h2><p>Проверьте ссылки, фокус клавиатуры и кнопку заявки. Навигация примера ведёт к разделам этой витрины.</p></div>
+      <div class="header-showcase"><SiteHeader links={headerDemoLinks} homeHref="#top" demoAction /></div>
+      <p id="header-feedback" class="kit-feedback" role="status" aria-live="polite">Кнопка демонстрационная: заявка не отправляется.</p>
+      <div class="header-demo-notes"><div id="header-about" tabindex="-1"><h3>О нас · цель ссылки</h3><p>Здесь проверяем навигацию шапки. Секцию о компании соберём на следующем этапе.</p></div><div id="header-contacts" tabindex="-1"><h3>Контакты · цель ссылки</h3><p>Телефон из макета: <a href={headerPhone.href}>{headerPhone.label}</a>.</p></div></div>
+    </section>
+    <section id="site-footer" class="kit-section" aria-labelledby="site-footer-title">
+      <div class="kit-section__intro"><p class="kit-eyebrow">12 / ФУТЕР САЙТА</p><h2 id="site-footer-title">SiteFooter: Desktop</h2><p>Адрес, график и реквизиты перенесены из Figma. Ссылки на карты, соцсети и политики пока не предоставлены.</p></div>
+      <div class="footer-showcase"><SiteFooter links={headerDemoLinks} demoAction /></div>
+      <p id="footer-feedback" class="kit-feedback" role="status" aria-live="polite">Навигация и возврат наверх работают. Остальные кнопки без адресов показывают пояснение.</p>
+    </section>
+    <footer class="kit-footer"><p>Revolis.Мото / Desktop UI foundation</p><p>Главная и диалоги собраны. Приём заявок подключим отдельным этапом.</p><a href="#top">Наверх ↑</a></footer>
+  <PopupShowcase />
+</main>
 </BaseLayout>
 <script>
+  document.querySelectorAll<HTMLElement>('[data-footer-missing]').forEach(button => button.addEventListener('click', () => {
+    document.getElementById('footer-feedback')!.textContent = `${button.dataset.footerMissing}: ссылка пока не предоставлена. Подключим подтверждённый адрес перед публикацией.`;
+  }));
   document.querySelectorAll<HTMLElement>('[data-demo-action]').forEach(button => button.addEventListener('click', () => {
     document.getElementById('button-feedback')!.textContent = 'Нажатие обработано. Данные никуда не отправляются.';
+  }));
+  document.querySelectorAll<HTMLElement>('[data-model-card-demo]').forEach(button => button.addEventListener('click', () => {
+    document.getElementById('model-card-feedback')!.textContent = 'Кнопка карточки работает. Страницу модели подключим после её подготовки; сейчас это демонстрация данных Figma.';
+  }));
+  const bankLabels: Record<string, string> = { alfa: 'Альфа Банк', technobank: 'Технобанк', consultation: 'подбор условий оплаты' };
+  document.querySelectorAll<HTMLElement>('[data-bank-card-demo]').forEach(button => button.addEventListener('click', () => {
+    document.getElementById('bank-card-feedback')!.textContent = `Выбрано: ${bankLabels[button.dataset.bankCardDemo!]}. При подключении формы этот выбор передадим консультанту. Заявка не отправлена.`;
+  }));
+  document.querySelectorAll<HTMLElement>('[data-header-demo]').forEach(button => button.addEventListener('click', () => {
+    document.getElementById('header-feedback')!.textContent = 'Кнопка заявки работает. При подключении диалога передадим источник «шапка» и запрос консультации. Заявка не отправлена.';
   }));
 </script>
 <style>
@@ -143,5 +203,16 @@ const states = ['default', 'hover', 'pressed', 'disabled'] as const;
   .badge-row { display: flex; align-items: center; gap: 24px; margin-top: 24px; }
   .heading-sample { padding-block: 32px; }
   .faq-stack { display: flex; flex-direction: column; gap: 32px; }
+  .model-card-showcase { display: grid; grid-template-columns: repeat(2, var(--model-card-width)); justify-content: center; gap: var(--space-24); padding-block: var(--space-24); background: var(--color-gray-1); border-radius: var(--radius-card); }
+  .model-card-example { display: flex; flex-direction: column; gap: var(--space-24); }
+  .model-card-example > .sample-label { padding-inline: var(--space-16); }
+  .bank-card-showcase { padding: 24px; border-radius: var(--radius-card); background: var(--color-gray-1); display: grid; gap: 32px; }
+  .bank-card-row > .sample-label { margin-bottom: 24px; text-align: center; }
+  .bank-card-row > div { display: grid; grid-template-columns: repeat(3, var(--bank-card-width)); justify-content: center; gap: var(--grid-gap); }
+  .header-showcase { padding-block: 24px; border-block: 1px solid var(--color-gray-2); }
+  .header-showcase :global(.site-header__inner) { width: 100%; }
+  .header-demo-notes { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 24px; font-size: 14px; color: var(--color-gray-4); }
+  .header-demo-notes h3 { font-size: 14px; color: var(--color-black); margin-bottom: 8px; }
+  .footer-showcase :global(.site-footer__inner) { width: 100%; }
   .kit-footer { padding: 32px 0 48px; display: flex; justify-content: space-between; font-size: 12px; color: var(--color-gray-4); }
 </style>

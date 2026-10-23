@@ -1,0 +1,73 @@
+const imgIconLogomark30Px = "https://www.figma.com/api/mcp/asset/14823f6e-3ff7-43f6-8b53-85e4cd54b932.svg";
+const imgElementName = "https://www.figma.com/api/mcp/asset/ae69c5e3-3387-42a8-a056-cbe37c05bd28.svg";
+const imgSubtract = "https://www.figma.com/api/mcp/asset/b2c11f67-5420-47e9-9909-018804ba0b5a.svg";
+const imgBurgerMenu20Px = "https://www.figma.com/api/mcp/asset/1320334a-131c-40db-b8cf-c5138b0a583c.svg";
+const imgElementLineVertical = "https://www.figma.com/api/mcp/asset/521211b4-f22d-49cd-b3c2-aa7223a406eb.svg";
+
+type ElementLogoProps = {
+  className?: string;
+  type?: "Type4";
+};
+
+function ElementLogo({ className, type = "Type4" }: ElementLogoProps) {
+  return (
+    <div className={className || "h-[36px] relative w-[116px]"} data-node-id="1:7473">
+      <div className="absolute h-[36.011px] left-[-0.75px] top-[0.17px] w-[116.036px]" data-node-id="1:23587" data-name="element_Logo">
+        <div className="-translate-y-1/2 absolute left-[-5px] size-[37.011px] top-[calc(50%+0.5px)]" data-node-id="I1:23587;4587:8186" data-name="icon_Logomark (30px)">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIconLogomark30Px} />
+        </div>
+        <div className="-translate-y-1/2 absolute h-[30.009px] right-0 top-[calc(50%+2px)] w-[83.026px]" data-node-id="I1:23587;4587:8187" data-name="element_Name">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgElementName} />
+        </div>
+      </div>
+      <div className="absolute h-[5.877px] left-[32.24px] top-[26.35px] w-[19.506px]" data-node-id="1:23588" data-name="Subtract">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSubtract} />
+      </div>
+    </div>
+  );
+}
+
+type BlockHeaderProps = {
+  className?: string;
+  device?: "Mobile";
+};
+
+function BlockHeader({ className, device = "Mobile" }: BlockHeaderProps) {
+  return (
+    <div className={className || "bg-[var(--colors\\/grays\\/white,#fdfdfd)] h-[60px] relative w-[390px]"} data-node-id="1:8476">
+      <button className="absolute block cursor-pointer right-[183px] size-[36px] top-[12px]" data-node-id="1:8477" data-name="icon_Burger Menu (36 px)">
+        <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[14px] left-1/2 top-1/2 w-[34px]" data-node-id="I1:8477;1:8985" data-name="Burger Menu - 20px">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgBurgerMenu20Px} />
+        </div>
+      </button>
+      <div className="absolute flex h-[60px] items-center justify-center left-[219px] top-0 w-0" data-node-id="1:8478">
+        <div className="flex-none rotate-90">
+          <div className="h-0 relative w-[60px]" data-name="element_Line (vertical)">
+            <div className="absolute inset-[-1px_0_0_0]">
+              <img alt="" className="block max-w-none size-full" src={imgElementLineVertical} />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="absolute flex h-[60px] items-center justify-center left-[159px] top-0 w-0" data-node-id="1:8479">
+        <div className="flex-none rotate-90">
+          <div className="h-0 relative w-[60px]" data-name="element_Line (vertical)">
+            <div className="absolute inset-[-1px_0_0_0]">
+              <img alt="" className="block max-w-none size-full" src={imgElementLineVertical} />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="absolute bg-[var(--colors\/accents\/purple,#7c33fb)] content-stretch cursor-pointer flex items-center justify-center px-[var(--padding\/padding-\(16\),16px)] py-[var(--padding\/padding-\(12\),12px)] right-[25px] rounded-[10px] top-[11px]" data-node-id="1:8480" data-name="button_Basic">
+        <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.2] not-italic relative shrink-0 text-[12px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.24px] whitespace-nowrap" data-node-id="I1:8480;1:6977">
+          Оставить заявку
+        </p>
+      </div>
+      <ElementLogo className="absolute h-[36px] left-[25px] top-[12px] w-[116px]" />
+    </div>
+  );
+}
+
+export default function BlockHeader1() {
+  return <BlockHeader className="bg-[var(--colors\/grays\/white,#fdfdfd)] relative size-full" />;
+}

@@ -1,0 +1,189 @@
+const imgArrow = "https://www.figma.com/api/mcp/asset/c32e948a-682b-4421-8051-0a87d7dbde00.svg";
+const imgArrow1 = "https://www.figma.com/api/mcp/asset/62c4df44-a83f-4a6e-9cf4-3d2a2c7fad3f.svg";
+const imgVector = "https://www.figma.com/api/mcp/asset/448cdc80-f4b0-4a22-a634-0ee8b90c83f2.svg";
+const imgVector1 = "https://www.figma.com/api/mcp/asset/b73b979d-86a3-4d01-b4ea-e8cc87b73d44.svg";
+const imgGroup = "https://www.figma.com/api/mcp/asset/85be9767-ab4c-47ee-a8a8-21d3eebe2216.svg";
+const imgGroup1 = "https://www.figma.com/api/mcp/asset/6b3d2963-51a9-4efe-ac1e-2013219b027f.svg";
+const imgVector2 = "https://www.figma.com/api/mcp/asset/c48dc13c-dc2f-4803-8c1a-477522a32243.svg";
+const imgVector3 = "https://www.figma.com/api/mcp/asset/8891b1a8-ab4b-4f38-b526-c46847cf257e.svg";
+const imgLayer1000 = "https://www.figma.com/api/mcp/asset/5ceced18-2d50-47bd-a8a7-9e1ad4d52e99.svg";
+const imgArrow2 = "https://www.figma.com/api/mcp/asset/eff11302-9d7c-4654-9e8f-1af14394965e.svg";
+
+function ButtonBasicIconDefaultTrueMDesktop({ className }: { className?: string }) {
+  return (
+    <div className={className || "border border-[var(--colors\\/grays\\/white,#fdfdfd)] border-solid content-stretch flex items-center justify-center p-[10px] relative rounded-[10px]"} data-node-id="1:6998" data-name="button_Basic/Icon/Default/True/M/Desktop">
+      <div className="relative rounded-[2.353px] shrink-0 size-[20px]" data-node-id="1:6999" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
+        <div className="absolute flex items-center justify-center left-[0.08px] size-[19.849px] top-[0.08px]" data-node-id="I1:6999;1:7315">
+          <div className="-rotate-45 flex-none">
+            <div className="h-[11.228px] relative w-[16.842px]" data-name="Arrow">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow} />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ButtonBasicIconHoverTrueMDesktop({ className }: { className?: string }) {
+  return (
+    <div className={className || "bg-[var(--colors\\/grays\\/white,#fdfdfd)] content-stretch cursor-pointer flex items-center justify-center p-[10px] relative rounded-[10px]"} data-node-id="1:7000" data-name="button_Basic/Icon/Hover/True/M/Desktop">
+      <div className="relative rounded-[2.353px] shrink-0 size-[20px]" data-node-id="1:7001" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
+        <div className="absolute flex items-center justify-center left-[0.08px] size-[19.849px] top-[0.08px]" data-node-id="I1:7001;1:7315">
+          <div className="-rotate-45 flex-none">
+            <div className="h-[11.228px] relative w-[16.842px]" data-name="Arrow">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow1} />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+type LogoAlfaProps = {
+  className?: string;
+  property1?: "Default";
+};
+
+function LogoAlfa({ className, property1 = "Default" }: LogoAlfaProps) {
+  return (
+    <div className={className || "h-[34px] overflow-clip relative w-[170px]"} data-node-id="26:5413">
+      <div className="absolute inset-[19.75%_0.46%_32.21%_90.27%]" data-node-id="26:5397" data-name="Vector">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector} />
+      </div>
+      <div className="absolute inset-[19.75%_11.61%_32.21%_80.08%]" data-node-id="26:5398" data-name="Vector">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector1} />
+      </div>
+      <div className="absolute contents inset-[0_0.46%_0_0]" data-node-id="26:5399" data-name="Clip path group">
+        <div className="absolute inset-[0_21.3%_0_0] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-size-[169.21px_34px]" data-node-id="26:5402" style={{ maskImage: `url("${imgGroup}")` }} data-name="Group">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup1} />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+type ElementBankProps = {
+  className?: string;
+  device?: "Mobile";
+  state?: "Default";
+  type?: "Альфа";
+};
+
+function ElementBank({ className, device = "Mobile", state = "Default", type = "Альфа" }: ElementBankProps) {
+  return (
+    <div className={className || "cursor-pointer h-[174px] relative w-[340px]"} data-node-id="160:5688">
+      <div className="absolute bg-[#ef3124] h-[174px] left-0 rounded-[16px] top-0 w-[340px]" data-node-id="160:5689" data-name="Container">
+        <LogoAlfa className="absolute h-[34px] left-[20px] overflow-clip top-[20px] w-[170px]" />
+        <ButtonBasicIconDefaultTrueMDesktop className="absolute border border-[var(--colors\/grays\/white,#fdfdfd)] border-solid bottom-[20px] content-stretch flex items-center justify-center p-[10px] right-[20px] rounded-[10px]" />
+        <div className="[word-break:break-word] absolute content-stretch flex flex-col gap-[var(--spacings\/content-\(12\),12px)] items-start left-[20px] not-italic text-[14px] text-white top-[84px] tracking-[-0.28px] w-[139px]" data-node-id="160:5693" data-name="layout_Heading, Body">
+          <p className="font-['Inter:Semi_Bold'] font-semibold leading-[1.3] min-w-full relative shrink-0 w-[min-content]" data-node-id="160:5694">
+            Кредит и рассрочка
+          </p>
+          <div className="content-stretch flex flex-col font-['Inter:Medium'] font-medium gap-[var(--spacings\/content-\(4\),4px)] items-start leading-[1.25] relative shrink-0 w-[123px]" data-node-id="160:5695" data-name="layout_Body">
+            <p className="relative shrink-0 w-full" data-node-id="160:5696">
+              До 12 месяцев
+            </p>
+            <p className="relative shrink-0 w-full" data-node-id="160:5697">
+              От 0,01 % годовых
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function Component4() {
+  return (
+    <div className="bg-[var(--colors\/grays\/black,#0d0d0d)] relative size-full" data-node-id="160:6055" data-name="4_Кредиты">
+      <div className="-translate-x-1/2 -translate-y-1/2 absolute flex h-[1064.521px] items-center justify-center left-[calc(50%-89px)] top-[calc(50%-0.42px)] w-[1454px]" data-node-id="160:6057">
+        <div className="flex-none rotate-90">
+          <div className="h-[1454px] relative w-[1064.521px]">
+            <div className="absolute inset-[-2.03%_-2.78%]">
+              <img alt="" className="block max-w-none size-full" src={imgVector2} />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="-translate-x-1/2 -translate-y-1/2 absolute flex h-[1064.521px] items-center justify-center left-[calc(50%-89px)] top-[calc(50%-0.42px)] w-[1454px]" data-node-id="160:6058">
+        <div className="flex-none rotate-90">
+          <div className="h-[1454px] relative w-[1064.521px]">
+            <div className="absolute inset-[-0.28%_-0.38%]">
+              <img alt="" className="block max-w-none size-full" src={imgVector3} />
+            </div>
+          </div>
+        </div>
+      </div>
+      <p className="[word-break:break-word] absolute blur-[25px] font-['Inter:Semi_Bold'] font-semibold leading-[1.2] left-[123px] not-italic text-[28px] text-[color:var(--colors\/accents\/purple,#7c33fb)] top-[78px] tracking-[-0.56px] w-[288px]" data-node-id="160:6059">
+        Кредит
+      </p>
+      <div className="-translate-x-1/2 absolute content-stretch flex flex-col gap-[var(--spacings\/content-\(24\),24px)] items-start justify-center left-1/2 top-[60px]" data-node-id="160:6060" data-name="3_Кредиты">
+        <div className="[word-break:break-word] content-stretch flex flex-col gap-[var(--spacings\/content-\(12\),12px)] items-start not-italic relative shrink-0 w-full" data-node-id="160:6061" data-name="layout_Headline, Text">
+          <div className="content-stretch flex flex-col gap-[var(--spacings\/content-\(4\),4px)] items-start relative shrink-0 text-[color:var(--colors\/grays\/white,#fdfdfd)] w-full" data-node-id="160:6062" data-name="block_Headline">
+            <p className="font-['Inter:Bold'] font-bold leading-[1.2] relative shrink-0 text-[12px] tracking-[-0.24px] whitespace-nowrap" data-node-id="160:6063">
+              Забирай сейчас — плати потом
+            </p>
+            <div className="font-['Inter:Semi_Bold'] font-semibold leading-[0] relative shrink-0 text-[28px] tracking-[-0.56px] w-[288px]" data-node-id="160:6064">
+              <p className="mb-0">
+                <span className="leading-[1.2] text-[#7c33fb]">Кредит</span>
+                <span className="leading-[1.2]">{` и рассрочка`}</span>
+              </p>
+              <p className="leading-[1.2]">от банков-партнёров</p>
+            </div>
+          </div>
+          <p className="font-['Inter:Medium'] font-medium leading-[1.25] relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/gray-2,#ebe7f1)] tracking-[-0.32px] w-[288px]" data-node-id="160:6065">{`Поможем подобрать удобные условия финансирования `}</p>
+        </div>
+        <div className="content-stretch cursor-pointer flex flex-col gap-[var(--spacings\/content-\(16\),16px)] items-start justify-center relative shrink-0" data-node-id="160:6066" data-name="layout_Banks">
+          <ElementBank className="h-[174px] relative shrink-0 w-[340px]" />
+          <div className="h-[174px] relative shrink-0 w-[340px]" data-node-id="160:6068" data-name="element_Bank">
+            <div className="absolute bg-[#052eb7] h-[174px] left-0 rounded-[16px] top-0 w-[340px]" data-node-id="I160:6068;160:5820" data-name="Container">
+              <ButtonBasicIconDefaultTrueMDesktop className="absolute border border-[var(--colors\/grays\/white,#fdfdfd)] border-solid bottom-[20px] content-stretch flex items-center justify-center p-[10px] right-[20px] rounded-[10px]" />
+              <div className="[word-break:break-word] absolute content-stretch flex flex-col gap-[var(--spacings\/content-\(12\),12px)] items-start left-[20px] not-italic text-[14px] text-[color:var(--colors\/grays\/white,#fdfdfd)] top-[84px] tracking-[-0.28px] w-[139px]" data-node-id="I160:6068;160:5822" data-name="layout_Heading, Body">
+                <p className="font-['Inter:Semi_Bold'] font-semibold leading-[1.3] min-w-full relative shrink-0 w-[min-content]" data-node-id="I160:6068;160:5823">
+                  Кредит и рассрочка
+                </p>
+                <div className="content-stretch flex flex-col font-['Inter:Medium'] font-medium gap-[var(--spacings\/content-\(4\),4px)] items-start leading-[1.25] relative shrink-0 w-[123px]" data-node-id="I160:6068;160:5824" data-name="layout_Body">
+                  <p className="relative shrink-0 w-full" data-node-id="I160:6068;160:5825">
+                    До 12 месяцев
+                  </p>
+                  <p className="relative shrink-0 w-full" data-node-id="I160:6068;160:5826">
+                    От 0,01 % годовых
+                  </p>
+                </div>
+              </div>
+              <div className="absolute h-[34px] left-[20px] overflow-clip top-[20px] w-[248px]" data-node-id="I160:6068;160:5827" data-name="logo_Techno">
+                <div className="absolute inset-[25.8%_-0.01%_21%_0.01%]" data-node-id="I160:6068;160:5827;104:7814" data-name="Layer1000">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLayer1000} />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="h-[190px] relative shrink-0 w-[340px]" data-node-id="160:6069" data-name="element_Bank">
+            <div className="absolute bg-[var(--colors\/grays\/gray-6,#242424)] content-stretch flex flex-col gap-[16px] items-start left-0 p-[20px] rounded-[16px] top-0 w-[340px]" data-node-id="I160:6069;160:6013" data-name="Container">
+              <div className="[word-break:break-word] content-stretch flex flex-col gap-[var(--spacings\/content-\(4\),4px)] items-start not-italic relative shrink-0 w-full" data-node-id="I160:6069;160:6015" data-name="layout_Heading, Body">
+                <p className="font-['Inter:Bold'] font-bold leading-[0] relative shrink-0 text-[0px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.4px] w-full" data-node-id="I160:6069;160:6016">
+                  <span className="leading-[1.3] text-[20px]">{`Поможем подобрать `}</span>
+                  <span className="leading-[1.3] text-[#7c33fb] text-[20px]">комфортные</span>
+                  <span className="leading-[1.3] text-[20px]">{` условия`}</span>
+                </p>
+                <p className="font-['Inter:Medium'] font-medium leading-[1.25] relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/gray-2,#ebe7f1)] tracking-[-0.28px] w-full whitespace-pre-wrap" data-node-id="I160:6069;160:6017">{`Расскажем о доступных  программах и поможем оформить`}</p>
+              </div>
+              <div className="border border-[var(--colors\/grays\/white,#fdfdfd)] border-solid content-stretch flex gap-[4px] items-center justify-center px-[var(--padding\/padding-\(16\),16px)] py-[var(--padding\/padding-\(12\),12px)] relative rounded-[10px] shrink-0 w-full" data-node-id="I160:6069;160:6014" data-name="button_Basic">
+                <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.28px] whitespace-nowrap" data-node-id="I160:6069;160:6014;1:7010">
+                  Подобрать условия оплаты
+                </p>
+                <div className="relative rounded-[1.882px] shrink-0 size-[16px]" data-node-id="I160:6069;160:6014;1:7011" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
+                  <div className="absolute h-[8.784px] left-[1.41px] top-[3.61px] w-[13.176px]" data-node-id="I160:6069;160:6014;1:7011;1:7283" data-name="Arrow">
+                    <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow2} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

@@ -1,0 +1,518 @@
+const imgSocialInstagram = "https://www.figma.com/api/mcp/asset/852345b4-1e16-4632-8550-24ece5e08a74.svg";
+const imgIconLogomark30Px = "https://www.figma.com/api/mcp/asset/abee8530-bff3-47d0-ab7f-98a1d22c1afa.svg";
+const imgElementName = "https://www.figma.com/api/mcp/asset/bdb37301-b9bf-4c3c-8afd-807b9b0ac014.svg";
+const imgSubtract = "https://www.figma.com/api/mcp/asset/44804bfe-ad25-4cdc-afae-e9800c2524c9.svg";
+const imgIconMaps = "https://www.figma.com/api/mcp/asset/b1b19475-0bae-4c3f-b196-4f046a8f2486.svg";
+const imgGroup = "https://www.figma.com/api/mcp/asset/4fcf44bf-9f2c-4bc2-91d2-bd90b5fda368.svg";
+const imgGroup1 = "https://www.figma.com/api/mcp/asset/8be26799-4094-42e7-a746-c4ef5ca93550.svg";
+const imgVector = "https://www.figma.com/api/mcp/asset/40fc5a7e-079c-460f-b33d-2ca29ddc8fcc.svg";
+const imgArrow = "https://www.figma.com/api/mcp/asset/ee040b07-9f8d-464d-b746-675fce0e3f57.svg";
+const imgSvgInsragram = "https://www.figma.com/api/mcp/asset/fc248e9d-ba73-4d02-9134-db92907ddfcf.svg";
+const imgSvgInsragram1 = "https://www.figma.com/api/mcp/asset/18a580b2-2d96-458c-96e2-b3c34e88a5d2.svg";
+
+type SvgInsragramProps = {
+  className?: string;
+  social?: "Instagram";
+};
+
+function SvgInsragram({ className, social = "Instagram" }: SvgInsragramProps) {
+  return (
+    <div className={className || "relative size-[24px]"} data-node-id="108:4643">
+      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSocialInstagram} />
+    </div>
+  );
+}
+
+type ButtonSocialsProps = {
+  className?: string;
+  property1?: "Default";
+};
+
+function ButtonSocials({ className, property1 = "Default" }: ButtonSocialsProps) {
+  return (
+    <div className={className || "bg-[var(--colors\\/grays\\/gray-6,#242424)] content-stretch flex items-center p-[var(--padding\\/padding-\\(12\\),12px)] relative rounded-[500px]"} data-node-id="108:4677">
+      <SvgInsragram className="relative shrink-0 size-[24px]" />
+    </div>
+  );
+}
+
+type ElementLogoProps = {
+  className?: string;
+  type?: "Type4";
+};
+
+function ElementLogo({ className, type = "Type4" }: ElementLogoProps) {
+  return (
+    <div className={className || "h-[36px] relative w-[116px]"} data-node-id="1:7473">
+      <div className="absolute h-[36.011px] left-[-0.75px] top-[0.17px] w-[116.036px]" data-node-id="1:23587" data-name="element_Logo">
+        <div className="-translate-y-1/2 absolute left-[-5px] size-[37.011px] top-[calc(50%+0.5px)]" data-node-id="I1:23587;4587:8186" data-name="icon_Logomark (30px)">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIconLogomark30Px} />
+        </div>
+        <div className="-translate-y-1/2 absolute h-[30.009px] right-0 top-[calc(50%+2px)] w-[83.026px]" data-node-id="I1:23587;4587:8187" data-name="element_Name">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgElementName} />
+        </div>
+      </div>
+      <div className="absolute h-[5.877px] left-[32.24px] top-[26.35px] w-[19.506px]" data-node-id="1:23588" data-name="Subtract">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSubtract} />
+      </div>
+    </div>
+  );
+}
+
+type BlockHeaderProps = {
+  className?: string;
+  device?: "Desktop";
+};
+
+function BlockHeader({ className, device = "Desktop" }: BlockHeaderProps) {
+  return (
+    <div className={className || "bg-[var(--colors\\/grays\\/white,#fdfdfd)] h-[64px] overflow-clip relative w-[1470px]"} data-node-id="1:8465">
+      <div className="-translate-y-1/2 absolute content-stretch flex gap-[var(--spacings\/content-\(16\),16px)] items-center left-[747px] top-1/2" data-node-id="1:8466" data-name="element_Layout">
+        <div className="content-stretch flex items-center justify-center relative rounded-[10px] shrink-0" data-node-id="1:8467" data-name="button_Basic">
+          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.28px] whitespace-nowrap" data-node-id="I1:8467;1:7155">
+            Модели
+          </p>
+        </div>
+        <div className="content-stretch flex items-center justify-center relative rounded-[10px] shrink-0" data-node-id="1:8468" data-name="button_Basic">
+          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.28px] whitespace-nowrap" data-node-id="I1:8468;1:7155">
+            О нас
+          </p>
+        </div>
+        <div className="content-stretch flex items-center justify-center relative rounded-[10px] shrink-0" data-node-id="1:8469" data-name="button_Basic">
+          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.28px] whitespace-nowrap" data-node-id="I1:8469;1:7155">
+            Кредиты и рассрочки
+          </p>
+        </div>
+        <div className="content-stretch flex items-center justify-center relative rounded-[10px] shrink-0" data-node-id="1:8471" data-name="button_Basic">
+          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.28px] whitespace-nowrap" data-node-id="I1:8471;1:7155">
+            Вопросы
+          </p>
+        </div>
+        <div className="content-stretch flex items-center justify-center relative rounded-[10px] shrink-0" data-node-id="1:8472" data-name="button_Basic">
+          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.28px] whitespace-nowrap" data-node-id="I1:8472;1:7155">
+            Контакты
+          </p>
+        </div>
+      </div>
+      <div className="-translate-y-1/2 absolute bg-[var(--colors\/accents\/purple,#7c33fb)] content-stretch flex items-center justify-center left-[1203px] px-[var(--padding\/padding-\(16\),16px)] py-[var(--padding\/padding-\(12\),12px)] rounded-[10px] top-1/2" data-node-id="1:8473" data-name="button_Basic">
+        <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.28px] whitespace-nowrap" data-node-id="I1:8473;1:6975">
+          Оставить заявку
+        </p>
+      </div>
+      <div className="absolute content-stretch flex items-center justify-center left-[331px] rounded-[10px] top-[23px]" data-node-id="1:8474" data-name="button_Basic">
+        <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.28px] whitespace-nowrap" data-node-id="I1:8474;1:7155">
+          +375 (25) 971-19-02
+        </p>
+      </div>
+      <ElementLogo className="absolute block cursor-pointer h-[36px] left-[123px] top-[14px] w-[116px]" />
+    </div>
+  );
+}
+
+export default function PrivacyPolicyDesktop() {
+  return (
+    <div className="bg-[var(--colors\/grays\/gray-1,#f1eef8)] relative size-full" data-node-id="1:22712" data-name="Privacy Policy (Desktop)">
+      <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[var(--spacings\/content-\(48\),48px)] items-start left-1/2 not-italic top-[108px] w-[1224px]" data-node-id="1:22714" data-name="layout_Заголовок, Разделы">
+        <p className="font-['Inter:Semi_Bold'] font-semibold leading-[1.2] relative shrink-0 text-[40px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.8px] w-full" data-node-id="1:22715">
+          Политика конфиденциальности
+        </p>
+        <div className="content-stretch flex flex-col gap-[var(--spacings\/content-\(24\),24px)] items-start relative shrink-0 w-full" data-node-id="1:22716" data-name="layout_Главы">
+          <p className="font-['Inter:Medium'] font-medium leading-[0] relative shrink-0 text-[0px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] w-full" data-node-id="1:22717">
+            <span className="leading-[1.25] text-[16px]">{`Настоящая Политика конфиденциальности персональных данных (далее – Политика конфиденциальности) подготовлена во исполнение требований Закона Республики Беларусь от 7 мая 2021 г. № 99-3 «О защите персональных данных» (далее- Закон) и действует в отношении всей информации, которую сайт `}</span>
+            <span className="leading-[1.25] text-[#0d0d0d] text-[16px]">www.revolis.by,</span>
+            <span className="leading-[1.25] text-[16px]">{` может получить о Пользователе во время использования сайтов.`}</span>
+          </p>
+          <div className="content-stretch flex flex-col gap-[var(--spacings\/content-\(16\),16px)] items-start relative shrink-0 w-full" data-node-id="1:22718" data-name="layout_Глава 1">
+            <p className="font-['Inter:Semi_Bold'] font-semibold leading-[1.25] relative shrink-0 text-[24px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.48px] w-full" data-node-id="1:22719">
+              1. Определение терминов
+            </p>
+            <p className="font-['Inter:Medium'] font-medium leading-[0] relative shrink-0 text-[0px] text-[color:var(--colors\/grays\/gray-5,#404040)] tracking-[-0.32px] w-full" data-node-id="1:22720">
+              <span className="leading-[1.25] text-[#404040] text-[16px]">
+                1.1.В настоящей Политике конфиденциальности используются следующие термины:
+                <br aria-hidden />
+                {`1.1.1.«Сайт» – сайт `}
+              </span>
+              <span className="leading-[1.25] text-[#404040] text-[16px]">www.revolis.by</span>
+              <span className="leading-[1.25] text-[#404040] text-[16px]">
+                <br aria-hidden />
+                1.1.2. «Администрация Сайта» – уполномоченные сотрудники по управлению сайтом, действующие от имени Индивидуального Предпринимателя Смоляра Виталия Вячеславовича, которые организуют и (или) осуществляет обработку персональных данных, а также определяет цели обработки персональных данных, состав персональных данных, подлежащих обработке, действия (операции), совершаемые с персональными данными.
+                <br aria-hidden />
+                1.1.3. «Персональные данные» — любая информация, относящаяся к прямо или косвенно определенному или определяемому физическому лицу (субъекту персональных данных).
+                <br aria-hidden />
+                1.1.4. «Обработка персональных данных» — любое действие (операция) или совокупность действий (операций), совершаемых с использованием средств автоматизации или без использования таких средств с персональными данными, включая сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передачу (распространение, предоставление, доступ), обезличивание, блокирование, удаление, уничтожение персональных данных.
+                <br aria-hidden />
+                1.1.5. «Конфиденциальность персональных данных» — обязательное для соблюдения Администрацией Сайта или иным получившим доступ к персональным данным лицом требование не допускать их распространения без согласия субъекта персональных данных или наличия иного законного основания.
+                <br aria-hidden />
+                1.1.6. «Пользователь Сайта (далее Пользователь)» – лицо, имеющее доступ к Сайту, посредством сети Интернет и использующее Сайт.
+                <br aria-hidden />
+                1.1.7. «Cookies» — небольшой фрагмент данных, отправленный веб-сервером и хранимый на компьютере пользователя, который веб-клиент или веб-браузер каждый раз пересылает веб-серверу в HTTP-запросе при попытке открыть страницу соответствующего сайта.
+                <br aria-hidden />
+                1.1.8. «IP-адрес» — уникальный сетевой адрес узла в компьютерной сети, построенной по протоколу IP.
+              </span>
+            </p>
+          </div>
+          <div className="content-stretch flex flex-col gap-[var(--spacings\/content-\(16\),16px)] items-start leading-[1.25] relative shrink-0 text-[color:var(--colors\/grays\/black,#0d0d0d)] w-full" data-node-id="1:22721" data-name="layout_Глава 2">
+            <p className="font-['Inter:Semi_Bold'] font-semibold relative shrink-0 text-[24px] tracking-[-0.48px] w-full" data-node-id="1:22722">
+              2. Общие положения
+            </p>
+            <p className="font-['Inter:Medium'] font-medium relative shrink-0 text-[16px] tracking-[-0.32px] w-full" data-node-id="1:22723">
+              2.1.Использование Пользователем Сайта означает согласие с настоящей Политикой конфиденциальности и условиями обработки персональных данных Пользователя.
+              <br aria-hidden />
+              2.2.В случае несогласия с условиями Политики конфиденциальности Пользователь должен прекратить использование Сайта.
+              <br aria-hidden />
+              2.3. Настоящая Политика конфиденциальности применяется только к Сайту. Сайт не контролирует и не несет ответственность за сайты третьих лиц, на которые Пользователь может перейти по ссылкам, доступным на Сайте.
+              <br aria-hidden />
+              2.4. Администрация Сайта не проверяет достоверность персональных данных, предоставляемых Пользователем Сайта.
+            </p>
+          </div>
+          <div className="content-stretch flex flex-col gap-[var(--spacings\/content-\(16\),16px)] items-start relative shrink-0 text-[color:var(--colors\/grays\/black,#0d0d0d)] w-full" data-node-id="1:22724" data-name="layout_Глава 3">
+            <p className="font-['Inter:Semi_Bold'] font-semibold leading-[1.25] relative shrink-0 text-[24px] tracking-[-0.48px] w-full" data-node-id="1:22725">
+              3. Предмет политики конфиденциальности
+            </p>
+            <p className="font-['Inter:Medium'] font-medium leading-[0] relative shrink-0 text-[0px] tracking-[-0.32px] w-full whitespace-pre-wrap" data-node-id="1:22726">
+              <span className="leading-[1.25] text-[16px]">
+                3.1.Настоящая Политика конфиденциальности устанавливает обязательства Администрации Сайта по неразглашению и обеспечению режима защиты конфиденциальности персональных данных, которые Пользователь предоставляет по запросу Администрации Сайта при регистрации на Сайте или при совершении иных действий посредством Сайта.
+                <br aria-hidden />
+                {`3.2.Персональные данные, разрешённые к обработке в рамках настоящей Политики конфиденциальности, предоставляются Пользователем путём заполнения формы электронного обращения на `}
+              </span>
+              <span className="leading-[1.25] text-[#0d0d0d] text-[16px]">{`странице «Главная»,  путём заполнения формы обратной связи на странице «Отправка заявки на запись», путём отправки заявок на сайте`}</span>
+              <span className="leading-[1.25] text-[16px]">
+                {` или совершения иных действий на Сайте, и могут включать в себя следующую информацию:`}
+                <br aria-hidden />
+                3.2.1. фамилию, имя, отчество Пользователя;
+                <br aria-hidden />
+                3.2.2. контактный телефон Пользователя;
+                <br aria-hidden />
+                3.2.3. адрес электронной почты (e-mail);
+                <br aria-hidden />
+                3.2.4. юридический адрес Пользователя, полное наименование юридического лица;
+                <br aria-hidden />
+                3.2.5. место жительства Пользователя.
+                <br aria-hidden />
+                3.3. Сайт защищает данные, которые автоматически передаются при посещении страниц, на которых установлен статистический скрипт системы («пиксель»):
+                <br aria-hidden />
+                — IP адрес;
+                <br aria-hidden />
+                — информация из cookies;
+                <br aria-hidden />
+                — информация о браузере (или иной программе, которая осуществляет доступ к показу Сайта);
+                <br aria-hidden />
+                — время доступа;
+                <br aria-hidden />
+                — адрес страницы;
+                <br aria-hidden />
+                — реферер (адрес предыдущей страницы).
+                <br aria-hidden />
+                3.3.1. Отключение cookies может повлечь невозможность доступа к частям Сайта, требующим авторизации.
+                <br aria-hidden />
+                3.3.2. Сайт осуществляет сбор статистики об IP-адресах своих посетителей. Данная информация используется с целью выявления и решения технических проблем.
+                <br aria-hidden />
+                3.4. Любая иная персональная информация неоговоренная выше (используемые браузеры и операционные системы и т.д.) подлежит надежному хранению и нераспространению, за исключением случаев, предусмотренных в п.п. 5.2. и 5.3. настоящей Политики конфиденциальности.
+              </span>
+            </p>
+          </div>
+          <div className="content-stretch flex flex-col gap-[var(--spacings\/content-\(16\),16px)] items-start leading-[1.25] relative shrink-0 text-[color:var(--colors\/grays\/black,#0d0d0d)] w-full" data-node-id="1:22727" data-name="layout_Глава 4">
+            <p className="font-['Inter:Semi_Bold'] font-semibold relative shrink-0 text-[24px] tracking-[-0.48px] w-full" data-node-id="1:22728">
+              4. Цели сбора персональной информации пользователя
+            </p>
+            <p className="font-['Inter:Medium'] font-medium relative shrink-0 text-[16px] tracking-[-0.32px] w-full" data-node-id="1:22729">
+              4.1. Персональные данные Пользователя Администрация Сайта может использовать в целях:
+              <br aria-hidden />
+              4.1.1. Идентификации Пользователя, зарегистрированного на Сайте.
+              <br aria-hidden />
+              4.1.2. Предоставления Пользователю доступа к персонализированным ресурсам Сайта.
+              <br aria-hidden />
+              4.1.3. Установления с Пользователем обратной связи, включая направление уведомлений, запросов, касающихся использования Сайта, оказания услуг, обработка запросов и заявок от Пользователя.
+              <br aria-hidden />
+              4.1.4. Определения места нахождения Пользователя для обеспечения безопасности, предотвращения мошенничества.
+              <br aria-hidden />
+              4.1.5. Подтверждения достоверности и полноты персональных данных, предоставленных Пользователем.
+              <br aria-hidden />
+              4.1.6. Предоставления Пользователю эффективной клиентской и технической поддержки при возникновении проблем связанных с использованием Сайта.
+              <br aria-hidden />
+              4.1.7. Предоставления Пользователю с его согласия, новостной рассылки и иных сведений от имени Сайта.
+              <br aria-hidden />
+              4.1.8. Осуществления рекламной деятельности с согласия Пользователя.
+              <br aria-hidden />
+              4.1.9. Предоставления доступа Пользователю на сайты или сервисы партнеров Сайта с целью получения продуктов, обновлений и услуг.
+            </p>
+          </div>
+          <div className="content-stretch flex flex-col gap-[var(--spacings\/content-\(16\),16px)] items-start leading-[1.25] relative shrink-0 text-[color:var(--colors\/grays\/black,#0d0d0d)] w-full" data-node-id="1:22730" data-name="layout_Глава 5">
+            <p className="font-['Inter:Semi_Bold'] font-semibold relative shrink-0 text-[24px] tracking-[-0.48px] w-full" data-node-id="1:22731">
+              5. Способы и сроки обработки персональной информации
+            </p>
+            <p className="font-['Inter:Medium'] font-medium relative shrink-0 text-[16px] tracking-[-0.32px] w-full" data-node-id="1:22732">
+              5.1. Обработка персональных данных Пользователя осуществляется без ограничения срока, любым законным способом, в том числе в информационных системах персональных данных с использованием средств автоматизации или без использования таких средств.
+              <br aria-hidden />
+              5.2. Пользователь соглашается с тем, что Администрация Сайта вправе передавать персональные данные третьим лицам, в частности, курьерским службам, организациями почтовой связи, операторам электросвязи, исключительно в целях выполнения заказа Пользователя, оформленного на Сайте.
+              <br aria-hidden />
+              5.3. Персональные данные Пользователя могут быть переданы уполномоченным органам государственной власти Республики Беларусь только по основаниям и в порядке, установленным законодательством Республики Беларусь.
+              <br aria-hidden />
+              5.4. При утрате или разглашении персональных данных Администрация сайта информирует Пользователя об утрате или разглашении персональных данных.
+              <br aria-hidden />
+              5.5. Администрация сайта принимает необходимые организационные и технические меры для защиты персональной информации Пользователя от неправомерного или случайного доступа, уничтожения, изменения, блокирования, копирования, распространения, а также от иных неправомерных действий третьих лиц.
+              <br aria-hidden />
+              5.6. Администрация сайта совместно с Пользователем принимает все необходимые меры по предотвращению убытков или иных отрицательных последствий, вызванных утратой или разглашением персональных данных Пользователя.
+            </p>
+          </div>
+          <div className="content-stretch flex flex-col gap-[var(--spacings\/content-\(16\),16px)] items-start leading-[1.25] relative shrink-0 text-[color:var(--colors\/grays\/black,#0d0d0d)] w-full" data-node-id="1:22733" data-name="layout_Глава 6">
+            <p className="font-['Inter:Semi_Bold'] font-semibold relative shrink-0 text-[24px] tracking-[-0.48px] w-full" data-node-id="1:22734">
+              6. Обязательства сторон
+            </p>
+            <p className="font-['Inter:Medium'] font-medium relative shrink-0 text-[16px] tracking-[-0.32px] w-full" data-node-id="1:22735">
+              6.1. Пользователь обязан:
+              <br aria-hidden />
+              6.1.1. Предоставить информацию о персональных данных, необходимую для пользования Сайтом.
+              <br aria-hidden />
+              6.1.2. Обновить, дополнить предоставленную информацию о персональных данных в случае изменения данной информации.
+              <br aria-hidden />
+              6.2. Администрация сайта обязана:
+              <br aria-hidden />
+              6.2.1. Использовать полученную информацию исключительно для целей, указанных в п.4 настоящей Политики конфиденциальности.
+              <br aria-hidden />
+              6.2.2. Обеспечить хранение конфиденциальной информации в тайне, не разглашать без предварительного письменного разрешения Пользователя, а также не осуществлять продажу, обмен, опубликование, либо разглашение иными возможными способами переданных персональных данных Пользователя, за исключением п.п. 5.2. и 5.3. настоящей Политики Конфиденциальности.
+              <br aria-hidden />
+              6.2.3. Принимать меры предосторожности для защиты конфиденциальности персональных данных Пользователя согласно порядку, обычно используемого для защиты такого рода информации в существующем деловом обороте.
+              <br aria-hidden />
+              6.2.4. Осуществить блокирование персональных данных, относящихся к соответствующему Пользователю, с момента обращения или запроса Пользователя или его законного представителя либо уполномоченного органа по защите прав субъектов персональных данных на период проверки, в случае выявления недостоверных персональных данных или неправомерных действий.
+            </p>
+          </div>
+          <div className="content-stretch flex flex-col gap-[var(--spacings\/content-\(16\),16px)] items-start leading-[1.25] relative shrink-0 text-[color:var(--colors\/grays\/black,#0d0d0d)] w-full" data-node-id="1:22736" data-name="layout_Глава 7">
+            <p className="font-['Inter:Semi_Bold'] font-semibold relative shrink-0 text-[24px] tracking-[-0.48px] w-full" data-node-id="1:22737">
+              7. Ответственность сторон
+            </p>
+            <p className="font-['Inter:Medium'] font-medium relative shrink-0 text-[16px] tracking-[-0.32px] w-full" data-node-id="1:22738">
+              7.1. Администрация Сайта, не исполнившая свои обязательства, несёт ответственность за убытки, понесённые Пользователем в связи с неправомерным использованием персональных данных, в соответствии с законодательством Республики Беларусь, за исключением случаев, предусмотренных п.п. 5.2., 5.3. и 7.2. настоящей Политики Конфиденциальности.
+              <br aria-hidden />
+              7.2. В случае утраты или разглашения Конфиденциальной информации Администрация Сайта не несёт ответственность, если данная конфиденциальная информация:
+              <br aria-hidden />
+              7.2.1. Стала публичным достоянием до её утраты или разглашения.
+              <br aria-hidden />
+              7.2.2. Была получена от третьей стороны до момента её получения Администрацией Сайта.
+              <br aria-hidden />
+              7.2.3. Была разглашена с согласия Пользователя.
+            </p>
+          </div>
+          <div className="content-stretch flex flex-col gap-[var(--spacings\/content-\(16\),16px)] items-start leading-[1.25] relative shrink-0 text-[color:var(--colors\/grays\/black,#0d0d0d)] w-full" data-node-id="1:22739" data-name="layout_Глава 8">
+            <p className="font-['Inter:Semi_Bold'] font-semibold relative shrink-0 text-[24px] tracking-[-0.48px] w-full" data-node-id="1:22740">
+              8. Разрешение споров
+            </p>
+            <p className="font-['Inter:Medium'] font-medium relative shrink-0 text-[16px] tracking-[-0.32px] w-full" data-node-id="1:22741">
+              8.1. До обращения в суд с иском по спорам, возникающим из отношений между Пользователем Сайта и Администрацией Сайта, обязательным является предъявление претензии (письменного предложения о добровольном урегулировании спора).
+              <br aria-hidden />
+              8.2. Получатель претензии в течение 30 календарных дней со дня получения претензии, письменно уведомляет заявителя претензии о результатах рассмотрения претензии.
+              <br aria-hidden />
+              8.3. При не достижении соглашения спор будет передан на рассмотрение в судебный орган в соответствии с действующим законодательством Республики Беларусь.
+              <br aria-hidden />
+              8.4. К настоящей Политике конфиденциальности и отношениям между Пользователем и Администрацией Сайта применяется действующее законодательство Республики Беларусь.
+            </p>
+          </div>
+          <div className="content-stretch flex flex-col gap-[var(--spacings\/content-\(16\),16px)] items-start relative shrink-0 text-[color:var(--colors\/grays\/black,#0d0d0d)] w-full" data-node-id="1:22742" data-name="layout_Глава 9">
+            <p className="font-['Inter:Semi_Bold'] font-semibold leading-[1.25] relative shrink-0 text-[24px] tracking-[-0.48px] w-full" data-node-id="1:22743">
+              9. Дополнительные условия
+            </p>
+            <p className="font-['Inter:Medium'] font-medium leading-[0] relative shrink-0 text-[0px] tracking-[-0.32px] w-full" data-node-id="1:22744">
+              <span className="leading-[1.25] text-[16px]">
+                9.1. Администрация Сайта вправе вносить изменения в настоящую Политику конфиденциальности без согласия Пользователя.
+                <br aria-hidden />
+                9.2. Новая Политика конфиденциальности вступает в силу с момента ее размещения на Сайте, если иное не предусмотрено новой редакцией Политики конфиденциальности.
+                <br aria-hidden />
+                {`9.3. Все предложения или вопросы по настоящей Политике конфиденциальности следует направлять на электронный адрес Администрации Сайта: `}
+              </span>
+              <span className="leading-[1.25] text-[#0d0d0d] text-[16px]">info@revolis.by</span>
+              <span className="leading-[1.25] text-[16px]">
+                <br aria-hidden />
+                {`9.4. Действующая Политика конфиденциальности размещена на странице по адресу: `}
+              </span>
+              <span className="leading-[1.25] text-[#0d0d0d] text-[16px]">{`https://revolis.by/privacypolicy`}</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <BlockHeader className="-translate-x-1/2 absolute bg-[var(--colors\/grays\/white,#fdfdfd)] h-[64px] left-1/2 overflow-clip top-0 w-[1470px]" />
+      <div className="-translate-x-1/2 absolute bg-[var(--colors\/grays\/black,#0d0d0d)] bottom-0 h-[510px] left-1/2 w-[1470px]" data-node-id="109:5178" data-name="block_Footer">
+        <div className="absolute bottom-[40px] h-[14px] left-[123px] w-[1224px]" data-node-id="I109:5178;109:4785" data-name="frame_Policy, Copyright">
+          <p className="[word-break:break-word] absolute bottom-[14px] font-['Inter:Medium'] font-medium leading-[1.2] not-italic right-0 text-[12px] text-[color:var(--colors\/grays\/gray-5,#43404a)] text-right tracking-[-0.24px] translate-y-full whitespace-nowrap" data-node-id="I109:5178;1:8517">
+            Revolis.Мото © 2026 All rights reserved
+          </p>
+          <div className="absolute bottom-0 content-stretch flex gap-[var(--spacings\/content-\(16\),16px)] items-center left-0" data-node-id="I109:5178;1:8518" data-name="element_Layout">
+            <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I109:5178;1:8519" data-name="button_Basic">
+              <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.2] not-italic relative shrink-0 text-[12px] text-[color:var(--colors\/grays\/gray-5,#43404a)] tracking-[-0.24px] whitespace-nowrap" data-node-id="I109:5178;1:8519;1:7191">
+                Политика конфиденциальности
+              </p>
+            </div>
+            <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I109:5178;1:8520" data-name="button_Basic">
+              <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.2] not-italic relative shrink-0 text-[12px] text-[color:var(--colors\/grays\/gray-5,#43404a)] tracking-[-0.24px] whitespace-nowrap" data-node-id="I109:5178;1:8520;1:7191">
+                Политика обработки персональных данных
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="[word-break:break-word] absolute content-stretch flex flex-col font-['Inter:Semi_Bold'] font-semibold gap-[var(--spacings\/content-\(8\),8px)] items-start left-[435px] not-italic top-[40px] whitespace-nowrap" data-node-id="I109:5178;1:8537" data-name="layout_Адрес">
+          <p className="leading-[1.3] relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/gray-5,#43404a)] tracking-[-0.28px]" data-node-id="I109:5178;1:8538">
+            Адрес:
+          </p>
+          <p className="leading-[1.2] relative shrink-0 text-[32px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.64px]" data-node-id="I109:5178;1:8539">
+            г. Витебск, пр-т Московский, 111
+          </p>
+        </div>
+        <div className="absolute content-stretch flex flex-col gap-[var(--spacings\/content-\(12\),12px)] items-start right-[678px] top-[128px]" data-node-id="I109:5178;1:8540" data-name="layout_Карты">
+          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/gray-5,#43404a)] tracking-[-0.28px] whitespace-nowrap" data-node-id="I109:5178;1:8541">
+            Проложить маршрут:
+          </p>
+          <div className="content-stretch flex flex-col gap-[var(--spacings\/content-\(4\),4px)] items-start relative shrink-0 w-full" data-node-id="I109:5178;1:8542" data-name="layout_Yandex Maps, Google Maps">
+            <div className="content-stretch flex gap-[6px] items-center relative shrink-0" data-node-id="I109:5178;1:8543" data-name="Yandex Maps">
+              <div className="relative shrink-0 size-[18px]" data-node-id="I109:5178;1:8544" data-name="icon_Maps">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIconMaps} />
+              </div>
+              <div className="content-stretch flex items-center justify-center relative rounded-[10px] shrink-0" data-node-id="I109:5178;1:8545" data-name="button_Basic">
+                <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.25] not-italic relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.28px] whitespace-nowrap" data-node-id="I109:5178;1:8545;1:7157">
+                  Yandex Maps
+                </p>
+              </div>
+            </div>
+            <div className="content-stretch flex gap-[6px] items-center relative shrink-0" data-node-id="I109:5178;1:8546" data-name="Google Maps">
+              <div className="bg-[var(--colors\/grays\/white,#fdfdfd)] overflow-clip relative rounded-[4px] shrink-0 size-[18px]" data-node-id="I109:5178;1:8547" data-name="icon_Maps">
+                <div className="-translate-x-1/2 -translate-y-1/2 absolute contents left-1/2 top-1/2" data-node-id="I109:5178;1:8547;1:7433" data-name="Clip path group">
+                  <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[14.273px] left-[calc(50%-0.05px)] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[2.156px_0.516px] mask-size-[12.563px_18px] top-1/2 w-[12.516px]" data-node-id="I109:5178;1:8547;1:7436" style={{ maskImage: `url("${imgGroup}")` }} data-name="Group">
+                    <div className="absolute inset-[-12.21%_-13.99%_-10.28%_-14.02%]">
+                      <img alt="" className="block max-w-none size-full" src={imgGroup1} />
+                    </div>
+                  </div>
+                </div>
+                <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[3.586px] top-[calc(50%-2.04px)]" data-node-id="I109:5178;1:8547;1:7442" data-name="Vector">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector} />
+                </div>
+              </div>
+              <div className="content-stretch flex items-center justify-center relative rounded-[10px] shrink-0" data-node-id="I109:5178;1:8548" data-name="button_Basic">
+                <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.25] not-italic relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.28px] whitespace-nowrap" data-node-id="I109:5178;1:8548;1:7157">
+                  Google Maps
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="absolute content-stretch flex flex-col gap-[var(--spacings\/content-\(12\),12px)] items-start left-[851px] top-[128px]" data-node-id="I109:5178;1:8549" data-name="layout_Телефоны">
+          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/gray-5,#43404a)] tracking-[-0.28px] whitespace-nowrap" data-node-id="I109:5178;1:8550">
+            Телефоны:
+          </p>
+          <div className="content-stretch flex flex-col gap-[var(--spacings\/content-\(4\),4px)] items-start relative shrink-0" data-node-id="I109:5178;1:8551" data-name="layout_МТС, А1">
+            <div className="content-stretch flex items-center justify-center relative rounded-[10px] shrink-0" data-node-id="I109:5178;1:8553" data-name="button_Basic">
+              <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.25] not-italic relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.28px] whitespace-nowrap" data-node-id="I109:5178;1:8553;1:7157">
+                +375 (25) 971-19-02
+              </p>
+            </div>
+            <div className="content-stretch flex items-center justify-center relative rounded-[10px] shrink-0" data-node-id="I109:5178;1:8556" data-name="button_Basic">
+              <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.25] not-italic relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.28px] whitespace-nowrap" data-node-id="I109:5178;1:8556;1:7157">
+                +375 (29) 676-67-65
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="[word-break:break-word] absolute content-stretch flex flex-col gap-[var(--spacings\/content-\(12\),12px)] items-start left-[435px] not-italic text-[14px] top-[128px] tracking-[-0.28px] whitespace-nowrap" data-node-id="I109:5178;1:8558" data-name="layout_Режим работы">
+          <p className="font-['Inter:Semi_Bold'] font-semibold leading-[1.3] relative shrink-0 text-[color:var(--colors\/grays\/gray-5,#43404a)]" data-node-id="I109:5178;1:8559">
+            Режим работы:
+          </p>
+          <div className="content-stretch flex flex-col gap-[var(--spacings\/content-\(4\),4px)] items-start relative shrink-0 text-[color:var(--colors\/grays\/white,#fdfdfd)] w-full" data-node-id="I109:5178;1:8560" data-name="layout_Пн-Пт, Сб, Вс">
+            <div className="content-stretch flex gap-[var(--spacings\/content-\(8\),8px)] items-center relative shrink-0" data-node-id="I109:5178;1:8561" data-name="layout_Пн-Пт">
+              <p className="font-['Inter:Semi_Bold'] font-semibold leading-[1.3] relative shrink-0" data-node-id="I109:5178;1:8562">
+                Пн, Пт:
+              </p>
+              <p className="font-['Inter:Medium'] font-medium leading-[1.25] relative shrink-0" data-node-id="I109:5178;1:8563">
+                18:00 – 20:00
+              </p>
+            </div>
+            <div className="content-stretch flex gap-[var(--spacings\/content-\(8\),8px)] items-center relative shrink-0" data-node-id="I109:5178;1:8564" data-name="layout_Сб">
+              <p className="font-['Inter:Semi_Bold'] font-semibold leading-[1.3] relative shrink-0" data-node-id="I109:5178;1:8565">
+                Суббота:
+              </p>
+              <p className="font-['Inter:Medium'] font-medium leading-[1.25] relative shrink-0" data-node-id="I109:5178;1:8566">
+                10:00 – 13:00
+              </p>
+            </div>
+            <div className="content-stretch flex gap-[var(--spacings\/content-\(8\),8px)] items-center relative shrink-0" data-node-id="I109:5178;1:8567" data-name="layout_Вс">
+              <p className="font-['Inter:Semi_Bold'] font-semibold leading-[1.3] relative shrink-0" data-node-id="I109:5178;1:8568">
+                В другое время:
+              </p>
+              <p className="font-['Inter:Medium'] font-medium leading-[1.25] relative shrink-0" data-node-id="I109:5178;1:8569">
+                По записи
+              </p>
+            </div>
+          </div>
+        </div>
+        <button className="absolute border border-[var(--colors\/grays\/white,#fdfdfd)] border-solid content-stretch cursor-pointer flex gap-[4px] items-center justify-center px-[var(--padding\/padding-\(16\),16px)] py-[var(--padding\/padding-\(12\),12px)] right-[126px] rounded-[10px] top-[40px]" data-node-id="I109:5178;106:4505" data-name="button_Basic">
+          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/white,#fdfdfd)] text-left tracking-[-0.28px] whitespace-nowrap" data-node-id="I109:5178;106:4505;1:7010">
+            Вернуться наверх
+          </p>
+          <div className="relative rounded-[1.882px] shrink-0 size-[16px]" data-node-id="I109:5178;106:4505;1:7011" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
+            <div className="absolute flex h-[13.176px] items-center justify-center left-[3.61px] top-[1.41px] w-[8.784px]" data-node-id="I109:5178;106:4505;1:7011;1:7291">
+              <div className="-rotate-90 flex-none">
+                <div className="h-[8.784px] relative w-[13.176px]" data-name="Arrow">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </button>
+        <p className="[word-break:break-word] absolute bottom-[106px] font-['Inter:Medium'] font-medium leading-[1.2] left-[calc(50%-612px)] not-italic text-[12px] text-[color:var(--colors\/grays\/gray-5,#43404a)] tracking-[-0.24px] translate-y-full uppercase w-[1224px]" data-node-id="I109:5178;106:4553">
+          ИП Бугаев Марк Александрович. УНП: 391844915. Республика Беларусь, г. Витебск, пр-т Московский, 111, пом. 224. Свидетельство о государственной регистрации от 29 июня 2023 года. Выдано Администрацией Октябрьского района г. Витебска. Внесён в Торговый реестр Республики Беларусь:
+        </p>
+        <div className="absolute bottom-[130px] content-stretch flex gap-[var(--spacings\/content-\(12\),12px)] items-center right-[123px]" data-node-id="I109:5178;108:4699" data-name="layout_Buttons">
+          <ButtonSocials className="bg-[var(--colors\/grays\/gray-6,#242424)] content-stretch flex items-center p-[var(--padding\/padding-\(12\),12px)] relative rounded-[500px] shrink-0" />
+          <div className="bg-[var(--colors\/grays\/gray-6,#242424)] content-stretch flex items-center p-[var(--padding\/padding-\(12\),12px)] relative rounded-[500px] shrink-0" data-node-id="I109:5178;108:4689" data-name="button_Socials">
+            <div className="relative shrink-0 size-[24px]" data-node-id="I109:5178;108:4689;108:4672" data-name="svg_Insragram">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSvgInsragram} />
+            </div>
+          </div>
+          <div className="bg-[var(--colors\/grays\/gray-6,#242424)] content-stretch flex items-center p-[var(--padding\/padding-\(12\),12px)] relative rounded-[500px] shrink-0" data-node-id="I109:5178;108:4694" data-name="button_Socials">
+            <div className="relative shrink-0 size-[24px]" data-node-id="I109:5178;108:4694;108:4672" data-name="svg_Insragram">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSvgInsragram1} />
+            </div>
+          </div>
+        </div>
+        <div className="absolute content-stretch flex flex-col gap-[var(--spacings\/content-\(12\),12px)] items-start left-[123px] top-[40px]" data-node-id="I109:5178;109:4800" data-name="element_Layout">
+          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/gray-5,#43404a)] tracking-[-0.28px] whitespace-nowrap" data-node-id="I109:5178;109:4801">
+            Навигация:
+          </p>
+          <div className="content-stretch cursor-pointer flex flex-col gap-[var(--spacings\/content-\(8\),8px)] items-start relative shrink-0 w-full" data-node-id="I109:5178;109:4802">
+            <div className="content-stretch flex items-center justify-center relative rounded-[10px] shrink-0" data-node-id="I109:5178;109:4803" data-name="button_Basic">
+              <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[20px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.4px] whitespace-nowrap" data-node-id="I109:5178;109:4803;1:7163">
+                Модели
+              </p>
+            </div>
+            <div className="content-stretch flex items-center justify-center relative rounded-[10px] shrink-0" data-node-id="I109:5178;109:4804" data-name="button_Basic">
+              <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[20px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.4px] whitespace-nowrap" data-node-id="I109:5178;109:4804;1:7163">
+                О нас
+              </p>
+            </div>
+            <div className="content-stretch flex items-center justify-center relative rounded-[10px] shrink-0" data-node-id="I109:5178;109:4805" data-name="button_Basic">
+              <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[20px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.4px] whitespace-nowrap" data-node-id="I109:5178;109:4805;1:7163">
+                Кредиты и рассрочки
+              </p>
+            </div>
+            <div className="content-stretch flex items-center justify-center relative rounded-[10px] shrink-0" data-node-id="I109:5178;109:4806" data-name="button_Basic">
+              <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[20px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.4px] whitespace-nowrap" data-node-id="I109:5178;109:4806;1:7163">
+                Вопросы
+              </p>
+            </div>
+            <div className="content-stretch flex items-center justify-center relative rounded-[10px] shrink-0" data-node-id="I109:5178;109:4807" data-name="button_Basic">
+              <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[20px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.4px] whitespace-nowrap" data-node-id="I109:5178;109:4807;1:7163">
+                Контакты
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+These styles are contained in the design: H1 — 40: Font(family: "Inter", style: Semi Bold, size: 40, weight: 600, lineHeight: 1.2000000476837158, letterSpacing: -2), P2 — 16 (P1 Mobile): Font(family: "Inter", style: Medium, size: 16, weight: 500, lineHeight: 1.25, letterSpacing: -2), H3 — 24 (H2 Mobile): Font(family: "Inter", style: Semi Bold, size: 24, weight: 600, lineHeight: 1.25, letterSpacing: -2), H7 — 14: Font(family: "Inter", style: Semi Bold, size: 14, weight: 600, lineHeight: 1.2999999523162842, letterSpacing: -2), Button (XS) — 12: Font(family: "Inter", style: Medium, size: 12, weight: 500, lineHeight: 1.2000000476837158, letterSpacing: -2), H2 — 32 (H1 Mobile): Font(family: "Inter", style: Semi Bold, size: 32, weight: 600, lineHeight: 1.2000000476837158, letterSpacing: -2), Button (S, BOLD) — 14: Font(family: "Inter", style: Semi Bold, size: 14, weight: 600, lineHeight: 1.25, letterSpacing: -2), H6 — 14: Font(family: "Inter", style: Semi Bold, size: 14, weight: 600, lineHeight: 1.2999999523162842, letterSpacing: -2), P3 — 14 (P2 Mobile): Font(family: "Inter", style: Medium, size: 14, weight: 500, lineHeight: 1.25, letterSpacing: -2), Primary - Reddish Orange: #FF4A14, H4 — 20 (H3 Mobile): Font(family: "Inter", style: Semi Bold, size: 20, weight: 600, lineHeight: 1.2999999523162842, letterSpacing: -2).
+The generated code contains image and SVG URL constants, e.g. const image = 'https://www.figma.com/api/mcp/asset/550e8400-e29b-41d4-a716-446655440000.png'. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.

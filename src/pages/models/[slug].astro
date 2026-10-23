@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProductPage from '../../components/product/ProductPage.astro';
+import { productPages } from '../../data/products';
+import type { ProductPage as ProductPageData } from '../../data/products';
+import '../../styles/home.css';
+import '../../styles/home-mobile.css';
+import '../../styles/product.css';
+export function getStaticPaths() {
+  return productPages.map(product => ({ params: { slug: product.slug }, props: { product } }));
+}
+interface Props { product: ProductPageData; }
+const { product } = Astro.props;
+---
+<BaseLayout title={`${product.model.name} — ${product.model.brand} | Revolis.Мото`} description={product.details.intro}><ProductPage product={product} /></BaseLayout>
