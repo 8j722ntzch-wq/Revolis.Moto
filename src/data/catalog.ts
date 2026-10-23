@@ -1,3 +1,4 @@
+import { productMedia } from './products/media.ts';
 import { catalogueContent } from './catalog-content.ts';
 export interface ModelFeature {
   icon: 'engine' | 'drive' | 'passport' | 'equipment';
@@ -85,7 +86,7 @@ export const catalogueModelReferences: readonly Model[] = [
 // Current sales scope. Reference fixtures above remain available only for design demos.
 export const models: readonly Model[] = modelRegistry.filter(model => model.brand !== 'RBMotors').map(model => {
  const visual = catalogueModelReferences.find(reference => reference.path === model.path);
- return { ...visual, ...model, image: visual?.image ?? null, registration: visual?.registration ?? model.registration, ...catalogueContent[model.id], pageReady: true };
+ return { ...visual, ...model, image: productMedia[model.id]?.photos.find(photo => photo.color === productMedia[model.id].defaultColor)?.src ?? visual?.image ?? null, registration: visual?.registration ?? model.registration, ...catalogueContent[model.id], pageReady: true };
 });
 export const catalogueModels = catalogueModelReferences.flatMap(reference => {
  const model = models.find(model => model.path === reference.path);

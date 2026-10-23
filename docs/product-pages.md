@@ -54,7 +54,7 @@
 
 ## 2026-10-23 - SKU Hero colors
 
-Shared ProductColors component follows fresh Desktop 333:9925 and Mobile 333:10359: 40px swatches, 8px gap/radius, between intro and price. Original camouflage SVG retained. Palette is provisional for all seven SKU pages until the user supplies per-model availability. Set `colors: ['gray', 'blue']` in a model data file to override; omit for the six-color template palette, or use `colors: []` to hide the block. Registry: src/data/product-colors.ts. Names are exposed on hover/focus/tap; swatches do not change photos, price or lead data.
+Shared ProductColors component follows fresh Desktop 333:9925 and Mobile 333:10359: 40px swatches, 8px gap/radius, between intro and price. Original camouflage SVG retained. Per-model color lists were confirmed by the user on 2026-10-23: Hammer 200 blue/gray; Hammer 300 blue/yellow; Striker 400 green; Striker 500/700 with or without EPS gray/green/black/camouflage. The former khaki name is removed; camouflage is Камуфляж, and the solid green swatch is Зелёный. Photos and color-based photo filtering remain deferred. Set `colors: ['gray', 'blue']` in a model data file to override; omit for the six-color template palette, or use `colors: []` to hide the block. Registry: src/data/product-colors.ts. Names are exposed on hover/focus/tap; swatches do not change photos, price or lead data.
 
 ## 2026-10-23 — карточки и SKU
 
@@ -63,3 +63,9 @@ Shared ProductColors component follows fresh Desktop 333:9925 and Mobile 333:103
 Наличие остаётся неподтверждённым: у 400 статусы Desktop/Mobile расходятся. Таблицы скрывают строки с null, пустыми значениями и «Уточняется», а также пустые группы. Спорные исходные данные сохранены для последующего заполнения.
 
 2026-10-23: пустой блок нижней галереи SKU скрыт до наполнения galleryPhotos; Hero независим. Правила передачи фото: docs/images.md.
+
+## Фотографии — 23.10.2026
+
+28 пользовательских фотографий подключены к карточкам главной, каталога и Hero семи SKU. Реестр `src/data/products/media.ts` хранит цвет, порядок, размеры и главный цвет модели. Striker 500/700 используют общие файлы; у 400 отдельный снимок без пассажирской спинки. Hammer 200: 6 серых и 5 синих фото; Hammer 300: по 6 каждого цвета.
+
+Выбор цвета переключает только Hero и его независимый полноэкранный просмотр; миниатюры, +N и счётчик относятся к выбранному цвету. Нижняя Галерея остаётся скрытой. Для новых фото подготовлены WebP-варианты от 160 до исходного размера, без увеличения и обрезки. Главные цвета: 400 зелёный, 500 серый, 500 EPS чёрный, 700 зелёный, 700 EPS камуфляж, Hammer 200 серый, Hammer 300 синий.

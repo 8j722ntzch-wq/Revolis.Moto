@@ -649,5 +649,1227 @@
         "bytes": 24352
       }
     ]
+  },
+  "/assets/products/baltmotors-400-efi/striker-400__green__01-front-right-no-backrest.webp": {
+    "width": 1920,
+    "height": 1920,
+    "originalBytes": 176620,
+    "variants": [
+      {
+        "src": "/assets/optimized/products/baltmotors-400-efi/striker-400__green__01-front-right-no-backrest-160.webp",
+        "width": 160,
+        "height": 160,
+        "bytes": 3838
+      },
+      {
+        "src": "/assets/optimized/products/baltmotors-400-efi/striker-400__green__01-front-right-no-backrest-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 11524
+      },
+      {
+        "src": "/assets/optimized/products/baltmotors-400-efi/striker-400__green__01-front-right-no-backrest-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 22450
+      },
+      {
+        "src": "/assets/optimized/products/baltmotors-400-efi/striker-400__green__01-front-right-no-backrest-768.webp",
+        "width": 768,
+        "height": 768,
+        "bytes": 43406
+      },
+      {
+        "src": "/assets/optimized/products/baltmotors-400-efi/striker-400__green__01-front-right-no-backrest-1200.webp",
+        "width": 1200,
+        "height": 1200,
+        "bytes": 76906
+      },
+      {
+        "src": "/assets/optimized/products/baltmotors-400-efi/striker-400__green__01-front-right-no-backrest-1920.webp",
+        "width": 1920,
+        "height": 1920,
+        "bytes": 141450
+      }
+    ]
+  },
+  "/assets/products/mikilon-hammer-touring-200/hammer-200__blue__01-front-right.webp": {
+    "width": 1920,
+    "height": 1920,
+    "originalBytes": 120010,
+    "variants": [
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__blue__01-front-right-160.webp",
+        "width": 160,
+        "height": 160,
+        "bytes": 2766
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__blue__01-front-right-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 7850
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__blue__01-front-right-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 14232
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__blue__01-front-right-768.webp",
+        "width": 768,
+        "height": 768,
+        "bytes": 27688
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__blue__01-front-right-1200.webp",
+        "width": 1200,
+        "height": 1200,
+        "bytes": 48104
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__blue__01-front-right-1920.webp",
+        "width": 1920,
+        "height": 1920,
+        "bytes": 90978
+      }
+    ]
+  },
+  "/assets/products/mikilon-hammer-touring-200/hammer-200__blue__02-front.webp": {
+    "width": 1920,
+    "height": 1920,
+    "originalBytes": 88814,
+    "variants": [
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__blue__02-front-160.webp",
+        "width": 160,
+        "height": 160,
+        "bytes": 2086
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__blue__02-front-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 5822
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__blue__02-front-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 10468
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__blue__02-front-768.webp",
+        "width": 768,
+        "height": 768,
+        "bytes": 19884
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__blue__02-front-1200.webp",
+        "width": 1200,
+        "height": 1200,
+        "bytes": 36036
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__blue__02-front-1920.webp",
+        "width": 1920,
+        "height": 1920,
+        "bytes": 68272
+      }
+    ]
+  },
+  "/assets/products/mikilon-hammer-touring-200/hammer-200__blue__03-front-left.webp": {
+    "width": 1920,
+    "height": 1920,
+    "originalBytes": 124010,
+    "variants": [
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__blue__03-front-left-160.webp",
+        "width": 160,
+        "height": 160,
+        "bytes": 2926
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__blue__03-front-left-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 7978
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__blue__03-front-left-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 14786
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__blue__03-front-left-768.webp",
+        "width": 768,
+        "height": 768,
+        "bytes": 28488
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__blue__03-front-left-1200.webp",
+        "width": 1200,
+        "height": 1200,
+        "bytes": 49790
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__blue__03-front-left-1920.webp",
+        "width": 1920,
+        "height": 1920,
+        "bytes": 96636
+      }
+    ]
+  },
+  "/assets/products/mikilon-hammer-touring-200/hammer-200__blue__04-left.webp": {
+    "width": 1920,
+    "height": 1920,
+    "originalBytes": 105384,
+    "variants": [
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__blue__04-left-160.webp",
+        "width": 160,
+        "height": 160,
+        "bytes": 2540
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__blue__04-left-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 6800
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__blue__04-left-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 12546
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__blue__04-left-768.webp",
+        "width": 768,
+        "height": 768,
+        "bytes": 23658
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__blue__04-left-1200.webp",
+        "width": 1200,
+        "height": 1200,
+        "bytes": 42318
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__blue__04-left-1920.webp",
+        "width": 1920,
+        "height": 1920,
+        "bytes": 82940
+      }
+    ]
+  },
+  "/assets/products/mikilon-hammer-touring-200/hammer-200__blue__05-right.webp": {
+    "width": 1920,
+    "height": 1920,
+    "originalBytes": 107612,
+    "variants": [
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__blue__05-right-160.webp",
+        "width": 160,
+        "height": 160,
+        "bytes": 2606
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__blue__05-right-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 7142
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__blue__05-right-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 13090
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__blue__05-right-768.webp",
+        "width": 768,
+        "height": 768,
+        "bytes": 24366
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__blue__05-right-1200.webp",
+        "width": 1200,
+        "height": 1200,
+        "bytes": 43314
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__blue__05-right-1920.webp",
+        "width": 1920,
+        "height": 1920,
+        "bytes": 81340
+      }
+    ]
+  },
+  "/assets/products/mikilon-hammer-touring-200/hammer-200__gray__01-front-right.webp": {
+    "width": 1920,
+    "height": 1920,
+    "originalBytes": 171460,
+    "variants": [
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__gray__01-front-right-160.webp",
+        "width": 160,
+        "height": 160,
+        "bytes": 3030
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__gray__01-front-right-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 8604
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__gray__01-front-right-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 16066
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__gray__01-front-right-768.webp",
+        "width": 768,
+        "height": 768,
+        "bytes": 32352
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__gray__01-front-right-1200.webp",
+        "width": 1200,
+        "height": 1200,
+        "bytes": 61954
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__gray__01-front-right-1920.webp",
+        "width": 1920,
+        "height": 1920,
+        "bytes": 135486
+      }
+    ]
+  },
+  "/assets/products/mikilon-hammer-touring-200/hammer-200__gray__02-front.webp": {
+    "width": 1920,
+    "height": 1920,
+    "originalBytes": 110974,
+    "variants": [
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__gray__02-front-160.webp",
+        "width": 160,
+        "height": 160,
+        "bytes": 1930
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__gray__02-front-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 5500
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__gray__02-front-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 10394
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__gray__02-front-768.webp",
+        "width": 768,
+        "height": 768,
+        "bytes": 20428
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__gray__02-front-1200.webp",
+        "width": 1200,
+        "height": 1200,
+        "bytes": 39748
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__gray__02-front-1920.webp",
+        "width": 1920,
+        "height": 1920,
+        "bytes": 88480
+      }
+    ]
+  },
+  "/assets/products/mikilon-hammer-touring-200/hammer-200__gray__03-left.webp": {
+    "width": 1920,
+    "height": 1920,
+    "originalBytes": 155258,
+    "variants": [
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__gray__03-left-160.webp",
+        "width": 160,
+        "height": 160,
+        "bytes": 2660
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__gray__03-left-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 7436
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__gray__03-left-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 13788
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__gray__03-left-768.webp",
+        "width": 768,
+        "height": 768,
+        "bytes": 27714
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__gray__03-left-1200.webp",
+        "width": 1200,
+        "height": 1200,
+        "bytes": 53902
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__gray__03-left-1920.webp",
+        "width": 1920,
+        "height": 1920,
+        "bytes": 120062
+      }
+    ]
+  },
+  "/assets/products/mikilon-hammer-touring-200/hammer-200__gray__04-left-back.webp": {
+    "width": 1920,
+    "height": 1920,
+    "originalBytes": 170616,
+    "variants": [
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__gray__04-left-back-160.webp",
+        "width": 160,
+        "height": 160,
+        "bytes": 3014
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__gray__04-left-back-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 8770
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__gray__04-left-back-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 16030
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__gray__04-left-back-768.webp",
+        "width": 768,
+        "height": 768,
+        "bytes": 31946
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__gray__04-left-back-1200.webp",
+        "width": 1200,
+        "height": 1200,
+        "bytes": 61260
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__gray__04-left-back-1920.webp",
+        "width": 1920,
+        "height": 1920,
+        "bytes": 132874
+      }
+    ]
+  },
+  "/assets/products/mikilon-hammer-touring-200/hammer-200__gray__05-back.webp": {
+    "width": 1920,
+    "height": 1920,
+    "originalBytes": 106258,
+    "variants": [
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__gray__05-back-160.webp",
+        "width": 160,
+        "height": 160,
+        "bytes": 1834
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__gray__05-back-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 5326
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__gray__05-back-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 9910
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__gray__05-back-768.webp",
+        "width": 768,
+        "height": 768,
+        "bytes": 19638
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__gray__05-back-1200.webp",
+        "width": 1200,
+        "height": 1200,
+        "bytes": 38166
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__gray__05-back-1920.webp",
+        "width": 1920,
+        "height": 1920,
+        "bytes": 83722
+      }
+    ]
+  },
+  "/assets/products/mikilon-hammer-touring-200/hammer-200__gray__06-right-back.webp": {
+    "width": 1920,
+    "height": 1920,
+    "originalBytes": 176430,
+    "variants": [
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__gray__06-right-back-160.webp",
+        "width": 160,
+        "height": 160,
+        "bytes": 3088
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__gray__06-right-back-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 8794
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__gray__06-right-back-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 16340
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__gray__06-right-back-768.webp",
+        "width": 768,
+        "height": 768,
+        "bytes": 33192
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__gray__06-right-back-1200.webp",
+        "width": 1200,
+        "height": 1200,
+        "bytes": 62966
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-200/hammer-200__gray__06-right-back-1920.webp",
+        "width": 1920,
+        "height": 1920,
+        "bytes": 140424
+      }
+    ]
+  },
+  "/assets/products/mikilon-hammer-touring-300/hammer-300__blue__01-front-right.webp": {
+    "width": 1920,
+    "height": 1920,
+    "originalBytes": 118250,
+    "variants": [
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__blue__01-front-right-160.webp",
+        "width": 160,
+        "height": 160,
+        "bytes": 3150
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__blue__01-front-right-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 8684
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__blue__01-front-right-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 15700
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__blue__01-front-right-768.webp",
+        "width": 768,
+        "height": 768,
+        "bytes": 28768
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__blue__01-front-right-1200.webp",
+        "width": 1200,
+        "height": 1200,
+        "bytes": 49808
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__blue__01-front-right-1920.webp",
+        "width": 1920,
+        "height": 1920,
+        "bytes": 91754
+      }
+    ]
+  },
+  "/assets/products/mikilon-hammer-touring-300/hammer-300__blue__02-front.webp": {
+    "width": 1920,
+    "height": 1920,
+    "originalBytes": 84450,
+    "variants": [
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__blue__02-front-160.webp",
+        "width": 160,
+        "height": 160,
+        "bytes": 2084
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__blue__02-front-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 5984
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__blue__02-front-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 10858
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__blue__02-front-768.webp",
+        "width": 768,
+        "height": 768,
+        "bytes": 19720
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__blue__02-front-1200.webp",
+        "width": 1200,
+        "height": 1200,
+        "bytes": 34526
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__blue__02-front-1920.webp",
+        "width": 1920,
+        "height": 1920,
+        "bytes": 65756
+      }
+    ]
+  },
+  "/assets/products/mikilon-hammer-touring-300/hammer-300__blue__03-front-left.webp": {
+    "width": 1920,
+    "height": 1920,
+    "originalBytes": 119172,
+    "variants": [
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__blue__03-front-left-160.webp",
+        "width": 160,
+        "height": 160,
+        "bytes": 3120
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__blue__03-front-left-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 8742
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__blue__03-front-left-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 15544
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__blue__03-front-left-768.webp",
+        "width": 768,
+        "height": 768,
+        "bytes": 28830
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__blue__03-front-left-1200.webp",
+        "width": 1200,
+        "height": 1200,
+        "bytes": 49876
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__blue__03-front-left-1920.webp",
+        "width": 1920,
+        "height": 1920,
+        "bytes": 92688
+      }
+    ]
+  },
+  "/assets/products/mikilon-hammer-touring-300/hammer-300__blue__04-left.webp": {
+    "width": 1920,
+    "height": 1920,
+    "originalBytes": 105202,
+    "variants": [
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__blue__04-left-160.webp",
+        "width": 160,
+        "height": 160,
+        "bytes": 2724
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__blue__04-left-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 7520
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__blue__04-left-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 13522
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__blue__04-left-768.webp",
+        "width": 768,
+        "height": 768,
+        "bytes": 24914
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__blue__04-left-1200.webp",
+        "width": 1200,
+        "height": 1200,
+        "bytes": 43402
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__blue__04-left-1920.webp",
+        "width": 1920,
+        "height": 1920,
+        "bytes": 82256
+      }
+    ]
+  },
+  "/assets/products/mikilon-hammer-touring-300/hammer-300__blue__05-rear.webp": {
+    "width": 1921,
+    "height": 1920,
+    "originalBytes": 96018,
+    "variants": [
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__blue__05-rear-160.webp",
+        "width": 160,
+        "height": 160,
+        "bytes": 2154
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__blue__05-rear-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 6196
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__blue__05-rear-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 10632
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__blue__05-rear-768.webp",
+        "width": 768,
+        "height": 768,
+        "bytes": 19994
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__blue__05-rear-1200.webp",
+        "width": 1200,
+        "height": 1199,
+        "bytes": 36080
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__blue__05-rear-1920.webp",
+        "width": 1920,
+        "height": 1919,
+        "bytes": 61384
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__blue__05-rear-1921.webp",
+        "width": 1921,
+        "height": 1920,
+        "bytes": 75446
+      }
+    ]
+  },
+  "/assets/products/mikilon-hammer-touring-300/hammer-300__blue__06-right.webp": {
+    "width": 1920,
+    "height": 1920,
+    "originalBytes": 106718,
+    "variants": [
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__blue__06-right-160.webp",
+        "width": 160,
+        "height": 160,
+        "bytes": 2762
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__blue__06-right-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 7508
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__blue__06-right-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 13596
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__blue__06-right-768.webp",
+        "width": 768,
+        "height": 768,
+        "bytes": 24806
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__blue__06-right-1200.webp",
+        "width": 1200,
+        "height": 1200,
+        "bytes": 44300
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__blue__06-right-1920.webp",
+        "width": 1920,
+        "height": 1920,
+        "bytes": 83632
+      }
+    ]
+  },
+  "/assets/products/mikilon-hammer-touring-300/hammer-300__yellow__01-front-right.webp": {
+    "width": 1921,
+    "height": 1920,
+    "originalBytes": 124450,
+    "variants": [
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__yellow__01-front-right-160.webp",
+        "width": 160,
+        "height": 160,
+        "bytes": 3372
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__yellow__01-front-right-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 9186
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__yellow__01-front-right-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 16290
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__yellow__01-front-right-768.webp",
+        "width": 768,
+        "height": 768,
+        "bytes": 30440
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__yellow__01-front-right-1200.webp",
+        "width": 1200,
+        "height": 1199,
+        "bytes": 51126
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__yellow__01-front-right-1920.webp",
+        "width": 1920,
+        "height": 1919,
+        "bytes": 83038
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__yellow__01-front-right-1921.webp",
+        "width": 1921,
+        "height": 1920,
+        "bytes": 93622
+      }
+    ]
+  },
+  "/assets/products/mikilon-hammer-touring-300/hammer-300__yellow__02-front.webp": {
+    "width": 1920,
+    "height": 1920,
+    "originalBytes": 86330,
+    "variants": [
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__yellow__02-front-160.webp",
+        "width": 160,
+        "height": 160,
+        "bytes": 2202
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__yellow__02-front-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 6236
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__yellow__02-front-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 11204
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__yellow__02-front-768.webp",
+        "width": 768,
+        "height": 768,
+        "bytes": 20432
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__yellow__02-front-1200.webp",
+        "width": 1200,
+        "height": 1200,
+        "bytes": 37312
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__yellow__02-front-1920.webp",
+        "width": 1920,
+        "height": 1920,
+        "bytes": 67428
+      }
+    ]
+  },
+  "/assets/products/mikilon-hammer-touring-300/hammer-300__yellow__03-front-left.webp": {
+    "width": 1920,
+    "height": 1920,
+    "originalBytes": 122266,
+    "variants": [
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__yellow__03-front-left-160.webp",
+        "width": 160,
+        "height": 160,
+        "bytes": 3382
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__yellow__03-front-left-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 9212
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__yellow__03-front-left-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 16278
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__yellow__03-front-left-768.webp",
+        "width": 768,
+        "height": 768,
+        "bytes": 29748
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__yellow__03-front-left-1200.webp",
+        "width": 1200,
+        "height": 1200,
+        "bytes": 51414
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__yellow__03-front-left-1920.webp",
+        "width": 1920,
+        "height": 1920,
+        "bytes": 93776
+      }
+    ]
+  },
+  "/assets/products/mikilon-hammer-touring-300/hammer-300__yellow__04-left.webp": {
+    "width": 1920,
+    "height": 1920,
+    "originalBytes": 115500,
+    "variants": [
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__yellow__04-left-160.webp",
+        "width": 160,
+        "height": 160,
+        "bytes": 2996
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__yellow__04-left-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 8314
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__yellow__04-left-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 14796
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__yellow__04-left-768.webp",
+        "width": 768,
+        "height": 768,
+        "bytes": 27370
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__yellow__04-left-1200.webp",
+        "width": 1200,
+        "height": 1200,
+        "bytes": 47126
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__yellow__04-left-1920.webp",
+        "width": 1920,
+        "height": 1920,
+        "bytes": 87308
+      }
+    ]
+  },
+  "/assets/products/mikilon-hammer-touring-300/hammer-300__yellow__05-rear.webp": {
+    "width": 1920,
+    "height": 1920,
+    "originalBytes": 85586,
+    "variants": [
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__yellow__05-rear-160.webp",
+        "width": 160,
+        "height": 160,
+        "bytes": 2104
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__yellow__05-rear-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 6026
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__yellow__05-rear-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 11306
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__yellow__05-rear-768.webp",
+        "width": 768,
+        "height": 768,
+        "bytes": 20294
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__yellow__05-rear-1200.webp",
+        "width": 1200,
+        "height": 1200,
+        "bytes": 35400
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__yellow__05-rear-1920.webp",
+        "width": 1920,
+        "height": 1920,
+        "bytes": 65844
+      }
+    ]
+  },
+  "/assets/products/mikilon-hammer-touring-300/hammer-300__yellow__06-right.webp": {
+    "width": 1921,
+    "height": 1920,
+    "originalBytes": 108240,
+    "variants": [
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__yellow__06-right-160.webp",
+        "width": 160,
+        "height": 160,
+        "bytes": 2788
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__yellow__06-right-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 7674
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__yellow__06-right-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 13768
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__yellow__06-right-768.webp",
+        "width": 768,
+        "height": 768,
+        "bytes": 25114
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__yellow__06-right-1200.webp",
+        "width": 1200,
+        "height": 1199,
+        "bytes": 43606
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__yellow__06-right-1920.webp",
+        "width": 1920,
+        "height": 1919,
+        "bytes": 71590
+      },
+      {
+        "src": "/assets/optimized/products/mikilon-hammer-touring-300/hammer-300__yellow__06-right-1921.webp",
+        "width": 1921,
+        "height": 1920,
+        "bytes": 81712
+      }
+    ]
+  },
+  "/assets/products/striker-shared/striker-shared__black__01-front-right.webp": {
+    "width": 1920,
+    "height": 1920,
+    "originalBytes": 207888,
+    "variants": [
+      {
+        "src": "/assets/optimized/products/striker-shared/striker-shared__black__01-front-right-160.webp",
+        "width": 160,
+        "height": 160,
+        "bytes": 4028
+      },
+      {
+        "src": "/assets/optimized/products/striker-shared/striker-shared__black__01-front-right-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 12802
+      },
+      {
+        "src": "/assets/optimized/products/striker-shared/striker-shared__black__01-front-right-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 25060
+      },
+      {
+        "src": "/assets/optimized/products/striker-shared/striker-shared__black__01-front-right-768.webp",
+        "width": 768,
+        "height": 768,
+        "bytes": 50208
+      },
+      {
+        "src": "/assets/optimized/products/striker-shared/striker-shared__black__01-front-right-1200.webp",
+        "width": 1200,
+        "height": 1200,
+        "bytes": 90010
+      },
+      {
+        "src": "/assets/optimized/products/striker-shared/striker-shared__black__01-front-right-1920.webp",
+        "width": 1920,
+        "height": 1920,
+        "bytes": 168658
+      }
+    ]
+  },
+  "/assets/products/striker-shared/striker-shared__camouflage__01-front-right.webp": {
+    "width": 1920,
+    "height": 1920,
+    "originalBytes": 227982,
+    "variants": [
+      {
+        "src": "/assets/optimized/products/striker-shared/striker-shared__camouflage__01-front-right-160.webp",
+        "width": 160,
+        "height": 160,
+        "bytes": 4252
+      },
+      {
+        "src": "/assets/optimized/products/striker-shared/striker-shared__camouflage__01-front-right-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 13690
+      },
+      {
+        "src": "/assets/optimized/products/striker-shared/striker-shared__camouflage__01-front-right-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 26932
+      },
+      {
+        "src": "/assets/optimized/products/striker-shared/striker-shared__camouflage__01-front-right-768.webp",
+        "width": 768,
+        "height": 768,
+        "bytes": 55104
+      },
+      {
+        "src": "/assets/optimized/products/striker-shared/striker-shared__camouflage__01-front-right-1200.webp",
+        "width": 1200,
+        "height": 1200,
+        "bytes": 97766
+      },
+      {
+        "src": "/assets/optimized/products/striker-shared/striker-shared__camouflage__01-front-right-1920.webp",
+        "width": 1920,
+        "height": 1920,
+        "bytes": 184378
+      }
+    ]
+  },
+  "/assets/products/striker-shared/striker-shared__green__01-front-right.webp": {
+    "width": 1920,
+    "height": 1920,
+    "originalBytes": 213304,
+    "variants": [
+      {
+        "src": "/assets/optimized/products/striker-shared/striker-shared__green__01-front-right-160.webp",
+        "width": 160,
+        "height": 160,
+        "bytes": 4216
+      },
+      {
+        "src": "/assets/optimized/products/striker-shared/striker-shared__green__01-front-right-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 13268
+      },
+      {
+        "src": "/assets/optimized/products/striker-shared/striker-shared__green__01-front-right-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 26106
+      },
+      {
+        "src": "/assets/optimized/products/striker-shared/striker-shared__green__01-front-right-768.webp",
+        "width": 768,
+        "height": 768,
+        "bytes": 52132
+      },
+      {
+        "src": "/assets/optimized/products/striker-shared/striker-shared__green__01-front-right-1200.webp",
+        "width": 1200,
+        "height": 1200,
+        "bytes": 92898
+      },
+      {
+        "src": "/assets/optimized/products/striker-shared/striker-shared__green__01-front-right-1920.webp",
+        "width": 1920,
+        "height": 1920,
+        "bytes": 173432
+      }
+    ]
+  },
+  "/assets/products/striker-shared/striker-shared__light-gray__01-front-right.webp": {
+    "width": 1920,
+    "height": 1920,
+    "originalBytes": 199774,
+    "variants": [
+      {
+        "src": "/assets/optimized/products/striker-shared/striker-shared__light-gray__01-front-right-160.webp",
+        "width": 160,
+        "height": 160,
+        "bytes": 4076
+      },
+      {
+        "src": "/assets/optimized/products/striker-shared/striker-shared__light-gray__01-front-right-320.webp",
+        "width": 320,
+        "height": 320,
+        "bytes": 12656
+      },
+      {
+        "src": "/assets/optimized/products/striker-shared/striker-shared__light-gray__01-front-right-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 24816
+      },
+      {
+        "src": "/assets/optimized/products/striker-shared/striker-shared__light-gray__01-front-right-768.webp",
+        "width": 768,
+        "height": 768,
+        "bytes": 49204
+      },
+      {
+        "src": "/assets/optimized/products/striker-shared/striker-shared__light-gray__01-front-right-1200.webp",
+        "width": 1200,
+        "height": 1200,
+        "bytes": 87050
+      },
+      {
+        "src": "/assets/optimized/products/striker-shared/striker-shared__light-gray__01-front-right-1920.webp",
+        "width": 1920,
+        "height": 1920,
+        "bytes": 159720
+      }
+    ]
   }
 }

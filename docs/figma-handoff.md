@@ -51,7 +51,7 @@ Whole bank cards open the popup. Bank selector states refreshed from Figma 300:1
 
 ## 2026-10-23 - SKU Hero colors
 
-Shared ProductColors component follows fresh Desktop 333:9925 and Mobile 333:10359: 40px swatches, 8px gap/radius, between intro and price. Original camouflage SVG retained. Palette is provisional for all seven SKU pages until the user supplies per-model availability. Set `colors: ['gray', 'blue']` in a model data file to override; omit for the six-color template palette, or use `colors: []` to hide the block. Registry: src/data/product-colors.ts. Names are exposed on hover/focus/tap; swatches do not change photos, price or lead data.
+Shared ProductColors component follows fresh Desktop 333:9925 and Mobile 333:10359: 40px swatches, 8px gap/radius, between intro and price. Original camouflage SVG retained. Per-model color lists were confirmed by the user on 2026-10-23: Hammer 200 blue/gray; Hammer 300 blue/yellow; Striker 400 green; Striker 500/700 with or without EPS gray/green/black/camouflage. The former khaki name is removed; camouflage is Камуфляж, and the solid green swatch is Зелёный. Photos and color-based photo filtering remain deferred. Set `colors: ['gray', 'blue']` in a model data file to override; omit for the six-color template palette, or use `colors: []` to hide the block. Registry: src/data/product-colors.ts. Names are exposed on hover/focus/tap; swatches do not change photos, price or lead data.
 
 ## 2026-10-23 — карточки и SKU
 

@@ -1,3 +1,4 @@
+import { productMedia } from './media.ts';
 import { productColors } from '../product-colors.ts';
 import { models } from '../catalog.ts';
 import type { ProductDetails } from './types.ts';
@@ -9,7 +10,7 @@ import { striker700Eps } from './striker-700-efi-eps.ts';
 import { hammer200 } from './hammer-touring-200.ts';
 import { hammer300 } from './hammer-touring-300.ts';
 /** Register only populated pages. Layout readiness is separate from offer verification. */
-export const productDetails: readonly ProductDetails[] = [striker400, striker500, striker500Eps, striker700, striker700Eps, hammer200, hammer300];
+export const productDetails: readonly ProductDetails[] = [striker400, striker500, striker500Eps, striker700, striker700Eps, hammer200, hammer300].map(entry => ({ ...entry, ...productMedia[entry.modelId] }));
 
 export function validateProducts(entries: readonly ProductDetails[]) {
   const ids = new Set<string>();

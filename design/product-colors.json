@@ -10,5 +10,43 @@
   "radius": 8,
   "gap": 8,
   "contextFile": "design/context/sku-colors-333-9925.txt",
-  "availability": "Shared provisional palette; per-model assignment pending user input."
+  "availability": "Per-model colors confirmed by user on 2026-10-23; photographs deferred.",
+  "modelColors": {
+    "hammer-touring-300": [
+      "blue",
+      "yellow"
+    ],
+    "hammer-touring-200": [
+      "blue",
+      "gray"
+    ],
+    "striker-400-efi": [
+      "green"
+    ],
+    "striker-500-efi": [
+      "gray",
+      "green",
+      "black",
+      "camouflage"
+    ],
+    "striker-500-efi-eps": [
+      "gray",
+      "green",
+      "black",
+      "camouflage"
+    ],
+    "striker-700-efi": [
+      "gray",
+      "green",
+      "black",
+      "camouflage"
+    ],
+    "striker-700-efi-eps": [
+      "gray",
+      "green",
+      "black",
+      "camouflage"
+    ]
+  },
+  "naming": "green = Зелёный; camouflage = Камуфляж. Хаки is not a separate option."
 }

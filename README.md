@@ -74,7 +74,7 @@ SKU media: `photos` is the Hero collection; `galleryPhotos` is the independent l
 
 Адаптивные WebP и порядок добавления фотографий: [docs/images.md](docs/images.md).
 
-SKU Hero color palette added on 2026-10-23; per-model color lists are configured in product data. See [product page instructions](docs/product-pages.md).
+SKU Hero color palette added on 2026-10-23; all seven per-model color lists are user-confirmed and configured in product data. Photos and photo filtering are deferred. See [product page instructions](docs/product-pages.md).
 
 ## 2026-10-23 — карточки и SKU
 
@@ -89,3 +89,9 @@ SKU Hero color palette added on 2026-10-23; per-model color lists are configured
 Добавлен `.github/workflows/deploy-hoster.yml`: проверки, сборка Astro и передача `dist/` по FTPS при push в `master`. Изменения в `development` не публикуются. Четыре необходимых secrets, проверка каталога и порядок первого релиза: [инструкция](docs/deployment-hoster.md). Подключение к хостингу пока не проверено, публикация не выполнялась.
 
 Для диагностики без публикации добавлен `Check hoster.by FTPS (read only)` в development. Результат подключения смотреть в Actions; повторный запуск — Re-run all jobs после исправления secrets. Проверка не изменяет файлы хостинга.
+
+## Фотографии — 23.10.2026
+
+28 пользовательских фотографий подключены к карточкам главной, каталога и Hero семи SKU. Реестр `src/data/products/media.ts` хранит цвет, порядок, размеры и главный цвет модели. Striker 500/700 используют общие файлы; у 400 отдельный снимок без пассажирской спинки. Hammer 200: 6 серых и 5 синих фото; Hammer 300: по 6 каждого цвета.
+
+Выбор цвета переключает только Hero и его независимый полноэкранный просмотр; миниатюры, +N и счётчик относятся к выбранному цвету. Нижняя Галерея остаётся скрытой. Для новых фото подготовлены WebP-варианты от 160 до исходного размера, без увеличения и обрезки. Главные цвета: 400 зелёный, 500 серый, 500 EPS чёрный, 700 зелёный, 700 EPS камуфляж, Hammer 200 серый, Hammer 300 синий.

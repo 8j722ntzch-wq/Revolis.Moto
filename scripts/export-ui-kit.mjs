@@ -12,6 +12,7 @@ if (infoPage && !infoTargets[infoPage]) throw new Error('Unknown page export.');
 const sku = process.argv.find(arg => arg.startsWith('--sku='))?.slice(6);
 if (sku && !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(sku)) throw new Error('Invalid SKU slug.');
 const mobile = process.argv.includes('--mobile');
+const linkedAssets = process.argv.includes('--linked-assets');
 const mime = { '.svg': 'image/svg+xml', '.woff2': 'font/woff2', '.woff': 'font/woff', '.png': 'image/png', '.webp': 'image/webp' };
 
 function localAsset(url, base) {
@@ -22,6 +23,8 @@ function localAsset(url, base) {
 }
 
 async function asDataUrl(path) {
+  // Large photo collections can reuse the checkout's public assets offline.
+  if (linkedAssets && /\.(webp|png|jpe?g)$/i.test(path)) return '../public/' + relative(dist, path);
   const type = mime[extname(path)];
   if (!type) throw new Error(`Unsupported asset: ${path}`);
   return `data:${type};base64,${(await readFile(path)).toString('base64')}`;
@@ -56,7 +59,7 @@ html = await replaceAsync(html, /\bsrcset="([^"]+)"/g, async ([, value]) => {
   return `srcset="${candidates.join(', ')}"`;
 });
 // Serialized Hero viewer URLs also need to work offline.
-html = await replaceAsync(html, /\/assets\/optimized\/[a-zA-Z0-9/_\-.]+\.webp/g, async ([url]) => asDataUrl(localAsset(url, dist)));
+html = await replaceAsync(html, /(?<!public)\/assets\/optimized\/[a-zA-Z0-9/_\-.]+\.webp/g, async ([url]) => asDataUrl(localAsset(url, dist)));
 if (/<script[^>]+src=|\b(?:src|href)="\/(?:assets|_astro)\//.test(html)) throw new Error('Unresolved runtime dependency in offline preview.');
 await mkdir(resolve(root, 'preview'), { recursive: true });
 if (homepage) html = html.replaceAll('href="/#', 'href="#');

@@ -13,6 +13,7 @@ export const striker700: ProductDetails = {
   },
   "subtitle": "Старший двигатель для рабочих задач",
   "intro": "Для загородных поездок и работы в хозяйстве. Подключаемый полный привод, понижающая передача и практичное заводское оснащение.",
+  "colors": ["gray", "green", "black", "camouflage"],
   "photos": [],
   "galleryPhotos": [],
   "description": {

@@ -14,7 +14,9 @@ test('only registered SKU paths are available and all related cards resolve', ()
 });
 test('incomplete content is explicit and missing photos do not invent images', () => {
  const page=productDetails.find(p=>p.modelId==='baltmotors-500-efi-eps');
- assert.deepEqual(page.photos,[]);
+ assert.equal(page.photos.length,4);
+ assert.equal(page.defaultColor,'black');
+ assert.deepEqual(page.galleryPhotos,[]);
  const pending=page.specifications.flatMap(g=>g.rows).filter(r=>r.value===null);
  assert.deepEqual(pending.map(r=>r.label).sort(),['Сухая масса','Дорожный просвет','Топливный бак'].sort());
 });
@@ -35,4 +37,14 @@ test('all SKU illustrations and related model images are local files',async()=>{
   for(const model of getRelatedModels(entry.relatedModelIds ?? []))if(model.image)paths.add(model.image);
  }
  for(const path of paths)await access(new URL('../public'+path,import.meta.url));
+});
+test('color collections and catalogue heroes match approved photos', () => {
+ const expected = {'mikilon-hammer-touring-200': {gray:6,blue:5}, 'mikilon-hammer-touring-300': {blue:6,yellow:6}};
+ for (const page of productPages) {
+  const {photos,colors,defaultColor}=page.details;
+  assert.ok(colors.includes(defaultColor));
+  assert.equal(page.model.image,photos.find(photo=>photo.color===defaultColor).src);
+  for (const color of colors) assert.equal(photos.filter(photo=>photo.color===color).length,expected[page.model.id]?.[color] ?? 1);
+  assert.deepEqual(page.details.galleryPhotos,[]);
+ }
 });

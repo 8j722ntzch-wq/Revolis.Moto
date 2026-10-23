@@ -13,6 +13,7 @@ export const striker500: ProductDetails = {
   },
   "subtitle": "Для работы и отдыха — с расширенным оснащением",
   "intro": "Полноприводный квадрицикл с понижающей передачей. Лебёдка, пассажирская спинка и защита рук — в заводской комплектации.",
+  "colors": ["gray", "green", "black", "camouflage"],
   "photos": [],
   "galleryPhotos": [],
   "description": {

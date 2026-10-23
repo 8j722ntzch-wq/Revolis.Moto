@@ -13,6 +13,7 @@ export const hammer200: ProductDetails = {
   },
   "subtitle": "Для дачи и загородных прогулок",
   "intro": "Карбюраторный двигатель с воздушно-масляным охлаждением, вариатор и цепной привод на задние колёса.",
+  "colors": ["blue", "gray"],
   "photos": [],
   "galleryPhotos": [],
   "description": {

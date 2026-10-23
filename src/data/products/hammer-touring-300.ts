@@ -13,6 +13,7 @@ export const hammer300: ProductDetails = {
   },
   "subtitle": "Туристический квадроцикл с карданным приводом",
   "intro": "Двигатель 270,5 см³ с Bosch EFI и жидкостным охлаждением. Вариатор, задний привод и два посадочных места.",
+  "colors": ["blue", "yellow"],
   "photos": [],
   "galleryPhotos": [],
   "description": {

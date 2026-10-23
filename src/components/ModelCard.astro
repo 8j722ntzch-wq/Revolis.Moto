@@ -24,7 +24,7 @@ const price = model.priceByn === null ? null : new Intl.NumberFormat('ru-BY', { 
 <article id={id} class="model-card" data-model-id={model.id} data-demo-state={demoState} aria-labelledby={`${id}-title`}>
   <div class="model-card__surface">
     <div class="model-card__media">
-      {model.image ? <img class="model-card__photo" {...imageAttrs(model.image, "card")} alt={model.imageAlt ?? `${model.brand} ${model.name}`} width={model.imageWidth ?? 320} height={model.imageHeight ?? 213} style={`--photo-width: ${model.imageWidth ?? 320}px; --photo-mobile-width: ${model.mobileImageWidth ?? 320}px; --photo-height: ${model.imageHeight ?? 213}px; --photo-offset: ${model.imageHeight === 240 ? 0 : .5}px; --photo-direction: ${model.imageMirrored ? -1 : 1}`} loading="lazy" decoding="async" /> : <p class="model-card__image-pending type-small">Изображение уточняется</p>}
+      {model.image ? <img class="model-card__photo" data-product-photo={model.image?.startsWith("/assets/products/") || undefined} {...imageAttrs(model.image, "card")} alt={model.imageAlt ?? `${model.brand} ${model.name}`} width={model.imageWidth ?? 320} height={model.imageHeight ?? 213} style={`--photo-width: ${model.imageWidth ?? 320}px; --photo-mobile-width: ${model.mobileImageWidth ?? 320}px; --photo-height: ${model.imageHeight ?? 213}px; --photo-offset: ${model.imageHeight === 240 ? 0 : .5}px; --photo-direction: ${model.imageMirrored ? -1 : 1}`} loading="lazy" decoding="async" /> : <p class="model-card__image-pending type-small">Изображение уточняется</p>}
       {status && <div class="model-card__status"><StatusBadge status={status} /></div>}
     </div>
     <div class="model-card__content">
@@ -78,3 +78,5 @@ const price = model.priceByn === null ? null : new Intl.NumberFormat('ru-BY', { 
   }
   .model-card :global(.model-card__action:active:not(:disabled)) { background: var(--color-purple); }
 </style>
+
+<style>.model-card .model-card__photo[data-product-photo] { width:100%; height:100%; object-fit:contain; transform:none; }</style>

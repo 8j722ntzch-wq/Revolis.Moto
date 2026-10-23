@@ -1,5 +1,6 @@
 import type { ProductColorId } from '../product-colors';
 export interface ProductPhoto {
+ color?: ProductColorId;
   /** Site-local original; no temporary Figma URLs. */
   src: string;
   alt: string;
@@ -11,6 +12,7 @@ export interface ProductPhoto {
 export interface ProductCard { title: string; body: string; icon: string; accent?: boolean; art?: string; }
 export interface SpecificationGroup { title: string; rows: { label: string; value: string | null }[]; }
 export interface ProductDetails {
+ defaultColor?: ProductColorId;
   modelId: string;
   source: { fileKey: string; desktop: string; mobile: string; capturedAt: string; contentStatus: 'figma-reference' | 'notion-reference' | 'verified'; notionUrl?: string; retrievedAt?: string };
   subtitle: string;
