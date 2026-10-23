@@ -1590,6 +1590,28 @@
       "width": 41.6667,
       "height": 41.6667,
       "note": "Original g12 export; centered in 40px clipped swatch, scaleY(-1) as in Figma."
+    },
+    {
+      "id": "model-card-equipment",
+      "nodeId": "I143:8794;19:4439;15:4412",
+      "kind": "exported-svg",
+      "localPath": "public/assets/model-card/equipment.svg",
+      "slots": [
+        {
+          "nodeId": "I143:8794;19:4439;15:4412",
+          "sectionNodeId": "143:8794"
+        }
+      ],
+      "callsites": [
+        "src/components/ModelCard.astro",
+        "src/components/product/ProductHero.astro"
+      ],
+      "intrinsic": {
+        "width": 24,
+        "height": 24,
+        "viewBox": "0 0 24 24"
+      },
+      "transfer": "Original entire node via Figma Plugin API SVG_STRING"
     }
   ],
   "reusableUiManifest": "design/ui-assets.json",

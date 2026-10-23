@@ -1,9 +1,10 @@
 import type { Model } from './catalog';
+// User-requested Figma card copy/prices, refreshed 2026-10-23. Stock remains unconfirmed.
 export const catalogueContent: Record<string, Partial<Model>> = {
   "baltmotors-400-efi": {
     "name": "Striker 400 EFI",
-    "subtitle": "Полный привод в базовой комплектации",
-    "mobileSubtitle": "",
+    "subtitle": "Практичный вариант для повседневных задач",
+    "mobileSubtitle": "Практичный для повседневных задач",
     "features": [
       {
         "icon": "engine",
@@ -11,21 +12,18 @@ export const catalogueContent: Record<string, Partial<Model>> = {
       },
       {
         "icon": "drive",
-        "label": "4×4 LOCK"
-      },
-      {
-        "icon": "passport",
-        "label": "Шины 26″"
+        "label": "4x4 LOCK"
       }
     ],
-    "priceByn": null,
-    "priceFrom": false,
+    "priceByn": 21000,
+    "priceFrom": true,
     "availability": "unconfirmed",
-    "financeLabel": "Доступные варианты оплаты"
+    "financeLabel": "В кредит и рассрочку",
+    "registration": "gai"
   },
   "baltmotors-500-efi": {
     "name": "Striker 500 EFI",
-    "subtitle": "Для работы и отдыха — с расширенным оснащением",
+    "subtitle": "Универсальный вариант для работы и отдыха",
     "mobileSubtitle": "",
     "features": [
       {
@@ -34,22 +32,19 @@ export const catalogueContent: Record<string, Partial<Model>> = {
       },
       {
         "icon": "drive",
-        "label": "4×4 LOCK"
-      },
-      {
-        "icon": "passport",
-        "label": "Понижающая"
+        "label": "4x4 LOCK"
       }
     ],
-    "priceByn": null,
-    "priceFrom": false,
+    "priceByn": 23500,
+    "priceFrom": true,
     "availability": "unconfirmed",
-    "financeLabel": "Доступные варианты оплаты"
+    "financeLabel": "В кредит и рассрочку",
+    "registration": "gai"
   },
   "baltmotors-500-efi-eps": {
     "name": "Striker 500 EFI/EPS",
-    "subtitle": "Универсальный квадрицикл с электроусилителем руля",
-    "mobileSubtitle": "",
+    "subtitle": "Универсальный вариант с электроусилителем руля",
+    "mobileSubtitle": "Универсальный с электроусилителем руля",
     "features": [
       {
         "icon": "engine",
@@ -57,21 +52,22 @@ export const catalogueContent: Record<string, Partial<Model>> = {
       },
       {
         "icon": "drive",
-        "label": "4×4 LOCK"
+        "label": "4x4 LOCK"
       },
       {
-        "icon": "passport",
+        "icon": "equipment",
         "label": "EPS"
       }
     ],
-    "priceByn": null,
-    "priceFrom": false,
+    "priceByn": 25000,
+    "priceFrom": true,
     "availability": "unconfirmed",
-    "financeLabel": "Доступные варианты оплаты"
+    "financeLabel": "В кредит и рассрочку",
+    "registration": "gai"
   },
   "baltmotors-700-efi": {
     "name": "Striker 700 EFI",
-    "subtitle": "Старший двигатель для рабочих задач",
+    "subtitle": "Мощный квадрицикл для серьёзных задач",
     "mobileSubtitle": "",
     "features": [
       {
@@ -80,21 +76,18 @@ export const catalogueContent: Record<string, Partial<Model>> = {
       },
       {
         "icon": "drive",
-        "label": "4×4 LOCK"
-      },
-      {
-        "icon": "passport",
-        "label": "Понижающая"
+        "label": "4x4 LOCK"
       }
     ],
-    "priceByn": null,
-    "priceFrom": false,
+    "priceByn": 27000,
+    "priceFrom": true,
     "availability": "unconfirmed",
-    "financeLabel": "Доступные варианты оплаты"
+    "financeLabel": "В кредит и рассрочку",
+    "registration": "gai"
   },
   "baltmotors-700-efi-eps": {
     "name": "Striker 700 EFI/EPS",
-    "subtitle": "Старший двигатель и комфорт управления",
+    "subtitle": "Мощность и комфорт управления",
     "mobileSubtitle": "",
     "features": [
       {
@@ -103,21 +96,22 @@ export const catalogueContent: Record<string, Partial<Model>> = {
       },
       {
         "icon": "drive",
-        "label": "4×4 LOCK"
+        "label": "4x4 LOCK"
       },
       {
-        "icon": "passport",
+        "icon": "equipment",
         "label": "EPS"
       }
     ],
-    "priceByn": null,
-    "priceFrom": false,
+    "priceByn": 28500,
+    "priceFrom": true,
     "availability": "unconfirmed",
-    "financeLabel": "Доступные варианты оплаты"
+    "financeLabel": "В кредит и рассрочку",
+    "registration": "gai"
   },
   "mikilon-hammer-touring-200": {
     "name": "Hammer 200 Touring",
-    "subtitle": "Для дачи и загородных прогулок",
+    "subtitle": "Для прогулок по загородным маршрутам",
     "mobileSubtitle": "",
     "features": [
       {
@@ -126,21 +120,22 @@ export const catalogueContent: Record<string, Partial<Model>> = {
       },
       {
         "icon": "drive",
-        "label": "4×2"
+        "label": "4x2"
       },
       {
-        "icon": "passport",
-        "label": "Цепной привод"
+        "icon": "equipment",
+        "label": "Карбюратор"
       }
     ],
-    "priceByn": null,
+    "priceByn": 11500,
     "priceFrom": false,
     "availability": "unconfirmed",
-    "financeLabel": "Доступные варианты оплаты"
+    "financeLabel": "В кредит и рассрочку",
+    "registration": "gostekhnadzor"
   },
   "mikilon-hammer-touring-300": {
     "name": "Hammer 300 Touring",
-    "subtitle": "Туристический квадроцикл с карданным приводом",
+    "subtitle": "Для загородных поездок с пассажиром",
     "mobileSubtitle": "",
     "features": [
       {
@@ -149,16 +144,17 @@ export const catalogueContent: Record<string, Partial<Model>> = {
       },
       {
         "icon": "drive",
-        "label": "4×2"
+        "label": "4x2"
       },
       {
-        "icon": "passport",
-        "label": "Кардан"
+        "icon": "equipment",
+        "label": "EFI"
       }
     ],
-    "priceByn": null,
+    "priceByn": 16500,
     "priceFrom": false,
     "availability": "unconfirmed",
-    "financeLabel": "Доступные варианты оплаты"
+    "financeLabel": "В кредит и рассрочку",
+    "registration": "gostekhnadzor"
   }
 };

@@ -32,5 +32,5 @@ test('all pages retain source provenance and omit editorial instructions and fak
   assert.match(p.source.notionUrl,/notion.so/); assert.equal(p.specifications.length,4);assert.equal(p.features.length,6);assert.ok(p.faq.length>=5);
   assert.ok(!JSON.stringify(p).match(/Я бы|Не переносим|Текст для страницы|TO на квадро|Актуальная цена|XX XXX/));
  }
- assert.ok(models.every(m=>m.priceByn===null&&m.availability==='unconfirmed'));
+ assert.ok(models.every(m=>m.priceByn > 0 && m.availability==='unconfirmed'));
 });

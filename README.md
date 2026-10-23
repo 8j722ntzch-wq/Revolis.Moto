@@ -75,3 +75,9 @@ SKU media: `photos` is the Hero collection; `galleryPhotos` is the independent l
 Адаптивные WebP и порядок добавления фотографий: [docs/images.md](docs/images.md).
 
 SKU Hero color palette added on 2026-10-23; per-model color lists are configured in product data. See [product page instructions](docs/product-pages.md).
+
+## 2026-10-23 — карточки и SKU
+
+По запросу пользователя подписи и цены актуального Figma перенесены в catalog-content.ts. Главная, каталог, похожие модели и Hero используют единые данные. Восстановлены краткие особенности, фиолетовые подписи и «В кредит и рассрочку». Карбюратор / EFI / EPS используют оригинальную иконку 24px. Цены: Hammer 200 — 11 500 BYN; Hammer 300 — 16 500 BYN; BaltMotors 400/500/500 EPS/700/700 EPS — от 21 000/23 500/25 000/27 000/28 500 BYN. Это перенос цен макета по поручению пользователя, не независимая проверка предложений.
+
+Наличие остаётся неподтверждённым: у 400 статусы Desktop/Mobile расходятся. Таблицы скрывают строки с null, пустыми значениями и «Уточняется», а также пустые группы. Спорные исходные данные сохранены для последующего заполнения.

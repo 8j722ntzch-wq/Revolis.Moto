@@ -52,3 +52,9 @@ Whole bank cards open the popup. Bank selector states refreshed from Figma 300:1
 ## 2026-10-23 - SKU Hero colors
 
 Shared ProductColors component follows fresh Desktop 333:9925 and Mobile 333:10359: 40px swatches, 8px gap/radius, between intro and price. Original camouflage SVG retained. Palette is provisional for all seven SKU pages until the user supplies per-model availability. Set `colors: ['gray', 'blue']` in a model data file to override; omit for the six-color template palette, or use `colors: []` to hide the block. Registry: src/data/product-colors.ts. Names are exposed on hover/focus/tap; swatches do not change photos, price or lead data.
+
+## 2026-10-23 — карточки и SKU
+
+По запросу пользователя подписи и цены актуального Figma перенесены в catalog-content.ts. Главная, каталог, похожие модели и Hero используют единые данные. Восстановлены краткие особенности, фиолетовые подписи и «В кредит и рассрочку». Карбюратор / EFI / EPS используют оригинальную иконку 24px. Цены: Hammer 200 — 11 500 BYN; Hammer 300 — 16 500 BYN; BaltMotors 400/500/500 EPS/700/700 EPS — от 21 000/23 500/25 000/27 000/28 500 BYN. Это перенос цен макета по поручению пользователя, не независимая проверка предложений.
+
+Наличие остаётся неподтверждённым: у 400 статусы Desktop/Mobile расходятся. Таблицы скрывают строки с null, пустыми значениями и «Уточняется», а также пустые группы. Спорные исходные данные сохранены для последующего заполнения.

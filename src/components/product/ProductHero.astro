@@ -16,7 +16,7 @@ const price = model.priceByn === null ? 'Цена уточняется' : `${mod
   </div>
   <Media photos={details.photos} />
   <div class="product-hero__copy">
-    <p class="product-hero__subtitle">{details.subtitle}</p>
+    <p class="product-hero__subtitle">{model.subtitle ?? details.subtitle}</p>
     {model.features?.length && <ul class="product-hero__features" aria-label="Основные характеристики">{model.features.map(feature => <li><img src={`/assets/model-card/${feature.icon}.svg`} alt="" />{feature.label}</li>)}</ul>}
     {model.registration !== 'unconfirmed' && <p class="product-hero__registration"><img src="/assets/product/registration.svg" alt="" />{model.registration === 'gai' ? 'Регистрация в ГАИ' : 'Регистрация в Гостехнадзоре'}</p>}
     <p class="product-hero__intro">{details.intro}</p>

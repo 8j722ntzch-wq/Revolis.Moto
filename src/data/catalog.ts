@@ -1,6 +1,6 @@
 import { catalogueContent } from './catalog-content.ts';
 export interface ModelFeature {
-  icon: 'engine' | 'drive' | 'passport';
+  icon: 'engine' | 'drive' | 'passport' | 'equipment';
   label: string;
 }
 

@@ -1,0 +1,25 @@
+{
+  "capturedAt": "2026-10-23",
+  "fileKey": "JkXOsnFvWZmMab1VYjVQAJ",
+  "nodes": [
+    "143:8793",
+    "143:8795",
+    "143:9218",
+    "143:9276",
+    "143:8794",
+    "143:9392",
+    "143:9334",
+    "159:4812",
+    "159:4813",
+    "159:4814",
+    "159:4815",
+    "159:4816",
+    "159:4817",
+    "159:4818",
+    "19:4794",
+    "192:6288"
+  ],
+  "hero": "233:7145",
+  "quality": "Fresh high-fidelity contexts with screenshots",
+  "data": "src/data/catalog-content.ts"
+}

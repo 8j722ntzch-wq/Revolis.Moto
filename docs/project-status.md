@@ -67,3 +67,11 @@ Validation: Astro check without errors/warnings; 14-route build; 17 passing test
 Shared ProductColors component follows fresh Desktop 333:9925 and Mobile 333:10359: 40px swatches, 8px gap/radius, between intro and price. Original camouflage SVG retained. Palette is provisional for all seven SKU pages until the user supplies per-model availability. Set `colors: ['gray', 'blue']` in a model data file to override; omit for the six-color template palette, or use `colors: []` to hide the block. Registry: src/data/product-colors.ts. Names are exposed on hover/focus/tap; swatches do not change photos, price or lead data.
 
 Validation: check (75 files, no errors/warnings), build (14 routes), 17 tests, strict design check. Hero reviewed at 1470/390px against fresh Figma; overflow and swatch geometry checked at 320/390/1366/1470/1920px. Name reveal by click/focus and keyboard Tab verified. Seven generated SKU pages include six swatches; camouflage loads locally at native geometry inside its 40px clipped slot. Per-model availability still pending.
+
+## 2026-10-23 — карточки и SKU
+
+По запросу пользователя подписи и цены актуального Figma перенесены в catalog-content.ts. Главная, каталог, похожие модели и Hero используют единые данные. Восстановлены краткие особенности, фиолетовые подписи и «В кредит и рассрочку». Карбюратор / EFI / EPS используют оригинальную иконку 24px. Цены: Hammer 200 — 11 500 BYN; Hammer 300 — 16 500 BYN; BaltMotors 400/500/500 EPS/700/700 EPS — от 21 000/23 500/25 000/27 000/28 500 BYN. Это перенос цен макета по поручению пользователя, не независимая проверка предложений.
+
+Наличие остаётся неподтверждённым: у 400 статусы Desktop/Mobile расходятся. Таблицы скрывают строки с null, пустыми значениями и «Уточняется», а также пустые группы. Спорные исходные данные сохранены для последующего заполнения.
+
+Проверки этого этапа: Astro check — 75 файлов без ошибок/предупреждений; build — 14 страниц; 17 тестов; строгая проверка 107 ресурсов. В браузере все семь SKU совпадают с карточками по цене и кратким характеристикам; в ТТХ нет строк «Уточняется». Каталог проверен на 320/390/1366/1470/1920 px без горизонтального переполнения; иконки 24px загружаются; раскрытие ТТХ работает. Desktop-каталог и мобильные карточки/Hero просмотрены визуально.
