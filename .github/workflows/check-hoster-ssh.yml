@@ -1,0 +1,25 @@
+name: Check hoster.by SSH port 22 (no login)
+on:
+  push:
+    branches: [development]
+    paths: ['.github/workflows/check-hoster-ssh.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check-ssh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Check SSH and report unverified public host fingerprint
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$FTP_SERVER"
+          ssh-keyscan -T 15 -p 22 -t ed25519,rsa "$FTP_SERVER" > "$RUNNER_TEMP/host-keys" 2> "$RUNNER_TEMP/scan-errors"
+          test -s "$RUNNER_TEMP/host-keys"
+          echo "PASS: SSH key exchange on port 22."
+          ssh-keygen -lf "$RUNNER_TEMP/host-keys" | awk '{print $1, $2, $NF}'
+          echo "Fingerprints are observed, not verified. No credentials sent; SFTP login and deployment not tested."
