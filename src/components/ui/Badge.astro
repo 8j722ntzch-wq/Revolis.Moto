@@ -1,8 +1,0 @@
----
-interface Props { variant?: 'solid' | 'price'; }
-const { variant = 'solid' } = Astro.props;
----
-<span class:list={['badge', `badge--${variant}`]}>
-  {variant === 'price' && <img src="/assets/ui/dollar.svg" alt="" aria-hidden="true" />}
-  <slot />
-</span>

@@ -1,0 +1,72 @@
+---
+import Button from './ui/Button.astro';
+import { headerLinks, type HeaderLink } from '../data/navigation';
+import { footerContent, siteDestinations, type FooterDestinations } from '../data/footer';
+interface Props {
+  links?: readonly HeaderLink[];
+  destinations?: FooterDestinations;
+  content?: typeof footerContent;
+  topHref?: string;
+  demoAction?: boolean;
+}
+const { links = headerLinks, destinations = siteDestinations, content = footerContent, topHref = '#top', demoAction = false } = Astro.props;
+const maps = [{ key: 'yandex', label: 'Yandex Maps' }, { key: 'google', label: 'Google Maps' }] as const;
+const socials = [{ key: 'instagram', label: 'Instagram' }, { key: 'telegram', label: 'Telegram' }, { key: 'youtube', label: 'YouTube' }] as const;
+const policies = [{ key: 'privacy', label: 'Политика конфиденциальности' }, { key: 'personalData', label: 'Политика обработки персональных данных' }] as const;
+---
+<footer class="site-footer">
+  <div class="site-footer__inner container">
+    <div class="site-footer__main">
+      <nav class="site-footer__navigation" aria-label="Навигация в футере"><h2>Навигация:</h2><div>{links.map(link => <Button variant="text-bold" size="l" href={link.href}>{link.label}</Button>)}</div></nav>
+      <div class="site-footer__contacts">
+        <div class="site-footer__address"><h2>Адрес:</h2><p>{content.address}</p></div>
+        <div class="site-footer__details">
+          <div class="site-footer__hours"><h2>Режим работы:</h2><div>{content.hours.map(row => <p><strong>{row.label}</strong><span>{row.value}</span></p>)}</div></div>
+          <div class="site-footer__maps"><h2>Проложить маршрут:</h2><div>{maps.map(item => <div class="site-footer__map"><img src={`/assets/footer/map-${item.key}.svg`} alt="" /><Button variant="text-bold" href={destinations[item.key]} target={destinations[item.key] ? '_blank' : undefined} disabled={!destinations[item.key] && !demoAction} data-footer-missing={!destinations[item.key] && demoAction ? item.label : undefined}>{item.label}</Button></div>)}</div></div>
+          <div class="site-footer__phones"><h2>Телефоны:</h2><div>{content.phones.map(phone => <Button variant="text-bold" href={phone.href}>{phone.label}</Button>)}</div></div>
+        </div>
+      </div>
+      <Button class="site-footer__top" variant="outline" tone="inverse" href={topHref}>Вернуться наверх<img src="/assets/footer/arrow-up.svg" alt="" /></Button>
+    </div>
+    <div class="site-footer__socials" aria-label="Социальные сети">{socials.map(item => {
+      const href = destinations[item.key]; const Tag = href ? 'a' : 'button';
+      return <Tag class="site-footer__social" href={href} type={href ? undefined : 'button'} target={href ? '_blank' : undefined} rel={href ? 'noopener noreferrer' : undefined} disabled={!href && !demoAction} aria-label={item.label} data-footer-missing={!href && demoAction ? item.label : undefined}><img class="social-rest" src={`/assets/footer/social-${item.key}.svg`} alt="" />{item.key === 'instagram' && <img class="social-hover" src="/assets/footer/social-instagram-hover.svg" alt="" />}</Tag>;
+    })}</div>
+    <p class="site-footer__registration">{content.registration}</p>
+    <div class="site-footer__legal"><div>{policies.map(item => <Button variant="text" size="xs" href={destinations[item.key]} disabled={!destinations[item.key] && !demoAction} data-footer-missing={!destinations[item.key] && demoAction ? item.label : undefined}>{item.label}</Button>)}</div><p>{content.copyright}</p></div>
+  </div>
+</footer>
+<style>
+  .site-footer { --color-text: var(--color-white); background: var(--color-black); color: var(--color-white); }
+  .site-footer__inner { min-height: 510px; padding-block: var(--space-40); display: flex; flex-direction: column; }
+  .site-footer h2 { font-size: var(--text-small); font-weight: var(--font-semibold); line-height: 18px; color: var(--color-gray-5); }
+  .site-footer__main { display: grid; grid-template-columns: 288px 1fr 178px; gap: var(--space-24); align-items: start; }
+  .site-footer__navigation > div { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-8); margin-top: var(--space-12); }
+  .site-footer__address p { font-size: var(--text-heading-lg); font-weight: var(--font-semibold); line-height: 38px; margin-top: var(--space-8); white-space: nowrap; }
+  .site-footer__details { margin-top: 24px; display: grid; grid-template-columns: 186px 182px 141px; gap: var(--space-24); }
+  .site-footer__details h2 { margin-bottom: var(--space-12); }
+  .site-footer__details > div > div { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-4); }
+  .site-footer__hours p { display: flex; align-items: center; gap: var(--space-8); font-size: var(--text-small); line-height: var(--leading-body); white-space: nowrap; }
+  .site-footer__hours strong { font-weight: var(--font-semibold); line-height: 18px; }
+  .site-footer__map { display: flex; align-items: center; gap: 6px; }
+  .site-footer img { display: block; flex-shrink: 0; }
+  .site-footer :global(.site-footer__top) { width: 175px; }
+  .site-footer :global(.site-footer__top .ui-button__label) { display: flex; align-items: center; gap: var(--space-4); }
+  .site-footer__socials { margin-top: auto; padding-top: 100px; display: flex; justify-content: flex-end; gap: var(--space-12); }
+  .site-footer__social { border: 0; display: grid; place-items: center; padding: var(--space-12); border-radius: 500px; background: var(--color-gray-6); }
+  .site-footer__social img { grid-area: 1 / 1; }
+  .site-footer__social .social-hover { visibility: hidden; }
+  .site-footer__social:has(.social-hover):is(:focus-visible):not(:disabled) .social-rest { visibility: hidden; }
+  @media (min-width: 1288px) and (hover: hover) and (pointer: fine) {
+    .site-footer__social:has(.social-hover):is(:hover, :focus-visible):not(:disabled) .social-rest { visibility: hidden; }
+  }
+  .site-footer__social:is(:focus-visible):not(:disabled) .social-hover { visibility: visible; }
+  @media (min-width: 1288px) and (hover: hover) and (pointer: fine) {
+    .site-footer__social:is(:hover, :focus-visible):not(:disabled) .social-hover { visibility: visible; }
+  }
+  .site-footer__registration { margin-top: var(--space-24); text-transform: uppercase; font-size: var(--text-caption); line-height: 14px; color: var(--color-gray-5); }
+  .site-footer__legal { margin-top: var(--space-24); display: flex; justify-content: space-between; align-items: center; font-size: var(--text-caption); line-height: 14px; color: var(--color-gray-5); }
+  .site-footer__legal :global(.ui-button) { line-height: 14px; }
+  .site-footer__legal > div { display: flex; gap: var(--space-16); }
+  .site-footer :global(.ui-button[aria-disabled='true']) { color: inherit; opacity: 1; }
+</style>

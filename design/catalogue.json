@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "fileKey": "JkXOsnFvWZmMab1VYjVQAJ",
+  "capturedAt": "2026-10-21",
+  "desktop": {
+    "nodeId": "143:7264",
+    "width": 1470,
+    "height": 3836
+  },
+  "mobile": {
+    "nodeId": "147:9676",
+    "width": 390,
+    "height": 8136
+  },
+  "contexts": [
+    {
+      "nodeId": "143:7265",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/catalogue-143-7265.txt"
+    },
+    {
+      "nodeId": "143:7274",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/catalogue-143-7274.txt"
+    },
+    {
+      "nodeId": "143:7306",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/catalogue-143-7306.txt"
+    },
+    {
+      "nodeId": "143:7389",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/catalogue-143-7389.txt"
+    },
+    {
+      "nodeId": "143:8791",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/catalogue-143-8791.txt"
+    },
+    {
+      "nodeId": "143:8793",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/catalogue-143-8793.txt"
+    },
+    {
+      "nodeId": "143:8794",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/catalogue-143-8794.txt"
+    },
+    {
+      "nodeId": "143:8795",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/catalogue-143-8795.txt"
+    },
+    {
+      "nodeId": "143:9218",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/catalogue-143-9218.txt"
+    },
+    {
+      "nodeId": "143:9276",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/catalogue-143-9276.txt"
+    },
+    {
+      "nodeId": "143:9334",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/catalogue-143-9334.txt"
+    },
+    {
+      "nodeId": "143:9392",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/catalogue-143-9392.txt"
+    },
+    {
+      "nodeId": "143:9450",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/catalogue-143-9450.txt"
+    },
+    {
+      "nodeId": "143:9523",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/catalogue-143-9523.txt"
+    },
+    {
+      "nodeId": "147:9677",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/catalogue-147-9677.txt"
+    },
+    {
+      "nodeId": "147:9678",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/catalogue-147-9678.txt"
+    },
+    {
+      "nodeId": "159:4805",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/catalogue-159-4805.txt"
+    },
+    {
+      "nodeId": "159:4806",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/catalogue-159-4806.txt"
+    },
+    {
+      "nodeId": "159:4812",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/catalogue-159-4812.txt"
+    },
+    {
+      "nodeId": "159:4813",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/catalogue-159-4813.txt"
+    },
+    {
+      "nodeId": "159:4814",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/catalogue-159-4814.txt"
+    },
+    {
+      "nodeId": "159:4815",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/catalogue-159-4815.txt"
+    },
+    {
+      "nodeId": "159:4816",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/catalogue-159-4816.txt"
+    },
+    {
+      "nodeId": "159:4817",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/catalogue-159-4817.txt"
+    },
+    {
+      "nodeId": "159:4818",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/catalogue-159-4818.txt"
+    },
+    {
+      "nodeId": "159:4819",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/catalogue-159-4819.txt"
+    },
+    {
+      "nodeId": "160:6055",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/catalogue-160-6055.txt"
+    },
+    {
+      "nodeId": "160:6457",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/catalogue-160-6457.txt"
+    }
+  ]
+}

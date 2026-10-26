@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "fileKey": "JkXOsnFvWZmMab1VYjVQAJ",
+  "capturedAt": "2026-10-22",
+  "desktop": {
+    "nodeId": "147:9784",
+    "width": 1470,
+    "height": 8826
+  },
+  "mobile": {
+    "nodeId": "147:9821",
+    "width": 390,
+    "height": 13792
+  },
+  "contexts": [
+    {
+      "nodeId": "233:7145",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/sku-233-7145.txt"
+    },
+    {
+      "nodeId": "316:12045",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/sku-316-12045.txt"
+    },
+    {
+      "nodeId": "233:7227",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/sku-233-7227.txt"
+    },
+    {
+      "nodeId": "308:9264",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/sku-308-9264.txt"
+    },
+    {
+      "nodeId": "233:7494",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/sku-233-7494.txt"
+    },
+    {
+      "nodeId": "308:9031",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/sku-308-9031.txt"
+    },
+    {
+      "nodeId": "258:8712",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/sku-258-8712.txt"
+    },
+    {
+      "nodeId": "316:9408",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/sku-316-9408.txt"
+    },
+    {
+      "nodeId": "207:8811",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/sku-207-8811.txt"
+    },
+    {
+      "nodeId": "316:11945",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/sku-316-11945.txt"
+    },
+    {
+      "nodeId": "298:10251",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/sku-298-10251.txt"
+    },
+    {
+      "nodeId": "316:12726",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/sku-316-12726.txt"
+    },
+    {
+      "nodeId": "308:9030",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/sku-308-9030.txt"
+    },
+    {
+      "nodeId": "207:8534",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/sku-207-8534.txt"
+    },
+    {
+      "nodeId": "298:10252",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/sku-298-10252.txt"
+    },
+    {
+      "nodeId": "147:9786",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/sku-147-9786.txt"
+    },
+    {
+      "nodeId": "298:10074",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/sku-298-10074.txt"
+    },
+    {
+      "nodeId": "204:8057",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/sku-204-8057.txt"
+    },
+    {
+      "nodeId": "297:9989",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/sku-297-9989.txt"
+    },
+    {
+      "nodeId": "147:9787",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/sku-147-9787.txt"
+    },
+    {
+      "nodeId": "298:10817",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/sku-298-10817.txt"
+    },
+    {
+      "nodeId": "207:8532",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/sku-207-8532.txt"
+    },
+    {
+      "nodeId": "316:9391",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/sku-316-9391.txt"
+    },
+    {
+      "nodeId": "207:8533",
+      "quality": "high-fidelity",
+      "contextFile": "design/context/sku-207-8533.txt"
+    }
+  ],
+  "contentNotes": [
+    "Фотографии Striker отсутствуют по поручению пользователя; placeholders не являются продуктовой графикой.",
+    "Диаметр цилиндра × ход поршня и Сухая масса — null, пользователь согласовал «Уточняется» 22.10.2026.",
+    "FAQ: вопросы Figma, ответы составлены из текста модели и ранее согласованного FAQ.",
+    "Цены, наличие, банковские условия и остальные ТТХ остаются Figma reference; сайт не опубликован."
+  ]
+}

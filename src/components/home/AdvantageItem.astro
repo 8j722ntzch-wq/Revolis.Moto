@@ -1,0 +1,10 @@
+---
+interface Props { icon: string; title: string; class?: string; }
+const { icon, title, class: className } = Astro.props;
+const mobileIcon = icon !== 'shop-white';
+---
+<div class:list={['home-advantage', className]}>
+  <img src={`/assets/home/${icon}.svg`} alt="" width="56" height="56" loading="lazy" />
+  {mobileIcon && <span class:list={['mobile-only', 'home-mobile-icon', { 'home-mobile-icon--orange': icon.startsWith('rental-') }]} aria-hidden="true"><span><img src={`/assets/mobile-home/${icon}.svg`} alt="" loading="lazy" /></span></span>}
+  <div><p class="home-advantage__title">{title}</p><p class="home-advantage__body"><slot /></p></div>
+</div>

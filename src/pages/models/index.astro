@@ -1,0 +1,72 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import MobileHeader from '../../components/MobileHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import ModelCard from '../../components/ModelCard.astro';
+import HomeFinance from '../../components/home/HomeFinance.astro';
+import HomeConsultation from '../../components/home/HomeConsultation.astro';
+import { catalogueModels } from '../../data/catalog';
+import '../../styles/home.css';
+import '../../styles/home-mobile.css';
+import '../../styles/catalogue.css';
+const brands = ['Все', ...new Set(catalogueModels.map(model => model.brand))];
+---
+<BaseLayout title="Купить квадроцикл в Беларуси — модели и цены | Revolis.Мото" description="Каталог квадроциклов Mikilon Hammer и BaltMotors Striker: модели, цены и характеристики. Сравните комплектации и получите помощь с выбором в Revolis.Мото.">
+  <div id="top" class="homepage mobile-ui catalogue-page">
+    <SiteHeader homeHref="/" dialogId="lead-dialog" /><MobileHeader homeHref="/" />
+    <main>
+      <section class="catalogue container" aria-labelledby="catalogue-title">
+        <h1 id="catalogue-title">Каталог квадроциклов</h1>
+        <catalogue-filter>
+          <div class="catalogue__filters" role="group" aria-label="Фильтр по бренду">
+            {brands.map((brand, i) => <button type="button" data-brand={i ? brand : 'all'} aria-pressed={i === 0 ? 'true' : 'false'} aria-controls="catalogue-grid">{brand}</button>)}
+          </div>
+          <p class="sr-only" role="status" aria-live="polite" aria-atomic="true" data-filter-status>Показано моделей: {catalogueModels.length}</p>
+          <div id="catalogue-grid" class="catalogue__grid">
+            {catalogueModels.map(model => <div data-catalogue-brand={model.brand}><ModelCard model={model} id={model.id} headingLevel="h2" /></div>)}
+          </div>
+        </catalogue-filter>
+      </section>
+      <HomeFinance /><HomeConsultation />
+    </main>
+    <div id="contacts"><SiteFooter /></div>
+  </div>
+</BaseLayout>
+<script>
+  class CatalogueFilter extends HTMLElement {
+    connectedCallback() {
+      const buttons = Array.from(this.querySelectorAll<HTMLButtonElement>('button[data-brand]'));
+      const cards = Array.from(this.querySelectorAll<HTMLElement>('[data-catalogue-brand]'));
+      const status = this.querySelector<HTMLElement>('[data-filter-status]');
+      const select = (brand: string) => {
+        buttons.forEach(item => item.setAttribute('aria-pressed', String(item.dataset.brand === brand)));
+        cards.forEach(card => { card.hidden = brand !== 'all' && card.dataset.catalogueBrand !== brand; });
+        if (status) status.textContent = `Показано моделей: ${cards.filter(card => !card.hidden).length}`;
+      };
+      const fromUrl = () => {
+        const requested = new URL(location.href).searchParams.get('brand');
+        select(buttons.some(button => button.dataset.brand === requested) ? requested! : 'all');
+      };
+      fromUrl();
+      window.addEventListener('popstate', fromUrl);
+      buttons.forEach((button, index) => {
+        button.onclick = () => {
+          const brand = button.dataset.brand ?? 'all';
+          select(brand);
+          const url = new URL(location.href);
+          if (brand === 'all') url.searchParams.delete('brand'); else url.searchParams.set('brand', brand);
+          history.replaceState(null, '', url);
+        };
+        button.onkeydown = event => {
+          const targets: Record<string, number> = { ArrowRight: (index + 1) % buttons.length, ArrowLeft: (index + buttons.length - 1) % buttons.length, Home: 0, End: buttons.length - 1 };
+          const target = targets[event.key];
+          if (target === undefined) return;
+          event.preventDefault();
+          buttons[target].focus();
+        };
+      });
+    }
+  }
+  if (!customElements.get('catalogue-filter')) customElements.define('catalogue-filter', CatalogueFilter);
+</script>

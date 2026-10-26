@@ -1,0 +1,145 @@
+name: Publish selected master to hoster.by SFTP
+on:
+  push:
+    branches: [development]
+    paths: ['.github/workflows/publish-selected-master.yml']
+permissions:
+  contents: read
+concurrency:
+  group: production-deploy
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: db13c4d6dbdebb2c0ee8dc811fb6eb9ea59f7b8b
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+      - run: npm run build
+      - name: Install SFTP client
+        run: sudo apt-get -o Acquire::Retries=1 -o Acquire::http::Timeout=20 update -qq && sudo apt-get install -y python3-paramiko
+      - name: Back up and publish selected master
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          FTP_SERVER_DIR: ${{ secrets.FTP_SERVER_DIR }}
+        run: |
+          /usr/bin/python3 - <<'PY'
+          import os, socket, hashlib, base64, sys, stat, posixpath, pathlib
+          import paramiko
+          transport = None
+          stage = "configuration"
+          try:
+              host, user, password, directory = [os.environ[n] for n in ("FTP_SERVER", "FTP_USERNAME", "FTP_PASSWORD", "FTP_SERVER_DIR")]
+              if not all((host, user, password, directory)):
+                  raise ValueError("Missing configuration")
+              files = sorted(p for p in pathlib.Path("dist").rglob("*") if p.is_file())
+              if not pathlib.Path("dist/index.html").is_file() or not files:
+                  raise ValueError("Missing build")
+              stage = "SSH and pinned key"
+              transport = paramiko.Transport(socket.create_connection((host, 22), timeout=30))
+              transport.get_security_options().key_types = ("ssh-ed25519",)
+              transport.start_client(timeout=30)
+              fp = "SHA256:" + base64.b64encode(hashlib.sha256(transport.get_remote_server_key().asbytes()).digest()).decode().rstrip("=")
+              if fp != "SHA256:Yk1d+cp6318Dso8AHTwoCStX/iHcxGRXMSntQ++OSK4":
+                  raise ValueError("Host key mismatch")
+              transport.auth_timeout = 30
+              stage = "authentication"
+              transport.auth_password(user, password)
+              sftp = paramiko.SFTPClient.from_transport(transport)
+              sftp.get_channel().settimeout(60)
+              home = sftp.normalize(".")
+              root = sftp.normalize(directory)
+              if root != sftp.normalize("www/revolis.by") or root in (home, "/"):
+                  raise ValueError("Unexpected destination")
+              token = os.environ["GITHUB_RUN_ID"] + "-" + os.environ["GITHUB_RUN_ATTEMPT"]
+              backup = posixpath.join(home, "revolis-deploy-backups", token)
+              def exists(path):
+                  try:
+                      return sftp.lstat(path)
+                  except FileNotFoundError:
+                      return None
+              def mkdirs(path):
+                  info = exists(path)
+                  if info:
+                      if not stat.S_ISDIR(info.st_mode):
+                          raise ValueError("Non-directory or symlink")
+                      return
+                  mkdirs(posixpath.dirname(path))
+                  sftp.mkdir(path, mode=0o700 if path.startswith(backup) else 0o755)
+              mkdirs(backup)
+              staged = []
+              stage = "backup and staging"
+              for local in files:
+                  rel = local.relative_to("dist").as_posix()
+                  target = posixpath.join(root, rel)
+                  mkdirs(posixpath.dirname(target))
+                  info = exists(target)
+                  if info and not stat.S_ISREG(info.st_mode):
+                      raise ValueError("Destination is not a regular file")
+                  if info:
+                      saved = posixpath.join(backup, rel)
+                      mkdirs(posixpath.dirname(saved))
+                      with sftp.open(target, "rb") as src, sftp.open(saved, "wb") as dst:
+                          while True:
+                              chunk = src.read(1024*1024)
+                              if not chunk: break
+                              dst.write(chunk)
+                  temporary = target + ".upload-" + token
+                  sftp.put(str(local), temporary, confirm=True)
+                  sftp.chmod(temporary, 0o644)
+                  with sftp.open(temporary, "rb") as check:
+                      remote_hash = hashlib.sha256(check.read()).digest()
+                  if remote_hash != hashlib.sha256(local.read_bytes()).digest():
+                      raise ValueError("Upload hash mismatch")
+                  staged.append((temporary, target, rel, bool(info)))
+              print("PASS: Backups and staged uploads complete; files=" + str(len(staged)), flush=True)
+              stage = "activation"
+              activated = []
+              try:
+                  for temporary, target, rel, had_previous in sorted(staged, key=lambda item: item[2].endswith(".html")):
+                      sftp.posix_rename(temporary, target)
+                      activated.append((target, rel, had_previous))
+              except Exception:
+                  for target, rel, had_previous in reversed(activated):
+                      if had_previous:
+                          sftp.posix_rename(posixpath.join(backup, rel), target)
+                      else:
+                          sftp.remove(target)
+                  raise
+              stage = "verification"
+              for local in files:
+                  with sftp.open(posixpath.join(root, local.relative_to("dist").as_posix()), "rb") as remote:
+                      if hashlib.sha256(remote.read()).digest() != hashlib.sha256(local.read_bytes()).digest():
+                          raise ValueError("Published file hash mismatch")
+              print("PASS: Published master db13c4d6; all uploaded file hashes verified.", flush=True)
+              print("BACKUP: Home-relative revolis-deploy-backups/" + token, flush=True)
+              print("Existing unrelated files retained.", flush=True)
+          except Exception as error:
+              print("FAIL: " + stage + "; " + type(error).__name__ + ". Details hidden.", flush=True)
+              sys.exit(1)
+          finally:
+              if transport: transport.close()
+          
+          PY
+      - name: Verify public homepage
+        run: |
+          python3 - <<'PY'
+          import urllib.request
+          url = "https://revolis.by/?deploy=db13c4d6"
+          with urllib.request.urlopen(url, timeout=30) as response:
+              text = response.read().decode("utf-8")
+              assert response.status == 200
+              assert "Главная страница в разработке." in text
+              assert "/ui-kit/" in text
+          print("PASS: HTTPS homepage serves the selected master placeholder.")
+          PY

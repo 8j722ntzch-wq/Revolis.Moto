@@ -1,0 +1,47 @@
+const imgLayer1000 = "https://www.figma.com/api/mcp/asset/3539d16a-0f02-4b4b-b36b-9a6272693f16.svg";
+const imgVector = "https://www.figma.com/api/mcp/asset/e8fe89f7-adc7-4d17-a608-ad7ec314d8b7.svg";
+const imgVector1 = "https://www.figma.com/api/mcp/asset/ad43a868-70cb-4bb8-9b62-482a997b70ac.svg";
+const imgGroup = "https://www.figma.com/api/mcp/asset/e1562a23-4807-410d-885e-da94f37b6f11.svg";
+const imgGroup1 = "https://www.figma.com/api/mcp/asset/ea124b65-2ee7-4151-895e-e2258c923239.svg";
+
+export default function Frame() {
+  return (
+    <div className="relative size-full" data-node-id="207:8533" data-name="frame_Кредит, Рассрочка">
+      <p className="[word-break:break-word] absolute font-['Inter:Bold'] font-bold leading-[1.2] left-0 not-italic text-[12px] text-[color:var(--colors\/grays\/black,#0d0d0d)] top-0 tracking-[-0.24px] whitespace-nowrap" data-node-id="207:8328">
+        В кредит и рассрочку:
+      </p>
+      <div className="absolute h-[28px] left-[184px] overflow-clip top-[26px] w-[204px]" data-node-id="211:8968" data-name="logo_Techno">
+        <div className="absolute inset-[25.8%_-0.01%_21%_0.01%]" data-node-id="I211:8968;104:7814" data-name="Layer1000">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLayer1000} />
+        </div>
+      </div>
+      <div className="-translate-y-1/2 absolute h-[28px] left-0 overflow-clip top-[calc(50%+13px)] w-[140px]" data-node-id="211:8953" data-name="logo_Alfa">
+        <div className="absolute inset-[19.75%_0.46%_32.21%_90.27%]" data-node-id="I211:8953;26:5397" data-name="Vector">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector} />
+        </div>
+        <div className="absolute inset-[19.75%_11.61%_32.21%_80.08%]" data-node-id="I211:8953;26:5398" data-name="Vector">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector1} />
+        </div>
+        <div className="absolute contents inset-[0_0.46%_0_0]" data-node-id="I211:8953;26:5399" data-name="Clip path group">
+          <div className="absolute inset-[0_21.3%_0_0] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-size-[169.21px_34px]" data-node-id="I211:8953;26:5402" style={{ maskImage: `url("${imgGroup}")` }} data-name="Group">
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup1} />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+
+These styles are contained in the design: H8 — 12 (Bold): Font(family: "Inter", style: Bold, size: 12, weight: 700, lineHeight: 1.2000000476837158, letterSpacing: -2).
+
+The generated code contains image and SVG URL constants, e.g. const image = 'https://www.figma.com/api/mcp/asset/550e8400-e29b-41d4-a716-446655440000.png'. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.

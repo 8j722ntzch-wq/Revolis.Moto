@@ -1,0 +1,85 @@
+---
+import SliderButton from '../ui/SliderButton.astro';
+
+interface Props {
+  id: string;
+  label: string;
+  previousLabel: string;
+  nextLabel: string;
+}
+const { id, label, previousLabel, nextLabel } = Astro.props;
+---
+<card-rail>
+  <div id={id} class="home-card-grid" tabindex="0" role="region" aria-label={label} data-rail-track><slot /></div>
+  <div class="card-rail__controls" data-rail-controls>
+    <SliderButton direction="previous" label={previousLabel} controls={id} />
+    <p class="sr-only" aria-live="polite" aria-atomic="true" data-rail-count></p>
+    <SliderButton direction="next" label={nextLabel} controls={id} />
+  </div>
+</card-rail>
+<style>
+  card-rail { display: block; min-width: 0; }
+  .card-rail__controls { display: none; }
+  @media (max-width: 1287px) {
+    card-rail[data-overflow='true'] .card-rail__controls { display: flex; justify-content: flex-end; align-items: center; gap: 8px; margin-top: 24px; }
+    [data-rail-track]:focus-visible { outline-offset: -2px; }
+  }
+</style>
+<script>
+  class CardRail extends HTMLElement {
+    connectedCallback() {
+      const track = this.querySelector<HTMLElement>('[data-rail-track]')!;
+      const previous = this.querySelector<HTMLButtonElement>('[data-rail-previous]')!;
+      const next = this.querySelector<HTMLButtonElement>('[data-rail-next]')!;
+      const count = this.querySelector<HTMLElement>('[data-rail-count]')!;
+      const cards = Array.from(track.children) as HTMLElement[];
+      const mobile = matchMedia('(max-width: 1287px)');
+      const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+      let frame = 0;
+
+      // Clamp the last target to the real scroll range, including the trailing gutter.
+      const positions = () => {
+        const left = track.getBoundingClientRect().left;
+        const padding = parseFloat(getComputedStyle(track).paddingLeft);
+        const maximum = track.scrollWidth - track.clientWidth;
+        return cards.map(card => Math.max(0, Math.min(maximum,
+          card.getBoundingClientRect().left - left + track.scrollLeft - padding)));
+      };
+      const current = () => positions().reduce((best, position, index, all) =>
+        Math.abs(position - track.scrollLeft) < Math.abs(all[best] - track.scrollLeft) ? index : best, 0);
+      const update = () => {
+        const overflowing = mobile.matches && track.scrollWidth > track.clientWidth + 1;
+        this.dataset.overflow = String(overflowing);
+        const index = current();
+        previous.disabled = !overflowing || index === 0;
+        next.disabled = !overflowing || index === cards.length - 1;
+        const text = `${index + 1} из ${cards.length}`;
+        if (count.textContent !== text) count.textContent = text;
+      };
+      const go = (index: number) => {
+        const target = Math.max(0, Math.min(cards.length - 1, index));
+        track.scrollTo({ left: positions()[target], behavior: reducedMotion.matches ? 'instant' : 'smooth' });
+      };
+      previous.addEventListener('click', () => go(current() - 1));
+      next.addEventListener('click', () => go(current() + 1));
+      track.addEventListener('keydown', event => {
+        if (event.target !== track || !mobile.matches) return;
+        const targets: Record<string, number> = { ArrowLeft: current() - 1, ArrowRight: current() + 1, Home: 0, End: cards.length - 1 };
+        if (!(event.key in targets)) return;
+        event.preventDefault();
+        go(targets[event.key]);
+      });
+      track.addEventListener('scroll', () => {
+        cancelAnimationFrame(frame);
+        frame = requestAnimationFrame(update);
+      }, { passive: true });
+      const observer = new ResizeObserver(update);
+      observer.observe(track);
+      this.cleanup = () => { observer.disconnect(); cancelAnimationFrame(frame); };
+      update();
+    }
+    private cleanup?: () => void;
+    disconnectedCallback() { this.cleanup?.(); }
+  }
+  if (!customElements.get('card-rail')) customElements.define('card-rail', CardRail);
+</script>

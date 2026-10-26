@@ -1,0 +1,25 @@
+---
+import { imageAttrs } from "../../lib/responsive-images";
+import Button from '../ui/Button.astro';
+import Advantage from './AdvantageItem.astro';
+---
+<section class="home-hero container" aria-labelledby="hero-title">
+  <div class="home-hero__mobile-image mobile-only" aria-hidden="true"><img {...imageAttrs("/assets/mobile-home/hero.png", "banner")} alt="" fetchpriority="high" /></div>
+  <img class="home-hero__image" {...imageAttrs("/assets/home/hero.png", "banner")} alt="Квадроцикл на фоне горного пейзажа" width="1193" height="683" fetchpriority="high" />
+  <div class="home-hero__copy">
+    <p class="home-eyebrow">Mikilon и BaltMotors</p>
+    <h1 id="hero-title">Квадроциклы<br /> <span>в Беларуси</span></h1>
+    <p class="home-hero__body">Подберём модель по опыту собственного проката. Приглашаем на лесной тест-драйв с экипировкой. Поможем с ТО и гарантийным ремонтом.</p>
+    <div class="home-actions"><Button href="/models/" arrow>Смотреть модели</Button><Button data-open-lead="lead-dialog" data-source="hero" data-intent="consultation" variant="outline" arrow>Подобрать квадроцикл</Button></div>
+  </div>
+  <div class="home-hero__uses" aria-label="Для работы, отдыха и новых маршрутов">
+    <img class="home-hero__uses-line" src="/assets/home/usage-line.svg" alt="" />
+    {[['work', 'Для работы'], ['rest', 'Для отдыха'], ['route', 'Для новых маршрутов']].map(([icon, label]) => <p><img class="home-hero__dot" src="/assets/home/usage-dot.svg" alt="" /><img src={`/assets/home/usage-${icon}.svg`} alt="" width="32" height="32" /><span>{label}</span></p>)}
+  </div>
+  <div class="home-hero__advantages">
+    <Advantage icon="benefit-documents" title="Документы до покупки">Разберём оформление выбранной модели</Advantage>
+    <Advantage icon="benefit-warranty" title="Гарантия по брендам">Mikilon — 1 год.<br />BaltMotors — 3 года</Advantage>
+    <Advantage icon="benefit-finance" title="Кредит и рассрочка">Уточним программу и платежи</Advantage>
+    <Advantage icon="benefit-test" title="Лесной тест-драйв">Экипировка и подготовленные маршруты</Advantage>
+  </div>
+</section>

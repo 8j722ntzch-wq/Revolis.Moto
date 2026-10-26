@@ -3,7 +3,7 @@ interface Props { status: 'stock' | 'order' | 'offer' | 'soon'; }
 const { status } = Astro.props;
 const labels = { stock: 'В наличии', order: 'Под заказ', offer: 'Специальное предложение', soon: 'Скоро в продаже' };
 ---
-<span class:list={['badge', 'status-badge', `status-badge--${status}`]}>
+<span class:list={['status-badge', `status-badge--${status}`]}>
   <img src={`/assets/ui/status-${status}.svg`} alt="" aria-hidden="true" />
   {labels[status]}
 </span>

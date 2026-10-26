@@ -1,0 +1,26 @@
+export default function LayoutTabs() {
+  return (
+    <div className="content-stretch cursor-pointer flex gap-[var(--spacings\/content-\(8\),8px)] items-start relative size-full" data-node-id="159:4806" data-name="layout_Tabs">
+      <button className="bg-[var(--colors\/accents\/purple,#7c33fb)] content-stretch flex items-center justify-center p-[var(--padding\/padding-\(12\),12px)] relative rounded-[10px] shrink-0" data-node-id="159:4807" data-name="tab_Type Of Service">
+        <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.2] not-italic relative shrink-0 text-[12px] text-[color:var(--colors\/grays\/white,#fdfdfd)] text-left tracking-[-0.24px] whitespace-nowrap" data-node-id="I159:4807;1:7334">
+          Все
+        </p>
+      </button>
+      <button className="border border-[var(--colors\/grays\/black,#0d0d0d)] border-solid content-stretch flex items-center justify-center p-[var(--padding\/padding-\(12\),12px)] relative rounded-[10px] shrink-0" data-node-id="159:4808" data-name="tab_Type Of Service">
+        <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.2] not-italic relative shrink-0 text-[12px] text-[color:var(--colors\/grays\/black,#0d0d0d)] text-left tracking-[-0.24px] whitespace-nowrap" data-node-id="I159:4808;1:7328">
+          Mikilon
+        </p>
+      </button>
+      <button className="border border-[var(--colors\/grays\/black,#0d0d0d)] border-solid content-stretch flex items-center justify-center p-[var(--padding\/padding-\(12\),12px)] relative rounded-[10px] shrink-0" data-node-id="159:4809" data-name="tab_Type Of Service">
+        <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.2] not-italic relative shrink-0 text-[12px] text-[color:var(--colors\/grays\/black,#0d0d0d)] text-left tracking-[-0.24px] whitespace-nowrap" data-node-id="I159:4809;1:7328">
+          BaltMotors
+        </p>
+      </button>
+      <button className="border border-[var(--colors\/grays\/black,#0d0d0d)] border-solid content-stretch flex items-center justify-center p-[var(--padding\/padding-\(12\),12px)] relative rounded-[10px] shrink-0" data-node-id="159:4810" data-name="tab_Type Of Service">
+        <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.2] not-italic relative shrink-0 text-[12px] text-[color:var(--colors\/grays\/black,#0d0d0d)] text-left tracking-[-0.24px] whitespace-nowrap" data-node-id="I159:4810;1:7328">
+          RBMotors
+        </p>
+      </button>
+    </div>
+  );
+}

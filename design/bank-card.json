@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "fileKey": "JkXOsnFvWZmMab1VYjVQAJ",
+  "pageNodeId": "1:15",
+  "nodeId": "26:5495",
+  "capturedAt": "2026-10-21",
+  "scope": "desktop-bank-card",
+  "status": "implemented-and-browser-checked",
+  "implementation": "src/components/BankCard.astro",
+  "contextFile": "design/context/ui/26-5495.txt",
+  "assets": "design/ui-assets.json",
+  "previewRoute": "/ui-kit/#bank-cards",
+  "variants": {
+    "alfa": {
+      "default": "26:5440",
+      "hover": "26:5496"
+    },
+    "technobank": {
+      "default": "26:5640",
+      "hover": "26:5650"
+    },
+    "consultation": {
+      "default": "26:5736",
+      "hover": "31:5803"
+    }
+  },
+  "reuse": [
+    "Button with inverse tone",
+    "LeadDialog data attributes",
+    "shared typography, radius, spacing and motion tokens"
+  ],
+  "geometry": {
+    "card": {
+      "width": 288,
+      "minHeight": 174,
+      "radius": 16
+    },
+    "logoAlfa": {
+      "width": 170,
+      "height": 34,
+      "x": 20,
+      "y": 20
+    },
+    "logoTechno": {
+      "width": 248,
+      "height": 34,
+      "x": 20,
+      "y": 20
+    },
+    "iconButton": {
+      "width": 40,
+      "height": 40,
+      "x": 228,
+      "y": 114,
+      "iconSize": 20
+    },
+    "consultationText": {
+      "width": 248,
+      "x": 20,
+      "y": 13
+    },
+    "consultationButton": {
+      "width": 248,
+      "height": 42,
+      "x": 20,
+      "y": 112,
+      "iconSize": 16
+    },
+    "hoverTranslateY": -8
+  },
+  "content": {
+    "referenceExport": "src/data/finance.ts#bankCardsReference",
+    "sampleTerms": "До 12 месяцев; От 0,01 % годовых",
+    "confirmedCurrentBankOffers": false,
+    "defaultTerms": "Условия уточняются",
+    "navigation": "Finance intent opens the supplied existing dialog ID. With no dialog or demoAction, button is disabled. Showcase uses local feedback only."
+  },
+  "verification": {
+    "date": "2026-10-21",
+    "viewports": [
+      {
+        "width": 1366,
+        "clientWidth": 1351,
+        "scrollWidth": 1351,
+        "containerWidth": 1224,
+        "cardCount": 6,
+        "cardWidth": 288,
+        "cardHeight": 174,
+        "brokenImages": 0,
+        "baseIconButtonWidth": 40,
+        "baseIconArrowWidth": 16
+      },
+      {
+        "width": 1470,
+        "clientWidth": 1455,
+        "scrollWidth": 1455,
+        "containerWidth": 1224,
+        "cardCount": 6,
+        "cardWidth": 288,
+        "cardHeight": 174,
+        "brokenImages": 0,
+        "baseIconButtonWidth": 40,
+        "baseIconArrowWidth": 16
+      },
+      {
+        "width": 1920,
+        "clientWidth": 1905,
+        "scrollWidth": 1905,
+        "containerWidth": 1224,
+        "cardCount": 6,
+        "cardWidth": 288,
+        "cardHeight": 174,
+        "brokenImages": 0,
+        "baseIconButtonWidth": 40,
+        "baseIconArrowWidth": 16
+      }
+    ],
+    "interactions": [
+      "Enter produces correct bank-specific demo feedback for all three variants",
+      "Visible 2px focus outline and correct inverse button fill",
+      "Finance dialog receives bank, intent, source and optional model ID",
+      "Switching bank clears absent model ID; general consultation clears bank",
+      "Escape closes dialog and returns focus to its trigger",
+      "Missing terms display no sample rate; absent action disables button",
+      "Lead submission remains disabled without endpoint/policy"
+    ],
+    "knownLimits": [
+      "Desktop only; full finance section, confirmed terms, dialog visual design and backend are later steps.",
+      "Local Inter Variable has slightly different intrinsic text widths and fractional line heights; outer geometry matches."
+    ],
+    "astroCheck": {
+      "files": 22,
+      "errors": 0,
+      "warnings": 0,
+      "hints": 0
+    },
+    "build": {
+      "status": "passed",
+      "pages": 2
+    },
+    "offlinePreview": {
+      "file": "preview/Revolis_Moto_UI_Kit.html",
+      "bytes": 1437270,
+      "cards": 6,
+      "embeddedImages": true,
+      "brokenImages": 0,
+      "externalStylesheets": 0,
+      "externalScripts": 0,
+      "fontLoaded": true,
+      "bankFeedback": "passed"
+    }
+  }
+}

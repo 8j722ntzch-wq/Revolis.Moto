@@ -1,0 +1,10 @@
+---
+import BankCard from '../BankCard.astro';
+import { bankCardsReference } from '../../data/finance';
+interface Props { modelId?: string; }
+const { modelId } = Astro.props;
+---
+<section id="finance" class="home-finance" aria-labelledby="finance-title">
+  <div class="home-finance__art"><img src="/assets/home/finance-glow.svg" alt="" /><img src="/assets/home/finance-line.svg" alt="" /></div>
+  <div class="container home-finance__grid"><div class="home-finance__copy"><div><p class="home-eyebrow">Варианты оплаты</p><h2 id="finance-title">Покупка <span>в кредит</span><br />или рассрочку</h2></div><p>Рассчитаем варианты оплаты выбранной модели и объясним условия программы.</p></div>{bankCardsReference.map(bank => <BankCard id={`home-bank-${bank.variant}`} {...bank} terms={null} termsPlaceholder="Срок и платёж — по программе банка." consultationTitle="Рассчитаем покупку выбранной модели" actionLabel="Узнать условия покупки" dialogId="bank-dialog" modelId={modelId} description="Сравним доступные варианты оплаты и поможем подготовить заявку." />)}</div>
+</section>

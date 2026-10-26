@@ -1,0 +1,83 @@
+---
+import Button from './ui/Button.astro';
+import { banks, type BankCardVariant, type BankTerms } from '../data/finance';
+
+interface Props {
+  id: string;
+  variant: BankCardVariant;
+  terms?: BankTerms | null;
+  termsPlaceholder?: string;
+  consultationTitle?: string;
+  actionLabel?: string;
+  headingLevel?: 'h2' | 'h3' | 'h4';
+  dialogId?: string;
+  modelId?: string;
+  demoState?: 'hover';
+  demoAction?: boolean;
+  actionHref?: string;
+  description?: string;
+}
+const { id, variant, terms, termsPlaceholder = 'Условия уточняются', consultationTitle, actionLabel = 'Подобрать условия оплаты', headingLevel: Heading = 'h3', dialogId, modelId, demoState, demoAction = false, actionHref, description = 'Проконсультируем и вместе оформим заявление в банк' } = Astro.props;
+const bank = variant === 'consultation' ? null : banks[variant];
+const action = {
+  href: actionHref,
+  disabled: !dialogId && !demoAction && !actionHref,
+  'data-demo-state': demoState,
+  'data-bank-card-demo': demoAction ? variant : undefined,
+  'data-open-lead': demoAction ? undefined : dialogId,
+  'data-intent': 'finance',
+  'data-source': 'bank-cards',
+  'data-bank': variant === 'consultation' ? undefined : variant,
+  'data-model-id': modelId,
+};
+---
+<article id={id} class:list={['bank-card', `bank-card--${variant}`]} data-demo-state={demoState} aria-label={bank?.name} aria-labelledby={!bank ? `${id}-title` : undefined}>
+  <div class="bank-card__surface">
+    {bank ? <>
+      <img class="bank-card__logo" src={bank.logo} alt={bank.name} />
+      <div class="bank-card__bottom">
+        <div class="bank-card__offer">
+          <Heading class="type-heading-xxs">Кредит и рассрочка</Heading>
+          <div class="bank-card__terms type-small">
+            {terms ? <><p>{terms.durationLabel}</p><p>{terms.rateLabel}</p></> : <p>{termsPlaceholder}</p>}
+          </div>
+        </div>
+        <Button {...action} class="bank-card__trigger" variant="icon" size="m" tone="inverse" aria-label={`Подобрать условия оплаты — ${bank.name}`} />
+      </div>
+    </> : <>
+      <div class="bank-card__consultation">
+        <Heading id={`${id}-title`} class="type-heading-xs">{consultationTitle ?? <>Поможем подобрать <span>комфортные</span> условия</>}</Heading>
+        <p class="type-small">{description}</p>
+      </div>
+      <Button {...action} class="bank-card__action" variant="outline" tone="inverse" arrow>{actionLabel}</Button>
+    </>}
+  </div>
+</article>
+<style>
+  .bank-card { width: var(--bank-card-width); min-height: var(--bank-card-height); flex-shrink: 0; --bank-action-hover: var(--color-white); }
+  .bank-card__surface { position: relative; display: flex; flex-direction: column; justify-content: space-between; min-height: var(--bank-card-height); padding: var(--space-20); border-radius: var(--radius-card); color: var(--color-white); transition: transform var(--motion-fast); }
+  .bank-card--alfa .bank-card__surface { background: var(--color-bank-alfa); color: var(--color-media); }
+  .bank-card--technobank .bank-card__surface { background: var(--color-bank-techno); }
+  .bank-card--consultation { --bank-action-hover: var(--color-purple); }
+  .bank-card--consultation .bank-card__surface { padding-top: 13px; background: var(--color-gray-6); }
+  .bank-card :global(.bank-card__trigger) { position: static; }
+  .bank-card :global(.bank-card__trigger:not(:disabled)::after) { content: ""; position: absolute; inset: 0; border-radius: var(--radius-card); }
+  .bank-card :global(.bank-card__trigger:focus-visible::after) { outline: 2px solid var(--color-purple); outline-offset: 3px; }
+  .bank-card__logo { display: block; align-self: flex-start; flex-shrink: 0; }
+  .bank-card__bottom { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--space-12); margin-top: 30px; }
+  .bank-card__offer { display: flex; flex-direction: column; gap: var(--space-12); }
+  .bank-card__terms { display: flex; flex-direction: column; gap: var(--space-4); }
+  .bank-card__consultation { display: flex; flex-direction: column; gap: var(--space-4); }
+  .bank-card__consultation span { color: var(--color-purple); }
+  .bank-card__consultation > p { color: var(--color-gray-2); }
+  .bank-card :global(.bank-card__action) { width: 100%; margin-top: 19px; }
+  @media (min-width: 1288px) and (hover: hover) and (pointer: fine) {
+    .bank-card:is(:hover, :focus-within, [data-demo-state='hover']) { --inverse-bg: var(--bank-action-hover); --inverse-rest-display: none; --inverse-hover-display: block; --inverse-shadow: none; }
+  }
+  @media (min-width: 1288px) and (hover: hover) and (pointer: fine) {
+    .bank-card--consultation:is(:hover, :focus-within, [data-demo-state='hover']) { --inverse-color: var(--color-white-monochrome); }
+  }
+  @media (min-width: 1288px) and (hover: hover) and (pointer: fine) {
+    .bank-card:is(:hover, :focus-within, [data-demo-state='hover']) .bank-card__surface { transform: translateY(-8px); }
+  }
+</style>

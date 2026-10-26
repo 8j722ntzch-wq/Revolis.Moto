@@ -1,13 +1,15 @@
 /* Visual roles do not dictate HTML heading hierarchy. */
 .type-display { font-size: var(--text-display); font-weight: var(--font-black); line-height: var(--leading-display); text-transform: uppercase; }
-.type-heading-xl { font-size: var(--text-heading-xl); font-weight: var(--font-semibold); line-height: var(--leading-tight); }
-.type-heading-lg { font-size: var(--text-heading-lg); font-weight: var(--font-semibold); line-height: var(--leading-tight); }
+.type-heading-xl { font-size: var(--text-heading-xl); font-weight: var(--font-bold); line-height: var(--leading-tight); }
+.type-heading-lg { font-size: var(--text-heading-lg); font-weight: var(--font-bold); line-height: var(--leading-tight); }
 .type-heading-md { font-size: var(--text-heading-md); font-weight: var(--font-semibold); line-height: var(--leading-body); }
 .type-heading-sm { font-size: var(--text-heading-sm); font-weight: var(--font-semibold); line-height: var(--leading-relaxed); }
-.type-heading-xs { font-size: var(--text-body); font-weight: var(--font-semibold); line-height: var(--leading-body); }
+.type-heading-xs { font-size: var(--text-body); font-weight: var(--font-bold); line-height: var(--leading-body); }
 .type-body-lg { font-size: var(--text-body-lg); font-weight: var(--font-medium); line-height: var(--leading-relaxed); }
 .type-body { font-size: var(--text-body); font-weight: var(--font-medium); line-height: var(--leading-body); }
 .type-small { font-size: var(--text-small); font-weight: var(--font-medium); line-height: var(--leading-body); }
 .type-caption { font-size: var(--text-caption); font-weight: var(--font-medium); line-height: var(--leading-tight); }
 .type-eyebrow { font-size: var(--text-caption); font-weight: var(--font-semibold); line-height: var(--leading-tight); }
+.type-heading-intermediate { font-size: var(--text-heading-intermediate); font-weight: var(--font-bold); line-height: var(--leading-relaxed); }
+.type-heading-xxs { font-size: var(--text-small); font-weight: var(--font-semibold); line-height: var(--leading-relaxed); }
 .weight-bold { font-weight: var(--font-bold); }

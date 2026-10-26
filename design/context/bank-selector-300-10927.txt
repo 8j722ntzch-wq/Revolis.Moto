@@ -1,0 +1,46 @@
+const imgGroup = "https://www.figma.com/api/mcp/asset/4abd8ea3-b1f0-49ed-b1e5-1aafb8047899.svg";
+
+type ButtonBanksProps = {
+  className?: string;
+  bank?: "Альфа" | "Техно";
+  device?: "Desktop" | "Mobile";
+  property1?: "Default" | "Hover" | "Pressed";
+};
+
+export default function ButtonBanks({ className, bank = "Альфа", device = "Desktop", property1 = "Default" }: ButtonBanksProps) {
+  const isDefaultAndDesktopAnd = property1 === "Default" && device === "Desktop" && bank === "Техно";
+  const isDefaultAndMobileAnd = property1 === "Default" && device === "Mobile" && bank === "Альфа";
+  const isDefaultAndMobileAnd1 = property1 === "Default" && device === "Mobile" && bank === "Техно";
+  const isHoverAndDesktopAnd = property1 === "Hover" && device === "Desktop" && bank === "Альфа";
+  const isHoverAndDesktopAnd1 = property1 === "Hover" && device === "Desktop" && bank === "Техно";
+  const isHoverAndMobileAnd = property1 === "Hover" && device === "Mobile" && bank === "Альфа";
+  const isHoverAndMobileAnd1 = property1 === "Hover" && device === "Mobile" && bank === "Техно";
+  const isPressedAndDesktopAnd = property1 === "Pressed" && device === "Desktop" && bank === "Альфа";
+  const isPressedAndDesktopAnd1 = property1 === "Pressed" && device === "Desktop" && bank === "Техно";
+  const isPressedAndMobileAnd = property1 === "Pressed" && device === "Mobile" && bank === "Альфа";
+  const isPressedAndMobileAnd1 = property1 === "Pressed" && device === "Mobile" && bank === "Техно";
+  return (
+    <div className={className || `${String.raw`content-stretch flex flex-col gap-[var(--spacings\/content-\(8\),8px)] items-start relative rounded-[10px] `}${isPressedAndMobileAnd1 ? String.raw`bg-[#0045d1] px-[var(--padding\/padding-\(12\),12px)] py-[8px]` : isPressedAndDesktopAnd1 ? String.raw`bg-[#0045d1] px-[var(--padding\/padding-\(16\),16px)] py-[var(--padding\/padding-\(12\),12px)]` : isPressedAndMobileAnd ? String.raw`bg-[#ef3124] px-[var(--padding\/padding-\(12\),12px)] py-[8px]` : isPressedAndDesktopAnd ? String.raw`bg-[#ef3124] px-[var(--padding\/padding-\(16\),16px)] py-[var(--padding\/padding-\(12\),12px)]` : isHoverAndMobileAnd1 ? String.raw`bg-[rgba(0,69,209,0.2)] px-[var(--padding\/padding-\(12\),12px)] py-[8px]` : isHoverAndDesktopAnd1 ? String.raw`bg-[rgba(0,69,209,0.2)] px-[var(--padding\/padding-\(16\),16px)] py-[var(--padding\/padding-\(12\),12px)]` : isHoverAndMobileAnd ? String.raw`bg-[rgba(239,49,36,0.2)] px-[var(--padding\/padding-\(12\),12px)] py-[8px]` : isHoverAndDesktopAnd ? String.raw`bg-[rgba(239,49,36,0.2)] px-[var(--padding\/padding-\(16\),16px)] py-[var(--padding\/padding-\(12\),12px)]` : isDefaultAndMobileAnd1 ? String.raw`border border-[#0045d1] border-solid px-[var(--padding\/padding-\(12\),12px)] py-[8px]` : isDefaultAndDesktopAnd ? String.raw`border border-[#0045d1] border-solid px-[var(--padding\/padding-\(16\),16px)] py-[var(--padding\/padding-\(12\),12px)]` : isDefaultAndMobileAnd ? String.raw`border border-[#ef3124] border-solid px-[var(--padding\/padding-\(12\),12px)] py-[8px]` : String.raw`border border-[#ef3124] border-solid px-[var(--padding\/padding-\(16\),16px)] py-[var(--padding\/padding-\(12\),12px)]`}`} id={isPressedAndMobileAnd1 ? "node-305_8916" : isPressedAndDesktopAnd1 ? "node-300_10979" : isPressedAndMobileAnd ? "node-305_8913" : isPressedAndDesktopAnd ? "node-300_10937" : isHoverAndMobileAnd1 ? "node-305_8910" : isHoverAndDesktopAnd1 ? "node-300_10976" : isHoverAndMobileAnd ? "node-305_8907" : isHoverAndDesktopAnd ? "node-300_10928" : isDefaultAndMobileAnd1 ? "node-305_8904" : isDefaultAndDesktopAnd ? "node-300_10973" : isDefaultAndMobileAnd ? "node-305_8901" : "node-300_10926"}>
+      <div className="overflow-clip relative shrink-0 size-[24px]" id={isPressedAndMobileAnd1 ? "node-305_8917" : isPressedAndDesktopAnd1 ? "node-300_10980" : isPressedAndMobileAnd ? "node-305_8914" : isPressedAndDesktopAnd ? "node-300_10938" : isHoverAndMobileAnd1 ? "node-305_8911" : isHoverAndDesktopAnd1 ? "node-300_10977" : isHoverAndMobileAnd ? "node-305_8908" : isHoverAndDesktopAnd ? "node-300_10929" : isDefaultAndMobileAnd1 ? "node-305_8905" : isDefaultAndDesktopAnd ? "node-300_10974" : isDefaultAndMobileAnd ? "node-305_8902" : "node-283_8879"} data-name="icon_Advantages (24px, 32 px)">
+        <div className="absolute inset-[12.5%_8.33%_8.33%_8.33%]" id={isPressedAndMobileAnd1 ? "node-I305_8917-115_5886" : isPressedAndDesktopAnd1 ? "node-I300_10980-115_5886" : isPressedAndMobileAnd ? "node-I305_8914-115_5886" : isPressedAndDesktopAnd ? "node-I300_10938-115_5886" : isHoverAndMobileAnd1 ? "node-I305_8911-115_5886" : isHoverAndDesktopAnd1 ? "node-I300_10977-115_5886" : isHoverAndMobileAnd ? "node-I305_8908-115_5886" : isHoverAndDesktopAnd ? "node-I300_10929-115_5886" : isDefaultAndMobileAnd1 ? "node-I305_8905-115_5886" : isDefaultAndDesktopAnd ? "node-I300_10974-115_5886" : isDefaultAndMobileAnd ? "node-I305_8902-115_5886" : "node-I283_8879-115_5886"} data-name="Group">
+          <div className="absolute inset-[-2.96%_-2.81%]">
+            <img alt="" className="block max-w-none size-full" src={imgGroup} />
+          </div>
+        </div>
+      </div>
+      <p className={`${String.raw`[word-break:break-word] font-["Inter:Bold"] font-bold not-italic relative shrink-0 text-[color:var(--colors\/grays\/white,#fdfdfd)] whitespace-nowrap `}${device === "Mobile" ? "leading-[1.25] text-[16px] tracking-[-0.32px]" : "leading-[1.3] text-[20px] tracking-[-0.4px]"}`} id={isPressedAndMobileAnd1 ? "node-305_8918" : isPressedAndDesktopAnd1 ? "node-300_10981" : isPressedAndMobileAnd ? "node-305_8915" : isPressedAndDesktopAnd ? "node-300_10939" : isHoverAndMobileAnd1 ? "node-305_8912" : isHoverAndDesktopAnd1 ? "node-300_10978" : isHoverAndMobileAnd ? "node-305_8909" : isHoverAndDesktopAnd ? "node-300_10930" : isDefaultAndMobileAnd1 ? "node-305_8906" : isDefaultAndDesktopAnd ? "node-300_10975" : isDefaultAndMobileAnd ? "node-305_8903" : "node-281_8875"}>
+        {bank === "Техно" ? "Технобанк" : bank === "Альфа" && (device === "Mobile" || (property1 === "Hover" && device === "Desktop") || (property1 === "Pressed" && device === "Desktop")) ? "Альфа Банк" : "Альфа Банк"}
+      </p>
+    </div>
+  );
+}
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+These styles are contained in the design: H5 — 20 (Bold): Font(family: "Inter", style: Bold, size: 20, weight: 700, lineHeight: 1.2999999523162842, letterSpacing: -2), H6 — 16 (Bold): Font(family: "Inter", style: Bold, size: 16, weight: 700, lineHeight: 1.25, letterSpacing: -2).
+The generated code contains image and SVG URL constants, e.g. const image = 'https://www.figma.com/api/mcp/asset/550e8400-e29b-41d4-a716-446655440000.png'. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.

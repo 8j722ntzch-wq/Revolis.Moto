@@ -1,0 +1,19 @@
+---
+interface Props {
+  direction: 'previous' | 'next';
+  label: string;
+  controls: string;
+}
+const { direction, label, controls } = Astro.props;
+---
+<button type="button" class:list={['slider-button', `slider-button--${direction}`]} aria-label={label} aria-controls={controls} data-rail-previous={direction === 'previous' || undefined} data-rail-next={direction === 'next' || undefined}>
+  <span aria-hidden="true"><img src="/assets/mobile-home/slider-chevron.svg" alt="" /></span>
+</button>
+<style>
+  .slider-button { position: relative; display: grid; place-items: center; flex: 0 0 36px; width: 36px; height: 36px; padding: 0; border: 0; border-radius: 50%; background: var(--color-black); }
+  .slider-button::before { content: ''; position: absolute; inset: -4px; border-radius: 50%; }
+  .slider-button span { display: grid; place-items: center; width: 24px; height: 24px; transform: rotate(90deg); }
+  .slider-button--previous span { transform: rotate(270deg); }
+  .slider-button img { display: block; }
+  .slider-button:active:not(:disabled) { background: var(--color-purple-hover); }
+</style>

@@ -1,0 +1,100 @@
+{
+  "fileKey": "JkXOsnFvWZmMab1VYjVQAJ",
+  "capturedAt": "2026-10-21",
+  "referenceFrame": "1:13204",
+  "referenceWidth": 390,
+  "containerWidth": 340,
+  "scope": "Mobile UI foundation only; homepage assembly deferred by user",
+  "contextDirectory": "design/context/mobile",
+  "components": {
+    "header": [
+      "109:5158",
+      "1:8482"
+    ],
+    "buttons": [
+      "1:6976",
+      "1:7012",
+      "1:7110",
+      "1:7015",
+      "1:7038",
+      "1:7066",
+      "1:7069",
+      "1:7074",
+      "1:7102",
+      "1:7105"
+    ],
+    "fields": [
+      "1:7201",
+      "1:7207",
+      "1:7215",
+      "1:7219",
+      "1:7223",
+      "1:7211"
+    ],
+    "model": [
+      "192:6291"
+    ],
+    "banks": [
+      "160:5688",
+      "160:5819",
+      "160:6012"
+    ],
+    "faq": [
+      "190:6145",
+      "1:7424"
+    ],
+    "footer": [
+      "1:8570"
+    ]
+  },
+  "assets": [
+    {
+      "localPath": "public/assets/mobile/menu.svg",
+      "nodeId": "I1:8477;1:8985",
+      "slot": "MobileHeader toggle"
+    },
+    {
+      "localPath": "public/assets/mobile/close.svg",
+      "nodeId": "1:8482",
+      "slot": "MobileHeader close"
+    },
+    {
+      "localPath": "public/assets/mobile/arrow-white.svg",
+      "nodeId": "I1:7014;1:7287",
+      "slot": "Solid mobile arrow"
+    },
+    {
+      "localPath": "public/assets/mobile/arrow-black.svg",
+      "nodeId": "I1:7017;1:7287",
+      "slot": "Outline mobile arrow"
+    },
+    {
+      "localPath": "public/assets/mobile/arrow-disabled.svg",
+      "nodeId": "I1:7104;1:7287",
+      "slot": "Disabled mobile arrow"
+    },
+    {
+      "localPath": "public/assets/mobile/faq-line.svg",
+      "nodeId": "1:7430",
+      "slot": "Mobile FAQ divider"
+    }
+  ],
+  "reusedAssets": [
+    "public/assets/site/logo.svg",
+    "public/assets/model-card/",
+    "public/assets/bank-card/",
+    "public/assets/footer/",
+    "public/assets/ui/"
+  ],
+  "checks": {
+    "astroCheck": "passed: 0 errors, 0 warnings",
+    "widths": [
+      320,
+      360,
+      390,
+      430
+    ],
+    "horizontalOverflow": false,
+    "browser": "Chromium in-app browser; no physical iOS/Android verification"
+  }
+}

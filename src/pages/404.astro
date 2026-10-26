@@ -1,0 +1,14 @@
+---
+import InfoLayout from '../layouts/InfoLayout.astro';
+import Button from '../components/ui/Button.astro';
+---
+<InfoLayout title="Страница не найдена — Revolis.Мото" description="Эта страница не найдена. Вернитесь на главную Revolis.Мото." pageClass="not-found-page">
+  <div class="not-found container">
+    <picture class="not-found__number"><source media="(max-width: 1287px)" srcset="/assets/info-pages/404-mobile.svg" /><img src="/assets/info-pages/404-desktop.svg" alt="404" /></picture>
+    <div class="not-found__copy">
+      <h1>Страница не найдена</h1>
+      <p>Похоже, что такой страницы не существует. Пожалуйста, вернитесь на главную, чтобы найти то, что вас интересует.</p>
+      <Button href="/" arrow>Перейти на главную</Button>
+    </div>
+  </div>
+</InfoLayout>

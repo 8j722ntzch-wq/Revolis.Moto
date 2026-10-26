@@ -1,0 +1,187 @@
+Captured 2026-10-21. BankCard Desktop implementation; Mobile context retained only as source reference. Assets: design/ui-assets.json.
+const imgArrow = "figma-asset:download-omitted";
+const imgVector = "figma-asset:download-omitted";
+const imgVector1 = "figma-asset:download-omitted";
+const imgGroup = "figma-asset:download-omitted";
+const imgGroup1 = "figma-asset:download-omitted";
+const imgArrow1 = "figma-asset:download-omitted";
+const imgArrow2 = "figma-asset:download-omitted";
+const imgArrow3 = "figma-asset:download-omitted";
+const imgLayer1000 = "figma-asset:download-omitted";
+
+function ButtonBasicIconHoverTrueMDesktop({ className }: { className?: string }) {
+  return (
+    <div className={className || "bg-[var(--colors\\/grays\\/white,#fdfdfd)] content-stretch cursor-pointer flex items-center justify-center p-[10px] relative rounded-[10px]"} data-node-id="1:7000" data-name="button_Basic/Icon/Hover/True/M/Desktop">
+      <div className="relative rounded-[2.353px] shrink-0 size-[20px]" data-node-id="1:7001" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
+        <div className="absolute flex items-center justify-center left-[0.08px] size-[19.849px] top-[0.08px]" data-node-id="I1:7001;1:7315">
+          <div className="-rotate-45 flex-none">
+            <div className="h-[11.228px] relative w-[16.842px]" data-name="Arrow">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow} />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+type LogoAlfaProps = {
+  className?: string;
+  property1?: "Default";
+};
+
+function LogoAlfa({ className, property1 = "Default" }: LogoAlfaProps) {
+  return (
+    <div className={className || "h-[34px] overflow-clip relative w-[170px]"} data-node-id="26:5413">
+      <div className="absolute inset-[19.75%_0.46%_32.21%_90.27%]" data-node-id="26:5397" data-name="Vector">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector} />
+      </div>
+      <div className="absolute inset-[19.75%_11.61%_32.21%_80.08%]" data-node-id="26:5398" data-name="Vector">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector1} />
+      </div>
+      <div className="absolute contents inset-[0_0.46%_0_0]" data-node-id="26:5399" data-name="Clip path group">
+        <div className="absolute inset-[0_21.3%_0_0] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-size-[169.21px_34px]" data-node-id="26:5402" style={{ maskImage: `url("${imgGroup}")` }} data-name="Group">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup1} />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ButtonBasicIconDefaultTrueMDesktop({ className }: { className?: string }) {
+  return (
+    <div className={className || "border border-[var(--colors\\/grays\\/white,#fdfdfd)] border-solid content-stretch flex items-center justify-center p-[10px] relative rounded-[10px]"} data-node-id="1:6998" data-name="button_Basic/Icon/Default/True/M/Desktop">
+      <div className="relative rounded-[2.353px] shrink-0 size-[20px]" data-node-id="1:6999" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
+        <div className="absolute flex items-center justify-center left-[0.08px] size-[19.849px] top-[0.08px]" data-node-id="I1:6999;1:7315">
+          <div className="-rotate-45 flex-none">
+            <div className="h-[11.228px] relative w-[16.842px]" data-name="Arrow">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow1} />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+type ElementBankProps = {
+  className?: string;
+  device?: "Desktop" | "Mobile";
+  state?: "Default" | "Hover";
+  type?: "Альфа" | "Техно" | "Запросить расчёт";
+};
+
+export default function ElementBank({ className, device = "Desktop", state = "Default", type = "Альфа" }: ElementBankProps) {
+  const isAndMobile = type === "Запросить расчёт" && device === "Mobile";
+  const isDefaultAnd = state === "Default" && type === "Техно";
+  const isDefaultAndAndDesktop = state === "Default" && type === "Запросить расчёт" && device === "Desktop";
+  const isDefaultAndAndDesktop1 = state === "Default" && type === "Техно" && device === "Desktop";
+  const isDefaultAndAndMobile = state === "Default" && type === "Запросить расчёт" && device === "Mobile";
+  const isDefaultAndAndMobile1 = state === "Default" && type === "Альфа" && device === "Mobile";
+  const isDefaultAndAndMobile2 = state === "Default" && type === "Техно" && device === "Mobile";
+  const isDefaultAndIsOr = state === "Default" && ["Альфа", "Техно"].includes(type);
+  const isDefaultAndMobileAndIsOr = state === "Default" && device === "Mobile" && ["Альфа", "Техно"].includes(type);
+  const isHoverAndAndDesktop = state === "Hover" && type === "Запросить расчёт" && device === "Desktop";
+  const isHoverAndAndDesktop1 = state === "Hover" && type === "Альфа" && device === "Desktop";
+  const isHoverAndAndDesktop2 = state === "Hover" && type === "Техно" && device === "Desktop";
+  const isHoverAndAndMobile = state === "Hover" && type === "Запросить расчёт" && device === "Mobile";
+  const isHoverAndAndMobile1 = state === "Hover" && type === "Альфа" && device === "Mobile";
+  const isHoverAndAndMobile2 = state === "Hover" && type === "Техно" && device === "Mobile";
+  const isHoverAndIsOr = state === "Hover" && ["Альфа", "Техно"].includes(type);
+  return (
+    <div className={className || `relative ${isHoverAndAndMobile ? "h-[190px] w-[340px]" : isDefaultAndAndMobile ? "cursor-pointer h-[190px] w-[340px]" : state === "Hover" && device === "Mobile" && ["Альфа", "Техно"].includes(type) ? "h-[174px] w-[340px]" : isDefaultAndMobileAndIsOr ? "cursor-pointer h-[174px] w-[340px]" : "h-[174px] w-[288px]"}`} id={isHoverAndAndDesktop2 ? "node-26_5650" : isHoverAndAndDesktop1 ? "node-26_5496" : isHoverAndAndMobile2 ? "node-160_5909" : isDefaultAndAndMobile2 ? "node-160_5819" : isDefaultAndAndDesktop1 ? "node-26_5640" : isHoverAndAndDesktop ? "node-31_5803" : isHoverAndAndMobile ? "node-160_6034" : isDefaultAndAndMobile ? "node-160_6012" : isDefaultAndAndDesktop ? "node-26_5736" : isHoverAndAndMobile1 ? "node-160_5744" : isDefaultAndAndMobile1 ? "node-160_5688" : "node-26_5440"}>
+      <div className={`absolute left-0 rounded-[16px] ${isHoverAndAndDesktop2 ? "bg-[#052eb7] h-[174px] top-[-8px] w-[288px]" : isHoverAndAndDesktop1 ? "bg-[#ef3124] h-[174px] top-[-8px] w-[288px]" : isHoverAndAndMobile2 ? "bg-[#052eb7] h-[174px] top-[-4px] w-[340px]" : isDefaultAndAndMobile2 ? "bg-[#052eb7] h-[174px] top-0 w-[340px]" : isDefaultAndAndDesktop1 ? "bg-[#052eb7] h-[174px] top-0 w-[288px]" : isHoverAndAndDesktop ? String.raw`bg-[var(--colors\/grays\/gray-6,#242424)] h-[174px] top-[-8px] w-[288px]` : isHoverAndAndMobile ? String.raw`bg-[var(--colors\/grays\/gray-6,#242424)] bottom-[4px] content-stretch flex flex-col gap-[16px] items-start p-[20px] w-[340px]` : isDefaultAndAndMobile ? String.raw`bg-[var(--colors\/grays\/gray-6,#242424)] content-stretch flex flex-col gap-[16px] items-start p-[20px] top-0 w-[340px]` : isDefaultAndAndDesktop ? String.raw`bg-[var(--colors\/grays\/gray-6,#242424)] h-[174px] top-0 w-[288px]` : isHoverAndAndMobile1 ? "bg-[#ef3124] h-[174px] top-[-4px] w-[340px]" : isDefaultAndAndMobile1 ? "bg-[#ef3124] h-[174px] top-0 w-[340px]" : "bg-[#ef3124] h-[174px] top-0 w-[288px]"}`} id={isHoverAndAndDesktop2 ? "node-26_5651" : isHoverAndAndDesktop1 ? "node-26_5523" : isHoverAndAndMobile2 ? "node-160_5910" : isDefaultAndAndMobile2 ? "node-160_5820" : isDefaultAndAndDesktop1 ? "node-26_5641" : isHoverAndAndDesktop ? "node-31_5804" : isHoverAndAndMobile ? "node-160_6035" : isDefaultAndAndMobile ? "node-160_6013" : isDefaultAndAndDesktop ? "node-26_5737" : isHoverAndAndMobile1 ? "node-160_5745" : isDefaultAndAndMobile1 ? "node-160_5689" : "node-26_5524"} data-name="Container">
+        {type === "Альфа" && <LogoAlfa className="absolute h-[34px] left-[20px] overflow-clip top-[20px] w-[170px]" />}
+        {isDefaultAndIsOr && <ButtonBasicIconDefaultTrueMDesktop className={`${String.raw`absolute border border-[var(--colors\/grays\/white,#fdfdfd)] border-solid content-stretch flex items-center justify-center p-[10px] rounded-[10px] `}${isDefaultAndMobileAndIsOr ? "bottom-[20px] right-[20px]" : "left-[228px] top-[114px]"}`} />}
+        {((state === "Default" && type === "Альфа") || isAndMobile || isDefaultAnd) && (
+          <div className={`[word-break:break-word] content-stretch flex flex-col items-start not-italic ${isDefaultAnd ? String.raw`absolute gap-[var(--spacings\/content-\(12\),12px)] left-[20px] text-[14px] text-[color:var(--colors\/grays\/white,#fdfdfd)] top-[84px] tracking-[-0.28px] w-[139px]` : isAndMobile ? String.raw`gap-[var(--spacings\/content-\(4\),4px)] relative shrink-0 w-full` : String.raw`absolute gap-[var(--spacings\/content-\(12\),12px)] left-[20px] text-[14px] text-white top-[84px] tracking-[-0.28px] w-[139px]`}`} id={isDefaultAndAndMobile2 ? "node-160_5822" : isDefaultAndAndDesktop1 ? "node-26_5645" : isHoverAndAndMobile ? "node-160_6037" : isDefaultAndAndMobile ? "node-160_6015" : isDefaultAndAndMobile1 ? "node-160_5693" : "node-26_5439"} data-name="layout_Heading, Body">
+            <p className={`relative shrink-0 ${isAndMobile ? String.raw`font-["Inter:Bold"] font-bold leading-[0] text-[0px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.4px] w-full` : 'font-["Inter:Semi_Bold"] font-semibold leading-[1.3] min-w-full w-[min-content]'}`} id={isDefaultAndAndMobile2 ? "node-160_5823" : isDefaultAndAndDesktop1 ? "node-26_5646" : isHoverAndAndMobile ? "node-160_6038" : isDefaultAndAndMobile ? "node-160_6016" : isDefaultAndAndMobile1 ? "node-160_5694" : "node-26_5435"}>
+              {isDefaultAndIsOr && "Кредит и рассрочка"}
+              {isAndMobile && (
+                <>
+                  <span className="leading-[1.3] text-[20px]">{`Поможем подобрать `}</span>
+                  <span className="leading-[1.3] text-[#7c33fb] text-[20px]">комфортные</span>
+                  <span className="leading-[1.3] text-[20px]">{` условия`}</span>
+                </>
+              )}
+            </p>
+            {isDefaultAndIsOr && (
+              <div className="content-stretch flex flex-col font-['Inter:Medium'] font-medium gap-[var(--spacings\/content-\(4\),4px)] items-start leading-[1.25] relative shrink-0 w-[123px]" id={isDefaultAndAndMobile2 ? "node-160_5824" : isDefaultAndAndDesktop1 ? "node-26_5647" : isDefaultAndAndMobile1 ? "node-160_5695" : "node-26_5438"} data-name="layout_Body">
+                <p className="relative shrink-0 w-full" id={isDefaultAndAndMobile2 ? "node-160_5825" : isDefaultAndAndDesktop1 ? "node-26_5648" : isDefaultAndAndMobile1 ? "node-160_5696" : "node-26_5436"}>
+                  До 12 месяцев
+                </p>
+                <p className="relative shrink-0 w-full" id={isDefaultAndAndMobile2 ? "node-160_5826" : isDefaultAndAndDesktop1 ? "node-26_5649" : isDefaultAndAndMobile1 ? "node-160_5697" : "node-26_5437"}>
+                  От 0,01 % годовых
+                </p>
+              </div>
+            )}
+            {isAndMobile && (
+              <p className="font-['Inter:Medium'] font-medium leading-[1.25] relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/gray-2,#ebe7f1)] tracking-[-0.28px] w-full" id={isHoverAndAndMobile ? "node-160_6039" : "node-160_6017"}>
+                Проконсультируем и вместе оформим заявление в банк
+              </p>
+            )}
+          </div>
+        )}
+        {isHoverAndIsOr && (
+          <>
+            <ButtonBasicIconHoverTrueMDesktop className={`${String.raw`absolute bg-[var(--colors\/grays\/white,#fdfdfd)] content-stretch cursor-pointer flex items-center justify-center p-[10px] rounded-[10px] `}${state === "Hover" && device === "Desktop" && ["Альфа", "Техно"].includes(type) ? "left-[228px] top-[114px]" : isHoverAndAndMobile2 ? "bottom-[20px] right-[20px]" : "bottom-[22px] right-[20px]"}`} />
+            <div className={`${String.raw`[word-break:break-word] absolute content-stretch flex flex-col gap-[var(--spacings\/content-\(12\),12px)] items-start left-[20px] not-italic text-[14px] top-[84px] tracking-[-0.28px] w-[139px] `}${state === "Hover" && type === "Техно" ? String.raw`text-[color:var(--colors\/grays\/white,#fdfdfd)]` : "text-white"}`} id={isHoverAndAndDesktop2 ? "node-26_5655" : isHoverAndAndDesktop1 ? "node-26_5500" : isHoverAndAndMobile2 ? "node-160_5912" : "node-160_5749"} data-name="layout_Heading, Body">
+              <p className="font-['Inter:Semi_Bold'] font-semibold leading-[1.3] min-w-full relative shrink-0 w-[min-content]" id={isHoverAndAndDesktop2 ? "node-26_5656" : isHoverAndAndDesktop1 ? "node-26_5501" : isHoverAndAndMobile2 ? "node-160_5913" : "node-160_5750"}>
+                Кредит и рассрочка
+              </p>
+              <div className="content-stretch flex flex-col font-['Inter:Medium'] font-medium gap-[var(--spacings\/content-\(4\),4px)] items-start leading-[1.25] relative shrink-0 w-[123px]" id={isHoverAndAndDesktop2 ? "node-26_5657" : isHoverAndAndDesktop1 ? "node-26_5502" : isHoverAndAndMobile2 ? "node-160_5914" : "node-160_5751"} data-name="layout_Body">
+                <p className="relative shrink-0 w-full" id={isHoverAndAndDesktop2 ? "node-26_5658" : isHoverAndAndDesktop1 ? "node-26_5503" : isHoverAndAndMobile2 ? "node-160_5915" : "node-160_5752"}>
+                  До 12 месяцев
+                </p>
+                <p className="relative shrink-0 w-full" id={isHoverAndAndDesktop2 ? "node-26_5659" : isHoverAndAndDesktop1 ? "node-26_5504" : isHoverAndAndMobile2 ? "node-160_5916" : "node-160_5753"}>
+                  От 0,01 % годовых
+                </p>
+              </div>
+            </div>
+          </>
+        )}
+        {type === "Запросить расчёт" && (
+          <div className={`${String.raw`content-stretch flex gap-[4px] items-center justify-center px-[var(--padding\/padding-\(16\),16px)] py-[var(--padding\/padding-\(12\),12px)] rounded-[10px] `}${isHoverAndAndDesktop ? String.raw`absolute bg-[var(--colors\/accents\/purple,#7c33fb)] cursor-pointer left-[20px] top-[112px] w-[248px]` : isHoverAndAndMobile ? String.raw`bg-[var(--colors\/accents\/purple,#7c33fb)] cursor-pointer relative shrink-0 w-full` : isDefaultAndAndMobile ? String.raw`border border-[var(--colors\/grays\/white,#fdfdfd)] border-solid relative shrink-0 w-full` : String.raw`absolute border border-[var(--colors\/grays\/white,#fdfdfd)] border-solid left-[20px] top-[112px] w-[248px]`}`} id={isHoverAndAndDesktop ? "node-31_5806" : isHoverAndAndMobile ? "node-160_6036" : isDefaultAndAndMobile ? "node-160_6014" : "node-26_5740"} data-name="button_Basic">
+            <p className={`[word-break:break-word] font-["Inter:Semi_Bold"] font-semibold leading-[1.3] not-italic relative shrink-0 text-[14px] tracking-[-0.28px] whitespace-nowrap ${isHoverAndAndDesktop ? String.raw`text-[color:var(--colors\/white-\(monochrome\),#fefefe)]` : String.raw`text-[color:var(--colors\/grays\/white,#fdfdfd)]`}`} id={isHoverAndAndDesktop ? "node-I31_5806-1_7034" : isHoverAndAndMobile ? "node-I160_6036-1_7034" : isDefaultAndAndMobile ? "node-I160_6014-1_7010" : "node-I26_5740-1_7010"}>
+              Подобрать условия оплаты
+            </p>
+            <div className="relative rounded-[1.882px] shrink-0 size-[16px]" id={isHoverAndAndDesktop ? "node-I31_5806-1_7035" : isHoverAndAndMobile ? "node-I160_6036-1_7035" : isDefaultAndAndMobile ? "node-I160_6014-1_7011" : "node-I26_5740-1_7011"} data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
+              <div className="absolute h-[8.784px] left-[1.41px] top-[3.61px] w-[13.176px]" id={isHoverAndAndDesktop ? "node-I31_5806-1_7035-1_7283" : isHoverAndAndMobile ? "node-I160_6036-1_7035-1_7283" : isDefaultAndAndMobile ? "node-I160_6014-1_7011-1_7283" : "node-I26_5740-1_7011-1_7283"} data-name="Arrow">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={isHoverAndAndDesktop ? imgArrow3 : imgArrow2} />
+              </div>
+            </div>
+          </div>
+        )}
+        {type === "Техно" && (
+          <div className="absolute h-[34px] left-[20px] overflow-clip top-[20px] w-[248px]" id={isHoverAndAndDesktop2 ? "node-104_7869" : isHoverAndAndMobile2 ? "node-160_5917" : isDefaultAndAndMobile2 ? "node-160_5827" : "node-104_7832"} data-name="logo_Techno">
+            <div className="absolute inset-[25.8%_-0.01%_21%_0.01%]" id={isHoverAndAndDesktop2 ? "node-I104_7869-104_7814" : isHoverAndAndMobile2 ? "node-I160_5917-104_7814" : isDefaultAndAndMobile2 ? "node-I160_5827-104_7814" : "node-I104_7832-104_7814"} data-name="Layer1000">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLayer1000} />
+            </div>
+          </div>
+        )}
+        {type === "Запросить расчёт" && device === "Desktop" && (
+          <div className="[word-break:break-word] absolute content-stretch flex flex-col gap-[var(--spacings\/content-\(4\),4px)] items-start left-[20px] not-italic top-[13px] w-[248px]" id={isHoverAndAndDesktop ? "node-31_5807" : "node-26_5741"} data-name="layout_Heading, Body">
+            <p className="font-['Inter:Bold'] font-bold leading-[0] relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.32px] w-full" id={isHoverAndAndDesktop ? "node-31_5808" : "node-26_5744"}>
+              <span className="leading-[1.25]">{`Поможем подобрать `}</span>
+              <span className="leading-[1.25] text-[#7c33fb]">комфортные</span>
+              <span className="leading-[1.25]">{` условия`}</span>
+            </p>
+            <p className="font-['Inter:Medium'] font-medium leading-[1.25] relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/gray-2,#ebe7f1)] tracking-[-0.28px] w-full" id={isHoverAndAndDesktop ? "node-31_5809" : "node-26_5764"}>
+              Проконсультируем и вместе оформим заявление в банк
+            </p>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+These styles are contained in the design: H7 — 14: Font(family: "Inter", style: Semi Bold, size: 14, weight: 600, lineHeight: 1.2999999523162842, letterSpacing: -2), P3 — 14: Font(family: "Inter", style: Medium, size: 14, weight: 500, lineHeight: 1.25, letterSpacing: -2), H6 — 16 (Bold): Font(family: "Inter", style: Bold, size: 16, weight: 700, lineHeight: 1.25, letterSpacing: -2), H5 — 20 (Bold): Font(family: "Inter", style: Bold, size: 20, weight: 700, lineHeight: 1.2999999523162842, letterSpacing: -2).
+The generated code contains image and SVG URL constants, e.g. const image = 'figma-asset:download-omitted These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.

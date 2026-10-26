@@ -1,0 +1,11 @@
+---
+import Button from '../ui/Button.astro';
+import SectionHeading from '../ui/SectionHeading.astro';
+import ModelCard from '../ModelCard.astro';
+import { homepageModels } from '../../data/catalog';
+---
+<section id="models" class="home-models container" aria-labelledby="models-title">
+  <div class="home-models__heading"><SectionHeading eyebrow="Модели квадроциклов" id="models-title" bold>Выберите квадроцикл<br /> <span>для своих задач</span></SectionHeading><a class="home-catalog-link" href="/models/">Перейти в каталог<img src="/assets/home/catalog-arrow.svg" alt="" /></a></div>
+  <div class="home-card-grid">{homepageModels.map(model => <ModelCard model={model} id={model.id} />)}</div>
+  <Button class="mobile-only home-catalog-mobile" variant="outline" arrow href="/models/">Перейти в каталог</Button>
+</section>

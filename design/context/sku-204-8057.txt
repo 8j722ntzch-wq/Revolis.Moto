@@ -1,0 +1,115 @@
+const imgElementLine = "https://www.figma.com/api/mcp/asset/863659ff-94bd-42a2-be1f-4e4b2ecdbf82.svg";
+
+export default function Component11Faq() {
+  return (
+    <div className="content-stretch flex flex-col gap-[var(--spacings\/content-\(48\),48px)] items-start relative size-full" data-node-id="204:8057" data-name="11_FAQ">
+      <div className="[word-break:break-word] content-stretch flex flex-col font-['Inter:Bold'] font-bold gap-[var(--spacings\/content-\(4\),4px)] items-start not-italic relative shrink-0 text-[color:var(--colors\/grays\/black,#0d0d0d)] w-full" data-node-id="204:8058" data-name="block_Headline">
+        <p className="leading-[1.2] relative shrink-0 text-[12px] tracking-[-0.24px] w-[232px]" data-node-id="I204:8058;1:7496">
+          Вопросы и ответы
+        </p>
+        <p className="leading-[0] relative shrink-0 text-[40px] tracking-[-0.8px] whitespace-nowrap" data-node-id="I204:8058;5:4037">
+          <span className="leading-[1.2]">{`Всё, что `}</span>
+          <span className="leading-[1.2] text-[#7c33fb]">важно знать</span>
+          <span className="leading-[1.2]">{` перед покупкой`}</span>
+        </p>
+      </div>
+      <div className="content-stretch flex flex-col gap-[var(--spacings\/content-\(32\),32px)] items-start relative shrink-0 w-full" data-node-id="204:8059" data-name="layout_FAQ Accordions">
+        <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-[1224px]" data-node-id="204:8060" data-name="block_Accordion">
+          <div className="content-stretch flex items-end justify-between relative shrink-0 w-[1224px]" data-node-id="I204:8060;1:7345" data-name="block_Headline + Button">
+            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.25] not-italic relative shrink-0 text-[24px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.48px] whitespace-nowrap" data-node-id="I204:8060;1:7346">
+              Чем Striker 500 EFI/EPS отличается от обычного 500 EFI?
+            </p>
+            <div className="content-stretch flex items-center justify-center opacity-0 relative shrink-0" data-node-id="I204:8060;1:7347" data-name="button_Basic">
+              <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.2] not-italic relative shrink-0 text-[12px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.24px] whitespace-nowrap" data-node-id="I204:8060;1:7347;1:7191">
+                Открыть
+              </p>
+            </div>
+          </div>
+          <div className="h-0 relative shrink-0 w-[1224px]" data-node-id="I204:8060;1:7350" data-name="element_Line">
+            <div className="absolute inset-[-1px_0_0_0]">
+              <img alt="" className="block max-w-none size-full" src={imgElementLine} />
+            </div>
+          </div>
+        </div>
+        <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-[1224px]" data-node-id="204:8061" data-name="block_Accordion">
+          <div className="content-stretch flex items-end justify-between relative shrink-0 w-[1224px]" data-node-id="I204:8061;1:7345" data-name="block_Headline + Button">
+            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.25] not-italic relative shrink-0 text-[24px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.48px] whitespace-nowrap" data-node-id="I204:8061;1:7346">
+              Для чего нужен электроусилитель EPS?
+            </p>
+            <div className="content-stretch flex items-center justify-center opacity-0 relative shrink-0" data-node-id="I204:8061;1:7347" data-name="button_Basic">
+              <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.2] not-italic relative shrink-0 text-[12px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.24px] whitespace-nowrap" data-node-id="I204:8061;1:7347;1:7191">
+                Открыть
+              </p>
+            </div>
+          </div>
+          <div className="h-0 relative shrink-0 w-[1224px]" data-node-id="I204:8061;1:7350" data-name="element_Line">
+            <div className="absolute inset-[-1px_0_0_0]">
+              <img alt="" className="block max-w-none size-full" src={imgElementLine} />
+            </div>
+          </div>
+        </div>
+        <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-[1224px]" data-node-id="204:8062" data-name="block_Accordion">
+          <div className="content-stretch flex items-end justify-between relative shrink-0 w-[1224px]" data-node-id="I204:8062;1:7345" data-name="block_Headline + Button">
+            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.25] not-italic relative shrink-0 text-[24px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.48px] whitespace-nowrap" data-node-id="I204:8062;1:7346">
+              У квадрицикла постоянный полный привод?
+            </p>
+            <div className="content-stretch flex items-center justify-center opacity-0 relative shrink-0" data-node-id="I204:8062;1:7347" data-name="button_Basic">
+              <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.2] not-italic relative shrink-0 text-[12px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.24px] whitespace-nowrap" data-node-id="I204:8062;1:7347;1:7191">
+                Открыть
+              </p>
+            </div>
+          </div>
+          <div className="h-0 relative shrink-0 w-[1224px]" data-node-id="I204:8062;1:7350" data-name="element_Line">
+            <div className="absolute inset-[-1px_0_0_0]">
+              <img alt="" className="block max-w-none size-full" src={imgElementLine} />
+            </div>
+          </div>
+        </div>
+        <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-[1224px]" data-node-id="204:8063" data-name="block_Accordion">
+          <div className="content-stretch flex items-end justify-between relative shrink-0 w-[1224px]" data-node-id="I204:8063;1:7345" data-name="block_Headline + Button">
+            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.25] not-italic relative shrink-0 text-[24px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.48px] whitespace-nowrap" data-node-id="I204:8063;1:7346">
+              Входит ли лебёдка в базовую комплектацию?
+            </p>
+            <div className="content-stretch flex items-center justify-center opacity-0 relative shrink-0" data-node-id="I204:8063;1:7347" data-name="button_Basic">
+              <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.2] not-italic relative shrink-0 text-[12px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.24px] whitespace-nowrap" data-node-id="I204:8063;1:7347;1:7191">
+                Открыть
+              </p>
+            </div>
+          </div>
+          <div className="h-0 relative shrink-0 w-[1224px]" data-node-id="I204:8063;1:7350" data-name="element_Line">
+            <div className="absolute inset-[-1px_0_0_0]">
+              <img alt="" className="block max-w-none size-full" src={imgElementLine} />
+            </div>
+          </div>
+        </div>
+        <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-[1224px]" data-node-id="204:8064" data-name="block_Accordion">
+          <div className="content-stretch flex items-end justify-between relative shrink-0 w-[1224px]" data-node-id="I204:8064;1:7345" data-name="block_Headline + Button">
+            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.25] not-italic relative shrink-0 text-[24px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.48px] whitespace-nowrap" data-node-id="I204:8064;1:7346">
+              Какая гарантия предоставляется?
+            </p>
+            <div className="content-stretch flex items-center justify-center opacity-0 relative shrink-0" data-node-id="I204:8064;1:7347" data-name="button_Basic">
+              <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.2] not-italic relative shrink-0 text-[12px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.24px] whitespace-nowrap" data-node-id="I204:8064;1:7347;1:7191">
+                Открыть
+              </p>
+            </div>
+          </div>
+          <div className="h-0 relative shrink-0 w-[1224px]" data-node-id="I204:8064;1:7350" data-name="element_Line">
+            <div className="absolute inset-[-1px_0_0_0]">
+              <img alt="" className="block max-w-none size-full" src={imgElementLine} />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+These styles are contained in the design: H8 — 12 (Bold): Font(family: "Inter", style: Bold, size: 12, weight: 700, lineHeight: 1.2000000476837158, letterSpacing: -2), H1 — 40 (Bold): Font(family: "Inter", style: Bold, size: 40, weight: 700, lineHeight: 1.2000000476837158, letterSpacing: -2), H4 — 24: Font(family: "Inter", style: Semi Bold, size: 24, weight: 600, lineHeight: 1.25, letterSpacing: -2), Button (XS) — 12: Font(family: "Inter", style: Medium, size: 12, weight: 500, lineHeight: 1.2000000476837158, letterSpacing: -2).
+The generated code contains image and SVG URL constants, e.g. const image = 'https://www.figma.com/api/mcp/asset/550e8400-e29b-41d4-a716-446655440000.png'. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.

@@ -1,8 +1,8 @@
-Figma MCP get_design_context — captured 2026-10-21.
-Read-only reference; not application code. Temporary download URLs replaced with opaque asset identifiers. Original SVG files are registered in design/ui-assets.json.
+Figma MCP get_design_context — audited 2026-10-21 after project cleanup.
+Read-only reference; not application code. Temporary asset URLs omitted; original SVG nodes are registered in design/ui-assets.json.
 
-const imgElementLine = "figma-asset:583fa3f8-8f01-4e55-b277-f3c4444566c1.svg";
-const imgElementLine1 = "figma-asset:5cbc18b9-3fad-4238-91f0-0b0840fddf1f.svg";
+const imgElementLine = "figma-asset:download-omitted.svg";
+const imgElementLine1 = "figma-asset:download-omitted.svg";
 
 type BlockAccordionProps = {
   className?: string;
@@ -153,6 +153,7 @@ export default function BlockAccordion({ className, device = "Desktop", state = 
     </div>
   );
 }
+
 SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
 1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
 2. Convert React syntax to the target framework/library
@@ -160,6 +161,9 @@ SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the
 4. Follow the project's existing patterns and conventions
 DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
 
+
 Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
-These styles are contained in the design: H4 — 24: Font(family: "Inter", style: Semi Bold, size: 24, weight: 600, lineHeight: 1.25, letterSpacing: -2), Button (XS) — 12: Font(family: "Inter", style: Medium, size: 12, weight: 500, lineHeight: 1.2000000476837158, letterSpacing: -2), H4 — 20: Font(family: "Inter", style: Semi Bold, size: 20, weight: 600, lineHeight: 1.2999999523162842, letterSpacing: -2), P2 — 16 (P1 Mobile): Font(family: "Inter", style: Medium, size: 16, weight: 500, lineHeight: 1.25, letterSpacing: -2), P1 — 20: Font(family: "Inter", style: Medium, size: 20, weight: 500, lineHeight: 1.2999999523162842, letterSpacing: -2), P2 — 16: Font(family: "Inter", style: Medium, size: 16, weight: 500, lineHeight: 1.25, letterSpacing: -2).
-The generated code contains image and SVG URL constants, e.g. const image = 'figma-asset:550e8400-e29b-41d4-a716-446655440000.png'. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.
+
+These styles are contained in the design: H4 — 24: Font(family: "Inter", style: Semi Bold, size: 24, weight: 600, lineHeight: 1.25, letterSpacing: -2), Button (XS) — 12: Font(family: "Inter", style: Medium, size: 12, weight: 500, lineHeight: 1.2000000476837158, letterSpacing: -2), H5 — 20: Font(family: "Inter", style: Semi Bold, size: 20, weight: 600, lineHeight: 1.2999999523162842, letterSpacing: -2), P2 — 16 (P1 Mobile): Font(family: "Inter", style: Medium, size: 16, weight: 500, lineHeight: 1.25, letterSpacing: -2), P1 — 20: Font(family: "Inter", style: Medium, size: 20, weight: 500, lineHeight: 1.2999999523162842, letterSpacing: -2), P2 — 16: Font(family: "Inter", style: Medium, size: 16, weight: 500, lineHeight: 1.25, letterSpacing: -2).
+
+The generated code contains image and SVG URL constants, e.g. const image = 'figma-asset:download-omitted.png'. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.

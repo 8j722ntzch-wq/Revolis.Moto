@@ -1,0 +1,620 @@
+const imgArrow = "https://www.figma.com/api/mcp/asset/22acdd9e-6b67-4991-a636-b41451dd0ec3.svg";
+
+type FrameTableLineProps = {
+  className?: string;
+  device?: "Desktop";
+  type?: "Content (Primary)" | "Header";
+};
+
+function FrameTableLine({ className, device = "Desktop", type = "Header" }: FrameTableLineProps) {
+  const isContentPrimaryAndDesktop = type === "Content (Primary)" && device === "Desktop";
+  const isHeaderAndDesktop = type === "Header" && device === "Desktop";
+  return (
+    <div className={className || `relative w-[1224px] ${isContentPrimaryAndDesktop ? String.raw`bg-[var(--colors\/grays\/white,#fdfdfd)] content-stretch flex flex-col items-start` : String.raw`[word-break:break-word] font-["Inter:Bold"] font-bold h-[28px] leading-[1.25] not-italic text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] whitespace-nowrap`}`} id={isContentPrimaryAndDesktop ? "node-233_7508" : "node-233_7509"}>
+      {isHeaderAndDesktop && (
+        <>
+          <p className="absolute left-0 top-[calc(50%-10px)]" data-node-id="233:7502">
+            Характеристика
+          </p>
+          <p className="absolute left-[208px] top-[calc(50%-10px)]" data-node-id="233:7503">
+            Значение
+          </p>
+        </>
+      )}
+      {isContentPrimaryAndDesktop && (
+        <div className="content-stretch flex gap-[24px] items-center py-[4px] relative shrink-0 w-full" data-node-id="245:7735">
+          <div className="content-stretch flex items-center relative shrink-0 w-[184px]" data-node-id="245:7612">
+            <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="233:7506">
+              Рабочий объём
+            </p>
+          </div>
+          <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="316:10765">
+            <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] whitespace-nowrap" data-node-id="233:7507">
+              471 см³
+            </p>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default function Component4() {
+  return (
+    <div className="content-stretch flex flex-col gap-[var(--spacings\/content-\(48\),48px)] items-start relative size-full" data-node-id="258:8712" data-name="4_Технические характеристики">
+      <div className="[word-break:break-word] content-stretch flex flex-col font-['Inter:Bold'] font-bold gap-[var(--spacings\/content-\(4\),4px)] items-start not-italic relative shrink-0 text-[color:var(--colors\/grays\/black,#0d0d0d)] w-full" data-node-id="233:7495" data-name="block_Headline">
+        <p className="leading-[1.2] relative shrink-0 text-[12px] tracking-[-0.24px] w-[232px]" data-node-id="I233:7495;1:7496">
+          Детали
+        </p>
+        <p className="leading-[0] relative shrink-0 text-[40px] tracking-[-0.8px] whitespace-nowrap" data-node-id="I233:7495;5:4037">
+          <span className="leading-[1.2]">{`Технические `}</span>
+          <span className="leading-[1.2] text-[#7c33fb]">характеристики</span>
+        </p>
+      </div>
+      <div className="h-[500px] overflow-clip relative shrink-0 w-full" data-node-id="245:8110" data-name="frame_Characteristics Animation">
+        <div className="absolute h-[1234px] left-0 top-0 w-[1224px]" data-node-id="I245:8110;245:8086" data-name="frame_Характеристики">
+          <div className="absolute content-stretch flex flex-col gap-[var(--spacings\/content-\(20\),20px)] items-start left-0 top-0 w-[1224px]" data-node-id="I245:8110;242:7574" data-name="4.1 Двигатель">
+            <p className="[word-break:break-word] font-['Inter:Bold'] font-bold leading-[1.3] not-italic relative shrink-0 text-[20px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.4px] w-full" data-node-id="I245:8110;242:7573">
+              Двигатель
+            </p>
+            <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I245:8110;233:7530" data-name="layout_Table">
+              <FrameTableLine className="[word-break:break-word] font-['Inter:Bold'] font-bold h-[28px] leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] w-full whitespace-nowrap" />
+              <FrameTableLine className="bg-[var(--colors\/grays\/white,#fdfdfd)] content-stretch flex flex-col items-start relative shrink-0 w-full" type="Content (Primary)" />
+              <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I245:8110;233:7520" data-name="frame_TableLine">
+                <div className="content-stretch flex gap-[24px] items-center py-[4px] relative shrink-0 w-full" data-node-id="I245:8110;233:7520;245:7776">
+                  <div className="content-stretch flex items-center relative shrink-0 w-[184px]" data-node-id="I245:8110;233:7520;245:7611">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I245:8110;233:7520;233:7512">
+                      Мощность
+                    </p>
+                  </div>
+                  <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I245:8110;233:7520;316:10956">
+                    <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I245:8110;233:7520;233:7513">
+                      14,6 кВт (5500)
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-[var(--colors\/grays\/white,#fdfdfd)] content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I245:8110;233:7527" data-name="frame_TableLine">
+                <div className="content-stretch flex gap-[24px] items-center py-[4px] relative shrink-0 w-full" data-node-id="I245:8110;233:7527;245:7735">
+                  <div className="content-stretch flex items-center relative shrink-0 w-[184px]" data-node-id="I245:8110;233:7527;245:7612">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I245:8110;233:7527;233:7506">
+                      Тип двигателя
+                    </p>
+                  </div>
+                  <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I245:8110;233:7527;316:10765">
+                    <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I245:8110;233:7527;233:7507">
+                      Четырёхтактный
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I245:8110;233:7534" data-name="frame_TableLine">
+                <div className="content-stretch flex gap-[24px] items-center py-[4px] relative shrink-0 w-full" data-node-id="I245:8110;233:7534;245:7776">
+                  <div className="content-stretch flex items-center relative shrink-0 w-[184px]" data-node-id="I245:8110;233:7534;245:7611">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I245:8110;233:7534;233:7512">
+                      Количество цилиндров
+                    </p>
+                  </div>
+                  <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I245:8110;233:7534;316:10956">
+                    <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I245:8110;233:7534;233:7513">
+                      1
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-[var(--colors\/grays\/white,#fdfdfd)] content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I245:8110;233:7531" data-name="frame_TableLine">
+                <div className="content-stretch flex gap-[24px] items-center py-[4px] relative shrink-0 w-full" data-node-id="I245:8110;233:7531;245:7735">
+                  <div className="content-stretch flex items-center relative shrink-0 w-[184px]" data-node-id="I245:8110;233:7531;245:7612">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I245:8110;233:7531;233:7506">
+                      Охлаждение
+                    </p>
+                  </div>
+                  <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I245:8110;233:7531;316:10765">
+                    <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I245:8110;233:7531;233:7507">
+                      Жидкостное
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I245:8110;233:7540" data-name="frame_TableLine">
+                <div className="content-stretch flex gap-[24px] items-center py-[4px] relative shrink-0 w-full" data-node-id="I245:8110;233:7540;245:7776">
+                  <div className="content-stretch flex items-center relative shrink-0 w-[184px]" data-node-id="I245:8110;233:7540;245:7611">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I245:8110;233:7540;233:7512">
+                      Система питания
+                    </p>
+                  </div>
+                  <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I245:8110;233:7540;316:10956">
+                    <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I245:8110;233:7540;233:7513">
+                      Электронный впрыск Delphi
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-[var(--colors\/grays\/white,#fdfdfd)] content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I245:8110;233:7543" data-name="frame_TableLine">
+                <div className="content-stretch flex gap-[24px] items-center py-[4px] relative shrink-0 w-full" data-node-id="I245:8110;233:7543;245:7735">
+                  <div className="content-stretch flex items-center relative shrink-0 w-[184px]" data-node-id="I245:8110;233:7543;245:7612">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I245:8110;233:7543;233:7506">
+                      Степень сжатия
+                    </p>
+                  </div>
+                  <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I245:8110;233:7543;316:10765">
+                    <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I245:8110;233:7543;233:7507">
+                      9,5
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I245:8110;233:7546" data-name="frame_TableLine">
+                <div className="content-stretch flex gap-[24px] items-center py-[4px] relative shrink-0 w-full" data-node-id="I245:8110;233:7546;245:7776">
+                  <div className="content-stretch flex items-center relative shrink-0 w-[184px]" data-node-id="I245:8110;233:7546;245:7611">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I245:8110;233:7546;233:7512">
+                      Диаметр цилиндра × ход поршня
+                    </p>
+                  </div>
+                  <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I245:8110;233:7546;316:10956">
+                    <div className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[0] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I245:8110;233:7546;233:7513">
+                      <p className="leading-[1.25] mb-0 whitespace-pre">{`Бесконтактная, с электронным `}</p>
+                      <p className="leading-[1.25] whitespace-pre">управлением ECU</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-[var(--colors\/grays\/white,#fdfdfd)] content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I245:8110;233:7549" data-name="frame_TableLine">
+                <div className="content-stretch flex gap-[24px] items-center py-[4px] relative shrink-0 w-full" data-node-id="I245:8110;233:7549;245:7735">
+                  <div className="content-stretch flex items-center relative shrink-0 w-[184px]" data-node-id="I245:8110;233:7549;245:7612">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I245:8110;233:7549;233:7506">
+                      Запуск двигателя
+                    </p>
+                  </div>
+                  <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I245:8110;233:7549;316:10765">
+                    <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I245:8110;233:7549;233:7507">
+                      Электростартер, ручной стартер
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I245:8110;233:7537" data-name="frame_TableLine">
+                <div className="content-stretch flex gap-[24px] items-center py-[4px] relative shrink-0 w-full" data-node-id="I245:8110;233:7537;245:7776">
+                  <div className="content-stretch flex items-center relative shrink-0 w-[184px]" data-node-id="I245:8110;233:7537;245:7611">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I245:8110;233:7537;233:7512">
+                      Тип топлива
+                    </p>
+                  </div>
+                  <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I245:8110;233:7537;316:10956">
+                    <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I245:8110;233:7537;233:7513">
+                      Бензин с октановым числом не ниже 92
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="absolute content-stretch flex flex-col gap-[var(--spacings\/content-\(20\),20px)] items-start left-[624px] top-[402px] w-[600px]" data-node-id="I245:8110;245:7873" data-name="4.3 Ходовая часть, подвеска и тормоза">
+            <p className="[word-break:break-word] font-['Inter:Bold'] font-bold leading-[1.3] not-italic relative shrink-0 text-[20px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.4px] w-full" data-node-id="I245:8110;245:7874">
+              Ходовая часть, подвеска и тормоза
+            </p>
+            <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I245:8110;245:7875" data-name="layout_Table">
+              <FrameTableLine className="[word-break:break-word] font-['Inter:Bold'] font-bold h-[28px] leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] w-full whitespace-nowrap" />
+              <div className="bg-[var(--colors\/grays\/white,#fdfdfd)] content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I245:8110;245:7877" data-name="frame_TableLine">
+                <div className="content-stretch flex gap-[24px] items-center py-[4px] relative shrink-0 w-full" data-node-id="I245:8110;245:7877;245:7735">
+                  <div className="content-stretch flex items-center relative shrink-0 w-[184px]" data-node-id="I245:8110;245:7877;245:7612">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I245:8110;245:7877;233:7506">
+                      Рама
+                    </p>
+                  </div>
+                  <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I245:8110;245:7877;316:10765">
+                    <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I245:8110;245:7877;233:7507">
+                      Стальная, сварная, трубчатая
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I245:8110;245:7878" data-name="frame_TableLine">
+                <div className="content-stretch flex gap-[24px] items-center py-[4px] relative shrink-0 w-full" data-node-id="I245:8110;245:7878;245:7776">
+                  <div className="content-stretch flex items-center relative shrink-0 w-[184px]" data-node-id="I245:8110;245:7878;245:7611">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I245:8110;245:7878;233:7512">
+                      Передняя подвеска
+                    </p>
+                  </div>
+                  <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I245:8110;245:7878;316:10956">
+                    <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I245:8110;245:7878;233:7513">
+                      Независимая двухрычажная
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-[var(--colors\/grays\/white,#fdfdfd)] content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I245:8110;245:7879" data-name="frame_TableLine">
+                <div className="content-stretch flex gap-[24px] items-center py-[4px] relative shrink-0 w-full" data-node-id="I245:8110;245:7879;245:7735">
+                  <div className="content-stretch flex items-center relative shrink-0 w-[184px]" data-node-id="I245:8110;245:7879;245:7612">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I245:8110;245:7879;233:7506">
+                      Ход передней подвески
+                    </p>
+                  </div>
+                  <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I245:8110;245:7879;316:10765">
+                    <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I245:8110;245:7879;233:7507">
+                      170 мм
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I245:8110;245:7880" data-name="frame_TableLine">
+                <div className="content-stretch flex gap-[24px] items-center py-[4px] relative shrink-0 w-full" data-node-id="I245:8110;245:7880;245:7776">
+                  <div className="content-stretch flex items-center relative shrink-0 w-[184px]" data-node-id="I245:8110;245:7880;245:7611">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I245:8110;245:7880;233:7512">
+                      Задняя подвеска
+                    </p>
+                  </div>
+                  <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I245:8110;245:7880;316:10956">
+                    <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I245:8110;245:7880;233:7513">
+                      Независимая двухрычажная
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-[var(--colors\/grays\/white,#fdfdfd)] content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I245:8110;245:7881" data-name="frame_TableLine">
+                <div className="content-stretch flex gap-[24px] items-center py-[4px] relative shrink-0 w-full" data-node-id="I245:8110;245:7881;245:7735">
+                  <div className="content-stretch flex items-center relative shrink-0 w-[184px]" data-node-id="I245:8110;245:7881;245:7612">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I245:8110;245:7881;233:7506">
+                      Ход задней подвески
+                    </p>
+                  </div>
+                  <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I245:8110;245:7881;316:10765">
+                    <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I245:8110;245:7881;233:7507">
+                      225 мм
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I245:8110;245:7882" data-name="frame_TableLine">
+                <div className="content-stretch flex gap-[24px] items-center py-[4px] relative shrink-0 w-full" data-node-id="I245:8110;245:7882;245:7776">
+                  <div className="content-stretch flex items-center relative shrink-0 w-[184px]" data-node-id="I245:8110;245:7882;245:7611">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I245:8110;245:7882;233:7512">
+                      Тип амортизаторов
+                    </p>
+                  </div>
+                  <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I245:8110;245:7882;316:10956">
+                    <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I245:8110;245:7882;233:7513">
+                      Пружинно-гидравлические
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-[var(--colors\/grays\/white,#fdfdfd)] content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I245:8110;245:7883" data-name="frame_TableLine">
+                <div className="content-stretch flex gap-[24px] items-center py-[4px] relative shrink-0 w-full" data-node-id="I245:8110;245:7883;245:7735">
+                  <div className="content-stretch flex items-center relative shrink-0 w-[184px]" data-node-id="I245:8110;245:7883;245:7612">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I245:8110;245:7883;233:7506">
+                      Передние тормоза
+                    </p>
+                  </div>
+                  <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I245:8110;245:7883;316:10765">
+                    <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I245:8110;245:7883;233:7507">
+                      Гидравлические дисковые
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I245:8110;245:7884" data-name="frame_TableLine">
+                <div className="content-stretch flex gap-[24px] items-center py-[4px] relative shrink-0 w-full" data-node-id="I245:8110;245:7884;245:7776">
+                  <div className="content-stretch flex items-center relative shrink-0 w-[184px]" data-node-id="I245:8110;245:7884;245:7611">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I245:8110;245:7884;233:7512">
+                      Задний тормоз
+                    </p>
+                  </div>
+                  <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I245:8110;245:7884;316:10956">
+                    <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[0] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I245:8110;245:7884;233:7513">
+                      <span className="leading-[1.25]">{` `}</span>
+                      <span className="leading-[1.25]">Гидравлический дисковый</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-[var(--colors\/grays\/white,#fdfdfd)] content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I245:8110;245:7885" data-name="frame_TableLine">
+                <div className="content-stretch flex gap-[24px] items-center py-[4px] relative shrink-0 w-full" data-node-id="I245:8110;245:7885;245:7735">
+                  <div className="content-stretch flex items-center relative shrink-0 w-[184px]" data-node-id="I245:8110;245:7885;245:7612">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I245:8110;245:7885;233:7506">
+                      Передние шины
+                    </p>
+                  </div>
+                  <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I245:8110;245:7885;316:10765">
+                    <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I245:8110;245:7885;233:7507">
+                      WANDA AT26×9-12
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I245:8110;245:7886" data-name="frame_TableLine">
+                <div className="content-stretch flex gap-[24px] items-center py-[4px] relative shrink-0 w-full" data-node-id="I245:8110;245:7886;245:7776">
+                  <div className="content-stretch flex items-center relative shrink-0 w-[184px]" data-node-id="I245:8110;245:7886;245:7611">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I245:8110;245:7886;233:7512">
+                      Задние шины
+                    </p>
+                  </div>
+                  <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I245:8110;245:7886;316:10956">
+                    <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I245:8110;245:7886;233:7513">
+                      WANDA AT26×10-12
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="absolute content-stretch flex flex-col gap-[var(--spacings\/content-\(20\),20px)] items-start left-0 top-[816px] w-[1224px]" data-node-id="I245:8110;245:7985" data-name="4.4 Габариты, масса и эксплуатационные показатели">
+            <p className="[word-break:break-word] font-['Inter:Bold'] font-bold leading-[1.3] not-italic relative shrink-0 text-[20px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.4px] w-full" data-node-id="I245:8110;245:7986">
+              Габариты, масса и эксплуатационные показатели
+            </p>
+            <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I245:8110;245:8041" data-name="layout_Table">
+              <FrameTableLine className="[word-break:break-word] font-['Inter:Bold'] font-bold h-[28px] leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] w-full whitespace-nowrap" />
+              <div className="bg-[var(--colors\/grays\/white,#fdfdfd)] content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I245:8110;245:8043" data-name="frame_TableLine">
+                <div className="content-stretch flex gap-[24px] items-center py-[4px] relative shrink-0 w-full" data-node-id="I245:8110;245:8043;245:7735">
+                  <div className="content-stretch flex items-center relative shrink-0 w-[184px]" data-node-id="I245:8110;245:8043;245:7612">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I245:8110;245:8043;233:7506">
+                      Длина × ширина × высота
+                    </p>
+                  </div>
+                  <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I245:8110;245:8043;316:10765">
+                    <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I245:8110;245:8043;233:7507">
+                      2250 × 1170 × 1225 мм
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I245:8110;245:8044" data-name="frame_TableLine">
+                <div className="content-stretch flex gap-[24px] items-center py-[4px] relative shrink-0 w-full" data-node-id="I245:8110;245:8044;245:7776">
+                  <div className="content-stretch flex items-center relative shrink-0 w-[184px]" data-node-id="I245:8110;245:8044;245:7611">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I245:8110;245:8044;233:7512">
+                      Колёсная база
+                    </p>
+                  </div>
+                  <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I245:8110;245:8044;316:10956">
+                    <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I245:8110;245:8044;233:7513">
+                      1365 мм
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-[var(--colors\/grays\/white,#fdfdfd)] content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I245:8110;245:8045" data-name="frame_TableLine">
+                <div className="content-stretch flex gap-[24px] items-center py-[4px] relative shrink-0 w-full" data-node-id="I245:8110;245:8045;245:7735">
+                  <div className="content-stretch flex items-center relative shrink-0 w-[184px]" data-node-id="I245:8110;245:8045;245:7612">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I245:8110;245:8045;233:7506">
+                      Максимальная нагрузка
+                    </p>
+                  </div>
+                  <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I245:8110;245:8045;316:10765">
+                    <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I245:8110;245:8045;233:7507">
+                      180 кг
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I245:8110;245:8046" data-name="frame_TableLine">
+                <div className="content-stretch flex gap-[24px] items-center py-[4px] relative shrink-0 w-full" data-node-id="I245:8110;245:8046;245:7776">
+                  <div className="content-stretch flex items-center relative shrink-0 w-[184px]" data-node-id="I245:8110;245:8046;245:7611">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I245:8110;245:8046;233:7512">
+                      Топливный бак
+                    </p>
+                  </div>
+                  <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I245:8110;245:8046;316:10956">
+                    <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I245:8110;245:8046;233:7513">
+                      17 л
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-[var(--colors\/grays\/white,#fdfdfd)] content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I245:8110;245:8047" data-name="frame_TableLine">
+                <div className="content-stretch flex gap-[24px] items-center py-[4px] relative shrink-0 w-full" data-node-id="I245:8110;245:8047;245:7735">
+                  <div className="content-stretch flex items-center relative shrink-0 w-[184px]" data-node-id="I245:8110;245:8047;245:7612">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I245:8110;245:8047;233:7506">
+                      Максимальная скорость, заявленная производителем
+                    </p>
+                  </div>
+                  <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I245:8110;245:8047;316:10765">
+                    <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I245:8110;245:8047;233:7507">
+                      85 км/ч
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I245:8110;245:8048" data-name="frame_TableLine">
+                <div className="content-stretch flex gap-[24px] items-center py-[4px] relative shrink-0 w-full" data-node-id="I245:8110;245:8048;245:7776">
+                  <div className="content-stretch flex items-center relative shrink-0 w-[184px]" data-node-id="I245:8110;245:8048;245:7611">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I245:8110;245:8048;233:7512">
+                      Средний расход, заявленный производителем
+                    </p>
+                  </div>
+                  <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I245:8110;245:8048;316:10956">
+                    <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I245:8110;245:8048;233:7513">
+                      11 л/100 км
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-[var(--colors\/grays\/white,#fdfdfd)] content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I245:8110;245:8049" data-name="frame_TableLine">
+                <div className="content-stretch flex gap-[24px] items-center py-[4px] relative shrink-0 w-full" data-node-id="I245:8110;245:8049;245:7735">
+                  <div className="content-stretch flex items-center relative shrink-0 w-[184px]" data-node-id="I245:8110;245:8049;245:7612">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I245:8110;245:8049;233:7506">
+                      Сухая масса
+                    </p>
+                  </div>
+                  <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I245:8110;245:8049;316:10765">
+                    <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I245:8110;245:8049;233:7507">{`329 `}</p>
+                  </div>
+                </div>
+              </div>
+              <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I245:8110;245:8050" data-name="frame_TableLine">
+                <div className="content-stretch flex gap-[24px] items-center py-[4px] relative shrink-0 w-full" data-node-id="I245:8110;245:8050;245:7776">
+                  <div className="content-stretch flex items-center relative shrink-0 w-[184px]" data-node-id="I245:8110;245:8050;245:7611">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I245:8110;245:8050;233:7512">
+                      Дорожный просвет
+                    </p>
+                  </div>
+                  <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I245:8110;245:8050;316:10956">
+                    <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I245:8110;245:8050;233:7513">{`300 мм `}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="absolute content-stretch flex flex-col gap-[var(--spacings\/content-\(20\),20px)] items-start left-0 top-[402px] w-[600px]" data-node-id="I245:8110;245:7817" data-name="4.2 Трансмиссия и привод">
+            <p className="[word-break:break-word] font-['Inter:Bold'] font-bold leading-[1.3] not-italic relative shrink-0 text-[20px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.4px] w-full" data-node-id="I245:8110;245:7818">
+              Трансмиссия и привод
+            </p>
+            <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I245:8110;245:7819" data-name="layout_Table">
+              <FrameTableLine className="[word-break:break-word] font-['Inter:Bold'] font-bold h-[28px] leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] w-full whitespace-nowrap" />
+              <div className="bg-[var(--colors\/grays\/white,#fdfdfd)] content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I245:8110;245:7821" data-name="frame_TableLine">
+                <div className="content-stretch flex gap-[24px] items-center py-[4px] relative shrink-0 w-full" data-node-id="I245:8110;245:7821;245:7735">
+                  <div className="content-stretch flex items-center relative shrink-0 w-[184px]" data-node-id="I245:8110;245:7821;245:7612">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I245:8110;245:7821;233:7506">
+                      Трансмиссия
+                    </p>
+                  </div>
+                  <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I245:8110;245:7821;316:10765">
+                    <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I245:8110;245:7821;233:7507">
+                      Автоматический вариатор CVT
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I245:8110;245:7822" data-name="frame_TableLine">
+                <div className="content-stretch flex gap-[24px] items-center py-[4px] relative shrink-0 w-full" data-node-id="I245:8110;245:7822;245:7776">
+                  <div className="content-stretch flex items-center relative shrink-0 w-[184px]" data-node-id="I245:8110;245:7822;245:7611">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I245:8110;245:7822;233:7512">
+                      Режимы коробки
+                    </p>
+                  </div>
+                  <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I245:8110;245:7822;316:10956">
+                    <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I245:8110;245:7822;233:7513">
+                      L–H–N–R–P
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-[var(--colors\/grays\/white,#fdfdfd)] content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I245:8110;245:7823" data-name="frame_TableLine">
+                <div className="content-stretch flex gap-[24px] items-center py-[4px] relative shrink-0 w-full" data-node-id="I245:8110;245:7823;245:7735">
+                  <div className="content-stretch flex items-center relative shrink-0 w-[184px]" data-node-id="I245:8110;245:7823;245:7612">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I245:8110;245:7823;233:7506">
+                      Понижающая передача
+                    </p>
+                  </div>
+                  <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I245:8110;245:7823;316:10765">
+                    <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I245:8110;245:7823;233:7507">
+                      Есть
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I245:8110;245:7824" data-name="frame_TableLine">
+                <div className="content-stretch flex gap-[24px] items-center py-[4px] relative shrink-0 w-full" data-node-id="I245:8110;245:7824;245:7776">
+                  <div className="content-stretch flex items-center relative shrink-0 w-[184px]" data-node-id="I245:8110;245:7824;245:7611">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I245:8110;245:7824;233:7512">
+                      Привод
+                    </p>
+                  </div>
+                  <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I245:8110;245:7824;316:10956">
+                    <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I245:8110;245:7824;233:7513">
+                      Подключаемый полный
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-[var(--colors\/grays\/white,#fdfdfd)] content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I245:8110;245:7825" data-name="frame_TableLine">
+                <div className="content-stretch flex gap-[24px] items-center py-[4px] relative shrink-0 w-full" data-node-id="I245:8110;245:7825;245:7735">
+                  <div className="content-stretch flex items-center relative shrink-0 w-[184px]" data-node-id="I245:8110;245:7825;245:7612">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I245:8110;245:7825;233:7506">
+                      Режимы привода
+                    </p>
+                  </div>
+                  <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I245:8110;245:7825;316:10765">
+                    <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I245:8110;245:7825;233:7507">
+                      2×4 / 4×4 / 4×4 LOCK
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I245:8110;245:7826" data-name="frame_TableLine">
+                <div className="content-stretch flex gap-[24px] items-center py-[4px] relative shrink-0 w-full" data-node-id="I245:8110;245:7826;245:7776">
+                  <div className="content-stretch flex items-center relative shrink-0 w-[184px]" data-node-id="I245:8110;245:7826;245:7611">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I245:8110;245:7826;233:7512">
+                      Блокировка
+                    </p>
+                  </div>
+                  <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I245:8110;245:7826;316:10956">
+                    <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I245:8110;245:7826;233:7513">
+                      Переднего дифференциала
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-[var(--colors\/grays\/white,#fdfdfd)] content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I245:8110;245:7827" data-name="frame_TableLine">
+                <div className="content-stretch flex gap-[24px] items-center py-[4px] relative shrink-0 w-full" data-node-id="I245:8110;245:7827;245:7735">
+                  <div className="content-stretch flex items-center relative shrink-0 w-[184px]" data-node-id="I245:8110;245:7827;245:7612">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I245:8110;245:7827;233:7506">
+                      Сцепление
+                    </p>
+                  </div>
+                  <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I245:8110;245:7827;316:10765">
+                    <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I245:8110;245:7827;233:7507">
+                      Центробежного типа, в масляной ванне
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I245:8110;245:7828" data-name="frame_TableLine">
+                <div className="content-stretch flex gap-[24px] items-center py-[4px] relative shrink-0 w-full" data-node-id="I245:8110;245:7828;245:7776">
+                  <div className="content-stretch flex items-center relative shrink-0 w-[184px]" data-node-id="I245:8110;245:7828;245:7611">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I245:8110;245:7828;233:7512">
+                      Усилитель руля
+                    </p>
+                  </div>
+                  <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I245:8110;245:7828;316:10956">
+                    <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I245:8110;245:7828;233:7513">
+                      Электрический, EPS
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-[var(--colors\/grays\/white,#fdfdfd)] content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I245:8110;245:7829" data-name="frame_TableLine">
+                <div className="content-stretch flex gap-[24px] items-center py-[4px] relative shrink-0 w-full" data-node-id="I245:8110;245:7829;245:7735">
+                  <div className="content-stretch flex items-center relative shrink-0 w-[184px]" data-node-id="I245:8110;245:7829;245:7612">
+                    <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Bold'] font-bold leading-[1.25] min-w-px not-italic relative text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px]" data-node-id="I245:8110;245:7829;233:7506">
+                      Стояночный тормоз
+                    </p>
+                  </div>
+                  <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="I245:8110;245:7829;316:10765">
+                    <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.32px] whitespace-nowrap" data-node-id="I245:8110;245:7829;233:7507">
+                      Интегрирован в трансмиссию
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="-translate-x-1/2 absolute bg-gradient-to-b from-[rgba(241,238,248,0)] h-[200px] left-1/2 to-[#f1eef8] to-[54.327%] top-[322px] w-[1224px]" data-node-id="I245:8110;245:8099" />
+        <button className="-translate-x-1/2 absolute border border-[var(--colors\/grays\/gray-3,#c2bfc9)] border-solid content-stretch cursor-pointer flex gap-[4px] items-center justify-center left-1/2 px-[var(--padding\/padding-\(16\),16px)] py-[var(--padding\/padding-\(12\),12px)] rounded-[10px] top-[458px] w-[1224px]" data-node-id="I245:8110;245:8087" data-name="button_Basic">
+          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.3] not-italic relative shrink-0 text-[14px] text-[color:var(--colors\/grays\/black,#0d0d0d)] text-left tracking-[-0.28px] whitespace-nowrap" data-node-id="I245:8110;245:8087;1:7010">
+            Открыть все характеристики
+          </p>
+          <div className="relative rounded-[1.882px] shrink-0 size-[16px]" data-node-id="I245:8110;245:8087;1:7011" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
+            <div className="absolute flex h-[13.176px] items-center justify-center left-[3.61px] top-[1.41px] w-[8.784px]" data-node-id="I245:8110;245:8087;1:7011;207:8828">
+              <div className="flex-none rotate-90">
+                <div className="h-[8.784px] relative w-[13.176px]" data-name="Arrow">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </button>
+      </div>
+    </div>
+  );
+}
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+These styles are contained in the design: H8 — 12 (Bold): Font(family: "Inter", style: Bold, size: 12, weight: 700, lineHeight: 1.2000000476837158, letterSpacing: -2), H1 — 40 (Bold): Font(family: "Inter", style: Bold, size: 40, weight: 700, lineHeight: 1.2000000476837158, letterSpacing: -2), H5 — 20 (Bold): Font(family: "Inter", style: Bold, size: 20, weight: 700, lineHeight: 1.2999999523162842, letterSpacing: -2), H6 — 16 (Bold): Font(family: "Inter", style: Bold, size: 16, weight: 700, lineHeight: 1.25, letterSpacing: -2), P2 — 16: Font(family: "Inter", style: Medium, size: 16, weight: 500, lineHeight: 1.25, letterSpacing: -2), H7 — 14: Font(family: "Inter", style: Semi Bold, size: 14, weight: 600, lineHeight: 1.2999999523162842, letterSpacing: -2).
+The generated code contains image and SVG URL constants, e.g. const image = 'https://www.figma.com/api/mcp/asset/550e8400-e29b-41d4-a716-446655440000.png'. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.

@@ -1,0 +1,8 @@
+---
+import Advantage from './AdvantageItem.astro';
+import { footerContent } from '../../data/footer';
+---
+<section class="home-highlights container" aria-label="Опыт и магазин">
+  <div class="home-highlights__reach"><div class="home-highlights__count"><p>Свой прокат</p><span>Эксплуатируем квадроциклы и знаем их в работе</span></div><img src="/assets/home/belarus.svg" alt="" width="80" height="80" /><div class="home-highlights__country"><p>Покупателям<br />Беларуси</p><span>Подбор техники<br />и условия покупки</span></div></div>
+  <div class="home-highlights__shop"><div class="mobile-only mobile-pattern mobile-pattern--address" aria-hidden="true">{[1,2,1].map((n,i) => <img src={`/assets/mobile-home/address-key-${n}.svg`} alt="" style={`--tile:${i}`} />)}</div><img class="home-decoration" src="/assets/home/address-pattern.svg" alt="" /><Advantage icon="shop-white" title="Магазин в Витебске">По адресу:<br />пр-т Московский, 111</Advantage><div class="home-hours">{footerContent.hours.map(row => <p><strong>{row.label}</strong><span>{row.value}</span></p>)}</div></div>
+</section>

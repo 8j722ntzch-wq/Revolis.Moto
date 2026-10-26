@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "fileKey": "JkXOsnFvWZmMab1VYjVQAJ",
+  "pageNodeId": "1:15",
+  "nodeId": "19:4818",
+  "capturedAt": "2026-10-21",
+  "scope": "desktop-model-card",
+  "status": "implemented-and-browser-checked",
+  "implementation": "src/components/ModelCard.astro",
+  "contextFile": "design/context/ui/19-4818.txt",
+  "assets": "design/ui-assets.json",
+  "previewRoute": "/ui-kit/#model-cards",
+  "variants": {
+    "default": "19:4501",
+    "hover": "19:4819"
+  },
+  "reuse": [
+    "Button",
+    "StatusBadge",
+    "BaseLayout",
+    "shared typography and color tokens"
+  ],
+  "geometry": {
+    "card": {
+      "width": 392,
+      "minHeight": 642,
+      "padding": 16,
+      "radius": 16,
+      "gap": 12
+    },
+    "media": {
+      "width": 360,
+      "height": 320,
+      "radius": 12
+    },
+    "photo": {
+      "width": 320,
+      "height": 213,
+      "verticalOffset": 0.5
+    },
+    "content": {
+      "width": 360,
+      "height": 278,
+      "gap": 20
+    },
+    "featureIcons": 24,
+    "registrationIcon": 24,
+    "status": {
+      "height": 22,
+      "left": 16,
+      "bottom": 16
+    },
+    "button": {
+      "width": 360,
+      "height": 42
+    },
+    "hoverTranslateY": -8
+  },
+  "content": {
+    "referenceExport": "src/data/catalog.ts#modelCardReference",
+    "productionModelsUnchanged": true,
+    "conflict": "Hammer Touring 200 is paired with 300 см³ in the Figma component. Price, availability and image identity are unconfirmed sample content.",
+    "nullHandling": "Unknown price renders Цена уточняется; unknown availability/registration and absent financing are omitted; absent photo gets a text placeholder.",
+    "navigation": "Only pageReady generates a model link. Demo action is local feedback; no live model page is claimed."
+  },
+  "verification": {
+    "date": "2026-10-21",
+    "viewports": [
+      {
+        "width": 1366,
+        "clientWidth": 1351,
+        "scrollWidth": 1351,
+        "containerWidth": 1224,
+        "cardWidth": 392,
+        "cardHeight": 642,
+        "mediaWidth": 360,
+        "mediaHeight": 320,
+        "photoWidth": 320,
+        "photoHeight": 213,
+        "buttonWidth": 360,
+        "buttonHeight": 42,
+        "brokenImages": 0
+      },
+      {
+        "width": 1470,
+        "clientWidth": 1455,
+        "scrollWidth": 1455,
+        "containerWidth": 1224,
+        "cardWidth": 392,
+        "cardHeight": 642,
+        "mediaWidth": 360,
+        "mediaHeight": 320,
+        "photoWidth": 320,
+        "photoHeight": 213,
+        "buttonWidth": 360,
+        "buttonHeight": 42,
+        "brokenImages": 0
+      },
+      {
+        "width": 1920,
+        "clientWidth": 1905,
+        "scrollWidth": 1905,
+        "containerWidth": 1224,
+        "cardWidth": 392,
+        "cardHeight": 642,
+        "mediaWidth": 360,
+        "mediaHeight": 320,
+        "photoWidth": 320,
+        "photoHeight": 213,
+        "buttonWidth": 360,
+        "buttonHeight": 42,
+        "brokenImages": 0
+      }
+    ],
+    "interactions": [
+      "Enter activates showcase feedback",
+      "Tab moves focus and resets previous card lift",
+      "Keyboard focus has visible 2px outline and -8px lift",
+      "Unavailable model page has disabled button and no href",
+      "Ready model produces its intended href; destination page not implemented",
+      "Null production data does not acquire fixture commercial claims"
+    ],
+    "knownLimits": [
+      "Desktop only. Model pages, catalogue section and backend are later work.",
+      "Original Figma font binary unavailable; local Inter Variable yields fractional text offsets up to 0.5px inside groups. Card and CTA geometry match.",
+      "Temporary asset URLs returned HTML; original nodes were exported through Plugin API. PNG is only the photo layer at 2x."
+    ],
+    "astroCheck": {
+      "files": 20,
+      "errors": 0,
+      "warnings": 0,
+      "hints": 0
+    },
+    "unitTests": {
+      "phoneMask": 3,
+      "passed": 3
+    },
+    "build": {
+      "status": "passed",
+      "pages": 2
+    },
+    "offlinePreview": {
+      "file": "preview/Revolis_Moto_UI_Kit.html",
+      "bytes": 1377816,
+      "embeddedImages": true,
+      "brokenImages": 0,
+      "externalStylesheets": 0,
+      "externalScripts": 0,
+      "italicLoaded": true,
+      "modelCardFeedback": "passed"
+    }
+  }
+}

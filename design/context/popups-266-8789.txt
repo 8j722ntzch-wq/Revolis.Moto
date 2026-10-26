@@ -1,0 +1,119 @@
+const imgGroup = "https://www.figma.com/api/mcp/asset/76214ab8-d57f-4c11-87b9-9b5a8741d727.svg";
+const imgGroup1 = "https://www.figma.com/api/mcp/asset/1eba06ed-6bc2-4125-9206-cf3897e64a88.svg";
+const imgArrow = "https://www.figma.com/api/mcp/asset/0a853863-6ce1-4a6b-b973-fa1299f5f170.svg";
+
+type ButtonBanksProps = {
+  className?: string;
+  bank?: "Альфа" | "Техно";
+  device?: "Mobile";
+  property1?: "Default";
+};
+
+function ButtonBanks({ className, bank = "Альфа", device = "Mobile", property1 = "Default" }: ButtonBanksProps) {
+  const isDefaultAndMobileAnd = property1 === "Default" && device === "Mobile" && bank === "Техно";
+  return (
+    <div className={className || `${String.raw`border border-solid content-stretch flex flex-col gap-[var(--spacings\/content-\(8\),8px)] items-start px-[var(--padding\/padding-\(12\),12px)] py-[8px] relative rounded-[10px] `}${isDefaultAndMobileAnd ? "border-[#0045d1]" : "border-[#ef3124]"}`} id={isDefaultAndMobileAnd ? "node-305_8904" : "node-305_8901"}>
+      <div className="overflow-clip relative shrink-0 size-[24px]" id={isDefaultAndMobileAnd ? "node-305_8905" : "node-305_8902"} data-name="icon_Advantages (24px, 32 px)">
+        <div className="absolute inset-[12.5%_8.33%_8.33%_8.33%]" id={isDefaultAndMobileAnd ? "node-I305_8905-115_5886" : "node-I305_8902-115_5886"} data-name="Group">
+          <div className="absolute inset-[-2.96%_-2.81%]">
+            <img alt="" className="block max-w-none size-full" src={imgGroup} />
+          </div>
+        </div>
+      </div>
+      <p className="[word-break:break-word] font-['Inter:Bold'] font-bold leading-[1.25] not-italic relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.32px] whitespace-nowrap" id={isDefaultAndMobileAnd ? "node-305_8906" : "node-305_8903"}>
+        {isDefaultAndMobileAnd ? "Технобанк" : "Альфа Банк"}
+      </p>
+    </div>
+  );
+}
+
+type ButtonCloseProps = {
+  className?: string;
+  state?: "Default";
+};
+
+function ButtonClose({ className, state = "Default" }: ButtonCloseProps) {
+  return (
+    <div className={className || "bg-[var(--colors\\/grays\\/white,#fdfdfd)] relative rounded-[320px] size-[36px]"} data-node-id="1:7945">
+      <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[24px] top-1/2" data-node-id="1:7946" data-name="icon_Cross (24 px)">
+        <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[10.607px] top-1/2" data-node-id="I1:7946;1:7955" data-name="Group">
+          <div className="absolute inset-[-4.71%]">
+            <img alt="" className="block max-w-none size-full" src={imgGroup1} />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+type PopUpProps = {
+  className?: string;
+  device?: "Mobile";
+};
+
+function PopUp({ className, device = "Mobile" }: PopUpProps) {
+  return (
+    <div className={className || "bg-[var(--colors\\/grays\\/black,#0d0d0d)] h-[570px] overflow-clip relative rounded-[12px] w-[340px]"} data-node-id="266:8789">
+      <div className="-translate-x-1/2 absolute bottom-[60px] content-stretch flex flex-col gap-[16px] items-start left-1/2 w-[300px]" data-node-id="266:8790" data-name="layout_Filling Content">
+        <div className="content-stretch cursor-pointer flex flex-col gap-[12px] items-start relative shrink-0 w-full" data-node-id="266:8791" data-name="layout_Inputs, Tabs">
+          <button className="bg-[var(--colors\/grays\/gray-6,#242424)] block h-[48px] overflow-clip relative rounded-[10px] shrink-0 w-full" data-node-id="266:8792" data-name="input_Text">
+            <p className="[word-break:break-word] absolute font-['Inter:Medium'] font-medium leading-[1.25] left-[17px] not-italic text-[14px] text-[color:var(--colors\/grays\/gray-4,#736f79)] text-left top-[calc(50%-9px)] tracking-[-0.28px] whitespace-nowrap" data-node-id="I266:8792;1:7202">
+              Ваше имя*
+            </p>
+          </button>
+          <button className="bg-[var(--colors\/grays\/gray-6,#242424)] block h-[48px] overflow-clip relative rounded-[10px] shrink-0 w-full" data-node-id="266:8793" data-name="input_Phone">
+            <p className="[word-break:break-word] absolute font-['Inter:Medium'] font-medium leading-[1.25] left-[17px] not-italic text-[14px] text-[color:var(--colors\/grays\/gray-4,#736f79)] text-left top-[calc(50%-9px)] tracking-[-0.28px] whitespace-nowrap" data-node-id="I266:8793;1:7229">
+              Ваш номер телефона*
+            </p>
+          </button>
+        </div>
+        <div className="content-stretch flex gap-[12px] items-start relative shrink-0 w-full" data-node-id="266:8794" data-name="element_Chechbox + Text">
+          <div className="border border-[var(--colors\/grays\/gray-3,#c2bfc9)] border-solid relative rounded-[4px] shrink-0 size-[24px]" data-node-id="266:8795" data-name="button_Checkbox" />
+          <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Medium'] font-medium leading-[0] min-w-px not-italic relative text-[0px] text-[color:var(--colors\/grays\/black,#0d0d0d)] tracking-[-0.28px]" data-node-id="266:8796">
+            <span className="leading-[1.25] text-[#fdfdfd] text-[14px]">{`Согласен (-а) с `}</span>
+            <span className="[text-underline-position:from-font] decoration-from-font decoration-solid leading-[1.25] text-[#fdfdfd] text-[14px] underline">Политикой конфиденциальности</span>
+            <span className="leading-[1.25] text-[#fdfdfd] text-[14px]">{` и `}</span>
+            <span className="[text-underline-position:from-font] decoration-from-font decoration-solid leading-[1.25] text-[#fdfdfd] text-[14px] underline">Политикой обработки персональных данных</span>
+          </p>
+        </div>
+        <div className="bg-[var(--colors\/accents\/purple,#7c33fb)] content-stretch cursor-pointer flex gap-[4px] items-center justify-center px-[var(--padding\/padding-\(16\),16px)] py-[var(--padding\/padding-\(12\),12px)] relative rounded-[10px] shrink-0 w-full" data-node-id="266:8797" data-name="button_Basic">
+          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[1.2] not-italic relative shrink-0 text-[12px] text-[color:var(--colors\/grays\/white,#fdfdfd)] tracking-[-0.24px] whitespace-nowrap" data-node-id="I266:8797;1:7013">
+            Получить консультацию
+          </p>
+          <div className="relative rounded-[1.647px] shrink-0 size-[14px]" data-node-id="I266:8797;1:7014" data-name="icon_Arrow_Angle 90 (20px, 16px, 14px)">
+            <div className="absolute h-[7.686px] left-[1.24px] top-[3.16px] w-[11.529px]" data-node-id="I266:8797;1:7014;1:7287" data-name="Arrow">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArrow} />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="[word-break:break-word] absolute content-stretch flex flex-col gap-[var(--spacings\/content-\(12\),12px)] items-start leading-[0] left-[20px] not-italic top-[20px] w-[300px]" data-node-id="266:8800" data-name="element_Headline + Body">
+        <p className="font-['Inter:Bold'] font-bold relative shrink-0 text-[28px] text-[color:var(--colors\/accents\/purple,#7c33fb)] tracking-[-0.56px] w-[248px]" data-node-id="266:8801">
+          <span className="leading-[1.2]">{`Подберём `}</span>
+          <span className="leading-[1.2] text-[#fdfdfd]">удобный вариант оплаты</span>
+        </p>
+        <div className="font-['Inter:Medium'] font-medium min-w-full relative shrink-0 text-[16px] text-[color:var(--colors\/grays\/gray-3,#c2bfc9)] tracking-[-0.32px] w-[min-content] whitespace-pre-wrap" data-node-id="266:8802">
+          <p className="leading-[1.25] mb-0">{`Поможем узнать условия кредита `}</p>
+          <p className="leading-[1.25]">или рассрочки от банков-партнёров</p>
+        </div>
+      </div>
+      <div className="-translate-x-1/2 [word-break:break-word] absolute bottom-[48px] font-['Inter:Semi_Bold'] font-semibold leading-[0] left-1/2 not-italic text-[12px] text-[color:var(--colors\/grays\/gray-4,#736f79)] text-center tracking-[-0.24px] translate-y-full w-[300px]" data-node-id="268:8827">
+        <p className="leading-[1.2] mb-0">Условия и решение по финансированию</p>
+        <p className="leading-[1.2]">принимает банк</p>
+      </div>
+      <ButtonClose className="absolute bg-[var(--colors\/grays\/white,#fdfdfd)] right-[20px] rounded-[320px] size-[36px] top-[20px]" />
+      <ButtonBanks className="absolute border border-[#ef3124] border-solid content-stretch flex flex-col gap-[var(--spacings\/content-\(8\),8px)] items-start left-[20px] px-[var(--padding\/padding-\(12\),12px)] py-[8px] rounded-[10px] top-[190px]" />
+      <ButtonBanks bank="Техно" className="absolute border border-[#0045d1] border-solid content-stretch flex flex-col gap-[var(--spacings\/content-\(8\),8px)] items-start left-[147px] px-[var(--padding\/padding-\(12\),12px)] py-[8px] rounded-[10px] top-[190px]" />
+    </div>
+  );
+}
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+These styles are contained in the design: P3 — 14 (P2 Mobile): Font(family: "Inter", style: Medium, size: 14, weight: 500, lineHeight: 1.25, letterSpacing: -2), P3 — 14: Font(family: "Inter", style: Medium, size: 14, weight: 500, lineHeight: 1.25, letterSpacing: -2), H8 — 12: Font(family: "Inter", style: Semi Bold, size: 12, weight: 600, lineHeight: 1.2000000476837158, letterSpacing: -2), H3 — 28 (Bold): Font(family: "Inter", style: Bold, size: 28, weight: 700, lineHeight: 1.2000000476837158, letterSpacing: -2), P2 — 16: Font(family: "Inter", style: Medium, size: 16, weight: 500, lineHeight: 1.25, letterSpacing: -2), H6 — 16 (Bold): Font(family: "Inter", style: Bold, size: 16, weight: 700, lineHeight: 1.25, letterSpacing: -2).
+The generated code contains image and SVG URL constants, e.g. const image = 'https://www.figma.com/api/mcp/asset/550e8400-e29b-41d4-a716-446655440000.png'. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.
