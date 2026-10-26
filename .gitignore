@@ -5,3 +5,5 @@ dist/
 .env.*
 !.env.example
 .DS_Store
+
+preview/*UI_Kit.html
