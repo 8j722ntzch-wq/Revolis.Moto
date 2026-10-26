@@ -12,7 +12,7 @@ jobs:
     timeout-minutes: 5
     steps:
       - name: Install SFTP client
-        run: sudo apt-get update -qq && sudo apt-get install -y python3-paramiko
+        run: sudo apt-get -o Acquire::Retries=1 -o Acquire::http::Timeout=20 update -qq && sudo apt-get install -y python3-paramiko
       - name: Verify pinned server key and SFTP login
         env:
           FTP_SERVER: ${{ secrets.FTP_SERVER }}
@@ -47,6 +47,12 @@ jobs:
               sftp = paramiko.SFTPClient.from_transport(transport)
               sftp.get_channel().settimeout(20)
               stage = "configured directory access"
+              for candidate in (".", "www/revolis.by", "/www/revolis.by", "revolis.by"):
+                  try:
+                      names = sftp.listdir(candidate)
+                      print("DIRECTORY " + candidate + ": accessible; index.html=" + str("index.html" in names) + "; index.php=" + str("index.php" in names) + "; www=" + str("www" in names), flush=True)
+                  except OSError:
+                      print("DIRECTORY " + candidate + ": unavailable", flush=True)
               sftp.chdir(directory)
               sftp.listdir(".")
               print("PASS: SFTP directory is accessible. No files changed.", flush=True)
