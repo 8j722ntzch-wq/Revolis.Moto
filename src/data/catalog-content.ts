@@ -3,8 +3,8 @@ import type { Model } from './catalog';
 export const catalogueContent: Record<string, Partial<Model>> = {
   "baltmotors-400-efi": {
     "name": "Striker 400 EFI",
-    "subtitle": "Практичный вариант для повседневных задач",
-    "mobileSubtitle": "Практичный для повседневных задач",
+    "subtitle": "Для загородных путешествий",
+    "mobileSubtitle": "Для загородных путешествий",
     "features": [
       {
         "icon": "engine",
@@ -23,7 +23,7 @@ export const catalogueContent: Record<string, Partial<Model>> = {
   },
   "baltmotors-500-efi": {
     "name": "Striker 500 EFI",
-    "subtitle": "Универсальный вариант для работы и отдыха",
+    "subtitle": "Для путешествий и дел по хозяйству",
     "mobileSubtitle": "",
     "features": [
       {
@@ -43,8 +43,8 @@ export const catalogueContent: Record<string, Partial<Model>> = {
   },
   "baltmotors-500-efi-eps": {
     "name": "Striker 500 EFI/EPS",
-    "subtitle": "Универсальный вариант с электроусилителем руля",
-    "mobileSubtitle": "Универсальный с электроусилителем руля",
+    "subtitle": "Меньше усилий при маневрировании",
+    "mobileSubtitle": "Меньше усилий при маневрировании",
     "features": [
       {
         "icon": "engine",
@@ -67,7 +67,7 @@ export const catalogueContent: Record<string, Partial<Model>> = {
   },
   "baltmotors-700-efi": {
     "name": "Striker 700 EFI",
-    "subtitle": "Мощный квадрицикл для серьёзных задач",
+    "subtitle": "Старшая модель для поездок и хозяйства",
     "mobileSubtitle": "",
     "features": [
       {
@@ -87,7 +87,7 @@ export const catalogueContent: Record<string, Partial<Model>> = {
   },
   "baltmotors-700-efi-eps": {
     "name": "Striker 700 EFI/EPS",
-    "subtitle": "Мощность и комфорт управления",
+    "subtitle": "Старшая версия с электроусилителем",
     "mobileSubtitle": "",
     "features": [
       {
@@ -135,7 +135,7 @@ export const catalogueContent: Record<string, Partial<Model>> = {
   },
   "mikilon-hammer-touring-300": {
     "name": "Hammer 300 Touring",
-    "subtitle": "Для загородных поездок с пассажиром",
+    "subtitle": "Для туристических поездок за городом",
     "mobileSubtitle": "",
     "features": [
       {

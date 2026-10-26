@@ -26,7 +26,7 @@ const price = model.priceByn === null ? 'Цена уточняется' : `${mod
     <p class="product-hero__price">{price}</p>
     <div class="product-hero__actions">
       <Button data-open-lead="lead-dialog" data-intent="consultation" data-source="product-offer" data-model-id={model.id} arrow>Получить предложение</Button>
-      <Button variant="outline" data-open-lead="lead-dialog" data-intent="test-drive" data-source="product-test-drive" data-model-id={model.id}>Записаться на тест-драйв</Button>
+      <Button variant="outline" data-open-lead="lead-dialog" data-intent="test-drive" data-source="product-test-drive" data-model-id={model.id}>{details.testDriveLabel ?? 'Записаться на тест-драйв'}</Button>
     </div>
     {details.specifications?.length && <Button href="#specifications" variant="text" arrow class="product-spec-link">Смотреть характеристики</Button>}
     <div class="product-hero__banks"><p>В кредит и рассрочку:</p><div><a href="#finance" aria-label="Финансирование в Альфа-Банке"><img src="/assets/product/alfa.svg" alt="Альфа Банк" width="140" height="28" /></a><a href="#finance" aria-label="Финансирование в Технобанке"><img src="/assets/product/techno.svg" alt="Технобанк" width="204" height="28" /></a></div></div>

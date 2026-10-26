@@ -1,5 +1,9 @@
 # Шаблон страниц SKU — 22.10.2026
 
+## Редакция 26.10.2026
+
+Striker 500 EFI/EPS получил согласованные описание, преимущества, особенности, сопровождение и шесть FAQ. Его H1 сохраняет точное название; отдельные seoTitle/seoDescription и testDriveLabel используют необязательные поля с fallback для остальных SKU. Общие подписи, финансирование, консультация и «Сравните близкие модели» изменены на всех семи страницах. [Полный охват и проверки](editorial-pilot-2026-10-26.md). Это не полная редактура остальных шести моделей.
+
 Первый экземпляр: `/models/baltmotors-500-efi-eps/`. Один Astro-шаблон обслуживает Desktop и Mobile. Источник: Figma [Desktop](https://www.figma.com/design/JkXOsnFvWZmMab1VYjVQAJ?node-id=147-9784) / [Mobile](https://www.figma.com/design/JkXOsnFvWZmMab1VYjVQAJ?node-id=147-9821). Контексты и графика: `design/product-pages.json`, `design/assets.json`.
 
 ## Разделение ответственности

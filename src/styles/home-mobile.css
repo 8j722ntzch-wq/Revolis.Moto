@@ -75,7 +75,7 @@
   .homepage.mobile-ui .home-test__photos, .homepage.mobile-ui .home-test > .home-decoration { display: none; }
   .homepage.mobile-ui .mobile-pattern--test img { left: -120px; top: calc(var(--tile) * 162.667px); transform: rotate(180deg); opacity: .2; }
   .homepage.mobile-ui .home-test .arrow-purple { content: url('/assets/mobile-home/arrow-purple.svg'); }
-  .homepage.mobile-ui .home-test__handwriting { position: relative; top: auto; left: auto; margin: -23px 0 0 67px; }
+  .homepage.mobile-ui .home-test__note { position: relative; top: auto; left: auto; margin: 24px 20px 0; max-width: none; }
   .homepage.mobile-ui .home-test__advantages { position: relative; top: auto; left: auto; flex-direction: column; gap: 12px; margin: 28px 20px 0; }
   .homepage.mobile-ui .home-test__advantages p { font-size: 16px; line-height: 20px; min-height: 52px; }
   .homepage.mobile-ui .home-test__advantages p + p { border-top: 1px solid var(--color-white); padding-top: 12px; }
@@ -121,7 +121,6 @@
 @media (max-width: 374px) {
   .homepage.mobile-ui { --rail-gutter: 16px; }
   .homepage.mobile-ui .container { width: calc(100% - 32px); }
-  .homepage.mobile-ui .home-test__handwriting { margin-left: 30px; }
   .homepage.mobile-ui .home-hours { margin-left: 0; }
   .homepage.mobile-ui .home-consultation__address { width: auto; }
   .homepage.mobile-ui .home-rental__sticker { transform: scale(.85); transform-origin: center; margin-block: 15px; overflow: visible; }

@@ -17,6 +17,10 @@ export interface ProductDetails {
   source: { fileKey: string; desktop: string; mobile: string; capturedAt: string; contentStatus: 'figma-reference' | 'notion-reference' | 'verified'; notionUrl?: string; retrievedAt?: string };
   subtitle: string;
   intro: string;
+  /** Optional editorial metadata; legacy pages retain their current fallback. */
+  seoTitle?: string;
+  seoDescription?: string;
+  testDriveLabel?: string;
   /** Hero photographs only; independent of the editorial gallery below. */
   /** Undefined: provisional template palette. Empty: hide block. Explicit list: model palette. */
   colors?: readonly ProductColorId[];

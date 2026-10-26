@@ -16,7 +16,7 @@
 .home-advantage > div { flex: 1; min-width: 0; }
 .home-advantage__title { font-weight: 700; line-height: 20px; white-space: nowrap; }
 .home-advantage__body { margin-top: 4px; line-height: 20px; color: var(--color-gray-4); }
-.home-hero { height: 672px; position: relative; }
+.home-hero { height: 692px; position: relative; }
 .home-hero__image { position: absolute; left: 64px; top: -17px; pointer-events: none; }
 .home-hero__copy { position: relative; padding-top: 50px; margin-left: -1px; width: 560px; }
 .home-hero h1 { font-size: 64px; font-weight: 900; line-height: 70px; text-transform: uppercase; margin-top: 4px; }
@@ -27,7 +27,7 @@
 .home-hero__uses p + p { margin-top: 12px; }
 .home-hero__uses-line { position: absolute; top: 11px; left: 16px; }
 .home-hero__dot { position: absolute; left: -21px; top: 8.5px; }
-.home-hero__advantages { position: absolute; top: 584px; left: 0; width: 100%; height: 88px; display: grid; grid-template-columns: repeat(4, 276px); gap: 32px; padding: 12px; background: var(--color-white); border-radius: 16px; }
+.home-hero__advantages { position: absolute; top: 584px; left: 0; width: 100%; min-height: 88px; display: grid; grid-template-columns: repeat(4, 276px); gap: 32px; padding: 12px; background: var(--color-white); border-radius: 16px; }
 .home-hero__advantages .home-advantage + .home-advantage::before { content: ''; position: absolute; left: -16px; top: 4px; height: 56px; width: 1px; background: var(--color-gray-2); }
 .home-models { margin-top: 120px; }
 .home-models__heading { display: flex; justify-content: space-between; align-items: flex-end; }
@@ -45,7 +45,7 @@
 .home-highlights > div { position: relative; height: 112px; border-radius: 16px; overflow: hidden; }
 .home-highlights__reach { background: var(--color-white); }
 .home-highlights__count { position: absolute; top: 11px; left: 20px; width: 221px; }
-.home-highlights__count > p { color: var(--color-purple); font-size: 40px; font-weight: 700; line-height: 48px; }
+.home-highlights__count > p { color: var(--color-purple); font-size: 32px; font-weight: 700; line-height: 48px; }
 .home-highlights__count > span { display: block; margin-top: -3px; }
 .home-highlights__reach span { font-size: 14px; line-height: 18px; color: var(--color-gray-4); }
 .home-highlights__reach > img { position: absolute; top: 16px; left: 320px; }
@@ -85,10 +85,11 @@
 @media (min-width: 1288px) and (hover: hover) and (pointer: fine) {
   .home-test .home-test__button:hover { background: var(--color-gray-2); }
 }
-.home-test__handwriting { pointer-events: none; position: absolute; left: 291px; top: 225.9px; }
-.home-test__advantages { position: absolute; left: 36px; top: 396px; display: flex; gap: 48px; }
+.home-test__note { position: absolute; left: 330px; top: 310px; max-width: 210px; font-size: 22px; line-height: 28px; font-weight: 600; font-style: italic; }
+.home-test__advantages { position: absolute; left: 36px; top: 396px; display: flex; gap: 32px; max-width: 560px; }
 .home-test__advantages p { display: flex; align-items: center; gap: 8px; position: relative; color: var(--color-gray-2); line-height: 20px; }
-.home-test__advantages p + p::before { position: absolute; left: -24px; top: 10px; content: ''; width: 1px; height: 36px; background: var(--color-white-20); }
+.home-test__advantages p > img { flex-shrink: 0; }
+.home-test__advantages p + p::before { position: absolute; left: -16px; top: 10px; content: ''; width: 1px; height: 36px; background: var(--color-white-20); }
 .home-documents { margin-top: 120px; }
 .home-document { display: flex; flex-direction: column; gap: 16px; padding: 16px; border-radius: 16px; background: var(--color-white); }
 .home-document h3 { font-size: 24px; line-height: 30px; font-weight: 600; }

@@ -12,4 +12,4 @@ export function getStaticPaths() {
 interface Props { product: ProductPageData; }
 const { product } = Astro.props;
 ---
-<BaseLayout title={`${product.model.name} — ${product.model.brand} | Revolis.Мото`} description={product.details.intro}><ProductPage product={product} /></BaseLayout>
+<BaseLayout title={product.details.seoTitle ?? `${product.model.name} — ${product.model.brand} | Revolis.Мото`} description={product.details.seoDescription ?? product.details.intro}><ProductPage product={product} /></BaseLayout>

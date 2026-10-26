@@ -6,6 +6,9 @@ interface Props {
   id: string;
   variant: BankCardVariant;
   terms?: BankTerms | null;
+  termsPlaceholder?: string;
+  consultationTitle?: string;
+  actionLabel?: string;
   headingLevel?: 'h2' | 'h3' | 'h4';
   dialogId?: string;
   modelId?: string;
@@ -14,7 +17,7 @@ interface Props {
   actionHref?: string;
   description?: string;
 }
-const { id, variant, terms, headingLevel: Heading = 'h3', dialogId, modelId, demoState, demoAction = false, actionHref, description = 'Проконсультируем и вместе оформим заявление в банк' } = Astro.props;
+const { id, variant, terms, termsPlaceholder = 'Условия уточняются', consultationTitle, actionLabel = 'Подобрать условия оплаты', headingLevel: Heading = 'h3', dialogId, modelId, demoState, demoAction = false, actionHref, description = 'Проконсультируем и вместе оформим заявление в банк' } = Astro.props;
 const bank = variant === 'consultation' ? null : banks[variant];
 const action = {
   href: actionHref,
@@ -36,17 +39,17 @@ const action = {
         <div class="bank-card__offer">
           <Heading class="type-heading-xxs">Кредит и рассрочка</Heading>
           <div class="bank-card__terms type-small">
-            {terms ? <><p>{terms.durationLabel}</p><p>{terms.rateLabel}</p></> : <p>Условия уточняются</p>}
+            {terms ? <><p>{terms.durationLabel}</p><p>{terms.rateLabel}</p></> : <p>{termsPlaceholder}</p>}
           </div>
         </div>
         <Button {...action} class="bank-card__trigger" variant="icon" size="m" tone="inverse" aria-label={`Подобрать условия оплаты — ${bank.name}`} />
       </div>
     </> : <>
       <div class="bank-card__consultation">
-        <Heading id={`${id}-title`} class="type-heading-xs">Поможем подобрать <span>комфортные</span> условия</Heading>
+        <Heading id={`${id}-title`} class="type-heading-xs">{consultationTitle ?? <>Поможем подобрать <span>комфортные</span> условия</>}</Heading>
         <p class="type-small">{description}</p>
       </div>
-      <Button {...action} class="bank-card__action" variant="outline" tone="inverse" arrow>Подобрать условия оплаты</Button>
+      <Button {...action} class="bank-card__action" variant="outline" tone="inverse" arrow>{actionLabel}</Button>
     </>}
   </div>
 </article>

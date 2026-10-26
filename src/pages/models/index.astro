@@ -12,12 +12,12 @@ import '../../styles/home-mobile.css';
 import '../../styles/catalogue.css';
 const brands = ['Все', ...new Set(catalogueModels.map(model => model.brand))];
 ---
-<BaseLayout title="Наши модели — Revolis.Мото" description="Каталог квадроциклов Mikilon и BaltMotors. Подбор техники по бренду.">
+<BaseLayout title="Купить квадроцикл в Беларуси — модели и цены | Revolis.Мото" description="Каталог квадроциклов Mikilon Hammer и BaltMotors Striker: модели, цены и характеристики. Сравните комплектации и получите помощь с выбором в Revolis.Мото.">
   <div id="top" class="homepage mobile-ui catalogue-page">
     <SiteHeader homeHref="/" dialogId="lead-dialog" /><MobileHeader homeHref="/" />
     <main>
       <section class="catalogue container" aria-labelledby="catalogue-title">
-        <h1 id="catalogue-title">Наши модели</h1>
+        <h1 id="catalogue-title">Каталог квадроциклов</h1>
         <catalogue-filter>
           <div class="catalogue__filters" role="group" aria-label="Фильтр по бренду">
             {brands.map((brand, i) => <button type="button" data-brand={i ? brand : 'all'} aria-pressed={i === 0 ? 'true' : 'false'} aria-controls="catalogue-grid">{brand}</button>)}
