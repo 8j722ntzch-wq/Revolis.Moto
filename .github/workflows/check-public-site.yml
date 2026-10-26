@@ -1,0 +1,28 @@
+name: Diagnose revolis.by DNS and web access
+on:
+  push:
+    branches: [development]
+    paths: ['.github/workflows/check-public-site.yml']
+permissions:
+  contents: read
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Public DNS and HTTP diagnostics (read only)
+        shell: bash
+        run: |
+          for host in revolis.by www.revolis.by vh132.hoster.by; do
+            echo "DNS $host"
+            dig +short A "$host"
+            dig +short AAAA "$host"
+          done
+          for url in http://revolis.by/ https://revolis.by/ http://www.revolis.by/ https://www.revolis.by/; do
+            echo "REQUEST $url"
+            curl -4 -I --connect-timeout 8 --max-time 12 "$url" || true
+          done
+          echo "DIRECT HOSTING HTTP"
+          curl -4 -I --resolve revolis.by:80:87.232.64.132 --connect-timeout 8 --max-time 12 http://revolis.by/ || true
+          echo "DIRECT HOSTING HTTPS"
+          curl -4 -I --resolve revolis.by:443:87.232.64.132 --connect-timeout 8 --max-time 12 https://revolis.by/ || true
