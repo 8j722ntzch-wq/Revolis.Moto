@@ -1,4 +1,4 @@
-name: Check hoster.by SSH port 22 (no login)
+name: Check hoster.by SFTP port 22 (read only)
 on:
   push:
     branches: [development]
@@ -7,19 +7,54 @@ on:
 permissions:
   contents: read
 jobs:
-  check-ssh:
+  check-sftp:
     runs-on: ubuntu-latest
-    timeout-minutes: 2
+    timeout-minutes: 5
     steps:
-      - name: Check SSH and report unverified public host fingerprint
+      - name: Install SFTP client
+        run: sudo apt-get update -qq && sudo apt-get install -y python3-paramiko
+      - name: Verify pinned server key and SFTP login
         env:
           FTP_SERVER: ${{ secrets.FTP_SERVER }}
-        shell: bash
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          FTP_SERVER_DIR: ${{ secrets.FTP_SERVER_DIR }}
         run: |
-          set -euo pipefail
-          test -n "$FTP_SERVER"
-          ssh-keyscan -T 15 -p 22 -t ed25519,rsa "$FTP_SERVER" > "$RUNNER_TEMP/host-keys" 2> "$RUNNER_TEMP/scan-errors"
-          test -s "$RUNNER_TEMP/host-keys"
-          echo "PASS: SSH key exchange on port 22."
-          ssh-keygen -lf "$RUNNER_TEMP/host-keys" | awk '{print $1, $2, $NF}'
-          echo "Fingerprints are observed, not verified. No credentials sent; SFTP login and deployment not tested."
+          /usr/bin/python3 - <<'PY'
+          import os, socket, hashlib, base64, sys
+          import paramiko
+          stage = "configuration"
+          transport = None
+          try:
+              host, user, password, directory = [os.environ[n] for n in ("FTP_SERVER", "FTP_USERNAME", "FTP_PASSWORD", "FTP_SERVER_DIR")]
+              if not all((host, user, password, directory)):
+                  raise ValueError("Missing secret")
+              stage = "SSH connection on port 22"
+              sock = socket.create_connection((host, 22), timeout=20)
+              transport = paramiko.Transport(sock)
+              transport.get_security_options().key_types = ("ssh-ed25519",)
+              transport.start_client(timeout=20)
+              stage = "server fingerprint verification"
+              fingerprint = "SHA256:" + base64.b64encode(hashlib.sha256(transport.get_remote_server_key().asbytes()).digest()).decode().rstrip("=")
+              if fingerprint != "SHA256:Yk1d+cp6318Dso8AHTwoCStX/iHcxGRXMSntQ++OSK4":
+                  raise ValueError("Host key mismatch")
+              print("PASS: Confirmed ED25519 server key matches.", flush=True)
+              stage = "password authentication"
+              transport.auth_timeout = 20
+              transport.auth_password(user, password)
+              print("PASS: SFTP credentials accepted.", flush=True)
+              stage = "SFTP subsystem"
+              sftp = paramiko.SFTPClient.from_transport(transport)
+              sftp.get_channel().settimeout(20)
+              stage = "configured directory access"
+              sftp.chdir(directory)
+              sftp.listdir(".")
+              print("PASS: SFTP directory is accessible. No files changed.", flush=True)
+              sftp.close()
+          except Exception as error:
+              print("FAIL: " + stage + "; " + type(error).__name__ + ". Details hidden to protect secrets.", flush=True)
+              sys.exit(1)
+          finally:
+              if transport:
+                  transport.close()
+          PY
