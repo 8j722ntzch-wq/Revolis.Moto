@@ -1,0 +1,48 @@
+name: Check Telegram bot (read only)
+on:
+  push:
+    branches: [development]
+    paths: ['.github/workflows/check-telegram.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Verify token and private Start messages
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import json, os, sys, urllib.request
+          token = os.environ.get("TELEGRAM_BOT_TOKEN", "").strip()
+          if not token:
+              print("FAIL: TELEGRAM_BOT_TOKEN is missing.")
+              sys.exit(1)
+          def api(method):
+              request = urllib.request.Request("https://api.telegram.org/bot" + token + "/" + method, data=b"{}", headers={"Content-Type": "application/json"})
+              with urllib.request.urlopen(request, timeout=20) as response:
+                  data = json.load(response)
+              if not data.get("ok"):
+                  raise ValueError("API rejected request")
+              return data["result"]
+          try:
+              me = api("getMe")
+              if me.get("username", "").lower() != "revvi_revolis_bot":
+                  print("FAIL: Token belongs to a different bot.")
+                  sys.exit(1)
+              print("PASS: Token accepted for @revvi_revolis_bot.")
+              webhook = api("getWebhookInfo")
+              if webhook.get("url"):
+                  print("STOP: Existing webhook found; it was not changed.")
+                  sys.exit(1)
+              updates = api("getUpdates")
+              chats = {u["message"]["chat"]["id"] for u in updates if u.get("message", {}).get("chat", {}).get("type") == "private" and u["message"].get("text", "").split(" ")[0] == "/start"}
+              print("Private chats with Start in pending updates: " + str(len(chats)))
+              print("No token, chat IDs or message contents logged. No messages sent; no updates acknowledged.")
+          except Exception:
+              print("FAIL: Telegram verification failed. Details suppressed to protect token.")
+              sys.exit(1)
+          PY
