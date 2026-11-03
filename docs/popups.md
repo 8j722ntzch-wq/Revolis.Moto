@@ -28,3 +28,7 @@ Astro check/build, 4 теста (включая контракт ответа с
 ## Bank selector update (2026-10-22)
 
 Whole bank cards open the existing dialog through a single accessible button. Bank/model context is preserved. Fresh Figma 300:10927: default colored border, hover 20% fill, selected/pressed solid fill. Transparent borders preserve dimensions instead of the 2px shifts between Figma states. Wallet SVG keeps intrinsic geometry. Context: design/context/bank-selector-300-10927.txt. Shared CloseButton is reused by lead dialogs and Hero viewer.
+
+### 2026-11-03 — форма выбора банка
+
+Добавлен вариант «Любой» по умолчанию для общей формы; карточки конкретных банков сохраняют предварительный выбор. Размеры по Figma 266:8776 / 266:8789: 704×520 и 340×564; окно растёт при сообщениях состояния. Мобильные подписи банков — 14px/18.2px, кнопки без изменения размеров при выборе. Code Connect не опубликован: Figma требует Organization/Enterprise.

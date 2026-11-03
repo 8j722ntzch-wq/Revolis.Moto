@@ -23,17 +23,19 @@
       "nodeId": "266:8776",
       "name": "bank-desktop",
       "width": 704,
-      "height": 526,
+      "height": 520,
       "quality": "high-fidelity",
-      "contextFile": "design/context/popups-266-8776.txt"
+      "contextFile": "design/context/popups-266-8776.txt",
+      "reviewedAt": "2026-11-03"
     },
     {
       "nodeId": "266:8789",
       "name": "bank-mobile",
       "width": 340,
-      "height": 570,
+      "height": 564,
       "quality": "high-fidelity",
-      "contextFile": "design/context/popups-266-8789.txt"
+      "contextFile": "design/context/popups-266-8789.txt",
+      "reviewedAt": "2026-11-03"
     },
     {
       "nodeId": "1:9083",
@@ -57,6 +59,6 @@
     "capturedAt": "2026-10-22",
     "contextFile": "design/context/bank-selector-300-10927.txt",
     "quality": "high-fidelity",
-    "adaptation": "Stable transparent border prevents 2px layout shifts."
+    "adaptation": "Any bank selected by default; explicit bank entry points preserve their selection. Inset borders preserve dimensions. Mobile labels 14px/18.2px."
   }
 }
