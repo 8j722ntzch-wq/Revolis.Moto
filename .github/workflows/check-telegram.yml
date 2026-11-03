@@ -1,4 +1,4 @@
-name: Check Telegram bot
+name: Check Telegram bot (read only)
 on:
   push:
     branches: [development]
@@ -13,7 +13,6 @@ jobs:
     steps:
       - name: Verify token and private Start messages
         env:
-          SEND_SETUP: ${{ github.event_name == 'push' && github.event.head_commit.message == 'Send approved Telegram setup message 739182' && github.run_attempt == 1 }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         run: |
           python3 - <<'PY'
@@ -22,8 +21,8 @@ jobs:
           if not token:
               print("FAIL: TELEGRAM_BOT_TOKEN is missing.")
               sys.exit(1)
-          def api(method, payload=None):
-              request = urllib.request.Request("https://api.telegram.org/bot" + token + "/" + method, data=json.dumps(payload or {}).encode("utf-8"), headers={"Content-Type": "application/json"})
+          def api(method):
+              request = urllib.request.Request("https://api.telegram.org/bot" + token + "/" + method, data=b"{}", headers={"Content-Type": "application/json"})
               with urllib.request.urlopen(request, timeout=20) as response:
                   data = json.load(response)
               if not data.get("ok"):
@@ -46,20 +45,7 @@ jobs:
                   print("FAIL: Expected exactly one matching private chat.")
                   sys.exit(1)
               print("PASS: Personal recipient identified by setup code; recipient not yet saved.")
-              if os.environ.get("SEND_SETUP") == "true":
-                  chat_id = next(iter(chats))
-                  message = ("Revolis.Мото: тестовое сообщение. Подключение к боту работает.\n\n"
-                      "Твой идентификатор чата:\n" + str(chat_id) + "\n\n"
-                      "Сохрани это число в GitHub: Settings → Secrets and variables → Actions → New repository secret.\n"
-                      "Name: TELEGRAM_CHAT_ID\nSecret: число выше\n\n"
-                      "https://github.com/8j722ntzch-wq/Revolis.Moto/settings/secrets/actions\n\n"
-                      "После сохранения напиши в чате с помощником «Сохранил TELEGRAM_CHAT_ID».\n"
-                      "Отправка заявок с сайта пока не подключена.")
-                  result = api("sendMessage", {"chat_id": chat_id, "text": message})
-                  if result.get("chat", {}).get("id") != chat_id:
-                      raise ValueError("Unexpected recipient")
-                  print("PASS: Telegram accepted the approved setup message for the verified private chat.")
-              print("No token, chat IDs or message contents logged; no updates acknowledged.")
+              print("No token, chat IDs or message contents logged. No messages sent; no updates acknowledged.")
           except Exception:
               print("FAIL: Telegram verification failed. Details suppressed to protect token.")
               sys.exit(1)
