@@ -21,12 +21,13 @@ export interface ProductDetails {
   seoTitle?: string;
   seoDescription?: string;
   testDriveLabel?: string;
+  approvedFinanceCopy?: boolean;
   /** Hero photographs only; independent of the editorial gallery below. */
   /** Undefined: provisional template palette. Empty: hide block. Explicit list: model palette. */
   colors?: readonly ProductColorId[];
   photos: ProductPhoto[];
   galleryPhotos?: ProductPhoto[];
-  description?: { title: string; accent?: string; paragraphs: string[] };
+  description?: { title: string; accent?: string; titleSuffix?: string; paragraphs: string[] };
   benefits?: ProductCard[];
   features?: ProductCard[];
   specifications?: SpecificationGroup[];
