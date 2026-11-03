@@ -13,6 +13,8 @@ export const striker700: ProductDetails = {
   },
   "subtitle": "Старший двигатель для рабочих задач",
   "intro": "Для загородных поездок и работы в хозяйстве. Подключаемый полный привод, понижающая передача и практичное заводское оснащение.",
+  "seoTitle": "Купить квадрицикл BaltMotors Striker 700 EFI | Revolis.Мото",
+  "seoDescription": "Купить квадрицикл BaltMotors Striker 700 EFI в Беларуси: двигатель 686 см³, полный привод и понижающая передача. Цена, характеристики и комплектация.",
   "colors": ["gray", "green", "black", "camouflage"],
   "photos": [],
   "galleryPhotos": [],

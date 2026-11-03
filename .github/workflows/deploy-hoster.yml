@@ -59,7 +59,7 @@ jobs:
 
       - name: Build static website
         run: |
-          npm run build
+          npm run build:release
           test -s dist/index.html
 
       - name: Install SFTP client
@@ -159,6 +159,19 @@ jobs:
                   with sftp.open(posixpath.join(root, local.relative_to("dist").as_posix()), "rb") as remote:
                       if hashlib.sha256(remote.read()).digest() != hashlib.sha256(local.read_bytes()).digest():
                           raise ValueError("Published file hash mismatch")
+              stage = "retire component libraries"
+              # Older releases uploaded these routes. Removing them from dist alone
+              # would leave the old copies online; move only these two directories
+              # to the existing backup outside the site's document root.
+              for name in ("ui-kit", "ui-kit-mobile"):
+                  obsolete = posixpath.join(root, name)
+                  info = exists(obsolete)
+                  if info:
+                      if not stat.S_ISDIR(info.st_mode):
+                          raise ValueError("Unexpected UI Kit destination type")
+                      sftp.posix_rename(obsolete, posixpath.join(backup, "retired-" + name))
+                  if exists(obsolete):
+                      raise ValueError("UI Kit route remains on host")
               print("PASS: Published master " + os.environ["GITHUB_SHA"] + "; all uploaded file hashes verified.", flush=True)
               print("BACKUP: Home-relative revolis-deploy-backups/" + token, flush=True)
               print("Existing unrelated files retained.", flush=True)

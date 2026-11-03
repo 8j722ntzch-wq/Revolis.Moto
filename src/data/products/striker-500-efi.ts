@@ -13,6 +13,8 @@ export const striker500: ProductDetails = {
   },
   "subtitle": "Для работы и отдыха — с расширенным оснащением",
   "intro": "Полноприводный квадрицикл с понижающей передачей. Лебёдка, пассажирская спинка и защита рук — в заводской комплектации.",
+  "seoTitle": "Купить квадрицикл BaltMotors Striker 500 EFI | Revolis.Мото",
+  "seoDescription": "Купить квадрицикл BaltMotors Striker 500 EFI в Беларуси. Полный привод, понижающая передача и лебёдка. Цена, характеристики и помощь с подбором.",
   "colors": ["gray", "green", "black", "camouflage"],
   "photos": [],
   "galleryPhotos": [],

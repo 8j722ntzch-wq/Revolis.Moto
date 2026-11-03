@@ -1,0 +1,37 @@
+name: Validate lead backend
+on:
+  push:
+    branches: [development, master]
+    paths: ['server/**', 'tests/server/**', '.github/workflows/check-leads.yml']
+  pull_request:
+    paths: ['server/**', 'tests/server/**', '.github/workflows/check-leads.yml']
+permissions:
+  contents: read
+jobs:
+  php:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate PHP and lead rules
+        run: |
+          php -l server/leads.php
+          php -l server/lead-validation.php
+          php tests/server/leads.test.php
+      - name: Verify HTTP rejection and safe unavailable responses
+        run: |
+          php -S 127.0.0.1:8099 -t server >/tmp/revolis-php-test.log 2>&1 &
+          trap 'kill $!' EXIT
+          python3 tests/server/http-test.py
+  site:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+      - run: npm test
+      - run: npm run design:check
+      - run: npm run build

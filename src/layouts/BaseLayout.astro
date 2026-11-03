@@ -3,8 +3,12 @@ import '@fontsource-variable/inter/wght.css';
 import '@fontsource-variable/inter/wght-italic.css';
 import '../styles/global.css';
 import LeadDialog from '../components/LeadDialog.astro';
-interface Props { title: string; description: string; canonical?: string; indexable?: boolean; }
-const { title, description, canonical, indexable = false } = Astro.props;
+import { isSearchPage } from '../lib/seo';
+interface Props { title: string; description: string; indexable?: boolean; }
+const { title, description, indexable = true } = Astro.props;
+const searchPage = isSearchPage(Astro.url.pathname);
+const canonical = searchPage ? new URL(Astro.url.pathname, Astro.site).href : undefined;
+const allowIndex = import.meta.env.MODE === 'release' && searchPage && indexable;
 ---
 <!doctype html>
 <html lang="ru">
@@ -12,7 +16,7 @@ const { title, description, canonical, indexable = false } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
-    <meta name="robots" content={indexable ? 'index,follow' : 'noindex,nofollow'} />
+    <meta name="robots" content={allowIndex ? 'index,follow' : 'noindex,nofollow'} />
     {canonical && <link rel="canonical" href={canonical} />}
     <title>{title}</title>
   </head>

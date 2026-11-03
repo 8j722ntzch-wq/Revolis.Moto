@@ -40,7 +40,7 @@ document.querySelectorAll<HTMLElement>('[data-open-lead]').forEach(trigger => {
       form.dataset.intent = intents.includes(intent) ? intent : 'consultation';
       form.dataset.source = trigger.dataset.source ?? 'page';
       form.dataset.modelId = trigger.dataset.modelId ?? trigger.closest<HTMLElement>('[data-product-id]')?.dataset.productId ?? '';
-      form.dataset.bank = trigger.dataset.bank ?? '';
+      form.dataset.bank = trigger.dataset.bank ?? 'any';
       form.querySelectorAll<HTMLInputElement>('[name="bank"]').forEach(input => { input.checked = input.value === form.dataset.bank; });
     }
     open(dialog, focusTarget);

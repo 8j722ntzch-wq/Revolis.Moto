@@ -405,7 +405,7 @@ export const striker500Eps: ProductDetails = {
       }
     ]
   },
-  "seoTitle": "BaltMotors Striker 500 EFI/EPS — купить в Беларуси | Revolis.Мото",
-  "seoDescription": "BaltMotors Striker 500 EFI/EPS: электроусилитель руля, характеристики и сравнение версий. Гарантия 3 года, помощь с обслуживанием в Revolis.Мото.",
+  "seoTitle": "Купить квадрицикл BaltMotors Striker 500 EFI/EPS | Revolis.Мото",
+  "seoDescription": "Купить квадрицикл BaltMotors Striker 500 EFI/EPS в Беларуси. Электроусилитель руля, полный привод и понижающая передача. Цена и сравнение версий.",
   "testDriveLabel": "Обсудить тест-драйв"
 };
