@@ -13,7 +13,7 @@ interface Props {
   bankSelection?: boolean;
 }
 const { id, intent = 'consultation', source, modelId, bank, policyUrl, bankSelection = false } = Astro.props;
-const endpoint = import.meta.env.PUBLIC_LEAD_ENDPOINT ?? '';
+const endpoint = import.meta.env.PUBLIC_LEAD_ENDPOINT || '/api/leads.php';
 const personalDataUrl = import.meta.env.PUBLIC_PERSONAL_DATA_POLICY_URL ?? '';
 const ready = Boolean(endpoint && policyUrl && personalDataUrl);
 ---
