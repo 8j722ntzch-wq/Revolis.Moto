@@ -13,6 +13,8 @@ export const hammer200: ProductDetails = {
   },
   "subtitle": "Для дачи и загородных прогулок",
   "intro": "Карбюраторный двигатель с воздушно-масляным охлаждением, вариатор и цепной привод на задние колёса.",
+  "seoTitle": "Купить квадроцикл Mikilon Hammer 200 Touring | Revolis.Мото",
+  "seoDescription": "Купить квадроцикл Mikilon Hammer 200 Touring в Беларуси: 196 см³, вариатор и задний привод. Цена, характеристики и помощь с выбором в Revolis.Мото.",
   "colors": ["blue", "gray"],
   "photos": [],
   "galleryPhotos": [],

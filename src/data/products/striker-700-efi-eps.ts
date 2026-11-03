@@ -13,6 +13,8 @@ export const striker700Eps: ProductDetails = {
   },
   "subtitle": "Старший двигатель и комфорт управления",
   "intro": "Полноприводный квадрицикл для загородных поездок и хозяйственных задач. Электроусилитель уменьшает усилие на руле, а понижающая передача дополняет возможности трансмиссии.",
+  "seoTitle": "Купить квадрицикл BaltMotors Striker 700 EFI/EPS | Revolis.Мото",
+  "seoDescription": "Купить квадрицикл BaltMotors Striker 700 EFI/EPS в Беларуси. Двигатель 686 см³, электроусилитель руля и полный привод. Цена и комплектация.",
   "colors": ["gray", "green", "black", "camouflage"],
   "photos": [],
   "galleryPhotos": [],

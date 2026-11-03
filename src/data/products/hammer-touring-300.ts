@@ -13,6 +13,8 @@ export const hammer300: ProductDetails = {
   },
   "subtitle": "Туристический квадроцикл с карданным приводом",
   "intro": "Двигатель 270,5 см³ с Bosch EFI и жидкостным охлаждением. Вариатор, задний привод и два посадочных места.",
+  "seoTitle": "Купить квадроцикл Mikilon Hammer 300 Touring | Revolis.Мото",
+  "seoDescription": "Купить квадроцикл Mikilon Hammer 300 Touring в Беларуси. Bosch EFI, жидкостное охлаждение и карданный привод. Цена и комплектация в Revolis.Мото.",
   "colors": ["blue", "yellow"],
   "photos": [],
   "galleryPhotos": [],
