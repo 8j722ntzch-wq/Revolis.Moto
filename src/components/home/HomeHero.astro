@@ -9,7 +9,7 @@ import Advantage from './AdvantageItem.astro';
   <div class="home-hero__copy">
     <p class="home-eyebrow">Mikilon и BaltMotors</p>
     <h1 id="hero-title">Квадроциклы<br /> <span>в Беларуси</span></h1>
-    <p class="home-hero__body">Подберём модель по опыту собственного проката. Приглашаем на лесной тест-драйв с экипировкой. Поможем с ТО и гарантийным ремонтом.</p>
+    <p class="home-hero__body">Подберём модель по опыту собственного проката. Сертифицированная техника с гарантией до 3 лет, документами для регистрации и гибкими вариантами оплаты</p>
     <div class="home-actions"><Button href="/models/" arrow>Смотреть модели</Button><Button data-open-lead="lead-dialog" data-source="hero" data-intent="consultation" variant="outline" arrow>Подобрать квадроцикл</Button></div>
   </div>
   <div class="home-hero__uses" aria-label="Для работы, отдыха и новых маршрутов">
@@ -17,9 +17,9 @@ import Advantage from './AdvantageItem.astro';
     {[['work', 'Для работы'], ['rest', 'Для отдыха'], ['route', 'Для новых маршрутов']].map(([icon, label]) => <p><img class="home-hero__dot" src="/assets/home/usage-dot.svg" alt="" /><img src={`/assets/home/usage-${icon}.svg`} alt="" width="32" height="32" /><span>{label}</span></p>)}
   </div>
   <div class="home-hero__advantages">
-    <Advantage icon="benefit-documents" title="Документы до покупки">Разберём оформление выбранной модели</Advantage>
-    <Advantage icon="benefit-warranty" title="Гарантия по брендам">Mikilon — 1 год.<br />BaltMotors — 3 года</Advantage>
-    <Advantage icon="benefit-finance" title="Кредит и рассрочка">Уточним программу и платежи</Advantage>
-    <Advantage icon="benefit-test" title="Лесной тест-драйв">Экипировка и подготовленные маршруты</Advantage>
+    <Advantage icon="benefit-documents" title="Официальное оформление">Получение ПТС или ПСМ</Advantage>
+    <Advantage icon="benefit-warranty" title="Гарантия до 3 лет">Mikilon — 1 год.<br />BaltMotors — 3 года</Advantage>
+    <Advantage icon="benefit-finance" title="Кредит и рассрочка">Альфа-Банк и Технобанк</Advantage>
+    <Advantage icon="benefit-test" title="Лесной тест-драйв">Скидка при покупке на сумму тест-драйва</Advantage>
   </div>
 </section>

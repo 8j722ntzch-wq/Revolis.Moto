@@ -75,7 +75,6 @@
   .homepage.mobile-ui .home-test__photos, .homepage.mobile-ui .home-test > .home-decoration { display: none; }
   .homepage.mobile-ui .mobile-pattern--test img { left: -120px; top: calc(var(--tile) * 162.667px); transform: rotate(180deg); opacity: .2; }
   .homepage.mobile-ui .home-test .arrow-purple { content: url('/assets/mobile-home/arrow-purple.svg'); }
-  .homepage.mobile-ui .home-test__note { position: relative; top: auto; left: auto; margin: 24px 20px 0; max-width: none; }
   .homepage.mobile-ui .home-test__advantages { position: relative; top: auto; left: auto; flex-direction: column; gap: 12px; margin: 28px 20px 0; }
   .homepage.mobile-ui .home-test__advantages p { font-size: 16px; line-height: 20px; min-height: 52px; }
   .homepage.mobile-ui .home-test__advantages p + p { border-top: 1px solid var(--color-white); padding-top: 12px; }
