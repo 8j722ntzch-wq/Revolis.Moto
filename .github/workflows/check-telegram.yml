@@ -39,8 +39,12 @@ jobs:
                   print("STOP: Existing webhook found; it was not changed.")
                   sys.exit(1)
               updates = api("getUpdates")
-              chats = {u["message"]["chat"]["id"] for u in updates if u.get("message", {}).get("chat", {}).get("type") == "private" and u["message"].get("text", "").split(" ")[0] == "/start"}
-              print("Private chats with Start in pending updates: " + str(len(chats)))
+              chats = {u["message"]["chat"]["id"] for u in updates if u.get("message", {}).get("chat", {}).get("type") == "private" and u["message"].get("text", "").strip() == "/start revolis-739182"}
+              print("Private chats matching setup code: " + str(len(chats)))
+              if len(chats) != 1:
+                  print("FAIL: Expected exactly one matching private chat.")
+                  sys.exit(1)
+              print("PASS: Personal recipient identified by setup code; recipient not yet saved.")
               print("No token, chat IDs or message contents logged. No messages sent; no updates acknowledged.")
           except Exception:
               print("FAIL: Telegram verification failed. Details suppressed to protect token.")
