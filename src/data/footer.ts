@@ -27,6 +27,7 @@ export interface FooterDestinations {
 const mapAddress = encodeURIComponent('Беларусь, Витебск, проспект Московский, 111');
 export const siteDestinations: FooterDestinations = {
   privacy: '/privacypolicy/',
+  personalData: '/documents/personal-data-policy-2026-11-04.pdf',
   yandex: `https://yandex.ru/maps/?text=${mapAddress}`,
   google: `https://www.google.com/maps/search/?api=1&query=${mapAddress}`,
 };
