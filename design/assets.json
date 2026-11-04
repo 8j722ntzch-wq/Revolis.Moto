@@ -406,11 +406,12 @@
         }
       ],
       "intrinsic": {
-        "width": 1193,
-        "height": 683
+        "width": 2386,
+        "height": 1366
       },
-      "transfer": "Isolated original graphic rendered through Figma MCP screenshot/Plugin API node.screenshot(contentsOnly:true); temporary asset download blocked by network. No full UI section rasterized.",
-      "sha256": "624ff5f26493b4819b7b849988d7833c1fa827a21c8aef953fa58650ef41455b"
+      "transfer": "Figma download_assets PNG 2x, 2026-11-04; test-photo alpha restored from previous isolated export to exclude parent backdrop",
+      "sha256": "121816702528cbac9677f9e5fc4aa2a46034f9183335e41af6bd57e1d1e21649",
+      "exportScale": 2
     },
     {
       "id": "model-200",
@@ -478,11 +479,12 @@
         }
       ],
       "intrinsic": {
-        "width": 277,
-        "height": 367
+        "width": 554,
+        "height": 734
       },
-      "transfer": "Isolated original graphic rendered through Figma MCP screenshot/Plugin API node.screenshot(contentsOnly:true); temporary asset download blocked by network. No full UI section rasterized.",
-      "sha256": "eefd2507aa6d7d8926f754aeffe75eee27fc281bd011e957758ea1362c476ff9"
+      "transfer": "Figma download_assets PNG 2x, 2026-11-04; test-photo alpha restored from previous isolated export to exclude parent backdrop",
+      "sha256": "7678f8ca44f03399b676e3600bb3a062bb38c049f66239944d9120676bddea89",
+      "exportScale": 2
     },
     {
       "id": "test-photo-right",
@@ -496,11 +498,12 @@
         }
       ],
       "intrinsic": {
-        "width": 281,
-        "height": 369
+        "width": 561,
+        "height": 738
       },
-      "transfer": "Isolated original graphic rendered through Figma MCP screenshot/Plugin API node.screenshot(contentsOnly:true); temporary asset download blocked by network. No full UI section rasterized.",
-      "sha256": "7e60b43e5becc58ad0aa39ff597165a6ebbc31cff71f0a9e747dcfc2840f5a11"
+      "transfer": "Figma download_assets PNG 2x, 2026-11-04; test-photo alpha restored from previous isolated export to exclude parent backdrop",
+      "sha256": "152b72ec406dff647da624f756b73ec05c1644c4a8ad3bdf1fb81255b97b0570",
+      "exportScale": 2
     },
     {
       "id": "test-photo-front",
@@ -514,11 +517,12 @@
         }
       ],
       "intrinsic": {
-        "width": 244,
-        "height": 344
+        "width": 488,
+        "height": 688
       },
-      "transfer": "Isolated original graphic rendered through Figma MCP screenshot/Plugin API node.screenshot(contentsOnly:true); temporary asset download blocked by network. No full UI section rasterized.",
-      "sha256": "0e3ce6f6594aa9ae8b44d873d92125e0bb138d54fc656a67c17251a80aac88de"
+      "transfer": "Figma download_assets PNG 2x, 2026-11-04; test-photo alpha restored from previous isolated export to exclude parent backdrop",
+      "sha256": "9a26507d84bfef2254e5d17bf249ad26b31e0726758162e4a7938782a4c15ac9",
+      "exportScale": 2
     },
     {
       "id": "test-handwriting",
@@ -586,11 +590,12 @@
         }
       ],
       "intrinsic": {
-        "width": 732,
-        "height": 440
+        "width": 1464,
+        "height": 880
       },
-      "transfer": "Isolated original graphic rendered through Figma MCP screenshot/Plugin API node.screenshot(contentsOnly:true); temporary asset download blocked by network. No full UI section rasterized.",
-      "sha256": "209fb95c1979af6f92fc66e3ec6972adbb2063365e676bd5a789787605191730"
+      "transfer": "Figma download_assets PNG 2x, 2026-11-04; test-photo alpha restored from previous isolated export to exclude parent backdrop",
+      "sha256": "c899c407a029b02a2e853cff09a1925d06a4ddc98ee78d41e9ef0ce5c5680c50",
+      "exportScale": 2
     },
     {
       "id": "rental-sticker-outline",
