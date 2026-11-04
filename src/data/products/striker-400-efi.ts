@@ -203,6 +203,7 @@ export const striker400: ProductDetails = {
     },
     {
       "title": "Размеры, масса и нагрузка",
+      "fullWidth": true,
       "rows": [
         {
           "label": "Длина × ширина × высота",
