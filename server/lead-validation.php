@@ -44,7 +44,7 @@ function leadMessage(array $data, ?DateTimeImmutable $now = null): string
         $phone = '+375 (' . $parts[1] . ') ' . $parts[2] . '-' . $parts[3] . '-' . $parts[4];
     }
     $bank = isset($data['bank']) ? $banks[$data['bank']] : ($data['intent'] === 'finance' ? 'Любой' : 'Не выбрано');
-    $time = ($now ?? new DateTimeImmutable())->setTimezone(new DateTimeZone('Europe/Minsk'))->format('H:i');
+    $time = ($now ?? new DateTimeImmutable())->setTimezone(new DateTimeZone('Europe/Minsk'))->format('d.m.Y, H:i');
     return implode("\n", [
         '📩 <b>Новая заявка с сайта</b>',
         '',
