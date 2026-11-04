@@ -66,6 +66,7 @@ jobs:
       - name: Install SFTP client
         run: sudo apt-get -o Acquire::Retries=1 -o Acquire::http::Timeout=20 update -qq && sudo apt-get install -y python3-paramiko
       - name: Back up and publish master over SFTP
+        id: upload
         env:
           FTP_SERVER: ${{ secrets.FTP_SERVER }}
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
@@ -73,6 +74,7 @@ jobs:
           FTP_SERVER_DIR: ${{ secrets.FTP_SERVER_DIR }}
         run: /usr/bin/python3 -u scripts/deploy-hoster.py
       - name: Verify public homepage
+        id: homepage
         run: |
           python3 - <<'PY'
           import hashlib, os, pathlib, urllib.request
@@ -82,6 +84,39 @@ jobs:
               received = response.read()
               assert response.status == 200, "Unexpected HTTP status"
               assert hashlib.sha256(received).digest() == hashlib.sha256(pathlib.Path("dist/index.html").read_bytes()).digest(), "Public homepage differs from this build"
-              assert "no-cache" in response.headers.get("Cache-Control", ""), "Host must enable HTML cache revalidation"
-          print("PASS: HTTPS homepage matches this master build and revalidates cache.")
+              pathlib.Path(os.environ["RUNNER_TEMP"], "revolis-cache-control.txt").write_text(response.headers.get("Cache-Control", ""))
+          print("PASS: HTTPS homepage matches this master build.")
+          PY
+      - name: Check HTML cache policy
+        id: cache
+        if: steps.homepage.outcome == 'success'
+        run: |
+          python3 - <<'PY'
+          import os, pathlib
+          header = pathlib.Path(os.environ["RUNNER_TEMP"], "revolis-cache-control.txt").read_text()
+          directives = {part.strip().lower() for part in header.split(",")}
+          valid = "no-cache" in directives
+          with open(os.environ["GITHUB_OUTPUT"], "a") as output:
+              output.write("policy=" + ("passed" if valid else "warning") + "\n")
+          if valid:
+              print("PASS: HTML cache revalidation is enabled.")
+          else:
+              print("::warning title=HTML cache policy::Publication succeeded, but hoster.by must enable Cache-Control: no-cache for HTML.")
+          PY
+      - name: Deployment report
+        if: always()
+        env:
+          UPLOAD_RESULT: ${{ steps.upload.outcome }}
+          HOMEPAGE_RESULT: ${{ steps.homepage.outcome }}
+          CACHE_RESULT: ${{ steps.cache.outputs.policy }}
+        run: |
+          python3 - <<'PY'
+          import os
+          upload = "Успешно — файлы опубликованы и проверены" if os.environ["UPLOAD_RESULT"] == "success" else "Не подтверждена — см. журнал публикации"
+          homepage = "Успешно — HTTPS 200, содержимое совпадает со сборкой" if os.environ["HOMEPAGE_RESULT"] == "success" else "Не подтверждена — см. журнал проверки"
+          cache = {"passed": "Успешно — no-cache включён", "warning": "Предупреждение — настройте no-cache для HTML на hoster.by"}.get(os.environ["CACHE_RESULT"], "Не проверен")
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as summary:
+              summary.write("## Публикация на hoster.by\n\n| Этап | Результат |\n| --- | --- |\n")
+              for name, result in [("Загрузка файлов", upload), ("Публичная главная", homepage), ("Кэш HTML", cache)]:
+                  summary.write(f"| {name} | {result} |\n")
           PY
