@@ -30,7 +30,6 @@ jobs:
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
           FTP_SERVER_DIR: ${{ secrets.FTP_SERVER_DIR }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           /usr/bin/python3 - <<'PY'
           import os, socket, hashlib, base64, json, secrets, urllib.request, urllib.error, posixpath, pathlib, stat
@@ -39,7 +38,23 @@ jobs:
           probe=marker=None
           stage="configuration"
           try:
-              assert all(os.environ.get(n) for n in ("FTP_SERVER","FTP_USERNAME","FTP_PASSWORD","FTP_SERVER_DIR","TELEGRAM_BOT_TOKEN","TELEGRAM_CHAT_ID"))
+              assert all(os.environ.get(n) for n in ("FTP_SERVER","FTP_USERNAME","FTP_PASSWORD","FTP_SERVER_DIR","TELEGRAM_BOT_TOKEN"))
+              stage="verify bot and authorized topic"
+              token=os.environ["TELEGRAM_BOT_TOKEN"].strip()
+              def telegram(method, payload=None):
+                  req=urllib.request.Request("https://api.telegram.org/bot"+token+"/"+method,data=json.dumps(payload or {}).encode(),headers={"Content-Type":"application/json"})
+                  with urllib.request.urlopen(req,timeout=20) as response: result=json.load(response)
+                  assert result.get("ok") is True
+                  return result["result"]
+              assert telegram("getMe").get("username","").lower()=="revolismoto_bot"
+              assert not telegram("getWebhookInfo").get("url")
+              matches={(m["chat"]["id"],m.get("message_thread_id")) for u in telegram("getUpdates") for m in [u.get("message",{})] if m.get("text","").strip()=="/setup@revolismoto_bot revolis-0411-topic" and m.get("chat",{}).get("type")=="supergroup" and m.get("chat",{}).get("title")=="Revolis.Мото (Общее)" and m.get("is_topic_message") and isinstance(m.get("message_thread_id"),int)}
+              assert len(matches)==1
+              chat_id,thread_id=next(iter(matches))
+              assert thread_id>0
+              test=telegram("sendMessage",{"chat_id":chat_id,"message_thread_id":thread_id,"text":"Тест подключения Revolis.Мото: эта тема выбрана для заявок с сайта. Сейчас выполняется переключение сервера."})
+              assert test["chat"]["id"]==chat_id and test.get("message_thread_id")==thread_id
+              print("PASS: replacement bot and authorized topic delivery verified; IDs hidden.")
               t=paramiko.Transport(socket.create_connection((os.environ["FTP_SERVER"],22),timeout=20))
               t.get_security_options().key_types=("ssh-ed25519",)
               t.start_client(timeout=20)
@@ -80,16 +95,6 @@ jobs:
               with urllib.request.urlopen("https://revolis.by/"+name,timeout=30) as r: checks=json.loads(r.read(4096))
               assert all(checks.values())
               print("PASS: web PHP, cURL, private path, permissions.")
-              stage="private config"
-              config=private+"/leads.php"
-              data=json.dumps({"token":os.environ["TELEGRAM_BOT_TOKEN"],"chat_id":os.environ["TELEGRAM_CHAT_ID"],"enabled":True}).encode()
-              encoded=base64.b64encode(data).decode()
-              configdata=("<?php\nreturn json_decode(base64_decode('"+encoded+"'), true, 512, JSON_THROW_ON_ERROR);\n").encode()
-              if exists(config):
-                  with s.open(config,"rb") as f: previous=f.read()
-                  if previous!=configdata: write(private+"/leads-backup-"+nonce+".php",previous,0o600)
-              write(config+".tmp",configdata,0o600)
-              s.posix_rename(config+".tmp",config)
               rate=private+"/lead-rate-limit.json"
               if not exists(rate): write(rate,b"{}",0o600)
               else:
@@ -106,12 +111,22 @@ jobs:
                       if previous!=data: write(private+"/backup-"+nonce+"-"+name,previous,0o600)
                   write(target+".tmp",data,0o644)
                   s.posix_rename(target+".tmp",target)
+              stage="private config"
+              config=private+"/leads.php"
+              data=json.dumps({"token":token,"chat_id":str(chat_id),"message_thread_id":thread_id,"enabled":True}).encode()
+              encoded=base64.b64encode(data).decode()
+              configdata=("<?php\nreturn json_decode(base64_decode('"+encoded+"'), true, 512, JSON_THROW_ON_ERROR);\n").encode()
+              if exists(config):
+                  with s.open(config,"rb") as f: previous=f.read()
+                  if previous!=configdata: write(private+"/leads-backup-"+nonce+".php",previous,0o600)
+              write(config+".tmp",configdata,0o600)
+              s.posix_rename(config+".tmp",config)
               stage="HTTP rejection"
               try: urllib.request.urlopen("https://revolis.by/api/leads.php",timeout=30)
               except urllib.error.HTTPError as e:
                   assert e.code==405 and json.loads(e.read())=={"ok":False}
               else: raise ValueError("Expected 405")
-              print("PASS: backend installed; GET safely rejected. No lead sent yet.")
+              print("PASS: backend installed; GET safely rejected. Topic preflight delivered; real form test still required.")
           except Exception as e:
               print("FAIL: "+stage+"; "+type(e).__name__+"; details hidden.")
               raise SystemExit(1)
