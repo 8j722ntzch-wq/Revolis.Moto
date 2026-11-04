@@ -1,0 +1,73 @@
+name: Inspect lead hosting
+on:
+  push:
+    branches: [development]
+    paths: ['.github/workflows/inspect-lead-hosting.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: production-deploy
+  cancel-in-progress: false
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - run: sudo apt-get update -qq && sudo apt-get install -y python3-paramiko
+      - name: Inspect PHP runtime without credentials
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          FTP_SERVER_DIR: ${{ secrets.FTP_SERVER_DIR }}
+        run: |
+          /usr/bin/python3 - <<'PY'
+          import os, socket, hashlib, base64, json, secrets, urllib.request, posixpath
+          import paramiko
+          t = None
+          s = None
+          target = None
+          try:
+              t = paramiko.Transport(socket.create_connection((os.environ["FTP_SERVER"],22),timeout=20))
+              t.get_security_options().key_types = ("ssh-ed25519",)
+              t.start_client(timeout=20)
+              fp = "SHA256:" + base64.b64encode(hashlib.sha256(t.get_remote_server_key().asbytes()).digest()).decode().rstrip("=")
+              assert fp == "SHA256:Yk1d+cp6318Dso8AHTwoCStX/iHcxGRXMSntQ++OSK4"
+              t.auth_password(os.environ["FTP_USERNAME"],os.environ["FTP_PASSWORD"])
+              s = paramiko.SFTPClient.from_transport(t)
+              s.get_channel().settimeout(20)
+              root = s.normalize(os.environ["FTP_SERVER_DIR"])
+              for rel in ("api/leads.php","api/lead-validation.php","documents/personal-data-policy-2026-11-04.pdf"):
+                  try:
+                      info = s.stat(posixpath.join(root,rel))
+                      print(rel + ": present, bytes=" + str(info.st_size))
+                  except FileNotFoundError:
+                      print(rel + ": absent")
+              name = "lead-check-" + secrets.token_hex(16) + ".php"
+              target = posixpath.join(root,name)
+              php = """<?php
+          ini_set('display_errors','0');
+          header('Content-Type: application/json');
+          header('Cache-Control: no-store');
+          $p=dirname(__DIR__,2).'/revolis-private';
+          echo json_encode(['php'=>PHP_VERSION,'curl'=>function_exists('curl_init'),'private_exists'=>is_dir($p),'private_readable'=>is_readable($p),'private_writable'=>is_writable($p),'config_exists'=>is_file($p.'/leads.php'),'config_readable'=>is_readable($p.'/leads.php'),'rate_exists'=>is_file($p.'/lead-rate-limit.json')]);
+          """
+              with s.open(target,"w") as f: f.write(php)
+              s.chmod(target,0o644)
+              with urllib.request.urlopen("https://revolis.by/"+name,timeout=30) as response:
+                  result=json.loads(response.read(4096))
+              print(json.dumps(result))
+              assert int(result["php"].split(".")[0]) >= 8 and result["curl"]
+              with urllib.request.urlopen("https://revolis.by/documents/personal-data-policy-2026-11-04.pdf",timeout=30) as response:
+                  assert response.read(5)==b"%PDF-"
+              print("PASS: public PDF and PHP 8+/cURL.")
+          except Exception as error:
+              print("FAIL: "+type(error).__name__+"; details hidden.")
+              raise SystemExit(1)
+          finally:
+              if s and target:
+                  s.remove(target)
+                  print("Temporary probe removed.")
+              if t: t.close()
+          PY
