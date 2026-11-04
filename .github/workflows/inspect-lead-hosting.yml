@@ -56,7 +56,10 @@ jobs:
               with s.open(target,"w") as f: f.write(php)
               s.chmod(target,0o644)
               with urllib.request.urlopen("https://revolis.by/"+name,timeout=30) as response:
-                  result=json.loads(response.read(4096))
+                  body=response.read(4096)
+                  print("HTTP status="+str(response.status)+" type="+response.headers.get("Content-Type",""))
+                  print("PHP source exposed="+str(body.startswith(b"<?php"))+" browser challenge="+str(b"One moment" in body or b"wsidchk" in body)+" HTML="+str(b"<html" in body))
+                  result=json.loads(body)
               print(json.dumps(result))
               assert int(result["php"].split(".")[0]) >= 8 and result["curl"]
               with urllib.request.urlopen("https://revolis.by/documents/personal-data-policy-2026-11-04.pdf",timeout=30) as response:
