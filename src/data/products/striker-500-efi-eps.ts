@@ -262,22 +262,22 @@ export const striker500Eps: ProductDetails = {
   ],
   "support": [
     {
-      "title": "Гарантия 3 года",
-      "body": "Объясним условия гарантии и порядок обращения. Поможем с техническим обслуживанием и гарантийным ремонтом.",
+      "title": "Гарантия\n3 года",
+      "body": "Предоставим гарантийные документы, поможем с обслуживанием и ремонтом. Без ограничения пробега",
       "icon": "/assets/product/support-warranty.svg",
       "accent": true,
       "art": "/assets/product/warranty-art.svg"
     },
     {
-      "title": "Документы на технику",
-      "body": "До покупки разберём документы конкретного исполнения, порядок оформления и передачи.",
+      "title": "Документы\nна технику",
+      "body": "Предоставим полный пакет и поможем в постановке квадрицикла на учёт",
       "icon": "/assets/product/support-documents.svg",
       "accent": false,
       "art": "/assets/product/documents-art.svg"
     },
     {
-      "title": "ТО и запчасти",
-      "body": "Поможем с обслуживанием по руководству и подбором необходимых запчастей. Стоимость и сроки согласуем отдельно.",
+      "title": "Доступ к складу запчастей",
+      "body": "Являемся официальным дилером, предоставляем Техническое Обслуживание и Гарантийный ремонт",
       "icon": "/assets/product/support-parts.svg",
       "accent": false,
       "art": "/assets/product/parts-art.svg"
@@ -408,5 +408,6 @@ export const striker500Eps: ProductDetails = {
   },
   "seoTitle": "Купить квадрицикл BaltMotors Striker 500 EFI/EPS | Revolis.Мото",
   "seoDescription": "Купить квадрицикл BaltMotors Striker 500 EFI/EPS в Беларуси. Электроусилитель руля, полный привод и понижающая передача. Цена и сравнение версий.",
-  "testDriveLabel": "Обсудить тест-драйв"
+  "testDriveLabel": "Обсудить тест-драйв",
+  "approvedFinanceCopy": true
 };
