@@ -1,5 +1,5 @@
 name: Install Telegram lead backend
-# Notification format: Minsk date and time.
+# Notification format: local date and time without timezone label.
 on:
   push:
     branches: [development]

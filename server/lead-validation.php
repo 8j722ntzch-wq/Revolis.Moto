@@ -54,6 +54,6 @@ function leadMessage(array $data, ?DateTimeImmutable $now = null): string
         '<b>Модель:</b> ' . $escape($models[$data['modelId'] ?? ''] ?? 'Не выбрана'),
         '<b>Банк:</b> ' . $bank,
         '',
-        '<b>Время:</b> ' . $time . ' по Минску',
+        '<b>Время:</b> ' . $time,
     ]);
 }

@@ -17,7 +17,7 @@ echo "PASS: valid leads, bank mapping, consent, lengths and malformed inputs\n";
 
 $time = new DateTimeImmutable('2026-11-04T11:00:00Z');
 $message = leadMessage($base + ['modelId' => 'mikilon-hammer-touring-200', 'bank' => 'technobank'], $time);
-check($message === "📩 <b>Новая заявка с сайта</b>\n\n<b>Тип:</b> Покупка в кредит / рассрочку\n<b>Имя:</b> Тест\n<b>Телефон:</b> +375 (29) 123-45-67\n<b>Модель:</b> Mikilon Hammer 200 Touring\n<b>Банк:</b> Технобанк\n\n<b>Время:</b> 04.11.2026, 14:00 по Минску");
+check($message === "📩 <b>Новая заявка с сайта</b>\n\n<b>Тип:</b> Покупка в кредит / рассрочку\n<b>Имя:</b> Тест\n<b>Телефон:</b> +375 (29) 123-45-67\n<b>Модель:</b> Mikilon Hammer 200 Touring\n<b>Банк:</b> Технобанк\n\n<b>Время:</b> 04.11.2026, 14:00");
 check(strpos(leadMessage(array_replace($base, ['name' => '<b>А & Б</b>']), $time), '&lt;b&gt;А &amp; Б&lt;/b&gt;') !== false);
 foreach (['consultation' => 'Консультация', 'model' => 'Консультация', 'test-drive' => 'Тест-драйв'] as $intent => $label) {
     $message = leadMessage(array_replace($base, ['intent' => $intent]), $time);
