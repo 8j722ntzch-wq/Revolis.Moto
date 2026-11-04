@@ -25,3 +25,6 @@ for (const path of ['404.html', 'privacypolicy/index.html']) {
 const robots = await read('robots.txt');
 assert.equal(robots, release ? 'User-agent: *\nAllow: /\nSitemap: https://revolis.by/sitemap.xml\n' : 'User-agent: *\nDisallow: /\n');
 console.log(`Public build verified: ${release ? 'release' : 'preview'}, ${urls.length} sitemap URLs, no UI Kit routes.`);
+
+assert.ok((await read(".htaccess")).includes('Header set Cache-Control "no-cache"'));
+assert.match(await read("index.html"), /\/_astro\/[^" ]+\?v=[0-9a-f]{16}/);
