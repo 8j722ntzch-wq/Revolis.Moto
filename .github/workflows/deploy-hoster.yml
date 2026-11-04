@@ -59,6 +59,8 @@ jobs:
           python3 -m unittest discover -s tests/deploy -v
 
       - name: Build static website
+        env:
+          PUBLIC_PERSONAL_DATA_POLICY_URL: /documents/personal-data-policy-2026-11-04.pdf
         run: |
           npm run build:release
           test -s dist/index.html
