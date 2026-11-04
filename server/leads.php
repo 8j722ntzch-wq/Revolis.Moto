@@ -36,7 +36,7 @@ try {
     if (!function_exists('curl_init')) respond(503);
     $thread = $config['message_thread_id'] ?? null;
     if ($thread !== null && (!is_int($thread) || $thread <= 0)) respond(503);
-    $message = ['chat_id' => $config['chat_id'], 'text' => leadMessage($lead)];
+    $message = ['chat_id' => $config['chat_id'], 'text' => leadMessage($lead), 'parse_mode' => 'HTML'];
     if ($thread !== null) $message['message_thread_id'] = $thread;
     // One bounded file with hashed IPs, no names/phones. Do not trust forwarded IP headers.
     $lock = fopen($private . '/lead-rate-limit.json', 'c+');

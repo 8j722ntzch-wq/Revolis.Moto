@@ -25,19 +25,35 @@ function validateLead(array $data): array
     return array_intersect_key($data, array_flip(['name', 'phone', 'consent', 'intent', 'source', 'modelId', 'bank']));
 }
 
-function leadMessage(array $data): string
+function leadMessage(array $data, ?DateTimeImmutable $now = null): string
 {
-    $intents = ['consultation' => 'Консультация', 'model' => 'Консультация по модели', 'finance' => 'Кредит / рассрочка', 'test-drive' => 'Тест-драйв'];
-    $banks = ['alfa' => 'Альфа-Банк', 'technobank' => 'Технобанк'];
+    $intents = ['consultation' => 'Консультация', 'model' => 'Консультация', 'finance' => 'Покупка в кредит / рассрочку', 'test-drive' => 'Тест-драйв'];
+    $banks = ['alfa' => 'Альфа', 'technobank' => 'Технобанк'];
+    $models = [
+        'mikilon-hammer-touring-200' => 'Mikilon Hammer 200 Touring',
+        'mikilon-hammer-touring-300' => 'Mikilon Hammer 300 Touring',
+        'baltmotors-400-efi' => 'BaltMotors Striker 400 EFI',
+        'baltmotors-500-efi' => 'BaltMotors Striker 500 EFI',
+        'baltmotors-500-efi-eps' => 'BaltMotors Striker 500 EFI/EPS',
+        'baltmotors-700-efi' => 'BaltMotors Striker 700 EFI',
+        'baltmotors-700-efi-eps' => 'BaltMotors Striker 700 EFI/EPS',
+    ];
+    $escape = static fn(string $value): string => htmlspecialchars($value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+    $phone = $data['phone'];
+    if (preg_match('/^\\+?375([0-9]{2})([0-9]{3})([0-9]{2})([0-9]{2})$/D', $phone, $parts)) {
+        $phone = '+375 (' . $parts[1] . ') ' . $parts[2] . '-' . $parts[3] . '-' . $parts[4];
+    }
+    $bank = isset($data['bank']) ? $banks[$data['bank']] : ($data['intent'] === 'finance' ? 'Любой' : 'Не выбрано');
+    $time = ($now ?? new DateTimeImmutable())->setTimezone(new DateTimeZone('Europe/Minsk'))->format('d.m.Y, H:i');
     return implode("\n", [
-        'Новая заявка — Revolis.Мото',
-        'Тип: ' . $intents[$data['intent']],
-        'Имя: ' . trim($data['name']),
-        'Телефон: ' . $data['phone'],
-        'Модель: ' . ($data['modelId'] ?? 'Не выбрана'),
-        'Банк: ' . (isset($data['bank']) ? $banks[$data['bank']] : 'Любой'),
-        'Источник: ' . $data['source'],
-        'Согласие: получено',
-        'Дата (UTC): ' . gmdate('Y-m-d H:i:s'),
+        '📩 <b>Новая заявка с сайта</b>',
+        '',
+        '<b>Тип:</b> ' . $intents[$data['intent']],
+        '<b>Имя:</b> ' . $escape(trim($data['name'])),
+        '<b>Телефон:</b> ' . $escape($phone),
+        '<b>Модель:</b> ' . $escape($models[$data['modelId'] ?? ''] ?? 'Не выбрана'),
+        '<b>Банк:</b> ' . $bank,
+        '',
+        '<b>Время:</b> ' . $time,
     ]);
 }
