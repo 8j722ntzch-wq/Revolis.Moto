@@ -39,7 +39,12 @@ jobs:
                   print("STOP: Existing webhook found; it was not changed.")
                   sys.exit(1)
               print("PASS: No webhook configured. No messages sent.")
-              print("Recipient and topic still require separate verification before server activation.")
+              updates = api("getUpdates")
+              matches = {(m["chat"]["id"], m.get("message_thread_id")) for u in updates for m in [u.get("message", {})] if m.get("text", "").strip() == "/setup@revolismoto_bot revolis-0411-topic" and m.get("chat", {}).get("type") == "supergroup" and m.get("chat", {}).get("title") == "Revolis.Мото (Общее)" and m.get("is_topic_message") and isinstance(m.get("message_thread_id"), int)}
+              if len(matches) != 1:
+                  print("FAIL: Expected exactly one matching group topic setup marker.")
+                  sys.exit(1)
+              print("PASS: Unique setup marker found in the requested group topic. IDs and messages not logged.")
           except Exception:
               print("FAIL: Telegram verification failed. Details suppressed to protect token.")
               sys.exit(1)
