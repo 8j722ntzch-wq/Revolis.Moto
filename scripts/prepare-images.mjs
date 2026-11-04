@@ -1,15 +1,18 @@
 import sharp from 'sharp';
-import { readdir, mkdir, writeFile, stat } from 'node:fs/promises';
+import { readdir, mkdir, writeFile, readFile, stat } from 'node:fs/promises';
 import { resolve, relative, dirname, extname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const assets = resolve(root, 'public/assets');
-const manifest = {};
+const selected = new Set(process.argv.slice(2));
+const manifest = selected.size ? JSON.parse(await readFile(resolve(root, 'src/data/image-variants.json'), 'utf8')) : {};
+const highQuality = new Set(['home/hero.png', 'home/consultation.png', 'home/test-photo-left.png', 'home/test-photo-right.png', 'home/test-photo-front.png']);
 async function walk(dir) {
   for (const item of (await readdir(dir, { withFileTypes: true })).sort((a,b) => a.name.localeCompare(b.name))) {
     const path = resolve(dir, item.name);
     if (item.isDirectory()) { if (item.name !== 'optimized') await walk(path); continue; }
     if (!/\.(png|jpe?g|webp)$/i.test(item.name)) continue;
+    if (selected.size && !selected.has(relative(assets, path))) continue;
     const meta = await sharp(path).rotate().metadata();
     const width = meta.autoOrient?.width ?? meta.width;
     const height = meta.autoOrient?.height ?? meta.height;
@@ -19,7 +22,7 @@ async function walk(dir) {
       const url = '/assets/optimized/' + relative(assets,path).slice(0,-extname(path).length) + `-${size}.webp`;
       const target = resolve(root,'public',url.slice(1));
       await mkdir(dirname(target),{recursive:true});
-      const info = await sharp(path).rotate().resize({width:size,withoutEnlargement:true}).webp({quality:85,alphaQuality:100,effort:6}).toFile(target);
+      const info = await sharp(path).rotate().resize({width:size,withoutEnlargement:true}).webp({quality:highQuality.has(relative(assets,path)) ? 92 : 85,alphaQuality:100,effort:6}).toFile(target);
       variants.push({src:url,width:info.width,height:info.height,bytes:info.size});
     }
     manifest[source] = {width,height,originalBytes:(await stat(path)).size,variants};
