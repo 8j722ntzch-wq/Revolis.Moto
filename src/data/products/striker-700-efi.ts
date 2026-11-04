@@ -15,7 +15,12 @@ export const striker700: ProductDetails = {
   "intro": "Для загородных поездок и работы в хозяйстве. Подключаемый полный привод, понижающая передача и практичное заводское оснащение.",
   "seoTitle": "Купить квадрицикл BaltMotors Striker 700 EFI | Revolis.Мото",
   "seoDescription": "Купить квадрицикл BaltMotors Striker 700 EFI в Беларуси: двигатель 686 см³, полный привод и понижающая передача. Цена, характеристики и комплектация.",
-  "colors": ["gray", "green", "black", "camouflage"],
+  "colors": [
+    "gray",
+    "green",
+    "black",
+    "camouflage"
+  ],
   "photos": [],
   "galleryPhotos": [],
   "description": {
@@ -266,22 +271,22 @@ export const striker700: ProductDetails = {
   ],
   "support": [
     {
-      "title": "Гарантия\nдо 3 лет",
-      "body": "Предоставим гарантийные документы и объясним условия обслуживания выбранной техники.",
+      "title": "Гарантия\n3 года",
+      "body": "Предоставим гарантийные документы, поможем с обслуживанием и ремонтом. Без ограничения пробега",
       "icon": "/assets/product/support-warranty.svg",
       "accent": true,
       "art": "/assets/product/warranty-art.svg"
     },
     {
       "title": "Документы\nна технику",
-      "body": "До покупки согласуем комплект документов на конкретный квадроцикл и порядок передачи.",
+      "body": "Предоставим полный пакет и поможем в постановке квадрицикла на учёт",
       "icon": "/assets/product/support-documents.svg",
       "accent": false,
       "art": "/assets/product/documents-art.svg"
     },
     {
-      "title": "Помощь с подбором запчастей",
-      "body": "Поможем уточнить каталожные номера и доступность запчастей для выбранной модели.",
+      "title": "Доступ к складу запчастей",
+      "body": "Являемся официальным дилером, предоставляем Техническое Обслуживание и Гарантийный ремонт",
       "icon": "/assets/product/support-parts.svg",
       "accent": false,
       "art": "/assets/product/parts-art.svg"
@@ -405,5 +410,6 @@ export const striker700: ProductDetails = {
         ]
       }
     ]
-  }
+  },
+  "approvedFinanceCopy": true
 };
