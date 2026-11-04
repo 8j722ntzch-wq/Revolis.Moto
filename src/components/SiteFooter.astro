@@ -33,7 +33,7 @@ const policies = [{ key: 'privacy', label: 'Политика конфиденц�
       return <Tag class="site-footer__social" href={href} type={href ? undefined : 'button'} target={href ? '_blank' : undefined} rel={href ? 'noopener noreferrer' : undefined} disabled={!href && !demoAction} aria-label={item.label} data-footer-missing={!href && demoAction ? item.label : undefined}><img class="social-rest" src={`/assets/footer/social-${item.key}.svg`} alt="" />{item.key === 'instagram' && <img class="social-hover" src="/assets/footer/social-instagram-hover.svg" alt="" />}</Tag>;
     })}</div>
     <p class="site-footer__registration">{content.registration}</p>
-    <div class="site-footer__legal"><div>{policies.map(item => <Button variant="text" size="xs" href={destinations[item.key]} disabled={!destinations[item.key] && !demoAction} data-footer-missing={!destinations[item.key] && demoAction ? item.label : undefined}>{item.label}</Button>)}</div><p>{content.copyright}</p></div>
+    <div class="site-footer__legal"><div>{policies.map(item => <Button variant="text" size="xs" href={destinations[item.key]} target={item.key === 'personalData' ? '_blank' : undefined} disabled={!destinations[item.key] && !demoAction} data-footer-missing={!destinations[item.key] && demoAction ? item.label : undefined}>{item.label}</Button>)}</div><p>{content.copyright}</p></div>
   </div>
 </footer>
 <style>
