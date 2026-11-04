@@ -18,6 +18,10 @@ const allowIndex = import.meta.env.MODE === 'release' && searchPage && indexable
     <meta name="description" content={description} />
     <meta name="robots" content={allowIndex ? 'index,follow' : 'noindex,nofollow'} />
     {canonical && <link rel="canonical" href={canonical} />}
+    <link rel="icon" href="/assets/icons/favicon.ico" sizes="16x16 32x32 48x48" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/icons/favicon-48.png" />
+    <link rel="icon" type="image/svg+xml" sizes="any" href="/assets/icons/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
     <title>{title}</title>
   </head>
   <body><slot /><LeadDialog /><LeadDialog id="bank-dialog" kind="bank" /><LeadDialog id="thanks-dialog" kind="thanks" /></body>

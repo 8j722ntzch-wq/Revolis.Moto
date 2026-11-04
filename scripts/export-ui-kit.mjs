@@ -13,7 +13,7 @@ const sku = process.argv.find(arg => arg.startsWith('--sku='))?.slice(6);
 if (sku && !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(sku)) throw new Error('Invalid SKU slug.');
 if (!homepage && !catalogue && !sku && !infoPage) throw new Error('Choose a public page. UI Kit is available only in the local dev server.');
 const linkedAssets = process.argv.includes('--linked-assets');
-const mime = { '.svg': 'image/svg+xml', '.woff2': 'font/woff2', '.woff': 'font/woff', '.png': 'image/png', '.webp': 'image/webp' };
+const mime = { '.ico': 'image/x-icon', '.svg': 'image/svg+xml', '.woff2': 'font/woff2', '.woff': 'font/woff', '.png': 'image/png', '.webp': 'image/webp' };
 
 function localAsset(url, base) {
   url = url.split("?")[0];
@@ -50,6 +50,8 @@ html = await replaceAsync(html, /<link rel="stylesheet" href="([^"]+)"\s*\/?>/g,
   return `<style>${css}</style>`;
 });
 html = await replaceAsync(html, /\bsrc="(\/(?:assets|_astro)\/[^"]+)"/g, async ([, url]) => `src="${await asDataUrl(localAsset(url, dist))}"`);
+// Favicon links must also resolve in standalone previews.
+html = await replaceAsync(html, /\bhref="(\/assets\/icons\/[^"]+)"/g, async ([, url]) => `href="${await asDataUrl(localAsset(url, dist))}"`);
 // Inline responsive candidates as well as fallback src for standalone previews.
 html = await replaceAsync(html, /\bsrcset="([^"]+)"/g, async ([, value]) => {
   const candidates = await Promise.all(value.split(',').map(async candidate => {
