@@ -58,7 +58,7 @@ product-specifications { --spec-preview-height:442px; display:block; margin-top:
 .product-specifications__window { overflow:hidden; position:relative; }
 product-specifications[data-collapsed='true'] .product-specifications__window::after { content:''; position:absolute; inset:auto 0 0; height:120px; background:linear-gradient(transparent,var(--color-gray-1)); pointer-events:none; }
 .product-specifications__grid { display:grid; grid-template-columns:1fr 1fr; gap:32px 24px; align-items:start; }
-.product-specifications__group--engine { grid-column:1 / -1; }
+.product-specifications__group--full-width { grid-column:1 / -1; }
 .product-specifications__group h3 { font-size:20px; line-height:26px; margin-bottom:20px; font-weight:700; }
 .product-specifications table { width:100%; border-collapse:collapse; table-layout:fixed; font-size:16px; line-height:20px; text-align:left; }
 .product-specifications th, .product-specifications td { padding:4px 0; vertical-align:middle; overflow-wrap:anywhere; }

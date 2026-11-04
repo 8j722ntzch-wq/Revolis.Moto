@@ -10,7 +10,7 @@ export interface ProductPhoto {
   position?: string;
 }
 export interface ProductCard { title: string; body: string; icon: string; accent?: boolean; art?: string; }
-export interface SpecificationGroup { title: string; rows: { label: string; value: string | null }[]; }
+export interface SpecificationGroup { title: string; fullWidth?: boolean; rows: { label: string; value: string | null }[]; }
 export interface ProductDetails {
  defaultColor?: ProductColorId;
   modelId: string;

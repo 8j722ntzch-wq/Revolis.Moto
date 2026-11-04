@@ -227,6 +227,7 @@ export const striker700Eps: ProductDetails = {
     },
     {
       "title": "Размеры и эксплуатационные показатели",
+      "fullWidth": true,
       "rows": [
         {
           "label": "Длина × ширина × высота",

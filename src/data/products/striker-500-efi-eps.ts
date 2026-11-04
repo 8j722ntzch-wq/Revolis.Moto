@@ -223,6 +223,7 @@ export const striker500Eps: ProductDetails = {
     },
     {
       "title": "Габариты, масса и эксплуатационные показатели",
+      "fullWidth": true,
       "rows": [
         {
           "label": "Длина × ширина × высота",

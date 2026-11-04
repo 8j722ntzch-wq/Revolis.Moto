@@ -211,6 +211,7 @@ export const hammer300: ProductDetails = {
     },
     {
       "title": "Габариты, масса и нагрузка",
+      "fullWidth": true,
       "rows": [
         {
           "label": "Длина",
