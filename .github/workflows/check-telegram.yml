@@ -11,9 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 2
     steps:
-      - name: Verify token and private Start messages
+      - name: Verify replacement bot identity (no messages)
         env:
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         run: |
           python3 - <<'PY'
@@ -31,26 +30,21 @@ jobs:
               return data["result"]
           try:
               me = api("getMe")
-              if me.get("username", "").lower() != "revvi_revolis_bot":
+              if me.get("username", "").lower() != "revolismoto_bot":
                   print("FAIL: Token belongs to a different bot.")
                   sys.exit(1)
-              print("PASS: Token accepted for @revvi_revolis_bot.")
+              print("PASS: Token accepted for @revolismoto_bot.")
               webhook = api("getWebhookInfo")
               if webhook.get("url"):
                   print("STOP: Existing webhook found; it was not changed.")
                   sys.exit(1)
+              print("PASS: No webhook configured. No messages sent.")
               updates = api("getUpdates")
-              chats = {u["message"]["chat"]["id"] for u in updates if u.get("message", {}).get("chat", {}).get("type") == "private" and u["message"].get("text", "").strip() == "/start revolis-739182"}
-              print("Private chats matching setup code: " + str(len(chats)))
-              if len(chats) != 1:
-                  print("FAIL: Expected exactly one matching private chat.")
+              matches = {(m["chat"]["id"], m.get("message_thread_id")) for u in updates for m in [u.get("message", {})] if m.get("text", "").strip() == "/setup@revolismoto_bot revolis-0411-topic" and m.get("chat", {}).get("type") == "supergroup" and m.get("chat", {}).get("title") == "Revolis.Мото (Общее)" and m.get("is_topic_message") and isinstance(m.get("message_thread_id"), int)}
+              if len(matches) != 1:
+                  print("FAIL: Expected exactly one matching group topic setup marker.")
                   sys.exit(1)
-              saved_chat = os.environ.get("TELEGRAM_CHAT_ID", "").strip()
-              if not saved_chat or saved_chat != str(next(iter(chats))):
-                  print("FAIL: TELEGRAM_CHAT_ID is missing or does not match the verified private recipient.")
-                  sys.exit(1)
-              print("PASS: Saved TELEGRAM_CHAT_ID matches the verified private recipient.")
-              print("No token, chat IDs or message contents logged. No messages sent; no updates acknowledged.")
+              print("PASS: Unique setup marker found in the requested group topic. IDs and messages not logged.")
           except Exception:
               print("FAIL: Telegram verification failed. Details suppressed to protect token.")
               sys.exit(1)
