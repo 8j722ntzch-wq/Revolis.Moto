@@ -34,6 +34,10 @@ try {
     $config = require $private . '/leads.php';
     if (($config['enabled'] ?? false) !== true || empty($config['token']) || empty($config['chat_id'])) respond(503);
     if (!function_exists('curl_init')) respond(503);
+    $thread = $config['message_thread_id'] ?? null;
+    if ($thread !== null && (!is_int($thread) || $thread <= 0)) respond(503);
+    $message = ['chat_id' => $config['chat_id'], 'text' => leadMessage($lead)];
+    if ($thread !== null) $message['message_thread_id'] = $thread;
     // One bounded file with hashed IPs, no names/phones. Do not trust forwarded IP headers.
     $lock = fopen($private . '/lead-rate-limit.json', 'c+');
     if (!$lock || !flock($lock, LOCK_EX)) respond(503);
@@ -54,7 +58,7 @@ try {
     curl_setopt_array($curl, [
         CURLOPT_POST => true,
         CURLOPT_HTTPHEADER => ['Content-Type: application/json'],
-        CURLOPT_POSTFIELDS => json_encode(['chat_id' => $config['chat_id'], 'text' => leadMessage($lead)], JSON_UNESCAPED_UNICODE | JSON_THROW_ON_ERROR),
+        CURLOPT_POSTFIELDS => json_encode($message, JSON_UNESCAPED_UNICODE | JSON_THROW_ON_ERROR),
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_CONNECTTIMEOUT => 3,
         CURLOPT_TIMEOUT => 10,
@@ -68,6 +72,7 @@ try {
     $telegram = is_string($result) ? json_decode($result, true) : null;
     if ($status !== 200 || ($telegram['ok'] ?? false) !== true ||
         (string)($telegram['result']['chat']['id'] ?? '') !== (string)$config['chat_id']) respond(502);
+    if ($thread !== null && ($telegram['result']['message_thread_id'] ?? null) !== $thread) respond(502);
     respond(200, true);
 } catch (Throwable $error) {
     // Never expose credentials, Telegram URLs or customer data in errors.
