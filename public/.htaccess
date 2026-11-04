@@ -1,0 +1,8 @@
+# BEGIN REVOLIS CACHE
+# Mutable URLs must be revalidated; browsers may keep copies and use 304 responses.
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html?|css|js|mjs|svg|png|jpe?g|webp|gif|ico|woff2?|txt|xml)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>
+# END REVOLIS CACHE

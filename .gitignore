@@ -7,3 +7,5 @@ dist/
 .DS_Store
 
 preview/*UI_Kit.html
+
+__pycache__/

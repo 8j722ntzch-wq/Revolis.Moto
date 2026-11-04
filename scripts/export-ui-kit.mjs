@@ -16,6 +16,7 @@ const linkedAssets = process.argv.includes('--linked-assets');
 const mime = { '.svg': 'image/svg+xml', '.woff2': 'font/woff2', '.woff': 'font/woff', '.png': 'image/png', '.webp': 'image/webp' };
 
 function localAsset(url, base) {
+  url = url.split("?")[0];
   if (/^(?:data:|https?:|\/\/|#)/.test(url)) return null;
   const path = url.startsWith('/') ? resolve(dist, `.${url}`) : resolve(base, url);
   if (relative(dist, path).startsWith('..')) throw new Error(`Asset outside dist: ${url}`);
