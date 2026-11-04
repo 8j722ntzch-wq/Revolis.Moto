@@ -216,70 +216,94 @@
     ]
   },
   "/assets/home/consultation.png": {
-    "width": 732,
-    "height": 440,
-    "originalBytes": 629966,
+    "width": 1464,
+    "height": 880,
+    "originalBytes": 2187724,
     "variants": [
       {
         "src": "/assets/optimized/home/consultation-160.webp",
         "width": 160,
         "height": 96,
-        "bytes": 5130
+        "bytes": 7074
       },
       {
         "src": "/assets/optimized/home/consultation-320.webp",
         "width": 320,
         "height": 192,
-        "bytes": 17602
+        "bytes": 24408
       },
       {
         "src": "/assets/optimized/home/consultation-480.webp",
         "width": 480,
         "height": 289,
-        "bytes": 35890
+        "bytes": 51222
       },
       {
-        "src": "/assets/optimized/home/consultation-732.webp",
-        "width": 732,
-        "height": 440,
-        "bytes": 70168
+        "src": "/assets/optimized/home/consultation-768.webp",
+        "width": 768,
+        "height": 462,
+        "bytes": 112824
+      },
+      {
+        "src": "/assets/optimized/home/consultation-1200.webp",
+        "width": 1200,
+        "height": 721,
+        "bytes": 213988
+      },
+      {
+        "src": "/assets/optimized/home/consultation-1464.webp",
+        "width": 1464,
+        "height": 880,
+        "bytes": 277604
       }
     ]
   },
   "/assets/home/hero.png": {
-    "width": 1193,
-    "height": 683,
-    "originalBytes": 1191709,
+    "width": 2386,
+    "height": 1366,
+    "originalBytes": 3918145,
     "variants": [
       {
         "src": "/assets/optimized/home/hero-160.webp",
         "width": 160,
         "height": 92,
-        "bytes": 3240
+        "bytes": 4684
       },
       {
         "src": "/assets/optimized/home/hero-320.webp",
         "width": 320,
         "height": 183,
-        "bytes": 10332
+        "bytes": 14910
       },
       {
         "src": "/assets/optimized/home/hero-480.webp",
         "width": 480,
         "height": 275,
-        "bytes": 19744
+        "bytes": 29742
       },
       {
         "src": "/assets/optimized/home/hero-768.webp",
         "width": 768,
         "height": 440,
-        "bytes": 40788
+        "bytes": 65038
       },
       {
-        "src": "/assets/optimized/home/hero-1193.webp",
-        "width": 1193,
-        "height": 683,
-        "bytes": 75396
+        "src": "/assets/optimized/home/hero-1200.webp",
+        "width": 1200,
+        "height": 687,
+        "bytes": 120076
+      },
+      {
+        "src": "/assets/optimized/home/hero-1920.webp",
+        "width": 1920,
+        "height": 1099,
+        "bytes": 218216
+      },
+      {
+        "src": "/assets/optimized/home/hero-2386.webp",
+        "width": 2386,
+        "height": 1366,
+        "bytes": 295810
       }
     ]
   },
@@ -391,59 +415,95 @@
     ]
   },
   "/assets/home/test-photo-front.png": {
-    "width": 244,
-    "height": 344,
-    "originalBytes": 226441,
+    "width": 488,
+    "height": 688,
+    "originalBytes": 941651,
     "variants": [
       {
         "src": "/assets/optimized/home/test-photo-front-160.webp",
         "width": 160,
         "height": 226,
-        "bytes": 16790
+        "bytes": 21484
       },
       {
-        "src": "/assets/optimized/home/test-photo-front-244.webp",
-        "width": 244,
-        "height": 344,
-        "bytes": 37182
+        "src": "/assets/optimized/home/test-photo-front-320.webp",
+        "width": 320,
+        "height": 451,
+        "bytes": 80514
+      },
+      {
+        "src": "/assets/optimized/home/test-photo-front-480.webp",
+        "width": 480,
+        "height": 677,
+        "bytes": 172318
+      },
+      {
+        "src": "/assets/optimized/home/test-photo-front-488.webp",
+        "width": 488,
+        "height": 688,
+        "bytes": 180916
       }
     ]
   },
   "/assets/home/test-photo-left.png": {
-    "width": 277,
-    "height": 367,
-    "originalBytes": 214436,
+    "width": 554,
+    "height": 734,
+    "originalBytes": 930325,
     "variants": [
       {
         "src": "/assets/optimized/home/test-photo-left-160.webp",
         "width": 160,
         "height": 212,
-        "bytes": 16572
+        "bytes": 17052
       },
       {
-        "src": "/assets/optimized/home/test-photo-left-277.webp",
-        "width": 277,
-        "height": 367,
-        "bytes": 35872
+        "src": "/assets/optimized/home/test-photo-left-320.webp",
+        "width": 320,
+        "height": 424,
+        "bytes": 58878
+      },
+      {
+        "src": "/assets/optimized/home/test-photo-left-480.webp",
+        "width": 480,
+        "height": 636,
+        "bytes": 114762
+      },
+      {
+        "src": "/assets/optimized/home/test-photo-left-554.webp",
+        "width": 554,
+        "height": 734,
+        "bytes": 139938
       }
     ]
   },
   "/assets/home/test-photo-right.png": {
-    "width": 281,
-    "height": 369,
-    "originalBytes": 220573,
+    "width": 561,
+    "height": 738,
+    "originalBytes": 929001,
     "variants": [
       {
         "src": "/assets/optimized/home/test-photo-right-160.webp",
         "width": 160,
         "height": 210,
-        "bytes": 15914
+        "bytes": 16848
       },
       {
-        "src": "/assets/optimized/home/test-photo-right-281.webp",
-        "width": 281,
-        "height": 369,
-        "bytes": 36186
+        "src": "/assets/optimized/home/test-photo-right-320.webp",
+        "width": 320,
+        "height": 421,
+        "bytes": 59998
+      },
+      {
+        "src": "/assets/optimized/home/test-photo-right-480.webp",
+        "width": 480,
+        "height": 631,
+        "bytes": 117370
+      },
+      {
+        "src": "/assets/optimized/home/test-photo-right-561.webp",
+        "width": 561,
+        "height": 738,
+        "bytes": 148966
       }
     ]
   },
