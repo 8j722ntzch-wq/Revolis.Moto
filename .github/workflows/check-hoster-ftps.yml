@@ -1,11 +1,6 @@
 name: Check hoster.by FTPS (read only)
 
 on:
-  push:
-    branches: [development]
-    paths:
-      - '.github/workflows/check-hoster-ftps.yml'
-      - 'scripts/check-hoster-ftps.py'
   workflow_dispatch:
 
 permissions:
@@ -13,7 +8,8 @@ permissions:
 
 jobs:
   check-ftps:
-    if: github.ref == 'refs/heads/development'
+    if: github.ref == 'refs/heads/master'
+    environment: production
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:

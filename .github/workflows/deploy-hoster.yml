@@ -1,9 +1,9 @@
 name: Deploy to hoster.by
 
 on:
-  push:
+  pull_request:
     branches: [master]
-  workflow_dispatch:
+    types: [closed]
 
 permissions:
   contents: read
@@ -14,13 +14,15 @@ concurrency:
 
 jobs:
   deploy:
-    if: github.ref == 'refs/heads/master'
+    if: github.event.pull_request.merged == true && github.ref == 'refs/heads/master'
+    environment: production
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
       - name: Check out release
         uses: actions/checkout@v4
         with:
+          ref: ${{ github.event.pull_request.merge_commit_sha }}
           persist-credentials: false
 
       - name: Set up Node.js
@@ -64,6 +66,11 @@ jobs:
         run: |
           npm run build:release
           test -s dist/index.html
+          php -l server/leads.php
+          php -l server/lead-validation.php
+          php tests/server/leads.test.php
+          install -d dist/api
+          install -m 644 server/leads.php server/lead-validation.php dist/api/
 
       - name: Install SFTP client
         run: sudo apt-get -o Acquire::Retries=1 -o Acquire::http::Timeout=20 update -qq && sudo apt-get install -y python3-paramiko
@@ -75,7 +82,21 @@ jobs:
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
           FTP_SERVER_DIR: ${{ secrets.FTP_SERVER_DIR }}
         run: /usr/bin/python3 -u scripts/deploy-hoster.py
+      - name: Verify published lead handler (GET only)
+        id: backend
+        run: |
+          python3 - <<'PY'
+          import json, urllib.error, urllib.request
+          try:
+              urllib.request.urlopen("https://revolis.by/api/leads.php", timeout=30)
+          except urllib.error.HTTPError as error:
+              if error.code != 405 or json.load(error) != {"ok": False}:
+                  raise RuntimeError("Unexpected response from lead handler") from error
+          else:
+              raise RuntimeError("Expected the lead handler to reject GET")
+          PY
       - name: Verify public homepage
+        if: success() || (failure() && steps.upload.outcome == 'success')
         id: homepage
         run: |
           python3 - <<'PY'
@@ -91,7 +112,7 @@ jobs:
           PY
       - name: Check HTML cache policy
         id: cache
-        if: steps.homepage.outcome == 'success'
+        if: always() && steps.homepage.outcome == 'success'
         run: |
           python3 - <<'PY'
           import os, pathlib
@@ -109,6 +130,7 @@ jobs:
         if: always()
         env:
           UPLOAD_RESULT: ${{ steps.upload.outcome }}
+          BACKEND_RESULT: ${{ steps.backend.outcome }}
           HOMEPAGE_RESULT: ${{ steps.homepage.outcome }}
           CACHE_RESULT: ${{ steps.cache.outputs.policy }}
         run: |
@@ -119,6 +141,6 @@ jobs:
           cache = {"passed": "Успешно — no-cache включён", "warning": "Предупреждение — настройте no-cache для HTML на hoster.by"}.get(os.environ["CACHE_RESULT"], "Не проверен")
           with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as summary:
               summary.write("## Публикация на hoster.by\n\n| Этап | Результат |\n| --- | --- |\n")
-              for name, result in [("Загрузка файлов", upload), ("Публичная главная", homepage), ("Кэш HTML", cache)]:
+              for name, result in [("Загрузка файлов", upload), ("Обработчик заявок (GET)", os.environ["BACKEND_RESULT"]), ("Публичная главная", homepage), ("Кэш HTML", cache)]:
                   summary.write(f"| {name} | {result} |\n")
           PY

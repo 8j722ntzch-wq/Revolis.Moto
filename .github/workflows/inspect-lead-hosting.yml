@@ -1,8 +1,5 @@
 name: Inspect lead hosting
 on:
-  push:
-    branches: [development]
-    paths: ['.github/workflows/inspect-lead-hosting.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -11,6 +8,8 @@ concurrency:
   cancel-in-progress: false
 jobs:
   inspect:
+    if: github.ref == 'refs/heads/master'
+    environment: production
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:

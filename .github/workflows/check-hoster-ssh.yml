@@ -1,13 +1,12 @@
 name: Check hoster.by SFTP port 22 (read only)
 on:
-  push:
-    branches: [development]
-    paths: ['.github/workflows/check-hoster-ssh.yml']
   workflow_dispatch:
 permissions:
   contents: read
 jobs:
   check-sftp:
+    if: github.ref == 'refs/heads/master'
+    environment: production
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:

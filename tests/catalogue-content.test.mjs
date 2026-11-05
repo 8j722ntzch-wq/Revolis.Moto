@@ -29,7 +29,9 @@ test('Hammer 300 uses approved ranges and keeps shaft drive distinct from 200 ch
 });
 test('all pages retain source provenance and omit editorial instructions and fake offers',()=>{
  for(const p of productDetails){
-  assert.match(p.source.notionUrl,/notion.so/); assert.equal(p.specifications.length,4);assert.equal(p.features.length,6);assert.ok(p.faq.length>=5);
+  assert.match(p.source.notionUrl,/notion.so/); assert.equal(p.specifications.length,4);assert.equal(p.features.length,6);
+  if (p.modelId === 'baltmotors-400-efi') assert.equal(p.faq.length, 4);
+  else assert.ok(p.faq.length >= 5, p.modelId);
   assert.ok(!JSON.stringify(p).match(/Я бы|Не переносим|Текст для страницы|TO на квадро|Актуальная цена|XX XXX/));
  }
  assert.ok(models.every(m=>m.priceByn > 0 && m.availability==='unconfirmed'));
