@@ -16,6 +16,7 @@ export interface ProductDetails {
   modelId: string;
   source: { fileKey: string; desktop: string; mobile: string; capturedAt: string; contentStatus: 'figma-reference' | 'notion-reference' | 'verified'; notionUrl?: string; retrievedAt?: string };
   subtitle: string;
+  heroSubtitle?: string;
   intro: string;
   /** Optional editorial metadata; legacy pages retain their current fallback. */
   seoTitle?: string;
