@@ -35,60 +35,60 @@ export const striker500Eps: ProductDetails = {
     {
       "title": "3 года",
       "body": "Гарантия без ограничения пробега",
-      "icon": "/assets/product/benefit-confidence.svg"
+      "icon": "/assets/product/striker-icons/benefit-shield.svg"
     },
     {
       "title": "Более 8 лет",
       "body": "Марка занимает уверенные позиции на рынке",
-      "icon": "/assets/product/benefit-strength.svg"
+      "icon": "/assets/product/striker-icons/benefit-star.svg"
     },
     {
       "title": "Для дорог общего пользования",
       "body": "Возможность передвижения по городским асфальтированным дорогам",
-      "icon": "/assets/product/benefit-comfort.svg"
+      "icon": "/assets/product/striker-icons/benefit-vehicle.svg"
     },
     {
       "title": "Усилитель руля",
       "body": "Особенность комплектации",
-      "icon": "/assets/product/benefit-choice.svg"
+      "icon": "/assets/product/striker-icons/benefit-eps.svg"
     }
   ],
   "features": [
     {
       "title": "Электроусилитель руля",
       "body": "Уменьшает усилие при повороте руля и маневрировании",
-      "icon": "/assets/product/feature-eps.svg",
+      "icon": "/assets/product/striker-icons/feature-ride-accent.svg",
       "accent": true
     },
     {
-      "title": "Спинка пассажирского места",
-      "body": "Предусмотрена в штатном оснащении модели",
-      "icon": "/assets/product/feature-seat.svg",
+      "title": "Аналог Yamaha Grizzly",
+      "body": "В основе квадроцикла заложена база Yamaha Grizzly, что обеспечивает универсальность и доступность запчастей",
+      "icon": "/assets/product/striker-icons/feature-rocket.svg",
       "accent": false
     },
     {
       "title": "Мощная лебёдка",
       "body": "Электрическая лебёдка на 1,5 тонны",
-      "icon": "/assets/product/feature-winch.svg",
+      "icon": "/assets/product/striker-icons/feature-winch.svg",
       "accent": false
     },
     {
       "title": "Независимая подвеска",
       "body": "Независимая двухрычажная конструкция спереди и сзади",
-      "icon": "/assets/product/feature-suspension.svg",
+      "icon": "/assets/product/striker-icons/feature-suspension.svg",
       "accent": false
     },
     {
       "title": "Подключаемый полный привод",
       "body": "Режимы заднего и полного привода, блокировка переднего дифференциала",
-      "icon": "/assets/product/feature-drive.svg",
-      "accent": true
+      "icon": "/assets/product/striker-icons/feature-drive.svg",
+      "accent": false
     },
     {
-      "title": "Впрыск Delphi",
-      "body": "Инжекторная система питания и жидкостное охлаждение",
-      "icon": "/assets/product/feature-drive.svg",
-      "accent": false
+      "title": "Двигатель Hisun 471 см³",
+      "body": "Двигатель с электронным впрыском Delphi и жидкостным охлаждением",
+      "icon": "/assets/product/striker-icons/feature-gear-accent.svg",
+      "accent": true
     }
   ],
   "specifications": [

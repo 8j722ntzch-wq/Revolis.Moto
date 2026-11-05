@@ -21,7 +21,9 @@ export const striker400: ProductDetails = {
   "photos": [],
   "galleryPhotos": [],
   "description": {
-    "title": "Для загородных поездок и работы в хозяйстве",
+    "title": "Для ",
+    "accent": "загородных поездок",
+    "titleSuffix": " и работы в хозяйстве",
     "paragraphs": [
       "Baltmotors Striker 400 EFI — базовая модель семейства Striker для покупателей, которым нужна полноприводная техника в сдержанной комплектации.",
       "В центре предложения — практичность: двигатель с электронным впрыском, вариатор и независимая подвеска обеих осей. Квадрицикл можно рассматривать для загородного использования и повседневных хозяйственных задач."
@@ -31,59 +33,59 @@ export const striker400: ProductDetails = {
     {
       "title": "3 года",
       "body": "Гарантия без ограничения пробега",
-      "icon": "/assets/product/benefit-confidence.svg"
+      "icon": "/assets/product/striker-400/benefit-1.svg"
     },
     {
       "title": "Более 8 лет",
       "body": "Марка занимает уверенные позиции на рынке",
-      "icon": "/assets/product/benefit-strength.svg"
+      "icon": "/assets/product/striker-400/benefit-2.svg"
     },
     {
       "title": "Для дорог общего пользования",
       "body": "Возможность передвижения по городским асфальтированным дорогам",
-      "icon": "/assets/product/benefit-comfort.svg"
+      "icon": "/assets/product/striker-400/benefit-3.svg"
     },
     {
       "title": "Шины 26″",
       "body": "Особенность комплектации",
-      "icon": "/assets/product/benefit-choice.svg"
+      "icon": "/assets/product/striker-400/benefit-4.svg"
     }
   ],
   "features": [
     {
       "title": "Подключаемый полный привод",
       "body": "Трансмиссия предусматривает задний и полный привод, а также режим блокировки переднего дифференциала",
-      "icon": "/assets/product/feature-drive.svg",
+      "icon": "/assets/product/striker-400/feature-1.svg",
       "accent": true
     },
     {
       "title": "Электронный впрыск Delphi",
       "body": "Подачей топлива управляет электронная система впрыска",
-      "icon": "/assets/product/feature-drive.svg",
+      "icon": "/assets/product/striker-400/feature-2.svg",
       "accent": false
     },
     {
       "title": "Жидкостное охлаждение",
       "body": "В конструкции двигателя используется жидкостная система охлаждения",
-      "icon": "/assets/product/feature-drive.svg",
+      "icon": "/assets/product/striker-400/feature-3.svg",
       "accent": false
     },
     {
-      "title": "Универсален в обслуживании",
+      "title": "Аналог Yamaha Grizzly",
       "body": "В основе квадроцикла заложена база Yamaha Grizzly, что обеспечивает универсальность и доступность запчастей",
-      "icon": "/assets/product/feature-suspension.svg",
-      "accent": false
+      "icon": "/assets/product/striker-400/feature-4.svg",
+      "accent": true
     },
     {
       "title": "Hisun",
       "body": "Надёжный двигатель китайского производства",
-      "icon": "/assets/product/feature-low.svg",
+      "icon": "/assets/product/striker-400/feature-5.svg",
       "accent": false
     },
     {
       "title": "26-дюймовые шины",
       "body": "Увеличенный дорожный просвет, повышенная проходимость и комфорт",
-      "icon": "/assets/product/feature-drive.svg",
+      "icon": "/assets/product/striker-400/feature-6.svg",
       "accent": false
     }
   ],

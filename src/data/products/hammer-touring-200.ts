@@ -34,59 +34,59 @@ export const hammer200: ProductDetails = {
     {
       "title": "2 места",
       "body": "Полноценный опыт",
-      "icon": "/assets/product/benefit-confidence.svg"
+      "icon": "/assets/product/hammer-200/benefit-seat.svg"
     },
     {
       "title": "1 год",
       "body": "Гарантия на квадроцикл",
-      "icon": "/assets/product/benefit-strength.svg"
+      "icon": "/assets/product/hammer-200/benefit-shield.svg"
     },
     {
       "title": "Loncin",
       "body": "Надёжный двигатель",
-      "icon": "/assets/product/benefit-comfort.svg"
+      "icon": "/assets/product/hammer-200/benefit-gear.svg"
     },
     {
       "title": "Цепной привод",
       "body": "Прост в обслуживании",
-      "icon": "/assets/product/benefit-choice.svg"
+      "icon": "/assets/product/hammer-200/benefit-star.svg"
     }
   ],
   "features": [
     {
       "title": "Компактный",
       "body": "Габариты 1780 × 1060 × 1200 мм. Колёсная база — 1180 мм",
-      "icon": "/assets/product/feature-seat.svg",
+      "icon": "/assets/product/hammer-200/compact.svg",
       "accent": true
     },
     {
       "title": "Воздушно-масляное охлаждение",
       "body": "Качественная система охлаждения с минимумом забот и переживаний",
-      "icon": "/assets/product/feature-drive.svg",
+      "icon": "/assets/product/hammer-200/cooling.svg",
       "accent": false
     },
     {
       "title": "Шноркель",
       "body": "Выведенный забор воздуха позволяет не бояться за попадание влаги в агрегаты",
-      "icon": "/assets/product/feature-low.svg",
+      "icon": "/assets/product/hammer-200/intake.svg",
       "accent": false
     },
     {
       "title": "Комфортная подвеска",
       "body": "Двойные A-образные рычаги и два гидравлических амортизатора спереди. Сзади — маятниковая подвеска с одним амортизатором.",
-      "icon": "/assets/product/feature-suspension.svg",
+      "icon": "/assets/product/hammer-200/suspension.svg",
       "accent": false
     },
     {
       "title": "Гидравлические дисковые тормоза",
       "body": "Отдельные передняя и задняя тормозные системы с ручным гидравлическим приводом.",
-      "icon": "/assets/product/feature-drive.svg",
-      "accent": false
+      "icon": "/assets/product/hammer-200/brakes.svg",
+      "accent": true
     },
     {
       "title": "Для поездок вдвоём",
       "body": "Комфортная сидушка со спинкой и ручками",
-      "icon": "/assets/product/feature-seat.svg",
+      "icon": "/assets/product/hammer-200/seat.svg",
       "accent": false
     }
   ],
