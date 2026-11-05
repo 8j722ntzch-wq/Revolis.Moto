@@ -93,8 +93,9 @@
 .home-document { display: flex; flex-direction: column; gap: 16px; padding: 16px; border-radius: 16px; background: var(--color-white); }
 .home-document h3 { font-size: 24px; line-height: 30px; font-weight: 600; }
 .home-document p { margin-top: 8px; color: var(--color-gray-4); line-height: 20px; }
-.home-document__image, .home-document__empty { width: 360px; height: 360px; border-radius: 12px; }
-.home-document__empty { background: #fff; }
+.home-document__image { width: 360px; height: 360px; border-radius: 12px; }
+.home-document__brand { display: grid; place-items: center; }
+.home-document__brand img { width: 68.61%; height: auto; }
 .home-document--purple { background: var(--color-purple); color: var(--color-white); }
 .home-document--purple p { color: var(--color-gray-2); }
 .home-rental { position: relative; margin-top: 160px; height: 496px; }

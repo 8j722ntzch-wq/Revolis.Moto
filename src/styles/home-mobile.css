@@ -90,7 +90,7 @@
   .homepage.mobile-ui .home-document:first-child { flex-basis: min(100%,312px); }
   .homepage.mobile-ui .home-document h3 { font-size: 20px; line-height: 26px; }
   .homepage.mobile-ui .home-document p { font-size: 14px; line-height: 18px; }
-  .homepage.mobile-ui .home-document__image, .homepage.mobile-ui .home-document__empty { width: 280px; height: 280px; max-width: 100%; object-fit: contain; margin-top: auto; flex-shrink: 0; }
+  .homepage.mobile-ui .home-document__image { width: 280px; height: 280px; max-width: 100%; object-fit: contain; margin-top: auto; flex-shrink: 0; }
   .homepage.mobile-ui .home-rental { height: auto; }
   .homepage.mobile-ui .home-rental__pattern { display: none; }
   .homepage.mobile-ui .home-rental__copy { width: auto; }

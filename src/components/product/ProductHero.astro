@@ -16,7 +16,7 @@ const price = model.priceByn === null ? 'Цена уточняется' : `${mod
   </div>
   {details.colors?.map(color => <Media photos={details.photos.filter(photo => !photo.color || photo.color === color)} color={color} hidden={color !== details.defaultColor} />)}
   <div class="product-hero__copy">
-    <p class="product-hero__subtitle">{model.subtitle ?? details.subtitle}</p>
+    <p class="product-hero__subtitle">{details.heroSubtitle ?? model.subtitle ?? details.subtitle}</p>
     {model.features?.length && <ul class="product-hero__features" aria-label="Основные характеристики">{model.features.map(feature => <li><img src={`/assets/model-card/${feature.icon}.svg`} alt="" />{feature.label}</li>)}</ul>}
     {model.registration !== 'unconfirmed' && <p class="product-hero__registration"><img src="/assets/product/registration.svg" alt="" />{model.registration === 'gai' ? 'Регистрация в ГАИ' : 'Регистрация в Гостехнадзоре'}</p>}
     <p class="product-hero__intro">{details.intro}</p>
@@ -31,5 +31,5 @@ const price = model.priceByn === null ? 'Цена уточняется' : `${mod
     {details.specifications?.length && <Button href="#specifications" variant="text" arrow class="product-spec-link">Смотреть характеристики</Button>}
     <div class="product-hero__banks"><p>В кредит и рассрочку:</p><div><a href="#finance" aria-label="Финансирование в Альфа-Банке"><img src="/assets/product/alfa.svg" alt="Альфа Банк" width="140" height="28" /></a><a href="#finance" aria-label="Финансирование в Технобанке"><img src="/assets/product/techno.svg" alt="Технобанк" width="204" height="28" /></a></div></div>
   </div>
-  {details.benefits?.length && <ul class="product-benefits">{details.benefits.map(item => <li><img src={item.icon} alt="" width="56" height="56" /><div><strong>{item.title}</strong><p>{item.body}</p></div></li>)}</ul>}
+  {details.benefits?.length && <ul class="product-benefits" data-model={details.modelId}>{details.benefits.map(item => <li><img src={item.icon} alt="" width="56" height="56" /><div><strong>{item.title}</strong><p>{item.body}</p></div></li>)}</ul>}
 </section>

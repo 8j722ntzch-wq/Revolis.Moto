@@ -1931,5 +1931,24 @@
         "bytes": 159720
       }
     ]
+  },
+  "/assets/home/baltmotors-supply.png": {
+    "width": 247,
+    "height": 247,
+    "originalBytes": 25798,
+    "variants": [
+      {
+        "src": "/assets/optimized/home/baltmotors-supply-160.webp",
+        "width": 160,
+        "height": 160,
+        "bytes": 5132
+      },
+      {
+        "src": "/assets/optimized/home/baltmotors-supply-247.webp",
+        "width": 247,
+        "height": 247,
+        "bytes": 8796
+      }
+    ]
   }
 }
