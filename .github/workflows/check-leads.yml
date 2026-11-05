@@ -4,7 +4,7 @@ on:
     branches: [development, master]
     paths: ['server/**', 'tests/server/**', '.github/workflows/check-leads.yml']
   pull_request:
-    paths: ['server/**', 'tests/server/**', '.github/workflows/check-leads.yml']
+    branches: [development, master]
 permissions:
   contents: read
 jobs:
