@@ -8,6 +8,7 @@ interface Props {
   terms?: BankTerms | null;
   termsPlaceholder?: string;
   consultationTitle?: string;
+  consultationTitleAccent?: string;
   actionLabel?: string;
   headingLevel?: 'h2' | 'h3' | 'h4';
   dialogId?: string;
@@ -17,7 +18,7 @@ interface Props {
   actionHref?: string;
   description?: string;
 }
-const { id, variant, terms, termsPlaceholder = 'Условия уточняются', consultationTitle, actionLabel = 'Подобрать условия оплаты', headingLevel: Heading = 'h3', dialogId, modelId, demoState, demoAction = false, actionHref, description = 'Проконсультируем и вместе оформим заявление в банк' } = Astro.props;
+const { id, variant, terms, termsPlaceholder = 'Условия уточняются', consultationTitle, consultationTitleAccent, actionLabel = 'Подобрать условия оплаты', headingLevel: Heading = 'h3', dialogId, modelId, demoState, demoAction = false, actionHref, description = 'Проконсультируем и вместе оформим заявление в банк' } = Astro.props;
 const bank = variant === 'consultation' ? null : banks[variant];
 const action = {
   href: actionHref,
@@ -46,7 +47,7 @@ const action = {
       </div>
     </> : <>
       <div class="bank-card__consultation">
-        <Heading id={`${id}-title`} class="type-heading-xs">{consultationTitle ?? <>Поможем подобрать <span>комфортные</span> условия</>}</Heading>
+        <Heading id={`${id}-title`} class="type-heading-xs">{consultationTitleAccent && <span>{consultationTitleAccent}</span>}{consultationTitle ?? <>Поможем подобрать <span>комфортные</span> условия</>}</Heading>
         <p class="type-small">{description}</p>
       </div>
       <Button {...action} class="bank-card__action" variant="outline" tone="inverse" arrow>{actionLabel}</Button>

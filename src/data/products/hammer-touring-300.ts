@@ -22,7 +22,9 @@ export const hammer300: ProductDetails = {
   "photos": [],
   "galleryPhotos": [],
   "description": {
-    "title": "Для лесных поездок и повседневных домашних задач",
+    "title": "Для лесных ",
+    "accent": "поездок",
+    "titleSuffix": " и повседневных домашних задач",
     "paragraphs": [
       "Mikilon Hammer 300 Touring — туристический квадроцикл для прогулочных маршрутов, поездок на даче, рыбалки и хозяйственных задач. Его характер — практичность и комфорт, а не спортивная экстремальность.",
       "Двигатель с электронным впрыском Bosch EFI и жидкостным охлаждением сочетается с надёжным вариатором с пониженной передачей и карданным приводом на задние колёса. Конструкцией предусмотрены два посадочных места"
@@ -32,59 +34,59 @@ export const hammer300: ProductDetails = {
     {
       "title": "Жидкостное охлаждение",
       "body": "Надёжная система с датчиками температуры",
-      "icon": "/assets/product/benefit-confidence.svg"
+      "icon": "/assets/product/hammer-300/benefit-1.svg"
     },
     {
       "title": "Карданный привод",
       "body": "Увеличенные тяговые возможности",
-      "icon": "/assets/product/benefit-strength.svg"
+      "icon": "/assets/product/hammer-300/benefit-2.svg"
     },
     {
       "title": "Пониженная передача",
       "body": "Снижение нагрузки на вариатор",
-      "icon": "/assets/product/benefit-comfort.svg"
+      "icon": "/assets/product/hammer-300/benefit-3.svg"
     },
     {
       "title": "Инжектор BOSCH",
       "body": "Надёжная система, подстраивающаяся под среду",
-      "icon": "/assets/product/benefit-choice.svg"
+      "icon": "/assets/product/hammer-300/benefit-4.svg"
     }
   ],
   "features": [
     {
       "title": "Карданный привод",
       "body": "Передача привода на задние колёса через карданную трансмиссию",
-      "icon": "/assets/product/feature-drive.svg",
+      "icon": "/assets/product/hammer-300/feature-1.svg",
       "accent": true
     },
     {
       "title": "Шноркель",
       "body": "Выведенный забор воздуха позволяет не бояться за попадание влаги в агрегаты",
-      "icon": "/assets/product/feature-drive.svg",
+      "icon": "/assets/product/hammer-300/feature-2.svg",
       "accent": false
     },
     {
       "title": "Вариатор с пониженной передачей",
       "body": "Автоматическая бесступенчатая трансмиссия с центробежным сцеплением и пониженной передачей",
-      "icon": "/assets/product/feature-low.svg",
-      "accent": false
+      "icon": "/assets/product/hammer-300/feature-3.svg",
+      "accent": true
     },
     {
       "title": "Ручник",
       "body": "Механический трос ручника позволяет не переживать за гидравлику, требующую внимательного контроля",
-      "icon": "/assets/product/feature-seat.svg",
+      "icon": "/assets/product/hammer-300/feature-4.svg",
       "accent": false
     },
     {
       "title": "24-дюймовые внедорожные шины",
       "body": "Передние шины AT 24×8-12 и задние AT 24×10-12",
-      "icon": "/assets/product/feature-drive.svg",
-      "accent": false
+      "icon": "/assets/product/hammer-300/feature-5.svg",
+      "accent": true
     },
     {
       "title": "Независимая передняя подвеска",
       "body": "Спереди — двойные A-образные рычаги и два гидравлических амортизатора. Сзади — маятниковая подвеска с одним амортизатором",
-      "icon": "/assets/product/feature-suspension.svg",
+      "icon": "/assets/product/hammer-300/feature-6.svg",
       "accent": false
     }
   ],
