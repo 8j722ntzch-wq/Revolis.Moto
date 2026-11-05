@@ -1617,6 +1617,24 @@
         "viewBox": "0 0 24 24"
       },
       "transfer": "Original entire node via Figma Plugin API SVG_STRING"
+    },
+    {
+      "id": "baltmotors-supply",
+      "nodeId": "395:11974",
+      "kind": "exported-raster",
+      "localPath": "public/assets/home/baltmotors-supply.png",
+      "slots": [
+        {
+          "nodeId": "I31:6044;109:5536;395:11974",
+          "sectionNodeId": "31:6062"
+        }
+      ],
+      "intrinsic": {
+        "width": 247,
+        "height": 247
+      },
+      "transfer": "Figma download_assets, isolated logo group with stroke",
+      "sha256": "6a53f4634471ed1cb3f9898ea524a7ac76c03c4e775a0a9120af8aa27a72f0a4"
     }
   ],
   "reusableUiManifest": "design/ui-assets.json",
