@@ -59,6 +59,7 @@
 .mobile-ui .site-footer .site-footer__socials { order: 2; margin-top: 32px; padding-top: 0; justify-content: flex-start; }
 .mobile-ui .site-footer .site-footer__top { order: 3; width: 100%; margin-top: 80px; font-size: 12px; line-height: 14px; }
 .mobile-ui .site-footer .site-footer__legal { display: contents; }
+.mobile-ui .site-footer .site-footer__legal a .ui-button__label { text-decoration: underline; }
 .mobile-ui .site-footer .site-footer__legal > div { order: 4; margin-top: 24px; flex-direction: column; align-items: flex-start; gap: 4px; }
 .mobile-ui .site-footer .site-footer__registration { order: 5; margin-top: 24px; }
 .mobile-ui .site-footer .site-footer__legal > p { order: 6; margin-top: 24px; text-align: center; font-size: 12px; line-height: 14px; }
