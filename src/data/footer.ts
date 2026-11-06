@@ -26,6 +26,9 @@ export interface FooterDestinations {
 // Address confirmed by the user on 2026-10-21; organization map cards are pending.
 const mapAddress = encodeURIComponent('Беларусь, Витебск, проспект Московский, 111');
 export const siteDestinations: FooterDestinations = {
+  instagram: 'https://www.instagram.com/revolis.moto',
+  telegram: 'https://t.me/mark_revolis',
+  youtube: 'https://www.youtube.com/@revolismoto',
   privacy: '/privacypolicy/',
   personalData: '/documents/personal-data-policy-2026-11-04.pdf',
   yandex: `https://yandex.ru/maps/?text=${mapAddress}`,
